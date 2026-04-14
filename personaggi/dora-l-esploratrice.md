@@ -32,3 +32,4 @@ _Da definire._
 ## Eventi interessanti
 
 - **[Sessione 001]** Giunge a New Avalon e si imbarca sulla *Ben Campbell* diretta a nord. Durante la prima notte, avvista insieme a Leman Russ una barca senza luci che segue il battello a distanza.
+- **[Sessione 002]** Partecipa alla colluttazione notturna sulla *Ben Campbell* e contribuisce a immobilizzare Sam Crow, fuorilegge ricercato.
