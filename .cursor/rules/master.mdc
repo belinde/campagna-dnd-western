@@ -23,7 +23,15 @@ Questa regola si attiva quando il DM vuole trasformare idee e appunti concisi in
 
 ## File di output
 
-Nome file in kebab-case: `ambientazione/nome-argomento.md`. Se il DM non lo specifica, proporre un nome prima di scrivere.
+Nome file in kebab-case. Se il DM non lo specifica, proporre un nome prima di scrivere. Salvare nella sottocartella corretta in base al tipo di contenuto:
+
+| Tipo di contenuto | Sottocartella |
+|---|---|
+| Luogo (città, insediamento, dungeon, punto geografico, ecc.) | `ambientazione/luoghi/` |
+| Fazione / Nazione / Organizzazione | `ambientazione/nazioni/` |
+| Evento storico / Concetto / Lore (religioni, tecnomagia, economia, società, ecc.) | `ambientazione/concetti/` |
+
+Il file `ambientazione/ambientazione-giocatori.md` è il documento di introduzione per i giocatori e non rientra in nessuna sottocartella.
 
 ## Template per tipo di contenuto
 

@@ -47,7 +47,10 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 
 | Cartella | Contenuto |
 |---|---|
-| `ambientazione/` | Background del mondo: storia, geografia, demografia, fazioni, religioni, luoghi |
+| `ambientazione/` | Background del mondo (radice): contiene solo `ambientazione-giocatori.md` |
+| `ambientazione/luoghi/` | Luoghi specifici con nome proprio (città, insediamenti, dungeon, punti geografici) |
+| `ambientazione/nazioni/` | Entità politiche e fazioni sovraregionali (stati, regni, organizzazioni) |
+| `ambientazione/concetti/` | Sistemi e lore del mondo: storia, geografia, economia, religioni, tecnomagia, società |
 | `personaggi/` | Un file per ogni personaggio giocante (PG) |
 | `png/` | Un file per ogni personaggio non giocante (PNG) rilevante |
 | `resoconti/` | Un file per ogni sessione di gioco |
@@ -55,7 +58,9 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 
 ## Convenzioni sui nomi dei file
 
-- `ambientazione/storia.md`, `ambientazione/geografia.md`, ecc.
+- `ambientazione/luoghi/nome-luogo.md` (es. `ambientazione/luoghi/valdoren.md`)
+- `ambientazione/nazioni/nome-nazione.md` (es. `ambientazione/nazioni/terralba.md`)
+- `ambientazione/concetti/nome-concetto.md` (es. `ambientazione/concetti/tecnomagia.md`)
 - `personaggi/nome-personaggio.md` (es. `personaggi/aldric-il-grigio.md`)
 - `png/nome-png.md` (es. `png/dorvek-il-silenzioso.md`)
 - `resoconti/sessione-001.md`, `resoconti/sessione-002.md`, ecc. (tre cifre con zero padding)
@@ -73,7 +78,7 @@ Sia i file in `personaggi/` che quelli in `png/` devono contenere una sezione `#
 
 ## Contesto da consultare
 
-Prima di generare qualsiasi contenuto, leggere i file presenti in `ambientazione/`, `personaggi/` e `resoconti/` per garantire coerenza narrativa con la campagna.
+Prima di generare qualsiasi contenuto, leggere i file presenti in `ambientazione/` (incluse le sottocartelle `luoghi/`, `nazioni/`, `concetti/`), `personaggi/` e `resoconti/` per garantire coerenza narrativa con la campagna.
 
 ## Fonti esterne
 

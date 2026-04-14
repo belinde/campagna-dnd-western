@@ -20,7 +20,7 @@ Si usa quando si vogliono trasformare appunti grezzi del DM in documenti di ambi
 2. L'AI genera subito una bozza completa nel formato corretto (luogo, fazione, evento storico, lore, ecc.)
 3. L'AI elenca domande di approfondimento per affinare il documento
 
-Prima di scrivere, l'AI legge tutti i file in `ambientazione/` per garantire coerenza con il canon già stabilito. Se gli appunti toccano eventi storici o dinamiche sociali, l'AI cerca ispirazione su Wikipedia adattando al contesto fantasy.
+Prima di scrivere, l'AI legge tutti i file in `ambientazione/` (incluse le sottocartelle `luoghi/`, `nazioni/`, `concetti/`) per garantire coerenza con il canon già stabilito. Il file viene salvato nella sottocartella corretta in base al tipo: `luoghi/` per luoghi specifici, `nazioni/` per entità politiche, `concetti/` per lore e sistemi del mondo. Se gli appunti toccano eventi storici o dinamiche sociali, l'AI cerca ispirazione su Wikipedia adattando al contesto fantasy.
 
 **Attivazione:** `@master` nella chat, oppure chiedere esplicitamente di usare la "modalità master".
 

@@ -32,7 +32,7 @@ Analizzare il racconto del DM incrociandolo con il materiale letto in Fase 1. Id
 
 - **Riferimenti ambigui a personaggi**: se il DM ha scritto "il nano" e ci sono due nani tra i PG, chiedere quale.
 - **PNG incontrati**: per ogni PNG menzionato che non ha ancora una scheda in `png/`, chiedere conferma del nome, ruolo e dettagli rilevanti.
-- **Luoghi visitati**: per ogni luogo non ancora documentato in `ambientazione/`, chiedere conferma del nome e un dettaglio descrittivo.
+- **Luoghi visitati**: per ogni luogo non ancora documentato in `ambientazione/luoghi/`, chiedere conferma del nome e un dettaglio descrittivo.
 - **Incongruenze con la storia precedente**: segnalare qualsiasi contraddizione con i resoconti passati e chiedere chiarimento.
 - **Esito di situazioni aperte**: se nell'ultimo resoconto erano rimaste domande aperte o ganci narrativi, chiedere se e come si sono risolti.
 
@@ -116,13 +116,13 @@ Per ogni PNG apparso nella sessione:
 
 ### 5c — File di ambientazione
 
-Se dal resoconto emergono informazioni rilevanti su luoghi non ancora documentati, segnalarlo al DM specificando quale file in `ambientazione/` andrebbe creato o aggiornato. Attendere istruzione prima di agire.
+Se dal resoconto emergono informazioni rilevanti su luoghi o elementi del mondo non ancora documentati, segnalarlo al DM specificando quale file andrebbe creato o aggiornato, indicando la sottocartella corretta (`ambientazione/luoghi/`, `ambientazione/nazioni/` o `ambientazione/concetti/`). Attendere istruzione prima di agire.
 
 ### 5d — Smistamento file di sessione
 
 Per ogni file in `sessione/`:
 - **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente. Altrimenti creare la scheda in `png/`.
-- **`luogo-*.md`** — Valutare se aggiornare un file in `ambientazione/` o proporne la creazione. Segnalare al DM prima di agire.
+- **`luogo-*.md`** — Valutare se aggiornare un file in `ambientazione/luoghi/` o proporne la creazione. Segnalare al DM prima di agire.
 - **`nota-*.md`** / **`incontro-*.md`** — Verificare se ci sono informazioni utili non ancora incorporate nel resoconto o nelle schede; segnalare al DM se qualcosa è stato tralasciato.
 
 I file di sessione sono **fonti complementari** al racconto del DM, non sostitutive: il DM resta la fonte primaria per gli eventi.
