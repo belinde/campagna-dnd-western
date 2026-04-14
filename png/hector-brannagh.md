@@ -13,7 +13,7 @@ Determinato fino all'ostinazione, pragmatico nelle decisioni, silenzioso sotto p
 
 ## Legami con i PG
 
-Ancora nessuno
+Ha ingaggiato il gruppo come guardie e scout per la carovana verso la Frontiera. Tre dollari al giorno a testa, vitto e alloggio inclusi. Ha riservato a Dora una commissione separata: la mappatura del circondario all'arrivo a destinazione.
 
 ## Note DM
 
@@ -29,4 +29,4 @@ Non è l'uomo semplice che sembra. Il fallimento a Port Meredith non è stato so
 
 ## Eventi interessanti
 
-_(da aggiornare dopo ogni sessione in cui il PNG appare)_
+- **[Sessione 004]** Incontra il gruppo a Valdoren e li ingaggia come guardie e scout. Divide il gruppo in due per le valutazioni: Dora e Leman Russ da Theodor Strand, gli altri da Andrew Carver. Conferma l'offerta il giorno seguente e annuncia la partenza per l'indomani mattina.
