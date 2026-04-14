@@ -2,7 +2,7 @@
 
 ## Descrizione e scopo
 
-Gli Stati Uniti sono la federazione delle tredici colonie del Nuovo Mondo, nata nel 159 anni fa dal Concilio di New Avalon dopo due anni di Guerra d'Indipendenza. Non sono un impero, non sono una monarchia, non sono la proiezione coloniale di nessuna potenza straniera: si definiscono — con un orgoglio a volte stridulo, a volte commovente — come il primo stato davvero nuovo del mondo conosciuto. Un luogo dove non importa chi eri prima di sbarcare, ma cosa sei capace di costruire.
+Gli Stati Uniti sono la federazione delle tredici colonie del Nuovo Mondo, nata 159 anni fa dal Concilio di New Avalon dopo due anni di Guerra d'Indipendenza. Non sono un impero, non sono una monarchia, non sono la proiezione coloniale di nessuna potenza straniera: si definiscono — con un orgoglio a volte stridulo, a volte commovente — come il primo stato davvero nuovo del mondo conosciuto. Un luogo dove non importa chi eri prima di sbarcare, ma cosa sei capace di costruire.
 
 La realtà, naturalmente, è più complicata. Gli Stati Uniti sono giovani, contraddittori, percorsi da tensioni profonde: tra la East Coast prospera e la Frontiera selvaggia, tra chi è arrivato con i primi coloni e chi sbarca ogni giorno con un bagaglio leggero e ambizioni pesanti, tra il progresso tecnomagico che arricchisce alcuni e sposta altri. Ma quella promessa — che il Nuovo Mondo sia davvero nuovo, che il passato non determini il futuro — è abbastanza vera abbastanza spesso da tenere in piedi la federazione.
 

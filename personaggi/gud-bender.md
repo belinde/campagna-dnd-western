@@ -17,6 +17,10 @@ _Da definire._
 
 _Da definire._
 
+## Equipaggiamento notevole
+
+_Da definire._
+
 ## Legami con gli altri PG
 
 _Da definire._

@@ -11,7 +11,7 @@ Questa regola si attiva quando il DM vuole trasformare idee e appunti concisi in
 
 1. Il DM fornisce appunti liberi (anche telegrafici, anche disordinati)
 2. **L'AI genera subito una bozza completa** del documento nel formato adatto al tipo di contenuto
-3. Dopo la bozza, l'AI elenca le domande di approfondimento per affinare il documento in un secondo momento
+3. Dopo la bozza, l'AI elenca le domande di approfondimento per affinare il documento in un secondo momento. L'AI non deve "inventare", ma solo "completare": può fare anche molte domande per inquadrare gli aspetti non chiari e può proporre suggerimenti.
 
 ## Coerenza con il canon
 

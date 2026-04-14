@@ -38,6 +38,10 @@ Un orologio nanico dura tre generazioni. Un'armatura nanica ferma quello che un'
 
 Il pregiudizio diffuso verso i nani è di tipo estetico più che funzionale: vengono descritti come "deformi", "rozzi nell'aspetto", "effigi mancate" dell'ideale umano o elfico. I nani se ne fregano con un'equanimità che molti trovano irritante.
 
+**La Magia Runica Nanica** è una tradizione magica propria, distinta sia dalla magia elfica sia dalla tecnomagia umana. I nani non hanno una sensibilità innata ai piani elementali come gli elfi, e non condividono il pragmatismo produttivistico del Caporalato: la loro magia è lenta, profonda, e interamente orientata alla durata. Le rune naniche non vincolano creature elementali — le invitano. La differenza, dicono i maestri nanici, è tutta lì: una runa ben incisa parla a una forza naturale nel suo stesso linguaggio, e ottiene la collaborazione; una runa tecnomagica la imprigiona e la consuma. Ecco perché un oggetto nanico dura tre generazioni e uno del Caporalato va dal meccanico ogni anno.
+
+I Maestri delle Rune nanici sono pochi e formatisi in decenni di apprendistato. Il fatto che un nano scelga invece di studiare magia nel senso convenzionale — aprire varchi, lanciare incantesimi, manipolare l'arcano in modo diretto — è una cosa rara e socialmente controversa nell'ambito nanico. Un nano mago viene guardato dalla propria comunità con un misto di rispetto e sospetto: ha scelto una via più rapida e meno solida, una via "da elfi". Funziona, certamente — ma tradisce qualcosa della pazienza che è il cuore della cultura nanica.
+
 ### Orchi
 
 Gli orchi sono il problema che il Nuovo Mondo non vuole affrontare direttamente. Nelle Terre Selvagge, i clan orcheschi abitano le pianure e le foreste da prima che esistesse qualsiasi colonia: conoscono il territorio, ne seguono i ritmi, e difendono i propri spazi con una determinazione che i coloni chiamano "selvaggia" e che più onestamente si potrebbe chiamare ragionevole.
@@ -45,6 +49,22 @@ Gli orchi sono il problema che il Nuovo Mondo non vuole affrontare direttamente.
 Nella narrativa coloniale dominante, gli orchi sono bestie da civilizzare o da eliminare, con una preferenza pratica per la seconda opzione perché più rapida. Quelli che finiscono nelle città — cacciati dalle pianure, o attratti dalla promessa di lavoro — vengono relegati ai margini: bevono, si azzuffano, vengono sfruttati per i lavori più pesanti e pericolosi. Questa emarginazione viene poi usata come prova della loro "inciviltà" originaria, chiudendo il cerchio in un ragionamento circolare che soddisfa chi non vuole pensarci troppo.
 
 La realtà è che i clan orcheschi delle Terre Selvagge hanno strutture sociali complesse, tradizioni orali ricche, e una conoscenza del territorio che i cartografi federali pagherebbero molto per ottenere — preferibilmente senza dover trattare con chi la detiene.
+
+### Mezzelfi
+
+I mezzelfi sono il prodotto di due secoli di convivenza ravvicinata tra elfi e umani nel Nuovo Mondo. Non sono rari — nelle città costiere di medie dimensioni si incontra almeno un mezzelfo ogni qualche isolato — ma la loro posizione sociale rimane ambigua in un modo che nessuna legge ha mai davvero risolto.
+
+Per gli umani, il mezzelfo è sempre "un po' troppo elfo": vive più a lungo, invecchia più lentamente, ha una sensibilità magica naturale che mette a disagio chi non ce l'ha. Per gli elfi, è "un po' troppo umano": gli manca la profondità culturale millenaria, si agita troppo, brucia le opportunità con l'impazienza tipica di chi non ha tutto il tempo del mondo. Entrambe le famiglie d'origine tendono ad amarlo in modo genuino e a emarginarlo in modo strutturale.
+
+In pratica, i mezzelfi trovano spesso spazio negli interstizi: come mediatori commerciali tra comunità elfiche e umane, come esploratori e guide nella Frontiera (dove la longevità relativa e la sensibilità magica sono vantaggi concreti), come diplomazia informale quando i canali ufficiali si inceppano. La Frontiera li tratta con una pragmatica uguaglianza: lì conta cosa sai fare, non chi sono i tuoi genitori.
+
+La domanda sulla cittadinanza piena è risolta formalmente — i mezzelfi sono cittadini degli Stati Uniti senza restrizioni — ma nella pratica sociale l'appartenenza rimane un nodo irrisolto. Un mezzelfo cresciuto in una famiglia elfica della East Coast e uno cresciuto da un padre umano minatore nel Far West potrebbero incontrarsi e non riconoscersi quasi come appartenenti alla stessa razza.
+
+### Mezzorchi
+
+I mezzorchi esistono, anche se la società coloniale preferisce non parlarne. Sono il risultato degli incroci — spesso non consensuali — tra coloni e orchi delle Terre Selvagge, o più raramente di legami volontari tra individui ai margini di entrambe le comunità.
+
+La loro posizione è la peggiore della scala sociale: troppo orchi per essere accettati nelle città coloniali, troppo umani per integrarsi senza attrito nei clan orcheschi che hanno spesso regole rigide sulla discendenza. Molti vivono in quella terra di nessuno che è la Frontiera, dove la necessità ammorbidisce i pregiudizi quanto basta per sopravvivere. Alcuni trovano posto in compagnie di avventurieri o nelle milizie irregolari che il governo federale preferisce non finanziare ufficialmente.
 
 ## Effetti sul mondo
 

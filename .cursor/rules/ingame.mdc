@@ -12,6 +12,7 @@ Questa regola si attiva durante una sessione di gioco dal vivo. Il DM ha bisogno
 - Risposte brevi: niente spiegazioni, meta-commenti o premesse
 - Il testo generato deve poter essere letto direttamente ai giocatori
 - Priorità alla giocabilità immediata rispetto alla completezza
+- Non utilizzare ricerche su web o Wikipedia, all'occorrenza accedi soltanto al server mcp locale "dnd"
 
 ## Contenuti tipici da generare al volo
 
@@ -74,4 +75,5 @@ Se esiste già un file in `png/` per quel personaggio, creare comunque `sessione
 Prima di generare contenuti, verificare (in sola lettura):
 - I file in `ambientazione/` per nomi, luoghi e tono del mondo
 - Gli ultimi file in `resoconti/` per la situazione corrente della campagna
+- Tutti i file in `sessione/` per coerenza narrativa
 - I file in `personaggi/` e `png/` se il contenuto riguarda personaggi già documentati
