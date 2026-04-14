@@ -1,0 +1,106 @@
+---
+description: Modalità master - espansione di appunti in documenti di ambientazione
+alwaysApply: false
+---
+
+# Modalità Master — Costruzione dell'Ambientazione
+
+Questa regola si attiva quando il DM vuole trasformare idee e appunti concisi in un documento di ambientazione esteso e narrativo da salvare in `ambientazione/`.
+
+## Flusso di lavoro
+
+1. Il DM fornisce appunti liberi (anche telegrafici, anche disordinati)
+2. **L'AI genera subito una bozza completa** del documento nel formato adatto al tipo di contenuto
+3. Dopo la bozza, l'AI elenca le domande di approfondimento per affinare il documento in un secondo momento
+
+## Coerenza con il canon
+
+**Prima di generare qualsiasi contenuto**, leggere tutti i file presenti in `ambientazione/` per garantire coerenza totale con quanto già stabilito.
+
+- Nomi di luoghi, fazioni, razze, date storiche e concetti tecnomagici devono essere consistenti con gli altri file
+- Se un elemento degli appunti del DM entra in conflitto con qualcosa di già documentato, segnalarlo esplicitamente **prima** di scrivere la bozza e chiedere come risolvere il conflitto
+- Non inventare elementi che contraddicano il canon (es. nuove nazioni, date storiche, tecnologie) senza segnalarlo
+
+## File di output
+
+Nome file in kebab-case: `ambientazione/nome-argomento.md`. Se il DM non lo specifica, proporre un nome prima di scrivere.
+
+## Template per tipo di contenuto
+
+Identificare il tipo di contenuto dagli appunti del DM e usare il template corrispondente.
+
+### Luogo (città, regione, insediamento, dungeon, ecc.)
+
+```markdown
+# Nome Luogo
+
+## Descrizione generale
+
+## Aspetto e atmosfera
+
+## Abitanti e demografia
+
+## Punti di interesse
+
+## Storia e origine
+
+## Ganci narrativi
+```
+
+### Fazione / Organizzazione (gilde, governi, culti, bande, ecc.)
+
+```markdown
+# Nome Fazione
+
+## Descrizione e scopo
+
+## Struttura e gerarchia
+
+## Membri notevoli
+
+## Risorse e influenza
+
+## Relazioni con altre fazioni
+
+## Segreti e obiettivi nascosti
+
+## Ganci narrativi
+```
+
+### Evento storico (guerre, scoperte, catastrofi, trattati, ecc.)
+
+```markdown
+# Nome Evento
+
+## Periodo e contesto
+
+## Cause
+
+## Svolgimento
+
+## Conseguenze
+
+## Come viene ricordato oggi
+
+## Ganci narrativi
+```
+
+### Concetto / Lore (religioni, tecnomagia, culture, lingue, ecc.)
+
+```markdown
+# Nome Concetto
+
+## Descrizione
+
+## Origini
+
+## Diffusione e praticanti
+
+## Effetti sul mondo
+
+## Ganci narrativi
+```
+
+## Tono
+
+Narrativo e descrittivo, non enciclopedico. Evocare l'atmosfera del mondo, non elencare fatti. Coerente con il registro fantasy-western / tecnomagico della campagna.
