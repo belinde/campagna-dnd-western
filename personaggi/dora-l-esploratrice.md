@@ -31,4 +31,4 @@ _Da definire._
 
 ## Eventi interessanti
 
-_(nessun evento registrato)_
+- **[Sessione 001]** Giunge a New Avalon e si imbarca sulla *Ben Campbell* diretta a nord. Durante la prima notte, avvista insieme a Leman Russ una barca senza luci che segue il battello a distanza.
