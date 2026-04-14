@@ -7,6 +7,24 @@ alwaysApply: false
 
 Questa regola si attiva dopo una sessione di gioco. Il DM descrive o detta liberamente gli eventi accaduti e l'AI organizza il materiale in un resoconto strutturato. Il DM può usare termini generici per identificare i giocatori (es.: "il paladino") ma devono essere trasformati nel nome del personaggio.
 
+## Integrazione materiale di sessione
+
+**Prima di scrivere il resoconto**, leggere tutti i file presenti nella cartella `sessione/`. Questi file contengono materiale grezzo generato durante la sessione dal vivo dall'agente ingame.
+
+### Smistamento per prefisso
+
+- **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente. Altrimenti creare la scheda in `png/` seguendo il template standard.
+- **`luogo-*.md`** — Valutare se aggiornare un file esistente in `ambientazione/` o proporre la creazione di uno nuovo. Segnalare al DM prima di agire.
+- **`nota-*.md`** / **`incontro-*.md`** — Usare il contenuto come fonte aggiuntiva per il resoconto e per gli aggiornamenti alle schede PG e PNG.
+
+I file di sessione sono **fonti complementari** al racconto del DM, non sostitutive: il DM resta la fonte primaria per gli eventi.
+
+### Pulizia
+
+Dopo aver completato tutte le operazioni (resoconto scritto, schede aggiornate, nuovi file creati), **eliminare tutti i file dalla cartella `sessione/`**. Se la cartella è già vuota, proseguire normalmente.
+
+---
+
 ## File di output
 
 Creare o aggiornare il file `resoconti/sessione-NNN.md` usando la numerazione progressiva (es. `sessione-003.md`). Verificare l'ultimo numero presente nella cartella `resoconti/` per determinare il numero corretto.
