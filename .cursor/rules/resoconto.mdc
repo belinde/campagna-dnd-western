@@ -5,31 +5,58 @@ alwaysApply: false
 
 # Modalità Resoconto
 
-Questa regola si attiva dopo una sessione di gioco. Il DM descrive o detta liberamente gli eventi accaduti e l'AI organizza il materiale in un resoconto strutturato. Il DM può usare termini generici per identificare i giocatori (es.: "il paladino") ma devono essere trasformati nel nome del personaggio.
-
-## Integrazione materiale di sessione
-
-**Prima di scrivere il resoconto**, leggere tutti i file presenti nella cartella `sessione/`. Questi file contengono materiale grezzo generato durante la sessione dal vivo dall'agente ingame.
-
-### Smistamento per prefisso
-
-- **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente. Altrimenti creare la scheda in `png/` seguendo il template standard.
-- **`luogo-*.md`** — Valutare se aggiornare un file esistente in `ambientazione/` o proporre la creazione di uno nuovo. Segnalare al DM prima di agire.
-- **`nota-*.md`** / **`incontro-*.md`** — Usare il contenuto come fonte aggiuntiva per il resoconto e per gli aggiornamenti alle schede PG e PNG.
-
-I file di sessione sono **fonti complementari** al racconto del DM, non sostitutive: il DM resta la fonte primaria per gli eventi.
-
-### Pulizia
-
-Dopo aver completato tutte le operazioni (resoconto scritto, schede aggiornate, nuovi file creati), **eliminare tutti i file dalla cartella `sessione/`**. Se la cartella è già vuota, proseguire normalmente.
+Questa regola si attiva dopo una sessione di gioco. Il processo è **interattivo e a fasi sequenziali**: l'AI guida il DM passo dopo passo, fa domande mirate e non procede alla fase successiva senza esplicita conferma. Non produrre mai tutto il materiale in un'unica passata.
 
 ---
 
-## File di output
+## Fase 1 — Raccolta iniziale
 
-Creare o aggiornare il file `resoconti/sessione-NNN.md` usando la numerazione progressiva (es. `sessione-003.md`). Verificare l'ultimo numero presente nella cartella `resoconti/` per determinare il numero corretto.
+**Prima di fare qualsiasi domanda**, leggere in sola lettura:
+- Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo)
+- L'ultimo file in `resoconti/` (per capire dove era rimasta la storia)
+- Tutti i file in `personaggi/` (per conoscere i PG disponibili)
+- Tutti i file in `png/` (per riconoscere i PNG già documentati)
 
-## Struttura del resoconto
+Poi chiedere al DM, con `AskQuestion`, le seguenti informazioni:
+1. **Data della sessione** (formato GG/MM/AAAA)
+2. **PG presenti** al tavolo quella sera (usare la lista dei file in `personaggi/` come opzioni selezionabili)
+3. **Racconto libero degli eventi**: invitare il DM a descrivere cosa è successo in modo grezzo e informale, senza preoccuparsi della struttura. Il DM può usare termini generici per i personaggi (es. "il paladino", "il nano guerriero") — saranno risolti in automatico.
+
+**Non procedere alla Fase 2 finché il DM non ha fornito il racconto.**
+
+---
+
+## Fase 2 — Chiarimenti e integrazioni
+
+Analizzare il racconto del DM incrociandolo con il materiale letto in Fase 1. Identificare le ambiguità e le lacune, poi porre al DM domande mirate. Esempi tipici:
+
+- **Riferimenti ambigui a personaggi**: se il DM ha scritto "il nano" e ci sono due nani tra i PG, chiedere quale.
+- **PNG incontrati**: per ogni PNG menzionato che non ha ancora una scheda in `png/`, chiedere conferma del nome, ruolo e dettagli rilevanti.
+- **Luoghi visitati**: per ogni luogo non ancora documentato in `ambientazione/`, chiedere conferma del nome e un dettaglio descrittivo.
+- **Incongruenze con la storia precedente**: segnalare qualsiasi contraddizione con i resoconti passati e chiedere chiarimento.
+- **Esito di situazioni aperte**: se nell'ultimo resoconto erano rimaste domande aperte o ganci narrativi, chiedere se e come si sono risolti.
+
+Raccogliere le risposte. Se emergono nuove ambiguità, fare ulteriori domande. Dichiarare esplicitamente quando il quadro è sufficientemente completo per procedere, e chiedere conferma al DM: *"Ho abbastanza informazioni per procedere. Confermato?"*
+
+**Non procedere alla Fase 3 senza conferma del DM.**
+
+---
+
+## Fase 3 — Proposta titolo e riassunto
+
+Proporre **due o tre titoli evocativi** per la sessione, in stile da cronaca epica.
+
+Proporre un **riassunto** di 3-5 righe che sintetizzi la sessione, scritto in terza persona con i nomi dei PG.
+
+Attendere che il DM scelga o corregga il titolo e approvi (o modifichi) il riassunto.
+
+**Non procedere alla Fase 4 senza approvazione esplicita di titolo e riassunto.**
+
+---
+
+## Fase 4 — Bozza del resoconto completo
+
+Scrivere la **bozza completa** del resoconto seguendo il template sotto. Presentarla al DM come testo in chiaro, **senza ancora salvare nessun file**.
 
 ```markdown
 # Sessione NNN — Titolo evocativo
@@ -59,26 +86,60 @@ Narrazione degli eventi in ordine cronologico, in terza persona. Includere scelt
 - Preparativi necessari per il DM
 ```
 
-## Tono
+Tono: narrativo, in terza persona, con i nomi dei PG. Stile da cronaca epica, non da verbale burocratico.
 
-Narrativo, in terza persona, con il nome dei PG. Stile da cronaca epica, non da verbale burocratico.
+Chiedere al DM: *"La bozza è corretta? Vuoi modificare qualcosa prima che salvi il file?"*
 
-## Aggiornamenti collaterali
+Applicare eventuali correzioni e ripresentare la bozza. Solo dopo approvazione esplicita, **salvare il file** `resoconti/sessione-NNN.md` usando la numerazione progressiva (verificare l'ultimo numero in `resoconti/` per determinare il numero corretto).
 
-Dopo aver scritto il resoconto, proporre esplicitamente al DM le seguenti voci da aggiungere nelle schede dei personaggi coinvolti:
+**Non procedere alla Fase 5 senza aver salvato il file e ricevuto conferma.**
 
-**Per ogni PG che ha vissuto un momento saliente** (`personaggi/nome-pg.md`):
+---
+
+## Fase 5 — Aggiornamenti collaterali
+
+Proporre al DM, **uno per uno**, ogni aggiornamento derivato dalla sessione. Per ciascuno, attendere conferma o modifica prima di applicare.
+
+### 5a — Schede PG
+
+Per ogni PG che ha vissuto un momento saliente, proporre la voce da aggiungere alla sezione `## Eventi interessanti` in `personaggi/nome-pg.md`:
+
 ```markdown
-## Eventi interessanti
-
 - **[Sessione NNN]** Breve descrizione dell'evento saliente.
 ```
 
-**Per ogni PNG apparso nella sessione** (`png/nome-png.md`):
-```markdown
-## Eventi interessanti
+### 5b — Schede PNG
 
-- **[Sessione NNN]** Breve descrizione dell'evento saliente.
-```
+Per ogni PNG apparso nella sessione:
+- Se esiste già un file in `png/`, proporre la voce da aggiungere a `## Eventi interessanti` in quel file.
+- Se **non** esiste ancora una scheda, segnalarlo al DM e proporre di crearla in `png/` seguendo il template standard (lo stesso usato dalla modalità ingame). Attendere conferma prima di creare il file.
 
-Se un PNG non ha ancora una scheda in `png/`, segnalarlo al DM e proporre di crearne una. Se dal resoconto emergono informazioni rilevanti su luoghi non ancora documentati, segnalare se vale la pena aggiornare i file in `ambientazione/`.
+### 5c — File di ambientazione
+
+Se dal resoconto emergono informazioni rilevanti su luoghi non ancora documentati, segnalarlo al DM specificando quale file in `ambientazione/` andrebbe creato o aggiornato. Attendere istruzione prima di agire.
+
+### 5d — Smistamento file di sessione
+
+Per ogni file in `sessione/`:
+- **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente. Altrimenti creare la scheda in `png/`.
+- **`luogo-*.md`** — Valutare se aggiornare un file in `ambientazione/` o proporne la creazione. Segnalare al DM prima di agire.
+- **`nota-*.md`** / **`incontro-*.md`** — Verificare se ci sono informazioni utili non ancora incorporate nel resoconto o nelle schede; segnalare al DM se qualcosa è stato tralasciato.
+
+I file di sessione sono **fonti complementari** al racconto del DM, non sostitutive: il DM resta la fonte primaria per gli eventi.
+
+**Non procedere alla Fase 6 senza aver completato tutti gli aggiornamenti approvati.**
+
+---
+
+## Fase 6 — Riepilogo e pulizia
+
+Presentare al DM un **riepilogo sintetico** di tutto ciò che è stato fatto:
+- File creati o aggiornati (con percorso)
+- Voci aggiunte alle schede personaggio
+- Eventuali operazioni sospese o rimaste in attesa
+
+Poi chiedere conferma prima di eliminare i file dalla cartella `sessione/`:
+
+*"Posso eliminare i file di sessione temporanei? (sessione/... elenco file)"*
+
+Solo dopo conferma esplicita, **eliminare tutti i file dalla cartella `sessione/`**. Se la cartella è già vuota, segnalarlo e concludere.
