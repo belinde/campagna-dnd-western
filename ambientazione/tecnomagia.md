@@ -39,4 +39,4 @@ Il rovescio della medaglia è sociale. L'agricoltura meccanizzata ha svuotato le
 - Un meccanico runista viene trovato morto nel suo laboratorio; l'officina è stata svaligiata di una serie di componenti specifici che, assemblati, potrebbero formare qualcosa di molto pericoloso.
 - Una miniera di rame nelle Terre Selvagge viene rivendicata contemporaneamente da una compagnia della East Coast e da un clan orchesco che la usa come sito sacro da secoli.
 - Un motore a vapore su una locomotiva comincia a comportarsi in modo anomalo: la creatura elementale al suo interno sta cercando di comunicare qualcosa.
-- Un tecnomaGo del Caporalato arriva in città con un prototipo di oggetto tecnomagico di nuova generazione. Dice di volerlo vendere. Qualcuno vuole assicurarsi che non ci riesca.
+- Un tecnomago del Caporalato arriva in città con un prototipo di oggetto tecnomagico di nuova generazione. Dice di volerlo vendere. Qualcuno vuole assicurarsi che non ci riesca.

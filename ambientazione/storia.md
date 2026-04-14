@@ -14,7 +14,7 @@ La notizia fu tenuta segreta per quanto possibile. Terralba aveva trovato un con
 
 ### L'era delle colonie (47.388 – 47.613 C.E.)
 
-La prima colonia stabile, New Avalon, fu fondata da Terralba nel 47.392 C.E., quattro anni dopo la scoperta del varco. Nei due secoli successivi, tra il 47.392 e il 47.613 C.E., vennero fondate le altre dodici colonie — alcune da Terralba, altre dal Caporalato, alcune da consorzi misti o da potentati minori del Vecchio Mondo. Le colonie erano insediamenti di frontiera dipendenti economicamente e politicamente dalle madrepatrie: pagavano dazi, fornivano risorse, e in cambio ricevevano protezione e rifornimenti.
+La prima colonia stabile, New Avalon, fu fondata da Terralba nel 47.392 C.E., quattro anni dopo la scoperta del varco, alla foce del Grande Fiume sulle coste del Golfo. Da lì Terralba spinse la colonizzazione lungo le coste meridionali e nella penisola subtropicale, fondando nell'arco di sessant'anni altre quattro colonie. Il Caporalato, che trovò il proprio corridoio planare nel 47.416 C.E., si stabilì invece sulla costa orientale, dove fondò quattro colonie con la consueta efficienza militare. Due potentati minori del Vecchio Mondo completarono il quadro con altrettanti insediamenti nelle zone più settentrionali e nell'entroterra dei Grandi Laghi. In tutto, tra il 47.392 e il 47.613 C.E., vennero fondate undici colonie — le altre dieci dopo New Avalon — che divennero insediamenti di frontiera dipendenti economicamente e politicamente dalle rispettive madrepatrie: pagavano dazi, fornivano risorse, e in cambio ricevevano protezione e rifornimenti.
 
 Il rapporto era scomodo fin dall'inizio. I coloni di prima generazione erano emigrati per sfuggire a qualcosa — povertà, persecuzione, mancanza di prospettive — e non avevano particolare nostalgia per chi li aveva spinti a imbarcarsi su una nave verso l'ignoto. I coloni di seconda e terza generazione non avevano mai visto il Vecchio Mondo, e lo consideravano una fonte di tasse più che una patria.
 
@@ -22,7 +22,7 @@ Nel frattempo, le tensioni tra Terralba e il Caporalato non si erano mai davvero
 
 ### La Guerra d'Indipendenza (47.613 – 47.615 C.E.)
 
-L'ennesima guerra tra Terralba e il Caporalato, scoppiata nel 47.613 C.E., offrì alle tredici colonie l'occasione attesa da generazioni. Con le madrepatrie impegnate a dissanguarsi a vicenda, i rappresentanti coloniali si riunirono e proclamarono la federazione degli Stati Uniti, rifiutando di fornire ulteriori truppe o risorse a nessuna delle due parti in conflitto.
+L'ennesima guerra tra Terralba e il Caporalato, scoppiata nel 47.613 C.E., offrì alle undici colonie l'occasione attesa da generazioni. Con le madrepatrie impegnate a dissanguarsi a vicenda, i rappresentanti coloniali si riunirono e proclamarono la federazione degli Stati Uniti, rifiutando di fornire ulteriori truppe o risorse a nessuna delle due parti in conflitto.
 
 La reazione militare fu rapida ma mal coordinata: né Terralba né il Caporalato potevano distogliere risorse significative da un conflitto già logorante per inseguire le colonie ribelli in un territorio che non conoscevano abbastanza bene. Due anni di scaramucce, assedi falliti e trattative segrete portarono al Concilio di New Avalon nel 47.615 C.E.
 

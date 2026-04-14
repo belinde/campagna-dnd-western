@@ -20,7 +20,7 @@ La burocrazia è elaborata e lenta, riflesso di una cultura che misura il tempo 
 
 Terralba è ricca in modo diverso dal Caporalato: meno industria pesante, più finanza, cultura e magia. Le sue università sono le più prestigiose del Vecchio Mondo; i maghi formati a Terralba sono cercati ovunque. Le sue banche finanziano spedizioni, colonie e guerre altrui. I suoi cantieri producono navi di qualità eccellente, comprese alcune delle migliori imbarcazioni per l'oceano planare.
 
-Nel Nuovo Mondo Terralba mantiene interessi commerciali significativi attraverso le concessioni sui varchi di cui è proprietaria e i legami con le colonie fondate sotto la propria bandiera — alcune delle quali hanno mantenuto stretti rapporti anche dopo l'indipendenza, per affinità culturale più che per obbligo politico.
+Nel Nuovo Mondo Terralba mantiene interessi commerciali significativi attraverso le concessioni sui varchi di cui è proprietaria e i legami con le cinque colonie fondate sotto la propria bandiera sulle coste del Golfo — New Avalon, Vornessa, Dornhal, Silvarenne e Lornessa. Alcune di queste hanno mantenuto stretti rapporti anche dopo l'indipendenza, per affinità culturale più che per obbligo politico; altre si sono allontanate tanto da rendere il legame quasi puramente nominale.
 
 ## Relazioni con altre fazioni
 

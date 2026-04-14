@@ -22,7 +22,7 @@ La burocrazia del Caporalato è efficiente, relativamente incorrotta negli strat
 
 Campobrina è lo stato industrialmente più avanzato del mondo conosciuto. Le sue fabbriche producono motori a vapore, rivolvers, macchinari agricoli e componenti runiche esportati in ogni angolo del globo — compreso il Nuovo Mondo, che nonostante l'indipendenza rimane il principale mercato delle esportazioni tecnomagiche del Caporalato. Chi vende le macchine ha un tipo di potere che i trattati politici non toccano.
 
-Il controllo dei varchi planari è un'altra fonte di influenza: le concessioni ottenute dal Caporalato dopo la scoperta del proprio corridoio verso il Nuovo Mondo (47.416 C.E.) sono ancora in mano a famiglie e istituzioni legate al governo, e i dazi che producono finanziano una quota significativa del bilancio statale.
+Il controllo dei varchi planari è un'altra fonte di influenza: le concessioni ottenute dal Caporalato dopo la scoperta del proprio corridoio verso il Nuovo Mondo (47.416 C.E.) sono ancora in mano a famiglie e istituzioni legate al governo, e i dazi che producono finanziano una quota significativa del bilancio statale. Le quattro colonie fondate sulla costa orientale del Nuovo Mondo — Arkenholm, Lythandor, Selvarno e Ravengard — mantengono legami commerciali e culturali con Campobrina più solidi di quanto la retorica dell'indipendenza lasci intendere.
 
 Il Caporalato non brilla per soft power culturale — non ha università prestigiose come Terralba, né una tradizione artistica che il Nuovo Mondo si preoccupi di emulare. Ma ha qualcosa di più diretto: la tecnologia che muove il mondo.
 

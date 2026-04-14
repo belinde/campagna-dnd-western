@@ -12,7 +12,7 @@ Le radici della stratificazione razziale affondano nella storia delle madrepatri
 
 ### Elfi
 
-Gli elfi sono ovunque nei posti che contano: università, studi legali, sale da ballo della East Coast, consolati di Terralba nelle città maggiori. Portano con sé una tradizione magica millenaria e la consapevolezza — raramente espressa ad alta voce ma sempre presente — di essere gli inventori della civiltà come la si conosce. Nel Nuovo Mondo la loro longevità li aiuta ad accumulare ricchezza e influenza su archi di tempo che un umano non può raggiungere; il loro senso naturale per la magia li rende partner ambiti per qualsiasi impresa tecnomagica sofisticata.
+Gli elfi sono ovunque nei posti che contano: università, studi legali, sale da ballo delle città più grandi, consolati di Terralba nelle città maggiori. Portano con sé una tradizione magica millenaria e la consapevolezza — raramente espressa ad alta voce ma sempre presente — di essere gli inventori della civiltà come la si conosce. Nel Nuovo Mondo la loro longevità li aiuta ad accumulare ricchezza e influenza su archi di tempo che un umano non può raggiungere; il loro senso naturale per la magia li rende partner ambiti per qualsiasi impresa tecnomagica sofisticata.
 
 Sulla Frontiera, però, la raffinatezza elfica è un lusso fuori luogo. L'elfo che esce dalle città della East Coast scopre che la sua eleganza non ferma un proiettile, e che i coloni del Far West lo guardano con la stessa diffidenza con cui guardano chiunque sembri venire da un posto migliore.
 

@@ -4,18 +4,21 @@
 
 Il Nuovo Mondo è un continente vasto che ricalca fedelmente la forma e la distribuzione geografica del Nord America. Si estende per migliaia di miglia da est a ovest e da nord a sud, abbracciando climi radicalmente diversi: foreste dense lungo la costa orientale, pianure aperte e quasi infinite al centro, catene montuose imponenti a ovest, e deserti aridi oltre quelle montagne prima di raggiungere il litorale pacifico ancora in larga parte inesplorato.
 
-La colonizzazione ha avanzato da est verso ovest seguendo le grandi valli fluviali e le vie naturali tra le montagne. La Frontiera — la linea mobile che separa i territori colonizzati da quelli liberi — si sposta ogni decennio più a ovest, spinta dall'arrivo di nuovi coloni, dalla ferrovia che segue le loro tracce, e dall'ambizione di chi non trova più terra libera nella East Coast.
+La colonizzazione ha avanzato simultaneamente da due direzioni: dalle coste del Golfo meridionale, dove Terralba fondò i primi insediamenti risalendo le grandi valli fluviali verso l'interno, e dalla costa orientale, dove il Caporalato stabilì le proprie teste di ponte commerciali e navali. La Frontiera — la linea mobile che separa i territori colonizzati da quelli liberi — si sposta ogni decennio più a ovest, spinta dall'arrivo di nuovi coloni, dalla ferrovia che segue le loro tracce, e dall'ambizione di chi non trova più terra libera nelle colonie d'origine.
 
 ## Macro-regioni
 
 ### La East Coast
 
-La costa orientale è la regione più antica e più densamente popolata del Nuovo Mondo. Qui sorgono le prime tredici colonie: città con strade lastricate, università, banche, teatri, porti attivi giorno e notte. Il clima è temperato e piovoso a nord, caldo e umido a sud. I grandi fiumi che scendono dai rilievi orientali — la catena degli Appalacchi — formano estuari larghi e profondi che hanno permesso la fondazione delle prime città portuali.
+La costa orientale è la seconda regione più antica del Nuovo Mondo, sede delle prime colonie del Caporalato di Campobrina. Città con strade lastricate, università, banche, teatri, porti attivi giorno e notte. Il clima è temperato e piovoso a nord, caldo e umido a sud. I grandi fiumi che scendono dai rilievi orientali — la catena degli Appalacchi — formano estuari larghi e profondi che hanno permesso la fondazione delle prime città portuali.
 
+**Ravengard** — Il principale porto della costa meridionale orientale, snodo del commercio con l'entroterra agricolo e centro nervoso dell'economia schiavista. Le case d'aste di halfling e gnomi più grandi della costa orientale si trovano qui; la ricchezza è visibile e ostentata, e la parola "abolizione" viene pronunciata in pubblico solo a rischio personale.
 
-**Porto Sud** — Il principale porto della costa meridionale, snodo del commercio con il Caporalato di Campobrina. È anche la città dove la questione della servitù dei halfling e degli gnomi è più esplosiva: le grandi piantagioni del Sud dipendono da quella manodopera, e il Congresso federale ne viene periodicamente paralizzato.
+**Arkenholm** — Grande porto militare e navale, fondato dal Caporalato come prima testa di ponte sulla costa orientale. I suoi cantieri sono ancora oggi i più produttivi del Sud, e la sua doppia anima — industriale e schiavista — ne fa il punto di massima tensione tra l'eredità tecnomagica di Campobrina e la cultura delle piantagioni meridionali.
 
-**Nuova Terralba** — Città del Nord-Est a forte presenza elfica, culturalmente più vicina alla madrepatria di Terralba che al governo federale di New Avalon. È sede della più importante università del Nuovo Mondo e di un consolato elfico particolarmente influente.
+**Lythandor** — La capitale commerciale del Nord. Fondata dal Caporalato su una baia naturale tra le più protette della costa, è diventata il porto più attivo del Nuovo Mondo: ogni giorno vi attraccano navi dal Vecchio Mondo, dalla costa meridionale, dalle rotte dell'oceano planare. Ospita la filiale principale della Banca del Caporalato e il più grande mercato di componenti runiche del continente.
+
+**Selvarno** — Città del Nord-Est a forte vocazione intellettuale. È sede dell'università più importante del Nuovo Mondo e del movimento abolizionista più radicale della federazione. Da Selvarno sono uscite le idee che hanno reso possibile l'indipendenza — e da Selvarno continuano a uscire le idee che il Sud considera la principale minaccia al proprio ordine sociale.
 
 ### Gli Appalacchi
 
@@ -29,15 +32,19 @@ Le grandi pianure centrali. Una volta terra di allevamento allo stato brado — 
 
 Le tensioni sociali sono altissime: gli allevatori tradizionali vedono i propri spazi ridursi, i braccianti disoccupati si accumulano nelle città di fondovalle, e i clan orcheschi del Sud del Middle West vengono spinti sempre più verso l'interno. Il Grande Fiume — il più lungo del continente, navigabile per centinaia di miglia — attraversa il Middle West da nord a sud e rimane la principale via di comunicazione interna, più lenta della ferrovia ma più economica.
 
-**Fiume Grande** — Il corrispettivo del Missouri/Mississippi. Lungo le sue rive sono nate le prime città interne: centri di smistamento per i prodotti agricoli, scali per le barche a vapore, bazar affollati dove coloni, commercianti orcheschi, mercanti nani e arruolatori federali si incrociano.
+**Valdoren** — La città più importante del Middle West. Sorge alla confluenza del Grande Fiume e del suo principale tributario occidentale, un incrocio di correnti fluviali che l'ha resa il nodo logistico di tutto l'interno: qui arrivano le barche a vapore dal Sud, qui partono le carovane verso la Frontiera, qui si smistano i prodotti agricoli delle pianure prima che raggiungano i porti della costa. Non è una colonia — è nata dall'espansione spontanea della Frontiera — e questa assenza di padri fondatori le conferisce un carattere caotico e libero che attrae mercanti, avventurieri e chiunque voglia ricominciare senza troppe domande sul passato.
 
 **Fortino Carson** — Avamposto militare federale nel mezzo del Middle West, punto di riferimento per i coloni che avanzano verso la Frontiera. È anche un nodo ferroviario in costruzione: quando i binari arriveranno fino a qui, la Frontiera si sposterà ancora di cento miglia a ovest.
 
 ### Le Pianure del Sud
 
-A sud del Grande Fiume, le pianure sono più calde e piatte, con inverni miti e estati torride. Questa è la regione delle grandi piantagioni — cotone, tabacco, canna da zucchero — che dipendono largamente dalla manodopera a contratto degli halfling e degli gnomi. Il confine invisibile che separa le colonie del Nord, dove la servitù è stata abolita o limitata, da quelle del Sud, dove è ancora praticata nelle sue forme più pesanti, corre approssimativamente lungo il corso del Grande Fiume e poi si piega verso est fino agli Appalacchi.
+La prima regione colonizzata nel Nuovo Mondo, dove Terralba approdò dal Golfo prima ancora che il Caporalato trovasse il proprio varco planare. A sud del Grande Fiume, le pianure sono più calde e piatte, con inverni miti e estati torride. Questa è la regione delle grandi piantagioni — cotone, tabacco, canna da zucchero — che dipendono largamente dalla manodopera a contratto degli halfling e degli gnomi. Le città più antiche sono ricche e in parte ancora segnate dall'impronta elfica originale, anche se i secoli e l'immigrazione umana hanno diluito quasi ovunque il carattere di fondazione.
 
-**New Avalon** — La capitale federale. Fondata alla foce del Missisippi, occupa una posizione strategica che ne ha fatto il cuore commerciale e politico degli Stati Uniti. La sede del Congresso federale, le principali banche, i consolati di Terralba e del Caporalato, i più grandi cantieri per le navi dell'oceano planare: tutto converge qui.
+**New Avalon** — La capitale federale, prima e più grande città del Nuovo Mondo. Fondata da Terralba alla foce del Grande Fiume nel 47.392 C.E., occupa una posizione strategica che ne ha fatto il cuore commerciale e politico degli Stati Uniti. La sede del Congresso federale, le principali banche, i consolati di Terralba e del Caporalato, i più grandi cantieri per le navi dell'oceano planare: tutto converge qui.
+
+**Vornessa** — Porto di frontiera alla foce del Rio Bravo, il punto più a sudovest della colonizzazione. Nodo di commercio — lecito e no — tra il territorio federale e le Terre Selvagge meridionali.
+
+**Silvarenne** — Colonia elfica nella penisola subtropicale meridionale. Mantiene un'identità culturale vicina a Terralba pur essendo geograficamente la più isolata delle colonie del Golfo.
 
 
 ### La Frontiera
@@ -64,13 +71,13 @@ Le carte federali le mostrano bianche, spesso con l'annotazione "territorio non 
 
 I fiumi sono stati le prime strade del Nuovo Mondo: vie di penetrazione verso l'interno, fonti d'acqua per gli insediamenti, rotte commerciali per le barche a vapore.
 
-| Nome nel Nuovo Mondo | Corrispettivo storico | Ruolo |
-|---|---|---|
-| Il Grande Fiume | Missouri + Mississippi | Principale asse nord-sud del Middle West |
-| Il Fiume dell'Est | Hudson / Delaware | Cuore commerciale della East Coast settentrionale |
-| Il Fiume Largo | Ohio | Confine tradizionale tra colonie del Nord e del Sud |
-| Il Fiume Verde | Colorado | Cuore delle Terre Selvagge occidentali |
-| Il Fiume Argentato | Rio Grande | Confine meridionale del territorio federale |
+| Nome | Ruolo |
+|---|---|
+| Missouri + Mississippi | Principale asse nord-sud del Middle West |
+| Hudson / Delaware | Cuore commerciale della East Coast settentrionale |
+| Ohio | Confine tradizionale tra colonie del Nord e del Sud |
+| Colorado | Cuore delle Terre Selvagge occidentali |
+| Rio Grande | Confine meridionale del territorio federale |
 
 ## Ganci narrativi
 
