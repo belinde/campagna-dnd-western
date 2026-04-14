@@ -1,0 +1,30 @@
+# Kelvor Rivib
+
+**Razza:** Umano
+**Classe:** Paladino
+**Livello:** —
+**Giocatore:** Lons
+
+## Aspetto
+
+_Da definire._
+
+## Personalità
+
+_Da definire._
+
+## Background
+
+_Da definire._
+
+## Legami con gli altri PG
+
+_Da definire._
+
+## Note DM
+
+_Da definire._
+
+## Eventi interessanti
+
+_(nessun evento registrato)_
