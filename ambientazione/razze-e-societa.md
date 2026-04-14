@@ -14,7 +14,7 @@ Le radici della stratificazione razziale affondano nella storia delle madrepatri
 
 Gli elfi sono ovunque nei posti che contano: università, studi legali, sale da ballo della East Coast, consolati di Terralba nelle città maggiori. Portano con sé una tradizione magica millenaria e la consapevolezza — raramente espressa ad alta voce ma sempre presente — di essere gli inventori della civiltà come la si conosce. Nel Nuovo Mondo la loro longevità li aiuta ad accumulare ricchezza e influenza su archi di tempo che un umano non può raggiungere; il loro senso naturale per la magia li rende partner ambiti per qualsiasi impresa tecnomagica sofisticata.
 
-Sulla Frontiera, però, la raffinatezza elfiga è un lusso fuori luogo. L'elfo che esce dalle città della East Coast scopre che la sua eleganza non ferma un proiettile, e che i coloni del Far West lo guardano con la stessa diffidenza con cui guardano chiunque sembri venire da un posto migliore.
+Sulla Frontiera, però, la raffinatezza elfica è un lusso fuori luogo. L'elfo che esce dalle città della East Coast scopre che la sua eleganza non ferma un proiettile, e che i coloni del Far West lo guardano con la stessa diffidenza con cui guardano chiunque sembri venire da un posto migliore.
 
 ### Umani
 
@@ -34,7 +34,7 @@ In pratica, halfling e gnomi lavorano nelle miniere, nelle fabbriche, nelle cuci
 
 I nani occupano un posto anomalo nella gerarchia sociale. Non sono numerosi, non cercano di espandersi territorialmente, e non si mescolano facilmente: la loro cultura è chiusa, i loro insediamenti separati, i loro costumi incomprensibili a chi non li conosce. Tutto questo li rende alieni e un po' inquietanti — ma la qualità della loro manifattura è talmente indiscutibile da imporre rispetto anche ai più prevenuti.
 
-Un orologio nano dura tre generazioni. Un'armatura nana ferma quello che un'armatura umana lascia passare. Uno strumento runico prodotto in un laboratorio nano funziona meglio e dura più a lungo di uno analogo prodotto altrove. Questa reputazione vale oro, e i nani lo sanno: i loro prezzi riflettono la qualità, e il loro rifiuto di ridurli riflette una dignità commerciale che il cliente alla fine rispetta, anche a denti stretti.
+Un orologio nanico dura tre generazioni. Un'armatura nanica ferma quello che un'armatura umana lascia passare. Uno strumento runico prodotto in un laboratorio nanico funziona meglio e dura più a lungo di uno analogo prodotto altrove. Questa reputazione vale oro, e i nani lo sanno: i loro prezzi riflettono la qualità, e il loro rifiuto di ridurli riflette una dignità commerciale che il cliente alla fine rispetta, anche a denti stretti.
 
 Il pregiudizio diffuso verso i nani è di tipo estetico più che funzionale: vengono descritti come "deformi", "rozzi nell'aspetto", "effigi mancate" dell'ideale umano o elfico. I nani se ne fregano con un'equanimità che molti trovano irritante.
 

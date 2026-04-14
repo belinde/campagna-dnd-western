@@ -4,7 +4,7 @@
 
 Il Caporalato di Campobrina è lo stato umano del Vecchio Mondo, antagonista storico di Terralba e culla dell'innovazione tecnomagica che ha trasformato il mondo negli ultimi due secoli. Il nome stesso — caporalato — evoca una struttura militare, gerarchica, pragmatica. Non è un caso: Campobrina è uno stato che si è costruito attraverso la forza e l'organizzazione più che attraverso il consenso o la tradizione culturale. Dove Terralba accumula secoli di raffinatezza, Campobrina accumula risultati.
 
-Gli umani del Caporalato si considerano realisti. Non hanno la longevità elfiga né la loro sensibilità naturale alla magia, ma hanno qualcosa che Terralba fatica ad ammettere di invidiare: la capacità di adattarsi in fretta, di bruciare risorse nel presente sapendo che la prossima generazione rimetterà in sesto i conti, di trasformare un problema in un'opportunità prima che il nemico abbia finito di discuterne i termini. La tecnomagia è il distillato di questa mentalità: se non puoi eguagliare la magia degli elfi, costruisci qualcosa che la rimpiazzi.
+Gli umani del Caporalato si considerano realisti. Non hanno la longevità elfica né la loro sensibilità naturale alla magia, ma hanno qualcosa che Terralba fatica ad ammettere di invidiare: la capacità di adattarsi in fretta, di bruciare risorse nel presente sapendo che la prossima generazione rimetterà in sesto i conti, di trasformare un problema in un'opportunità prima che il nemico abbia finito di discuterne i termini. La tecnomagia è il distillato di questa mentalità: se non puoi eguagliare la magia degli elfi, costruisci qualcosa che la rimpiazzi.
 
 ## Struttura e gerarchia
 
