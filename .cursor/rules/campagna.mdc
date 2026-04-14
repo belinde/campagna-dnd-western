@@ -9,16 +9,27 @@ Questo progetto è uno strumento privato del Dungeon Master per pianificare e ge
 
 ## Ispirazione storica
 
-L'ambientazione è **pesantemente ispirata alla storia del Far West americano**, approssimativamente nel periodo 1840-1890. I paralleli non sono copie letterali — il mondo resta fantasy e può divergere liberamente dalla storia reale — ma costituiscono la bussola narrativa, sociale e culturale del progetto. La Geografia invece ricalca esattamente quella del Nord America.
+L'ambientazione è **pesantemente ispirata alla storia del Far West americano**, approssimativamente nel periodo 1840-1890. Il grado di fedeltà alla realtà storica varia però a seconda dell'elemento:
 
-| Elemento dell'ambientazione | Parallelo storico |
+### Geografia — replica fedele
+
+La mappa del Nuovo Mondo **ricalca fedelmente la geografia del Nord America**. Nomi di regioni, posizione relativa di coste, pianure, montagne e fiumi devono essere coerenti con la realtà geografica americana. La East Coast, il Middle West, il Far West e le Terre Selvagge corrispondono direttamente alle loro controparti storiche.
+
+### Personaggi storici — ammessi con adattamenti
+
+Personaggi storici reali possono comparire nell'ambientazione. Possono avere **tratti modificati** (razza fantasy, poteri magici, ruolo diverso) per integrarsi meglio nel mondo di gioco, ma devono rimanere riconoscibili e coerenti con la loro identità storica di fondo.
+
+### Storia, cultura ed eventi — solo ispirazione
+
+Tutti gli altri elementi (eventi storici, dinamiche sociali, fazioni, economia, conflitti) sono **fonti di ispirazione**, non modelli da copiare. I paralleli principali sono:
+
+| Elemento dell'ambientazione | Ispirazione storica |
 |---|---|
 | Colonizzazione del Nuovo Mondo e avanzata della Frontiera | Espansione verso Ovest degli Stati Uniti, Manifest Destiny |
 | Orchi delle Terre Selvagge | Popoli nativi americani |
 | Halfling e gnomi (schiavitù, contratti di servitù) | Schiavitù afroamericana e discriminazione razziale |
 | Tecnomagia (revolver, ferrovia, motore a vapore) | Rivoluzione industriale e tecnologica del XIX secolo |
 | Economia del rame e concessioni minerarie | Corsa all'oro e boom minerario |
-| East Coast / Middle West / Far West / Terre Selvagge | **Corrispondenza diretta** con la geografia del Nord America storico (non un parallelo libero: la mappa ricalca esattamente quella reale) |
 | Guerra d'Indipendenza delle Colonie | Rivoluzione Americana |
 | Terralba (regno elfico) e Caporalato di Campobrina | Potenze coloniali europee (es. Gran Bretagna e Francia/Spagna) |
 
@@ -40,6 +51,7 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 | `personaggi/` | Un file per ogni personaggio giocante (PG) |
 | `png/` | Un file per ogni personaggio non giocante (PNG) rilevante |
 | `resoconti/` | Un file per ogni sessione di gioco |
+| `sessione/` | Area di appoggio temporanea: appunti, PNG e luoghi generati durante la sessione dal vivo (svuotata dalla modalità resoconto) |
 
 ## Convenzioni sui nomi dei file
 
@@ -47,6 +59,7 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 - `personaggi/nome-personaggio.md` (es. `personaggi/aldric-il-grigio.md`)
 - `png/nome-png.md` (es. `png/dorvek-il-silenzioso.md`)
 - `resoconti/sessione-001.md`, `resoconti/sessione-002.md`, ecc. (tre cifre con zero padding)
+- `sessione/png-nome.md`, `sessione/luogo-nome.md`, `sessione/nota-argomento.md`, `sessione/incontro-nome.md` (file temporanei con prefisso di tipo)
 
 ## Struttura delle schede personaggio (PG e PNG)
 
