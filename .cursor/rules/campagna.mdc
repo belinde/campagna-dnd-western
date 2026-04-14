@@ -1,0 +1,46 @@
+---
+description: Regole base della campagna D&D 5e "La corsa al Nuovo Mondo"
+alwaysApply: true
+---
+
+# Progetto Campagna D&D 5e
+
+Questo progetto è uno strumento privato del Dungeon Master per pianificare e gestire una campagna di D&D 5a edizione denominata "La corsa al Nuovo Mondo". I giocatori non hanno accesso a questi materiali.
+
+## Lingua e tono
+
+- Tutte le risposte e i contenuti generati devono essere in **italiano**
+- Usare un tono narrativo, evocativo e coerente con il genere fantasy
+- Fare riferimento alle regole di D&D 5e quando pertinente (meccaniche, statistiche, terminologia ufficiale)
+
+## Struttura del progetto
+
+Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
+
+| Cartella | Contenuto |
+|---|---|
+| `ambientazione/` | Background del mondo: storia, geografia, demografia, fazioni, religioni, luoghi |
+| `personaggi/` | Un file per ogni personaggio giocante (PG) |
+| `png/` | Un file per ogni personaggio non giocante (PNG) rilevante |
+| `resoconti/` | Un file per ogni sessione di gioco |
+
+## Convenzioni sui nomi dei file
+
+- `ambientazione/storia.md`, `ambientazione/geografia.md`, ecc.
+- `personaggi/nome-personaggio.md` (es. `personaggi/aldric-il-grigio.md`)
+- `png/nome-png.md` (es. `png/dorvek-il-silenzioso.md`)
+- `resoconti/sessione-001.md`, `resoconti/sessione-002.md`, ecc. (tre cifre con zero padding)
+
+## Struttura delle schede personaggio (PG e PNG)
+
+Sia i file in `personaggi/` che quelli in `png/` devono contenere una sezione `## Eventi interessanti` con voci che citano i momenti salienti estratti dai resoconti in cui il personaggio è apparso, nel formato:
+
+```markdown
+## Eventi interessanti
+
+- **[Sessione NNN]** Breve descrizione dell'evento saliente.
+```
+
+## Contesto da consultare
+
+Prima di generare qualsiasi contenuto, leggere i file presenti in `ambientazione/`, `personaggi/` e `resoconti/` per garantire coerenza narrativa con la campagna.

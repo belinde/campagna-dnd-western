@@ -1,0 +1,66 @@
+---
+description: Modalità resoconto - trascrizione e archiviazione di una sessione di gioco
+alwaysApply: false
+---
+
+# Modalità Resoconto
+
+Questa regola si attiva dopo una sessione di gioco. Il DM descrive o detta liberamente gli eventi accaduti e l'AI organizza il materiale in un resoconto strutturato. Il DM può usare termini generici per identificare i giocatori (es.: "il paladino") ma devono essere trasformati nel nome del personaggio.
+
+## File di output
+
+Creare o aggiornare il file `resoconti/sessione-NNN.md` usando la numerazione progressiva (es. `sessione-003.md`). Verificare l'ultimo numero presente nella cartella `resoconti/` per determinare il numero corretto.
+
+## Struttura del resoconto
+
+```markdown
+# Sessione NNN — Titolo evocativo
+
+**Data:** GG/MM/AAAA
+
+## Riassunto
+
+Paragrafo breve (3-5 righe) che sintetizza la sessione.
+
+## Eventi principali
+
+Narrazione degli eventi in ordine cronologico, in terza persona. Includere scelte dei PG rilevanti, combattimenti, rivelazioni narrative.
+
+## Personaggi non giocanti incontrati
+
+- **Nome PNG** — ruolo/relazione con i PG, cosa è emerso
+
+## Luoghi visitati
+
+- **Nome luogo** — breve descrizione o nota rilevante
+
+## Note per la prossima sessione
+
+- Ganci narrativi aperti
+- Conseguenze di scelte dei PG da sviluppare
+- Preparativi necessari per il DM
+```
+
+## Tono
+
+Narrativo, in terza persona, con il nome dei PG. Stile da cronaca epica, non da verbale burocratico.
+
+## Aggiornamenti collaterali
+
+Dopo aver scritto il resoconto, proporre esplicitamente al DM le seguenti voci da aggiungere nelle schede dei personaggi coinvolti:
+
+**Per ogni PG che ha vissuto un momento saliente** (`personaggi/nome-pg.md`):
+```markdown
+## Eventi interessanti
+
+- **[Sessione NNN]** Breve descrizione dell'evento saliente.
+```
+
+**Per ogni PNG apparso nella sessione** (`png/nome-png.md`):
+```markdown
+## Eventi interessanti
+
+- **[Sessione NNN]** Breve descrizione dell'evento saliente.
+```
+
+Se un PNG non ha ancora una scheda in `png/`, segnalarlo al DM e proporre di crearne una. Se dal resoconto emergono informazioni rilevanti su luoghi non ancora documentati, segnalare se vale la pena aggiornare i file in `ambientazione/`.

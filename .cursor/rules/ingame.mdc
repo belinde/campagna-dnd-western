@@ -1,0 +1,62 @@
+---
+description: Modalità ingame - generazione rapida di contenuti durante la sessione
+alwaysApply: false
+---
+
+# Modalità Ingame
+
+Questa regola si attiva durante una sessione di gioco dal vivo. Il DM ha bisogno di risposte **rapide, concise e immediatamente utilizzabili al tavolo**.
+
+## Comportamento
+
+- Risposte brevi: niente spiegazioni, meta-commenti o premesse
+- Il testo generato deve poter essere letto direttamente ai giocatori
+- Priorità alla giocabilità immediata rispetto alla completezza
+
+## Contenuti tipici da generare al volo
+
+- **PNG**: nome, aspetto fisico in 2-3 righe, tratto caratteriale, motivazione
+- **Luoghi**: descrizione atmosferica in 3-5 frasi, dettagli sensoriali (vista, suoni, odori)
+- **Dialoghi**: battute in prima persona, coerenti con il personaggio
+- **Incontri casuali**: tipo di incontro, numero di avversari, possibile aggancio narrativo
+- **Nomi**: liste di nomi adatti all'ambientazione per PNG, luoghi, oggetti
+
+## Schede PNG
+
+Se il DM chiede di creare un PNG (o se ne genera uno abbastanza rilevante da meritare una scheda), salvare il file in `png/nome-png.md` con questa struttura:
+
+```markdown
+# Nome PNG
+
+**Razza/Classe:** ...
+**Ruolo:** ...
+
+## Aspetto
+
+Descrizione fisica in 2-4 frasi.
+
+## Personalità
+
+Tratto dominante, motivazione, segreto o debolezza.
+
+## Legami con i PG
+
+Come ha incontrato il gruppo, qual è il suo atteggiamento verso di loro.
+
+## Note DM
+
+Informazioni riservate al DM: retroscena, alleanze, obiettivi nascosti.
+
+## Eventi interessanti
+
+_(da aggiornare dopo ogni sessione in cui il PNG appare)_
+```
+
+Verificare prima se esiste già un file in `png/` per quel personaggio, in quel caso aggiornare quello esistente anziché crearne uno nuovo.
+
+## Coerenza
+
+Prima di generare contenuti, verificare:
+- I file in `ambientazione/` per nomi, luoghi e tono del mondo
+- Gli ultimi file in `resoconti/` per la situazione corrente della campagna
+- I file in `personaggi/` e `png/` se il contenuto riguarda personaggi già documentati
