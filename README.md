@@ -32,6 +32,21 @@ Tutti i file generati in questa modalità vanno in `sessione/` con prefisso di t
 
 **Attivazione:** `@ingame` nella chat, oppure "modalità ingame".
 
+### `trascrizione` — Pulizia di una trascrizione grezza del master
+
+Si usa quando si dispone di un file `.txt` prodotto da uno strumento di speech-to-text durante la sessione. La trascrizione grezza contiene narrazione utile mescolata a rumore: battute OOC, artefatti STT, discussioni di regole, logistica. La regola estrae solo la narrazione e la ricostruisce come prosa.
+
+Il flusso è:
+
+1. L'AI legge il file `.txt` su cui è applicata la regola
+2. L'AI legge tutti i file di contesto: `ambientazione/` (incluse sottocartelle), `personaggi/`, `png/`, `sessione/` (esclusa la trascrizione), `spunti/`, l'ultimo file in `resoconti/`
+3. L'AI scarta tutto ciò che non è narrazione (OOC, artefatti STT, logistica, correzioni in corsa, discussioni di regole)
+4. Il contenuto conservato viene riscritto in prosa narrativa in terza persona, con nomi corretti usando i file di contesto
+5. I punti incomprensibili o lacunosi vengono lasciati come marcatori espliciti `[lacuna: ...]` — **nessuna interpolazione creativa**
+6. Il risultato viene salvato in `sessione/trascrizione.md`
+
+**Attivazione:** aprire il file `.txt` di trascrizione nell'editor, poi `@trascrizione` nella chat o richiedere esplicitamente "applica la modalità trascrizione".
+
 ### `resoconto` — Archiviazione post-sessione
 
 Si usa dopo una sessione di gioco per trasformare il racconto grezzo del DM in un resoconto narrativo strutturato. Il processo è **interattivo e a fasi sequenziali** — l'AI non procede senza conferma esplicita ad ogni passaggio:

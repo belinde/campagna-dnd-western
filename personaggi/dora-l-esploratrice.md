@@ -19,7 +19,7 @@ _Da definire._
 
 ## Equipaggiamento notevole
 
-- **Mulo** _(senza nome per ora)_ — compagno di viaggio e bestia da soma.
+- **Mulo** *Svalka* — compagno di viaggio e bestia da soma.
 
 ## Legami con gli altri PG
 
