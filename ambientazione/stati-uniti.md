@@ -32,7 +32,7 @@ Con **Terralba** il rapporto è quello di un figlio che ha litigato con il padre
 
 Con il **Caporalato di Campobrina** il rapporto è economicamente dipendente. Il Caporalato fornisce la maggior parte dei macchinari e delle componenti tecnomagiche senza cui l'economia degli Stati Uniti si fermerebbe. Il governo federale sa di questa dipendenza e la detesta, ma non ha ancora sviluppato una propria industria tecnomagica abbastanza matura da ridurla in modo significativo. L'ambizione esiste; la capacità, ancora no.
 
-Con le **razze non umane** — orchi, nani, gnomi, halfling — il rapporto degli Stati Uniti è il riflesso delle contraddizioni che attraversano la società coloniale: teoria egualitaria e pratica discriminatoria, promesse di opportunità e realtà di sfruttamento sistematico.
+Con le **razze non umane** — orchi, gnomi, halfling — il rapporto degli Stati Uniti è il riflesso delle contraddizioni che attraversano la società coloniale: teoria egualitaria e pratica discriminatoria, promesse di opportunità e realtà di sfruttamento sistematico. I **nani** rappresentano un caso a parte: popolazione lontana e rispettata, i rapporti con le terre naniche sono puramente commerciali e riguardano beni di lusso; i pochi nani presenti nel Nuovo Mondo sono trattati con curiosità e deferenza, non con pregiudizio.
 
 ## Segreti e obiettivi nascosti
 

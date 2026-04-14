@@ -24,7 +24,7 @@ La costa orientale è la seconda regione più antica del Nuovo Mondo, sede delle
 
 La prima grande barriera naturale del continente. Non sono montagne altissime né impraticabili, ma per i primi coloni rappresentarono per decenni il confine del mondo conosciuto. Le poche gole e i valichi naturali che le attraversano sono stati presidii, poi strade commerciali, poi arterie dove la ferrovia ha posato i binari appena la tecnomagia ha reso possibili le gallerie.
 
-Oggi gli Appalacchi sono attraversati da tre valichi principali, con piccole città di tappa e stazioni ferroviarie. Le zone più impervie ospitano comunità isolate di montanari — umani e nani per lo più — che guardano con sospetto sia il governo federale sia chiunque arrivi da fuori.
+Oggi gli Appalacchi sono attraversati da tre valichi principali, con piccole città di tappa e stazioni ferroviarie. Le zone più impervie ospitano comunità isolate di montanari — umani per lo più, gente dura e diffidente — che guardano con sospetto sia il governo federale sia chiunque arrivi da fuori.
 
 ### Il Middle West
 

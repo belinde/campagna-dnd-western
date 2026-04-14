@@ -70,7 +70,7 @@ Ravengard è la capitale politica del blocco sudista al Congresso. Le grandi fam
 
 ## Le Colonie del Nord
 
-Economia basata sul commercio marittimo, sull'industria tecnomagica e sull'agricoltura meccanizzata. La servitù dei halfling e degli gnomi è stata abolita o limitata a forme di "contratto volontario" regolamentato. La presenza elfica è concentrata nelle università e negli ambienti mercantili; la demografia è prevalentemente umana con una significativa presenza nanica nelle aree minerarie e lacustri.
+Economia basata sul commercio marittimo, sull'industria tecnomagica e sull'agricoltura meccanizzata. La servitù dei halfling e degli gnomi è stata abolita o limitata a forme di "contratto volontario" regolamentato. La presenza elfica è concentrata nelle università e negli ambienti mercantili; la demografia è prevalentemente umana.
 
 ### 8. Lythandor
 
@@ -92,7 +92,7 @@ L'abolizione della servitù è legge a Selvarno da cinquant'anni, e la comunità
 
 **Fondata da:** Potentato minore del Vecchio Mondo (47.475 C.E.)
 **Posizione:** Costa settentrionale estrema
-**Caratteristiche:** La colonia più a nord e la più isolata. Fondata da un piccolo regno del Vecchio Mondo che non ha mai avuto i mezzi per mantenerla davvero — e che col passare dei decenni si è limitato a incassare i dazi senza investire — Brisandor ha sviluppato per necessità una tradizione di autosufficienza quasi assoluta. I suoi abitanti — umani e nani in proporzioni approssimativamente uguali, con qualche comunità halfling libera fuggita dal Sud lungo le rotte clandestine — non si fidano di alcuna autorità centrale, compreso il governo federale di New Avalon.
+**Caratteristiche:** La colonia più a nord e la più isolata. Fondata da un piccolo regno del Vecchio Mondo che non ha mai avuto i mezzi per mantenerla davvero — e che col passare dei decenni si è limitato a incassare i dazi senza investire — Brisandor ha sviluppato per necessità una tradizione di autosufficienza quasi assoluta. I suoi abitanti — umani robusti e testardi, con qualche comunità halfling libera fuggita dal Sud lungo le rotte clandestine — non si fidano di alcuna autorità centrale, compreso il governo federale di New Avalon.
 
 La servitù a Brisandor non è mai esistita: il clima rigido non si presta alle piantagioni, e la manodopera locale — ruvida, competente, abituata a lavorare su legno e pietra — è sempre bastata. Il Congresso federale parla di Brisandor come di una colonia "difficile"; gli abitanti di Brisandor parlano del Congresso come di qualcosa che capita lontano.
 
@@ -102,7 +102,7 @@ La servitù a Brisandor non è mai esistita: il clima rigido non si presta alle 
 **Posizione:** Entroterra settentrionale, sullo stretto tra i Grandi Laghi
 **Caratteristiche:** La più giovane delle undici colonie e l'unica non costiera. Fondata su uno stretto che connette i due bacini lacustri più grandi del continente, Altamirea è nata come avamposto del commercio delle pellicce e si è trasformata lentamente in qualcosa di più complesso: un nodo di rotte commerciali lacustri che, con la costruzione di imbarcazioni a vapore sui laghi, diventa ogni anno più importante.
 
-La popolazione di Altamirea è la più eterogenea del Nord: umani provenienti da ogni colonia, nani con i propri quartieri-laboratorio, halfling e gnomi fuggiti dal Sud che trovano qui una relativa sicurezza, e qualche mercante orchesco che commercia pellicce e conosce i percorsi del Nord meglio di chiunque altro. Non è una città di grandi ideali: è una città di gente che vuole lavorare senza essere fatta troppe domande, e che per questo funziona.
+La popolazione di Altamirea è la più eterogenea del Nord: umani provenienti da ogni colonia, halfling e gnomi fuggiti dal Sud che trovano qui una relativa sicurezza, e qualche mercante orchesco che commercia pellicce e conosce i percorsi del Nord meglio di chiunque altro. Nel porto lacustre c'è un emporio nanico — uno dei pochi del continente — che vende merci arrivate dalle terre lontane e attira clienti facoltosi da tutta la costa. Non è una città di grandi ideali: è una città di gente che vuole lavorare senza essere fatta troppe domande, e che per questo funziona.
 
 ## La Frattura Nord-Sud
 
