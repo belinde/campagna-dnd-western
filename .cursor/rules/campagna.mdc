@@ -55,6 +55,7 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 | `png/` | Un file per ogni personaggio non giocante (PNG) rilevante |
 | `resoconti/` | Un file per ogni sessione di gioco |
 | `sessione/` | Area di appoggio temporanea: appunti, PNG e luoghi generati durante la sessione dal vivo (svuotata dalla modalità resoconto) |
+| `spunti/` | Idee e potenziali eventi futuri, non ancora avvenuti e non parte dell'ambientazione canonica; consultabili dalla modalità ingame come fonte di ispirazione |
 
 ## Convenzioni sui nomi dei file
 
@@ -65,6 +66,7 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 - `png/nome-png.md` (es. `png/dorvek-il-silenzioso.md`)
 - `resoconti/sessione-001.md`, `resoconti/sessione-002.md`, ecc. (tre cifre con zero padding)
 - `sessione/png-nome.md`, `sessione/luogo-nome.md`, `sessione/nota-argomento.md`, `sessione/incontro-nome.md` (file temporanei con prefisso di tipo)
+- `spunti/nome-idea.md` (nomi liberi, senza prefisso di tipo)
 
 ## Struttura delle schede personaggio (PG e PNG)
 
