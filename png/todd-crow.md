@@ -1,7 +1,7 @@
 # Todd Crow
 
 **Razza/Classe:** Umano / Ladro
-**Ruolo:** Fuorilegge, terzo dei fratelli Crow — morto nel Mississippi
+**Ruolo:** Fuorilegge, secondo dei fratelli Crow — morto nel Mississippi
 
 ## Aspetto
 
@@ -13,11 +13,11 @@ Il più impulsivo dei Crow. Dove Sam aspettava, Todd agiva. Quella differenza gl
 
 ## Legami con i PG
 
-Fuggito ferito durante la colluttazione, si è gettato nel Mississippi cercando di raggiungere la barchetta. Abbattuto dal primo ufficiale Caldwell prima di arrivarci.
+Fuggito ferito durante la colluttazione sulla *Ben Campbell*, si è gettato nel Mississippi cercando di raggiungere la barchetta senza luci. Abbattuto dal primo ufficiale Caldwell prima di arrivarci.
 
 ## Note DM
 
-Secondo dei tre fratelli Crow. Morto sulla *Ben Campbell* nella sessione 002. Il terzo fratello è ancora vivo e a piede libero.
+Secondo dei tre fratelli Crow. Morto sul Grande Fiume nella sessione 002. Il capitano McCullaghan ha incassato la taglia su di lui a Valdoren nella sessione 003, senza informare il gruppo. Il terzo fratello Crow è ancora vivo e a piede libero.
 
 ## Eventi interessanti
 

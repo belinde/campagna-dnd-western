@@ -33,3 +33,4 @@ _Da definire._
 
 - **[Sessione 001]** Giunge a New Avalon e si imbarca sulla *Ben Campbell* diretta a nord lungo il Mississippi.
 - **[Sessione 002]** Tenta di risolvere pacificamente lo scontro con Sam Crow, viene aggredito e risponde con la forza. Contribuisce a immobilizzare il fuorilegge.
+- **[Sessione 003]** Arriva a Valdoren sulla *Ben Campbell*. Incontra Anthony Gillian e il capitano McCullaghan, che aprono due possibili piste di lavoro. Incassa la sua parte dei $50 di taglia su Sam Crow.

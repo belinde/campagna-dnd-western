@@ -22,3 +22,4 @@ Sam è il secondo dei tre fratelli Crow, banda di fuorilegge responsabile di alm
 ## Eventi interessanti
 
 - **[Sessione 002]** Scoperto mentre deruba una passeggera nelle cabine di lusso della *Ben Campbell*. Aggredisce Gud Bender, viene immobilizzato dal gruppo e arrestato dal primo ufficiale Thomas Caldwell.
+- **[Sessione 003]** Consegnato allo sceriffo di Valdoren, Silas Drummond, dal capitano McCullaghan. Il gruppo incassa $50 di taglia.
