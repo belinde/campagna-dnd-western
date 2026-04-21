@@ -30,3 +30,4 @@ Non è l'uomo semplice che sembra. Il fallimento a Port Meredith non è stato so
 ## Eventi interessanti
 
 - **[Sessione 004]** Incontra il gruppo a Valdoren e li ingaggia come guardie e scout. Divide il gruppo in due per le valutazioni: Dora e Leman Russ da Theodor Strand, gli altri da Andrew Carver. Conferma l'offerta il giorno seguente e annuncia la partenza per l'indomani mattina.
+- **[Sessione 005]** All'alba guida la partenza della carovana da Valdoren: in testa al convoglio dirige operazioni e ritmo della marcia.

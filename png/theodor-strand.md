@@ -27,3 +27,4 @@ Conosce la fauna e la geografia delle pianure meglio di chiunque nella carovana.
 ## Eventi interessanti
 
 - **[Sessione 004]** Valuta Dora e Leman Russ alla Locanda del Fiume Rosso. Rimane colpito dalle mappe di Dora e la promuove senza esitare. Li informa delle principali minacce faunistiche delle pianure e dà il suo benestare all'ingaggio del gruppo.
+- **[Sessione 005]** In avanguardia durante la prima giornata di marcia; Dora lo avvisa per la fattoria sospetta, ordina alla carovana di fermarsi e partecipa allo scontro a fuoco con i briganti.

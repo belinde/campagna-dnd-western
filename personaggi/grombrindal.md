@@ -35,3 +35,4 @@ _Da definire._
 - **[Sessione 002]** Partecipa alla colluttazione notturna sulla *Ben Campbell* e contribuisce a immobilizzare Sam Crow, fuorilegge ricercato.
 - **[Sessione 003]** Arriva a Valdoren sulla *Ben Campbell*. Incontra Anthony Gillian e il capitano McCullaghan, che aprono due possibili piste di lavoro. Incassa la sua parte dei $50 di taglia su Sam Crow.
 - **[Sessione 004]** Supera la valutazione di Andrew Carver al campo carovana e viene ingaggiato come guardia nella carovana di Brannagh.
+- **[Sessione 005]** Nello scontro alla fattoria combatte a cavallo; molla le redini nel corso della mischia e il destriero si spaventa, complicando la situazione.

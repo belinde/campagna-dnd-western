@@ -22,3 +22,4 @@ Conosce le rotte e i rischi delle carovane meglio di Brannagh — è lui a gesti
 ## Eventi interessanti
 
 - **[Sessione 004]** Valuta Kelvor, Grombrindal e Gud Bender al campo carovana su incarico di Brannagh. Il colloquio è positivo: il gruppo viene accettato.
+- **[Sessione 005]** In coda alla carovana; procura tre cavalli al gruppo e definisce le distanze di pattugliamento. Supervisiona il caso del ladro halfling. A fine scontro alla fattoria, mette fine con un colpo di pistola al bandito moribondo, per pietà.
