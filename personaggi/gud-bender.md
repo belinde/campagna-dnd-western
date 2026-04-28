@@ -36,3 +36,4 @@ _Da definire._
 - **[Sessione 003]** Arriva a Valdoren sulla *Ben Campbell*. Incontra Anthony Gillian e il capitano McCullaghan, che aprono due possibili piste di lavoro. Incassa la sua parte dei $50 di taglia su Sam Crow.
 - **[Sessione 004]** Supera la valutazione di Andrew Carver al campo carovana e viene ingaggiato come guardia nella carovana di Brannagh.
 - **[Sessione 005]** Ferma l'halfling ladro con *Sonno*; recupera il fagotto, lascia due dollari in tasca al ragazzo e restituisce personalmente il malloppo alla donna sul carro.
+- **[Sessione 006]** Lancia *Individuazione del magico* sulla scena: nulla oltre alle impronte note sulle armi da fuoco; recupera i cavalli dei briganti seguendo il coordinamento di Andrew; nota che giustizia e legalità non coincidevano nella mediazione con Drummond. La **scurovisione** lo rende adatto alle **guardie notturne**.

@@ -13,7 +13,7 @@ Drummond è un uomo pragmatico che ha imparato a non aspettarsi troppo dalla leg
 
 ## Legami con i PG
 
-Ha ricevuto la consegna di Sam Crow e pagato la taglia di $50. Prima interazione breve e formale. Potrebbe diventare un contatto utile o un ostacolo, a seconda di come il gruppo si muove a Valdoren.
+Ha ricevuto la consegna di Sam Crow e pagato la taglia di $50. Prima interazione breve e formale. Potrebbe diventare un contatto utile o un ostacolo, a seconda di come il gruppo si muove a Valdoren. Verso la Frontiera ha incrociato il gruppo alla **Fattoria Mercer**: mediazione su Dorothy, tutela e versione legale «comoda»; promessa di **$40 di credito** complessivo sulle taglie dei briganti quando torneranno a Valdoren.
 
 ## Note DM
 
@@ -22,3 +22,4 @@ Drummond sa molte cose su Valdoren che non mette nei rapporti ufficiali. Ha un r
 ## Eventi interessanti
 
 - **[Sessione 003]** Riceve la consegna di Sam Crow dal capitano McCullaghan e paga la taglia di $50 al gruppo. Si trattiene con McCullaghan dopo che il gruppo se n'è andato.
+- **[Sessione 006]** Raggiunge la carovana accampata alla Fattoria Mercer; definisce tutela, concessione e narrazione per liberare i PG da accuse di bottino; conferma taglie da **$10** su ciascuno dei quattro briganti (non liquidabili sul momento) e registra un **credito di $40** per il gruppo al rientro a Valdoren.

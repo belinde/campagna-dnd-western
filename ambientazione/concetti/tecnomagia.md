@@ -28,6 +28,8 @@ All'estremo basso c'è la gente comune: sa usare gli oggetti tecnomagici, capisc
 
 **Gli aratri meccanici e le mietitrebbie** hanno rivoluzionato l'agricoltura nel Nuovo Mondo. Permettono la coltivazione estensiva su appezzamenti enormi che un tempo avrebbero richiesto decine di braccianti. Chi può permettersi la macchina si arricchisce; chi non può la paga si trova fuori mercato.
 
+**Il telegrafo** è ancora una novità nelle città del Middle West: messaggi codificati lungo **fili** sostenuti da pali, con apparati tecnomagici negli uffici che trasformano parole in impulsi e viceversa. Le **linee** si stanno estendendo verso l’interno e lungo la costa verso **New Avalon**, ma molti tratti restano da completare — da qui ritardi, costi e il ricorso ancora frequente al corriere.
+
 ## Effetti sul mondo
 
 La tecnomagia ha spostato equilibri di potere millenari. Il rame — da sempre considerato un metallo povero, buono per pentole e decorazioni — è diventato il materiale runico per eccellenza. La sua conducibilità e la sua risposta all'incisione lo rendono insostituibile per la maggior parte dei vincoli elementali. Le concessioni minerarie nel Nuovo Mondo che producono rame sono diventate proprietà strategiche; le compagnie minerarie che le controllano esercitano un'influenza politica sproporzionata.

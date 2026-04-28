@@ -36,3 +36,4 @@ _Da definire._
 - **[Sessione 003]** Arriva a Valdoren sulla *Ben Campbell*. Incontra Anthony Gillian e il capitano McCullaghan, che aprono due possibili piste di lavoro. Incassa la sua parte dei $50 di taglia su Sam Crow.
 - **[Sessione 004]** Supera la valutazione di Theodor Strand alla Locanda del Fiume Rosso: le sue mappe impressionano lo scout, che la promuove senza esitare. Ingaggiata nella carovana di Brannagh come esploratrice, con una commissione di cartografia all'arrivo a destinazione.
 - **[Sessione 005]** Dopo la sosta di mezzogiorno, è la prima ad avvicinarsi alla fattoria sospetta e nota il cadavere; fa cenno a Theodor Strand di intervenire.
+- **[Sessione 006]** Dorothy si tiene vicino a lei quasi sempre; aiuta Kelvor a seppellire Henry e Martha; la sua **scurovisione** è utile ai turni di guardia dopo il tramonto.

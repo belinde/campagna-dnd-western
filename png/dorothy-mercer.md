@@ -26,7 +26,7 @@ Indizi di partenza dal contesto familiare: silenziosa, attenta, già un poco adu
 
 ## Legami con i PG
 
-È stata estratta dalla botola dai guardiani della carovana dopo lo scontro con i briganti. Non ha ancora legami consolidati con il gruppo.
+È stata estratta dalla botola dai guardiani della carovana dopo lo scontro con i briganti. Nelle ore successive alla strage si è tenuta **vicina a Dora l’Esploratrice** quasi senza staccarsi da lei.
 
 ## Note DM
 
@@ -35,3 +35,4 @@ Il movente dell'attacco (semplice razzia vs agguato alla carovana) resta volutam
 ## Eventi interessanti
 
 - **[Sessione 005]** Trovata nella botola della fattoria dopo la sparatoria; terrorizzata, in lacrime; la sessione si chiude su di lei.
+- **[Sessione 006]** Si affida soprattutto a **Dora** mentre Kelvor cura le sue ferite e la carovana decide il suo destino; assiste alla sepoltura dei genitori accanto alla tomba di Tobias.

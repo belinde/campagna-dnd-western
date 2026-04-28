@@ -36,3 +36,4 @@ _Da definire._
 - **[Sessione 003]** Arriva a Valdoren sulla *Ben Campbell*. Incontra Anthony Gillian e il capitano McCullaghan, che aprono due possibili piste di lavoro. Incassa la sua parte dei $50 di taglia su Sam Crow.
 - **[Sessione 004]** Supera la valutazione di Andrew Carver al campo carovana. Ingaggiato come guardia nella carovana di Brannagh. Acquista un revolver tecnomagico di ottima fattura.
 - **[Sessione 005]** In retrovia vicino all'ultimo carro non nota subito l'intruso; fuori Valdoren è il primo a scorgere il movimento nell'erba e tenta l'inseguimento. Riceve i ringraziamenti della donna sul carro da lontano.
+- **[Sessione 006]** Ricognizione della Fattoria Mercer e ricostruzione della dinamica dell'attacco; cura le ferite di Dorothy; con Dora scava le tombe di Henry e Martha e celebra un breve commiato; chiede a Silas Drummond delle taglie sui briganti e ottiene il promemoria del credito a Valdoren.

@@ -36,3 +36,4 @@ _Da definire._
 - **[Sessione 003]** Arriva a Valdoren sulla *Ben Campbell*. Incontra Anthony Gillian e il capitano McCullaghan, che aprono due possibili piste di lavoro. Incassa la sua parte dei $50 di taglia su Sam Crow.
 - **[Sessione 004]** Partecipa alla valutazione con Theodor Strand e viene ingaggiato nella carovana di Brannagh. Acquista una balestra in vista del viaggio verso la Frontiera.
 - **[Sessione 005]** Alla fattoria assume forma d'orso e combatte i briganti in mischia sanguinosa.
+- **[Sessione 006]** Presente alla riunione e ai lavori sulla Via dei Coloni; come **mezzelfo**, la **scurovisione** lo rende adatto ai **turni di guardia notturni** dopo il tramonto.

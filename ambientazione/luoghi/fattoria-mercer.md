@@ -53,7 +53,7 @@ Il passaggio della **Via dei Coloni** è l'altra fonte di entrate, più irregola
 - **La botola della dispensa** — Sotto il pavimento della stanza unica, larga abbastanza per una bambina rannicchiata. Lì dentro, ancora oggi, c'è l'odore di patate e di paura.
 - **Il recinto e la stalla coperta** — Pochi animali, ma ognuno conta. Vale la pena controllarli: vivi, morti, rubati o lasciati intatti, parlano del movente di chi ha attaccato.
 - **L'orto e il campo di mais** — Calpestati durante la sparatoria, ma le tracce raccontano molto a chi sa leggerle: chi è entrato, da dove, in quanti.
-- **I tre meli vecchi e la tomba di Toby** — Sotto il melo più grande, il piccolo cumulo di pietre senza croce dove dorme Tobias Mercer. Martha ci passava davanti ogni mattina andando al pozzo; Dorothy ci portava le mele cadute. Ora la tomba ha due nuovi vicini.
+- **I tre meli vecchi e la tomba di Toby** — Sotto il melo più grande, il piccolo cumulo di pietre senza croce dove dorme Tobias Mercer. Martha ci passava davanti ogni mattina andando al pozzo; Dorothy ci portava le mele cadute. Dopo l’attacco, **Henry e Martha** sono stati sepolti accanto alla tomba di Tobias dai guardiani della carovana.
 
 ## Storia e origine
 
