@@ -42,6 +42,10 @@ Identificare il tipo di contenuto dagli appunti del DM e usare il template corri
 ```markdown
 # Nome Luogo
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Descrizione generale
 
 ## Aspetto e atmosfera
@@ -112,5 +116,7 @@ Identificare il tipo di contenuto dagli appunti del DM e usare il template corri
 ## Tono
 
 Narrativo e descrittivo, non enciclopedico. Evocare l'atmosfera del mondo, non elencare fatti. Coerente con il registro fantasy-western / tecnomagico della campagna.
+
+Quando il contenuto generato e` un luogo, mantenere sempre la sezione `## Immagine canonica` tra titolo/metadati e parte descrittiva. Se un asset esiste gia`, collegarlo con `![Veduta canonica di Nome Luogo](/immagini/luoghi/<slug>.<ext>)` invece di lasciare il placeholder.
 
 Quando gli appunti riguardano eventi storici, dinamiche sociali, economia, conflitti territoriali o figure di potere, **cercare ispirazione storica su Wikipedia** usando `WebSearch` e `WebFetch`: la storia del Far West americano (1840-1890) è la bussola narrativa della campagna. Adattare sempre i riferimenti trovati al contesto fantasy prima di usarli nel testo.

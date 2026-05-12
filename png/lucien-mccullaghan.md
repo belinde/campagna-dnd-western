@@ -3,6 +3,10 @@
 **Razza/Classe:** Mezzelfo / —
 **Ruolo:** Capitano della *Ben Campbell*
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Mezzelfo sulla quarantina, capelli castani raccolti sotto il cappello da capitano, lineamenti fini smorzati da decenni di vento e sole sul fiume. Cammina sul ponte come se la steamboat fosse un prolungamento del suo corpo. Veste sempre in uniforme, anche a tavola.

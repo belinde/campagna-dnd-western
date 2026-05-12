@@ -3,6 +3,10 @@
 **Razza/Classe:** Umano / —
 **Ruolo:** Broker di informazioni per cacciatori di taglie
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Uomo sulla quarantina, di corporatura media e aspetto volutamente ordinario — il tipo di persona che si dimentica cinque minuti dopo averla incrociata. Abiti da viaggiatore consumati ma puliti, cappello a tesa media, niente che attiri l'occhio. L'unica cosa fuori posto sono gli occhi: chiari, fermi, che registrano tutto senza che il resto del viso tradisca nulla.

@@ -3,6 +3,10 @@
 **Razza/Classe:** Umana / —
 **Ruolo:** Agente commerciale itinerante della Compagnia delle Cinghie del Grande Fiume
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Donna sui quarant'anni, asciutta, ben composta anche dopo giorni di polvere. Cappotto scuro da viaggio di buona fattura, guanti chiari, stivali senza fango quanto dovrebbero averne. Porta sempre con sé un **taccuino cerato**, una matita corta e una borsa rigida da documenti che non lascia mai a nessuno.

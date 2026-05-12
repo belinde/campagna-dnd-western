@@ -5,6 +5,12 @@
 **Livello:** —
 **Giocatore:** Cipri
 
+## Immagine canonica
+
+![Ritratto canonico di Gud Bender](/immagini/personaggi/gud-bender.jpeg)
+
+*Ritratto canonico di Gud Bender.*
+
 ## Aspetto
 
 Gud Bender e` un nano basso e massiccio, con spalle larghe, ventre robusto e una presenza che occupa subito la stanza. Il volto e` largo e segnato dal tempo: guance rubizze, naso importante, sopracciglia folte e uno sguardo scuro, duro e vigile, incorniciato da piccole cicatrici che gli attraversano il viso. Porta una barba piena e ispida, scura ma gia` venata di grigio, che gli copre gran parte del petto, mentre i capelli castani gli sfuggono disordinati da sotto il cappello.

@@ -3,6 +3,10 @@
 **Razza/Classe:** Umana / Commoner (carovaniere)
 **Ruolo:** Passaggera sul carro della famiglia nella carovana di Brannagh; moglie di **Olaf Halverson**
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Donna **taciturna**, **capelli raccolti**; mani ruvide da funi e bambini; occhi che misurano prima di parlare.

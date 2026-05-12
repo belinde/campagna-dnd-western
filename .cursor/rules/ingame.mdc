@@ -26,6 +26,8 @@ Questa regola si attiva durante una sessione di gioco dal vivo. Il DM ha bisogno
 
 Tutti i file creati durante la sessione vanno salvati nella cartella **`sessione/`** con il prefisso di tipo appropriato. L'agente resoconto li integrerà nelle cartelle canoniche a fine sessione.
 
+Se durante la sessione esiste gia` un'immagine approvata, il file temporaneo puo` richiamarla direttamente con sintassi Markdown `![](/immagini/...)` e path a partire dalla root del workspace. Il Markdown resta in `sessione/`, ma gli asset canonici vivono fuori da `sessione/`.
+
 | Tipo di contenuto | Nome file |
 |---|---|
 | Scheda PNG | `sessione/png-nome.md` |
@@ -46,6 +48,10 @@ Se il DM chiede di creare un PNG (o se ne genera uno abbastanza rilevante da mer
 
 **Razza/Classe:** ...
 **Ruolo:** ...
+
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
 
 ## Aspetto
 
@@ -82,6 +88,35 @@ _(da aggiornare dopo ogni sessione in cui il PNG appare)_
 Se il livello del PNG non e` ancora presente in modo chiaro nella scheda, chiederlo esplicitamente al DM prima di completare `## Scheda di gioco`. Durante la sessione i dettagli meccanici possono restare compatti e parzialmente provvisori, ma il livello deve essere indicato.
 
 Se esiste già un file in `png/` per quel personaggio, creare comunque `sessione/png-nome.md` con le nuove informazioni emerse durante la sessione: l'integrazione con la scheda esistente avverrà in fase resoconto.
+
+## Luoghi generati al volo
+
+Se il DM chiede di fissare un luogo nato durante la sessione, salvare `sessione/luogo-nome.md` con una struttura compatta ma coerente:
+
+```markdown
+# Nome Luogo
+
+**Regione:** ...
+**Tipo:** ...
+
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
+## Descrizione generale
+
+## Aspetto e atmosfera
+
+## Punti di interesse
+
+## Note DM
+```
+
+Se esiste gia` una veduta canonica del luogo, sostituire la nota con `![Veduta canonica di Nome Luogo](/immagini/luoghi/nome-luogo.png)` oppure con l'estensione corretta.
+
+## Note ed eventi di sessione
+
+Per `sessione/nota-argomento.md` e `sessione/incontro-nome.md` e` consentita una sezione opzionale `## Immagini collegate` con immagini gia` esistenti o appena approvate. Quando una scena diventera` canonica nel resoconto, andra` poi spostata sotto `immagini/eventi/sessione-NNN/`.
 
 ## Coerenza
 

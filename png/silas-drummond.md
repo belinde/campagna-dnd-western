@@ -3,6 +3,10 @@
 **Razza/Classe:** Umano / —
 **Ruolo:** Sceriffo federale di Valdoren
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Uomo sulla cinquantina, alto e leggermente appesantito dagli anni passati dietro una scrivania più che in sella. Baffi grigi folti, stempiatura avanzata, occhi stanchi da chi ha visto troppe facce mentire. La stella di sceriffo è appuntata su una giacca che un tempo era elegante. La rivoltella al fianco è consumata dall'uso, non dall'ornamento.

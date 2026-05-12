@@ -4,6 +4,10 @@
 **Tipo:** Città libera, nodo commerciale e logistico
 **Popolazione:** ~40.000 abitanti (stima, in rapida crescita)
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Descrizione generale
 
 Valdoren sorge alla confluenza del Grande Fiume e del suo principale tributario occidentale — il punto dove le acque di mezzo continente si uniscono prima di scendere verso New Avalon e il mare. Non è una colonia: non ha avuto padri fondatori, charter reali né piano urbanistico. È cresciuta per accumulo, decennio dopo decennio, attorno ai moli dove le barche a vapore scaricano e caricano merci, alle rimesse dove le carovane si formano prima di partire verso la Frontiera, ai magazzini dove i prodotti agricoli delle grandi pianure aspettano di essere spediti verso est.

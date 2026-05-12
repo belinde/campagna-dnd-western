@@ -5,6 +5,12 @@
 **Livello:** —
 **Giocatore:** Dodo
 
+## Immagine canonica
+
+![Ritratto canonico di Leman Russ](/immagini/personaggi/leman-russ.jpeg)
+
+*Ritratto canonico di Leman Russ.*
+
 ## Aspetto
 
 Mezzelfo alto e asciutto, con il corpo nervoso di chi cammina piu` di quanto riposi e il volto scavato dal vento, dalla polvere e dal sole. Porta lunghi capelli scuri sulle spalle, una barba corta e selvatica, e sotto il cappello a tesa larga spiccano occhi chiari e intensi che gli danno un'aria quasi inquietante quando restano fissi su qualcuno. Le orecchie affilate emergono senza imbarazzo dai capelli, rendendo evidente il suo sangue misto anche a distanza.

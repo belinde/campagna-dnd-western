@@ -6,6 +6,14 @@
 
 La scena alla Fattoria Mercer si conclude: **Kelvor Rivib** ricostruisce la dinamica dell’attacco durante un breve giro di ricognizione e si occupa delle cure; **Dorothy Mercer** resta quasi sempre accanto a **Dora l’Esploratrice**. La carovana dibatte dell’orfanella e della proprietà; **Grombrindal**, furioso e lordo di sangue rappreso, incarna la rabbia contro chi vorrebbe profittare della bambina. Si decide di accamparsi e mandare messi a **Silas Drummond**; **Olaf Halverson**, carovaniere dalla barba incolta e le sopracciglia cispose, si propone di adottarla assicurando che anche **Maren**, sua moglie, sarebbe d’accordo. **Gud Bender** lancia *Individuazione del magico* senza trovare nulla oltre alle armi già note; **Theodor Strand** segue le tracce e forma un’ipotesi sul movente; **Kelvor** e **Dora** seppelliscono **Henry e Martha**, mentre i briganti sono trascinati nel campo e lasciati a **corvi e avvoltoi**. Al suo arrivo, lo sceriffo negozia tutela e menzogna legale «conveniente» e ricorda quanto costi far correre una parola verso Selvarno lungo i **fili del telegrafo** ancora in espansione; **Kelvor** chiede le taglie — credito di **40 dollari** a Valdoren quando torneranno. Nelle ore buie, **nani** e **mezzelfi** sono privilegiati per le guardie grazie alla **scurovisione**.
 
+## Immagini salienti
+
+### Dora e Dorothy nell'accampamento
+
+![Dora l'Esploratrice veglia su Dorothy Mercer nell'accampamento notturno](/immagini/eventi/sessione-006/dora-e-dorothy-in-accampamento.png)
+
+*Dora resta accanto a Dorothy Mercer nell'accampamento notturno dopo la strage alla Fattoria Mercer.*
+
 ## Eventi principali
 
 La carovana è ancora alla **Fattoria Mercer**. Si osserva il podere: frutteto con mucchio di pietre al centro, orto recintato vicino al pozzo, mais alto, grano più lontano, stalla e recinto con il muggito della vacca. Dentro casa tutto è misero; la dispensa sotto la botola ha ancora viveri.

@@ -3,6 +3,10 @@
 **Razza/Classe:** Umano / Guerriero
 **Ruolo:** Primo ufficiale della *Ben Campbell*
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Uomo di mezza età, corporatura solida, spalle larghe da chi ha passato anni sul ponte di una nave. Capelli scuri striati di grigio, tenuti corti e ordinati. Veste l'uniforme della steamboat con la naturalezza di chi non ha mai avuto bisogno di altro per farsi rispettare. La rivoltella al fianco non è un ornamento.

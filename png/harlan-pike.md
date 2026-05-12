@@ -3,6 +3,10 @@
 **Razza/Classe:** Umano / Guerriero
 **Ruolo:** Caposquadra dei Tiratori del Punto Lungo
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Uomo consumato dal sole e dal vento, sui quarantacinque o cinquant'anni, con baffi radi e occhi chiari che misurano le distanze prima delle persone. Indossa abiti da frontiera privi di qualsiasi vezzo: cappello scolorito, panciotto rigido di polvere, stivali secchi, cinturone ben tenuto. Il suo fucile a lunga gittata è trattato con una cura quasi religiosa.

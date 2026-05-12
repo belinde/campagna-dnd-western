@@ -5,6 +5,12 @@
 **Livello:** —
 **Giocatore:** Lons
 
+## Immagine canonica
+
+![Ritratto canonico di Kelvor Rivib](/immagini/personaggi/kelvor-rivib.jpeg)
+
+*Ritratto canonico di Kelvor Rivib.*
+
 ## Aspetto
 
 Uomo nel pieno della forza, alto e ben proporzionato, con lineamenti netti, capelli scuri tagliati corti e uno sguardo fermo che tende più al giudizio che alla minaccia. Il volto è quello di chi è abituato a reggere il peso delle decisioni davanti agli altri: pulito, severo senza essere crudele, con una compostezza quasi solenne che lo distingue anche in mezzo alla polvere della Frontiera.

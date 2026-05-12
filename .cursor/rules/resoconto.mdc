@@ -67,6 +67,14 @@ Scrivere la **bozza completa** del resoconto seguendo il template sotto. Present
 
 Paragrafo breve (3-5 righe) che sintetizza la sessione.
 
+## Immagini salienti
+
+### Titolo scena
+
+![Descrizione breve della scena](/immagini/eventi/sessione-NNN/nome-evento.png)
+
+*Didascalia breve, coerente con il canon del resoconto.*
+
 ## Eventi principali
 
 Narrazione degli eventi in ordine cronologico, in terza persona. Includere scelte dei PG rilevanti, combattimenti, rivelazioni narrative.
@@ -88,6 +96,8 @@ Narrazione degli eventi in ordine cronologico, in terza persona. Includere scelt
 
 Tono: narrativo, in terza persona, con i nomi dei PG. Stile da cronaca epica, non da verbale burocratico.
 
+La sezione `## Immagini salienti` e` facoltativa: inserirla solo quando esistono davvero uno o piu` asset. Non creare placeholder vuoti nei resoconti.
+
 Chiedere al DM: *"La bozza è corretta? Vuoi modificare qualcosa prima che salvi il file?"*
 
 Applicare eventuali correzioni e ripresentare la bozza. Solo dopo approvazione esplicita, **salvare il file** `resoconti/sessione-NNN.md` usando la numerazione progressiva (verificare l'ultimo numero in `resoconti/` per determinare il numero corretto).
@@ -108,6 +118,8 @@ Per ogni PG che ha vissuto un momento saliente, proporre la voce da aggiungere a
 - **[Sessione NNN]** Breve descrizione dell'evento saliente.
 ```
 
+Se durante la sessione viene approvato o associato un ritratto canonico del PG, proporre anche l'aggiornamento della sezione `## Immagine canonica` con il path corretto `/immagini/personaggi/<slug>.<ext>`.
+
 ### 5b — Schede PNG
 
 Per ogni PNG apparso nella sessione:
@@ -115,10 +127,13 @@ Per ogni PNG apparso nella sessione:
 - Se **non** esiste ancora una scheda, segnalarlo al DM e proporre di crearla in `png/` seguendo il template standard (lo stesso usato dalla modalità ingame), inclusa la sezione `## Scheda di gioco`. Attendere conferma prima di creare il file.
 - Se la scheda non indica ancora in modo chiaro il livello del PNG, chiederlo esplicitamente al DM prima di completare o aggiornare `## Scheda di gioco`.
 - Se il livello cambia, aggiornare la parte meccanica in modo incrementale: mantenere la build gia` canonizzata e aggiungere solo i benefici coerenti del nuovo livello, salvo istruzioni contrarie del DM.
+- Se viene approvato o recuperato un ritratto canonico del PNG, aggiornare anche la sezione `## Immagine canonica` con il path corretto `/immagini/png/<slug>.<ext>`.
 
 ### 5c — File di ambientazione
 
 Se dal resoconto emergono informazioni rilevanti su luoghi o elementi del mondo non ancora documentati, segnalarlo al DM specificando quale file andrebbe creato o aggiornato, indicando la sottocartella corretta (`ambientazione/luoghi/`, `ambientazione/nazioni/` o `ambientazione/concetti/`). Attendere istruzione prima di agire.
+
+Se esiste o viene approvata una veduta canonica di un luogo coinvolto nella sessione, proporre anche l'aggiornamento della sezione `## Immagine canonica` del file pertinente in `ambientazione/luoghi/`.
 
 ### 5d — Smistamento file di sessione
 
@@ -126,6 +141,12 @@ Per ogni file in `sessione/`:
 - **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente, inclusa `## Scheda di gioco` quando necessario. Altrimenti creare la scheda in `png/`. Se il livello e` assente o cambiato, chiederlo al DM e aggiornare la scheda in modo additivo, non sostitutivo.
 - **`luogo-*.md`** — Valutare se aggiornare un file in `ambientazione/luoghi/` o proporne la creazione. Segnalare al DM prima di agire.
 - **`nota-*.md`** / **`incontro-*.md`** — Verificare se ci sono informazioni utili non ancora incorporate nel resoconto o nelle schede; segnalare al DM se qualcosa è stato tralasciato.
+
+Se esistono immagini collegate ai file di `sessione/`, archiviarle nella destinazione canonica piu` adatta:
+- `immagini/personaggi/` per i PG
+- `immagini/png/` per i PNG
+- `immagini/luoghi/` per i luoghi
+- `immagini/eventi/sessione-NNN/` per le scene di sessione richiamate nel resoconto
 
 I file di sessione sono **fonti complementari** al racconto del DM, non sostitutive: il DM resta la fonte primaria per gli eventi.
 

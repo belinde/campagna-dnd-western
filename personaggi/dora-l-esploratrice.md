@@ -5,6 +5,12 @@
 **Livello:** —
 **Giocatore:** Adele
 
+## Immagine canonica
+
+![Ritratto canonico di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.png)
+
+*Ritratto canonico di Dora l'Esploratrice.*
+
 ## Aspetto
 
 Mezz'elfa giovane, alta e slanciata, con lineamenti fini ma temprati dalla strada. Porta lunghi capelli biondi spesso sciolti sulle spalle, mossi dal vento e dalla polvere, e le orecchie affilate tipiche del suo sangue elfico restano bene in vista. Il volto è bello senza essere delicato: zigomi netti, mascella ferma, sguardo chiaro e attento di chi è abituata a misurare distanze, vie di fuga e dettagli del terreno prima ancora delle persone.

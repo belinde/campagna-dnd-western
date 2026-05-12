@@ -1,5 +1,9 @@
 # Fort Lame
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Descrizione generale
 
 Fort Lame è un avamposto militare federale nel Middle West settentrionale, a circa tre giorni di cavallo a nord-est di Valdoren, ai piedi delle prime colline che anticipano le Montagne Rocciose. Il nome lo dice tutto: un forte nato con ambizioni di presidio strategico e ridimensionato dalla realtà a piccola guarnigione di frontiera, con un organico ridotto, rifornimenti irregolari e un comandante che aspetta il trasferimento da almeno due anni.

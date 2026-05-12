@@ -4,6 +4,10 @@
 **Tipo:** Cascina contadina di sussistenza
 **Popolazione:** Famiglia Mercer (3–4 persone; al momento solo Dorothy, sopravvissuta)
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Descrizione generale
 
 La Fattoria Mercer è una di quelle decine di cascine senza nome né fama che punteggiano la cintura agricola a est di Valdoren, lungo la prima parte del tracciato verso la Frontiera. Si trova a circa mezza giornata di carro dalla città, oltre i campi recintati delle grandi proprietà e oltre l'ultimo canale d'irrigazione che pesca dal Grande Fiume: là dove la pianura coltivata comincia a sfilacciarsi, le piantagioni di grano lasciano posto a chiazze più magre e i coloni che non si potevano permettere terra buona si sono accontentati di terra accettabile.

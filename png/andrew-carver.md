@@ -3,6 +3,12 @@
 **Razza/Classe:** Umano / Guerriero
 **Ruolo:** Capo delle guardie della carovana di Brannagh
 
+## Immagine canonica
+
+![Ritratto canonico di Andrew Carver](/immagini/png/andrew-carver.png)
+
+*Ritratto canonico di Andrew Carver.*
+
 ## Aspetto
 
 Corporatura solida, sguardo abituato a scorrere su chiunque entri nel suo campo visivo senza alzarsi in piedi per farlo. Veste in modo funzionale — niente di superfluo. La rivoltella al fianco ha l'aria di essere lì da anni.

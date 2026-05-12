@@ -3,6 +3,12 @@
 **Razza/Classe:** Umano / Commoner (ex mercante)
 **Ruolo:** Responsabile della carovana diretta alla Frontiera
 
+## Immagine canonica
+
+![Ritratto canonico di Hector Brannagh](/immagini/png/hector-brannagh.png)
+
+*Ritratto canonico di Hector Brannagh.*
+
 ## Aspetto
 
 Cinquant'anni portati con fatica. Capelli bianchi tagliati corti, corporatura robusta che tradisce un passato di lavoro fisico prima che di affari. Voce bassa, movimenti deliberati. Veste bene ma non con ostentazione — il guardaroba di chi vuole sembrare credibile, non ricco.

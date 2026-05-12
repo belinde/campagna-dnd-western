@@ -3,6 +3,10 @@
 **Razza/Classe:** Umano / Commoner (carovaniere)
 **Ruolo:** Passaggero tra i carri della carovana di Brannagh; si è offerto come tutore/adottante per Dorothy Mercer
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 **Barba incolta** e **sopracciglia cispose**; volto da chi ha dormito poco e mangiato nel vento.

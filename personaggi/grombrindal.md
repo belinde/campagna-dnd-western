@@ -5,6 +5,12 @@
 **Livello:** —
 **Giocatore:** Gamba
 
+## Immagine canonica
+
+![Ritratto canonico di Grombrindal](/immagini/personaggi/grombrindal.jpeg)
+
+*Ritratto canonico di Grombrindal.*
+
 ## Aspetto
 
 Nano massiccio e possente, dal portamento da veterano di mille battaglie. Ha un volto scavato e severo, segnato dal tempo e dalle intemperie, con sopracciglia folte e uno sguardo duro e penetrante. Porta una lunghissima chioma bianca, sferzata dal vento, e una barba altrettanto imponente e selvaggia, che gli ricade sul petto come una criniera d'argento.

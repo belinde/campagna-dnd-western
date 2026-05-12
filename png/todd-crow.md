@@ -3,6 +3,10 @@
 **Razza/Classe:** Umano / Ladro
 **Ruolo:** Fuorilegge, secondo dei fratelli Crow — morto nel Mississippi
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Corporatura e baffi simili al fratello Sam, ma più giovane e meno paziente. Nei pochi secondi in cui i PG lo hanno visto, aveva già l'aria di chi sa che sta perdendo.

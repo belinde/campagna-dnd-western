@@ -3,6 +3,10 @@
 **Razza/Classe:** Umano / Ladro
 **Ruolo:** Fuorilegge ricercato, secondo dei tre fratelli Crow
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Uomo sulla cinquantina, asciutto e nervoso come un gatto sul tetto. Baffi folti e scuri, curati con una cura sproporzionata rispetto al resto del suo aspetto trasandato. Indossa sempre un cappello da cowboy a tesa larga calato basso sugli occhi, e si muove rasente alle pareti, come se i muri fossero suoi alleati.

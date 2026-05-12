@@ -53,6 +53,7 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 | `ambientazione/concetti/` | Sistemi e lore del mondo: storia, geografia, economia, religioni, tecnomagia, società |
 | `personaggi/` | Un file per ogni personaggio giocante (PG) |
 | `png/` | Un file per ogni personaggio non giocante (PNG) rilevante |
+| `immagini/` | Asset canonici richiamati dai Markdown: ritratti, vedute di luoghi e scene di sessione |
 | `resoconti/` | Un file per ogni sessione di gioco |
 | `sessione/` | Area di appoggio temporanea: appunti, PNG e luoghi generati durante la sessione dal vivo (svuotata dalla modalità resoconto) |
 | `spunti/` | Idee e potenziali eventi futuri, non ancora avvenuti e non parte dell'ambientazione canonica; consultabili dalla modalità ingame come fonte di ispirazione |
@@ -64,6 +65,10 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 - `ambientazione/concetti/nome-concetto.md` (es. `ambientazione/concetti/tecnomagia.md`)
 - `personaggi/nome-personaggio.md` (es. `personaggi/aldric-il-grigio.md`)
 - `png/nome-png.md` (es. `png/dorvek-il-silenzioso.md`)
+- `immagini/personaggi/nome-personaggio.png` (o altra estensione immagine coerente) per i ritratti canonici dei PG
+- `immagini/png/nome-png.png` (o altra estensione immagine coerente) per i ritratti canonici dei PNG
+- `immagini/luoghi/nome-luogo.png` (o altra estensione immagine coerente) per le vedute canoniche dei luoghi
+- `immagini/eventi/sessione-001/nome-evento.png` per le scene salienti associate a un resoconto
 - `resoconti/sessione-001.md`, `resoconti/sessione-002.md`, ecc. (tre cifre con zero padding)
 - `sessione/png-nome.md`, `sessione/luogo-nome.md`, `sessione/nota-argomento.md`, `sessione/incontro-nome.md` (file temporanei con prefisso di tipo)
 - `spunti/nome-idea.md` (nomi liberi, senza prefisso di tipo)
@@ -77,6 +82,16 @@ Sia i file in `personaggi/` che quelli in `png/` devono contenere una sezione `#
 
 - **[Sessione NNN]** Breve descrizione dell'evento saliente.
 ```
+
+## Convenzioni immagini
+
+Le immagini canoniche devono essere richiamate direttamente nei file Markdown con path espliciti a partire dalla root del workspace, preferibilmente con sintassi immagine Markdown `![](/immagini/...)`. Questo permette sia agli agenti sia alla preview Markdown di usarle senza mapping impliciti.
+
+- In `personaggi/`, `png/` e `ambientazione/luoghi/` usare una sezione `## Immagine canonica` subito prima della prima sezione descrittiva del file.
+- In `resoconti/` usare `## Immagini salienti` subito dopo `## Riassunto`, ma solo quando esiste almeno un asset reale da collegare.
+- Se l'immagine primaria non esiste ancora, mantenere comunque la sezione `## Immagine canonica` con la nota `_Nessuna immagine canonica ancora associata._`
+- Le didascalie non devono mai introdurre nuovo canon: servono solo a descrivere visivamente cio` che il testo gia` stabilisce.
+- Le immagini di evento appartengono ai `resoconti/`; le schede personaggio e luogo non devono duplicarle come immagine primaria.
 
 ## Contesto da consultare
 

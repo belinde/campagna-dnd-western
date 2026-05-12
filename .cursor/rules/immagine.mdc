@@ -1,18 +1,21 @@
 ---
-description: Genera prompt immagine autosufficienti per schede di PNG e luoghi
+description: Genera prompt immagine autosufficienti per personaggi, luoghi e scene canoniche
 globs:
+  - "personaggi/*.md"
   - "png/*.md"
   - "ambientazione/luoghi/*.md"
+  - "resoconti/*.md"
+  - "sessione/*.md"
 alwaysApply: false
 ---
 
 # Modalità Immagine
 
-Questa regola si attiva quando il DM chiede un prompt per generare l'immagine della scheda aperta.
+Questa regola si attiva quando il DM chiede un prompt per generare l'immagine della scheda aperta o di una scena di sessione.
 
 ## Vincoli
 
-- Opera solo in modalità Ask / sola lettura: non modificare file, non proporre salvataggi, non aggiornare il canon.
+- Opera solo in modalità Ask / sola lettura: non modificare file, non aggiornare direttamente il canon.
 - Restituisci solo testo pronto da copiare in un generatore di immagini, senza premesse o meta-commenti.
 - Il prompt deve essere autosufficiente: chi lo legge non conosce la campagna.
 - Scrivi il prompt in italiano naturale, denso di dettagli visivi e non in forma telegrafica.
@@ -21,10 +24,11 @@ Questa regola si attiva quando il DM chiede un prompt per generare l'immagine de
 
 1. Leggi sempre la scheda aperta.
 2. Recupera solo il contesto direttamente collegato e necessario.
-3. Per un PNG, privilegia `## Aspetto`, `## Personalità`, `## Note DM`, `## Legami con i PG`, `## Eventi interessanti`, poi integra con `resoconti/` e con i file di ambientazione davvero pertinenti.
+3. Per un PG o PNG, privilegia `## Aspetto`, `## Personalità`, `## Note DM`, `## Legami con i PG`, `## Eventi interessanti`, poi integra con `resoconti/` e con i file di ambientazione davvero pertinenti.
 4. Per un luogo, privilegia `## Descrizione generale`, `## Aspetto e atmosfera`, `## Punti di interesse`, `## Storia e origine`, poi integra con `resoconti/`, PNG, concetti, fauna o fazioni collegati.
-5. Usa solo materiale canonico. Gli `spunti/` vanno ignorati salvo richiesta esplicita del DM.
-6. Se il canon e` ambiguo o incompleto, esplicita una breve assunzione minima invece di inventare nuova lore.
+5. Per un resoconto o una nota/incontro di `sessione/`, individua prima il momento piu` iconico e gia` canonizzato; privilegia `## Riassunto`, `## Eventi principali` e i riferimenti a PG, PNG e luoghi coinvolti.
+6. Usa solo materiale canonico. Gli `spunti/` vanno ignorati salvo richiesta esplicita del DM.
+7. Se il canon e` ambiguo o incompleto, esplicita una breve assunzione minima invece di inventare nuova lore.
 
 ## Traduzione visiva del canon
 
@@ -33,10 +37,21 @@ Questa regola si attiva quando il DM chiede un prompt per generare l'immagine de
 - Esempio: "strage dei branchi" diventa tracce visive di sfruttamento delle pianure, carcasse o pelli, erba alta svuotata, officine o convogli se pertinenti alla scena.
 - Quando inserisci accenni di background, convertili sempre in atmosfera, mise-en-scene, oggetti, cicatrici, postura o dettagli dell'ambiente.
 - Se la scheda suggerisce piu` immagini possibili, scegli quella piu` iconica e rendila chiara nel prompt.
+- Oltre al prompt, suggerisci sempre il percorso canonico in cui l'asset dovrebbe vivere, coerente con il file aperto.
 
 ## Formato dell'output
 
 Restituisci direttamente questo formato:
+
+`Tipo immagine:`
+Una delle tre categorie: `ritratto canonico`, `veduta canonica`, `scena di sessione`.
+
+`Percorso suggerito:`
+Il path canonico dell'asset:
+- `immagini/personaggi/<slug>.<ext>` per i PG
+- `immagini/png/<slug>.<ext>` per i PNG
+- `immagini/luoghi/<slug>.<ext>` per i luoghi
+- `immagini/eventi/sessione-NNN/<slug-evento>.<ext>` per le scene di sessione
 
 `Prompt immagine:`
 Un paragrafo unico o pochi paragrafi compatti che includano soggetto, tratti fisici e materiali, abbigliamento, attrezzatura, ambiente, periodo fantasy-western/tecnomagico, luce, atmosfera e 1-3 accenni di background resi visivi.

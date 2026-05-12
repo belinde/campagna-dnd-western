@@ -4,6 +4,12 @@
 **Ruolo:** Sopravvissuta all'assalto alla Fattoria Mercer lungo la rotta della carovana di Brannagh
 **Origine:** Nata a Selvarno, cresciuta alla Fattoria Mercer (Middle West, entroterra orientale di Valdoren)
 
+## Immagine canonica
+
+![Ritratto canonico di Dorothy Mercer](/immagini/png/dorothy-mercer.png)
+
+*Ritratto canonico di Dorothy Mercer.*
+
 ## Aspetto
 
 Capelli chiari, viso sporco di polvere e lacrime. Quando la trovano è rannicchiata in una botola sotto il pavimento, con le mani sulla testa, come se il silenzio potesse nasconderla.

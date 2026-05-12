@@ -3,6 +3,10 @@
 **Razza/Classe:** Orca / Druida
 **Ruolo:** Sciamana e mediatrice del Clan delle Orme Profonde
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Aspetto
 
 Orca non più giovane, robusta senza essere imponente, con il volto segnato dal vento delle pianure e da sottili linee d'ocra agli zigomi. Porta i capelli intrecciati con strisce di cuoio, semi secchi e piccoli frammenti d'osso levigato. Il suo mantello è cucito con pelle vissuta e rattoppata più volte; quando cammina, sembra seguire un sentiero che gli altri non vedono.

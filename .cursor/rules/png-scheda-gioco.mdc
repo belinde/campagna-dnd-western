@@ -12,6 +12,24 @@ Questa regola si applica solo alle schede dei PNG in `png/` e `sessione/`.
 
 Mantieni la struttura narrativa gia` in uso e aggiungi sempre una sezione `## Scheda di gioco`.
 
+Se esiste un ritratto canonico, oppure se la scheda viene preparata per ospitarlo, mantieni anche la sezione `## Immagine canonica` subito dopo i metadati iniziali e prima di `## Aspetto`. Formato:
+
+```markdown
+## Immagine canonica
+
+![Ritratto canonico di Nome PNG](/immagini/png/nome-png.png)
+
+*Ritratto canonico di Nome PNG.*
+```
+
+Se il ritratto non esiste ancora, lascia:
+
+```markdown
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+```
+
 ```markdown
 ## Scheda di gioco
 

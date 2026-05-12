@@ -1,5 +1,9 @@
 # Il Passo del Serpente
 
+## Immagine canonica
+
+_Nessuna immagine canonica ancora associata._
+
 ## Descrizione generale
 
 Il Passo del Serpente è una gola stretta che si apre tra due creste delle Colline Grigie, a mezza giornata di cammino a nord di Fort Lame. Il nome viene dalla forma del sentiero che lo percorre: un tortuoso avvicendarsi di curve che risale il dislivello con la logica sinuosa di un serpente sul sasso. Chi non conosce il percorso fatica a trovare l'ingresso della gola; chi lo conosce può muoversi al suo interno con una rapidità che sorprende.
