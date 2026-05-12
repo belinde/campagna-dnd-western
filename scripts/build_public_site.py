@@ -212,8 +212,6 @@ def render_section_hub_index(
             collection_label="",
             source_path=source_path,
         ),
-        f"# {hub_title}",
-        "",
     ]
     for page in ordered:
         lines.append(f"- [{page.title}]({{{{ '{page.route}' | relative_url }}}})")
@@ -423,6 +421,11 @@ def write_jekyll_config(output_dir: Path, manifest: dict) -> None:
         url: {yaml_string(site.get('url', ''))}
         baseurl: {yaml_string(site.get('baseurl', ''))}
         tagline: {yaml_string(site.get('tagline', ''))}
+        defaults:
+          - scope:
+              path: ""
+            values:
+              layout: default
         markdown: kramdown
         kramdown:
           input: GFM
@@ -464,7 +467,7 @@ def write_layout(output_dir: Path) -> None:
                   </div>
                 </header>
 
-                <main class="wrap">
+                <main class="wrap site-main">
                   <article class="page-card">
                     {% if page.show_title != false %}
                     <header class="page-header">
@@ -479,12 +482,6 @@ def write_layout(output_dir: Path) -> None:
                     </div>
                   </article>
                 </main>
-
-                <footer class="site-footer">
-                  <div class="wrap">
-                    <p>Sorgente privata del DM, export pubblico player-safe generato automaticamente.</p>
-                  </div>
-                </footer>
               </div>
             </div>
           </body>
@@ -509,7 +506,6 @@ def write_styles(output_dir: Path) -> None:
           --accent: #d39c4a;
           --accent-soft: rgba(211, 156, 74, 0.16);
           --shadow: rgba(0, 0, 0, 0.28);
-          --max-width: 860px;
         }
 
         * {
@@ -533,8 +529,17 @@ def write_styles(output_dir: Path) -> None:
         }
 
         .wrap {
-          width: min(calc(100% - 2rem), var(--max-width));
-          margin: 0 auto;
+          width: 100%;
+          max-width: none;
+          margin: 0;
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+          box-sizing: border-box;
+        }
+
+        .site-main {
+          flex: 1;
+          min-width: 0;
         }
 
         .site-shell {
@@ -577,20 +582,12 @@ def write_styles(output_dir: Path) -> None:
           flex-direction: column;
         }
 
-        .site-header,
-        .site-footer {
+        .site-header {
           background: rgba(10, 8, 6, 0.92);
           border-bottom: 1px solid var(--panel-border);
         }
 
-        .site-footer {
-          border-top: 1px solid var(--panel-border);
-          border-bottom: 0;
-          margin-top: auto;
-        }
-
-        .site-header .wrap,
-        .site-footer .wrap {
+        .site-header .wrap {
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -689,8 +686,7 @@ def write_styles(output_dir: Path) -> None:
             gap: 0.75rem 1.25rem;
           }
 
-          .site-header .wrap,
-          .site-footer .wrap {
+          .site-header .wrap {
             flex-direction: column;
             align-items: flex-start;
           }
