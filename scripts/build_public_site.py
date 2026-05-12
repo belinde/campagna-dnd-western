@@ -169,6 +169,80 @@ def route_for(relative_path: Path) -> str:
     return f"/{path_without_suffix}/"
 
 
+def public_sidebar_section(entry: PageEntry) -> str | None:
+    """Ritorna la chiave sezione sidebar o None per il bucket Home."""
+    parts = entry.relative_path.parts
+    if entry.kind == "collection":
+        if parts and parts[0] == "personaggi":
+            return "personaggi"
+        if parts and parts[0] == "resoconti":
+            return "resoconti"
+        return None
+    if entry.kind == "allowlist":
+        if parts and parts[0] == "png":
+            return "png"
+        if len(parts) >= 3 and parts[0] == "ambientazione" and parts[1] == "luoghi":
+            return "luoghi"
+        return None
+    return None
+
+
+def sort_pages_for_section(section: str, pages: list[PageEntry]) -> list[PageEntry]:
+    if section == "personaggi":
+        return sorted(pages, key=lambda p: natural_sort_key(p.relative_path.as_posix()))
+    if section == "resoconti":
+        return sorted(pages, key=lambda p: natural_sort_key(p.relative_path.as_posix()), reverse=True)
+    return sorted(pages, key=lambda p: (p.title.lower(), p.relative_path.as_posix()))
+
+
+def render_section_hub_index(
+    *,
+    hub_title: str,
+    hub_route: str,
+    source_path: Path,
+    section_key: str,
+    built_pages: list[PageEntry],
+) -> str:
+    in_section = [p for p in built_pages if public_sidebar_section(p) == section_key]
+    ordered = sort_pages_for_section(section_key, in_section)
+    lines = [
+        front_matter(
+            title=hub_title,
+            route=hub_route,
+            collection_label="",
+            source_path=source_path,
+        ),
+        f"# {hub_title}",
+        "",
+    ]
+    for page in ordered:
+        lines.append(f"- [{page.title}]({{{{ '{page.route}' | relative_url }}}})")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def write_section_hub_pages(output_dir: Path, built_pages: list[PageEntry]) -> int:
+    hubs: list[tuple[str, str, str, Path, str]] = [
+        ("Personaggi", "/personaggi/", output_dir / "personaggi" / "index.md", Path("pubblicazione/_generated/index-personaggi.md"), "personaggi"),
+        ("Resoconti", "/resoconti/", output_dir / "resoconti" / "index.md", Path("pubblicazione/_generated/index-resoconti.md"), "resoconti"),
+        ("PNG", "/png/", output_dir / "png" / "index.md", Path("pubblicazione/_generated/index-png.md"), "png"),
+        ("Luoghi", "/luoghi/", output_dir / "luoghi" / "index.md", Path("pubblicazione/_generated/index-luoghi.md"), "luoghi"),
+    ]
+    for hub_title, hub_route, dest, source_stub, section_key in hubs:
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(
+            render_section_hub_index(
+                hub_title=hub_title,
+                hub_route=hub_route,
+                source_path=source_stub,
+                section_key=section_key,
+                built_pages=built_pages,
+            ),
+            encoding="utf-8",
+        )
+    return len(hubs)
+
+
 def sanitize_heading_text(value: str) -> str:
     cleaned = value.strip().strip("#").strip()
     cleaned = re.sub(r"[*_`]+", "", cleaned)
@@ -339,7 +413,7 @@ def yaml_string(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
-def write_jekyll_config(output_dir: Path, manifest: dict, player_guide_path: str) -> None:
+def write_jekyll_config(output_dir: Path, manifest: dict) -> None:
     site = manifest["site"]
     config_text = textwrap.dedent(
         f"""\
@@ -349,7 +423,6 @@ def write_jekyll_config(output_dir: Path, manifest: dict, player_guide_path: str
         url: {yaml_string(site.get('url', ''))}
         baseurl: {yaml_string(site.get('baseurl', ''))}
         tagline: {yaml_string(site.get('tagline', ''))}
-        player_guide_path: {yaml_string(player_guide_path)}
         markdown: kramdown
         kramdown:
           input: GFM
@@ -374,39 +447,46 @@ def write_layout(output_dir: Path) -> None:
             <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
           </head>
           <body>
-            <header class="site-header">
-              <div class="wrap">
-                <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-                <nav class="site-nav" aria-label="Navigazione principale">
+            <div class="site-shell">
+              <aside class="site-sidebar">
+                <nav class="site-sidebar-nav" aria-label="Sezioni">
                   <a href="{{ '/' | relative_url }}">Home</a>
-                  {% if site.player_guide_path != "" %}
-                  <a href="{{ site.player_guide_path | relative_url }}">Guida giocatori</a>
-                  {% endif %}
+                  <a href="{{ '/personaggi/' | relative_url }}">Personaggi</a>
+                  <a href="{{ '/resoconti/' | relative_url }}">Resoconti</a>
+                  <a href="{{ '/png/' | relative_url }}">PNG</a>
+                  <a href="{{ '/luoghi/' | relative_url }}">Luoghi</a>
                 </nav>
-              </div>
-            </header>
-
-            <main class="wrap">
-              <article class="page-card">
-                {% if page.show_title != false %}
-                <header class="page-header">
-                  {% if page.collection_label %}
-                  <p class="eyebrow">{{ page.collection_label }}</p>
-                  {% endif %}
-                  <h1>{{ page.title }}</h1>
+              </aside>
+              <div class="site-content">
+                <header class="site-header">
+                  <div class="wrap">
+                    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                  </div>
                 </header>
-                {% endif %}
-                <div class="page-content">
-                  {{ content }}
-                </div>
-              </article>
-            </main>
 
-            <footer class="site-footer">
-              <div class="wrap">
-                <p>Sorgente privata del DM, export pubblico player-safe generato automaticamente.</p>
+                <main class="wrap">
+                  <article class="page-card">
+                    {% if page.show_title != false %}
+                    <header class="page-header">
+                      {% if page.collection_label %}
+                      <p class="eyebrow">{{ page.collection_label }}</p>
+                      {% endif %}
+                      <h1>{{ page.title }}</h1>
+                    </header>
+                    {% endif %}
+                    <div class="page-content">
+                      {{ content }}
+                    </div>
+                  </article>
+                </main>
+
+                <footer class="site-footer">
+                  <div class="wrap">
+                    <p>Sorgente privata del DM, export pubblico player-safe generato automaticamente.</p>
+                  </div>
+                </footer>
               </div>
-            </footer>
+            </div>
           </body>
         </html>
         """
@@ -457,6 +537,46 @@ def write_styles(output_dir: Path) -> None:
           margin: 0 auto;
         }
 
+        .site-shell {
+          display: flex;
+          align-items: flex-start;
+          min-height: 100vh;
+        }
+
+        .site-sidebar {
+          flex: 0 0 220px;
+          position: sticky;
+          top: 0;
+          align-self: flex-start;
+          min-height: 100vh;
+          padding: 1.25rem 1rem;
+          background: rgba(10, 8, 6, 0.96);
+          border-right: 1px solid var(--panel-border);
+        }
+
+        .site-sidebar-nav {
+          display: flex;
+          flex-direction: column;
+          gap: 0.65rem;
+        }
+
+        .site-sidebar-nav a {
+          text-decoration: none;
+          font-size: 1rem;
+          color: var(--muted);
+        }
+
+        .site-sidebar-nav a:hover {
+          color: var(--accent);
+        }
+
+        .site-content {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+        }
+
         .site-header,
         .site-footer {
           background: rgba(10, 8, 6, 0.92);
@@ -466,14 +586,14 @@ def write_styles(output_dir: Path) -> None:
         .site-footer {
           border-top: 1px solid var(--panel-border);
           border-bottom: 0;
-          margin-top: 3rem;
+          margin-top: auto;
         }
 
         .site-header .wrap,
         .site-footer .wrap {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-start;
           gap: 1rem;
           padding: 1rem 0;
         }
@@ -483,16 +603,6 @@ def write_styles(output_dir: Path) -> None:
           font-weight: 700;
           text-decoration: none;
           color: var(--text);
-        }
-
-        .site-nav {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1rem;
-        }
-
-        .site-nav a {
-          text-decoration: none;
         }
 
         .page-card {
@@ -561,6 +671,24 @@ def write_styles(output_dir: Path) -> None:
         }
 
         @media (max-width: 720px) {
+          .site-shell {
+            flex-direction: column;
+          }
+
+          .site-sidebar {
+            position: relative;
+            min-height: 0;
+            width: 100%;
+            border-right: 0;
+            border-bottom: 1px solid var(--panel-border);
+          }
+
+          .site-sidebar-nav {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.25rem;
+          }
+
           .site-header .wrap,
           .site-footer .wrap {
             flex-direction: column;
@@ -599,16 +727,9 @@ def front_matter(
 
 
 def render_index(manifest: dict, pages: list[PageEntry]) -> str:
-    featured_pages = [page for page in pages if page.kind == "page" and page.featured]
-    other_pages = [page for page in pages if page.kind == "page" and not page.featured]
-    collections: dict[str, list[PageEntry]] = {}
-    allowlist_groups: dict[str, list[PageEntry]] = {}
-    for page in pages:
-        if page.kind == "collection":
-            collections.setdefault(page.label, []).append(page)
-            continue
-        if page.kind == "allowlist":
-            allowlist_groups.setdefault(page.label, []).append(page)
+    home_pages = [page for page in pages if public_sidebar_section(page) is None]
+    featured_pages = [page for page in home_pages if page.featured]
+    other_pages = [page for page in home_pages if not page.featured]
 
     lines = [
         front_matter(
@@ -631,16 +752,6 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
         lines.extend(["", "## Percorsi consigliati", ""])
         for page in featured_pages:
             lines.append(f"- [{page.label}]({{{{ '{page.route}' | relative_url }}}})")
-
-    for collection_name, collection_pages in collections.items():
-        lines.extend(["", f"## {collection_name}", ""])
-        for page in collection_pages:
-            lines.append(f"- [{page.title}]({{{{ '{page.route}' | relative_url }}}})")
-
-    for group_name, grouped_pages in allowlist_groups.items():
-        lines.extend(["", f"## {group_name}", ""])
-        for page in grouped_pages:
-            lines.append(f"- [{page.title}]({{{{ '{page.route}' | relative_url }}}})")
 
     if other_pages:
         lines.extend(["", "## Altri contenuti player-safe", ""])
@@ -725,16 +836,14 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
     for asset in sorted(referenced_assets):
         copy_asset(asset, output_dir)
 
-    write_jekyll_config(
-        output_dir,
-        manifest,
-        next((page.route for page in built_pages if page.kind == "page" and page.featured), ""),
-    )
+    hub_page_count = write_section_hub_pages(output_dir, built_pages)
+
+    write_jekyll_config(output_dir, manifest)
     write_layout(output_dir)
     write_styles(output_dir)
     (output_dir / "index.md").write_text(render_index(manifest, built_pages), encoding="utf-8")
 
-    return len(built_pages), len(referenced_assets)
+    return len(built_pages) + hub_page_count, len(referenced_assets)
 
 
 def main() -> None:

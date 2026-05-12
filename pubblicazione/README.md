@@ -12,6 +12,10 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 - i luoghi di `ambientazione/luoghi/` che sono gia` stati visitati o comunque rivelati ai giocatori e sono entrati in allowlist
 - solo le immagini realmente referenziate dalle pagine pubbliche, incluse le scene in `immagini/eventi/`
 
+## Navigazione nell'export
+
+Lo script genera una **sidebar** con le sezioni Home, Personaggi, Resoconti, PNG e Luoghi. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` elencano tutti i link di quella categoria. La **home** (`/`) mostra solo le pagine che non rientrano in quelle categorie (in v1 resta soprattutto la guida giocatori, evidenziata come percorso consigliato se marcata `featured` nel manifest). I link «Home» e «Guida giocatori» non compaiono piu` nell'header in alto a destra: la guida resta raggiungibile dalla home o dalla sidebar (Home + sezione pertinente, se in futuro aggiungerai altre pagine standalone).
+
 ## Cosa non viene mai pubblicato direttamente
 
 Il sito non usa i file grezzi del repository cosi` come sono. Ogni pagina passa da una fase di sanificazione che rimuove automaticamente le sezioni private elencate in `manifest.json`, in particolare:
