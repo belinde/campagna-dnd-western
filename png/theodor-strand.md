@@ -24,6 +24,17 @@ Conosce la fauna e la geografia delle pianure meglio di chiunque nella carovana.
 - **Bisonti** — enormi bovidi pelosi, estremamente numerosi. Da trattare con rispetto, non da sottovalutare in branchi.
 - **Wurmionti** — non magici, lontani parenti dei draghi. Corpo simile a un grosso serpente tozzo, tre o quattro metri, erbivori. Vivono nella fascia collinare e ai piedi delle Montagne Rocciose. Numerosi, impegnativi da affrontare ma cacciabili.
 
+## Scheda di gioco
+
+**Livello/Classe:** livello 5, Ranger
+**Ruolo tattico:** scout, tiratore scelto, guida di frontiera
+**CA/PF/Velocità:** 15 / 38 / 30 ft.
+**Caratteristiche:** For 12, Des 16, Cos 13, Int 12, Sag 14, Car 11
+**Bonus competenza:** +3
+**Tiri salvezza/Abilità:** For +4, Des +6; Percezione +6, Sopravvivenza +6, Furtività +6, Natura +4, Indagare +4, Percezione passiva 16
+**Attacchi/Azioni:** multiattacco (2 attacchi); fucile da caccia tecnomagico +8 (1d10+3 perforanti, gittata 80/240, adattamento conservativo); coltello lungo +6 (1d6+3 perforanti)
+**Capacità/Incantesimi distintivi:** Fighting Style: Archery; Land's Stride; udito e vista acuti (vantaggio a Percezione basata su vista o udito); magie utili: `Hunter's Mark`, `Pass Without Trace`
+
 ## Eventi interessanti
 
 - **[Sessione 004]** Valuta Dora e Leman Russ alla Locanda del Fiume Rosso. Rimane colpito dalle mappe di Dora e la promuove senza esitare. Li informa delle principali minacce faunistiche delle pianure e dà il suo benestare all'ingaggio del gruppo.

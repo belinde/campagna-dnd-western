@@ -7,7 +7,9 @@
 
 ## Aspetto
 
-_Da definire._
+Uomo nel pieno della forza, alto e ben proporzionato, con lineamenti netti, capelli scuri tagliati corti e uno sguardo fermo che tende più al giudizio che alla minaccia. Il volto è quello di chi è abituato a reggere il peso delle decisioni davanti agli altri: pulito, severo senza essere crudele, con una compostezza quasi solenne che lo distingue anche in mezzo alla polvere della Frontiera.
+
+In viaggio si presenta come un cavaliere sacro trapiantato ai confini del mondo civilizzato. Indossa una pesante armatura di maglia e piastre ben tenuta, rifinita in bianco e oro, con simboli solari in evidenza sul petto e sul grande scudo. Porta una lunga spada con sicurezza rituale più che esibita, e il mantello chiaro che ricade dalle spalle gli conferisce un'aria nobile anche quando è impolverato dal cammino. Nel complesso, Kelvor da` subito l'impressione di un uomo fatto per stare in prima linea: protettivo, visibile, difficile da ignorare.
 
 ## Personalità
 

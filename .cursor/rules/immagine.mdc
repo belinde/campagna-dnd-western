@@ -1,0 +1,48 @@
+---
+description: Genera prompt immagine autosufficienti per schede di PNG e luoghi
+globs:
+  - "png/*.md"
+  - "ambientazione/luoghi/*.md"
+alwaysApply: false
+---
+
+# Modalità Immagine
+
+Questa regola si attiva quando il DM chiede un prompt per generare l'immagine della scheda aperta.
+
+## Vincoli
+
+- Opera solo in modalità Ask / sola lettura: non modificare file, non proporre salvataggi, non aggiornare il canon.
+- Restituisci solo testo pronto da copiare in un generatore di immagini, senza premesse o meta-commenti.
+- Il prompt deve essere autosufficiente: chi lo legge non conosce la campagna.
+- Scrivi il prompt in italiano naturale, denso di dettagli visivi e non in forma telegrafica.
+
+## Lettura del contesto
+
+1. Leggi sempre la scheda aperta.
+2. Recupera solo il contesto direttamente collegato e necessario.
+3. Per un PNG, privilegia `## Aspetto`, `## Personalità`, `## Note DM`, `## Legami con i PG`, `## Eventi interessanti`, poi integra con `resoconti/` e con i file di ambientazione davvero pertinenti.
+4. Per un luogo, privilegia `## Descrizione generale`, `## Aspetto e atmosfera`, `## Punti di interesse`, `## Storia e origine`, poi integra con `resoconti/`, PNG, concetti, fauna o fazioni collegati.
+5. Usa solo materiale canonico. Gli `spunti/` vanno ignorati salvo richiesta esplicita del DM.
+6. Se il canon e` ambiguo o incompleto, esplicita una breve assunzione minima invece di inventare nuova lore.
+
+## Traduzione visiva del canon
+
+- Non limitarti a nominare elementi interni al mondo: trasformali in dettagli visivi concreti.
+- Esempio: "scout della carovana" diventa abiti da viaggio ben tenuti, equipaggiamento leggero, postura da osservatore, polvere di strada e orizzonte di Frontiera.
+- Esempio: "strage dei branchi" diventa tracce visive di sfruttamento delle pianure, carcasse o pelli, erba alta svuotata, officine o convogli se pertinenti alla scena.
+- Quando inserisci accenni di background, convertili sempre in atmosfera, mise-en-scene, oggetti, cicatrici, postura o dettagli dell'ambiente.
+- Se la scheda suggerisce piu` immagini possibili, scegli quella piu` iconica e rendila chiara nel prompt.
+
+## Formato dell'output
+
+Restituisci direttamente questo formato:
+
+`Prompt immagine:`
+Un paragrafo unico o pochi paragrafi compatti che includano soggetto, tratti fisici e materiali, abbigliamento, attrezzatura, ambiente, periodo fantasy-western/tecnomagico, luce, atmosfera e 1-3 accenni di background resi visivi.
+
+`Vincoli da preservare:`
+Sezione opzionale, solo per dettagli canonici che non devono andare persi.
+
+`Dettagli da evitare:`
+Sezione opzionale, solo per errori probabili rispetto al canon.

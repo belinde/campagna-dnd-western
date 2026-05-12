@@ -19,6 +19,17 @@ I PG non sapevano chi fosse quando lo hanno incontrato. Lo hanno comunque immobi
 
 Sam è il secondo dei tre fratelli Crow, banda di fuorilegge responsabile di almeno due rapine a mano armata lungo la Frontiera meridionale. Il manifesto di ricerca (1000$ per la sua cattura) circola tra i marshal del Middle West ma non era ancora arrivato alle Pianure del Sud — per questo si era mosso verso nord. Uno dei fratelli è morto nel Mississippi durante la fuga. Il terzo fratello è ancora a piede libero e probabilmente verrà a sapere presto di quanto accaduto sulla *Ben Campbell*. Sam è attualmente in custodia a bordo.
 
+## Scheda di gioco
+
+**Livello/Classe:** livello 7, Ladro
+**Ruolo tattico:** fuorilegge astuto, duellante sporco, opportunista
+**CA/PF/Velocità:** 15 / 52 / 30 ft.
+**Caratteristiche:** For 11, Des 17, Cos 13, Int 12, Sag 13, Car 14
+**Bonus competenza:** +3
+**Tiri salvezza/Abilità:** Des +6, Int +4; Furtività +9, Inganno +8, Rapidità di mano +6, Percezione +6, Intuizione +4
+**Attacchi/Azioni:** multiattacco (2 attacchi); coltello +6 (1d4+3 perforanti); rivoltella tecnomagica +6 (1d10+3 perforanti, gittata 30/90, adattamento conservativo)
+**Capacità/Incantesimi distintivi:** azione scaltra (Scatto, Disimpegno o Nascondersi come azione bonus); Attacco Furtivo (1/turno, +4d6 se ha vantaggio o un alleato minaccia il bersaglio); Parata improvvisata (+2 CA contro un attacco in mischia che lo colpirebbe)
+
 ## Eventi interessanti
 
 - **[Sessione 002]** Scoperto mentre deruba una passeggera nelle cabine di lusso della *Ben Campbell*. Aggredisce Gud Bender, viene immobilizzato dal gruppo e arrestato dal primo ufficiale Thomas Caldwell.

@@ -7,7 +7,9 @@
 
 ## Aspetto
 
-_Da definire._
+Mezz'elfa giovane, alta e slanciata, con lineamenti fini ma temprati dalla strada. Porta lunghi capelli biondi spesso sciolti sulle spalle, mossi dal vento e dalla polvere, e le orecchie affilate tipiche del suo sangue elfico restano bene in vista. Il volto è bello senza essere delicato: zigomi netti, mascella ferma, sguardo chiaro e attento di chi è abituata a misurare distanze, vie di fuga e dettagli del terreno prima ancora delle persone.
+
+Veste come chi passa più tempo in viaggio che sotto un tetto: lungo cappotto di cuoio scuro, corazza leggera ben portata, stivali robusti, guanti da sella e una sciarpa verde avvolta al collo contro vento e sabbia. Alla cintura porta cartucce, tasche da campo e piccoli strumenti utili; sulle spalle tiene arco e faretra con naturalezza da professionista. Accanto a lei compare quasi sempre **Svalka**, il suo mulo da soma, carico di basti, coperte, corde, provviste e lanterne: insieme danno subito l'idea di una donna fatta per la Frontiera, piu` esploratrice e cartografa che semplice viaggiatrice.
 
 ## Personalità
 

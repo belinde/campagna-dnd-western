@@ -32,6 +32,17 @@ Indizi di partenza dal contesto familiare: silenziosa, attenta, già un poco adu
 
 Il movente dell'attacco (semplice razzia vs agguato alla carovana) resta volutamente ambiguo. La bambina sa leggere e scrivere: dettaglio da spendere bene se interagisce con i PG colti del gruppo, e potenziale leva narrativa per gestire il suo trasferimento a una scuola, una congregazione o una famiglia adottiva colta lungo la rotta della carovana.
 
+## Scheda di gioco
+
+**Livello/Classe:** livello 1, bambina sopravvissuta con benchmark da `commoner`
+**Ruolo tattico:** non combattente, testimone, bersaglio da proteggere
+**CA/PF/Velocità:** 10 / 5 / 25 ft.
+**Caratteristiche:** For 6, Des 11, Cos 10, Int 11, Sag 12, Car 10
+**Bonus competenza:** +2
+**Tiri salvezza/Abilità:** Sag +3, Des +2; Furtività +4, Percezione +3, Intuizione +3
+**Attacchi/Azioni:** sasso o oggetto improvvisato +2 (1 danno contundente); Disimpegno o Nascondersi come priorità naturale se minacciata
+**Capacità/Incantesimi distintivi:** piccola e sfuggente (vantaggio ai tiri per nascondersi in spazi stretti, botole e sotto arredi); sa leggere e scrivere; nessun incantesimo
+
 ## Eventi interessanti
 
 - **[Sessione 005]** Trovata nella botola della fattoria dopo la sparatoria; terrorizzata, in lacrime; la sessione si chiude su di lei.

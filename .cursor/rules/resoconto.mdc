@@ -111,8 +111,10 @@ Per ogni PG che ha vissuto un momento saliente, proporre la voce da aggiungere a
 ### 5b — Schede PNG
 
 Per ogni PNG apparso nella sessione:
-- Se esiste già un file in `png/`, proporre la voce da aggiungere a `## Eventi interessanti` in quel file.
-- Se **non** esiste ancora una scheda, segnalarlo al DM e proporre di crearla in `png/` seguendo il template standard (lo stesso usato dalla modalità ingame). Attendere conferma prima di creare il file.
+- Se esiste già un file in `png/`, proporre la voce da aggiungere a `## Eventi interessanti` in quel file e integrare anche `## Scheda di gioco` se sono emersi dettagli meccanici nuovi o se il livello del PNG e` cambiato.
+- Se **non** esiste ancora una scheda, segnalarlo al DM e proporre di crearla in `png/` seguendo il template standard (lo stesso usato dalla modalità ingame), inclusa la sezione `## Scheda di gioco`. Attendere conferma prima di creare il file.
+- Se la scheda non indica ancora in modo chiaro il livello del PNG, chiederlo esplicitamente al DM prima di completare o aggiornare `## Scheda di gioco`.
+- Se il livello cambia, aggiornare la parte meccanica in modo incrementale: mantenere la build gia` canonizzata e aggiungere solo i benefici coerenti del nuovo livello, salvo istruzioni contrarie del DM.
 
 ### 5c — File di ambientazione
 
@@ -121,7 +123,7 @@ Se dal resoconto emergono informazioni rilevanti su luoghi o elementi del mondo 
 ### 5d — Smistamento file di sessione
 
 Per ogni file in `sessione/`:
-- **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente. Altrimenti creare la scheda in `png/`.
+- **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente, inclusa `## Scheda di gioco` quando necessario. Altrimenti creare la scheda in `png/`. Se il livello e` assente o cambiato, chiederlo al DM e aggiornare la scheda in modo additivo, non sostitutivo.
 - **`luogo-*.md`** — Valutare se aggiornare un file in `ambientazione/luoghi/` o proporne la creazione. Segnalare al DM prima di agire.
 - **`nota-*.md`** / **`incontro-*.md`** — Verificare se ci sono informazioni utili non ancora incorporate nel resoconto o nelle schede; segnalare al DM se qualcosa è stato tralasciato.
 

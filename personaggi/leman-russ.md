@@ -7,7 +7,9 @@
 
 ## Aspetto
 
-_Da definire._
+Mezzelfo alto e asciutto, con il corpo nervoso di chi cammina piu` di quanto riposi e il volto scavato dal vento, dalla polvere e dal sole. Porta lunghi capelli scuri sulle spalle, una barba corta e selvatica, e sotto il cappello a tesa larga spiccano occhi chiari e intensi che gli danno un'aria quasi inquietante quando restano fissi su qualcuno. Le orecchie affilate emergono senza imbarazzo dai capelli, rendendo evidente il suo sangue misto anche a distanza.
+
+Veste come un uomo che appartiene più ai margini della civiltà che alle sue strade: lungo cappotto consunto color terra, strati di stoffa scura, sciarpa rossa impolverata e cinture cariche di piccoli oggetti utili, amuleti e strumenti da viaggio. Porta con se' un bastone rituale nodoso sormontato da un teschio animale e da piume legate con corda e cuoio, più totem che semplice arma. Nel complesso, Leman dà l'impressione di un druido ruvido e itinerante, uno che osserva il mondo come una creatura viva e pericolosa, e che in mezzo alla Frontiera sembra molto meno fuori posto di quanto dovrebbe.
 
 ## Personalità
 

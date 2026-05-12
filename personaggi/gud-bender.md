@@ -7,7 +7,9 @@
 
 ## Aspetto
 
-_Da definire._
+Gud Bender e` un nano basso e massiccio, con spalle larghe, ventre robusto e una presenza che occupa subito la stanza. Il volto e` largo e segnato dal tempo: guance rubizze, naso importante, sopracciglia folte e uno sguardo scuro, duro e vigile, incorniciato da piccole cicatrici che gli attraversano il viso. Porta una barba piena e ispida, scura ma gia` venata di grigio, che gli copre gran parte del petto, mentre i capelli castani gli sfuggono disordinati da sotto il cappello.
+
+Veste come un veterano della Frontiera tecnomagica: ampio cappello di cuoio consunto con un paio di occhiali da lavoro fissati sulla tesa, camicia chiara a collo aperto, pesanti strati di pelle scura e un mantello o giacca foderati di pelliccia. Gli avambracci sono protetti da bracciali di cuoio borchiato, la cintura e` carica di cinghie, attrezzi e pendagli metallici, e al centro spicca una grande fibbia circolare dall'aria quasi meccanica o arcana. Nell'insieme da` l'impressione di un incantatore ruvido e pericoloso, piu` simile a un pistolero stregone che a un mago di accademia.
 
 ## Personalità
 

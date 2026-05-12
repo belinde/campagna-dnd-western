@@ -1,0 +1,59 @@
+---
+description: Schede PNG con sezione Scheda di gioco 5e compatta
+globs: png/*.md, sessione/png-*.md
+alwaysApply: false
+---
+
+# Schede PNG 5e
+
+Questa regola si applica solo alle schede dei PNG in `png/` e `sessione/`.
+
+## Struttura obbligatoria
+
+Mantieni la struttura narrativa gia` in uso e aggiungi sempre una sezione `## Scheda di gioco`.
+
+```markdown
+## Scheda di gioco
+
+**Livello/Classe:** livello N, classe o archetipo meccanico
+**Ruolo tattico:** tiratore, incantatore, bruto, supporto, scout, ecc.
+**CA/PF/Velocita:** ...
+**Caratteristiche:** For ..., Des ..., Cos ..., Int ..., Sag ..., Car ...
+**Bonus competenza:** ...
+**Tiri salvezza/Abilita:** ...
+**Attacchi/Azioni:** ...
+**Capacita/Incantesimi distintivi:** ...
+```
+
+La scheda deve restare compatta, leggibile al tavolo e limitata alle informazioni meccaniche davvero utili in gioco.
+
+## Livello obbligatorio
+
+Quando crei un nuovo PNG o aggiorni la sua `Scheda di gioco`, il livello di personaggio deve essere esplicitato.
+
+Se la scheda non indica ancora in modo chiaro il livello, chiedi esplicitamente al DM: **"Di che livello e` questo PNG?"** prima di completare o aggiornare la sezione.
+
+Non dedurre il livello soltanto dal tono narrativo, dal ruolo fictionale o dalla pericolosita` percepita.
+
+## Uso del MCP D&D 5e
+
+Per classi, incantesimi, equipaggiamento, benchmark di mostri e verifica delle regole 5e, usa come riferimento primario il server MCP D&D 5e registrato (`dnd`).
+
+Usa l'MCP per cercare e verificare il materiale 5e disponibile. Se un elemento non e` presente nell'API, dichiaralo apertamente e adatta la scheda in modo conservativo invece di presentarlo come dato ufficiale.
+
+## Aggiornamenti di livello
+
+Se il DM cambia il livello di un PNG, aggiorna la `Scheda di gioco` in modo **additivo e non sostitutivo**.
+
+- Conserva classe, ruolo tattico, equipaggiamento, attacchi, incantesimi e capacita` gia` canonizzati, salvo istruzioni contrarie del DM.
+- Aggiungi solo i benefici coerenti con il nuovo livello: PF, bonus competenza quando cambia, nuove capacita`, nuovi slot, ASI/talenti, migliorie agli attacchi o alle CD.
+- Non rigenerare da zero la build e non cambiare l'identita` meccanica del PNG solo per ottimizzarlo.
+- Se il nuovo livello richiede scelte non determinabili da sole (es. ASI o talento, nuovi incantesimi conosciuti), fai una domanda mirata al DM. In assenza di risposta, proponi un default coerente con il PNG e dichiaralo come proposta.
+
+Se il livello viene abbassato, rimuovi solo cio` che il nuovo livello non supporta piu`, preservando il resto della scheda quando possibile.
+
+## Flusso dei file
+
+In `sessione/png-*.md`, applica le stesse regole anche se alcuni dettagli restano provvisori fino al resoconto.
+
+In `png/*.md`, mantieni la `Scheda di gioco` coerente con il canon gia` emerso nella scheda e nei resoconti.

@@ -27,6 +27,17 @@ Non è l'uomo semplice che sembra. Il fallimento a Port Meredith non è stato so
 - **Cerchio di carri** la notte, bestiame al centro
 - **Ritmo**: alba-tramonto, sosta fissa ogni 7 giorni
 
+## Scheda di gioco
+
+**Livello/Classe:** livello 5, capo carovana civile con benchmark da `commoner`/`noble`
+**Ruolo tattico:** comandante logistico, negoziatore, bersaglio da proteggere
+**CA/PF/Velocità:** 12 / 27 / 30 ft.
+**Caratteristiche:** For 12, Des 11, Cos 12, Int 13, Sag 14, Car 15
+**Bonus competenza:** +3
+**Tiri salvezza/Abilità:** Sag +5, Car +5; Intuizione +5, Persuasione +6, Inganno +6, Percezione passiva 12
+**Attacchi/Azioni:** bastone da viaggio +4 (1d6+1 contundenti); pistola tecnomagica da viaggio +4 (1d10+1 perforanti, gittata 30/90, adattamento conservativo)
+**Capacità/Incantesimi distintivi:** Voce del capocarovana (gli alleati che lo sentono hanno vantaggio al primo tiro per non cedere al panico o mantenere l'ordine); Parata improvvisata (+2 CA contro un attacco in mischia che lo colpirebbe, se impugna un'arma da mischia)
+
 ## Eventi interessanti
 
 - **[Sessione 004]** Incontra il gruppo a Valdoren e li ingaggia come guardie e scout. Divide il gruppo in due per le valutazioni: Dora e Leman Russ da Theodor Strand, gli altri da Andrew Carver. Conferma l'offerta il giorno seguente e annuncia la partenza per l'indomani mattina.
