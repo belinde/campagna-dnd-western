@@ -16,6 +16,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MANIFEST = REPO_ROOT / "pubblicazione" / "manifest.json"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((/immagini/[^)\s]+)\)")
+OG_IMAGE_IN_PUBLIC_MD_RE = re.compile(
+    r"!\[[^\]]*\]\(\{\{\s*'(/[^']+)'\s*\|\s*relative_url\s*\}\}\)"
+)
 SESSION_LINK_RE = re.compile(r"\[(Sessione (\d{3}))\](?!\()")
 ENTITY_BULLET_RE = re.compile(r"^(\s*-\s+\*\*)([^*]+)(\*\*.*)$")
 
@@ -407,6 +410,12 @@ def rewrite_image_links(markdown_text: str) -> tuple[str, set[str]]:
     return IMAGE_RE.sub(replacer, markdown_text), images
 
 
+def first_og_image_path_from_body(markdown_text: str) -> str | None:
+    """Primo path immagine nel markdown dopo rewrite_image_links (URL path con / iniziale)."""
+    match = OG_IMAGE_IN_PUBLIC_MD_RE.search(markdown_text)
+    return match.group(1) if match else None
+
+
 def yaml_string(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
@@ -447,6 +456,18 @@ def write_layout(output_dir: Path) -> None:
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
             <meta name="description" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+            {% if page.og_image %}
+            <meta property="og:type" content="website">
+            <meta property="og:site_name" content="{{ site.title | escape }}">
+            <meta property="og:title" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+            <meta property="og:description" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+            <meta property="og:url" content="{{ page.url | absolute_url }}">
+            <meta property="og:image" content="{{ page.og_image | absolute_url }}">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+            <meta name="twitter:description" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+            <meta name="twitter:image" content="{{ page.og_image | absolute_url }}">
+            {% endif %}
             <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
           </head>
           <body>
@@ -707,6 +728,7 @@ def front_matter(
     source_path: Path,
     *,
     show_title: bool = True,
+    og_image: str | None = None,
 ) -> str:
     lines = [
         "---",
@@ -718,6 +740,8 @@ def front_matter(
     ]
     if not show_title:
         lines.append("show_title: false")
+    if og_image:
+        lines.append(f"og_image: {yaml_string(og_image)}")
     lines.append("---")
     return "\n".join(lines) + "\n\n"
 
@@ -801,6 +825,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
         body = rewrite_section_entity_links(body, entity_route_lookup)
         body, assets = rewrite_image_links(body)
         referenced_assets.update(assets)
+        og_image = first_og_image_path_from_body(body)
 
         destination = output_dir / entry.relative_path
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -810,6 +835,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
                 route=entry.route,
                 collection_label=entry.label,
                 source_path=entry.relative_path,
+                og_image=og_image,
             )
             + body,
             encoding="utf-8",
