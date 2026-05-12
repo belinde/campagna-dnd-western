@@ -54,12 +54,19 @@ Clan orchesco delle pianure occidentali che conosce pozze, luoghi di parto, depr
 - **Abigail Rooke** — Agente viaggiante della Compagnia delle Cinghie del Grande Fiume. Veste pulito anche nella polvere, annota tutto in un taccuino cerato, paga in moneta buona e non alza mai la voce. È più pericolosa di un bandito perché preferisce avere ragione sulla carta.
 - **Harlan Pike** — Caposquadra dei Tiratori del Punto Lungo. Ex scout o ex sergente, difficile da distinguere. Parla poco, spara benissimo, considera i branchi una risorsa sprecata finché corrono liberi.
 - **Yargra delle Orme Profonde** — Sciamana o mediatrice del clan. Non supplica e non minaccia per sport. Vuole che qualcuno fuori dal suo popolo veda il danno e lo chiami col suo nome. Se ignorata, perderà terreno a chi nel clan vuole passare alla vendetta pura.
+- **Elias Barlow** — Padre della famiglia che vende acqua ai macellai. Custode di un pozzo troppo utile, continua a chiamare "necessita'" un compromesso che lo sta gia' mangiando da dentro.
+- **Ruth Barlow** — Madre della famiglia. Tiene i conti, il sale e la paura; e' la prima a capire che i loro clienti potrebbero voler cancellare i testimoni insieme all'odore.
+- **Mae Barlow** — Figlia adolescente dei Barlow. Porta secchi, osserva i cavalli, riconosce marchi e ricorda piu' di quanto gli adulti attorno a lei gradirebbero.
 
 ### Schede collegate
 
 - `png/abigail-rooke.md`
 - `png/harlan-pike.md`
 - `png/yargra-delle-orme-profonde.md`
+- `ambientazione/luoghi/fattoria-barlow.md`
+- `png/elias-barlow.md`
+- `png/ruth-barlow.md`
+- `png/mae-barlow.md`
 
 ### Implicazioni ecologiche e sociali da mostrare in scena
 
