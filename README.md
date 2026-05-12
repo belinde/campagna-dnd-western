@@ -59,8 +59,20 @@ Si usa dopo una sessione di gioco per trasformare il racconto grezzo del DM in u
 | 4 — Bozza resoconto | L'AI scrive la bozza completa seguendo il template standard. La presenta in chiaro senza salvare. Salva solo dopo approvazione. |
 | 5 — Aggiornamenti collaterali | Aggiorna schede PG e PNG (sezione `## Eventi interessanti`), propone nuovi file di ambientazione, integra i file temporanei di `sessione/`. |
 | 6 — Pulizia | Riepilogo di tutto ciò che è stato fatto, poi elimina i file da `sessione/` dopo conferma. |
+| 7 — Pubblicazione pubblica | Se il progetto ha un export player-safe configurato, rigenera anche i contenuti pubblici e verifica che resoconto e immagini di scena vengano sincronizzati nel sito. |
 
 **Attivazione:** `@resoconto` nella chat, oppure "modalità resoconto".
+
+## Pubblicazione dei resoconti
+
+Il repository include anche un piccolo flusso di pubblicazione player-safe descritto in `pubblicazione/README.md`.
+
+- `pubblicazione/manifest.json` definisce il perimetro pubblico
+- `pubblicazione/manifest.json` contiene anche la allowlist dei materiali conosciuti dai giocatori
+- `scripts/build_public_site.py` genera una sorgente Jekyll filtrata e pronta per GitHub Pages
+- `.github/workflows/publish-public-site.yml` compila e pubblica il sito con GitHub Actions
+
+Il sito pubblico usa solo contenuti filtrati: resoconti, pagine esplicitamente allowlistate e immagini canoniche realmente referenziate. Le sezioni DM (`## Note DM`, `## Note per la prossima sessione`, `## Ganci narrativi`, `## Segreti e obiettivi nascosti`) vengono rimosse automaticamente dall'export. Le schede in `png/` possono essere pubblicate con un profilo pubblico ridotto che mostra solo nome, immagine, descrizione ed eventi interessanti.
 
 ---
 

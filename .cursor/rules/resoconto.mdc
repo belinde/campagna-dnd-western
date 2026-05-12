@@ -129,6 +129,8 @@ Per ogni PNG apparso nella sessione:
 - Se il livello cambia, aggiornare la parte meccanica in modo incrementale: mantenere la build gia` canonizzata e aggiungere solo i benefici coerenti del nuovo livello, salvo istruzioni contrarie del DM.
 - Se viene approvato o recuperato un ritratto canonico del PNG, aggiornare anche la sezione `## Immagine canonica` con il path corretto `/immagini/png/<slug>.<ext>`.
 
+Se il progetto usa una pubblicazione pubblica player-safe con allowlist esplicita, tenere nota dei PNG ormai **conosciuti dai giocatori**: in Fase 7 andranno aggiunti alla allowlist del sito. La pubblicazione dei `png/` deve usare un profilo pubblico ridotto che mostri solo **nome, immagine canonica, descrizione e `## Eventi interessanti`**.
+
 ### 5c — File di ambientazione
 
 Se dal resoconto emergono informazioni rilevanti su luoghi o elementi del mondo non ancora documentati, segnalarlo al DM specificando quale file andrebbe creato o aggiornato, indicando la sottocartella corretta (`ambientazione/luoghi/`, `ambientazione/nazioni/` o `ambientazione/concetti/`). Attendere istruzione prima di agire.
@@ -165,4 +167,27 @@ Poi chiedere conferma prima di eliminare i file dalla cartella `sessione/`:
 
 *"Posso eliminare i file di sessione temporanei? (sessione/... elenco file)"*
 
-Solo dopo conferma esplicita, **eliminare tutti i file dalla cartella `sessione/`**. Se la cartella è già vuota, segnalarlo e concludere.
+Solo dopo conferma esplicita, **eliminare tutti i file dalla cartella `sessione/`**. Se la cartella è già vuota, segnalarlo e passare comunque alla Fase 7.
+
+---
+
+## Fase 7 — Aggiornamento dei contenuti pubblicati
+
+Se il repository contiene una configurazione di pubblicazione pubblica (per esempio `pubblicazione/manifest.json` e uno script di export dedicato), la fase finale del flusso e` l'aggiornamento del sito player-safe.
+
+Prima di agire:
+
+1. Verificare quali file canonici appena salvati ricadono nel perimetro pubblico definito dal manifest.
+2. Verificare che le **immagini salienti** richiamate dal nuovo resoconto esistano davvero nel path canonico corretto, in particolare sotto `immagini/eventi/sessione-NNN/`.
+3. Ricordare che la pubblicazione pubblica usa solo l'output filtrato: **non** esporre mai direttamente i file grezzi del repository privato.
+4. Aggiornare la **allowlist** dei materiali conosciuti dai giocatori aggiungendo cio` che la sessione ha reso pubblico: soprattutto `png/*.md` gia` noti al tavolo, ma anche eventuali materiali di `ambientazione/` o altre pagine player-safe approvate dal DM.
+
+Poi:
+
+- eseguire o aggiornare il flusso di export player-safe previsto dal progetto
+- rigenerare i contenuti pubblici dopo gli aggiornamenti canonici approvati
+- presentare al DM un riepilogo sintetico di cio` che andra` online: nuove pagine, resoconti aggiornati, immagini di scena incluse, voci aggiunte alla allowlist dei materiali conosciuti
+
+Se il passo successivo richiede operazioni git o di rete (commit, push, deploy remoto, apertura di PR), chiedere sempre conferma esplicita prima di procedere.
+
+Se il nuovo resoconto o le sue immagini non ricadono ancora nel perimetro pubblico, segnalarlo chiaramente al DM e proporre l'aggiornamento minimo necessario invece di pubblicare materiale in eccesso.

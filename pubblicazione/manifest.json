@@ -1,0 +1,90 @@
+{
+  "site": {
+    "title": "La corsa al Nuovo Mondo",
+    "tagline": "Resoconti pubblici di una campagna D&D 5e fantasy-western",
+    "description": "Archivio player-safe dei resoconti di sessione e dei materiali condivisibili con i giocatori.",
+    "url": "https://corsa-nuovo-mondo.belinde.click",
+    "baseurl": ""
+  },
+  "pages": [
+    {
+      "path": "ambientazione/ambientazione-giocatori.md",
+      "label": "Guida per i giocatori",
+      "featured": true
+    }
+  ],
+  "allowlist": {
+    "entries": [
+      {
+        "path": "png/andrew-carver.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/anthony-gillian.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/dorothy-mercer.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/hector-brannagh.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/lucien-mccullaghan.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/maren-halverson.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/olaf-halverson.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/sam-crow.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/silas-drummond.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/theodor-strand.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/thomas-caldwell.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      }
+    ]
+  },
+  "collections": [
+    {
+      "name": "Resoconti di sessione",
+      "source": "resoconti",
+      "include": "sessione-*.md",
+      "sort": "desc"
+    }
+  ],
+  "stripSections": [
+    "Note DM",
+    "Note per la prossima sessione",
+    "Ganci narrativi",
+    "Segreti e obiettivi nascosti"
+  ],
+  "outputDirectory": "build/public-site"
+}

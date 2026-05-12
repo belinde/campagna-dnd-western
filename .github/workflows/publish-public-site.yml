@@ -1,0 +1,59 @@
+name: Pubblica sito pubblico
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configura GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Genera sorgente player-safe
+        run: python3 scripts/build_public_site.py --output build/public-site
+
+      - name: Compila sito con Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: build/public-site
+          destination: build/_site
+
+      - name: Carica artefatto Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
