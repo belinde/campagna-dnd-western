@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "La corsa al Nuovo Mondo",
-    "tagline": "Resoconti pubblici di una campagna D&D 5e fantasy-western",
-    "description": "Archivio player-safe dei resoconti di sessione e dei materiali condivisibili con i giocatori.",
+    "tagline": "Dove la Frontiera finisce, comincia il Nuovo Mondo.",
+    "description": "Una campagna D&D 5e fantasy-western tra piste polverose, tecnomagia, miniere di rame e terre contese, dove coloni, fuorilegge e popoli delle Terre Selvagge si giocano il destino della Frontiera.",
     "url": "https://corsa-nuovo-mondo.belinde.click",
     "baseurl": ""
   },
@@ -58,7 +58,10 @@
       {
         "path": "png/silas-drummond.md",
         "label": "PNG conosciuti",
-        "profile": "public-png"
+        "profile": "public-png",
+        "aliases": [
+          "Lo sceriffo di Valdoren"
+        ]
       },
       {
         "path": "png/theodor-strand.md",
@@ -69,6 +72,20 @@
         "path": "png/thomas-caldwell.md",
         "label": "PNG conosciuti",
         "profile": "public-png"
+      },
+      {
+        "path": "ambientazione/luoghi/valdoren.md",
+        "label": "Luoghi visitati",
+        "aliases": [
+          "Valdoren (margini e strada d’uscita)"
+        ]
+      },
+      {
+        "path": "ambientazione/luoghi/fattoria-mercer.md",
+        "label": "Luoghi visitati",
+        "aliases": [
+          "Fattoria isolata"
+        ]
       }
     ]
   },

@@ -68,11 +68,11 @@ Si usa dopo una sessione di gioco per trasformare il racconto grezzo del DM in u
 Il repository include anche un piccolo flusso di pubblicazione player-safe descritto in `pubblicazione/README.md`.
 
 - `pubblicazione/manifest.json` definisce il perimetro pubblico
-- `pubblicazione/manifest.json` contiene anche la allowlist dei materiali conosciuti dai giocatori
+- `pubblicazione/manifest.json` contiene anche la allowlist dei materiali conosciuti dai giocatori, inclusi PNG e luoghi visitati
 - `scripts/build_public_site.py` genera una sorgente Jekyll filtrata e pronta per GitHub Pages
 - `.github/workflows/publish-public-site.yml` compila e pubblica il sito con GitHub Actions
 
-Il sito pubblico usa solo contenuti filtrati: resoconti, pagine esplicitamente allowlistate e immagini canoniche realmente referenziate. Le sezioni DM (`## Note DM`, `## Note per la prossima sessione`, `## Ganci narrativi`, `## Segreti e obiettivi nascosti`) vengono rimosse automaticamente dall'export. Le schede in `png/` possono essere pubblicate con un profilo pubblico ridotto che mostra solo nome, immagine, descrizione ed eventi interessanti.
+Il sito pubblico usa solo contenuti filtrati: resoconti, pagine esplicitamente allowlistate e immagini canoniche realmente referenziate. Le sezioni DM (`## Note DM`, `## Note per la prossima sessione`, `## Ganci narrativi`, `## Segreti e obiettivi nascosti`) vengono rimosse automaticamente dall'export. Le schede in `png/` possono essere pubblicate con un profilo pubblico ridotto che mostra solo nome, immagine, descrizione ed eventi interessanti, mentre i luoghi allowlistati in `ambientazione/luoghi/` vengono esportati e linkati dai resoconti nella sezione `## Luoghi visitati`.
 
 ---
 

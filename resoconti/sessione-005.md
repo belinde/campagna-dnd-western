@@ -6,6 +6,14 @@
 
 All’alba la carovana di Hector Brannagh lascia Valdoren: Hector dirige dalla testa, Theodor Strand resta in avanguardia, Andrew Carver chiude il convoglio. Andrew procura cavalli al gruppo e fissa le distanze di pattugliamento; Kelvor Rivib, in retrovia vicino all’ultimo carro, non si accorge subito di un halfling ragazzino infilatosi sul carro, ma fuori città è lui a cogliere il movimento nell’erba. Gud Bender lo ferma con *Sonno*, recupera il bottino, lascia due dollari in tasca al ladro e **restituisce personalmente il fagotto** alla donna sul carro; Andrew supervisiona la scena. Dopo la sosta di mezzogiorno, Dora l’Esploratrice è la prima ad avvicinarsi a una fattoria sospetta e fa cenno a Theodor: un morto, poi uno scontro a fuoco in cui restano tre briganti morti e un quarto agonizzante, che Andrew finisce per pietà. In casa trovano una donna uccisa e, in una botola, Dorothy Mercer, terrorizzata; non è possibile stabilire se i predoni avessero saccheggiato la fattoria o la usassero come trappola per la carovana.
 
+## Immagini salienti
+
+### Gud ferma il ladruncolo
+
+![Gud Bender addormenta il ladruncolo halfling accanto alla carovana](/immagini/eventi/sessione-005/gud-bender-addormenta-il-ladruncolo.jpeg)
+
+*Gud Bender abbatte con Sonno il ragazzino halfling che aveva appena rubato il fagotto di una famiglia della carovana.*
+
 ## Eventi principali
 
 Prima dell’alba il gruppo si attrezza e raggiunge il punto di raduno: con sé hanno ancora il mulo di Dora e, a piedi, la necessità di cavalcature. Il convoglio è già un corpo unico: una decina di carri al passo dei buoi, famiglie intere sui pianali, polvere e ordini secchi. **Hector Brannagh** è in testa e coordina tutto; **Theodor Strand** resta nella parte anteriore del dispositivo, come scout; **Andrew Carver** tiene le retrovie. Un fischio sancisce la partenza: la carovana si muove lentissima, con il ritmo che — salvo emergenze — segnerà le prossime settimane.

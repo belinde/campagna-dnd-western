@@ -6,6 +6,14 @@
 
 I cinque avventurieri convergono su New Avalon da percorsi diversi, accomunati dalla decisione di spingersi verso nord lungo la Frontiera. Scelgono la via più economica — il battello fluviale — e si imbarcano sulla *Ben Campbell*, una steamboat che risale il Mississippi. La prima giornata scorre pigra tra le acque limacciose del Grande Fiume, ma la notte porta con sé un'ombra silenziosa e un grido che promette guai.
 
+## Immagini salienti
+
+### Il grido nella notte
+
+![Dora e Leman sul ponte della Ben Campbell mentre una barca senza luci segue il battello nel buio](/immagini/eventi/sessione-001/grido-nella-notte-sulla-ben-campbell.png)
+
+*Dora e Leman sul ponte della* Ben Campbell *mentre una barca senza luci la segue nel buio del Grande Fiume.*
+
 ## Eventi principali
 
 I cinque si ritrovarono a New Avalon quasi per caso, o forse per il tipo di destino che spinge certa gente verso i confini delle mappe. Kelvor Rivib, il paladino, e Grombrindal, il guerriero nano, giunsero dal Vecchio Mondo con il peso delle proprie ragioni sulle spalle. Gud Bender, mago nano dal temperamento pragmatico, arrivò per vie sue. Dora l'Esploratrice — mezz'elfa, ranger, accompagnata dal suo inseparabile mulo — e Leman Russ, druido mezzelfo dalle maniere selvatiche, emersero invece dalla periferia del Nuovo Mondo, già avvezzi alla polvere delle strade coloniali.

@@ -33,6 +33,7 @@ Questa regola si attiva quando il DM chiede un prompt per generare l'immagine de
 ## Traduzione visiva del canon
 
 - Non limitarti a nominare elementi interni al mondo: trasformali in dettagli visivi concreti.
+- I nomi propri dei personaggi non devono comparire nel `Prompt immagine`: descrivi il soggetto in modo autosufficiente tramite aspetto, ruolo, postura, equipaggiamento e contesto visivo.
 - Esempio: "scout della carovana" diventa abiti da viaggio ben tenuti, equipaggiamento leggero, postura da osservatore, polvere di strada e orizzonte di Frontiera.
 - Esempio: "strage dei branchi" diventa tracce visive di sfruttamento delle pianure, carcasse o pelli, erba alta svuotata, officine o convogli se pertinenti alla scena.
 - Quando inserisci accenni di background, convertili sempre in atmosfera, mise-en-scene, oggetti, cicatrici, postura o dettagli dell'ambiente.

@@ -6,6 +6,14 @@
 
 Usciti dall'ufficio dello sceriffo con la taglia in tasca, il gruppo si orienta rapidamente tra le strade di Valdoren e trova la carovana di Hector Brannagh in allestimento ai margini della città. Il vecchio organizzatore li valuta con occhio pratico e li divide: Dora e Leman Russ vanno alla Locanda del Fiume Rosso per farsi giudicare da Theodor Strand, lo scout già arruolato, mentre Kelvor, Grombrindal e Gud Bender restano al campo a parlare con Andrew Carver, il capo delle guardie. Entrambi i colloqui vanno bene — Theodor in particolare rimane colpito dalle mappe di Dora e la promuove senza esitare. Nel pomeriggio c'è tempo per qualche acquisto e una ricognizione del circondario; il giorno dopo Brannagh conferma l'ingaggio e la partenza per l'indomani mattina. Il gruppo trascorre l'ultima notte sotto un tetto vero. La carovana aspetta.
 
+## Immagini salienti
+
+### La carovana di Brannagh
+
+![Carovana in allestimento ai margini di Valdoren](/immagini/eventi/sessione-004/primo-incontro-con-la-carovana.png)
+
+*La carovana di Hector Brannagh in allestimento nella pianura appena oltre le ultime case di Valdoren.*
+
 ## Eventi principali
 
 Valdoren era già in piena attività quando il gruppo lasciò l'ufficio di Silas Drummond. Il viale principale scorreva di carri, commercianti e animali da soma — il respiro ordinario di una città che vive di transito. Si fermarono al primo saloon presentabile: un locale anonimo, frequentato da gente di passaggio, con un barista corpulento che lucidava bicchieri con l'aria di chi sa tutto quello che vale la pena sapere. Bastarono poche domande: il nome Brannagh e le indicazioni per raggiungerlo — prima trasversale verso ovest, fuori dall'abitato, non si poteva sbagliare.

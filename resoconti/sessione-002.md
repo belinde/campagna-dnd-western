@@ -6,6 +6,14 @@
 
 La notte sulla *Ben Campbell* si spezza con un grido femminile proveniente dalle cabine di lusso. I cinque avventurieri accorrono e trovano Sam Crow — il misterioso passeggero baffuto che il giorno prima si era introdotto nelle loro stanze — intento a derubare una signora ferita. Gud Bender tenta di chiedere spiegazioni e viene aggredito, ma la colluttazione si risolve in favore del gruppo: Sam viene immobilizzato a terra privo di sensi, mentre il suo compare — un fratello dalla stessa aria losca — è costretto a gettarsi nel fiume gravemente ferito, cercando rifugio sulla barchetta senza luci che da ore pedinava il battello. Il primo ufficiale Thomas Caldwell chiude i conti con un colpo di rivoltella preciso alla testa, e ordina ai marinai di perquisire la nave. La notte si richiude nel silenzio. Sam Crow è in catene. Uno dei suoi fratelli è morto nel Mississippi. Del terzo, ancora nessuna traccia.
 
+## Immagini salienti
+
+### Il colpo sul Mississippi
+
+![Thomas Caldwell sul ponte della Ben Campbell mentre spara al fratello Crow in fuga nel Mississippi](/immagini/eventi/sessione-002/colpo-sul-mississippi.png)
+
+*Thomas Caldwell abbatte il secondo fratello Crow mentre tenta di raggiungere la barchetta senza luci che segue la* Ben Campbell *nel buio del Grande Fiume.*
+
 ## Eventi principali
 
 Il grido squarciò la notte prima che qualcuno potesse decidere di ignorarlo. Kelvor Rivib, Grombrindal, Gud Bender, Dora l'Esploratrice e Leman Russ — chi già sveglio, chi strappato al sonno — convergevano tutti verso lo stesso corridoio delle cabine di lusso, dove il suono aveva trovato la sua origine.

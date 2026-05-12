@@ -8,6 +8,7 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 - `ambientazione/ambientazione-giocatori.md`
 - i materiali inseriti esplicitamente nella allowlist di `manifest.json`
 - le schede dei `png/` gia` noti ai giocatori, ma in **profilo pubblico ridotto**
+- i luoghi di `ambientazione/luoghi/` che sono gia` stati visitati o comunque rivelati ai giocatori e sono entrati in allowlist
 - solo le immagini realmente referenziate dalle pagine pubbliche, incluse le scene in `immagini/eventi/`
 
 ## Cosa non viene mai pubblicato direttamente
@@ -50,9 +51,20 @@ Tutte le altre parti della scheda restano private, anche se non sono marcate com
 Alla finalizzazione di un nuovo resoconto, l'AI deve valutare quali materiali sono diventati ormai noti ai giocatori e aggiornare di conseguenza `allowlist.entries` nel manifest:
 
 - `png/*.md` per i PNG conosciuti al tavolo
+- `ambientazione/luoghi/*.md` per i luoghi visitati o identificati dai giocatori
 - eventuali file di `ambientazione/` o altre pagine player-safe emerse in sessione
 
 L'aggiornamento della allowlist fa parte della finalizzazione del resoconto e precede la rigenerazione del sito pubblico.
+
+## Link automatici nei resoconti
+
+Durante l'export, il sito aggiunge link interni in tre casi:
+
+- i riferimenti `[Sessione NNN]` dentro `## Eventi interessanti`
+- i nomi in `## Personaggi non giocanti incontrati` quando il PNG e` pubblicato
+- i nomi in `## Luoghi visitati` quando il luogo e` pubblicato
+
+In questo modo i resoconti pubblici diventano una piccola rete navigabile senza dover modificare a mano i file canonici del repository privato.
 
 ## Build locale
 

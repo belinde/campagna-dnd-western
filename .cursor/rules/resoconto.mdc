@@ -137,6 +137,8 @@ Se dal resoconto emergono informazioni rilevanti su luoghi o elementi del mondo 
 
 Se esiste o viene approvata una veduta canonica di un luogo coinvolto nella sessione, proporre anche l'aggiornamento della sezione `## Immagine canonica` del file pertinente in `ambientazione/luoghi/`.
 
+Se il progetto usa una pubblicazione pubblica player-safe con allowlist esplicita, tenere nota anche dei **luoghi visitati o identificati dai giocatori**: in Fase 7 i relativi file in `ambientazione/luoghi/` vanno aggiunti alla allowlist del sito, cosi` i resoconti pubblici possono linkarli direttamente dalla sezione `## Luoghi visitati`.
+
 ### 5d — Smistamento file di sessione
 
 Per ogni file in `sessione/`:
@@ -180,13 +182,13 @@ Prima di agire:
 1. Verificare quali file canonici appena salvati ricadono nel perimetro pubblico definito dal manifest.
 2. Verificare che le **immagini salienti** richiamate dal nuovo resoconto esistano davvero nel path canonico corretto, in particolare sotto `immagini/eventi/sessione-NNN/`.
 3. Ricordare che la pubblicazione pubblica usa solo l'output filtrato: **non** esporre mai direttamente i file grezzi del repository privato.
-4. Aggiornare la **allowlist** dei materiali conosciuti dai giocatori aggiungendo cio` che la sessione ha reso pubblico: soprattutto `png/*.md` gia` noti al tavolo, ma anche eventuali materiali di `ambientazione/` o altre pagine player-safe approvate dal DM.
+4. Aggiornare la **allowlist** dei materiali conosciuti dai giocatori aggiungendo cio` che la sessione ha reso pubblico: `png/*.md` gia` noti al tavolo, `ambientazione/luoghi/*.md` per i luoghi visitati o chiaramente identificati, ed eventuali altri materiali player-safe approvati dal DM.
 
 Poi:
 
 - eseguire o aggiornare il flusso di export player-safe previsto dal progetto
 - rigenerare i contenuti pubblici dopo gli aggiornamenti canonici approvati
-- presentare al DM un riepilogo sintetico di cio` che andra` online: nuove pagine, resoconti aggiornati, immagini di scena incluse, voci aggiunte alla allowlist dei materiali conosciuti
+- presentare al DM un riepilogo sintetico di cio` che andra` online: nuove pagine, resoconti aggiornati, immagini di scena incluse, voci aggiunte alla allowlist dei materiali conosciuti e nuovi link interni da `## Personaggi non giocanti incontrati` e `## Luoghi visitati`
 
 Se il passo successivo richiede operazioni git o di rete (commit, push, deploy remoto, apertura di PR), chiedere sempre conferma esplicita prima di procedere.
 

@@ -16,6 +16,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MANIFEST = REPO_ROOT / "pubblicazione" / "manifest.json"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((/immagini/[^)\s]+)\)")
+SESSION_LINK_RE = re.compile(r"\[(Sessione (\d{3}))\](?!\()")
+ENTITY_BULLET_RE = re.compile(r"^(\s*-\s+\*\*)([^*]+)(\*\*.*)$")
 
 
 @dataclass(frozen=True)
@@ -27,7 +29,15 @@ class PageEntry:
     label: str
     kind: str
     profile: str | None = None
+    aliases: tuple[str, ...] = ()
     featured: bool = False
+
+
+@dataclass(frozen=True)
+class PreparedPage:
+    entry: PageEntry
+    title: str
+    body: str
 
 
 def parse_args() -> argparse.Namespace:
@@ -99,6 +109,7 @@ def resolve_pages(manifest: dict) -> list[PageEntry]:
                 label=page_config.get("label", "Pagina pubblica"),
                 kind="page",
                 profile=page_config.get("profile"),
+                aliases=tuple(page_config.get("aliases", [])),
                 featured=bool(page_config.get("featured", False)),
             )
         )
@@ -120,6 +131,7 @@ def resolve_pages(manifest: dict) -> list[PageEntry]:
                 label=page_config.get("label", "Materiali conosciuti"),
                 kind="allowlist",
                 profile=page_config.get("profile"),
+                aliases=tuple(page_config.get("aliases", [])),
                 featured=False,
             )
         )
@@ -143,6 +155,7 @@ def resolve_pages(manifest: dict) -> list[PageEntry]:
                     label=collection["name"],
                     kind="collection",
                     profile=collection.get("profile"),
+                    aliases=tuple(collection.get("aliases", [])),
                     featured=False,
                 )
             )
@@ -266,6 +279,48 @@ def transform_body_for_profile(markdown_text: str, profile: str | None) -> str:
     if profile == "public-png":
         return render_public_png_body(markdown_text)
     return markdown_text
+
+
+def rewrite_session_links(markdown_text: str) -> str:
+    def replacer(match: re.Match[str]) -> str:
+        session_label, session_number = match.groups()
+        return f"[{session_label}]({{{{ '/resoconti/sessione-{session_number}/' | relative_url }}}})"
+
+    return SESSION_LINK_RE.sub(replacer, markdown_text)
+
+
+def build_entity_route_lookup(pages: list[PreparedPage]) -> dict[str, str]:
+    route_lookup: dict[str, str] = {}
+    for page in pages:
+        route_lookup[page.title] = page.entry.route
+        for alias in page.entry.aliases:
+            route_lookup[alias] = page.entry.route
+    return route_lookup
+
+
+def rewrite_section_entity_links(markdown_text: str, route_lookup: dict[str, str]) -> str:
+    target_sections = {"Personaggi non giocanti incontrati", "Luoghi visitati"}
+    rewritten_lines: list[str] = []
+    current_section: str | None = None
+
+    for line in markdown_text.splitlines():
+        heading = HEADING_RE.match(line)
+        if heading and len(heading.group(1)) == 2:
+            current_section = sanitize_heading_text(heading.group(2))
+            rewritten_lines.append(line)
+            continue
+
+        bullet_match = ENTITY_BULLET_RE.match(line)
+        if current_section in target_sections and bullet_match:
+            prefix, entity_name, suffix = bullet_match.groups()
+            route = route_lookup.get(entity_name.strip())
+            if route:
+                rewritten_lines.append(f"{prefix}[{entity_name}]({{{{ '{route}' | relative_url }}}}){suffix}")
+                continue
+
+        rewritten_lines.append(line)
+
+    return "\n".join(rewritten_lines).strip() + "\n"
 
 
 def rewrite_image_links(markdown_text: str) -> tuple[str, set[str]]:
@@ -563,13 +618,11 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
             source_path=Path("pubblicazione/manifest.json"),
             show_title=False,
         ),
-        f"# {manifest['site']['title']}",
+        f"# {manifest['site']['tagline']}",
         "",
         '<div class="hero">',
         "",
-        f"**{manifest['site']['tagline']}**",
-        "",
-        "Questo sito contiene solo materiale **player-safe** estratto dal repository privato della campagna. Le sezioni riservate al DM vengono rimosse automaticamente in fase di export.",
+        f"**{manifest['site']['description']}**",
         "",
         "</div>",
     ]
@@ -606,6 +659,21 @@ def copy_asset(relative_asset_path: str, output_dir: Path) -> None:
     shutil.copy2(source_path, destination)
 
 
+def prepare_pages(entries: list[PageEntry], blocked_headings: set[str]) -> list[PreparedPage]:
+    prepared_pages: list[PreparedPage] = []
+
+    for entry in entries:
+        raw_text = entry.source_path.read_text(encoding="utf-8")
+        sanitized_text = strip_sensitive_sections(raw_text, blocked_headings)
+        fallback_title = sanitize_heading_text(entry.relative_path.stem.replace("-", " "))
+        title, body = extract_title(sanitized_text, fallback_title)
+        body = transform_body_for_profile(body, entry.profile)
+        body = demote_remaining_h1(body)
+        prepared_pages.append(PreparedPage(entry=entry, title=title, body=body))
+
+    return prepared_pages
+
+
 def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
     if output_dir.exists():
         shutil.rmtree(output_dir)
@@ -613,16 +681,17 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
 
     blocked_headings = set(manifest.get("stripSections", []))
     resolved_entries = resolve_pages(manifest)
+    prepared_pages = prepare_pages(resolved_entries, blocked_headings)
+    entity_route_lookup = build_entity_route_lookup(prepared_pages)
     built_pages: list[PageEntry] = []
     referenced_assets: set[str] = set()
 
-    for entry in resolved_entries:
-        raw_text = entry.source_path.read_text(encoding="utf-8")
-        sanitized_text = strip_sensitive_sections(raw_text, blocked_headings)
-        fallback_title = sanitize_heading_text(entry.relative_path.stem.replace("-", " "))
-        title, body = extract_title(sanitized_text, fallback_title)
-        body = transform_body_for_profile(body, entry.profile)
-        body = demote_remaining_h1(body)
+    for prepared in prepared_pages:
+        entry = prepared.entry
+        title = prepared.title
+        body = prepared.body
+        body = rewrite_session_links(body)
+        body = rewrite_section_entity_links(body, entity_route_lookup)
         body, assets = rewrite_image_links(body)
         referenced_assets.update(assets)
 
@@ -648,6 +717,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
                 label=entry.label,
                 kind=entry.kind,
                 profile=entry.profile,
+                aliases=entry.aliases,
                 featured=entry.featured,
             )
         )

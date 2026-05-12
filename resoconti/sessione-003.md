@@ -6,6 +6,14 @@
 
 Gli ultimi giorni di navigazione sulla *Ben Campbell* portano con sé due incontri destinati a pesare sul futuro del gruppo. A colazione, il misterioso Anthony Gillian — broker di informazioni che lavora a credito — offre liberamente notizie su una banda di orchi che imperversa a nord di Fort Lame, presso il Passo del Serpente, prendendo di mira i minatori locali per ragioni che sembrano religiose prima ancora che economiche. A cena, il capitano McCullaghan li invita al suo tavolo e segnala un'altra opportunità: una carovana che si appresta a partire dai margini ovest di Valdoren cerca braccia armate per il viaggio verso la Frontiera. All'arrivo in città, McCullaghan accompagna il gruppo dallo sceriffo per consegnare Sam Crow e incassare i $50 di taglia — il primo guadagno concreto dell'avventura. Davanti a loro si aprono almeno due strade. Nessuna delle due sembra tranquilla.
 
+## Immagini salienti
+
+### Consegna della taglia
+
+![Consegna di Sam Crow allo sceriffo di Valdoren](/immagini/eventi/sessione-003/consegna-taglia-a-valdoren.png)
+
+*Lo sceriffo di Valdoren conta i cinquanta dollari della taglia mentre Sam Crow viene consegnato in catene.*
+
 ## Eventi principali
 
 Il mattino dopo la notte dei fratelli Crow, quando le acque del Mississippi erano tornate al loro silenzio opaco e Sam era ancora in catene sotto coperta, un uomo si avvicinò al gruppo durante la colazione con la disinvoltura di chi è abituato ad avvicinarsi agli estranei senza farsi scacciare.
