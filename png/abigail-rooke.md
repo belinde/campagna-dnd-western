@@ -5,7 +5,9 @@
 
 ## Immagine canonica
 
-_Nessuna immagine canonica ancora associata._
+![Ritratto canonico di Abigail Rooke](/immagini/png/abigail-rooke.png)
+
+*Ritratto canonico di Abigail Rooke.*
 
 ## Aspetto
 

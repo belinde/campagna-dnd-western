@@ -4,10 +4,11 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 
 ## Cosa viene pubblicato in v1
 
+- tutte le schede in `personaggi/` (collection nel manifest), **intere** dopo la sanificazione: restano aspetto, background, equipaggiamento, eventi in sessione, ecc.; spariscono solo le sezioni private elencate sotto `stripSections` (in pratica soprattutto `## Note DM` sulle schede PG)
 - tutti i file in `resoconti/`
 - `ambientazione/ambientazione-giocatori.md`
 - i materiali inseriti esplicitamente nella allowlist di `manifest.json`
-- le schede dei `png/` gia` noti ai giocatori, ma in **profilo pubblico ridotto**
+- le schede dei `png/` gia` noti ai giocatori, ma in **profilo pubblico ridotto** (non equivalente alle schede PG: vedi sotto)
 - i luoghi di `ambientazione/luoghi/` che sono gia` stati visitati o comunque rivelati ai giocatori e sono entrati in allowlist
 - solo le immagini realmente referenziate dalle pagine pubbliche, incluse le scene in `immagini/eventi/`
 
@@ -33,7 +34,11 @@ Il file `manifest.json` definisce:
 - le sezioni da rimuovere in fase di export
 - la cartella di output generata
 
-La v1 pubblica l'intera collection `resoconti/`, una singola pagina fissa (`ambientazione/ambientazione-giocatori.md`) e una allowlist di materiali gia` emersi al tavolo. In particolare, `allowlist.entries` contiene i file da aggiungere al sito quando diventano di conoscenza dei giocatori.
+La v1 pubblica la collection `personaggi/`, l'intera collection `resoconti/`, una singola pagina fissa (`ambientazione/ambientazione-giocatori.md`) e una allowlist di materiali gia` emersi al tavolo. I PG non passano dall'allowlist: ogni `personaggi/*.md` e` incluso automaticamente dalla collection. In particolare, `allowlist.entries` contiene i file da aggiungere al sito quando diventano di conoscenza dei giocatori (PNG, luoghi, altro).
+
+### Personaggi giocanti (`personaggi/`)
+
+Le schede PG non usano `profile: "public-png"`. Dopo la rimozione delle sezioni in `stripSections`, il corpo pubblicato coincide con la scheda canonica (stat in testa, immagine, sezioni descrittive, `## Eventi interessanti`, ecc.).
 
 ### Profilo pubblico dei PNG
 
@@ -48,7 +53,7 @@ Tutte le altre parti della scheda restano private, anche se non sono marcate com
 
 ### Aggiornamento della allowlist in fase resoconto
 
-Alla finalizzazione di un nuovo resoconto, l'AI deve valutare quali materiali sono diventati ormai noti ai giocatori e aggiornare di conseguenza `allowlist.entries` nel manifest:
+Alla finalizzazione di un nuovo resoconto, l'AI deve valutare quali materiali sono diventati ormai noti ai giocatori e aggiornare di conseguenza `allowlist.entries` nel manifest (i PG in `personaggi/` non vanno elencati qui: restano coperti dalla collection dedicata):
 
 - `png/*.md` per i PNG conosciuti al tavolo
 - `ambientazione/luoghi/*.md` per i luoghi visitati o identificati dai giocatori

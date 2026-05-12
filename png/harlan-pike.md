@@ -5,7 +5,9 @@
 
 ## Immagine canonica
 
-_Nessuna immagine canonica ancora associata._
+![Ritratto canonico di Harlan Pike](/immagini/png/harlan-pike.png)
+
+*Ritratto canonico di Harlan Pike.*
 
 ## Aspetto
 
@@ -47,4 +49,4 @@ Il suo punto debole è la professionalità stessa: lascia tracce di ordine. Boss
 
 ## Eventi interessanti
 
-- _Nessuno finora: Harlan Pike non è ancora apparso nei resoconti._
+- **[Sessione 007]** Appare per la prima volta alla Fattoria Barlow come uomo armato di lungo fucile che tiene la situazione sotto controllo accanto a Elias; i PG lo vedono, ma non ne conoscono ancora il nome.

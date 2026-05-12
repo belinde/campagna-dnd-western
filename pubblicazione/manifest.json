@@ -31,6 +31,11 @@
         "profile": "public-png"
       },
       {
+        "path": "png/elias-barlow.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
         "path": "png/hector-brannagh.md",
         "label": "PNG conosciuti",
         "profile": "public-png"
@@ -42,6 +47,11 @@
       },
       {
         "path": "png/maren-halverson.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/mae-barlow.md",
         "label": "PNG conosciuti",
         "profile": "public-png"
       },
@@ -81,6 +91,10 @@
         ]
       },
       {
+        "path": "ambientazione/luoghi/fattoria-barlow.md",
+        "label": "Luoghi visitati"
+      },
+      {
         "path": "ambientazione/luoghi/fattoria-mercer.md",
         "label": "Luoghi visitati",
         "aliases": [
@@ -90,6 +104,12 @@
     ]
   },
   "collections": [
+    {
+      "name": "Personaggi giocanti",
+      "source": "personaggi",
+      "include": "*.md",
+      "sort": "asc"
+    },
     {
       "name": "Resoconti di sessione",
       "source": "resoconti",

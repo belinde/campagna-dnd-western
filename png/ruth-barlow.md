@@ -5,7 +5,9 @@
 
 ## Immagine canonica
 
-_Nessuna immagine canonica ancora associata._
+![Ritratto canonico di Ruth Barlow](/immagini/png/ruth-barlow.png)
+
+*Ritratto canonico di Ruth Barlow.*
 
 ## Aspetto
 
@@ -51,4 +53,4 @@ Se pressata male, neghera'. Se trattata con onesta', puo' diventare la crepa dec
 
 ## Eventi interessanti
 
-- _Nessuno finora: Ruth Barlow non e' ancora apparsa nei resoconti._
+- **[Sessione 007]** E' presente alla Fattoria Barlow ma non si mostra apertamente: i PG ne colgono solo la presenza dietro una tendina che si richiude in fretta mentre la carovana tratta per la sosta.

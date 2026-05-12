@@ -41,3 +41,4 @@ Verificare le sue **vere intenzioni** sul lungo periodo (affetto vs concessione 
 ## Eventi interessanti
 
 - **[Sessione 006]** Si offre di **adottare Dorothy**, affermando che anche **Maren** approverebbe; resta in lizza come possibile tutore insieme alla mediazione di Silas Drummond.
+- **[Sessione 007]** Continua il viaggio con Dorothy Mercer ormai affidata a lui e a Maren; durante la serata al campo la bambina comincia ad avvicinarsi con timidezza alla sua nuova famiglia adottiva.

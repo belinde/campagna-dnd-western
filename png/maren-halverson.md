@@ -37,3 +37,4 @@ La conoscono solo come figura sul carro durante la marcia; l’adozione proposta
 ## Eventi interessanti
 
 - **[Sessione 006]** Citata da Olaf come sarebbe **d’accordo** sull’adozione di Dorothy Mercer; non interviene ancora personalmente nella discussione tra carovaniere.
+- **[Sessione 007]** Prosegue il viaggio con Dorothy Mercer ormai affidata alla famiglia Halverson; pur restando sullo sfondo, e' ormai parte della nuova casa provvisoria della bambina.

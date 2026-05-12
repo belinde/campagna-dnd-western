@@ -41,3 +41,4 @@ Conosce le rotte e i rischi delle carovane meglio di Brannagh — è lui a gesti
 - **[Sessione 004]** Valuta Kelvor, Grombrindal e Gud Bender al campo carovana su incarico di Brannagh. Il colloquio è positivo: il gruppo viene accettato.
 - **[Sessione 005]** In coda alla carovana; procura tre cavalli al gruppo e definisce le distanze di pattugliamento. Supervisiona il caso del ladro halfling. A fine scontro alla fattoria, mette fine con un colpo di pistola al bandito moribondo, per pietà.
 - **[Sessione 006]** Coordina chi parte per Valdoren e chi perlustra; intima di non calpestare le tracce durante gli scavi delle tombe e delle trincee; confessa la sua inquietudine sul piano dei briganti (troppo pochi / troppi).
+- **[Sessione 007]** Condivide con Theodor l'idea che la carovana abbia ormai superato la fascia più pericolosa attorno a Valdoren e mantiene la disciplina del convoglio durante la sosta tesa alla Fattoria Barlow.

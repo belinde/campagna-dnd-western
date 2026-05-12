@@ -19,7 +19,13 @@ Veste come un veterano della Frontiera tecnomagica: ampio cappello di cuoio cons
 
 ## Personalità
 
-_Da definire._
+- Tenta prima la calma delle parole: sul battello si è fatto avanti verso Sam Crow con flemma pragmatica e ha pagato con i pugni quando l'altro ha risposto con violenza.
+- Quando serve chiudere una corsa senza funerali, preferisce incantesimi misurati: *Sonno* sul ladro halfling invece di lasciare che l'inseguimento finisse male.
+- Non disprezza del tutto il ladro piccolo: dopo aver recuperato il fagotto ha lasciato due dollari in tasca al ragazzo, come ammissione silenziosa che la fame ha il suo peso morale.
+- Si assume in prima persona la parte incresciosa del mestiere: ha riconsegnato il malloppo alla donna sul carro, tra gratitudine e polvere.
+- Guarda la realtà anche sotto l'angolo arcano: con *Individuazione del magico* non ha trovato nulla oltre alle impronte già note sulle armi da fuoco — niente teatri, solo fatti.
+- Il passaggio con Silas Drummond gli ha lasciato il sapore amaro di accordi in cui giustizia e carta bollita non coincidono; lo accetta come lezione, non come scusa per svendersi.
+- Nei turni bui la **scurovisione** lo rende utile alle guardie, accanto agli altri che vedono nel buio come lui.
 
 ## Background
 
@@ -31,7 +37,9 @@ _Da definire._
 
 ## Legami con gli altri PG
 
-_Da definire._
+- **Kelvor Rivib** — Il paladino ha perso il ladro tra polvere e rumore della retrovia; Gud ha chiuso la scena con magia e ha riportato il rubato dove doveva stare. Rispetta Kelvor come presenza che tiene la linea, anche quando la linea arriva tardi.
+- **Dora l'Esploratrice** — Occhi che leggono la strada per primi in entrambi; nelle ore buie spesso condividono il turno di veglia. Le mappe di lei sono un'altra forma di prudenza che riconosce.
+- **Leman Russ** e **Grombrindal** — Li ha avuti al fianco nelle mischie a sangue caldo: sa che quando entrano in azione servono mani fredde dietro — o incantesimi che evitino il peggio.
 
 ## Note DM
 
@@ -45,3 +53,4 @@ _Da definire._
 - **[Sessione 004]** Supera la valutazione di Andrew Carver al campo carovana e viene ingaggiato come guardia nella carovana di Brannagh.
 - **[Sessione 005]** Ferma l'halfling ladro con *Sonno*; recupera il fagotto, lascia due dollari in tasca al ragazzo e restituisce personalmente il malloppo alla donna sul carro.
 - **[Sessione 006]** Lancia *Individuazione del magico* sulla scena: nulla oltre alle impronte note sulle armi da fuoco; recupera i cavalli dei briganti seguendo il coordinamento di Andrew; nota che giustizia e legalità non coincidevano nella mediazione con Drummond. La **scurovisione** lo rende adatto alle **guardie notturne**.
+- **[Sessione 007]** Attraversa con la carovana il primo tratto oltre la Fattoria Mercer e assiste al campo dei bisonti massacrati e alla sosta alla Fattoria Barlow, dove la violenza economica della Frontiera si mostra ormai senza maschere.

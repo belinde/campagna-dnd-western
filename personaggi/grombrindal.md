@@ -19,7 +19,10 @@ Indossa una pesante armatura di metallo a scaglie e maglia, rinforzata su spalle
 
 ## Personalità
 
-_Da definire._
+- In battaglia è massa e ferro: cavallo, spada a due mani, impeto che non sempre rispetta le redini — il destriero spaventato lo ha messo al centro del caos quanto i briganti.
+- La rabbia non è solo calore da mischia: durante il dibattito sul podere e su Dorothy ha contestato con foga chi vorrebbe profittare di un'orfana, ancora lordo di sangue rappreso — la dignità dei deboli gli sta più addosso dell'oro di un contratto.
+- Nei turni bui la **scurovisione** lo rende torre vivente attorno al cerchio del campo.
+- Alla Fattoria Barlow, al pozzo, ha condiviso il lavoro d'acqua con una ragazzina già scossa; tiene d'occhio le reazioni umane oltre alla lama.
 
 ## Background
 
@@ -31,7 +34,9 @@ _Da definire._
 
 ## Legami con gli altri PG
 
-_Da definire._
+- **Leman Russ** — Stesso fuoco alla fattoria isolata; dopo Barlow ha visto Mae tornare spaventata da un discorso con Leman: un contrasto taciuto finché il gruppo non deciderà se limare gli estremismi del druido o seguirli.
+- **Kelvor Rivib** e **Dora l'Esploratrice** — Strumenti di equilibrio quando lui perde il controllo della bestia o della rabbia: Kelvor mette ordine, Dora tiene salda la pista.
+- **Gud Bender** — Compagno nano e tecnomago: meno roboante in mischia, più adatto a chiudere spirali mortali senza aggiungere ferite superflue.
 
 ## Note DM
 
@@ -45,3 +50,4 @@ _Da definire._
 - **[Sessione 004]** Supera la valutazione di Andrew Carver al campo carovana e viene ingaggiato come guardia nella carovana di Brannagh.
 - **[Sessione 005]** Nello scontro alla fattoria combatte a cavallo; molla le redini nel corso della mischia e il destriero si spaventa, complicando la situazione.
 - **[Sessione 006]** Durante il dibattito sulla proprietà di Dorothy è **furioso**, ancora lordo di **sangue rappreso** dopo la mischia; contesta chi vorrebbe profittare della bambina. La **scurovisione** lo rende adatto ai **turni di guardia** dopo il tramonto.
+- **[Sessione 007]** Aiuta al pozzo della Fattoria Barlow durante la sosta della carovana e si ritrova vicino a Mae quando la ragazza, spaventata dalla proposta di Leman, torna in fretta a riprendere il lavoro.

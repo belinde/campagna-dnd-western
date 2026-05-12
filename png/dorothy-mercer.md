@@ -53,3 +53,4 @@ Il movente dell'attacco (semplice razzia vs agguato alla carovana) resta volutam
 
 - **[Sessione 005]** Trovata nella botola della fattoria dopo la sparatoria; terrorizzata, in lacrime; la sessione si chiude su di lei.
 - **[Sessione 006]** Si affida soprattutto a **Dora** mentre Kelvor cura le sue ferite e la carovana decide il suo destino; assiste alla sepoltura dei genitori accanto alla tomba di Tobias.
+- **[Sessione 007]** Prosegue il viaggio ormai affidata agli Halverson e, durante la prima serata di relativa quiete, si avvicina con timidezza alla sua nuova famiglia adottiva.

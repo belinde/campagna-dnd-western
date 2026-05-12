@@ -5,7 +5,9 @@
 
 ## Immagine canonica
 
-_Nessuna immagine canonica ancora associata._
+![Ritratto canonico di Elias Barlow](/immagini/png/elias-barlow.png)
+
+*Ritratto canonico di Elias Barlow.*
 
 ## Aspetto
 
@@ -52,4 +54,4 @@ Non conosce tutta la filiera, ma abbastanza da far male a qualcuno se decidesse 
 
 ## Eventi interessanti
 
-- _Nessuno finora: Elias Barlow non e' ancora apparso nei resoconti._
+- **[Sessione 007]** Accoglie la carovana alla Fattoria Barlow e vende a Brannagh il diritto di campeggiare e un barile d'acqua fresca, lasciando emergere quanto la sopravvivenza della sua famiglia dipenda ormai dal passaggio dei cacciatori di bisonti.

@@ -5,7 +5,9 @@
 
 ## Immagine canonica
 
-_Nessuna immagine canonica ancora associata._
+![Ritratto canonico di Mae Barlow](/immagini/png/mae-barlow.png)
+
+*Ritratto canonico di Mae Barlow.*
 
 ## Aspetto
 
@@ -52,4 +54,4 @@ Non sa scrivere bene, ma sa contare e ha una memoria eccellente per segni, march
 
 ## Eventi interessanti
 
-- _Nessuno finora: Mae Barlow non e' ancora apparsa nei resoconti._
+- **[Sessione 007]** Accompagna i membri della carovana al pozzo della fattoria, ammette con lucidita' che i cacciatori di bisonti sono clienti necessari alla sopravvivenza dei Barlow e si spaventa quando Leman le propone di incendiarne i carri durante la notte.

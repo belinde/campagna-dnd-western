@@ -18,7 +18,7 @@ In anni normali questo basterebbe appena a tenere vivi tre esseri umani, un orto
 
 La casa e' bassa, stortignaccola, rattoppata con tavole di essenze diverse che raccontano riparazioni fatte con quello che capitava. Il cortile e' battuto da passi pesanti e da ruote che non appartengono solo alla famiglia: vicino al **pozzo coperto**, assi e pali sorreggono una piccola tettoia sotto cui si allineano secchi, botti mezze piene e una tinozza larga abbastanza da lavare pelli, attrezzi o braccia fino al gomito.
 
-Il vento porta due odori che non dovrebbero stare insieme: **acqua fredda di profondita'** e **grasso rancido**. Sotto il portico laterale stanno sacchi di sale grosso, casse di ferramenta povera, cordame, e un tavolo da lavoro su cui ogni tanto compaiono monete troppo buone per una famiglia di quel rango. Le mosche sono piu' numerose di quanto dovrebbero, e i Barlow hanno preso l'abitudine di guardare l'orizzonte prima ancora degli ospiti.
+Il vento porta due odori che non dovrebbero stare insieme: **acqua fredda di profondita'** e **grasso rancido**. Sotto il portico laterale stanno sacchi di sale grosso, casse di ferramenta povera, cordame, e un tavolo da lavoro su cui ogni tanto compaiono monete troppo buone per una famiglia di quel rango. Le mosche sono piu' numerose di quanto dovrebbero, e i Barlow hanno preso l'abitudine di guardare l'orizzonte prima ancora degli ospiti. Quando una carovana abbastanza grossa si presenta per chiedere acqua, il luogo si irrigidisce: il lavoro si ferma, le pelli restano appese, e da qualche punto del cortile o della casa qualcuno controlla sempre con un fucile a portata di mano.
 
 ## Abitanti e demografia
 
@@ -33,7 +33,7 @@ Non sono miseri nello stesso modo dei Mercer. I Mercer erano ancora dentro la sp
 ## Punti di interesse
 
 - **Il pozzo profondo** - La vera ricchezza del podere. Acqua fredda, pulita, affidabile. In estate vale piu' del raccolto.
-- **La tettoia dei secchi** - Punto di scambio con viandanti, carovane e, piu' spesso del dovuto, uomini che non vogliono lasciare troppe tracce.
+- **La tettoia dei secchi** - Punto di scambio con viandanti, carovane e, piu' spesso del dovuto, uomini che non vogliono lasciare troppe tracce. Una sosta completa per una grossa carovana puo' valere **10 dollari** per il diritto di campeggiare sul terreno e un **barile da circa 100 litri di acqua fresca**.
 - **Il magazzino del sale** - Sacchi, barili piccoli, strumenti da macellazione grossolana e segni di compravendite piu' frequenti di quanto una cascina dovrebbe sostenere.
 - **La piazzola a nord del recinto** - Tratto di terreno secco dove cavalli estranei hanno sostato molte volte. Un buon osservatore puo' distinguere chiodature diverse e capire che non si tratta sempre degli stessi uomini.
 - **L'orto magro e il recinto della mula** - La parte ancora onesta della fattoria: quella che ricorda che, senza il commercio sporco, i Barlow non reggerebbero comunque un altro anno facile.
@@ -45,6 +45,8 @@ I Barlow non vengono da lontano. Fino a pochi anni fa lavoravano terra altrui pi
 Con pochi dollari e meno alternative hanno preso questo pezzo di terra povera proprio per il pozzo. All'inizio la fattoria viveva di passaggio: acqua ai carrettieri, due uova, cipolle, qualche forma di cacio duro, un sacchetto di sale. Poi la Frontiera si e' spostata ancora, i branchi si sono fatti piu' nervosi, i campi di scuoiatura hanno cominciato a comparire piu' vicini, e il denaro dei cacciatori ha iniziato a sembrare l'unico denaro che arrivasse davvero in contanti.
 
 Il patto sporco non e' nato tutto insieme. Prima un secchio. Poi una botte. Poi un riparo per la notte. Poi un anticipo in moneta buona per tenere da parte acqua e sale quando una squadra sarebbe tornata. Adesso la Fattoria Barlow e' il tipo di luogo che i cacciatori chiamano "utile" e che le famiglie perbene fingerebbero di non aver mai visto.
+
+La sosta della carovana di **Hector Brannagh** ha reso tutto questo visibile anche dall'esterno: terreno concesso per la notte, acqua venduta a prezzo pieno, pelli in vista e uomini armati abbastanza vicini da far capire che il podere non e' piu' solo un luogo di poveri contadini, ma un nodo logistico della strage dei branchi.
 
 ## Ganci narrativi
 

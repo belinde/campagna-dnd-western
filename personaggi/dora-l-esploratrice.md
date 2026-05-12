@@ -19,7 +19,12 @@ Veste come chi passa più tempo in viaggio che sotto un tetto: lungo cappotto di
 
 ## Personalità
 
-_Da definire._
+- Misura prima il terreno e poi la gente: occhi addestrati a distanze, ombre e anomalie che altri non notano finché non è tardi.
+- Quando qualcosa non torna segnala senza ostentare, preferendo passare la palla a chi comanda la pattuglia — come quando ha fatto cenno a Theodor Strand alla fattoria isolata.
+- Nei turni bui la sua eredità elfica si traduce in vigilanza concreta: resta utile dove la luce non arriva.
+- Con chi ha paura abbassa la voce e stringe i tempi: sa stare accanto senza riempire il silenzio di chiacchiere inutili.
+- La commissione di cartografia che l'aspetta a fine strada le pesa come obbligo morale: ogni linea sulla carta deve reggere vite vere dietro di sé.
+- Non ignora i nodi umani della strada: quando una fattoria mostra troppa vita per le sue dimensioni, resta vigile anche a parole troppo basse tra compagni e sconosciuti.
 
 ## Background
 
@@ -31,7 +36,10 @@ _Da definire._
 
 ## Legami con gli altri PG
 
-_Da definire._
+- **Leman Russ** — Hanno condiviso la veglia sul Grande Fiume e una ricognizione ai margini di Valdoren; lo riconosce come druido capace di prendere sul serio i presagi della natura. Dopo la sosta alla Fattoria Barlow ha colto da lontano un suo discorso con Mae così pericoloso da farle domandare fin dove sia disposto a spingersi quando crede di proteggere la selvaggina.
+- **Kelvor Rivib** — Accanto a lui ha scavato e sudato per dare sepoltura a Henry e Martha Mercer; rispetta come rende ordine al lutto senza abbandonare la compassione per i vivi.
+- **Gud Bender** — Le sue parole non bastano sempre a tenere lontano i pugni, ma la magia che chiude una crisi senza spezzare ossa le fa fidare di lui quando serve spegnere un incendio umano prima che divampi.
+- **Grombrindal** — Lo ha visto spezzare la mischia con ferro e furia, e anche perdere le redini del destriero nel caos; lo considera una forza d'urto da incanalare più che da frenare a voce.
 
 ## Note DM
 
@@ -45,3 +53,4 @@ _Da definire._
 - **[Sessione 004]** Supera la valutazione di Theodor Strand alla Locanda del Fiume Rosso: le sue mappe impressionano lo scout, che la promuove senza esitare. Ingaggiata nella carovana di Brannagh come esploratrice, con una commissione di cartografia all'arrivo a destinazione.
 - **[Sessione 005]** Dopo la sosta di mezzogiorno, è la prima ad avvicinarsi alla fattoria sospetta e nota il cadavere; fa cenno a Theodor Strand di intervenire.
 - **[Sessione 006]** Dorothy si tiene vicino a lei quasi sempre; aiuta Kelvor a seppellire Henry e Martha; la sua **scurovisione** è utile ai turni di guardia dopo il tramonto.
+- **[Sessione 007]** Nota per prima l'anomalia della Fattoria Barlow, origlia da lontano il colloquio teso tra Leman e Mae, e assiste alla prima manifestazione concreta della strage dei branchi lungo la Via dei Coloni.
