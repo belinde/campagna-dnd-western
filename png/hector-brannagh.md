@@ -3,11 +3,11 @@
 **Razza/Classe:** Umano / Commoner (ex mercante)
 **Ruolo:** Responsabile della carovana diretta alla Frontiera
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Hector Brannagh](/immagini/png/hector-brannagh.png)
+![Ritratto di Hector Brannagh](/immagini/png/hector-brannagh.png)
 
-*Ritratto canonico di Hector Brannagh.*
+*Ritratto di Hector Brannagh.*
 
 ## Aspetto
 

@@ -5,11 +5,11 @@
 **Livello:** —
 **Giocatore:** Dodo
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Leman Russ](/immagini/personaggi/leman-russ.jpeg)
+![Ritratto di Leman Russ](/immagini/personaggi/leman-russ.jpeg)
 
-*Ritratto canonico di Leman Russ.*
+*Ritratto di Leman Russ.*
 
 ## Aspetto
 

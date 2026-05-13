@@ -3,11 +3,11 @@
 **Razza/Classe:** Elfo / Ranger
 **Ruolo:** Scout della carovana di Brannagh
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Theodor Strand](/immagini/png/theodor-strand.png)
+![Ritratto di Theodor Strand](/immagini/png/theodor-strand.png)
 
-*Ritratto canonico di Theodor Strand.*
+*Ritratto di Theodor Strand.*
 
 ## Aspetto
 

@@ -3,9 +3,9 @@
 **Razza/Classe:** Umano / Ladro
 **Ruolo:** Fuorilegge ricercato, secondo dei tre fratelli Crow
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+_Nessuna immagine ancora associata._
 
 ## Aspetto
 

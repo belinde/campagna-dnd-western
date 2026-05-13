@@ -3,11 +3,11 @@
 **Razza/Classe:** Umana / —
 **Ruolo:** Agente commerciale itinerante della Compagnia delle Cinghie del Grande Fiume
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Abigail Rooke](/immagini/png/abigail-rooke.png)
+![Ritratto di Abigail Rooke](/immagini/png/abigail-rooke.png)
 
-*Ritratto canonico di Abigail Rooke.*
+*Ritratto di Abigail Rooke.*
 
 ## Aspetto
 

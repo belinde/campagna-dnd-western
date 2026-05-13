@@ -24,9 +24,9 @@ Questa regola si attiva durante una sessione di gioco dal vivo. Il DM ha bisogno
 
 ## Salvataggio durante la sessione
 
-Tutti i file creati durante la sessione vanno salvati nella cartella **`sessione/`** con il prefisso di tipo appropriato. L'agente resoconto li integrerà nelle cartelle canoniche a fine sessione.
+Tutti i file creati durante la sessione vanno salvati nella cartella **`sessione/`** con il prefisso di tipo appropriato. L'agente resoconto li integrerà nelle cartelle definitive del repository a fine sessione.
 
-Se durante la sessione esiste gia` un'immagine approvata, il file temporaneo puo` richiamarla direttamente con sintassi Markdown `![](/immagini/...)` e path a partire dalla root del workspace. Il Markdown resta in `sessione/`, ma gli asset canonici vivono fuori da `sessione/`.
+Se durante la sessione esiste gia` un'immagine approvata, il file temporaneo puo` richiamarla direttamente con sintassi Markdown `![](/immagini/...)` e path a partire dalla root del workspace. Il Markdown resta in `sessione/`, ma gli asset in `immagini/` vivono fuori da `sessione/`.
 
 | Tipo di contenuto | Nome file |
 |---|---|
@@ -49,9 +49,9 @@ Se il DM chiede di creare un PNG (o se ne genera uno abbastanza rilevante da mer
 **Razza/Classe:** ...
 **Ruolo:** ...
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+_Nessuna immagine ancora associata._
 
 ## Aspetto
 
@@ -99,9 +99,9 @@ Se il DM chiede di fissare un luogo nato durante la sessione, salvare `sessione/
 **Regione:** ...
 **Tipo:** ...
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+_Nessuna immagine ancora associata._
 
 ## Descrizione generale
 
@@ -112,11 +112,11 @@ _Nessuna immagine canonica ancora associata._
 ## Note DM
 ```
 
-Se esiste gia` una veduta canonica del luogo, sostituire la nota con `![Veduta canonica di Nome Luogo](/immagini/luoghi/nome-luogo.png)` oppure con l'estensione corretta.
+Se esiste gia` una veduta del luogo in `immagini/luoghi/`, sostituire la nota con `![Veduta di Nome Luogo](/immagini/luoghi/nome-luogo.png)` oppure con l'estensione corretta.
 
 ## Note ed eventi di sessione
 
-Per `sessione/nota-argomento.md` e `sessione/incontro-nome.md` e` consentita una sezione opzionale `## Immagini collegate` con immagini gia` esistenti o appena approvate. Quando una scena diventera` canonica nel resoconto, andra` poi spostata sotto `immagini/eventi/sessione-NNN/`.
+Per `sessione/nota-argomento.md` e `sessione/incontro-nome.md` e` consentita una sezione opzionale `## Immagini collegate` con immagini gia` esistenti o appena approvate. Quando una scena sara` consolidata nel resoconto, andra` poi spostata sotto `immagini/eventi/sessione-NNN/`.
 
 ## Coerenza
 

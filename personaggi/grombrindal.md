@@ -5,11 +5,11 @@
 **Livello:** —
 **Giocatore:** Gamba
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Grombrindal](/immagini/personaggi/grombrindal.jpeg)
+![Ritratto di Grombrindal](/immagini/personaggi/grombrindal.jpeg)
 
-*Ritratto canonico di Grombrindal.*
+*Ritratto di Grombrindal.*
 
 ## Aspetto
 

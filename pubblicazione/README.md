@@ -46,14 +46,14 @@ La v1 pubblica la collection `personaggi/`, l'intera collection `resoconti/`, un
 
 ### Personaggi giocanti (`personaggi/`)
 
-Le schede PG non usano `profile: "public-png"`. Dopo la rimozione delle sezioni in `stripSections`, il corpo pubblicato coincide con la scheda canonica (stat in testa, immagine, sezioni descrittive, `## Eventi interessanti`, ecc.).
+Le schede PG non usano `profile: "public-png"`. Dopo la rimozione delle sezioni in `stripSections`, il corpo pubblicato coincide con la scheda nel repository privato (stat in testa, immagine, sezioni descrittive, `## Eventi interessanti`, ecc.).
 
 ### Profilo pubblico dei PNG
 
 Le schede in `png/` non vengono pubblicate integralmente. Se un file `png/*.md` entra nella allowlist con `profile: "public-png"`, il sito mostra solo:
 
 - nome del PNG
-- immagine canonica
+- sezione `## Immagine`
 - descrizione pubblica ricavata da `## Aspetto`
 - sezione `## Eventi interessanti`
 

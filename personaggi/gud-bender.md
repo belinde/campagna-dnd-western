@@ -5,11 +5,11 @@
 **Livello:** —
 **Giocatore:** Cipri
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Gud Bender](/immagini/personaggi/gud-bender.jpeg)
+![Ritratto di Gud Bender](/immagini/personaggi/gud-bender.jpeg)
 
-*Ritratto canonico di Gud Bender.*
+*Ritratto di Gud Bender.*
 
 ## Aspetto
 

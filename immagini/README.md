@@ -1,6 +1,6 @@
-# Gestione immagini canoniche
+# Gestione immagini
 
-Le immagini canoniche della campagna vivono in questa cartella e vengono richiamate direttamente dai file Markdown, cosi` da essere:
+Le immagini della campagna vivono in questa cartella e vengono richiamate direttamente dai file Markdown, cosi` da essere:
 
 - leggibili dagli agenti tramite il path esplicito nel file;
 - visibili in anteprima Markdown;
@@ -12,7 +12,7 @@ Le immagini canoniche della campagna vivono in questa cartella e vengono richiam
 - `immagini/png/<slug>.png|jpg|jpeg|webp`
 - `immagini/luoghi/<slug>.png|jpg|jpeg|webp`
 - `immagini/eventi/sessione-NNN/<slug-evento>.png|jpg|jpeg|webp`
-- `immagini/varie/<slug>.png|jpg|jpeg|webp` per asset non ancora collegati a un file Markdown canonico
+- `immagini/varie/<slug>.png|jpg|jpeg|webp` per asset non ancora collegati a un file Markdown di riferimento
 
 Lo `slug` deve seguire, quando possibile, il nome del file Markdown corrispondente:
 
@@ -25,34 +25,34 @@ Lo `slug` deve seguire, quando possibile, il nome del file Markdown corrisponden
 
 ### Personaggi, PNG e luoghi
 
-Usare sempre una sezione `## Immagine canonica` vicino all'inizio del file, prima della prima sezione descrittiva.
+Usare sempre una sezione `## Immagine` vicino all'inizio del file, prima della prima sezione descrittiva.
 
 Esempio per un personaggio:
 
 ```markdown
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.png)
+![Ritratto di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.png)
 
-*Ritratto canonico di Dora l'Esploratrice.*
+*Ritratto di Dora l'Esploratrice.*
 ```
 
 Esempio per un luogo:
 
 ```markdown
-## Immagine canonica
+## Immagine
 
-![Veduta canonica di Valdoren](/immagini/luoghi/valdoren.png)
+![Veduta di Valdoren](/immagini/luoghi/valdoren.png)
 
-*Veduta canonica di Valdoren.*
+*Veduta di Valdoren.*
 ```
 
 Se un'immagine non esiste ancora, mantenere comunque la sezione con la nota:
 
 ```markdown
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+_Nessuna immagine ancora associata._
 ```
 
 ### Resoconti
@@ -75,6 +75,6 @@ Esempio:
 
 - Ogni file in `personaggi/`, `png/` e `ambientazione/luoghi/` ha una sola immagine primaria.
 - Le scene di sessione vivono nei `resoconti/`, non nelle schede personaggio come immagine primaria.
-- Le didascalie non devono introdurre nuovo canon: descrivono solo elementi gia` presenti nel testo.
+- Le didascalie non devono introdurre nuova lore: descrivono solo elementi gia` presenti nel testo.
 - Evitare mapping impliciti basati solo su nomi vecchi o cartelle miste: il riferimento corretto e` sempre quello scritto nel Markdown.
-- Gli asset ancora privi di scheda o resoconto di riferimento possono stare temporaneamente in `immagini/varie/`, ma vanno spostati nella cartella canonica non appena nasce il file Markdown collegato.
+- Gli asset ancora privi di scheda o resoconto di riferimento possono stare temporaneamente in `immagini/varie/`, ma vanno spostati nella cartella prevista dal progetto non appena nasce il file Markdown collegato.

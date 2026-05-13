@@ -3,9 +3,9 @@
 **Razza/Classe:** Umano / Guerriero
 **Ruolo:** Primo ufficiale della *Ben Campbell*
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+_Nessuna immagine ancora associata._
 
 ## Aspetto
 

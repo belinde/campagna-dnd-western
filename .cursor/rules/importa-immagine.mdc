@@ -1,5 +1,5 @@
 ---
-description: Importa un asset immagine, lo archivia nel path canonico e aggiorna il Markdown corretto
+description: Importa un asset immagine, lo archivia nel percorso previsto dal progetto e aggiorna il Markdown corretto
 globs:
   - "personaggi/*.md"
   - "png/*.md"
@@ -16,10 +16,10 @@ Questa regola si attiva quando il DM ha gia` un file immagine generato e vuole i
 ## Modalita`
 
 - Opera solo in modalita` Agent / con permessi di scrittura.
-- Se la chat e` in modalita` Ask, spiega brevemente che non puoi spostare file o aggiornare il canon e chiedi di passare ad Agent.
+- Se la chat e` in modalita` Ask, spiega brevemente che non puoi spostare file o aggiornare il repository e chiedi di passare ad Agent.
 - Non generare prompt immagine e non generare nuove immagini: qui l'asset esiste gia`.
-- L'asset va spostato nella destinazione canonica, non copiato, salvo richiesta esplicita del DM.
-- Lavora in modo conservativo: se il contesto non basta per scegliere una destinazione canonica univoca, fai una domanda mirata invece di indovinare.
+- L'asset va spostato nella destinazione prevista dal progetto, non copiato, salvo richiesta esplicita del DM.
+- Lavora in modo conservativo: se il contesto non basta per scegliere una destinazione univoca, fai una domanda mirata invece di indovinare.
 
 ## Input attesi
 
@@ -28,7 +28,7 @@ Accetta uno di questi input:
 - un path locale a un file immagine gia` esistente;
 - un file allegato dal DM;
 - il file Markdown aperto come contesto principale;
-- una breve istruzione che chiarisca se si tratta di ritratto canonico, veduta canonica o scena di sessione.
+- una breve istruzione che chiarisca se si tratta di ritratto (PG o PNG), veduta di luogo o scena di sessione.
 
 Se manca il file immagine effettivo, fermati e chiedilo esplicitamente.
 
@@ -36,23 +36,23 @@ Se manca il file immagine effettivo, fermati e chiedilo esplicitamente.
 
 1. Leggi sempre il file Markdown aperto o il file indicato dal DM come destinazione.
 2. Recupera solo il contesto direttamente necessario per capire che cosa rappresenta l'immagine.
-3. Per `personaggi/` e `png/`, privilegia `## Aspetto`, `## Eventi interessanti` e l'eventuale sezione `## Immagine canonica` gia` presente.
-4. Per `ambientazione/luoghi/`, privilegia `## Descrizione generale`, `## Aspetto e atmosfera`, `## Punti di interesse` e l'eventuale `## Immagine canonica`.
+3. Per `personaggi/` e `png/`, privilegia `## Aspetto`, `## Eventi interessanti` e l'eventuale sezione `## Immagine` gia` presente.
+4. Per `ambientazione/luoghi/`, privilegia `## Descrizione generale`, `## Aspetto e atmosfera`, `## Punti di interesse` e l'eventuale `## Immagine`.
 5. Per `resoconti/`, privilegia `## Riassunto`, `## Eventi principali` e l'eventuale sezione `## Immagini salienti`.
-6. Per `sessione/`, usa il file solo come contesto provvisorio: se l'immagine deve diventare canonica come scena di sessione, chiarisci prima a quale `resoconti/sessione-NNN.md` dovra` essere collegata.
+6. Per `sessione/`, usa il file solo come contesto provvisorio: se l'immagine deve diventare scena di sessione nel resoconto, chiarisci prima a quale `resoconti/sessione-NNN.md` dovra` essere collegata.
 
 ## Decisione del tipo immagine
 
 Scegli il tipo in base al file di destinazione o all'istruzione del DM:
 
-- `personaggi/*.md` -> `ritratto canonico`
-- `png/*.md` -> `ritratto canonico`
-- `ambientazione/luoghi/*.md` -> `veduta canonica`
-- `resoconti/*.md` -> `scena di sessione`
+- `personaggi/*.md` -> ritratto (PG)
+- `png/*.md` -> ritratto (PNG)
+- `ambientazione/luoghi/*.md` -> veduta di luogo
+- `resoconti/*.md` -> scena di sessione
 
-Se il DM apre un file in `sessione/`, non fissare da solo il numero di sessione definitivo: chiedi conferma oppure chiedi quale resoconto canonico andra` aggiornato.
+Se il DM apre un file in `sessione/`, non fissare da solo il numero di sessione definitivo: chiedi conferma oppure chiedi quale resoconto andra` aggiornato.
 
-## Percorso canonico dell'asset
+## Percorso previsto per l'asset
 
 Usa questi path:
 
@@ -66,43 +66,43 @@ Regole pratiche:
 - Per PG, PNG e luoghi usa di norma lo slug del file Markdown di destinazione.
 - Per le scene usa uno slug breve e descrittivo basato sull'evento mostrato.
 - Mantieni l'estensione originale del file, salvo richiesta esplicita del DM.
-- Se il file e` gia` nel path canonico corretto, non duplicarlo.
+- Se il file e` gia` nel percorso corretto, non duplicarlo.
 - Se il path di destinazione e` gia` occupato da un asset diverso, fermati e chiedi come procedere prima di sovrascrivere.
-- Usa `immagini/varie/` solo se il DM lo chiede esplicitamente oppure se non esiste ancora un file Markdown canonico a cui collegare l'asset.
+- Usa `immagini/varie/` solo se il DM lo chiede esplicitamente oppure se non esiste ancora un file Markdown collegato a cui agganciare l'asset.
 
 ## Aggiornamento del Markdown
 
-Aggiorna sempre anche il file Markdown canonico collegato all'asset.
+Aggiorna sempre anche il file Markdown collegato all'asset.
 
 ### Personaggi, PNG e luoghi
 
-Assicurati che esista una sola sezione `## Immagine canonica`, subito prima della prima sezione descrittiva del file.
+Assicurati che esista una sola sezione `## Immagine`, subito prima della prima sezione descrittiva del file.
 
 Formato:
 
 ```markdown
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Nome](/immagini/personaggi/nome.png)
+![Ritratto di Nome](/immagini/personaggi/nome.png)
 
-*Ritratto canonico di Nome.*
+*Ritratto di Nome.*
 ```
 
 Per i luoghi:
 
 ```markdown
-## Immagine canonica
+## Immagine
 
-![Veduta canonica di Nome Luogo](/immagini/luoghi/nome-luogo.png)
+![Veduta di Nome Luogo](/immagini/luoghi/nome-luogo.png)
 
-*Veduta canonica di Nome Luogo.*
+*Veduta di Nome Luogo.*
 ```
 
 Regole:
 
-- Se c'e` un placeholder `_Nessuna immagine canonica ancora associata._`, sostituiscilo.
+- Se c'e` un placeholder `_Nessuna immagine ancora associata._`, sostituiscilo.
 - Se esiste gia` un'immagine primaria, aggiornala invece di aggiungerne una seconda.
-- La didascalia non deve introdurre nuovo canon.
+- La didascalia non deve introdurre nuova lore non gia` nel testo.
 
 ### Resoconti
 
@@ -117,7 +117,7 @@ Formato:
 
 ![Descrizione breve della scena](/immagini/eventi/sessione-NNN/slug-evento.png)
 
-*Didascalia breve che descrive solo elementi gia` canonici.*
+*Didascalia breve che descrive solo elementi gia` presenti nel resoconto.*
 ```
 
 Regole:
@@ -131,8 +131,8 @@ Regole:
 
 Quando il DM chiede di importare un'immagine:
 
-1. identifica il file Markdown canonico da aggiornare;
-2. determina il tipo immagine e il path canonico;
+1. identifica il file Markdown da aggiornare;
+2. determina il tipo immagine e il percorso sotto `immagini/`;
 3. sposta o rinomina l'asset nel path giusto, senza lasciarne una copia nella posizione originale;
 4. aggiorna il Markdown con il link `/immagini/...` corretto;
 5. evita duplicati, placeholder residui o sezioni ripetute;
@@ -145,5 +145,5 @@ Fai una domanda mirata invece di procedere se manca uno di questi elementi:
 - il file immagine effettivo;
 - il file Markdown di destinazione;
 - il numero di sessione per una scena;
-- la distinzione fra ritratto canonico e scena di sessione quando entrambe sono plausibili;
-- il consenso a sovrascrivere un asset gia` esistente nel path canonico.
+- la distinzione fra ritratto (personaggio) e scena di sessione quando entrambe sono plausibili;
+- il consenso a sovrascrivere un asset gia` esistente nel percorso previsto.

@@ -3,9 +3,9 @@
 **Razza/Classe:** Umano / —
 **Ruolo:** Sceriffo federale di Valdoren
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+_Nessuna immagine ancora associata._
 
 ## Aspetto
 

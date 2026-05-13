@@ -3,11 +3,11 @@
 **Razza/Classe:** Umana / Commoner (ragazza di frontiera)
 **Ruolo:** Figlia adolescente dei Barlow; porta secchi, osserva i clienti del pozzo e sa piu' di quanto i genitori vorrebbero
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Mae Barlow](/immagini/png/mae-barlow.png)
+![Ritratto di Mae Barlow](/immagini/png/mae-barlow.png)
 
-*Ritratto canonico di Mae Barlow.*
+*Ritratto di Mae Barlow.*
 
 ## Aspetto
 

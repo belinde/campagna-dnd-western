@@ -5,11 +5,11 @@
 **Livello:** —
 **Giocatore:** Lons
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Kelvor Rivib](/immagini/personaggi/kelvor-rivib.jpeg)
+![Ritratto di Kelvor Rivib](/immagini/personaggi/kelvor-rivib.jpeg)
 
-*Ritratto canonico di Kelvor Rivib.*
+*Ritratto di Kelvor Rivib.*
 
 ## Aspetto
 

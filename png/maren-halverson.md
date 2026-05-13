@@ -3,13 +3,15 @@
 **Razza/Classe:** Umana / Commoner (carovaniere)
 **Ruolo:** Passaggera sul carro della famiglia nella carovana di Brannagh; moglie di **Olaf Halverson**
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+![Ritratto di Maren Halverson](/immagini/png/maren-halverson.png)
+
+*Ritratto di Maren Halverson.*
 
 ## Aspetto
 
-Donna **taciturna**, **capelli raccolti**; mani ruvide da funi e bambini; occhi che misurano prima di parlare.
+Donna sulla trentina, **statura alta per una carovaniere** e **fisionomia nordeuropea** — zigomi marcati, mascella stretta, colori chiari attenuati da sole, vento e fuliggine. **Capelli biondo scuro** tirati indietro in **due trecce ordinate** avvolte e infilate sotto un fazzoletto di tela logoro; qualche ciocca sfuggita incornicia la fronte. **Occhi grigi**, **poche parole** e uno sguardo che **misura prima di parlare**. **Mani ruvide** da funi, catrame e bambini; polsi sottili ma avambracci forti da anni di carro. Porta abiti semplici a strati, sempre un grembiule o un pezzo di lana sulle ginocchia quando lavora; non cerca di sembrare cordiale, ma chi la guarda a lungo capisce che osserva tutto.
 
 ## Personalità
 

@@ -1,8 +1,8 @@
 # Fort Lame
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+_Nessuna immagine ancora associata._
 
 ## Descrizione generale
 

@@ -4,9 +4,11 @@
 **Tipo:** Cascina contadina di sussistenza
 **Popolazione:** Famiglia Mercer (3–4 persone; al momento solo Dorothy, sopravvissuta)
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+![Veduta della Fattoria Mercer](/immagini/luoghi/fattoria-mercer.png)
+
+*Veduta della Fattoria Mercer.*
 
 ## Descrizione generale
 

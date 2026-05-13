@@ -3,11 +3,11 @@
 **Razza/Classe:** Umano / Commoner (colono)
 **Ruolo:** Capofamiglia della Fattoria Barlow; vende acqua, sale e riparo alle squadre di tiratori e macellai che operano lungo la Via dei Coloni
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Elias Barlow](/immagini/png/elias-barlow.png)
+![Ritratto di Elias Barlow](/immagini/png/elias-barlow.png)
 
-*Ritratto canonico di Elias Barlow.*
+*Ritratto di Elias Barlow.*
 
 ## Aspetto
 

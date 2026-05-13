@@ -23,6 +23,8 @@ except ImportError:
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MANIFEST = REPO_ROOT / "pubblicazione" / "manifest.json"
+HOME_HERO_ASSET = "immagini/varie/gruppo-pg-carovana.png"
+HOME_HERO_PUBLIC_PATH = "/immagini/varie/gruppo-pg-carovana.png"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((/immagini/[^)\s]+)\)")
 OG_IMAGE_IN_PUBLIC_MD_RE = re.compile(
@@ -39,6 +41,8 @@ META_REGIONE_RE = re.compile(r"^\*\*Regione:\*\*\s*(.+)$", re.MULTILINE)
 META_TIPO_RE = re.compile(r"^\*\*Tipo:\*\*\s*(.+)$", re.MULTILINE)
 
 THUMB_MAX_EDGE = 320
+THUMB_PORTRAIT_W = 280
+THUMB_PORTRAIT_H = 373
 THUMB_JPEG_QUALITY = 82
 EXCERPT_MAX_LEN = 280
 
@@ -250,7 +254,14 @@ def session_badge_number(page: PageEntry, meta: HubCardInfo) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def render_entity_card_html(page: PageEntry, meta: HubCardInfo, og_image: str | None, output_dir: Path) -> str:
+def render_entity_card_html(
+    page: PageEntry,
+    meta: HubCardInfo,
+    og_image: str | None,
+    output_dir: Path,
+    *,
+    portrait_thumb: bool = False,
+) -> str:
     href = liquid_rel_jekyll(page.route)
     title_esc = html.escape(page.title)
     meta_esc = html.escape(meta.subtitle) if meta.subtitle else ""
@@ -261,11 +272,13 @@ def render_entity_card_html(page: PageEntry, meta: HubCardInfo, og_image: str | 
     else:
         media = '<div class="card-thumb-placeholder" aria-hidden="true"></div>'
     meta_html = f'<p class="card-meta">{meta_esc}</p>' if meta_esc else ""
+    media_class = "entity-card-media entity-card-media--portrait" if portrait_thumb else "entity-card-media"
+    card_class = "entity-card entity-card--portrait" if portrait_thumb else "entity-card"
     return textwrap.dedent(
         f"""\
-        <article class="entity-card">
+        <article class="{card_class}">
           <a class="entity-card-link" href="{href}">
-            <div class="entity-card-media">{media}</div>
+            <div class="{media_class}">{media}</div>
             <div class="entity-card-body">
               <h2 class="card-title">{title_esc}</h2>
               {meta_html}
@@ -323,6 +336,7 @@ def render_section_hub_index(
 ) -> str:
     in_section = [p for p in built_pages if public_sidebar_section(p) == section_key]
     ordered = sort_pages_for_section(section_key, in_section)
+    grid_class = "card-grid card-grid--personaggi" if section_key == "personaggi" else "card-grid"
     lines = [
         front_matter(
             title=hub_title,
@@ -330,13 +344,15 @@ def render_section_hub_index(
             collection_label="",
             source_path=source_path,
         ),
-        '<div class="card-grid">',
+        f'<div class="{grid_class}">',
     ]
     for page in ordered:
         meta = hub_cards.get(page.relative_path, HubCardInfo())
         og = page_og_images.get(page.relative_path)
         if section_key == "resoconti":
             lines.append(render_session_card_html(page, meta, og, output_dir))
+        elif section_key == "personaggi":
+            lines.append(render_entity_card_html(page, meta, og, output_dir, portrait_thumb=True))
         else:
             lines.append(render_entity_card_html(page, meta, og, output_dir))
     lines.extend(["</div>", ""])
@@ -467,12 +483,12 @@ def format_section(title: str, body: str) -> str:
 
 def render_public_png_body(markdown_text: str) -> str:
     sections = split_h2_sections(markdown_text)
-    image_body = sections.get("Immagine canonica", "_Nessuna immagine canonica ancora associata._")
+    image_body = sections.get("Immagine", "_Nessuna immagine ancora associata._")
     description_body = sections.get("Aspetto", "_Descrizione non ancora pubblicata._")
     events_body = sections.get("Eventi interessanti", "_Nessun evento interessante ancora pubblicato._")
 
     rendered_sections = [
-        format_section("Immagine canonica", image_body),
+        format_section("Immagine", image_body),
         format_section("Descrizione", description_body),
         format_section("Eventi interessanti", events_body),
     ]
@@ -550,6 +566,29 @@ def meta_line_first(pattern: re.Pattern[str], text: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def is_personaggi_portrait_image(asset_relative_path: str) -> bool:
+    parts = Path(asset_relative_path).parts
+    return len(parts) >= 2 and parts[0] == "immagini" and parts[1] == "personaggi"
+
+
+def thumb_resize_cover_portrait(im_rgb: Image.Image, target_w: int, target_h: int) -> Image.Image:
+    """Ridimensiona e ritaglia al centro in un riquadro verticale target_w x target_h."""
+    w, h = im_rgb.size
+    tr = target_w / target_h
+    sr = w / h
+    if sr > tr:
+        new_h = target_h
+        new_w = max(1, int(round(w * target_h / h)))
+        resized = im_rgb.resize((new_w, new_h), Image.Resampling.LANCZOS)
+        left = max(0, (new_w - target_w) // 2)
+        return resized.crop((left, 0, left + target_w, target_h))
+    new_w = target_w
+    new_h = max(1, int(round(h * target_w / w)))
+    resized = im_rgb.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    top = max(0, (new_h - target_h) // 2)
+    return resized.crop((0, top, target_w, top + target_h))
+
+
 def thumb_relative_path_jpeg(asset_relative_path: str) -> str:
     """immagini/foo/bar.png -> immagini/thumbs/foo/bar.jpg"""
     path = Path(asset_relative_path)
@@ -585,7 +624,10 @@ def write_thumbnail_for_asset(asset_relative_path: str, output_dir: Path) -> boo
                 im_rgb = im.convert("RGB")
             else:
                 im_rgb = im
-            im_rgb.thumbnail((THUMB_MAX_EDGE, THUMB_MAX_EDGE), Image.Resampling.LANCZOS)
+            if is_personaggi_portrait_image(asset_relative_path):
+                im_rgb = thumb_resize_cover_portrait(im_rgb, THUMB_PORTRAIT_W, THUMB_PORTRAIT_H)
+            else:
+                im_rgb.thumbnail((THUMB_MAX_EDGE, THUMB_MAX_EDGE), Image.Resampling.LANCZOS)
             im_rgb.save(dest, format="JPEG", quality=THUMB_JPEG_QUALITY, optimize=True)
         return True
     except OSError:
@@ -733,7 +775,7 @@ def write_layout(output_dir: Path) -> None:
             {% endif %}
             <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
           </head>
-          <body>
+          <body{% if page.home_full_bleed and page.hero_image %} class="home-full-bleed" style="--home-hero-image: url('{{ page.hero_image | relative_url }}')"{% endif %}>
             <div class="site-shell">
               <aside class="site-sidebar">
                 <nav class="site-sidebar-nav" aria-label="Sezioni">
@@ -802,6 +844,30 @@ def write_styles(output_dir: Path) -> None:
           line-height: 1.7;
           background: linear-gradient(180deg, #16120e 0%, #0f0d0b 100%);
           color: var(--text);
+        }
+
+        body.home-full-bleed {
+          background-image: linear-gradient(
+              180deg,
+              rgba(22, 18, 14, 0.78) 0%,
+              rgba(15, 13, 11, 0.9) 100%
+            ),
+            var(--home-hero-image);
+          background-size: auto, cover;
+          background-position: center, center;
+          background-attachment: fixed, fixed;
+          background-repeat: no-repeat;
+        }
+
+        body.home-full-bleed .site-sidebar,
+        body.home-full-bleed .site-header {
+          background: rgba(10, 8, 6, 0.88);
+          backdrop-filter: blur(6px);
+        }
+
+        body.home-full-bleed .page-card {
+          background: rgba(26, 23, 19, 0.88);
+          backdrop-filter: blur(4px);
         }
 
         a {
@@ -958,6 +1024,27 @@ def write_styles(output_dir: Path) -> None:
           margin-top: 0.5rem;
         }
 
+        .card-grid--personaggi {
+          grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+          gap: 1rem 1.1rem;
+        }
+
+        .entity-card--portrait {
+          max-width: 220px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media (min-width: 900px) {
+          .card-grid--personaggi {
+            grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
+          }
+
+          .entity-card--portrait {
+            max-width: 240px;
+          }
+        }
+
         .entity-card,
         .session-card {
           margin: 0;
@@ -990,6 +1077,10 @@ def write_styles(output_dir: Path) -> None:
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .entity-card-media--portrait {
+          aspect-ratio: 280 / 373;
         }
 
         .entity-card-media .card-thumb,
@@ -1098,6 +1189,8 @@ def front_matter(
     *,
     show_title: bool = True,
     og_image: str | None = None,
+    hero_image: str | None = None,
+    home_full_bleed: bool = False,
 ) -> str:
     lines = [
         "---",
@@ -1111,6 +1204,10 @@ def front_matter(
         lines.append("show_title: false")
     if og_image:
         lines.append(f"og_image: {yaml_string(og_image)}")
+    if hero_image:
+        lines.append(f"hero_image: {yaml_string(hero_image)}")
+    if home_full_bleed:
+        lines.append("home_full_bleed: true")
     lines.append("---")
     return "\n".join(lines) + "\n\n"
 
@@ -1127,6 +1224,9 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
             collection_label="Archivio pubblico",
             source_path=Path("pubblicazione/manifest.json"),
             show_title=False,
+            og_image=HOME_HERO_PUBLIC_PATH,
+            hero_image=HOME_HERO_PUBLIC_PATH,
+            home_full_bleed=True,
         ),
         f"# {manifest['site']['tagline']}",
         "",
@@ -1239,6 +1339,8 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
             "nessuna thumbnail generata; le card useranno il segnaposto.",
             file=sys.stderr,
         )
+
+    referenced_assets.add(HOME_HERO_ASSET)
 
     for asset in sorted(referenced_assets):
         copy_asset(asset, output_dir)

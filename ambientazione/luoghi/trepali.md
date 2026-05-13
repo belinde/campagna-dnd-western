@@ -4,9 +4,9 @@
 **Tipo:** Boomtown di transito, registri e promesse
 **Popolazione:** ~4.500 abitanti stabili, con forti oscillazioni stagionali
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+_Nessuna immagine ancora associata._
 
 ## Descrizione generale
 

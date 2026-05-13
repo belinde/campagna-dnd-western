@@ -3,11 +3,11 @@
 **Razza/Classe:** Umano / Guerriero
 **Ruolo:** Caposquadra dei Tiratori del Punto Lungo
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Harlan Pike](/immagini/png/harlan-pike.png)
+![Ritratto di Harlan Pike](/immagini/png/harlan-pike.png)
 
-*Ritratto canonico di Harlan Pike.*
+*Ritratto di Harlan Pike.*
 
 ## Aspetto
 

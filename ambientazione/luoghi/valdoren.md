@@ -4,9 +4,11 @@
 **Tipo:** Città libera, nodo commerciale e logistico
 **Popolazione:** ~40.000 abitanti (stima, in rapida crescita)
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+![Veduta di Valdoren](/immagini/luoghi/valdoren.png)
+
+*Veduta di Valdoren.*
 
 ## Descrizione generale
 

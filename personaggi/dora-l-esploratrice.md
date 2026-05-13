@@ -5,11 +5,11 @@
 **Livello:** —
 **Giocatore:** Adele
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.png)
+![Ritratto di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.png)
 
-*Ritratto canonico di Dora l'Esploratrice.*
+*Ritratto di Dora l'Esploratrice.*
 
 ## Aspetto
 

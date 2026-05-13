@@ -4,9 +4,11 @@
 **Tipo:** Cascina contadina di sussistenza e punto d'acqua strategico
 **Popolazione:** Famiglia Barlow (3 persone)
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+![Veduta della Fattoria Barlow](/immagini/luoghi/fattoria-barlow.png)
+
+*Veduta della Fattoria Barlow.*
 
 ## Descrizione generale
 

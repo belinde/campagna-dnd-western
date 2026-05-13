@@ -3,17 +3,19 @@
 **Razza/Classe:** Umano / Commoner (carovaniere)
 **Ruolo:** Passaggero tra i carri della carovana di Brannagh; si è offerto come tutore/adottante per Dorothy Mercer
 
-## Immagine canonica
+## Immagine
 
-_Nessuna immagine canonica ancora associata._
+![Ritratto di Olaf Halverson](/immagini/png/olaf-halverson.png)
+
+*Ritratto di Olaf Halverson.*
 
 ## Aspetto
 
-**Barba incolta** e **sopracciglia cispose**; volto da chi ha dormito poco e mangiato nel vento.
+Uomo sulla trentina, **ossatura larga e spalle da scaricatore** — il tipo di corporatura che sul Middle West fa ancora pensare ai **porti freddi del Nord-Est**, dove le famiglie di mozzi e pescatori si sono mischiate per generazioni. Pelle chiara indurita dal sole e dalla polvere della Via, **capelli biondo cenere** che spuntano arruffati dal bordo del cappello, **occhi grigio-blu** infossati. **Barba incolta** e **sopracciglia cispose** incorniciano un naso dritto e zigomi alti; l’insieme è quello di chi ha dormito poco e mangiato nel vento, ma la stanchezza non ha ancora cancellato un’espressione testarda e aperta. Voce da lavoro all’aperto, mani grandi e nodose, passo pesante da carovaniere abituato a spingere ruote fuori dal fango.
 
 ## Famiglia
 
-- **Maren Halverson**, moglie — Donna taciturna dai capelli raccolti, sullo stesso carro della famiglia quando la carovana marcia; non è ancora entrata nel merito dell’adozione in pubblico, ma Olaf giura che sarebbe d’accordo. Scheda: `png/maren-halverson.md`.
+- **Maren Halverson**, moglie — Donna dai **tratti nordeuropei** come i suoi, **taciturna**, **capelli raccolti** in trecce strette sotto un fazzoletto da polvere; sullo stesso carro della famiglia quando la carovana marcia. Non è ancora entrata nel merito dell’adozione in pubblico, ma Olaf giura che sarebbe d’accordo. Scheda: `png/maren-halverson.md`.
 
 ## Personalità
 

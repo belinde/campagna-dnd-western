@@ -3,11 +3,11 @@
 **Razza/Classe:** Umana / Commoner (colona)
 **Ruolo:** Moglie di Elias Barlow alla Fattoria Barlow; gestisce casa, scorte e la parte del compromesso che nessuno vuole chiamare col suo nome
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Ruth Barlow](/immagini/png/ruth-barlow.png)
+![Ritratto di Ruth Barlow](/immagini/png/ruth-barlow.png)
 
-*Ritratto canonico di Ruth Barlow.*
+*Ritratto di Ruth Barlow.*
 
 ## Aspetto
 

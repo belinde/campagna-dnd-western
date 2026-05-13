@@ -3,11 +3,11 @@
 **Razza/Classe:** Umano / Guerriero
 **Ruolo:** Capo delle guardie della carovana di Brannagh
 
-## Immagine canonica
+## Immagine
 
-![Ritratto canonico di Andrew Carver](/immagini/png/andrew-carver.png)
+![Ritratto di Andrew Carver](/immagini/png/andrew-carver.png)
 
-*Ritratto canonico di Andrew Carver.*
+*Ritratto di Andrew Carver.*
 
 ## Aspetto
 
