@@ -6,7 +6,11 @@ Strumento privato del Dungeon Master per gestire la campagna *La corsa al Nuovo 
 
 ## Regole Cursor
 
-Il progetto usa tre **regole Cursor contestuali** (in `.cursor/rules/`) che modellano il comportamento dell'AI in base alla fase di lavoro. Nessuna si attiva automaticamente: vanno richiamate esplicitamente nella chat.
+Il progetto usa **otto regole Cursor** (in `.cursor/rules/`) che modellano il comportamento dell'AI in base alla fase di lavoro. Si attivano in tre modi diversi:
+
+- **sempre attiva** — `campagna` ha `alwaysApply: true` e viene letta in background ad ogni interazione.
+- **richiamate a mano** — `master`, `ingame`, `trascrizione`, `resoconto` vanno invocate esplicitamente in chat con `@nome-regola` o nominando la modalità corrispondente.
+- **auto-applicate via `globs:`** — `png-scheda-gioco`, `importa-immagine`, `immagine` si attivano automaticamente quando si lavora su file che corrispondono al loro pattern (schede PNG, asset di immagini, ecc.).
 
 ### `campagna` — Regola base (sempre attiva)
 
@@ -63,13 +67,44 @@ Si usa dopo una sessione di gioco per trasformare il racconto grezzo del DM in u
 
 **Attivazione:** `@resoconto` nella chat, oppure "modalità resoconto".
 
+### `png-scheda-gioco` — Scheda di gioco 5e per i PNG
+
+Regola **auto-applicata** ai file che corrispondono ai glob `png/*.md` e `sessione/png-*.md`. Garantisce che ogni scheda PNG (canonica o temporanea di sessione) contenga una sezione `## Scheda di gioco` compatta e leggibile al tavolo, con:
+
+- **livello obbligatorio**: se manca, l'AI chiede esplicitamente al DM "Di che livello è questo PNG?" prima di completare la sezione
+- ruolo tattico, CA/PF/velocità, caratteristiche, bonus competenza, attacchi, capacità o incantesimi distintivi
+- aggiornamenti **additivi e non sostitutivi** quando il livello cambia: si conserva la build già canonizzata e si aggiungono solo i benefici coerenti con il nuovo livello
+
+Il riferimento primario per regole, classi, incantesimi e mostri è il server MCP `dnd` (vedi sotto). Se un elemento non è nell'API, l'AI lo dichiara apertamente invece di presentarlo come dato ufficiale.
+
+### `importa-immagine` — Archiviazione e normalizzazione di un asset immagine
+
+Regola **auto-applicata** ai file in `personaggi/`, `png/`, `ambientazione/luoghi/`, `resoconti/` e `sessione/`. Si usa quando il DM ha già un file immagine pronto e vuole inserirlo nel repository nel posto corretto, collegandolo al Markdown giusto. Il flusso:
+
+1. determina il tipo di immagine in base al file di destinazione (ritratto PG, ritratto PNG, veduta di luogo, scena di sessione)
+2. sposta l'asset nel path previsto sotto `immagini/` (`immagini/personaggi/`, `immagini/png/`, `immagini/luoghi/`, `immagini/eventi/sessione-NNN/`)
+3. lo **normalizza** a JPEG `.jpg` con lato lungo ≤ 1920 px e qualità ~85 (operazione idempotente) tramite `python3 scripts/normalize_image_assets.py`
+4. aggiorna il Markdown collegato con il link `/immagini/...` corretto, popolando la sezione `## Immagine` (per personaggi, PNG e luoghi) o `## Immagini salienti` (per i resoconti)
+
+Se il file immagine effettivo, il numero di sessione o il path di destinazione sono ambigui, la regola si ferma e chiede invece di indovinare.
+
+### `immagine` — Generazione di prompt immagine
+
+Regola **auto-applicata** agli stessi file della precedente, ma opera in **sola lettura**: non sposta asset né modifica il repository. Quando il DM ha aperta una scheda (PG, PNG, luogo) o un resoconto e chiede un prompt per generare l'immagine, restituisce solo testo pronto da incollare in un generatore esterno, con:
+
+- soggetto, tratti fisici, abbigliamento, equipaggiamento, ambiente, luce, atmosfera coerenti con la lore già stabilita (mai inventata)
+- regole specifiche per **proporzioni di razza** (nano, halfling, gnomo, mezzorco, orco, dragonide) e per il confronto di altezza nelle scene di gruppo, così da evitare che il modello uniformi tutti a umanoidi medi
+- regole dedicate all'**aspetto degli orchi delle Terre Selvagge** (cromia grigia con toni verdastri, cultura materiale fantasy-prateria) basate su `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`
+
+L'output include sempre il percorso suggerito sotto `immagini/` in cui l'asset dovrà vivere, in modo da agganciarsi naturalmente al flusso di `importa-immagine`.
+
 ## Pubblicazione dei resoconti
 
 Il repository include anche un piccolo flusso di pubblicazione player-safe descritto in `pubblicazione/README.md`.
 
-- `pubblicazione/manifest.json` definisce il perimetro pubblico
-- `pubblicazione/manifest.json` contiene anche la allowlist dei materiali conosciuti dai giocatori, inclusi PNG e luoghi visitati
+- `pubblicazione/manifest.json` definisce il perimetro pubblico e la allowlist dei materiali ormai conosciuti dai giocatori (PNG, luoghi visitati, eventuali altre pagine player-safe)
 - `scripts/build_public_site.py` genera una sorgente Jekyll filtrata e pronta per GitHub Pages
+- `scripts/serve_public_site.py` rigenera la sorgente e la serve in locale tramite l'immagine Docker ufficiale di Jekyll (anteprima a `http://127.0.0.1:4000/`), utile per iterare su layout e CSS; dettagli in `pubblicazione/README.md`
 - `.github/workflows/publish-public-site.yml` compila e pubblica il sito con GitHub Actions
 
 Il sito pubblico usa solo contenuti filtrati: resoconti, pagine esplicitamente allowlistate e immagini canoniche realmente referenziate. Le sezioni DM (`## Note DM`, `## Note per la prossima sessione`, `## Ganci narrativi`, `## Segreti e obiettivi nascosti`) vengono rimosse automaticamente dall'export. Le schede in `png/` possono essere pubblicate con un profilo pubblico ridotto che mostra solo nome, immagine, descrizione ed eventi interessanti, mentre i luoghi allowlistati in `ambientazione/luoghi/` vengono esportati e linkati dai resoconti nella sezione `## Luoghi visitati`.

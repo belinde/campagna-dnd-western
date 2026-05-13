@@ -112,7 +112,7 @@ L'output e` una piccola sorgente Jekyll in `build/public-site/`, pronta per esse
 
 ## Anteprima locale con Docker
 
-Per iterare sul lato grafico (CSS in `write_styles`, layout HTML in `write_layout` dentro `scripts/build_public_site.py`) senza dover passare da un deploy su GitHub Pages, c'e` uno script che rigenera la sorgente Jekyll e la serve in locale tramite l'immagine Docker ufficiale di Jekyll. Non serve installare Ruby/Jekyll sulla macchina, basta avere Docker funzionante.
+Per iterare sul lato grafico (CSS in `pubblicazione/assets/site.css`, layout HTML in `write_layout` dentro `scripts/build_public_site.py`) senza dover passare da un deploy su GitHub Pages, c'e` uno script che rigenera la sorgente Jekyll e la serve in locale tramite l'immagine Docker ufficiale di Jekyll. Non serve installare Ruby/Jekyll sulla macchina, basta avere Docker funzionante.
 
 ```bash
 python3 scripts/serve_public_site.py
