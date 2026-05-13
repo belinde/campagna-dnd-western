@@ -14,7 +14,7 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 
 ## Navigazione nell'export
 
-Lo script genera una **sidebar** con le sezioni Home, Personaggi, Resoconti, PNG e Luoghi. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG il campo **Ruolo**; per i luoghi **Regione** e **Tipo**. Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. I link «Home» e «Guida giocatori» non compaiono nell'header in alto a destra.
+Lo script genera una **sidebar** con le sezioni Personaggi, Resoconti, PNG e Luoghi; la **home** (`/`) si raggiunge dal **logo** in intestazione. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG il campo **Ruolo**; per i luoghi **Regione** e **Tipo**. Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. Il link «Guida giocatori» non compare nell'header accanto al logo: resta nelle liste della home o tra i contenuti player-safe dell'archivio.
 
 ### Immagini nell'export
 
@@ -22,6 +22,10 @@ Per ogni immagine referenziata nelle pagine pubbliche, lo script:
 
 1. **copia** nell'output l'asset cosi` com'e` nel repository (formato canonico: JPEG `.jpg`, lato lungo gia` limitato a 1920 px in fase di import/normalizzazione);
 2. genera una **miniatura** in `immagini/thumbs/` (stessa gerarchia relativa, JPEG, max ~320px sul lato lungo) usata dalle card degli indici.
+
+### Asset statici del sito (`pubblicazione/assets/`)
+
+File in **`pubblicazione/assets/`** (es. `header.png` con trasparenza per l'intestazione) vengono copiati in **`assets/`** nell'output Jekyll **senza** passare dalla generazione di thumbnail e **senza** alcuna conversione: vanno usati per grafica UI del sito che deve restare in PNG o altro formato non toccato dalla pipeline di `immagini/`.
 
 Serve **Pillow** (`scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso: le immagini a piena risoluzione vengono comunque copiate, ma **nessuna thumbnail** viene generata e le card useranno un segnaposto.
 
@@ -105,6 +109,33 @@ python3 scripts/build_public_site.py --output build/public-site
 ```
 
 L'output e` una piccola sorgente Jekyll in `build/public-site/`, pronta per essere compilata e pubblicata da GitHub Pages.
+
+## Anteprima locale con Docker
+
+Per iterare sul lato grafico (CSS in `write_styles`, layout HTML in `write_layout` dentro `scripts/build_public_site.py`) senza dover passare da un deploy su GitHub Pages, c'e` uno script che rigenera la sorgente Jekyll e la serve in locale tramite l'immagine Docker ufficiale di Jekyll. Non serve installare Ruby/Jekyll sulla macchina, basta avere Docker funzionante.
+
+```bash
+python3 scripts/serve_public_site.py
+```
+
+Lo script:
+
+1. lancia `scripts/build_public_site.py` per rigenerare `build/public-site/`;
+2. avvia un container effimero `jekyll/jekyll:4` che monta quella cartella e serve l'anteprima su `http://127.0.0.1:4000/`.
+
+L'immagine usa Ruby 3.x, dove `webrick` non e` piu` incluso di default: lo script installa la gem `webrick` nel container prima di `jekyll serve` (richiede rete solo per quel passaggio, di solito pochi secondi). Per evitare problemi di DNS in reti aziendali (dove la rete bridge di Docker non vede il resolver dell'host) il container viene avviato di default con `--network=host`: condivide lo stack di rete della macchina, Jekyll si lega direttamente al `--bind` scelto e non serve port mapping.
+
+Apri quell'URL nel browser; quando vuoi vedere le modifiche fatte ai template o al CSS, fermi il container con `Ctrl+C` e rilanci il comando. La prima esecuzione scarica l'immagine Docker (qualche centinaio di MB), le successive partono in pochi secondi grazie alla cache locale.
+
+Flag utili:
+
+- `--skip-build`: salta la rigenerazione e serve direttamente la sorgente gia` presente in `build/public-site/`;
+- `--port 4001`: cambia la porta locale (utile se la 4000 e` occupata);
+- `--bind 0.0.0.0`: espone l'anteprima alla LAN (di default e` legata a `127.0.0.1`);
+- `--image <tag>`: forza un'immagine Docker diversa (es. `jekyll/jekyll:3` per avvicinarsi al runtime di GitHub Pages);
+- `--network bridge`: torna alla rete `bridge` di Docker con port mapping classico (richiede che il container riesca a risolvere `rubygems.org` per installare `webrick`).
+
+L'output di Jekyll (`_site/`, `.jekyll-cache/`) viene scritto dentro `build/public-site/` ed e` gia` ignorato da git.
 
 ## GitHub Pages
 

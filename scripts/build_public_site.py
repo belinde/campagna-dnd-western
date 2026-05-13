@@ -25,6 +25,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MANIFEST = REPO_ROOT / "pubblicazione" / "manifest.json"
 HOME_HERO_ASSET = "immagini/varie/gruppo-pg-carovana.jpg"
 HOME_HERO_PUBLIC_PATH = "/immagini/varie/gruppo-pg-carovana.jpg"
+PUBBLICAZIONE_ASSETS_DIR = REPO_ROOT / "pubblicazione" / "assets"
+HEADER_LOGO_PUBLIC_PATH = "/assets/header.png"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((/immagini/[^)\s]+)\)")
 OG_IMAGE_IN_PUBLIC_MD_RE = re.compile(
@@ -792,12 +794,23 @@ def write_layout(output_dir: Path) -> None:
             <meta name="twitter:image" content="{{ page.og_image | absolute_url }}">
             {% endif %}
             <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+            <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+            <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+            <link rel="shortcut icon" href="/assets/favicon.ico" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+            <link rel="manifest" href="/assets/site.webmanifest" />
           </head>
           <body{% if page.home_full_bleed and page.hero_image %} class="home-full-bleed" style="--home-hero-image: url('{{ page.hero_image | relative_url }}')"{% endif %}>
+            <header class="site-header">
+              <div class="site-header-inner">
+                <a class="site-title site-title-logo" href="{{ '/' | relative_url }}">
+                  <img src="@HEADER_LOGO_LIQUID@" alt="{{ site.title | escape }}" decoding="async">
+                </a>
+              </div>
+            </header>
             <div class="site-shell">
               <aside class="site-sidebar">
                 <nav class="site-sidebar-nav" aria-label="Sezioni">
-                  <a href="{{ '/' | relative_url }}">Home</a>
                   <a href="{{ '/personaggi/' | relative_url }}">Personaggi</a>
                   <a href="{{ '/resoconti/' | relative_url }}">Resoconti</a>
                   <a href="{{ '/png/' | relative_url }}">PNG</a>
@@ -805,32 +818,31 @@ def write_layout(output_dir: Path) -> None:
                 </nav>
               </aside>
               <div class="site-content">
-                <header class="site-header">
-                  <div class="wrap">
-                    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-                  </div>
-                </header>
-
-                <main class="wrap site-main">
-                  <article class="page-card">
-                    {% if page.show_title != false %}
-                    <header class="page-header">
-                      {% if page.collection_label %}
-                      <p class="eyebrow">{{ page.collection_label }}</p>
+                <main class="site-main">
+                  <div class="content-wrap">
+                    <article class="page-card">
+                      {% if page.show_title != false %}
+                      <header class="page-header">
+                        {% if page.collection_label %}
+                        <p class="eyebrow">{{ page.collection_label }}</p>
+                        {% endif %}
+                        <h1>{{ page.title }}</h1>
+                      </header>
                       {% endif %}
-                      <h1>{{ page.title }}</h1>
-                    </header>
-                    {% endif %}
-                    <div class="page-content">
-                      {{ content }}
-                    </div>
-                  </article>
+                      <div class="page-content">
+                        {{ content }}
+                      </div>
+                    </article>
+                  </div>
                 </main>
               </div>
             </div>
           </body>
         </html>
         """
+    ).replace(
+        "@HEADER_LOGO_LIQUID@",
+        "{{ '" + HEADER_LOGO_PUBLIC_PATH + "' | relative_url }}",
     )
     (layout_dir / "default.html").write_text(layout_text, encoding="utf-8")
 
@@ -850,14 +862,29 @@ def write_styles(output_dir: Path) -> None:
           --accent: #d39c4a;
           --accent-soft: rgba(211, 156, 74, 0.16);
           --shadow: rgba(0, 0, 0, 0.28);
+          --content-max-width: 1600px;
+          --sidebar-width: 220px;
+          --chrome-surface: rgba(10, 8, 6, 0.98);
+          --chrome-divider: rgba(0, 0, 0, 0.42);
+          --sidebar-link-bg: rgba(46, 40, 32, 0.92);
+          --sidebar-link-bg-hover: rgba(56, 48, 38, 0.95);
+          --sidebar-link-border: rgba(255, 255, 255, 0.07);
         }
 
         * {
           box-sizing: border-box;
         }
 
+        html {
+          height: 100%;
+        }
+
         body {
           margin: 0;
+          min-height: 100vh;
+          min-height: 100dvh;
+          display: flex;
+          flex-direction: column;
           font-family: Georgia, "Times New Roman", serif;
           line-height: 1.7;
           background: linear-gradient(180deg, #16120e 0%, #0f0d0b 100%);
@@ -879,7 +906,7 @@ def write_styles(output_dir: Path) -> None:
 
         body.home-full-bleed .site-sidebar,
         body.home-full-bleed .site-header {
-          background: rgba(10, 8, 6, 0.88);
+          background: rgba(10, 8, 6, 0.9);
           backdrop-filter: blur(6px);
         }
 
@@ -889,8 +916,11 @@ def write_styles(output_dir: Path) -> None:
         }
 
         .home-hero {
+          position: relative;
           margin: 0 0 1.75rem;
           padding: 0;
+          width: 100%;
+          height: clamp(200px, min(42vw, 56vh), 720px);
           border-radius: 14px;
           overflow: hidden;
           border: 1px solid var(--panel-border);
@@ -899,14 +929,16 @@ def write_styles(output_dir: Path) -> None:
         }
 
         .home-hero img {
+          position: absolute;
+          inset: 0;
           display: block;
           width: 100%;
-          max-height: min(72vh, 720px);
-          height: auto;
+          height: 100%;
           margin: 0;
-          object-fit: contain;
           border: 0;
           border-radius: 0;
+          object-fit: cover;
+          object-position: center;
         }
 
         a {
@@ -917,51 +949,69 @@ def write_styles(output_dir: Path) -> None:
           color: #efb867;
         }
 
-        .wrap {
+        .content-wrap {
           width: 100%;
-          max-width: none;
+          max-width: var(--content-max-width);
           margin: 0;
+          margin-right: auto;
           padding-left: 1.25rem;
-          padding-right: 1.25rem;
+          padding-right: 1.5rem;
           box-sizing: border-box;
         }
 
         .site-main {
           flex: 1;
           min-width: 0;
+          width: 100%;
         }
 
         .site-shell {
+          flex: 1;
           display: flex;
-          align-items: flex-start;
-          min-height: 100vh;
+          flex-direction: row;
+          align-items: stretch;
+          width: 100%;
         }
 
         .site-sidebar {
-          flex: 0 0 220px;
-          position: sticky;
-          top: 0;
-          align-self: flex-start;
-          min-height: 100vh;
+          flex: 0 0 var(--sidebar-width);
+          display: flex;
+          flex-direction: column;
           padding: 1.25rem 1rem;
-          background: rgba(10, 8, 6, 0.96);
-          border-right: 1px solid var(--panel-border);
+          background: var(--chrome-surface);
+          border-right: 1px solid var(--chrome-divider);
         }
 
         .site-sidebar-nav {
           display: flex;
           flex-direction: column;
-          gap: 0.65rem;
+          gap: 0.55rem;
         }
 
         .site-sidebar-nav a {
+          display: block;
           text-decoration: none;
-          font-size: 1rem;
-          color: var(--muted);
+          text-align: center;
+          font-size: 1.12rem;
+          font-weight: 600;
+          font-variant: small-caps;
+          letter-spacing: 0.08em;
+          line-height: 1.35;
+          color: var(--text);
+          background: var(--sidebar-link-bg);
+          border: 1px solid var(--sidebar-link-border);
+          border-radius: 12px;
+          padding: 0.7rem 0.65rem;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+          transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+            box-shadow 0.15s ease;
         }
 
         .site-sidebar-nav a:hover {
           color: var(--accent);
+          background: var(--sidebar-link-bg-hover);
+          border-color: rgba(211, 156, 74, 0.28);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
         }
 
         .site-content {
@@ -972,16 +1022,20 @@ def write_styles(output_dir: Path) -> None:
         }
 
         .site-header {
-          background: rgba(10, 8, 6, 0.92);
-          border-bottom: 1px solid var(--panel-border);
+          flex-shrink: 0;
+          width: 100%;
+          background: var(--chrome-surface);
         }
 
-        .site-header .wrap {
+        .site-header-inner {
+          width: 100%;
+          max-width: none;
           display: flex;
           align-items: center;
           justify-content: flex-start;
           gap: 1rem;
-          padding: 1rem 0;
+          padding: 1rem 1.25rem;
+          box-sizing: border-box;
         }
 
         .site-title {
@@ -989,6 +1043,27 @@ def write_styles(output_dir: Path) -> None:
           font-weight: 700;
           text-decoration: none;
           color: var(--text);
+        }
+
+        .site-title-logo {
+          display: inline-flex;
+          align-items: center;
+          line-height: 0;
+        }
+
+        .site-title-logo:hover {
+          opacity: 0.92;
+        }
+
+        .site-title-logo img {
+          display: block;
+          max-width: min(100%, 560px);
+          width: auto;
+          height: auto;
+          max-height: 4.5rem;
+          margin: 0;
+          border: 0;
+          border-radius: 0;
         }
 
         .page-card {
@@ -1194,19 +1269,25 @@ def write_styles(output_dir: Path) -> None:
 
           .site-sidebar {
             position: relative;
-            min-height: 0;
+            flex: 0 0 auto;
             width: 100%;
             border-right: 0;
-            border-bottom: 1px solid var(--panel-border);
           }
 
           .site-sidebar-nav {
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 0.75rem 1.25rem;
+            justify-content: center;
+            gap: 0.55rem 0.65rem;
           }
 
-          .site-header .wrap {
+          .site-sidebar-nav a {
+            flex: 1 1 auto;
+            min-width: calc(50% - 0.5rem);
+            max-width: 100%;
+          }
+
+          .site-header-inner {
             flex-direction: column;
             align-items: flex-start;
           }
@@ -1271,9 +1352,7 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
         f"# {manifest['site']['tagline']}",
         "",
         '<div class="hero">',
-        "",
-        f"**{manifest['site']['description']}**",
-        "",
+        f"{manifest['site']['description']}",
         "</div>",
     ]
 
@@ -1297,6 +1376,28 @@ def copy_asset(relative_asset_path: str, output_dir: Path) -> None:
     destination = output_dir / relative_asset_path
     destination.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(source_path, destination)
+
+
+def copy_pubblicazione_assets(output_dir: Path) -> None:
+    """Copia byte-per-byte i file in pubblicazione/assets/ (PNG con alpha, ecc.) senza generare thumbnail."""
+    if not PUBBLICAZIONE_ASSETS_DIR.is_dir():
+        raise FileNotFoundError(
+            "Manca la cartella pubblicazione/assets/: contiene gli asset statici del sito pubblico "
+            "che non devono essere processati dalla pipeline immagini/."
+        )
+    if not (PUBBLICAZIONE_ASSETS_DIR / "header.png").is_file():
+        raise FileNotFoundError(
+            "Manca pubblicazione/assets/header.png (logo intestazione del sito, PNG con trasparenza)."
+        )
+    dest_root = output_dir / "assets"
+    dest_root.mkdir(parents=True, exist_ok=True)
+    for path in sorted(PUBBLICAZIONE_ASSETS_DIR.rglob("*"), key=lambda p: p.as_posix()):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(PUBBLICAZIONE_ASSETS_DIR)
+        dest = dest_root / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(path, dest)
 
 
 def prepare_pages(entries: list[PageEntry], blocked_headings: set[str]) -> list[PreparedPage]:
@@ -1395,6 +1496,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
     write_jekyll_config(output_dir, manifest)
     write_layout(output_dir)
     write_styles(output_dir)
+    copy_pubblicazione_assets(output_dir)
     (output_dir / "index.md").write_text(render_index(manifest, built_pages), encoding="utf-8")
 
     return len(built_pages) + hub_page_count, len(referenced_assets)
