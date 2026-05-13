@@ -3,13 +3,22 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 import shutil
+import sys
 import textwrap
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
+
+try:
+    from PIL import Image
+
+    HAS_PILLOW = True
+except ImportError:
+    HAS_PILLOW = False
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -21,6 +30,17 @@ OG_IMAGE_IN_PUBLIC_MD_RE = re.compile(
 )
 SESSION_LINK_RE = re.compile(r"\[(Sessione (\d{3}))\](?!\()")
 ENTITY_BULLET_RE = re.compile(r"^(\s*-\s+\*\*)([^*]+)(\*\*.*)$")
+
+SESSION_H1_RE = re.compile(r"^#\s+Sessione\s+(\d+)\s*[—–-]\s*(.+)$", re.MULTILINE)
+META_RAZZA_RE = re.compile(r"^\*\*Razza:\*\*\s*(.+)$", re.MULTILINE)
+META_CLASSE_RE = re.compile(r"^\*\*Classe:\*\*\s*(.+)$", re.MULTILINE)
+META_RUOLO_RE = re.compile(r"^\*\*Ruolo:\*\*\s*(.+)$", re.MULTILINE)
+META_REGIONE_RE = re.compile(r"^\*\*Regione:\*\*\s*(.+)$", re.MULTILINE)
+META_TIPO_RE = re.compile(r"^\*\*Tipo:\*\*\s*(.+)$", re.MULTILINE)
+
+THUMB_MAX_EDGE = 320
+THUMB_JPEG_QUALITY = 82
+EXCERPT_MAX_LEN = 280
 
 
 @dataclass(frozen=True)
@@ -41,6 +61,16 @@ class PreparedPage:
     entry: PageEntry
     title: str
     body: str
+
+
+@dataclass
+class HubCardInfo:
+    """Metadati per le card delle pagine indice (export pubblico)."""
+
+    subtitle: str = ""
+    session_num: int | None = None
+    episode_title: str = ""
+    excerpt: str = ""
 
 
 def parse_args() -> argparse.Namespace:
@@ -198,6 +228,88 @@ def sort_pages_for_section(section: str, pages: list[PageEntry]) -> list[PageEnt
     return sorted(pages, key=lambda p: (p.title.lower(), p.relative_path.as_posix()))
 
 
+def liquid_rel_jekyll(path: str) -> str:
+    return "{{ '" + path + "' | relative_url }}"
+
+
+def thumb_file_exists(output_dir: Path, og_image: str | None) -> bool:
+    if not og_image or not HAS_PILLOW:
+        return False
+    try:
+        rel = og_image.lstrip("/")
+        thumb_rel = thumb_relative_path_jpeg(rel)
+        return (output_dir / thumb_rel).is_file()
+    except ValueError:
+        return False
+
+
+def session_badge_number(page: PageEntry, meta: HubCardInfo) -> int | None:
+    if meta.session_num is not None:
+        return meta.session_num
+    m = re.match(r"sessione-(\d+)", page.relative_path.stem, re.IGNORECASE)
+    return int(m.group(1)) if m else None
+
+
+def render_entity_card_html(page: PageEntry, meta: HubCardInfo, og_image: str | None, output_dir: Path) -> str:
+    href = liquid_rel_jekyll(page.route)
+    title_esc = html.escape(page.title)
+    meta_esc = html.escape(meta.subtitle) if meta.subtitle else ""
+    if thumb_file_exists(output_dir, og_image):
+        thumb_route = og_path_to_thumb_route(og_image or "")
+        img_src = liquid_rel_jekyll(thumb_route)
+        media = f'<img class="card-thumb" src="{img_src}" alt="" loading="lazy">'
+    else:
+        media = '<div class="card-thumb-placeholder" aria-hidden="true"></div>'
+    meta_html = f'<p class="card-meta">{meta_esc}</p>' if meta_esc else ""
+    return textwrap.dedent(
+        f"""\
+        <article class="entity-card">
+          <a class="entity-card-link" href="{href}">
+            <div class="entity-card-media">{media}</div>
+            <div class="entity-card-body">
+              <h2 class="card-title">{title_esc}</h2>
+              {meta_html}
+            </div>
+          </a>
+        </article>
+        """
+    ).strip()
+
+
+def render_session_card_html(page: PageEntry, meta: HubCardInfo, og_image: str | None, output_dir: Path) -> str:
+    href = liquid_rel_jekyll(page.route)
+    num = session_badge_number(page, meta)
+    if num is not None:
+        badge_inner = html.escape(f"Sessione {num}")
+    else:
+        badge_inner = html.escape(page.title)
+    episode = meta.episode_title or page.title
+    title_esc = html.escape(episode)
+    excerpt_esc = html.escape(meta.excerpt) if meta.excerpt else ""
+    if thumb_file_exists(output_dir, og_image):
+        thumb_route = og_path_to_thumb_route(og_image or "")
+        img_src = liquid_rel_jekyll(thumb_route)
+        media = f'<img class="card-thumb" src="{img_src}" alt="" loading="lazy">'
+    else:
+        media = '<div class="card-thumb-placeholder" aria-hidden="true"></div>'
+    excerpt_html = f'<p class="card-excerpt">{excerpt_esc}</p>' if excerpt_esc else ""
+    badge_html = f'<span class="session-card-badge">{badge_inner}</span>'
+    return textwrap.dedent(
+        f"""\
+        <article class="session-card">
+          <a class="session-card-link" href="{href}">
+            <div class="session-card-top">{badge_html}</div>
+            <div class="session-card-media">{media}</div>
+            <div class="session-card-body">
+              <h2 class="card-title">{title_esc}</h2>
+              {excerpt_html}
+            </div>
+          </a>
+        </article>
+        """
+    ).strip()
+
+
 def render_section_hub_index(
     *,
     hub_title: str,
@@ -205,6 +317,9 @@ def render_section_hub_index(
     source_path: Path,
     section_key: str,
     built_pages: list[PageEntry],
+    hub_cards: dict[Path, HubCardInfo],
+    page_og_images: dict[Path, str | None],
+    output_dir: Path,
 ) -> str:
     in_section = [p for p in built_pages if public_sidebar_section(p) == section_key]
     ordered = sort_pages_for_section(section_key, in_section)
@@ -215,14 +330,25 @@ def render_section_hub_index(
             collection_label="",
             source_path=source_path,
         ),
+        '<div class="card-grid">',
     ]
     for page in ordered:
-        lines.append(f"- [{page.title}]({{{{ '{page.route}' | relative_url }}}})")
-    lines.append("")
+        meta = hub_cards.get(page.relative_path, HubCardInfo())
+        og = page_og_images.get(page.relative_path)
+        if section_key == "resoconti":
+            lines.append(render_session_card_html(page, meta, og, output_dir))
+        else:
+            lines.append(render_entity_card_html(page, meta, og, output_dir))
+    lines.extend(["</div>", ""])
     return "\n".join(lines)
 
 
-def write_section_hub_pages(output_dir: Path, built_pages: list[PageEntry]) -> int:
+def write_section_hub_pages(
+    output_dir: Path,
+    built_pages: list[PageEntry],
+    hub_cards: dict[Path, HubCardInfo],
+    page_og_images: dict[Path, str | None],
+) -> int:
     hubs: list[tuple[str, str, str, Path, str]] = [
         ("Personaggi", "/personaggi/", output_dir / "personaggi" / "index.md", Path("pubblicazione/_generated/index-personaggi.md"), "personaggi"),
         ("Resoconti", "/resoconti/", output_dir / "resoconti" / "index.md", Path("pubblicazione/_generated/index-resoconti.md"), "resoconti"),
@@ -238,6 +364,9 @@ def write_section_hub_pages(output_dir: Path, built_pages: list[PageEntry]) -> i
                 source_path=source_stub,
                 section_key=section_key,
                 built_pages=built_pages,
+                hub_cards=hub_cards,
+                page_og_images=page_og_images,
+                output_dir=output_dir,
             ),
             encoding="utf-8",
         )
@@ -414,6 +543,140 @@ def first_og_image_path_from_body(markdown_text: str) -> str | None:
     """Primo path immagine nel markdown dopo rewrite_image_links (URL path con / iniziale)."""
     match = OG_IMAGE_IN_PUBLIC_MD_RE.search(markdown_text)
     return match.group(1) if match else None
+
+
+def meta_line_first(pattern: re.Pattern[str], text: str) -> str:
+    match = pattern.search(text)
+    return match.group(1).strip() if match else ""
+
+
+def thumb_relative_path_jpeg(asset_relative_path: str) -> str:
+    """immagini/foo/bar.png -> immagini/thumbs/foo/bar.jpg"""
+    path = Path(asset_relative_path)
+    if not path.parts or path.parts[0] != "immagini":
+        raise ValueError(f"Path immagine non valido: {asset_relative_path}")
+    rest = Path(*path.parts[1:]).with_suffix(".jpg")
+    return (Path("immagini") / "thumbs" / rest).as_posix()
+
+
+def og_path_to_thumb_route(og_image: str) -> str:
+    rel = og_image.lstrip("/")
+    return "/" + thumb_relative_path_jpeg(rel)
+
+
+def write_thumbnail_for_asset(asset_relative_path: str, output_dir: Path) -> bool:
+    """Genera JPEG thumb sotto immagini/thumbs/... Ritorna False se Pillow assente o errore."""
+    if not HAS_PILLOW:
+        return False
+    source_file = REPO_ROOT / asset_relative_path
+    if not source_file.exists():
+        return False
+    thumb_rel = thumb_relative_path_jpeg(asset_relative_path)
+    dest = output_dir / thumb_rel
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with Image.open(source_file) as im:
+            if im.mode in ("RGBA", "P"):
+                rgba = im.convert("RGBA")
+                background = Image.new("RGB", rgba.size, (255, 255, 255))
+                background.paste(rgba, mask=rgba.split()[3])
+                im_rgb = background
+            elif im.mode != "RGB":
+                im_rgb = im.convert("RGB")
+            else:
+                im_rgb = im
+            im_rgb.thumbnail((THUMB_MAX_EDGE, THUMB_MAX_EDGE), Image.Resampling.LANCZOS)
+            im_rgb.save(dest, format="JPEG", quality=THUMB_JPEG_QUALITY, optimize=True)
+        return True
+    except OSError:
+        return False
+
+
+def excerpt_plain(markdown_fragment: str, max_len: int = EXCERPT_MAX_LEN) -> str:
+    text = markdown_fragment.strip()
+    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)
+    text = text.replace("**", "")
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) <= max_len:
+        return text
+    cut = text[: max_len - 1]
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0]
+    return cut + "…"
+
+
+def strip_h2_section(markdown_text: str, heading_title: str) -> str:
+    """Rimuove la sezione che inizia con ## heading_title (H2) fino alla prossima heading di livello <= 2."""
+    output_lines: list[str] = []
+    skip_level: int | None = None
+    target = heading_title
+
+    for line in markdown_text.splitlines():
+        heading = HEADING_RE.match(line)
+        if heading:
+            level = len(heading.group(1))
+            title = sanitize_heading_text(heading.group(2))
+
+            if skip_level is not None and level <= skip_level:
+                skip_level = None
+
+            if skip_level is None and level == 2 and title == target:
+                skip_level = level
+                continue
+
+        if skip_level is None:
+            output_lines.append(line)
+
+    compacted_lines: list[str] = []
+    previous_blank = False
+    for line in output_lines:
+        is_blank = line.strip() == ""
+        if is_blank and previous_blank:
+            continue
+        compacted_lines.append(line)
+        previous_blank = is_blank
+
+    return "\n".join(compacted_lines).strip() + "\n"
+
+
+def collect_hub_card_metadata(
+    entries: list[PageEntry], blocked_headings: set[str]
+) -> dict[Path, HubCardInfo]:
+    """Estrae metadati per le card indice dal markdown sanificato (stesso perimetro dell'export)."""
+    result: dict[Path, HubCardInfo] = {}
+    for entry in entries:
+        raw_text = entry.source_path.read_text(encoding="utf-8")
+        sanitized = strip_sensitive_sections(raw_text, blocked_headings)
+        rp = entry.relative_path
+        parts = rp.parts
+
+        if parts[0] == "resoconti" and rp.name.startswith("sessione-"):
+            match = SESSION_H1_RE.search(sanitized)
+            sections = split_h2_sections(sanitized)
+            riassunto_body = sections.get("Riassunto", "")
+            excerpt = excerpt_plain(riassunto_body) if riassunto_body else ""
+            if match:
+                result[rp] = HubCardInfo(
+                    session_num=int(match.group(1)),
+                    episode_title=match.group(2).strip(),
+                    excerpt=excerpt,
+                )
+            else:
+                result[rp] = HubCardInfo(excerpt=excerpt)
+        elif parts[0] == "personaggi":
+            razza = meta_line_first(META_RAZZA_RE, sanitized)
+            classe = meta_line_first(META_CLASSE_RE, sanitized)
+            bits = [b for b in (razza, classe) if b]
+            result[rp] = HubCardInfo(subtitle=" · ".join(bits))
+        elif parts[0] == "png":
+            result[rp] = HubCardInfo(subtitle=meta_line_first(META_RUOLO_RE, sanitized))
+        elif len(parts) >= 3 and parts[0] == "ambientazione" and parts[1] == "luoghi":
+            reg = meta_line_first(META_REGIONE_RE, sanitized)
+            tipo = meta_line_first(META_TIPO_RE, sanitized)
+            bits = [b for b in (reg, tipo) if b]
+            result[rp] = HubCardInfo(subtitle=" · ".join(bits))
+    return result
 
 
 def yaml_string(value: str) -> str:
@@ -688,6 +951,112 @@ def write_styles(output_dir: Path) -> None:
           color: var(--muted);
         }
 
+        .card-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 1.25rem;
+          margin-top: 0.5rem;
+        }
+
+        .entity-card,
+        .session-card {
+          margin: 0;
+          background: rgba(26, 23, 19, 0.55);
+          border: 1px solid var(--panel-border);
+          border-radius: 14px;
+          overflow: hidden;
+          box-shadow: 0 8px 24px var(--shadow);
+        }
+
+        .entity-card-link,
+        .session-card-link {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .entity-card-link:hover .card-title,
+        .session-card-link:hover .card-title {
+          color: var(--accent);
+        }
+
+        .entity-card-media,
+        .session-card-media {
+          aspect-ratio: 16 / 10;
+          background: rgba(0, 0, 0, 0.35);
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .entity-card-media .card-thumb,
+        .session-card-media .card-thumb {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          margin: 0;
+          border-radius: 0;
+          border: 0;
+        }
+
+        .card-thumb-placeholder {
+          width: 100%;
+          height: 100%;
+          min-height: 120px;
+          background: linear-gradient(135deg, rgba(211, 156, 74, 0.12), rgba(0, 0, 0, 0.25));
+        }
+
+        .entity-card-body,
+        .session-card-body {
+          padding: 1rem 1.1rem 1.15rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+
+        .session-card-top {
+          padding: 0.65rem 1.1rem 0;
+        }
+
+        .session-card-badge {
+          display: inline-block;
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: var(--muted);
+        }
+
+        .card-title {
+          margin: 0;
+          font-size: 1.15rem;
+          line-height: 1.25;
+          font-weight: 700;
+          color: var(--text);
+        }
+
+        .card-meta {
+          margin: 0;
+          font-size: 0.92rem;
+          line-height: 1.45;
+          color: var(--muted);
+        }
+
+        .card-excerpt {
+          margin: 0.25rem 0 0;
+          font-size: 0.9rem;
+          line-height: 1.5;
+          color: var(--muted);
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
         @media (max-width: 720px) {
           .site-shell {
             flex-direction: column;
@@ -812,10 +1181,12 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
 
     blocked_headings = set(manifest.get("stripSections", []))
     resolved_entries = resolve_pages(manifest)
+    hub_cards = collect_hub_card_metadata(resolved_entries, blocked_headings)
     prepared_pages = prepare_pages(resolved_entries, blocked_headings)
     entity_route_lookup = build_entity_route_lookup(prepared_pages)
     built_pages: list[PageEntry] = []
     referenced_assets: set[str] = set()
+    page_og_images: dict[Path, str | None] = {}
 
     for prepared in prepared_pages:
         entry = prepared.entry
@@ -826,6 +1197,11 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
         body, assets = rewrite_image_links(body)
         referenced_assets.update(assets)
         og_image = first_og_image_path_from_body(body)
+
+        if entry.relative_path.parts[0] == "resoconti" and entry.relative_path.name.lower().startswith(
+            "sessione-"
+        ):
+            body = strip_h2_section(body, "Riassunto")
 
         destination = output_dir / entry.relative_path
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -841,6 +1217,8 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
             encoding="utf-8",
         )
 
+        page_og_images[entry.relative_path] = og_image
+
         built_pages.append(
             PageEntry(
                 source_path=entry.source_path,
@@ -855,10 +1233,18 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
             )
         )
 
+    if not HAS_PILLOW:
+        print(
+            "Avviso: Pillow non installato (pip install -r scripts/requirements-public-site.txt); "
+            "nessuna thumbnail generata; le card useranno il segnaposto.",
+            file=sys.stderr,
+        )
+
     for asset in sorted(referenced_assets):
         copy_asset(asset, output_dir)
+        write_thumbnail_for_asset(asset, output_dir)
 
-    hub_page_count = write_section_hub_pages(output_dir, built_pages)
+    hub_page_count = write_section_hub_pages(output_dir, built_pages, hub_cards, page_og_images)
 
     write_jekyll_config(output_dir, manifest)
     write_layout(output_dir)

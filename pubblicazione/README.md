@@ -14,7 +14,11 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 
 ## Navigazione nell'export
 
-Lo script genera una **sidebar** con le sezioni Home, Personaggi, Resoconti, PNG e Luoghi. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` elencano tutti i link di quella categoria. La **home** (`/`) mostra solo le pagine che non rientrano in quelle categorie (in v1 resta soprattutto la guida giocatori, evidenziata come percorso consigliato se marcata `featured` nel manifest). I link «Home» e «Guida giocatori» non compaiono piu` nell'header in alto a destra: la guida resta raggiungibile dalla home o dalla sidebar (Home + sezione pertinente, se in futuro aggiungerai altre pagine standalone).
+Lo script genera una **sidebar** con le sezioni Home, Personaggi, Resoconti, PNG e Luoghi. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG il campo **Ruolo**; per i luoghi **Regione** e **Tipo**. Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. I link «Home» e «Guida giocatori» non compaiono nell'header in alto a destra.
+
+### Thumbnail
+
+Per ogni immagine copiata nell'export, lo script genera un JPEG in `immagini/thumbs/` (stessa gerarchia relativa, max ~320px sul lato lungo). Le card delle liste usano queste miniature. Serve **Pillow** (`scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso e le card mostrano un segnaposto al posto dell'immagine.
 
 ## Cosa non viene mai pubblicato direttamente
 
@@ -77,7 +81,13 @@ In questo modo i resoconti pubblici diventano una piccola rete navigabile senza 
 
 ## Build locale
 
-Per generare la sorgente del sito pubblico:
+Installare la dipendenza per le thumbnail (consigliato anche in locale per avere le card complete):
+
+```bash
+pip install -r scripts/requirements-public-site.txt
+```
+
+Poi generare la sorgente del sito pubblico:
 
 ```bash
 python3 scripts/build_public_site.py
@@ -95,9 +105,10 @@ L'output e` una piccola sorgente Jekyll in `build/public-site/`, pronta per esse
 
 Il workflow `.github/workflows/publish-public-site.yml`:
 
-1. genera la sorgente player-safe con lo script Python
-2. compila il sito con Jekyll
-3. pubblica l'artefatto su GitHub Pages
+1. installa le dipendenze Python dello script (`scripts/requirements-public-site.txt`)
+2. genera la sorgente player-safe con lo script Python
+3. compila il sito con Jekyll
+4. pubblica l'artefatto su GitHub Pages
 
 Per attivarlo nel repository GitHub:
 

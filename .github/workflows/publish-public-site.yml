@@ -32,6 +32,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Dipendenze script pubblicazione
+        run: pip install -r scripts/requirements-public-site.txt
+
       - name: Genera sorgente player-safe
         run: python3 scripts/build_public_site.py --output build/public-site
 
