@@ -6,7 +6,7 @@
 
 ## Immagine
 
-![Veduta della Fattoria Barlow](/immagini/luoghi/fattoria-barlow.png)
+![Veduta della Fattoria Barlow](/immagini/luoghi/fattoria-barlow.jpg)
 
 *Veduta della Fattoria Barlow.*
 

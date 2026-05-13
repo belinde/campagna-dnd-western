@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Thomas Caldwell](/immagini/png/thomas-caldwell.png)
+![Ritratto di Thomas Caldwell](/immagini/png/thomas-caldwell.jpg)
 
 *Ritratto di Thomas Caldwell.*
 

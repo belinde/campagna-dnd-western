@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Maren Halverson](/immagini/png/maren-halverson.png)
+![Ritratto di Maren Halverson](/immagini/png/maren-halverson.jpg)
 
 *Ritratto di Maren Halverson.*
 

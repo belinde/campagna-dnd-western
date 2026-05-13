@@ -17,7 +17,7 @@ Se esiste un ritratto, oppure se la scheda viene preparata per ospitarlo, mantie
 ```markdown
 ## Immagine
 
-![Ritratto di Nome PNG](/immagini/png/nome-png.png)
+![Ritratto di Nome PNG](/immagini/png/nome-png.jpg)
 
 *Ritratto di Nome PNG.*
 ```

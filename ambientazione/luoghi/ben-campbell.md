@@ -6,13 +6,13 @@
 
 ## Immagine
 
-![Veduta della Ben Campbell](/immagini/luoghi/ben-campbell.png)
+![Veduta della Ben Campbell](/immagini/luoghi/ben-campbell.jpg)
 
 *Veduta della* Ben Campbell *in navigazione sul Grande Fiume.*
 
 ### Progetto costruttivo
 
-![Progetto costruttivo della Ben Campbell](/immagini/luoghi/ben-campbell-progetto.png)
+![Progetto costruttivo della Ben Campbell](/immagini/luoghi/ben-campbell-progetto.jpg)
 
 *Progetto costruttivo della* Ben Campbell.
 

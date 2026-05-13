@@ -6,7 +6,7 @@
 
 ## Immagine
 
-![Ritratto di Dorothy Mercer](/immagini/png/dorothy-mercer.png)
+![Ritratto di Dorothy Mercer](/immagini/png/dorothy-mercer.jpg)
 
 *Ritratto di Dorothy Mercer.*
 

@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Anthony Gillian](/immagini/png/anthony-gillian.png)
+![Ritratto di Anthony Gillian](/immagini/png/anthony-gillian.jpg)
 
 *Ritratto di Anthony Gillian.*
 

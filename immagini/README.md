@@ -8,18 +8,22 @@ Le immagini della campagna vivono in questa cartella e vengono richiamate dirett
 
 ## Struttura delle cartelle
 
-- `immagini/personaggi/<slug>.png|jpg|jpeg|webp`
-- `immagini/png/<slug>.png|jpg|jpeg|webp`
-- `immagini/luoghi/<slug>.png|jpg|jpeg|webp`
-- `immagini/eventi/sessione-NNN/<slug-evento>.png|jpg|jpeg|webp`
-- `immagini/varie/<slug>.png|jpg|jpeg|webp` per asset non ancora collegati a un file Markdown di riferimento
+- `immagini/personaggi/<slug>.jpg`
+- `immagini/png/<slug>.jpg`
+- `immagini/luoghi/<slug>.jpg`
+- `immagini/eventi/sessione-NNN/<slug-evento>.jpg`
+- `immagini/varie/<slug>.jpg` per asset non ancora collegati a un file Markdown di riferimento
 
 Lo `slug` deve seguire, quando possibile, il nome del file Markdown corrispondente:
 
-- `personaggi/dora-l-esploratrice.md` -> `immagini/personaggi/dora-l-esploratrice.png`
-- `png/andrew-carver.md` -> `immagini/png/andrew-carver.png`
-- `ambientazione/luoghi/valdoren.md` -> `immagini/luoghi/valdoren.png`
-- `resoconti/sessione-006.md` -> `immagini/eventi/sessione-006/dora-e-dorothy-in-accampamento.png`
+- `personaggi/dora-l-esploratrice.md` -> `immagini/personaggi/dora-l-esploratrice.jpg`
+- `png/andrew-carver.md` -> `immagini/png/andrew-carver.jpg`
+- `ambientazione/luoghi/valdoren.md` -> `immagini/luoghi/valdoren.jpg`
+- `resoconti/sessione-006.md` -> `immagini/eventi/sessione-006/dora-e-dorothy-in-accampamento.jpg`
+
+## Normalizzazione
+
+Gli asset nel repository devono essere **JPEG** (`.jpg`) con **lato piu` lungo al massimo 1920 px**. Per import o batch usare la rule Cursor `importa-immagine` e lo script `python3 scripts/normalize_image_assets.py` (opzione `--dry-run` per anteprima). Dopo la normalizzazione i link nei Markdown usano sempre `/immagini/.../slug.jpg`.
 
 ## Sezioni da usare nei Markdown
 
@@ -32,7 +36,7 @@ Esempio per un personaggio:
 ```markdown
 ## Immagine
 
-![Ritratto di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.png)
+![Ritratto di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.jpg)
 
 *Ritratto di Dora l'Esploratrice.*
 ```
@@ -42,7 +46,7 @@ Esempio per un luogo:
 ```markdown
 ## Immagine
 
-![Veduta di Valdoren](/immagini/luoghi/valdoren.png)
+![Veduta di Valdoren](/immagini/luoghi/valdoren.jpg)
 
 *Veduta di Valdoren.*
 ```
@@ -66,7 +70,7 @@ Esempio:
 
 ### Dora e Dorothy nell'accampamento
 
-![Dora veglia su Dorothy Mercer nell'accampamento notturno](/immagini/eventi/sessione-006/dora-e-dorothy-in-accampamento.png)
+![Dora veglia su Dorothy Mercer nell'accampamento notturno](/immagini/eventi/sessione-006/dora-e-dorothy-in-accampamento.jpg)
 
 *Dora resta accanto a Dorothy Mercer nell'accampamento notturno dopo la strage alla Fattoria Mercer.*
 ```

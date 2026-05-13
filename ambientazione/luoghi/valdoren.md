@@ -6,7 +6,7 @@
 
 ## Immagine
 
-![Veduta di Valdoren](/immagini/luoghi/valdoren.png)
+![Veduta di Valdoren](/immagini/luoghi/valdoren.jpg)
 
 *Veduta di Valdoren.*
 

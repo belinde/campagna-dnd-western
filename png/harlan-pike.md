@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Harlan Pike](/immagini/png/harlan-pike.png)
+![Ritratto di Harlan Pike](/immagini/png/harlan-pike.jpg)
 
 *Ritratto di Harlan Pike.*
 

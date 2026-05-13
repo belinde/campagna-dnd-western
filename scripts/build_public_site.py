@@ -23,7 +23,7 @@ except ImportError:
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MANIFEST = REPO_ROOT / "pubblicazione" / "manifest.json"
-HOME_HERO_ASSET = "immagini/varie/gruppo-pg-carovana.png"
+HOME_HERO_ASSET = "immagini/varie/gruppo-pg-carovana.jpg"
 HOME_HERO_PUBLIC_PATH = "/immagini/varie/gruppo-pg-carovana.jpg"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((/immagini/[^)\s]+)\)")
@@ -45,11 +45,6 @@ THUMB_PORTRAIT_W = 280
 THUMB_PORTRAIT_H = 373
 THUMB_JPEG_QUALITY = 82
 EXCERPT_MAX_LEN = 280
-
-PUBLIC_IMAGE_MAX_W = 1920
-PUBLIC_IMAGE_MAX_H = 1024
-PUBLIC_JPEG_QUALITY = 85
-RASTER_EXTENSIONS_FOR_JPEG_EXPORT = frozenset({".png", ".jpg", ".jpeg", ".webp"})
 
 
 @dataclass(frozen=True)
@@ -1304,72 +1299,6 @@ def copy_asset(relative_asset_path: str, output_dir: Path) -> None:
     shutil.copy2(source_path, destination)
 
 
-def should_export_as_optimized_jpeg(relative_asset_path: str) -> bool:
-    if not HAS_PILLOW:
-        return False
-    return Path(relative_asset_path).suffix.lower() in RASTER_EXTENSIONS_FOR_JPEG_EXPORT
-
-
-def export_public_image(relative_asset_path: str, output_dir: Path) -> str:
-    """Scrive l'asset in output. Ritorna il path relativo posix effettivo (es. immagini/foo.jpg)."""
-    source_path = REPO_ROOT / relative_asset_path
-    if not source_path.exists():
-        raise FileNotFoundError(f"Asset referenziato ma non trovato: {relative_asset_path}")
-
-    if not should_export_as_optimized_jpeg(relative_asset_path):
-        copy_asset(relative_asset_path, output_dir)
-        return relative_asset_path
-
-    dest_rel = Path(relative_asset_path).with_suffix(".jpg").as_posix()
-    destination = output_dir / dest_rel
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    try:
-        with Image.open(source_path) as im:
-            if im.mode in ("RGBA", "P"):
-                rgba = im.convert("RGBA")
-                background = Image.new("RGB", rgba.size, (255, 255, 255))
-                background.paste(rgba, mask=rgba.split()[3])
-                im_rgb = background
-            elif im.mode != "RGB":
-                im_rgb = im.convert("RGB")
-            else:
-                im_rgb = im
-            im_rgb = im_rgb.copy()
-            im_rgb.thumbnail(
-                (PUBLIC_IMAGE_MAX_W, PUBLIC_IMAGE_MAX_H),
-                Image.Resampling.LANCZOS,
-            )
-            im_rgb.save(
-                destination,
-                format="JPEG",
-                quality=PUBLIC_JPEG_QUALITY,
-                optimize=True,
-                progressive=True,
-            )
-        return dest_rel
-    except OSError:
-        if destination.exists():
-            try:
-                destination.unlink()
-            except OSError:
-                pass
-        copy_asset(relative_asset_path, output_dir)
-        return relative_asset_path
-
-
-def rewrite_export_image_paths(markdown_text: str, asset_export_map: dict[str, str]) -> str:
-    """Sostituisce nei tag Liquid i path /immagini/... originali con quelli effettivamente esportati."""
-    result = markdown_text
-    replacements = sorted(
-        ((src, dst) for src, dst in asset_export_map.items() if src != dst),
-        key=lambda item: len(item[0]),
-        reverse=True,
-    )
-    for src, dst in replacements:
-        result = result.replace("'/" + src + "'", "'/" + dst + "'")
-    return result
-
-
 def prepare_pages(entries: list[PageEntry], blocked_headings: set[str]) -> list[PreparedPage]:
     prepared_pages: list[PreparedPage] = []
 
@@ -1434,20 +1363,18 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
     if not HAS_PILLOW:
         print(
             "Avviso: Pillow non installato (pip install -r scripts/requirements-public-site.txt); "
-            "nessuna thumbnail generata; le immagini a piena risoluzione non vengono convertite in JPEG; "
-            "le card useranno il segnaposto.",
+            "nessuna thumbnail generata; le card useranno il segnaposto.",
             file=sys.stderr,
         )
 
     referenced_assets.add(HOME_HERO_ASSET)
 
-    asset_export_map: dict[str, str] = {}
     for asset in sorted(referenced_assets):
-        asset_export_map[asset] = export_public_image(asset, output_dir)
+        copy_asset(asset, output_dir)
         write_thumbnail_for_asset(asset, output_dir)
 
     for destination, entry, title, body in pending_page_writes:
-        body_pub = rewrite_export_image_paths(body, asset_export_map)
+        body_pub = body
         og_image = first_og_image_path_from_body(body_pub)
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(

@@ -10,7 +10,7 @@ Gli ultimi giorni di navigazione sulla *Ben Campbell* portano con sé due incont
 
 ### Consegna della taglia
 
-![Consegna di Sam Crow allo sceriffo di Valdoren](/immagini/eventi/sessione-003/consegna-taglia-a-valdoren.png)
+![Consegna di Sam Crow allo sceriffo di Valdoren](/immagini/eventi/sessione-003/consegna-taglia-a-valdoren.jpg)
 
 *Lo sceriffo di Valdoren conta i cinquanta dollari della taglia mentre Sam Crow viene consegnato in catene.*
 

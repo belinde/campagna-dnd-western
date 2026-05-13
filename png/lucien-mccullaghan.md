@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Lucien McCullaghan](/immagini/png/lucien-mccullaghan.png)
+![Ritratto di Lucien McCullaghan](/immagini/png/lucien-mccullaghan.jpg)
 
 *Ritratto di Lucien McCullaghan.*
 

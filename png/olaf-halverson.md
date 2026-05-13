@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Olaf Halverson](/immagini/png/olaf-halverson.png)
+![Ritratto di Olaf Halverson](/immagini/png/olaf-halverson.jpg)
 
 *Ritratto di Olaf Halverson.*
 

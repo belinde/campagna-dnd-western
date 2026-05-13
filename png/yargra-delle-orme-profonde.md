@@ -5,7 +5,9 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Yargra delle Orme Profonde](/immagini/png/yargra-delle-orme-profonde.jpg)
+
+*Ritratto di Yargra delle Orme Profonde.*
 
 ## Aspetto
 

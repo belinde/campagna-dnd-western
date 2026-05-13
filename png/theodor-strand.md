@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Theodor Strand](/immagini/png/theodor-strand.png)
+![Ritratto di Theodor Strand](/immagini/png/theodor-strand.jpg)
 
 *Ritratto di Theodor Strand.*
 

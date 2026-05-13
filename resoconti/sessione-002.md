@@ -10,7 +10,7 @@ La notte sulla *Ben Campbell* si spezza con un grido femminile proveniente dalle
 
 ### Il colpo sul Mississippi
 
-![Thomas Caldwell sul ponte della Ben Campbell mentre spara al fratello Crow in fuga nel Mississippi](/immagini/eventi/sessione-002/colpo-sul-mississippi.png)
+![Thomas Caldwell sul ponte della Ben Campbell mentre spara al fratello Crow in fuga nel Mississippi](/immagini/eventi/sessione-002/colpo-sul-mississippi.jpg)
 
 *Thomas Caldwell abbatte il secondo fratello Crow mentre tenta di raggiungere la barchetta senza luci che segue la* Ben Campbell *nel buio del Grande Fiume.*
 

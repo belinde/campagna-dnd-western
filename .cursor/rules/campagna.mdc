@@ -65,10 +65,10 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 - `ambientazione/concetti/nome-concetto.md` (es. `ambientazione/concetti/tecnomagia.md`)
 - `personaggi/nome-personaggio.md` (es. `personaggi/aldric-il-grigio.md`)
 - `png/nome-png.md` (es. `png/dorvek-il-silenzioso.md`)
-- `immagini/personaggi/nome-personaggio.png` (o altra estensione immagine coerente) per i ritratti dei PG
-- `immagini/png/nome-png.png` (o altra estensione immagine coerente) per i ritratti dei PNG
-- `immagini/luoghi/nome-luogo.png` (o altra estensione immagine coerente) per le vedute dei luoghi
-- `immagini/eventi/sessione-001/nome-evento.png` per le scene salienti associate a un resoconto
+- `immagini/personaggi/nome-personaggio.jpg` (JPEG) per i ritratti dei PG
+- `immagini/png/nome-png.jpg` (JPEG) per i ritratti dei PNG
+- `immagini/luoghi/nome-luogo.jpg` (JPEG) per le vedute dei luoghi
+- `immagini/eventi/sessione-001/nome-evento.jpg` per le scene salienti associate a un resoconto
 - `resoconti/sessione-001.md`, `resoconti/sessione-002.md`, ecc. (tre cifre con zero padding)
 - `sessione/png-nome.md`, `sessione/luogo-nome.md`, `sessione/nota-argomento.md`, `sessione/incontro-nome.md` (file temporanei con prefisso di tipo)
 - `spunti/nome-idea.md` (nomi liberi, senza prefisso di tipo)

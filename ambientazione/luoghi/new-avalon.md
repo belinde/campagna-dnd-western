@@ -6,7 +6,7 @@
 
 ## Immagine
 
-![Veduta di New Avalon](/immagini/luoghi/new-avalon.png)
+![Veduta di New Avalon](/immagini/luoghi/new-avalon.jpg)
 
 *Veduta di New Avalon.*
 

@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Andrew Carver](/immagini/png/andrew-carver.png)
+![Ritratto di Andrew Carver](/immagini/png/andrew-carver.jpg)
 
 *Ritratto di Andrew Carver.*
 

@@ -10,7 +10,7 @@ Dopo aver lasciato la Fattoria Mercer, la carovana di Hector Brannagh riprende i
 
 ### La strage dei branchi
 
-![Leman Russ davanti ai cadaveri dei bisonti massacrati nella prateria](/immagini/eventi/sessione-007/leman-scopre-la-strage-dei-bisonti.png)
+![Leman Russ davanti ai cadaveri dei bisonti massacrati nella prateria](/immagini/eventi/sessione-007/leman-scopre-la-strage-dei-bisonti.jpg)
 
 *Leman Russ scopre nella prateria i resti della strage dei bisonti e comprende che la Frontiera sta gia' divorando i suoi branchi.*
 

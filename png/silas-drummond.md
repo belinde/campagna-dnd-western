@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Silas Drummond](/immagini/png/silas-drummond.png)
+![Ritratto di Silas Drummond](/immagini/png/silas-drummond.jpg)
 
 *Ritratto di Silas Drummond.*
 

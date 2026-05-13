@@ -10,7 +10,7 @@ Usciti dall'ufficio dello sceriffo con la taglia in tasca, il gruppo si orienta 
 
 ### La carovana di Brannagh
 
-![Carovana in allestimento ai margini di Valdoren](/immagini/eventi/sessione-004/primo-incontro-con-la-carovana.png)
+![Carovana in allestimento ai margini di Valdoren](/immagini/eventi/sessione-004/primo-incontro-con-la-carovana.jpg)
 
 *La carovana di Hector Brannagh in allestimento nella pianura appena oltre le ultime case di Valdoren.*
 

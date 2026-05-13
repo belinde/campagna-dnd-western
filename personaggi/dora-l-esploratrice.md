@@ -7,7 +7,7 @@
 
 ## Immagine
 
-![Ritratto di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.png)
+![Ritratto di Dora l'Esploratrice](/immagini/personaggi/dora-l-esploratrice.jpg)
 
 *Ritratto di Dora l'Esploratrice.*
 

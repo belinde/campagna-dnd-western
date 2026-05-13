@@ -10,13 +10,13 @@ La scena alla Fattoria Mercer si conclude: **Kelvor Rivib** ricostruisce la dina
 
 ### Dora e Dorothy nell'accampamento
 
-![Dora l'Esploratrice veglia su Dorothy Mercer nell'accampamento notturno](/immagini/eventi/sessione-006/dora-e-dorothy-in-accampamento.png)
+![Dora l'Esploratrice veglia su Dorothy Mercer nell'accampamento notturno](/immagini/eventi/sessione-006/dora-e-dorothy-in-accampamento.jpg)
 
 *Dora resta accanto a Dorothy Mercer nell'accampamento notturno dopo la strage alla Fattoria Mercer.*
 
 ### Kelvor sotterra i Mercer
 
-![Kelvor Rivib scava la fossa per Henry e Martha Mercer alla fattoria](/immagini/eventi/sessione-006/kelvor-sotterra-i-mercer.jpeg)
+![Kelvor Rivib scava la fossa per Henry e Martha Mercer alla fattoria](/immagini/eventi/sessione-006/kelvor-sotterra-i-mercer.jpg)
 
 *Kelvor Rivib seppellisce Henry e Martha Mercer alla Fattoria Mercer dopo l'assalto dei briganti.*
 

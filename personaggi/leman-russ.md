@@ -7,7 +7,7 @@
 
 ## Immagine
 
-![Ritratto di Leman Russ](/immagini/personaggi/leman-russ.jpeg)
+![Ritratto di Leman Russ](/immagini/personaggi/leman-russ.jpg)
 
 *Ritratto di Leman Russ.*
 

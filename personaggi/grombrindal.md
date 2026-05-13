@@ -7,7 +7,7 @@
 
 ## Immagine
 
-![Ritratto di Grombrindal](/immagini/personaggi/grombrindal.jpeg)
+![Ritratto di Grombrindal](/immagini/personaggi/grombrindal.jpg)
 
 *Ritratto di Grombrindal.*
 

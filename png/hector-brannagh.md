@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Hector Brannagh](/immagini/png/hector-brannagh.png)
+![Ritratto di Hector Brannagh](/immagini/png/hector-brannagh.jpg)
 
 *Ritratto di Hector Brannagh.*
 

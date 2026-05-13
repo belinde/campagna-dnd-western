@@ -7,7 +7,7 @@
 
 ## Immagine
 
-![Ritratto di Gud Bender](/immagini/personaggi/gud-bender.jpeg)
+![Ritratto di Gud Bender](/immagini/personaggi/gud-bender.jpg)
 
 *Ritratto di Gud Bender.*
 

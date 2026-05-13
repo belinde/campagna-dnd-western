@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Mae Barlow](/immagini/png/mae-barlow.png)
+![Ritratto di Mae Barlow](/immagini/png/mae-barlow.jpg)
 
 *Ritratto di Mae Barlow.*
 

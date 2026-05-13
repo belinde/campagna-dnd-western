@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Sam Crow](/immagini/png/sam-crow.png)
+![Ritratto di Sam Crow](/immagini/png/sam-crow.jpg)
 
 *Ritratto di Sam Crow.*
 

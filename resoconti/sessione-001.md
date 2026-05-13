@@ -10,7 +10,7 @@ I cinque avventurieri convergono su New Avalon da percorsi diversi, accomunati d
 
 ### Il grido nella notte
 
-![Dora e Leman sul ponte della Ben Campbell mentre una barca senza luci segue il battello nel buio](/immagini/eventi/sessione-001/grido-nella-notte-sulla-ben-campbell.png)
+![Dora e Leman sul ponte della Ben Campbell mentre una barca senza luci segue il battello nel buio](/immagini/eventi/sessione-001/grido-nella-notte-sulla-ben-campbell.jpg)
 
 *Dora e Leman sul ponte della* Ben Campbell *mentre una barca senza luci la segue nel buio del Grande Fiume.*
 

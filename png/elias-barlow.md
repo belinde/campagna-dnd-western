@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Elias Barlow](/immagini/png/elias-barlow.png)
+![Ritratto di Elias Barlow](/immagini/png/elias-barlow.jpg)
 
 *Ritratto di Elias Barlow.*
 

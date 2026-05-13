@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Ruth Barlow](/immagini/png/ruth-barlow.png)
+![Ritratto di Ruth Barlow](/immagini/png/ruth-barlow.jpg)
 
 *Ritratto di Ruth Barlow.*
 

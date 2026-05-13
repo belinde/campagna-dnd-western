@@ -5,7 +5,7 @@
 
 ## Immagine
 
-![Ritratto di Abigail Rooke](/immagini/png/abigail-rooke.png)
+![Ritratto di Abigail Rooke](/immagini/png/abigail-rooke.jpg)
 
 *Ritratto di Abigail Rooke.*
 

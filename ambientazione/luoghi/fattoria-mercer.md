@@ -6,7 +6,7 @@
 
 ## Immagine
 
-![Veduta della Fattoria Mercer](/immagini/luoghi/fattoria-mercer.png)
+![Veduta della Fattoria Mercer](/immagini/luoghi/fattoria-mercer.jpg)
 
 *Veduta della Fattoria Mercer.*
 

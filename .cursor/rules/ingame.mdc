@@ -112,7 +112,7 @@ _Nessuna immagine ancora associata._
 ## Note DM
 ```
 
-Se esiste gia` una veduta del luogo in `immagini/luoghi/`, sostituire la nota con `![Veduta di Nome Luogo](/immagini/luoghi/nome-luogo.png)` oppure con l'estensione corretta.
+Se esiste gia` una veduta del luogo in `immagini/luoghi/`, sostituire la nota con `![Veduta di Nome Luogo](/immagini/luoghi/nome-luogo.jpg)`.
 
 ## Note ed eventi di sessione
 

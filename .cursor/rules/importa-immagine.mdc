@@ -56,19 +56,31 @@ Se il DM apre un file in `sessione/`, non fissare da solo il numero di sessione 
 
 Usa questi path:
 
-- `immagini/personaggi/<slug>.<ext>` per i PG
-- `immagini/png/<slug>.<ext>` per i PNG
-- `immagini/luoghi/<slug>.<ext>` per i luoghi
-- `immagini/eventi/sessione-NNN/<slug-evento>.<ext>` per le scene di sessione
+- `immagini/personaggi/<slug>.jpg` per i PG
+- `immagini/png/<slug>.jpg` per i PNG
+- `immagini/luoghi/<slug>.jpg` per i luoghi
+- `immagini/eventi/sessione-NNN/<slug-evento>.jpg` per le scene di sessione
 
 Regole pratiche:
 
 - Per PG, PNG e luoghi usa di norma lo slug del file Markdown di destinazione.
 - Per le scene usa uno slug breve e descrittivo basato sull'evento mostrato.
-- Mantieni l'estensione originale del file, salvo richiesta esplicita del DM.
+- L'estensione finale nel repository e` sempre `.jpg` dopo la normalizzazione (vedi sotto), salvo richiesta esplicita del DM.
 - Se il file e` gia` nel percorso corretto, non duplicarlo.
 - Se il path di destinazione e` gia` occupato da un asset diverso, fermati e chiedi come procedere prima di sovrascrivere.
 - Usa `immagini/varie/` solo se il DM lo chiede esplicitamente oppure se non esiste ancora un file Markdown collegato a cui agganciare l'asset.
+
+## Normalizzazione asset
+
+Prima di considerare l'import concluso, l'asset nel repository deve essere **JPEG** (`.jpg`), con **lato piu` lungo al massimo 1920 px** (rapporto d'aspetto invariato) e qualita` circa **85** (progressive), salvo richiesta esplicita del DM.
+
+- **PNG / WebP** (e altri raster non JPEG): converti in JPEG; se c'e` trasparenza, appiattisci su **fondo bianco**; riduci se `max(larghezza, altezza) > 1920`; elimina il file sorgente dopo aver scritto `<slug>.jpg`.
+- **JPEG con lato lungo > 1920**: riduci e salva come `<slug>.jpg` con qualita` ~85; elimina la sorgente se l'estensione o il nome cambiano.
+- **JPEG con lato lungo <= 1920**: **solo rinomina** a `.jpg` (es. `.jpeg` -> `.jpg`) **senza ricompressione**; se e` gia` `.jpg` al path corretto, non toccare i pixel.
+
+L'operazione e` **idempotente**: se il file e` gia` JPEG `.jpg` con vincolo rispettato nel path previsto, non modificarlo.
+
+Per automatizzare: `python3 scripts/normalize_image_assets.py <path-asset-o-cartella>` (opzione `--dry-run` per anteprima). Dopo conversioni/rinomine, lo script puo` aggiornare i riferimenti `/immagini/...` nei Markdown del repository.
 
 ## Aggiornamento del Markdown
 
@@ -83,7 +95,7 @@ Formato:
 ```markdown
 ## Immagine
 
-![Ritratto di Nome](/immagini/personaggi/nome.png)
+![Ritratto di Nome](/immagini/personaggi/nome.jpg)
 
 *Ritratto di Nome.*
 ```
@@ -93,7 +105,7 @@ Per i luoghi:
 ```markdown
 ## Immagine
 
-![Veduta di Nome Luogo](/immagini/luoghi/nome-luogo.png)
+![Veduta di Nome Luogo](/immagini/luoghi/nome-luogo.jpg)
 
 *Veduta di Nome Luogo.*
 ```
@@ -115,7 +127,7 @@ Formato:
 
 ### Titolo breve della scena
 
-![Descrizione breve della scena](/immagini/eventi/sessione-NNN/slug-evento.png)
+![Descrizione breve della scena](/immagini/eventi/sessione-NNN/slug-evento.jpg)
 
 *Didascalia breve che descrive solo elementi gia` presenti nel resoconto.*
 ```
@@ -134,9 +146,10 @@ Quando il DM chiede di importare un'immagine:
 1. identifica il file Markdown da aggiornare;
 2. determina il tipo immagine e il percorso sotto `immagini/`;
 3. sposta o rinomina l'asset nel path giusto, senza lasciarne una copia nella posizione originale;
-4. aggiorna il Markdown con il link `/immagini/...` corretto;
-5. evita duplicati, placeholder residui o sezioni ripetute;
-6. conferma al DM il path finale dell'asset e il file Markdown aggiornato.
+4. normalizza l'asset a JPEG `.jpg` con lato lungo <= 1920 px (o esegui `python3 scripts/normalize_image_assets.py` sul path);
+5. aggiorna il Markdown con il link `/immagini/...` corretto (estensione `.jpg`);
+6. evita duplicati, placeholder residui o sezioni ripetute;
+7. conferma al DM il path finale dell'asset e il file Markdown aggiornato.
 
 ## Quando fermarsi e chiedere
 

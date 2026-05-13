@@ -7,7 +7,7 @@
 
 ## Immagine
 
-![Ritratto di Kelvor Rivib](/immagini/personaggi/kelvor-rivib.jpeg)
+![Ritratto di Kelvor Rivib](/immagini/personaggi/kelvor-rivib.jpg)
 
 *Ritratto di Kelvor Rivib.*
 

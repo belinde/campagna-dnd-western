@@ -20,10 +20,10 @@ Lo script genera una **sidebar** con le sezioni Home, Personaggi, Resoconti, PNG
 
 Per ogni immagine referenziata nelle pagine pubbliche, lo script:
 
-1. scrive nell'output una **versione a schermo** in JPEG (dimensione massima contenuta in 1920×1024 px, rapporto invariato, compressione moderata), con estensione `.jpg`; i file sorgente nel repository restano invariati (es. `.png`), mentre le pagine generate puntano ai JPEG prodotti in fase di build;
+1. **copia** nell'output l'asset cosi` com'e` nel repository (formato canonico: JPEG `.jpg`, lato lungo gia` limitato a 1920 px in fase di import/normalizzazione);
 2. genera una **miniatura** in `immagini/thumbs/` (stessa gerarchia relativa, JPEG, max ~320px sul lato lungo) usata dalle card degli indici.
 
-Serve **Pillow** (`scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso: le immagini vengono copiate senza ottimizzazione JPEG e le card mostrano un segnaposto al posto dell'immagine.
+Serve **Pillow** (`scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso: le immagini a piena risoluzione vengono comunque copiate, ma **nessuna thumbnail** viene generata e le card useranno un segnaposto.
 
 ## Cosa non viene mai pubblicato direttamente
 
