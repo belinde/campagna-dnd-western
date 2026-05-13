@@ -5,11 +5,13 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Sam Crow](/immagini/png/sam-crow.png)
+
+*Ritratto di Sam Crow.*
 
 ## Aspetto
 
-Uomo sulla cinquantina, asciutto e nervoso come un gatto sul tetto. Baffi folti e scuri, curati con una cura sproporzionata rispetto al resto del suo aspetto trasandato. Indossa sempre un cappello da cowboy a tesa larga calato basso sugli occhi, e si muove rasente alle pareti, come se i muri fossero suoi alleati.
+Uomo sulla cinquantina, asciutto e nervoso come un gatto sul tetto, con la faccia segnata dal sole e dalle strade. Ha baffi folti e scuri, larghi a manubrio, curati con una precisione quasi ridicola rispetto al resto dell’aspetto trasandato — come se fossero l’unica cosa che conta ancora sul manifesto. Sotto il cappello da cowboy a tesa larga, feltro scolorito dal sole, spuntano ciocche scure e arruffate; il teso getta ombra sulla fronte ma non basta a nascondere uno sguardo profondo, fisso, da chi ha già deciso se sei preda o ostacolo. Al collo porta spesso una bandana scura con un motivo chiaro a puntini, annodata sopra una camicia o una giacca pesante di lana scura, ruvida, da lavoro o da notte in sella. Quando scatta la violenza, impugna la rivoltella tecnomagica con entrambe le mani e la punta dritta verso il bersaglio, canna quasi nel primo piano, come a voler bucare lo sguardo prima ancora del piombo. In circostanze ordinarie si muove rasente alle pareti, come se i muri fossero suoi alleati.
 
 ## Personalità
 

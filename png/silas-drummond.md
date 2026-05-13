@@ -5,11 +5,17 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Silas Drummond](/immagini/png/silas-drummond.png)
+
+*Ritratto di Silas Drummond.*
 
 ## Aspetto
 
-Uomo sulla cinquantina, alto e leggermente appesantito dagli anni passati dietro una scrivania più che in sella. Baffi grigi folti, stempiatura avanzata, occhi stanchi da chi ha visto troppe facce mentire. La stella di sceriffo è appuntata su una giacca che un tempo era elegante. La rivoltella al fianco è consumata dall'uso, non dall'ornamento.
+Uomo sulla cinquantina, **alto** rispetto alla media e con il busto leggermente appesantito e molle negli anni — da chi ha passato più tempo tra registri e panche del tribunale che in sella — ma ancora dritto nelle spalle, con una presenza che impone rispetto senza alzare la voce. Stempiatura avanzata, capelli radi e grigi sulle tempie, **baffi grigi folti** a manubrio, curati con orgoglio antiquato. Gli occhi sono infossati e stanchi, da chi ha ascoltato troppe bugie; lo sguardo resta lucido, misurato, quasi noioso nella precisione.
+
+Indossa un **soprabito** di lana scura — blu notte o carbone — dal taglio un tempo elegante, oggi un po’ liso ai gomiti e al colletto, con rinforzi in cuoio dove la stoffa ha ceduto al banco. Sotto, **panciotto** in tessuto tweed spento e **camicia** grigia dal colletto rigido; una **catenella da orologio** attraversa il petto come unico vezzo rimasto sobrio. Sul petto, la **stellina da sceriffo federale** in metallo opaco, ben visibile. Cinturone e **fondina** basse sui fianchi; la **rivoltella federale** ha calcio e metallo **consumati dall’uso quotidiano**, non lucidi da parata — arma da lavoro, non da cerimonia. In piedi o seduto dietro la scrivania, la mano destra tende a restare in zona della fondina senza ostentazione.
+
+Nei suoi ambienti di lavoro — ufficio dello sceriffo, anticamera del tribunale — si ritrova tra **legno scuro**, **schedari**, **scrivania** ingombra di fogli, registri e calamai; sulle pareti, **manifesti da taglia** e avvisi federali appuntati con spilli, polvere fine nella luce obliqua che entra da una finestra con **tenda ingiallita**.
 
 ## Personalità
 

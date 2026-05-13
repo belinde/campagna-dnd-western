@@ -5,11 +5,15 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Thomas Caldwell](/immagini/png/thomas-caldwell.png)
+
+*Ritratto di Thomas Caldwell.*
 
 ## Aspetto
 
-Uomo di mezza età, corporatura solida, spalle larghe da chi ha passato anni sul ponte di una nave. Capelli scuri striati di grigio, tenuti corti e ordinati. Veste l'uniforme della steamboat con la naturalezza di chi non ha mai avuto bisogno di altro per farsi rispettare. La rivoltella al fianco non è un ornamento.
+Uomo di **mezza età**, **corporatura solida** e spalle larghe da anni passati sul ponte: non è un gigante, ma occupa lo spazio come una bita. **Capelli scuri striati di grigio**, tagliati corti e **ordinati**; mascella **quadrata**, lineamenti **consumati dal vento e dal comando**, sguardo che resta **freddo e laterale** quando valuta un pericolo — il profilo da chi ha già deciso se tirerà.
+
+Indossa la **divisa da primo ufficiale** della steamboat: **soprabito doppiopetto** blu notte o nero, **due file di bottoni d’ottone** ben lucidati, **galoni dorati** sulle maniche sopra i polsi; **berretto da ufficiale** con visiera, **laccio dorato** sotto il mento e **insegna** al centro. La **rivoltella di servizio** tecnomagica ha **canna lunga** da tiro sul fiume; in situazioni estreme la impugna con la mano ferma del timoniere, **canne ancora imbiancate dal fumo** quando il colpo è appena partito. Sul ponte bagnato, tra **cordame** e **vapore** che esce dal camino, la sagoma taglia il buio come un **richiamo di legge** — non ha mai avuto bisogno d’altro per farsi obbedire.
 
 ## Personalità
 

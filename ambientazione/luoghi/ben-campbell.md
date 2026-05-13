@@ -10,6 +10,12 @@
 
 *Veduta della* Ben Campbell *in navigazione sul Grande Fiume.*
 
+### Progetto costruttivo
+
+![Progetto costruttivo della Ben Campbell](/immagini/luoghi/ben-campbell-progetto.png)
+
+*Progetto costruttivo della* Ben Campbell.
+
 ## Descrizione generale
 
 La *Ben Campbell* è un **sidewheel packet** a vapore, un battello fluviale a ruote laterali in servizio sul Grande Fiume tra New Avalon e Valdoren, con prosecuzioni stagionali verso i porti del Middle West settentrionale. Appartiene alla classe dei *packet*, i battelli che trasportano insieme passeggeri, merci e posta federale: tre carichi diversi che condividono lo stesso scafo e che ne fanno, in pratica, un piccolo pezzo di territorio federale che si sposta lungo la corrente.

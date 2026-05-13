@@ -5,7 +5,9 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Anthony Gillian](/immagini/png/anthony-gillian.png)
+
+*Ritratto di Anthony Gillian.*
 
 ## Aspetto
 

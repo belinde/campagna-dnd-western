@@ -52,6 +52,8 @@ Nella narrativa coloniale dominante, gli orchi sono bestie da civilizzare o da e
 
 La realtà è che i clan orcheschi delle Terre Selvagge hanno strutture sociali complesse, tradizioni orali ricche, e una conoscenza del territorio che i cartografi federali pagherebbero molto per ottenere — preferibilmente senza dover trattare con chi la detiene.
 
+Per corporatura, cromia, zanne, abiti e monili dei clan (e per coerenza con illustrazioni o strumenti di generazione immagini), vedi [orchi-aspetto-e-cultura-materiale.md](orchi-aspetto-e-cultura-materiale.md).
+
 ### Mezzelfi
 
 I mezzelfi sono il prodotto di due secoli di convivenza ravvicinata tra elfi e umani nel Nuovo Mondo. Non sono rari — nelle città costiere di medie dimensioni si incontra almeno un mezzelfo ogni qualche isolato — ma la loro posizione sociale rimane ambigua in un modo che nessuna legge ha mai davvero risolto.

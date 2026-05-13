@@ -11,7 +11,11 @@
 
 ## Aspetto
 
-Magro, con il passo lungo e misurato di chi è abituato a percorrere distanze. Veste in modo comodo e pulito — l'essenziale, ben tenuto.
+Elfo sulla trentina, **slanciato e alto** rispetto a molti umani, ma **magro e asciutto** come un corridore di pianura: passo lungo e misurato, spalle strette, mani callose. Orecchie appuntite ben visibili tra i capelli **biondo sabbia o castano chiaro**, tagliati corti e portati indietro, spettinati dal vento. Lineamenti affilati, zigomi alti, sguardo fisso verso l’orizzonte più che sul volto altrui; una **leggera ombra sul mascellare** — raro tratto, che la strada ha indurito più della cortesia elfica.
+
+Veste per il lavoro: **duster** o soprabito di cuoio e tela **marrone scuro**, logoro e **impolverato dai sentieri**, con collo largo; sotto, **camicia chiara** abbottonata in modo sommario sul petto e **fazzoletto** o bandana scura annodata al collo. **Pantaloni** color terra, macchiati di polvere ai ginocchi, infilati in **stivali** di cuoio consumati. **Guanti** da tiro senza dita, **cinturone** largo con fibbia massiccia, **taschini** per munizioni e strumenti, **banda** di cuoio in diagonale sul petto. Impugna con naturalezza un **fucile da caccia tecnomagico** tipo leva, canna appoggiata al fianco mentre controlla il terreno. Accanto a lui la **cavalcatura**, sella su cui stende spesso una **carta stradale** — vi ci appoggia la mano come fosse un altare, coerente col suo debole per le mappe ben fatte.
+
+Non è trasandato: è **ordinato dentro il disordine della marcia** — ogni fibbia al posto, ogni piega del mantello frutto di abitudine, ma la polvere del giorno resta addosso finché non fa tappa.
 
 ## Personalità
 

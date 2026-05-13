@@ -1,6 +1,6 @@
 # Yargra delle Orme Profonde
 
-**Razza/Classe:** Orca / Druida
+**Razza/Classe:** Orco / Druida
 **Ruolo:** Sciamana e mediatrice del Clan delle Orme Profonde
 
 ## Immagine
@@ -9,7 +9,11 @@ _Nessuna immagine ancora associata._
 
 ## Aspetto
 
-Orca non più giovane, robusta senza essere imponente, con il volto segnato dal vento delle pianure e da sottili linee d'ocra agli zigomi. Porta i capelli intrecciati con strisce di cuoio, semi secchi e piccoli frammenti d'osso levigato. Il suo mantello è cucito con pelle vissuta e rattoppata più volte; quando cammina, sembra seguire un sentiero che gli altri non vedono.
+**Orco** sulla mezza età: **più alta della media umana** e con **ossatura larga**, **mani grandi**, busto e polsi **robusti** — corporatura da **clan delle pianure**, senza la **mole slanciata e alta** delle guerriere più giovani, che sembrano lance; Yargra ha **massa** e **spalle** che tengono ferme le trattative più che la velocità di corsa. La **pelle** è **grigia con toni verdastri**, lurida di **sole, polvere e cenere** fino a **strati bruno-oliva** su zigomi e nuca; resta nell’intervallo **grigio-verde** del popolo, mai un verde saturo da cartone. **Orecchie appuntite**, inclinate all’indietro; **zanne corte**, ben curate, che non invadono il labbro quando parla piano. Il **volto** è segnato dal **vento delle pianure** e da **sottili linee d’ocra** agli **zigomi**, come mappe disegnate col dito; gli **occhi**, scuri e poco luminosi, restano **fermi** anche quando tutto intorno accelera.
+
+I **capelli**, **grigi e neri** intrecciati con **strisce di cuoio**, **semi secchi** e **frammenti d’osso levigato** — ogni treccia come un promemoria di stagione o di sentiero. Al collo e ai polsi, **anelli** di **osso** e **legno scuro**; nulla che tintinni come metallo da mercato. Il **mantello** è cucito con **pelli vissute**, **rattoppate** più volte con ago grosso e filo cerato, bordi **frangiati** da rovi e da notti a cielo aperto; sotto si intravedono **strati** di **tunica** color **terra cotta** e **cenere**. Ai piedi, **calzari** di cuoio morbido, **suole** lisce come se camminasse sempre sullo stesso tipo di terra. Quando si muove, il peso **non cade rumoroso**: i passi **misurano** il terreno come chi **sente ancora** il solco lasciato dalle **orme** del branchio, e il **bastone nodoso** che regge — liscio all’impugnatura per il sudore e l’uso — sembra un prolungamento del braccio più che un’arma in mostra.
+
+Da vicino si notano **unghie corte** sporche di **terra asciutta**, **calli** tra pollice e indice da **fionda** e da **corde**, e ogni tanto un **odore** tenue di **fumo dolce**, **erba secca** e **cuoio bagnato** — il profilo di chi vive tra **pozze**, **guadi** e **corridoi migratori** più che tra le assi delle città.
 
 ## Personalità
 
@@ -22,6 +26,8 @@ Non ha ancora incontrato il gruppo, ma tra i membri della carovana vedrebbe subi
 Se entra in scena, lo farà probabilmente con una richiesta precisa: non aiuto militare immediato, ma **testimoni**.
 
 ## Note DM
+
+Canon visivo e cultura materiale degli orchi: [orchi-aspetto-e-cultura-materiale.md](../ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md).
 
 Yargra appartiene al **Clan delle Orme Profonde**, una comunità orchesca che conosce corridoi migratori, luoghi di parto dei bisonti, depressioni fangose e pozze stagionali della pianura occidentale. È tra i pochi nel clan che credono ancora possibile costringere i coloni a vedere il problema come qualcosa di più grande di un fastidio locale.
 

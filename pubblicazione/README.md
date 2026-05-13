@@ -16,9 +16,14 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 
 Lo script genera una **sidebar** con le sezioni Home, Personaggi, Resoconti, PNG e Luoghi. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG il campo **Ruolo**; per i luoghi **Regione** e **Tipo**. Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. I link «Home» e «Guida giocatori» non compaiono nell'header in alto a destra.
 
-### Thumbnail
+### Immagini nell'export
 
-Per ogni immagine copiata nell'export, lo script genera un JPEG in `immagini/thumbs/` (stessa gerarchia relativa, max ~320px sul lato lungo). Le card delle liste usano queste miniature. Serve **Pillow** (`scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso e le card mostrano un segnaposto al posto dell'immagine.
+Per ogni immagine referenziata nelle pagine pubbliche, lo script:
+
+1. scrive nell'output una **versione a schermo** in JPEG (dimensione massima contenuta in 1920×1024 px, rapporto invariato, compressione moderata), con estensione `.jpg`; i file sorgente nel repository restano invariati (es. `.png`), mentre le pagine generate puntano ai JPEG prodotti in fase di build;
+2. genera una **miniatura** in `immagini/thumbs/` (stessa gerarchia relativa, JPEG, max ~320px sul lato lungo) usata dalle card degli indici.
+
+Serve **Pillow** (`scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso: le immagini vengono copiate senza ottimizzazione JPEG e le card mostrano un segnaposto al posto dell'immagine.
 
 ## Cosa non viene mai pubblicato direttamente
 
