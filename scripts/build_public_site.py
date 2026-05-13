@@ -572,7 +572,7 @@ def is_personaggi_portrait_image(asset_relative_path: str) -> bool:
 
 
 def thumb_resize_cover_portrait(im_rgb: Image.Image, target_w: int, target_h: int) -> Image.Image:
-    """Ridimensiona e ritaglia al centro in un riquadro verticale target_w x target_h."""
+    """Ridimensiona e ritaglia in un riquadro verticale target_w x target_h (in alto: scarta il basso)."""
     w, h = im_rgb.size
     tr = target_w / target_h
     sr = w / h
@@ -585,8 +585,22 @@ def thumb_resize_cover_portrait(im_rgb: Image.Image, target_w: int, target_h: in
     new_w = target_w
     new_h = max(1, int(round(h * target_w / w)))
     resized = im_rgb.resize((new_w, new_h), Image.Resampling.LANCZOS)
-    top = max(0, (new_h - target_h) // 2)
-    return resized.crop((0, top, target_w, top + target_h))
+    return resized.crop((0, 0, target_w, target_h))
+
+
+def thumb_cover_square_top(im_rgb: Image.Image, size: int) -> Image.Image:
+    """Copre un quadrato size×size ritagliando dall'alto (per sorgenti verticali h > w)."""
+    w, h = im_rgb.size
+    new_w = size
+    new_h = max(1, int(round(h * size / w)))
+    resized = im_rgb.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    if new_h < size:
+        new_h = size
+        new_w = max(1, int(round(w * size / h)))
+        resized = im_rgb.resize((new_w, new_h), Image.Resampling.LANCZOS)
+        left = max(0, (new_w - size) // 2)
+        return resized.crop((left, 0, left + size, size))
+    return resized.crop((0, 0, size, size))
 
 
 def thumb_relative_path_jpeg(asset_relative_path: str) -> str:
@@ -627,7 +641,11 @@ def write_thumbnail_for_asset(asset_relative_path: str, output_dir: Path) -> boo
             if is_personaggi_portrait_image(asset_relative_path):
                 im_rgb = thumb_resize_cover_portrait(im_rgb, THUMB_PORTRAIT_W, THUMB_PORTRAIT_H)
             else:
-                im_rgb.thumbnail((THUMB_MAX_EDGE, THUMB_MAX_EDGE), Image.Resampling.LANCZOS)
+                pw, ph = im_rgb.size
+                if ph > pw:
+                    im_rgb = thumb_cover_square_top(im_rgb, THUMB_MAX_EDGE)
+                else:
+                    im_rgb.thumbnail((THUMB_MAX_EDGE, THUMB_MAX_EDGE), Image.Resampling.LANCZOS)
             im_rgb.save(dest, format="JPEG", quality=THUMB_JPEG_QUALITY, optimize=True)
         return True
     except OSError:
@@ -868,6 +886,27 @@ def write_styles(output_dir: Path) -> None:
         body.home-full-bleed .page-card {
           background: rgba(26, 23, 19, 0.88);
           backdrop-filter: blur(4px);
+        }
+
+        .home-hero {
+          margin: 0 0 1.75rem;
+          padding: 0;
+          border-radius: 14px;
+          overflow: hidden;
+          border: 1px solid var(--panel-border);
+          box-shadow: 0 12px 40px var(--shadow);
+          background: rgba(0, 0, 0, 0.25);
+        }
+
+        .home-hero img {
+          display: block;
+          width: 100%;
+          max-height: min(72vh, 720px);
+          height: auto;
+          margin: 0;
+          object-fit: contain;
+          border: 0;
+          border-radius: 0;
         }
 
         a {
@@ -1217,6 +1256,7 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
     featured_pages = [page for page in home_pages if page.featured]
     other_pages = [page for page in home_pages if not page.featured]
 
+    hero_img = "{{ '/immagini/varie/gruppo-pg-carovana.png' | relative_url }}"
     lines = [
         front_matter(
             title=manifest["site"]["title"],
@@ -1225,9 +1265,9 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
             source_path=Path("pubblicazione/manifest.json"),
             show_title=False,
             og_image=HOME_HERO_PUBLIC_PATH,
-            hero_image=HOME_HERO_PUBLIC_PATH,
-            home_full_bleed=True,
         ),
+        f'<figure class="home-hero"><img src="{hero_img}" alt="Il gruppo di avventurieri in carovana" loading="eager" decoding="async"></figure>',
+        "",
         f"# {manifest['site']['tagline']}",
         "",
         '<div class="hero">',
