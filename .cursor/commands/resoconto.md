@@ -1,0 +1,5 @@
+# Resoconto post-sessione
+
+Prima di qualsiasi azione, leggere con `Read` il file `.cursor/skills/campagna-resoconto/SKILL.md` e applicare **integralmente** quel flusso, fase per fase, senza saltare le conferme richieste al DM.
+
+Non produrre tutto il materiale in un'unica passata. Le convenzioni permanenti del repository restano nella Cursor Rule `campagna` (sempre applicata).

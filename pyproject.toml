@@ -1,0 +1,12 @@
+[project]
+name = "campagna-session-tools"
+version = "0.1.0"
+description = "Trascrizione locale dual-track (faster-whisper) per sessioni in videoconferenza."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "faster-whisper>=1.0.3",
+]
+
+[tool.uv]
+package = false

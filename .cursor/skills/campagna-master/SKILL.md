@@ -1,7 +1,13 @@
 ---
-description: Modalità master - espansione di appunti in documenti di ambientazione
-alwaysApply: false
+name: campagna-master
+description: >-
+  Expands DM notes into full ambientazione markdown (luoghi, nazioni, concetti) with
+  templates and Wikipedia inspiration adapted to fantasy-western canon. Use when the user
+  runs /master, mentions modalità master, or creating lore files under ambientazione/.
+disable-model-invocation: true
 ---
+
+Rispettare sempre le convenzioni del repository definite nella Cursor Rule `campagna` (alwaysApply); non contradirle.
 
 # Modalità Master — Costruzione dell'Ambientazione
 

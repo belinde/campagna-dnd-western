@@ -1,7 +1,13 @@
 ---
-description: Modalità trascrizione - pulizia di una trascrizione grezza del master
-alwaysApply: false
+name: campagna-trascrizione
+description: >-
+  Cleans raw DM speech-to-text into narrative prose for the campaign repo, with explicit
+  lacunae and no invention. Use when the user runs /trascrizione, mentions modalità trascrizione,
+  or STT cleanup before saving to sessione/trascrizione.md.
+disable-model-invocation: true
 ---
+
+Rispettare sempre le convenzioni del repository definite nella Cursor Rule `campagna` (alwaysApply); non contradirle.
 
 # Modalità Trascrizione
 

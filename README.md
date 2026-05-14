@@ -4,99 +4,85 @@ Strumento privato del Dungeon Master per gestire la campagna *La corsa al Nuovo 
 
 ---
 
-## Regole Cursor
+## Regole Cursor, skill e comandi
 
-Il progetto usa **otto regole Cursor** (in `.cursor/rules/`) che modellano il comportamento dell'AI in base alla fase di lavoro. Si attivano in tre modi diversi:
+Il comportamento dell'AI è organizzato così:
 
-- **sempre attiva** — `campagna` ha `alwaysApply: true` e viene letta in background ad ogni interazione.
-- **richiamate a mano** — `master`, `ingame`, `trascrizione`, `resoconto` vanno invocate esplicitamente in chat con `@nome-regola` o nominando la modalità corrispondente.
-- **auto-applicate via `globs:`** — `png-scheda-gioco`, `importa-immagine`, `immagine` si attivano automaticamente quando si lavora su file che corrispondono al loro pattern (schede PNG, asset di immagini, ecc.).
+| Meccanismo | Percorso | Ruolo |
+|------------|----------|--------|
+| **Regole** (sempre o via `globs`) | [`.cursor/rules/`](.cursor/rules/) | Due file `.mdc`: contesto permanente e formato schede PNG in modifica. |
+| **Skill** (procedure lunghe) | [`.cursor/skills/`](.cursor/skills/) | Istruzioni dettagliate per resoconto, trascrizione, trascrizione VC, ingame, master e workflow immagini; l'agente deve leggerle quando usi un comando. |
+| **Comandi** | [`.cursor/commands/`](.cursor/commands/) | Prompt brevi richiamabili con `/` nella chat: avviano il flusso e rimandano allo skill corretto. |
 
-### `campagna` — Regola base (sempre attiva)
+### Regole in `.cursor/rules/`
 
-Definisce il contesto permanente della campagna: ambientazione, paralleli storici, struttura delle cartelle, convenzioni sui nomi dei file e lingua di output (italiano). È l'unica regola con `alwaysApply: true` e viene letta in background ad ogni interazione.
+- **`campagna`** — `alwaysApply: true`. Contesto permanente: ambientazione, paralleli storici, struttura delle cartelle, convenzioni sui nomi dei file, immagini nei Markdown, lingua (italiano).
+- **`png-scheda-gioco`** — `globs` su `png/*.md` e `sessione/png-*.md`. Sezione `## Scheda di gioco` compatta per il tavolo, livello obbligatorio, aggiornamenti additivi al cambio livello; riferimento MCP `dnd` per dati ufficiali 5e.
 
-### `master` — Costruzione dell'ambientazione
+### Comandi DM (digitare `/` nella chat)
 
-Si usa quando si vogliono trasformare appunti grezzi del DM in documenti di ambientazione narrativi da salvare in `ambientazione/`. Il flusso è:
+| Comando | Skill letto | Scopo sintetico |
+|---------|----------------|-----------------|
+| `/resoconto` | `campagna-resoconto` | Post-sessione: resoconto a fasi, aggiornamento schede, `sessione/`, pubblicazione player-safe se configurata. |
+| `/trascrizione` | `campagna-trascrizione` | Pulizia STT → `sessione/trascrizione.md`, senza inventare. |
+| `/trascrizione-vc` | `campagna-trascrizione-vc` | Pulizia STT dual-track (master + monitor VC) → `sessione/trascrizione.md`. |
+| `/ingame` | `campagna-ingame` | Tavolo: risposte brevi, solo file sotto `sessione/` con prefissi. |
+| `/master` | `campagna-master` | Appunti → documenti in `ambientazione/`. |
+| `/prompt-immagine` | `campagna-immagini` (solo sezione *Prompt*) | Prompt in **inglese** per il modello immagine (eccezione all’italiano della rule `campagna`); stile **cinematically realistic**; blocco `text` copiabile. Sola lettura. |
+| `/importa-immagine` | `campagna-immagini` (solo sezione *Import*) | Sposta/normalizza JPEG e aggiorna il Markdown (richiede Agent). |
 
-1. Il DM fornisce note libere (anche telegrafiche)
-2. L'AI genera subito una bozza completa nel formato corretto (luogo, fazione, evento storico, lore, ecc.)
-3. L'AI elenca domande di approfondimento per affinare il documento
+I comandi **non sostituiscono** la rule `campagna`: resta attiva in background. Per le immagini non c'è più attivazione automatica via `globs`: usa `/prompt-immagine` o `/importa-immagine` quando serve.
 
-Prima di scrivere, l'AI legge tutti i file in `ambientazione/` (incluse le sottocartelle `luoghi/`, `nazioni/`, `concetti/`) per garantire coerenza con il canon già stabilito. Il file viene salvato nella sottocartella corretta in base al tipo: `luoghi/` per luoghi specifici, `nazioni/` per entità politiche, `concetti/` per lore e sistemi del mondo. Se gli appunti toccano eventi storici o dinamiche sociali, l'AI cerca ispirazione su Wikipedia adattando al contesto fantasy.
+---
 
-**Attivazione:** `@master` nella chat, oppure chiedere esplicitamente di usare la "modalità master".
+## Registrazione e trascrizione (sessione in videoconferenza, Linux)
 
-### `ingame` — Generazione rapida durante la sessione
+Flusso opzionale per catturare **due tracce** allineate nel tempo: microfono del DM (`master.wav`) e **monitor dell’uscita audio** del computer (`giocatori.wav`, tipicamente ciò che senti in cuffia: inclusa la videoconferenza).
 
-Si usa *mentre* la sessione è in corso. Il DM ha bisogno di contenuti immediati da leggere direttamente ai giocatori: PNG al volo, descrizioni di luoghi, dialoghi in prima persona, incontri casuali, liste di nomi. Le risposte sono brevi, senza meta-commenti, senza ricerche web — al più l'AI consulta il server MCP `dnd` locale.
+### Prerequisiti
 
-Tutti i file generati in questa modalità vanno in `sessione/` con prefisso di tipo (`png-`, `luogo-`, `nota-`, `incontro-`). La rifinitura avviene in fase resoconto.
+- `ffmpeg` con input Pulse (`-f pulse`), disponibile di solito su Debian con PipeWire tramite il layer di compatibilità Pulse.
+- `pactl` (pacchetto `pulseaudio-utils` o equivalente) per elencare le sorgenti e suggerire il nome del monitor.
+- [`uv`](https://github.com/astral-sh/uv) e Python 3.11+ (nel repo viene usato `uv` per installare **faster-whisper** in `.venv/`).
 
-**Attivazione:** `@ingame` nella chat, oppure "modalità ingame".
+### 1. Individuare i dispositivi (una tantum o se cambiano)
 
-### `trascrizione` — Pulizia di una trascrizione grezza del master
+Dalla root del repository:
 
-Si usa quando si dispone di un file `.txt` prodotto da uno strumento di speech-to-text durante la sessione. La trascrizione grezza contiene narrazione utile mescolata a rumore: battute OOC, artefatti STT, discussioni di regole, logistica. La regola estrae solo la narrazione e la ricostruisce come prosa.
+```bash
+./scripts/session_record.sh list
+```
 
-Il flusso è:
+Il microfono di solito funziona con il default Pulse. Per il **monitor** (tutto ciò che va al sink di riproduzione), lo script suggerisce `export SESSION_MONITOR_DEVICE='…'` in base a `pactl get-default-sink`. Se il nome non funziona, scegliere manualmente una riga `…monitor` dall’elenco di `pactl list short sources`.
 
-1. L'AI legge il file `.txt` su cui è applicata la regola
-2. L'AI legge tutti i file di contesto: `ambientazione/` (incluse sottocartelle), `personaggi/`, `png/`, `sessione/` (esclusa la trascrizione), `spunti/`, l'ultimo file in `resoconti/`
-3. L'AI scarta tutto ciò che non è narrazione (OOC, artefatti STT, logistica, correzioni in corsa, discussioni di regole)
-4. Il contenuto conservato viene riscritto in prosa narrativa in terza persona, con nomi corretti usando i file di contesto
-5. I punti incomprensibili o lacunosi vengono lasciati come marcatori espliciti `[lacuna: ...]` — **nessuna interpolazione creativa**
-6. Il risultato viene salvato in `sessione/trascrizione.md`
+**Limite:** il monitor registra **tutto** l’audio di sistema (notifiche, altre app, musica), non solo la VC. Per isolare un’app serve routing avanzato (es. sink dedicato in PipeWire).
 
-**Attivazione:** aprire il file `.txt` di trascrizione nell'editor, poi `@trascrizione` nella chat o richiedere esplicitamente "applica la modalità trascrizione".
+### 2. Registrazione durante la sessione
 
-### `resoconto` — Archiviazione post-sessione
+```bash
+./scripts/session_record.sh start
+# … gioco in videoconferenza …
+./scripts/session_record.sh stop
+```
 
-Si usa dopo una sessione di gioco per trasformare il racconto grezzo del DM in un resoconto narrativo strutturato. Il processo è **interattivo e a fasi sequenziali** — l'AI non procede senza conferma esplicita ad ogni passaggio:
+I file vengono salvati in `sessione/audio/<YYYYMMDD_HHMMSS>/` (`master.wav`, `giocatori.wav`, `meta.env`).
 
-| Fase | Cosa succede |
-|------|--------------|
-| 1 — Raccolta | L'AI legge i file in `sessione/`, l'ultimo resoconto, le schede PG e PNG. Poi chiede data, PG presenti e racconto libero degli eventi. |
-| 2 — Chiarimenti | L'AI identifica ambiguità (PNG senza scheda, luoghi nuovi, riferimenti a personaggi non chiari) e fa domande mirate. |
-| 3 — Titolo e riassunto | L'AI propone 2-3 titoli evocativi e un riassunto di 3-5 righe. Attende scelta e approvazione. |
-| 4 — Bozza resoconto | L'AI scrive la bozza completa seguendo il template standard. La presenta in chiaro senza salvare. Salva solo dopo approvazione. |
-| 5 — Aggiornamenti collaterali | Aggiorna schede PG e PNG (sezione `## Eventi interessanti`), propone nuovi file di ambientazione, integra i file temporanei di `sessione/`. |
-| 6 — Pulizia | Riepilogo di tutto ciò che è stato fatto, poi elimina i file da `sessione/` dopo conferma. |
-| 7 — Pubblicazione pubblica | Se il progetto ha un export player-safe configurato, rigenera anche i contenuti pubblici e verifica che resoconto e immagini di scena vengano sincronizzati nel sito. |
+### 3. Speech-to-text locale e merge temporale
 
-**Attivazione:** `@resoconto` nella chat, oppure "modalità resoconto".
+Dalla root del repository (sostituisci la cartella con quella creata allo `stop`):
 
-### `png-scheda-gioco` — Scheda di gioco 5e per i PNG
+```bash
+uv sync   # la prima volta, o dopo cambi dipendenze
+uv run python scripts/transcribe_session_dual.py sessione/audio/20250514_210530
+```
 
-Regola **auto-applicata** ai file che corrispondono ai glob `png/*.md` e `sessione/png-*.md`. Garantisce che ogni scheda PNG (canonica o temporanea di sessione) contenga una sezione `## Scheda di gioco` compatta e leggibile al tavolo, con:
+Opzioni utili: `--model tiny|base|small|…`, `--device cpu|cuda`, `--player-offset-ms N` per spostare avanti (`N` > 0) o indietro (`N` < 0) nel tempo solo i segmenti del flusso giocatori nel merge.
 
-- **livello obbligatorio**: se manca, l'AI chiede esplicitamente al DM "Di che livello è questo PNG?" prima di completare la sezione
-- ruolo tattico, CA/PF/velocità, caratteristiche, bonus competenza, attacchi, capacità o incantesimi distintivi
-- aggiornamenti **additivi e non sostitutivi** quando il livello cambia: si conserva la build già canonizzata e si aggiungono solo i benefici coerenti con il nuovo livello
+Output: `sessione/trascrizione-grezza-doppia.txt` (segmenti con timestamp e etichette `[MASTER]` / `[GIOCATORI]` nel senso del merge).
 
-Il riferimento primario per regole, classi, incantesimi e mostri è il server MCP `dnd` (vedi sotto). Se un elemento non è nell'API, l'AI lo dichiara apertamente invece di presentarlo come dato ufficiale.
+### 4. Pulizia con Cursor
 
-### `importa-immagine` — Archiviazione e normalizzazione di un asset immagine
-
-Regola **auto-applicata** ai file in `personaggi/`, `png/`, `ambientazione/luoghi/`, `resoconti/` e `sessione/`. Si usa quando il DM ha già un file immagine pronto e vuole inserirlo nel repository nel posto corretto, collegandolo al Markdown giusto. Il flusso:
-
-1. determina il tipo di immagine in base al file di destinazione (ritratto PG, ritratto PNG, veduta di luogo, scena di sessione)
-2. sposta l'asset nel path previsto sotto `immagini/` (`immagini/personaggi/`, `immagini/png/`, `immagini/luoghi/`, `immagini/eventi/sessione-NNN/`)
-3. lo **normalizza** a JPEG `.jpg` con lato lungo ≤ 1920 px e qualità ~85 (operazione idempotente) tramite `python3 scripts/normalize_image_assets.py`
-4. aggiorna il Markdown collegato con il link `/immagini/...` corretto, popolando la sezione `## Immagine` (per personaggi, PNG e luoghi) o `## Immagini salienti` (per i resoconti)
-
-Se il file immagine effettivo, il numero di sessione o il path di destinazione sono ambigui, la regola si ferma e chiede invece di indovinare.
-
-### `immagine` — Generazione di prompt immagine
-
-Regola **auto-applicata** agli stessi file della precedente, ma opera in **sola lettura**: non sposta asset né modifica il repository. Quando il DM ha aperta una scheda (PG, PNG, luogo) o un resoconto e chiede un prompt per generare l'immagine, restituisce solo testo pronto da incollare in un generatore esterno, con:
-
-- soggetto, tratti fisici, abbigliamento, equipaggiamento, ambiente, luce, atmosfera coerenti con la lore già stabilita (mai inventata)
-- regole specifiche per **proporzioni di razza** (nano, halfling, gnomo, mezzorco, orco, dragonide) e per il confronto di altezza nelle scene di gruppo, così da evitare che il modello uniformi tutti a umanoidi medi
-- regole dedicate all'**aspetto degli orchi delle Terre Selvagge** (cromia grigia con toni verdastri, cultura materiale fantasy-prateria) basate su `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`
-
-L'output include sempre il percorso suggerito sotto `immagini/` in cui l'asset dovrà vivere, in modo da agganciarsi naturalmente al flusso di `importa-immagine`.
+Dopo aver generato il file grezzo, in chat: **`/trascrizione-vc`** (skill `campagna-trascrizione-vc`) per produrre `sessione/trascrizione.md` senza inventare contenuti.
 
 ## Pubblicazione dei resoconti
 
@@ -113,7 +99,7 @@ Il sito pubblico usa solo contenuti filtrati: resoconti, pagine esplicitamente a
 
 ## Server MCP `dnd`
 
-La modalità ingame può interrogare un server MCP locale che espone dati ufficiali di D&D 5e (mostri, incantesimi, equipaggiamento, classi, razze, ecc.) tramite l'API pubblica [dnd5eapi.co](https://www.dnd5eapi.co/). Il server è già configurato in `.cursor/mcp.json`.
+Il command `/ingame` (skill `campagna-ingame`) può interrogare un server MCP locale che espone dati ufficiali di D&D 5e (mostri, incantesimi, equipaggiamento, classi, razze, ecc.) tramite l'API pubblica [dnd5eapi.co](https://www.dnd5eapi.co/). Il server è già configurato in `.cursor/mcp.json`.
 
 La cartella `dnd-mcp/` è un **git submodule**: non è inclusa direttamente in questo repository, ma punta a un commit specifico di un repository esterno. Quando si clona il progetto per la prima volta, la cartella risulta vuota finché non viene inizializzata.
 

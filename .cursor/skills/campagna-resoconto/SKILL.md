@@ -1,7 +1,13 @@
 ---
-description: Modalità resoconto - trascrizione e archiviazione di una sessione di gioco
-alwaysApply: false
+name: campagna-resoconto
+description: >-
+  Archives a D&D 5e session into resoconti/, updates PG/PNG sheets and ambientazione,
+  clears sessione/, and runs player-safe publish when configured. Use when the user
+  runs /resoconto, mentions modalità resoconto, or interactive post-session recap workflow.
+disable-model-invocation: true
 ---
+
+Rispettare sempre le convenzioni del repository definite nella Cursor Rule `campagna` (alwaysApply); non contradirle.
 
 # Modalità Resoconto
 
@@ -12,7 +18,7 @@ Questa regola si attiva dopo una sessione di gioco. Il processo è **interattivo
 ## Fase 1 — Raccolta iniziale
 
 **Prima di fare qualsiasi domanda**, leggere in sola lettura:
-- Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo)
+- Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo), inclusi se presenti `sessione/trascrizione-grezza-doppia.txt` (grezzo dual-track VC) e `sessione/audio/` con le registrazioni WAV
 - L'ultimo file in `resoconti/` (per capire dove era rimasta la storia)
 - Tutti i file in `personaggi/` (per conoscere i PG disponibili)
 - Tutti i file in `png/` (per riconoscere i PNG già documentati)

@@ -1,7 +1,12 @@
 ---
-description: Modalità ingame - generazione rapida di contenuti durante la sessione
-alwaysApply: false
+name: campagna-ingame
+description: >-
+  Fast tavolo-ready Italian outputs during live play; writes only under sessione/ with
+  prefixed filenames. Use when the user runs /ingame, mentions modalità ingame, or live session improv.
+disable-model-invocation: true
 ---
+
+Rispettare sempre le convenzioni del repository definite nella Cursor Rule `campagna` (alwaysApply); non contradirle.
 
 # Modalità Ingame
 
