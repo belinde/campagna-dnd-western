@@ -2,7 +2,8 @@
 name: campagna-resoconto
 description: >-
   Archives a D&D 5e session into resoconti/, updates PG/PNG sheets and ambientazione,
-  clears sessione/, and runs player-safe publish when configured. Use when the user
+  clears sessione/, and runs player-safe publish when configured. Uses verified
+  sessione/trascrizione.md as primary event source when present. Use when the user
   runs /resoconto, mentions modalità resoconto, or interactive post-session recap workflow.
 disable-model-invocation: true
 ---
@@ -18,29 +19,36 @@ Questa regola si attiva dopo una sessione di gioco. Il processo è **interattivo
 ## Fase 1 — Raccolta iniziale
 
 **Prima di fare qualsiasi domanda**, leggere in sola lettura:
-- Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo), inclusi se presenti `sessione/trascrizione-grezza-doppia.txt` (grezzo dual-track VC) e `sessione/audio/` con le registrazioni WAV
+- Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo), inclusi se presenti `sessione/trascrizione-grezza-doppia.txt` (grezzo dual-track VC), **`sessione/trascrizione.md`** se esiste (trascrizione elaborata **verificata** dopo `/trascrizione-vc`) e `sessione/audio/` con le registrazioni WAV
 - L'ultimo file in `resoconti/` (per capire dove era rimasta la storia)
 - Tutti i file in `personaggi/` (per conoscere i PG disponibili)
 - Tutti i file in `png/` (per riconoscere i PNG già documentati)
 
-Poi chiedere al DM, con `AskQuestion`, le seguenti informazioni:
+**Fonte primaria degli eventi:** se `sessione/trascrizione.md` è presente e contiene `## Dialogo` / `## Narrazione` coerenti con la sessione corrente (in particolare se in `## Note di elaborazione` risulta completata l’elaborazione a chunk o equivalente), **basare la cronaca su quella trascrizione verificata**. Il DM integra solo ciò che **non** risulta dal parlato (appunti non detti ad alta voce, retcon, errori STT corretti solo in sede di gioco, dettagli meccanici non vocalizzati).
+
+Poi chiedere al DM, con `AskQuestion` dove possibile, le seguenti informazioni:
 1. **Data della sessione** (formato GG/MM/AAAA)
 2. **PG presenti** al tavolo quella sera (usare la lista dei file in `personaggi/` come opzioni selezionabili)
-3. **Racconto libero degli eventi**: invitare il DM a descrivere cosa è successo in modo grezzo e informale, senza preoccuparsi della struttura. Il DM può usare termini generici per i personaggi (es. "il paladino", "il nano guerriero") — saranno risolti in automatico.
+3. **Trascrizione verificata:** se esiste `sessione/trascrizione.md` per questa sessione, chiedere conferma che sia **completa e approvata**; se manca o è incompleta, chiedere se il DM vuole interrompere per completare `/trascrizione-vc` oppure procedere con **rinuncia esplicita** documentata (in tal caso la fonte primaria diventa il materiale disponibile in `sessione/` + integrazioni DM).
+4. **Integrazione oltre la trascrizione (opzionale):** invitare il DM ad aggiungere **solo** quanto non deducibile dal testo (eventi non registrati in VC, chiarimenti su `[lacuna: …]` ancora aperti, note da tavolo). **Non** richiedere un racconto libero lungo se la trascrizione verificata copre già la sessione; in assenza di trascrizione usabile, allora sì: racconto libero degli eventi come integrazione principale (stile informale, termini generici per i PG accettati).
 
-**Non procedere alla Fase 2 finché il DM non ha fornito il racconto.**
+**Non procedere alla Fase 2 finché** non siano noti data e PG presenti **e** non sia chiaro se si procede con trascrizione verificata, rinuncia, o racconto libero come tappabuchi.
 
 ---
 
 ## Fase 2 — Chiarimenti e integrazioni
 
-Analizzare il racconto del DM incrociandolo con il materiale letto in Fase 1. Identificare le ambiguità e le lacune, poi porre al DM domande mirate. Esempi tipici:
+Analizzare **`sessione/trascrizione.md`** (se fonte primaria) e l’integrazione DM della Fase 1, incrociandoli con il resto del materiale letto in Fase 1. Se la trascrizione non basta, usare anche `sessione/trascrizione-grezza-doppia.txt` per segmenti dubbi **senza** contraddire il testo già approvato in `trascrizione.md` salvo correzione esplicita del DM.
 
-- **Riferimenti ambigui a personaggi**: se il DM ha scritto "il nano" e ci sono due nani tra i PG, chiedere quale.
+Identificare ambiguità e lacune, poi porre domande mirate. Esempi tipici:
+
+- **Riferimenti ambigui a personaggi** (nomi o cluster `[GIOC_Bxx_Syy]` da mappare su PG): se restano due interpretazioni plausibili, chiedere al DM.
 - **PNG incontrati**: per ogni PNG menzionato che non ha ancora una scheda in `png/`, chiedere conferma del nome, ruolo e dettagli rilevanti.
 - **Luoghi visitati**: per ogni luogo non ancora documentato in `ambientazione/luoghi/`, chiedere conferma del nome e un dettaglio descrittivo.
 - **Incongruenze con la storia precedente**: segnalare qualsiasi contraddizione con i resoconti passati e chiedere chiarimento.
-- **Esito di situazioni aperte**: se nell'ultimo resoconto erano rimaste domande aperte o ganci narrativi, chiedere se e come si sono risolti.
+- **Esito di situazioni aperte**: se nell'ultimo resoconto erano rimaste domande aperte o ganci narrativi, chiedere se e come si sono risolti (anche se già nella trascrizione, verificare coerenza).
+
+Se in Fase 1 il DM ha fornito un **racconto libero** (perché assente trascrizione verificata), analizzarlo con la stessa logica, incrociando `sessione/` e grezza se utile.
 
 Raccogliere le risposte. Se emergono nuove ambiguità, fare ulteriori domande. Dichiarare esplicitamente quando il quadro è sufficientemente completo per procedere, e chiedere conferma al DM: *"Ho abbastanza informazioni per procedere. Confermato?"*
 
@@ -62,7 +70,7 @@ Attendere che il DM scelga o corregga il titolo e approvi (o modifichi) il riass
 
 ## Fase 4 — Bozza del resoconto completo
 
-Scrivere la **bozza completa** del resoconto seguendo il template sotto. Presentarla al DM come testo in chiaro, **senza ancora salvare nessun file**.
+Scrivere la **bozza completa** del resoconto seguendo il template sotto. Presentarla al DM come testo in chiaro, **senza ancora salvare nessun file**. Se in Fase 1–2 la fonte primaria è stata `sessione/trascrizione.md`, la sezione `## Eventi principali` (e il riassunto) devono **riflettere** quella cronaca verificata, arricchita solo con quanto il DM ha integrato o chiarito; non introdurre fatti non supportati da trascrizione + integrazioni approvate.
 
 ```markdown
 # Sessione NNN — Titolo evocativo
@@ -148,6 +156,8 @@ Se il progetto usa una pubblicazione pubblica player-safe con allowlist esplicit
 ### 5d — Smistamento file di sessione
 
 Per ogni file in `sessione/`:
+- **`trascrizione.md`** — Non smistare: resta archivio DM finché il DM non chiede di rimuoverlo in Fase 6. Se è la **fonte primaria** usata per il resoconto, non trattarlo come semplice appunto temporaneo.
+- **`trascrizione-grezza-doppia.txt`** — Grezzo STT: consultabile per dubbi, di solito **non** va nel sito pubblico; in Fase 6 può essere eliminato solo se il DM conferma (come gli altri file in `sessione/`).
 - **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente, inclusa `## Scheda di gioco` quando necessario. Altrimenti creare la scheda in `png/`. Se il livello e` assente o cambiato, chiederlo al DM e aggiornare la scheda in modo additivo, non sostitutivo.
 - **`luogo-*.md`** — Valutare se aggiornare un file in `ambientazione/luoghi/` o proporne la creazione. Segnalare al DM prima di agire.
 - **`nota-*.md`** / **`incontro-*.md`** — Verificare se ci sono informazioni utili non ancora incorporate nel resoconto o nelle schede; segnalare al DM se qualcosa è stato tralasciato.
@@ -158,7 +168,7 @@ Se esistono immagini collegate ai file di `sessione/`, archiviarle nella destina
 - `immagini/luoghi/` per i luoghi
 - `immagini/eventi/sessione-NNN/` per le scene di sessione richiamate nel resoconto
 
-I file di sessione sono **fonti complementari** al racconto del DM, non sostitutive: il DM resta la fonte primaria per gli eventi.
+**Gerarchia delle fonti:** quando esiste una trascrizione elaborata **verificata** in `sessione/trascrizione.md`, essa ha **priorità** sulla grezza e sulle note sparse per gli eventi effettivamente registrati. **`trascrizione-grezza-doppia.txt`**, `nota-*.md`, `incontro-*.md`, `png-*.md`, `luogo-*.md` e il **racconto integrativo** del DM sono **complementari** per lacune, contesto non audio e correzioni esplicite. Il DM resta l’autorità per ciò che **non** si può dedurre dal materiale scritto.
 
 **Non procedere alla Fase 6 senza aver completato tutti gli aggiornamenti approvati.**
 

@@ -2,4 +2,4 @@
 
 Prima di qualsiasi azione, leggere con `Read` il file `.cursor/skills/campagna-resoconto/SKILL.md` e applicare **integralmente** quel flusso, fase per fase, senza saltare le conferme richieste al DM.
 
-Non produrre tutto il materiale in un'unica passata. Le convenzioni permanenti del repository restano nella Cursor Rule `campagna` (sempre applicata).
+Non produrre tutto il materiale in un'unica passata. Le convenzioni permanenti del repository restano nella Cursor Rule `campagna` (sempre applicata). Se esiste `sessione/trascrizione.md` verificato (es. dopo `/trascrizione-vc`), usarlo come **fonte primaria** degli eventi; il DM integra solo i gap non deducibili dal testo.

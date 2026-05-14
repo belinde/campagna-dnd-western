@@ -1,2 +1,44 @@
-build/
+# Segreti e ambiente locale
+.env
 .venv/
+venv/
+env/
+.env.*.local
+
+# Build e artefatti di installazione Python
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Bytecode, cache e strumenti Python
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.tox/
+.hypothesis/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Registrazioni sessione (file locali voluminosi)
+sessione/audio/
+
+# IDE / editor
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Jupyter (se usato in futuro)
+.ipynb_checkpoints/

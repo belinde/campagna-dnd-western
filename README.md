@@ -23,9 +23,9 @@ Il comportamento dell'AI è organizzato così:
 
 | Comando | Skill letto | Scopo sintetico |
 |---------|----------------|-----------------|
-| `/resoconto` | `campagna-resoconto` | Post-sessione: resoconto a fasi, aggiornamento schede, `sessione/`, pubblicazione player-safe se configurata. |
+| `/resoconto` | `campagna-resoconto` | Post-sessione: resoconto a fasi; con `sessione/trascrizione.md` verificato come **fonte primaria** degli eventi quando presente; aggiornamento schede, `sessione/`, pubblicazione player-safe se configurata. |
 | `/trascrizione` | `campagna-trascrizione` | Pulizia STT → `sessione/trascrizione.md`, senza inventare. |
-| `/trascrizione-vc` | `campagna-trascrizione-vc` | Pulizia STT dual-track (master + monitor VC) → `sessione/trascrizione.md`. |
+| `/trascrizione-vc` | `campagna-trascrizione-vc` | Pulizia STT dual-track a **chunk**: domande solo su gap non deducibili, verifica master per blocco, append in `sessione/trascrizione.md`; poi `/resoconto` usa quel file come fonte primaria. |
 | `/ingame` | `campagna-ingame` | Tavolo: risposte brevi, solo file sotto `sessione/` con prefissi. |
 | `/master` | `campagna-master` | Appunti → documenti in `ambientazione/`. |
 | `/prompt-immagine` | `campagna-immagini` (solo sezione *Prompt*) | Prompt in **inglese** per il modello immagine (eccezione all’italiano della rule `campagna`); stile **cinematically realistic**; blocco `text` copiabile. Sola lettura. |
@@ -43,7 +43,7 @@ Flusso opzionale per catturare **due tracce** allineate nel tempo: microfono del
 
 - `ffmpeg` con input Pulse (`-f pulse`), disponibile di solito su Debian con PipeWire tramite il layer di compatibilità Pulse.
 - `pactl` (pacchetto `pulseaudio-utils` o equivalente) per elencare le sorgenti e suggerire il nome del monitor.
-- [`uv`](https://github.com/astral-sh/uv) e Python 3.11+ (nel repo viene usato `uv` per installare **faster-whisper** in `.venv/`).
+- [`uv`](https://github.com/astral-sh/uv) e Python 3.11+ (nel repo viene usato `uv` per installare **faster-whisper**, **pyannote.audio** e **torch** CPU in `.venv/`; vedi [`pyproject.toml`](pyproject.toml) e l’indice `pytorch-cpu`).
 
 ### 1. Individuare i dispositivi (una tantum o se cambiano)
 
@@ -67,7 +67,18 @@ Il microfono di solito funziona con il default Pulse. Per il **monitor** (tutto 
 
 I file vengono salvati in `sessione/audio/<YYYYMMDD_HHMMSS>/` (`master.wav`, `giocatori.wav`, `meta.env`).
 
-### 3. Speech-to-text locale e merge temporale
+### 3. Token Hugging Face (opzionale, consigliato)
+
+I modelli usati da `faster-whisper` passano da Hugging Face Hub. Con **piano gratuito** conviene creare un token in [Impostazioni token](https://huggingface.co/settings/tokens) e salvarlo **solo in locale**:
+
+1. Copia il modello di file: `cp .env.example .env`
+2. Incolla il token nella riga `HF_TOKEN=...` dentro `.env` (il file `.env` è in **`.gitignore`** e non va committato).
+
+Lo script `scripts/transcribe_session_dual.py` carica automaticamente `.env` dalla root del repository prima del download, così `huggingface_hub` usa il token (rate limit più alti, modelli con gated access se applicabile).
+
+Per la **diarizzazione** (`pyannote/speaker-diarization-community-1`): su Hugging Face apri la scheda del modello e **accetta le condizioni d’uso** (User Access Request / gated), altrimenti il download fallisce con errore 401/403. Il repo della pipeline include i sotto-modelli necessari.
+
+### 4. Speech-to-text locale, diarizzazione per burst e merge temporale
 
 Dalla root del repository (sostituisci la cartella con quella creata allo `stop`):
 
@@ -76,13 +87,23 @@ uv sync   # la prima volta, o dopo cambi dipendenze
 uv run python scripts/transcribe_session_dual.py sessione/audio/20250514_210530
 ```
 
-Opzioni utili: `--model tiny|base|small|…`, `--device cpu|cuda`, `--player-offset-ms N` per spostare avanti (`N` > 0) o indietro (`N` < 0) nel tempo solo i segmenti del flusso giocatori nel merge.
+Comportamento predefinito: **Whisper** su `master.wav` e `giocatori.wav`; sul canale giocatori, **diarizzazione pyannote per burst** separati da silenzi lunghi (`ffmpeg silencedetect`), poi etichette anonime nei segmenti STT.
 
-Output: `sessione/trascrizione-grezza-doppia.txt` (segmenti con timestamp e etichette `[MASTER]` / `[GIOCATORI]` nel senso del merge).
+Opzioni utili:
 
-### 4. Pulizia con Cursor
+- `--model tiny|base|small|…`, `--device cpu|cuda` (Whisper / ctranslate2)
+- `--player-offset-ms N` per spostare avanti (`N` > 0) o indietro (`N` < 0) nel tempo solo i segmenti del flusso giocatori nel merge
+- `--no-diarize-giocatori` per disattivare pyannote e usare solo `[GIOCATORI]`
+- `--silence-split-min-duration` (default `1.5`), `--silence-noise-db` (default `-40`), `--min-burst-duration` (default `0.4`)
+- `--stt-progress-every N` (default `20`) e `--stt-progress-interval-s SEC` (default `5`): frequenza delle righe di avanzamento STT su stderr
 
-Dopo aver generato il file grezzo, in chat: **`/trascrizione-vc`** (skill `campagna-trascrizione-vc`) per produrre `sessione/trascrizione.md` senza inventare contenuti.
+**Torch GPU:** il `pyproject.toml` punta a wheel **CPU** (`pytorch-cpu`). Per eseguire pyannote su GPU NVIDIA serve un ambiente con PyTorch CUDA (rimuovi o adatta `[tool.uv.sources]` e reinstalla).
+
+Output: `sessione/trascrizione-grezza-doppia.txt` (timestamp, `[MASTER]`, e sul canale giocatori `[GIOC_Bxx_Syy]` o `[GIOC_Bxx_S?]` / `[GIOCATORI]` se la diarizzazione non basta).
+
+### 5. Pulizia con Cursor (a chunk, verifica master)
+
+Dopo aver generato il file grezzo, in chat: **`/trascrizione-vc`** (skill `campagna-trascrizione-vc`). L’agente elabora la grezza in **blocchi** di dimensione limitata (circa 20–45 righe di segmento per chunk), pone **domande al DM solo** dove manca evidenza testuale, e attende **approvazione o correzione** del blocco prima di **appendere** a `sessione/trascrizione.md`. Si può **riprendere** un giro interrotto usando lo stato in `## Note di elaborazione` e i marker `<!-- trascrizione-vc-chunk:K -->`. Principio: **non inventare** contenuti. Il passo successivo è in genere **`/resoconto`**, che tratta `sessione/trascrizione.md` come **fonte primaria** degli eventi quando completo.
 
 ## Pubblicazione dei resoconti
 

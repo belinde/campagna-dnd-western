@@ -6,7 +6,21 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "faster-whisper>=1.0.3",
+    "pyannote-audio>=4.0.4,<5",
+    "python-dotenv>=1.0.0",
+    "torch>=2.2.0,<3",
+    "torchaudio>=2.2.0,<3",
 ]
+
+# Torch da wheel CPU-only (evita ~2GB+ di pacchetti NVIDIA su PyPI). Per GPU PyTorch dedicata, rimuovere [tool.uv.sources] e usare l'indice ufficiale CUDA.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchaudio = { index = "pytorch-cpu" }
 
 [tool.uv]
 package = false

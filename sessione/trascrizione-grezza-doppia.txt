@@ -1,0 +1,440 @@
+# Trascrizione grezza dual-track (master + monitor uscita). Canale giocatori: etichette GIOC_Bxx_Syy = burst (silenzi lunghi) e cluster voce locale; non equivalgono ai PG. Generata automaticamente.
+
+0.88s–163.12s [MASTER] e anch'io mi devono accettare, ecco buongiorno, non ti vedo però ti sei, sì ora ti vedo
+152.37s–159.37s [GIOC_B00_S00] buongiorno buongiorno
+159.37s–171.99s [GIOC_B01_S00] sono come test sportivo senti e niente brevemente la presentazione poi insomma siamo interessati
+163.12s–313.01s [MASTER] allora il molto molto brevemente ho 15 nadia, un attimo che sto controllando i volumi, perfetto,
+171.99s–180.71s [GIOC_B01_S00] sono interessati a vedere l'applicazione che una parte tu hai creato anzi totalmente sappiamo bene
+180.71s–186.11s [GIOC_B01_S00] anche loro ho contato un po quale sono state le conseguenze della operazione che ho fatto che
+186.11s–192.79s [GIOC_B01_S00] sono di peso abbiamo la cosa va bene eh loro come azienda sono odisi di siabari che a milano
+192.79s–200.55s [GIOC_B01_S00] infatti colleghi sono marti che sta a milano eh salvatore che sta qua a barri eh qui ne
+200.55s–207.59s [GIOC_B01_S00] hanno due sedi si occupano di soluzioni di ottimizzazione dei processi con un sotto
+207.59s–213.71s [GIOC_B01_S00] enogoda sai meglio di me cosa significa ok e hanno clienti molto grandi importanti da soggei
+213.71s–220.39s [GIOC_B01_S00] banconidesio eh sono veramente grossi clienti oltre che dei clienti medici diciamo così
+220.39s–227.03s [GIOC_B01_S00] tipo la regione lavorano molto anche con il pubblico con la presidenza dei ministri dei
+227.03s–233.67s [GIOC_B01_S00] consigli dei consigli viene dicendo eh l'obiettivo loro è comunque poi dotarsi sempre più di
+233.67s–238.95s [GIOC_B01_S00] soluzioni cloud per arrivare a intercettare anche le piccole e le imprese su esigenze
+238.95s–244.15s [GIOC_B01_S00] specifiche come quella appunto infatti pagati da ma della soluzione che conosci meglio di me
+244.15s–250.79s [GIOC_B01_S00] quindi l'obiettivo di oggi sarebbe a loro o dargli una una view di questa applicazione in
+250.79s–257.43s [GIOC_B01_S00] questa come lo vuoi chiamare tu questo servizio eh teni presente che martin ha più un ruolo
+257.51s–265.59s [GIOC_B01_S00] commerciale se non sbagliono eh invece salvatore eh oltre a essere il CEO è anche più un taglio
+265.59s–272.91s [GIOC_B01_S00] insomma più tecnico eh quindi con un approfondimento più sultimi che tu conosci meglio ah diventa
+272.91s–280.82s [GIOC_B01_S00] eh niente Franco si è più eppure sentere brissimamente e poi andiamo procediamo da bene
+280.82s–286.30s [GIOC_B01_S00] io mi sposto per caratteristare non mi guarda non mi guarda non mi posso guardare
+286.30s–292.74s [GIOC_B01_S01] scusci mi chiamo con un sento e ecco e smettiti su davanti l'occhio l'occhio l'occhio di
+292.74s–311.83s [GIOC_B04_S00] Magritte si sente sente male ma io senti io sentivo bene no no no io ti sento bene
+311.83s–356.92s [GIOC_B06_S00] yes magari se puoi ingrandirla perché si vede no devi ingrandirla tu se la metti vai su contenuti
+313.01s–321.93s [MASTER] allora come dicevo lavoro nel campo una sviluppo di 15 nadanni, sono fondatore della conta aperta
+321.93s–328.93s [MASTER] della nannes rel e mi sono stato il cto, nominalmente in quanto unico sviluppatore,
+328.93s–342.81s [MASTER] nel faccio passo subito a una presentazione del termoschiero, state vedendo il mio schermo,
+342.81s–373.86s [MASTER] perfetto, allora il conto aperto è una pietaforma pensata, finì, ok adesso la vedete vedete bene,
+356.92s–368.04s [GIOC_B06_S01] e portare tutto schermo vado su contenuti e portare tutto schermo no ma io uso tutti i
+368.04s–632.97s [GIOC_B06_S00] giorni questi strumenti si vabbè dai ok va bene vabbè sì ma martina scusami se
+373.86s–381.78s [MASTER] allora è una pietaforma che è stata pensata fin da subito per essere redistribuita quindi
+381.78s–391.46s [MASTER] multi tenant e gestita attraverso più rivenditori, quindi c'è una struttura piramidale per cui c'è
+391.46s–401.70s [MASTER] nannes che gestice i rivenditori, che gestiscono i customer, che gestiscono i clienti paganti,
+401.70s–412.86s [MASTER] se sono quattro livelli, partiamo con la parte più interessante che è la parte per i customer,
+412.86s–421.10s [MASTER] quindi sono gli utilizzatori quelli che si vogliono far pagare, hanno a disposizione questa
+421.14s–429.14s [MASTER] dashboard in cui adesso non ho dati freschi da far vedere perché è da molto che è in sospensione,
+429.14s–436.42s [MASTER] quindi ci sono soltanto questi dati di esempio, però hanno una visione di insieme su gli
+436.42s–443.74s [MASTER] incassi previsti per il futuro, sulla base delle subscription attive, la situazione dei
+443.74s–454.50s [MASTER] pagamenti già registrati, scaduti, incassati, non incassati, l'istorico dei bonifici che sono
+454.50s–458.78s [MASTER] stati poi alla fine effettuati sul contocorrente, quindi quando dopo che tutti i soldi sono stati
+458.78s–469.06s [MASTER] collezionati vengono spostati sul contocorrente del customer a frequenza configurabile e limiti
+469.06s–481.22s [MASTER] d'uso per il piano che hanno in corso. Poi hanno a disposizione, adesso qua stiamo vedendo un progetto
+481.22s–486.26s [MASTER] pilota che avevamo avuto per la gestione di un condominio, quindi il customer è il condominio,
+486.26s–496.42s [MASTER] i clienti sono i condomini, questi sono tutti i condomini del condominio, ognuno dei quali ha
+496.42s–503.70s [MASTER] dovuto accettare un contratto, questo è un concetto principale di conto aperto ovvero
+503.70s–509.54s [MASTER] lo stabiliere è una relazione filuciaria che chiamiamo contratto perché ha evidenti
+509.54s–518.18s [MASTER] somiglianze con i contratti legali interi, il contratto è un contenitore nel quale
+518.18s–529.30s [MASTER] il customer può aggiungere richieste di pagamento o abbonamenti. Andando nel dettaglio, sono così
+529.30s–539.62s [MASTER] mandati, la signora Analia ha accettato le condizioni generali conto aperto, abbiamo la traccia
+539.62s–549.78s [MASTER] di quando l'ha stato fatto, c'è la possibilità di aggiungere dei dettagli custom del customer per
+549.78s–561.86s [MASTER] delle sue varie necessità e lo storico dei pagamenti inseriti. Quindi qua sono state inserite,
+561.94s–570.74s [MASTER] qua entrerate, sono state utilizzate, sarebbe stata utilizzata la carta di credito data del cliente
+570.74s–576.82s [MASTER] ma chi in questo caso non ha mai accettato, non ha mai accettato di pagare. Il pagamento
+576.82s–588.50s [MASTER] ricorrenti quando le hanno utilizzati, possiamo anche crearli direttamente, sono soltanto un
+588.50s–601.22s [MASTER] template per cui posso definire quali, un incasso ripetuto nel tempo con frequenza
+603.22s–612.66s [MASTER] anche personalizzabile con tutti i mesi, tra le giugno, eseguiti il tale giorno con
+612.82s–619.46s [MASTER] causale valore riscosso. Quindi questa cosa qua poi viene, il cliente può accettare la subscription
+619.46s–636.50s [MASTER] e quindi poi i pagamenti vengono mandati. La gestione dei contratti, questa, si interrompete
+632.97s–805.51s [GIOC_B11_S00] avrete fatto avanti tanto siamo tra di noi è potete sì sì certo sì ti esseri due quindi
+636.50s–648.10s [MASTER] mi senza problemi. Questa è la schermata di gestione più completa del contrato del mandato,
+648.10s–657.54s [MASTER] posso aggiungere documenti, ci sono ulteriori campi, posso dare delle scadenze a questo contratto,
+658.10s–669.06s [MASTER] posso stabilire quali piani di notifica che ho configurato, devo utilizzare,
+669.06s–676.50s [MASTER] configurazione dell'interfaccia che vedrà poi il cliente, ti insi utilizzate e poi si può aggiungere
+676.50s–689.86s [MASTER] i pagamenti per cui anche questi hanno ulteriori dati, gli standard, descrizione,
+689.86s–696.10s [MASTER] i numeri documenti eccetera. Il pieno giocifica di nuovo, questo lo vediamo più nel dettaglio
+697.22s–704.42s [MASTER] fra un pochino, perché fa parte della profonda personalizzazione che si può applicare a tutto
+704.42s–715.38s [MASTER] il flusso, i vari pagamenti e posso aggiungere un richieste di pagamento ulteriore, un pagamento
+715.38s–723.06s [MASTER] ricorrente come abbiamo visto o avevamo iniziato a integrare anche una piccola gestione del
+723.06s–734.10s [MASTER] catargo prodotti e servizi in modo da avere poi possibilità di fare le richieste in maniera
+734.10s–745.94s [MASTER] più veloce nel futuro. Poi posso stabilire che tipo di metodi di pagamento possiamo vogliamo
+745.94s–758.02s [MASTER] utilizzare, noi puntiamo a far utilizzare carta di credito e ad abito sepa per autorizzato infinito
+758.98s–765.14s [MASTER] però ci sono casi d'uso per cui ci hanno richiesto esplicitamente la gestione del bonifico manuale
+765.14s–776.34s [MASTER] e qua facciamo un best effort di riconciliazione automatica dei pagamenti manuali mediante autorizzazione
+776.42s–792.34s [MASTER] ps2 mi sto confondendo le sigle per cui proponiamo all'utente che deve pagare gli proponiamo di
+792.34s–799.38s [MASTER] utilizzare una causale specifica noi ci agganciamo al conto vediamo quando sono stati incastati quei
+799.38s–804.66s [MASTER] soldi e quindi poi riconciliamo lo stato in automatico delle richieste di pagamento
+805.51s–811.75s [GIOC_B13_S00] franco scusami non hai paipall satis pay pagopia queste cose non ci sono giusto
+806.34s–818.18s [MASTER] non l'abbiamo ancora utilizzate ma non è difficile aggiungerle perché
+811.75s–845.67s [GIOC_B14_S00] strike strike ok quindi perché io sto riconoscendo un po sembra essere una scel utente costruita
+819.78s–827.22s [MASTER] noi in questo momento stiamo stiamo supportando due payment gateway diversi eravamo partiti con
+827.30s–840.43s [MASTER] mango pay e poi abbiamo supportato anche il cervello spent stripe esatto
+842.35s–851.86s [MASTER] questa stripe è stata aggiunta dopo sia partitico su mango pay
+845.67s–909.63s [GIOC_B18_S00] su stripe o sbaglio ok pagopia l'hai mai pagopia l'hai mai affrontato come tema
+851.86s–856.66s [MASTER] abbiamo cercato di astrarre il più possibile le meccaniche di pagamento
+857.62s–864.90s [MASTER] in modo da potere avere sullo stesso sistema differenti customer che usano differenti piattaforme
+866.02s–878.26s [MASTER] il quindi in base alle richieste specifiche il il codice è già stato scritto con la gestione
+878.42s–887.38s [MASTER] del multi provider funzionante per cui se si vuole aggiungere il pagamento tramite
+887.38s–894.82s [MASTER] paper le maniera separata si può fare con un efforto di sviluppo limitato non zero ma limitato
+895.78s–902.26s [MASTER] il oppure se si vuole utilizzare paper su stripe allora questo è tutto una fare di stripe
+902.26s–911.92s [MASTER] tante vero che poi abbiamo integrato anche no non non è stato non è stato considerato
+909.63s–918.37s [GIOC_B19_S00] cioè io cito queste cose perché le stiamo interceptando un po sul mercato come esigenze
+912.64s–918.99s [MASTER] abbiamo aggiunto a l'ultra certo
+920.89s–928.41s [GIOC_B19_S00] è salvatore franco inizia salvatore che stripe per l'accordo e molte di queste funzionalità
+928.41s–1003.02s [GIOC_B19_S00] quindi quali sono le differenze eventualmente sì ok una altra domanda visto che ci siamo ma
+933.82s–944.38s [MASTER] allora la personalizzazione della comunicazione con il cliente è il secondo me è il punto
+944.38s–951.42s [MASTER] più forte perché ve la volo far vedere con un pochino più di calma fra poco
+954.30s–966.14s [MASTER] e il fatto che con conto aperto cerchiamo di fornire un pacchetto già funzionante
+967.10s–977.90s [MASTER] ha un target di utenze business small to medium che non hanno tempo e risorse
+977.90s–983.50s [MASTER] per fare un'effettiva integrazione di un getaway di pagamento vero e proprio
+984.38s–989.98s [MASTER] non abbiamo inventato niente questo lo metto chiaramente ma abbia cercato di
+991.10s–994.78s [MASTER] servirlo bene e fare in modo che sia utilizzabile facilmente
+995.74s–999.10s [MASTER] il allora
+1000.54s–1001.58s [MASTER] questo qua giusto per
+1001.58s–1005.26s [MASTER] non c'è domanda visto che ci siamo ma tutto questo
+1003.02s–1010.70s [GIOC_B26_S00] tutto questo che stai infrastruttura tu hai messo è fribi anche tramite ipi tu offri
+1005.26s–1009.18s [MASTER] questa infrastruttura che tu hai messo è fluibile anche tramite ipi
+1010.06s–1016.86s [MASTER] è tutta è tutta completamente ipi il se noi andiamo a vedere in docs punto
+1010.70s–1048.79s [GIOC_B29_S00] delle ipi ok ok sì sì sì qui è già concettualmente costruito così ok sì sì il
+1016.94s–1020.38s [MASTER] conto aperto punto com
+1022.30s–1029.34s [MASTER] c'è documentazione che avevo iniziato a scrivere è ovviamente da completare perché
+1033.90s–1040.70s [MASTER] sì e se andiamo a vedere ci sono cello swagger
+1045.62s–1049.38s [MASTER] mi deve essere scaduto il certificato abiette pazienza
+1048.79s–1053.39s [GIOC_B30_S00] certificato è stato certificato se quanti sottoscrizioni avevate attive alla
+1051.30s–1052.18s [MASTER] sì sì
+1053.39s–1128.74s [GIOC_B30_S00] quando l'avevate sospiro sì sì certo certo anche era questa è la blu e scusate me la
+1053.70s–1059.46s [MASTER] queste sono tutte le ipi che sono esposte utilizzabili il c'è tanta roba
+1060.42s–1064.66s [MASTER] vado non mi ricordavo che fosse così tanta roba
+1068.26s–1073.46s [MASTER] dice quante sottoscrizioni attive allora il come clienti
+1074.82s–1081.78s [MASTER] il ne abbiamo avuto sostanzialmente uno che ha usato davvero il la piattaforma
+1082.50s–1086.90s [MASTER] e a queste sono gli ultimi in casa che avevamo fatto
+1088.34s–1096.18s [MASTER] aveva no sono anche molti di più in realtà sì infatti e aveva fatto transitare
+1096.98s–1103.38s [MASTER] un bel po di centinaia di migliaia di euro quindi la piattaforma è stata testata effettivamente
+1103.38s–1116.58s [MASTER] con grosse cifre il loro avevano come cli tre mila tre mila settecento profili
+1118.10s–1124.34s [MASTER] molti dei quali in realtà poi non hanno davvero utilizzato la la piattaforma perché
+1124.34s–1134.66s [MASTER] questa è un nete bilaterale per la gestione era agribi era un nete che si che si occupava di
+1128.74s–1185.02s [GIOC_B33_S00] rafflu come si chiama il cliente quello venito a grivire sì va bene che guati
+1135.62s–1140.58s [MASTER] incassare i contributi delle aziende agricole del veneto
+1142.42s–1146.26s [MASTER] e poi sfruttava così solti per i rogari servizi
+1147.54s–1158.42s [MASTER] per un anno quasi due anni e ci hanno utilizzato come sistema di pagamento per l'invio delle
+1158.42s–1166.82s [MASTER] delle notifiche se noi prendiamo i filtri quelli con accettato e prendiamo
+1168.50s–1176.42s [MASTER] questa mandavano le varie le varie notifiche le varie richieste il ecco comunque almeno abbiamo
+1176.42s–1182.34s [MASTER] dei pagamenti conclusi con successo bonifico manuale naturalmente perché prendere i contadini
+1182.34s–1196.50s [MASTER] e dirgli di usare delle carte di credito era un comunque il quello che vi stavo facendo vedere
+1185.02s–1284.24s [GIOC_B36_S01] tracciata è anche segmentato in base al cliente non sei un cliente che è in un
+1196.50s–1209.22s [MASTER] prima ecco questa è un anteprima della visualizzazione che hanno i clienti paganti ogni contratto ha una
+1209.22s–1217.62s [MASTER] sua landing page dedicata accessibile soltanto dietro i login degli utenti autorizzati a vederla
+1218.34s–1225.54s [MASTER] nella quale hanno una visione del che cosa c'è il cosa il contratto quali sono i documenti
+1225.54s–1233.54s [MASTER] che sono stati collegati le situazioni pagamenti passati i futuri eccetera eccetera qua ovviamente
+1233.54s–1241.94s [MASTER] non abbiamo nulla da vedere perché noi stiamo proponendo nulla il è qua ora ecco vediamo
+1241.94s–1251.06s [MASTER] punto che è un journal enic dedicata e qua abbiamo una una situazione per cui l'utente
+1251.06s–1256.66s [MASTER] franco traversaro ha richiesto un pagamento a francesca marzullo per un contratto di assistenza
+1256.74s–1265.54s [MASTER] deve pagare l'utente può fare cose diverse può decidere di pagare ora ritardare o rifiutare
+1265.54s–1273.22s [MASTER] il noi non possiamo obbligare pistola alla tempia qualcuno a pagare però possiamo fare in modo
+1273.22s–1296.50s [MASTER] che la comunicazione sia più chiara e prevedibile quindi io ho questa opzione esatto cioè qua per
+1284.24s–1290.92s [GIOC_B36_S01] pagatore diciamo non lo male comunico in un certo modo se invece può capitare che si
+1290.92s–1328.43s [GIOC_B36_S01] trova un momento il tizio e poi comunicare un altro modo sostanzialmente no e poi
+1296.50s–1302.90s [MASTER] esempio ho l'automatismo per cui dico no adesso non ho i soldi ma ce li avrò a fine mese e quindi
+1302.90s–1311.78s [MASTER] adesso ti dico che ti pagherò in ritardo a fine mese ma preautorizzò il pagamento per cui a fine
+1311.78s–1317.62s [MASTER] mese partirà la debita automatico e la situazione si chiude oppure posso dire no rifiuto il
+1317.62s–1322.74s [MASTER] pagamento ma allora mi dan motivazione e allora capiamo che cosa c'è che non sta andando
+1322.74s–1376.24s [MASTER] e poi ovviamente qua posso decidere posso avere differenti metodi adesso per andare avanti un
+1328.43s–1335.31s [GIOC_B37_S00] scusate franco questo fatto di mandare questa forma serve anche a capire poi se
+1335.31s–1338.67s [GIOC_B37_S00] effettivamente i clienti l'utilizzano applicativo perché comunque in qualche
+1338.67s–1344.15s [GIOC_B37_S00] maniera sono costretti a comunicare perché non mi paghi no e quindi a quel
+1344.19s–1350.55s [GIOC_B37_S00] punto anche chi gestisce migliori clientele chi cioè lagribi e quindi anche
+1350.55s–1354.59s [GIOC_B37_S00] supponiamo che avevamo un momento di retenta agribi da questo informazione tu puoi
+1354.59s–1360.03s [GIOC_B37_S00] sapere anche quanto stanno utilizzando in che modo poi lo stanno utilizzando anche
+1360.03s–1366.41s [GIOC_B37_S00] come dire un motivo per capire se perché lo sapete non trova meglio li messi
+1366.41s–1369.87s [GIOC_B37_S00] non tante procedure che hanno installato quel cliente forse non
+1369.87s–1372.87s [GIOC_B37_S00] se non utilizzare neanche, se non viene soddacitato.
+1376.24s–1384.24s [MASTER] pochino più più velocemente vi stavo vi stavo dicendo delle varie personalizzazioni che posso che
+1384.24s–1394.08s [MASTER] posso fare il natura la più importante è il piano notifiche i piani notifiche nel senso che noi
+1394.08s–1406.84s [MASTER] il sistema prevede una serie di messaggi inviati che vengano inviati sulla base di eventi e ne
+1406.84s–1418.56s [MASTER] forniamo ne forniamo dei template di default per esempio questa una notifica c'è una richiesta
+1418.56s–1425.94s [MASTER] del pagamento proposta ma sono già passati i termini per cui sarebbe dovuto avrebbe dovuto
+1425.94s–1436.10s [MASTER] accettare allora mandiamo una comunicazione con questo testo ci sono i vari playsolder per che
+1436.10s–1444.94s [MASTER] vengono poi riempiti con quei valori corretti ma posso creare dei template nuovi quindi con
+1444.94s–1457.30s [MASTER] delle profili di comunicazione come voglio e dopo aver creato i testi che mi interessano posso posso
+1457.30s–1471.74s [MASTER] creare un piano di notifica per esempio il questo stilico modifica qua posso decidere su quali tipi
+1471.74s–1482.06s [MASTER] di quali tipi di oggetto quindi pagamento pagamento ricorrente o l'autorizzazione io posso dire
+1482.06s–1493.10s [MASTER] quando la richiesta di pagamento passa da un certo stato a un altro stato utilizza il messaggio
+1493.10s–1507.26s [MASTER] x da mandare a quale persona e quindi definizione per passaggio da stato a stato oppure pianificati
+1507.26s–1519.46s [MASTER] quindi se una cosa è stata è in stato presentato al cliente e il un giorno prima della data di
+1519.46s–1527.86s [MASTER] termine allora manda a tizio o caio quindi in un colpo solo posso configurare sia le comunicazioni
+1527.86s–1538.29s [MASTER] al cliente sia le notifiche a me stesso scusate secondo altrimenti è la gatta mi distrugge la
+1538.29s–1549.05s [MASTER] porta e qua non c'è limite alla complicazione che posso che posso introdurre quindi qua per
+1549.05s–1557.41s [MASTER] esempio se andiamo a vedere le notifiche standard quelle che ti mettiamo in automatico su questi
+1557.41s–1565.65s [MASTER] passaggi di stato manda questi mesaggi e oppure giorni prima giorni dopo qualcosa manda altri
+1565.65s–1572.17s [MASTER] messaggi per tutti i tipi io posso avere più piani di notifica ci sono quelli che
+1572.17s–1579.77s [MASTER] mettiamo di default più quelli che mi sono fatti personalizzati e ne posso applicare il
+1579.77s–1588.69s [MASTER] piano notifica su tre livelli a livello del singolo cliente quindi ed è questo sarà il suo default
+1588.69s–1597.97s [MASTER] quando gli mando delle cose il a livello di contratto o a livello di singolo pagamento per cui posso
+1597.97s–1605.37s [MASTER] avere posso avere tipicamente il piano di notifica dolce e il piano di notifica aggressivo quindi a
+1605.37s–1612.01s [MASTER] un buon cliente lo metto in piano di notifica dolce ma c'è una singola scadenza che è estremamente
+1612.01s–1618.21s [MASTER] importante allora solo per quelli pagamenti gli uso il piano di notifica aggressivo per
+1618.21s–1627.93s [MASTER] esempio poi personalizzazione termini dei condizioni ci sono quelle che deve l'utente deve
+1627.93s–1634.85s [MASTER] accettare per usare conto aperto sia il cliente pagante che il cliente pagato ma posso creare
+1634.85s–1644.17s [MASTER] delle mie condizioni perché il tipo di servizio che era qualche cliente è speciale quindi mi
+1644.17s–1649.89s [MASTER] serve che accetti un certo qualcosa me la posso aggiungere e posso creare dei set di
+1649.89s–1656.17s [MASTER] condizioni da applicare ai contratti e le mie condizioni personali vengono registrate con
+1656.17s–1666.89s [MASTER] i p e data di accettazione assieme a tutte le altre posso personalizzare in parte l'interfaccia
+1666.89s–1672.61s [MASTER] per cui posso nella scremata che ho fatto vedere quella più piccola posso decidere quali
+1672.61s–1679.21s [MASTER] test utilizzare il attendere ci sarebbe stata anche una selezione dei colori cosa
+1679.21s–1688.81s [MASTER] quelle faccio sono cose facili da aggiungere poi gestione degli accessi in questi sono i
+1688.81s–1696.29s [MASTER] miei collaboratori e posso avere differenti livelli di di accesso amministratore operator
+1696.29s–1703.49s [MASTER] osservatore per cui posso invitare una persona a diventare mio collaboratore e quindi potrà
+1703.49s–1715.73s [MASTER] utilizzare o meno le mie accedere e gestire l'interfaccia integrazioni le abbiamo fattore in
+1715.73s–1725.73s [MASTER] cloud per la gestione del flusso di pagamento il se si abilita il collegamento un cron
+1725.73s–1822.96s [MASTER] giornalmente guarda tutte le fatti allora dicevo l'integrazione fattore in cloud si
+1730.17s–1735.17s [GIOC_B46_S00] Franco, noi siamo stati autorizzati al fatto di fare l'autorizzazione di utilizzare
+1735.17s–1740.17s [GIOC_B46_S00] il fatto di fare il clout in clout, e non di difussi come il sistema per il clout.
+1740.17s–1742.17s [GIOC_B46_S01] Sì, io sono cliente di il fatto di fare il clout.
+1742.17s–1747.17s [GIOC_B46_S00] Ah, ok. Nessun'è perfetto.
+1747.17s–1750.17s [GIOC_B46_S01] Infatti, qui c'è una serie di cose da dirgli.
+1750.17s–1752.17s [GIOC_B46_S01] Non vi apprengerete come se fosse qualcosa di più.
+1752.17s–1756.17s [GIOC_B46_S00] Tu pensi che il mio commercialista non è il sistema, non è il sistema,
+1756.17s–1759.17s [GIOC_B46_S00] si stile perché non volevo avere le retture di questo fatto.
+1759.17s–1760.17s [GIOC_B46_S02] Non, tanto di capire.
+1760.17s–1761.17s [GIOC_B46_S00] Lo scelto a post.
+1761.17s–1765.17s [GIOC_B46_S02] Ho fatto un sacco di soldi con una cosa che praticamente lasciamo stare.
+1765.17s–1768.17s [GIOC_B46_S00] Ma queste sono come chi le rapprima.
+1768.17s–1769.17s [GIOC_B46_S00] Nel fatto è così.
+1769.17s–1770.17s [GIOC_B46_S02] Sì, è così.
+1770.17s–1774.17s [GIOC_B46_S00] Stessi va sui grandi volumi, poi a sua prezzo è un po' di consiglio.
+1774.17s–1776.17s [GIOC_B46_S02] Vanno sui grandi volumi.
+1776.17s–1780.17s [GIOC_B46_S00] Cazzo, loro hanno milioni di attivazioni consigliati da l'autorizzazione.
+1780.17s–1781.17s [GIOC_B46_S02] Non so.
+1783.17s–1786.17s [GIOC_B46_S00] Il ragazzo che l'ha sviluppata, quando andava a casa sua,
+1786.17s–1790.17s [GIOC_B46_S00] era l'unica dipendente della sua madre, qui 22 anni.
+1790.17s–1791.17s [GIOC_B46_S00] Sì.
+1791.17s–1794.17s [GIOC_B46_S01] Li avevo anche conosciuti, quelli che hanno messo su.
+1794.17s–1798.17s [GIOC_B46_S00] E non è la macchina, prendo lì così, la mare si misa a piangere.
+1798.17s–1799.17s [GIOC_B46_S00] 3 milioni di euro.
+1799.17s–1800.17s [GIOC_B46_S00] 3 milioni di euro.
+1800.17s–1801.17s [GIOC_B46_S00] Ci dà 3 milioni.
+1804.17s–1807.17s [GIOC_B46_S00] E ora che c'è l'unipendente e ti insiste,
+1807.17s–1811.17s [GIOC_B46_S00] lui era un merda di quelli un po' da avverte un'impa,
+1811.17s–1812.17s [GIOC_B46_S00] però è parafissimo.
+1812.17s–1816.17s [GIOC_B46_S00] Ha avuto lui queste, e poi con il supporto di ti insiste,
+1816.17s–1818.17s [GIOC_B46_S00] si esplose tutto.
+1818.17s–1920.62s [GIOC_B46_S01] Sono una ascoli.
+1822.96s–1833.20s [MASTER] aggancia quotidianamente vede l'elenco delle fatture o delle delle delle bozz delle
+1833.20s–1845.24s [MASTER] preforma il che sono su il tira giù i termini di pagamento le date i valori manda le richieste
+1845.24s–1851.12s [MASTER] di crea le richieste di pagamento manda le notifiche e quando vengono pagate le singole
+1851.12s–1859.60s [MASTER] resistenze aggiornano lo stato di pagamento sulla fattura suo fattore in cloud after banks è un
+1859.60s–1872.92s [MASTER] provider invece spagnolo per la ps2 e quindi qua possiamo possiamo andare a configurare come
+1872.92s–1883.80s [MASTER] vogliamo che faccia il controllo di corrispondenza tra i movimenti che si trovano sul sul conto e
+1883.80s–1894.74s [MASTER] le richieste di pagamento che abbiamo a sistema per per vedere se e se possiamo fare il l'erconcellizia
+1894.74s–1899.94s [MASTER] automatica oppure se si vuole la sua previsione manuale quindi vado a confermare manualmente
+1899.94s–1909.02s [MASTER] un movimento per movimento e tsi pei che abbiamo integrato come terzo provider il
+1909.02s–1919.42s [MASTER] pagamento e cercando di agganciarci il funziona però non non è stato effettivamente testato sul
+1919.42s–1934.74s [MASTER] campo poi tracciati di importazione ed esportazione quindi posso creare dei tracciati per esportare
+1920.62s–1950.58s [GIOC_B48_S00] Per me è un', è un'altra cosa.
+1934.74s–1945.34s [MASTER] le linea grafiche e i dati da conto aperto ma posso anche creare un nuovo tipo di tracciato per fare
+1945.34s–1960.26s [MASTER] importazioni da sorgenti sconosciute allora questo era la configurazione degli incassi e siccome
+1950.58s–1952.58s [GIOC_B49_S00] Non so te, che non so te non so te.
+1952.58s–1960.48s [GIOC_B50_S00] Attaccia la messa di acqua, eh quello che mi dico.
+1960.26s–1968.54s [MASTER] tutte le transazioni passano per un per il wallet del provider io posso poi decidere come spostare i
+1960.48s–1967.30s [GIOC_B51_S00] Poti come siwatze.
+1967.30s–1970.30s [GIOC_B51_S00] Infatti, né riesco a dare...
+1968.54s–1979.90s [MASTER] soldi sul conto documenti profil aziendale giustamente poi per quanto riguarda i pagamenti
+1970.30s–1972.30s [GIOC_B51_S00] non è escalato, né è un'altra cosa,
+1972.30s–1974.30s [GIOC_B51_S01] una nidia e un�b, un'archi.
+1974.30s–1975.30s [GIOC_B51_S01] Non so di l'alchi.
+1975.30s–2001.25s [GIOC_B53_S00] Nì, non so di l'alchi.
+1979.90s–1987.18s [MASTER] il qua abbiamo la vista di tutti i richieste di pagamento di tutti i clienti filtrabili
+1987.18s–1998.06s [MASTER] ordinabili ricercabili esportabili in un csv o in xls per quello che sto vedendo ci sono delle
+1998.06s–2004.78s [MASTER] funzionalità di inserimento sequenziale quindi questa c'è la vera richiesta del come si dice il
+2001.25s–2003.25s [GIOC_B53_S00] Non so di l'alchi, non lo vedo.
+2003.25s–2005.25s [GIOC_B53_S00] A questo alco, la vera, si non lo explodono.
+2004.78s–2013.42s [MASTER] condominio perché vogliono fare 40 richieste a persone diverse tutto uguali ma che abbia
+2005.25s–2017.78s [GIOC_B54_S00] L'inguaggio.
+2013.42s–2026.82s [MASTER] soltanto il una cosa soltanto il la montare poi una possibile utilizzo quando sono niente di utile
+2017.78s–2019.78s [GIOC_B54_S00] Tutti gli villaggini, le basi.
+2019.78s–2143.77s [GIOC_B60_S00] non c'è successo. Non aspetta. Marco Cesar, eh? Io, Marco Cesar è una persona che conosco.
+2026.82s–2036.10s [MASTER] la funzionata di emulazione riba per agganciarci a gestionali che che sono sistemi chiusi per
+2036.10s–2044.42s [MASTER] cui non abbiamo non c'è non ci sono i piai da interrogare se tu hai un gestionale di media media
+2044.42s–2051.34s [MASTER] potenza puoi gestirti tutta la fatturazione sul tuo sul tuo gestionale poi configuri
+2051.34s–2060.22s [MASTER] contaperto come se fosse una banca e ti fai generare il documento per per le riba il
+2061.22s–2069.90s [MASTER] quello che si usa per la gestione telematica noi interpretiamo questo documento il creiamo
+2069.90s–2075.38s [MASTER] in automatico le richieste di pagamento li agganciamo alla alle anagrafiche e ci occupano
+2075.38s–2084.62s [MASTER] dalla comunicazione il pagamento e poi possiamo ricomunicare al al gestionale lo stato di lo
+2084.62s–2094.46s [MASTER] stato di pagamento e qua la gestione del bonifico bancario per cui mi aggancio alla mia banca e
+2094.46s–2104.90s [MASTER] posso andare a gestire appunto i benefici manuali per la validazione e tutto quanto in abbonamenti
+2104.90s–2110.98s [MASTER] soltanto una visione in casa una visione gli utenti le abbiamo visti prodotti avevo
+2110.98s–2121.66s [MASTER] iniziato al a fare la gestione appunto di una piccola anagrafica di di prodotti con
+2121.66s–2131.54s [MASTER] un differenti la gestione di differenti modalità diventata e componenti di costo e avete conoscete
+2131.54s–2152.22s [MASTER] per caso in quella dove lavorava marco cesare si è a milano zora esatto il qua ci ci permette di
+2143.77s–2157.02s [GIOC_B62_S00] Eh, giù ora, giù ora, giù ora. Lo conosci, Marco, quindi? Sì, è un nome che
+2152.22s–2184.60s [MASTER] gestire allora quando nel prodotto possiamo possiamo definire più componenti di costo per cui
+2157.02s–2163.18s [GIOC_B62_S00] io solo sto ricercando. Quanto parla? Più di te è possibile. Eh, ma io non so bene.
+2163.18s–2170.10s [GIOC_B62_S00] Più di te mi sembra di possibile. Eh? Non l'ho capito. Dico, più di te parla.
+2170.10s–2178.18s [GIOC_B62_S00] Tu sei? Stento male. Ho detto, più di te parla. Sì, sì, sì, si parla molto più di me, sì, sì.
+2179.18s–2182.18s [GIOC_B62_S00] Ecco, ci ero pure sul link, no? Sì.
+2184.60s–2191.28s [MASTER] possiamo dire per questo c'è un prezzo fisso di cente euro all'accettazione una tantum per
+2191.28s–2199.44s [MASTER] l'installazione più un abbonamento da 20 euro al mese per un anno e possiamo fare una serie di
+2199.44s–2210.48s [MASTER] cose molto complicate e poi posso creare un carrello che viene esposto su conto aperto il al momento
+2210.48s–2216.12s [MASTER] soltanto sul nostro dominio ma poi attendere si sarebbe voluto fare il dominio personalizzato per
+2216.12s–2227.52s [MASTER] cui il io posso andare a descrivere carrellino posso metterle compuore il cosa come voglio andandogli
+2227.52s–2243.52s [MASTER] a cambiare i colori caricando immagini eccetera il e adesso quindi salvo questo carrova salva
+2245.96s–2259.92s [MASTER] giustamente prova niente nel da segno di alcun che fa vedere il quali poi posso andare a definire
+2259.92s–2267.52s [MASTER] quali prodotti posso posso utilizzare e di conseguenza gli utenti vanno a creare in
+2267.52s–2274.96s [MASTER] automatico i contratti imposti a creare in automatico gli abbonamenti eccetera eccetera questa una
+2274.96s–2286.20s [MASTER] rapidissima carrellata di quello che fa il prodotto poi c'è il pannello per i rivenditori nel quale
+2286.20s–2298.32s [MASTER] possono andare a stabilire che profili di utilizzo e che limiti di utilizzo potranno avere il customer
+2298.32s–2319.39s [MASTER] quando è solo una cosa appena allora io personalmente ho mi sono quadrato solo la parte tecnica però
+2303.64s–2310.04s [GIOC_B66_S00] Scusa, franca, una domanda, ma il modello di business che avevi immaginato e messo su tu si basava su
+2310.04s–2324.56s [GIOC_B66_S00] una percentuale sul transato, come l'hanno fatto? Eh, è sott'escrizione, è un abbollamento
+2319.39s–2340.54s [MASTER] il modello sarebbe stato di appoggiarsi esatto e il e c'è già la gestione del dello split del
+2324.56s–2330.56s [GIOC_B67_S00] con cliente, poi con il divenditore, non lo aspetto, eh, è più sul transato, si prendeva
+2330.56s–2372.78s [GIOC_B67_S00] una percentuale. Sono stati salmente qua, no? Non stai qualunque doveva venire, sì.
+2340.54s–2351.78s [MASTER] del ricarico tra conto aperto e il rivenditore quindi nel pannello di amministrazione invece di
+2351.78s–2366.70s [MASTER] nan mega admin io posso andare a dire che il che con levia gli riconosciamo il 50 per cento sul netto
+2366.70s–2372.10s [MASTER] delle commissioni su un altro rivenditore gli diamo soltanto il 10 per cento quindi c'è
+2372.10s–2380.06s [MASTER] tutta questa tutta questa parte qua il qua qua abbiamo un pochino più di strumenti perché ok la
+2372.78s–2517.78s [GIOC_B71_S00] Chiaro. Di solito. Su che tecnologia è fatto? È prestazione.
+2380.06s–2392.18s [MASTER] gestione dei rivenditori il un il tool per fare il calcolo di quanto effettivamente va rifatturato
+2392.18s–2399.94s [MASTER] al rivenditore per no quanto il rivenditore ci deve fatturare in modo che gli possiamo pagare
+2399.94s–2412.78s [MASTER] le le sue quote è un po di tool di di supporto per di analisi ricerca per support strumenti
+2412.78s–2425.26s [MASTER] strumenti interni impostazioni valide questo è un anno di due anni di sviluppo su che tecnologi
+2425.26s–2437.10s [MASTER] del fatto allora sono tutti è un servizio node scritt in type script che gira su ecs e tutta
+2437.10s–2449.98s [MASTER] l'infrastruttura su a us il front end react e poi niente di niente di trascendentale l'infrastruttura
+2449.98s–2461.06s [MASTER] è tutta progettata con cdk e gli i differenti ambienti in questo momento è rimasta soltanto
+2461.06s–2474.06s [MASTER] produzione però c'era sviluppo preview e produzione sono deployati usando lo stesso lo stesso stack
+2474.06s–2488.23s [MASTER] con differenti configurazioni era partito con con ecs in fargate e poi siamo adesso l'abbiamo
+2488.23s–2498.31s [MASTER] convertito a ecs su singola singola estanza e c2 per contenere i costi si potrebbe ultimamente
+2498.31s–2505.79s [MASTER] ridurre nel senso che a un certo punto si potrebbe fare anche una singola macchina con
+2505.79s–2513.39s [MASTER] un docker compose il sistema sta in piedi ovvio che avvo cercato di mantenere un equilibrio tra
+2513.39s–2522.31s [MASTER] riduzione dei costi e effettiva sicurezza però è già tutto predisposto per poter andare in
+2518.78s–2530.42s [GIOC_B73_S00] Ok. Va bene, ci sono altre domande, la parte vostra. No, no, è abbastanza chiave.
+2522.31s–2590.42s [MASTER] autoscaling su tutti i suoi componenti esatto allora allora io personalmente in questo sono
+2530.42s–2537.42s [GIOC_B73_S00] Eh, io c'ho una domanda per te, franco. Una domanda in cui noi appunto prendiamo in carico, diciamo, la chiavetta,
+2537.42s–2543.42s [GIOC_B73_S00] cioè mi ha detto che è la proprietà del sott'e, ve lo depodora questa chiavetta,
+2543.42s–2550.42s [GIOC_B73_S00] sarà data ai soci che non messi i capitali, quindi una ha un socio, una me, l'altra, franco.
+2550.42s–2558.42s [GIOC_B73_S00] E ti dici, no, giusto, no? Sarà definita così. Eh, tu puoi essere ingaggiato,
+2558.42s–2565.42s [GIOC_B73_S00] se vuoi essere ingaggiato, come vuoi essere ingaggiato, fino a che punto puoi far partita,
+2565.42s–2570.42s [GIOC_B73_S00] a che punto ci vuoi dare un supporto, immaginare inizialmente sarà necessario,
+2570.42s–2574.42s [GIOC_B73_S00] per lo meno, però noi penso che siamo abbastanza aperti di avvalutare
+2574.42s–2578.76s [GIOC_B73_S00] qualsiasi poche considerazione a questa, il momento in cui ora i soci di questa azienda fanno
+2578.76s–2587.92s [GIOC_B73_S00] minimum di riflessione, no, no, no, so, delle considerazioni per capire se è come andrà avanza.
+2587.92s–2684.79s [GIOC_B78_S00] Complimenti. Un po' di documentazione, siete. Chiaro.
+2590.42s–2600.02s [MASTER] in una fase di dissalto tra l'altra perché mi è stata fatta un'offerta per una posizione di cto
+2600.02s–2611.06s [MASTER] in un'azienda vera questa volta quindi però sto aspettando l'offerta scritta è una cosa che
+2611.06s–2614.50s [MASTER] saranno avanti da da qualche mese e continuano a dirmi ci siamo ci siamo ci siamo però
+2614.50s–2618.90s [MASTER] è già successo altre volte che mi ha detto ci siamo ci siamo ci siamo quindi non mi
+2618.90s–2624.38s [MASTER] aspetto che mi tirano il pacco però non ho ancora la certezza detto questo in questo momento
+2624.38s–2634.50s [MASTER] sto lavorando in un'azienda che fa che che fa supporto di sviluppo per altre aziende quindi
+2634.50s–2646.46s [MASTER] se non avete già della forza lavoro che ci può lavorare vi posso presentare il e sono miei amici
+2646.46s–2653.98s [MASTER] con quali o buoni rapporti per cui se mi dicono non stiamo a capire una cosa mi chiamano e gli do supporto
+2653.98s–2663.46s [MASTER] io personalmente prima di consegnare la chiavetta scriverò farò scrivere dall'intelligenza
+2663.46s–2671.58s [MASTER] artificiale onestamente il tutta la documentazione che posso che posso far fare e conto di far
+2671.58s–2680.58s [MASTER] mettere in documentazione dei garrail peria con tutto quello che so del progetto in modo da dare un
+2680.58s–2687.66s [MASTER] qualcosa che messo in mano a uno sviluppatore con con un tool adeguato va nella direzione giusta
+2684.79s–2716.30s [GIOC_B79_S00] Va bene, va bene. Sembra il problema, non è molto problema la risolta, qualche manca non si risolta.
+2687.66s–2699.74s [MASTER] poi posso essere disponibile per per consulenza il detto sinceramente tutte le volte che ho che
+2699.74s–2705.26s [MASTER] l'ho fatto in regola al fine ci ho pagato più tasse di quello che ho ragniato quindi mettetevi
+2705.26s–2712.62s [MASTER] una mano sul cuore è una cosa che mi sono detto non farò mai più io voglio lavorare
+2712.62s–2738.37s [MASTER] dipendente basta adesso ora verso fine maggio devo sentire il commercialista e lo sento io
+2716.30s–2724.30s [GIOC_B79_S00] Senti, poi invece chiaramente la pressurizzazione del nome, noi siamo ottenuti, ora devo sentire anche Franco Ligoletti,
+2724.30s–2740.31s [GIOC_B79_S00] volendo il marculo che possiamo ottenere, ora non mi ricordo, perché penso che qui ci di Juniors venga definito il tutto, se non ricordo male.
+2738.37s–2766.73s [MASTER] no francesca per stabilire la scaletta di chiusura del marchio gli chiedo onestamente cioè io onestamente
+2740.31s–2760.61s [GIOC_B81_S00] Ok, chiedi magari, al più lo cambiamo, lo teniamo, questa è una decisione che volete fare voi, ma poi vediamo, anche perché c'è un certo tipo di prem,
+2760.61s–2784.93s [GIOC_B81_S00] ma non è che un brand come è fatto Riclato, non c'è un valore significativo, può essere carino come il nome, però ok, giusta considerazione.
+2766.73s–2774.21s [MASTER] se c'è un brand se c'è un brand è già stato speso cioè se c'è qualcuno che conosce il nome
+2774.21s–2782.33s [MASTER] sa che è un prodotto fermo da due anni quindi non ci vedo sto grande valore nel riutilizzare
+2782.33s–2814.45s [MASTER] conto aperto ma quelle sono valutazioni che fate voi con un maggiore competenza di me si
+2785.93s–2800.93s [GIOC_B84_S00] Vabbè, allora rimaniamo così Franco, facciamo un briefing, ci vediamo un qualche giorno di tempo e io ti ricontatto, ti ricontattiamo e vediamo un po' in cui procede.
+2800.93s–2809.93s [GIOC_B84_S00] Nel frattempo se tu hai le news, noi pensiamo in qualche giorno, un ritorno te lo diamo, relativamente a discorso le commercialista,
+2810.93s–2819.93s [GIOC_B84_S00] fammi sapere, vediamo un attimino, perché per me comunque è un peccato, ok, allora ok.
+2814.45s–2849.44s [MASTER] dico siamo rimasti in parola che ci sentiamo verso fine mese quindi fra 10 giorni il tecnicamente
+2819.93s–2820.93s [GIOC_B85_S00] Franco, scusa via.
+2820.93s–2830.93s [GIOC_B85_S00] Perché per me, non so Franco, tu cosa ne pensi, è un peccato aver fatto il mestro di soldi che abbiamo messo, io avrò messo 60, 70 milioni di Colignac,
+2830.93s–2839.93s [GIOC_B85_S00] ognuno di noi ha messo un'importanza importante, è un peccato poi perdere il lavoro fatto, che mi sembra che la soluzione gira, va bene,
+2839.93s–2846.93s [GIOC_B85_S00] per me è una mezza figata, vederla proprio, è semplice, intuitiva, non so la tua opinione, Franco.
+2849.44s–2858.28s [MASTER] gli manca un po di rifinitura perché sono le cose che l'idea era sviluppo da solo tutto
+2858.28s–2862.48s [MASTER] quanto ottengo un progetto un prodotto che funziona e iniziamo a guadagnare assumiamo
+2862.48s–2872.60s [MASTER] qualcuno e iniziamo a lavorarci come team quindi ve lo dico è un man ben show con tutti i limiti
+2872.60s–2887.49s [MASTER] del caso nessuno soddisfatto tutt'ora guardando indietro non farai scelte molto diverse penso
+2887.49s–2894.77s [MASTER] che sia qualcosa in cui ci possa mettere mano chiunque abbia un po di skill perché non è semplice però
+2894.77s–2901.05s [MASTER] non è però non estamente tutti quelli che hanno lavorato sui progetti su cui che ho scritto io non
+2901.05s–2921.30s [MASTER] se sono mai lamentati quindi per ora esatto esatto queste vanno
+2906.31s–2915.31s [GIOC_B87_S00] Senti una domanda, ovviamente poi ci sono da riconoscere le royalties a Stripe per quanto riguardi i pagamenti.
+2915.31s–2918.31s [GIOC_B87_S00] E' a Mangopei, anche Mangopei.
+2918.31s–2950.42s [GIOC_B88_S00] Comprensiva di quella di Stripe.
+2921.30s–2931.06s [MASTER] vanno gestite con oculatezza nel senso che sia una cosa che non vi ho fatto vedere dove era più
+2931.06s–2946.82s [MASTER] nel c'era modo di configurare la percentuale di commissione che noi applichiamo che deve essere
+2946.82s–2955.54s [MASTER] maggiore di quella che il provider ci fa però lì è una cosa che va valutata non c'è un
+2950.42s–2951.42s [GIOC_B88_S00] Di quella che è chiaro.
+2951.42s–2952.42s [GIOC_B88_S00] Non si prende troppo stripe.
+2954.42s–2958.42s [GIOC_B88_S01] Quando si prende a Stripe, tu ti ricordi, Franco, quanto ti pari a Stripe?
+2955.54s–2986.55s [MASTER] automatismo cosa non mi ricordo e no sto cercando di sto cercando di vedere allora allora queste
+2958.42s–2960.42s [GIOC_B88_S01] A Sai, si prende a Stripe.
+2960.42s–2963.42s [GIOC_B88_S02] E a Sai, eh, perché noi di volta che abbiamo provato...
+2963.42s–2969.42s [GIOC_B88_S00] Poi ti fanno scamp, ti fanno, però, armi delle solie che sono altissime.
+2969.42s–2973.42s [GIOC_B88_S01] Allora lui ci devono un bel... Cioè, nel senso che entra, so.
+2974.42s–2976.42s [GIOC_B89_S00] Poi quanto avevate applicato l'iconoscione?
+2976.42s–2979.42s [GIOC_B89_S00] Finicore, quant'è con missione erano applicate?
+2979.42s–2986.05s [GIOC_B90_S00] Vabbè, io le posso sapere la mano in mattina, basta schiamare Franco un po'.
+2986.05s–2996.94s [GIOC_B91_S00] Eh, sì, in pratica non velovo.
+2986.55s–2995.07s [MASTER] erano quelle che noi applicavamo quindi stripe e mango pay e si giusto io ho tolto con
+2995.07s–3029.52s [MASTER] visione mi è pazienza io onestamente non è da due anni che non che non guardo più le commissioni
+2996.94s–3007.25s [GIOC_B93_S00] E noi abbiamo provato con Stripe, venderlo a un go.
+3008.25s–3015.25s [GIOC_B93_S00] Però sul B2B non prende, perché con questa Sai.
+3015.25s–3018.25s [GIOC_B93_S00] Noi conquistano in piedi.
+3018.25s–3020.25s [GIOC_B93_S00] E' Franco un po'.
+3020.25s–3022.25s [GIOC_B93_S00] Se voi parliamo con Stripe?
+3022.25s–3031.42s [GIOC_B94_S00] Sì, in piedi.
+3029.52s–3035.48s [MASTER] su stripe quindi se anche mi ricorda c'è un valore sarebbe sicuramente sbagliato però ai tempi
+3031.42s–3039.84s [GIOC_B95_S00] Sì, sì, sì.
+3035.48s–3064.94s [MASTER] viaggiavamo su cosa del genere e qua persi
+3039.84s–3044.25s [GIOC_B95_S00] Sì, eravamo a 2%, parliamo... ok.
+3044.25s–3046.25s [GIOC_B96_S00] Non ero stava in piedi, diciamo così, se non...
+3046.25s–3052.98s [GIOC_B96_S00] Sì.
+3052.98s–3053.98s [GIOC_B97_S00] Va bene.
+3053.98s–3056.98s [GIOC_B97_S00] Poi bisogna studiare solo bene.
+3057.98s–3060.98s [GIOC_B98_S00] Va bene, su questo poi cazzo mai, se andiamo avanti...
+3060.98s–3067.87s [GIOC_B98_S00] Si sono persi.
+3064.94s–3094.41s [MASTER] sì sì sì sì cioè il alla fine i tre quarti dei soldi che hanno messo cioè sono stati i miei
+3073.49s–3074.49s [GIOC_B100_S00] Va bene.
+3075.49s–3077.49s [GIOC_B100_S00] Comunque Franco, la cosa...
+3077.49s–3080.49s [GIOC_B100_S00] Siamo, abbiamo capito bene quello che hai fatto.
+3080.49s–3084.49s [GIOC_B100_S00] Ho tolto complimenti, perché il lavoro, lavoraccio, si è fatto solo da una persona.
+3084.49s–3086.49s [GIOC_B100_S00] Stavano pagato almeno, sì.
+3093.92s–3095.92s [GIOC_B101_S00] Sono andati per te, sì, ci mancherebbe.
+3094.41s–3102.53s [MASTER] stipendi non sono sono entrato sono entrato come cioè non sono entrato sono il fondatore e poi
+3095.92s–3096.92s [GIOC_B101_S00] Sì, ci mancherebbe.
+3096.92s–3098.92s [GIOC_B101_S00] Cosa si chiede di stanno?
+3098.92s–3103.16s [GIOC_B101_S00] Sì, ecco, sono...
+3102.53s–3143.02s [MASTER] loro hanno fatto il finanziamento e l'accordo era il biolog considero un capitolo chiuso poi se
+3103.16s–3104.16s [GIOC_B102_S00] Chiaro.
+3104.16s–3107.16s [GIOC_B102_S00] Certo, e tu sei quello che ha lavorato, sì, sì.
+3107.16s–3108.16s [GIOC_B102_S00] Va bene.
+3108.16s–3115.16s [GIOC_B102_S00] Non ho capito se sono entrati o no, però io devo lasciare, perché ho un appuntamento.
+3115.16s–3119.16s [GIOC_B102_S00] Quindi ci facciamo comunque risentire, perché facciamo un briefing tra di noi, insomma,
+3119.16s–3125.16s [GIOC_B102_S00] e poi capiamo come andare avanti su questa cosa, perché da quanto ho capito Stefano ce l'ha.
+3125.16s–3129.16s [GIOC_B102_S00] Stefano sta cominciando a collaborare con noi, quindi insomma, capiremo qualcosa.
+3129.16s–3135.16s [GIOC_B102_S00] Vediamo se sarebbe bello riuscire a trovare una collocazione a tutto questo lavoro.
+3135.16s–3141.16s [GIOC_B102_S00] E tu penso anche per tua soddisfazione personale, perché, insomma, è stato fatto, quindi sì.
+3141.16s–3143.60s [GIOC_B102_S00] Va bene.
+3143.02s–3159.58s [MASTER] se serve lo riapro però insieme a figurarsi ricambiato buona giornata
+3143.60s–3146.60s [GIOC_B103_S00] Eh sì, sì, è chiaro, no, ma sapete che poi...
+3146.60s–3148.60s [GIOC_B103_S00] Sapete che qualcuno riuscite a sfruttarlo?
+3148.60s–3151.60s [GIOC_B103_S00] Penso che, insomma, ti potrà fare piacere in maggio.
+3151.60s–3153.60s [GIOC_B103_S00] Perché insomma, c'è tanto lavoro.
+3153.60s–3154.60s [GIOC_B103_S00] Va bene, d'accordo.
+3154.60s–3157.60s [GIOC_B103_S00] Grazie di tutto, è stato un piacere conoscere, Franco.
+3157.60s–3159.60s [GIOC_B103_S00] A presto, ci sentiamo presto.
+3159.60s–3160.60s [GIOC_B103_S00] Ciao, ciao, ciao.
