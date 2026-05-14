@@ -151,7 +151,7 @@ Prima di considerare l'import concluso, l'asset nel repository deve essere **JPE
 
 L'operazione e` **idempotente**: se il file e` gia` JPEG `.jpg` con vincolo rispettato nel path previsto, non modificarlo.
 
-Per automatizzare: `python3 scripts/normalize_image_assets.py <path-asset-o-cartella>` (opzione `--dry-run` per anteprima). Dopo conversioni/rinomine, lo script puo` aggiornare i riferimenti `/immagini/...` nei Markdown del repository.
+Per automatizzare: `python3 tools/scripts/normalize_image_assets.py <path-asset-o-cartella>` (opzione `--dry-run` per anteprima). Dopo conversioni/rinomine, lo script puo` aggiornare i riferimenti `/immagini/...` nei Markdown del repository.
 
 ## Aggiornamento del Markdown
 
@@ -217,7 +217,7 @@ Quando il DM chiede di importare un'immagine:
 1. identifica il file Markdown da aggiornare;
 2. determina il tipo immagine e il percorso sotto `immagini/`;
 3. sposta o rinomina l'asset nel path giusto, senza lasciarne una copia nella posizione originale;
-4. normalizza l'asset a JPEG `.jpg` con lato lungo <= 1920 px (o esegui `python3 scripts/normalize_image_assets.py` sul path);
+4. normalizza l'asset a JPEG `.jpg` con lato lungo <= 1920 px (o esegui `python3 tools/scripts/normalize_image_assets.py` sul path);
 5. aggiorna il Markdown con il link `/immagini/...` corretto (estensione `.jpg`);
 6. evita duplicati, placeholder residui o sezioni ripetute;
 7. conferma al DM il path finale dell'asset e il file Markdown aggiornato.

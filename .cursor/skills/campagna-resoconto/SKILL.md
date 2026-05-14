@@ -191,7 +191,7 @@ Solo dopo conferma esplicita, **eliminare tutti i file dalla cartella `sessione/
 
 ## Fase 7 — Aggiornamento dei contenuti pubblicati
 
-Se il repository contiene una configurazione di pubblicazione pubblica (per esempio `pubblicazione/manifest.json` e uno script di export dedicato), la fase finale del flusso e` l'aggiornamento del sito player-safe.
+Se il repository contiene una configurazione di pubblicazione pubblica (per esempio `tools/pubblicazione/manifest.json` e lo script di export in `tools/scripts/`), la fase finale del flusso e` l'aggiornamento del sito player-safe.
 
 Prima di agire:
 

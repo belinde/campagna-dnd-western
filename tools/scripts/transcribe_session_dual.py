@@ -4,8 +4,8 @@ Trascrive due WAV (master + giocatori) con faster-whisper, unisce i segmenti per
 Opzionale: diarizzazione per burst (silenzi lunghi) sul canale giocatori con pyannote.
 
 Uso (dalla root del repository):
-  uv run python scripts/transcribe_session_dual.py sessione/audio/20250514_210530
-  uv run python scripts/transcribe_session_dual.py --master a.wav --giocatori b.wav -o out.txt
+  uv run python tools/scripts/transcribe_session_dual.py sessione/audio/20250514_210530
+  uv run python tools/scripts/transcribe_session_dual.py --master a.wav --giocatori b.wav -o out.txt
 """
 
 from __future__ import annotations
@@ -21,6 +21,8 @@ import time
 import warnings
 from dataclasses import dataclass
 from pathlib import Path
+
+from campagna_paths import repo_root
 
 
 @dataclass(frozen=True)
@@ -684,8 +686,7 @@ def resolve_diarize_device(requested: str) -> str:
 
 def _load_dotenv_from_repo_root() -> None:
     """Carica `.env` dalla root del repo (non in git) così HF_TOKEN vale per huggingface_hub."""
-    repo_root = Path(__file__).resolve().parent.parent
-    env_path = repo_root / ".env"
+    env_path = repo_root() / ".env"
     if not env_path.is_file():
         return
     from dotenv import load_dotenv

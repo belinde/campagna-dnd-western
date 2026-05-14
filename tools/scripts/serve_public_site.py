@@ -9,10 +9,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+from campagna_paths import repo_root
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-BUILD_SCRIPT = REPO_ROOT / "scripts" / "build_public_site.py"
-DEFAULT_SOURCE = REPO_ROOT / "build" / "public-site"
+
+REPO_ROOT = repo_root()
+BUILD_SCRIPT = REPO_ROOT / "tools" / "scripts" / "build_public_site.py"
+DEFAULT_SOURCE = REPO_ROOT / "tools" / "build" / "public-site"
 DEFAULT_IMAGE = "jekyll/jekyll:4"
 DEFAULT_PORT = 4000
 DEFAULT_BIND = "127.0.0.1"
@@ -31,7 +33,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--skip-build",
         action="store_true",
-        help="Non rigenerare la sorgente: usa quella gia` presente in build/public-site.",
+        help="Non rigenerare la sorgente: usa quella gia` presente in tools/build/public-site.",
     )
     parser.add_argument(
         "--port",
@@ -56,7 +58,7 @@ def parse_args() -> argparse.Namespace:
         "--source",
         type=Path,
         default=DEFAULT_SOURCE,
-        help="Cartella sorgente Jekyll (default: build/public-site).",
+        help="Cartella sorgente Jekyll (default: tools/build/public-site).",
     )
     parser.add_argument(
         "--network",

@@ -6,6 +6,8 @@ env/
 .env.*.local
 
 # Build e artefatti di installazione Python
+# La regola `build/` ignora ogni directory chiamata `build` in qualsiasi livello (inclusa tools/build/, output Jekyll).
+/tools/build/
 build/
 dist/
 *.egg-info/

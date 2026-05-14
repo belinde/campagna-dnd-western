@@ -23,11 +23,11 @@ Per ogni immagine referenziata nelle pagine pubbliche, lo script:
 1. **copia** nell'output l'asset cosi` com'e` nel repository (formato canonico: JPEG `.jpg`, lato lungo gia` limitato a 1920 px in fase di import/normalizzazione);
 2. genera una **miniatura** in `immagini/thumbs/` (stessa gerarchia relativa, JPEG, max ~320px sul lato lungo) usata dalle card degli indici.
 
-### Asset statici del sito (`pubblicazione/assets/`)
+### Asset statici del sito (`tools/pubblicazione/assets/`)
 
-File in **`pubblicazione/assets/`** (es. `header.png` con trasparenza per l'intestazione) vengono copiati in **`assets/`** nell'output Jekyll **senza** passare dalla generazione di thumbnail e **senza** alcuna conversione: vanno usati per grafica UI del sito che deve restare in PNG o altro formato non toccato dalla pipeline di `immagini/`.
+File in **`tools/pubblicazione/assets/`** (es. `header.png` con trasparenza per l'intestazione) vengono copiati in **`assets/`** nell'output Jekyll **senza** passare dalla generazione di thumbnail e **senza** alcuna conversione: vanno usati per grafica UI del sito che deve restare in PNG o altro formato non toccato dalla pipeline di `immagini/`.
 
-Serve **Pillow** (`scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso: le immagini a piena risoluzione vengono comunque copiate, ma **nessuna thumbnail** viene generata e le card useranno un segnaposto.
+Serve **Pillow** (`tools/scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso: le immagini a piena risoluzione vengono comunque copiate, ma **nessuna thumbnail** viene generata e le card useranno un segnaposto.
 
 ## Cosa non viene mai pubblicato direttamente
 
@@ -38,7 +38,7 @@ Il sito non usa i file grezzi del repository cosi` come sono. Ogni pagina passa 
 - `## Ganci narrativi`
 - `## Segreti e obiettivi nascosti`
 
-Le cartelle `sessione/`, `spunti/`, `.cursor/` e `dnd-mcp/` restano fuori dal perimetro pubblico.
+Le cartelle `sessione/`, `spunti/`, `.cursor/` e `tools/dnd-mcp/` restano fuori dal perimetro pubblico.
 
 ## Manifest
 
@@ -93,34 +93,34 @@ In questo modo i resoconti pubblici diventano una piccola rete navigabile senza 
 Installare la dipendenza per le thumbnail (consigliato anche in locale per avere le card complete):
 
 ```bash
-pip install -r scripts/requirements-public-site.txt
+pip install -r tools/scripts/requirements-public-site.txt
 ```
 
 Poi generare la sorgente del sito pubblico:
 
 ```bash
-python3 scripts/build_public_site.py
+python3 tools/scripts/build_public_site.py
 ```
 
 Per scegliere una cartella diversa:
 
 ```bash
-python3 scripts/build_public_site.py --output build/public-site
+python3 tools/scripts/build_public_site.py --output tools/build/public-site
 ```
 
-L'output e` una piccola sorgente Jekyll in `build/public-site/`, pronta per essere compilata e pubblicata da GitHub Pages.
+L'output e` una piccola sorgente Jekyll in `tools/build/public-site/`, pronta per essere compilata e pubblicata da GitHub Pages.
 
 ## Anteprima locale con Docker
 
-Per iterare sul lato grafico (CSS in `pubblicazione/assets/site.css`, layout HTML in `write_layout` dentro `scripts/build_public_site.py`) senza dover passare da un deploy su GitHub Pages, c'e` uno script che rigenera la sorgente Jekyll e la serve in locale tramite l'immagine Docker ufficiale di Jekyll. Non serve installare Ruby/Jekyll sulla macchina, basta avere Docker funzionante.
+Per iterare sul lato grafico (CSS in `tools/pubblicazione/assets/site.css`, layout HTML in `write_layout` dentro `tools/scripts/build_public_site.py`) senza dover passare da un deploy su GitHub Pages, c'e` uno script che rigenera la sorgente Jekyll e la serve in locale tramite l'immagine Docker ufficiale di Jekyll. Non serve installare Ruby/Jekyll sulla macchina, basta avere Docker funzionante.
 
 ```bash
-python3 scripts/serve_public_site.py
+python3 tools/scripts/serve_public_site.py
 ```
 
 Lo script:
 
-1. lancia `scripts/build_public_site.py` per rigenerare `build/public-site/`;
+1. lancia `tools/scripts/build_public_site.py` per rigenerare `tools/build/public-site/`;
 2. avvia un container effimero `jekyll/jekyll:4` che monta quella cartella e serve l'anteprima su `http://127.0.0.1:4000/`.
 
 L'immagine usa Ruby 3.x, dove `webrick` non e` piu` incluso di default: lo script installa la gem `webrick` nel container prima di `jekyll serve` (richiede rete solo per quel passaggio, di solito pochi secondi). Per evitare problemi di DNS in reti aziendali (dove la rete bridge di Docker non vede il resolver dell'host) il container viene avviato di default con `--network=host`: condivide lo stack di rete della macchina, Jekyll si lega direttamente al `--bind` scelto e non serve port mapping.
@@ -129,19 +129,19 @@ Apri quell'URL nel browser; quando vuoi vedere le modifiche fatte ai template o 
 
 Flag utili:
 
-- `--skip-build`: salta la rigenerazione e serve direttamente la sorgente gia` presente in `build/public-site/`;
+- `--skip-build`: salta la rigenerazione e serve direttamente la sorgente gia` presente in `tools/build/public-site/`;
 - `--port 4001`: cambia la porta locale (utile se la 4000 e` occupata);
 - `--bind 0.0.0.0`: espone l'anteprima alla LAN (di default e` legata a `127.0.0.1`);
 - `--image <tag>`: forza un'immagine Docker diversa (es. `jekyll/jekyll:3` per avvicinarsi al runtime di GitHub Pages);
 - `--network bridge`: torna alla rete `bridge` di Docker con port mapping classico (richiede che il container riesca a risolvere `rubygems.org` per installare `webrick`).
 
-L'output di Jekyll (`_site/`, `.jekyll-cache/`) viene scritto dentro `build/public-site/` ed e` gia` ignorato da git.
+L'output di Jekyll (`_site/`, `.jekyll-cache/`) viene scritto dentro `tools/build/public-site/` ed e` gia` ignorato da git.
 
 ## GitHub Pages
 
 Il workflow `.github/workflows/publish-public-site.yml`:
 
-1. installa le dipendenze Python dello script (`scripts/requirements-public-site.txt`)
+1. installa le dipendenze Python dello script (`tools/scripts/requirements-public-site.txt`)
 2. genera la sorgente player-safe con lo script Python
 3. compila il sito con Jekyll
 4. pubblica l'artefatto su GitHub Pages
@@ -154,4 +154,4 @@ Per attivarlo nel repository GitHub:
 
 ## Cloudflare Pages come fallback
 
-Se in futuro vorrai spostare l'hosting, il punto di riuso resta lo stesso: `scripts/build_public_site.py` produce una sorgente player-safe stabile e ripetibile. Cloudflare Pages puo` usare la stessa sorgente come base di una build Jekyll dedicata, senza esporre il resto del repository.
+Se in futuro vorrai spostare l'hosting, il punto di riuso resta lo stesso: `tools/scripts/build_public_site.py` produce una sorgente player-safe stabile e ripetibile. Cloudflare Pages puo` usare la stessa sorgente come base di una build Jekyll dedicata, senza esporre il resto del repository.

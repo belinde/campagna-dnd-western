@@ -21,11 +21,14 @@ except ImportError:
     HAS_PILLOW = False
 
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_MANIFEST = REPO_ROOT / "pubblicazione" / "manifest.json"
+from campagna_paths import repo_root
+
+REPO_ROOT = repo_root()
+TOOLS_PUBL = REPO_ROOT / "tools" / "pubblicazione"
+DEFAULT_MANIFEST = TOOLS_PUBL / "manifest.json"
 HOME_HERO_ASSET = "immagini/varie/gruppo-pg-carovana.jpg"
 HOME_HERO_PUBLIC_PATH = "/immagini/varie/gruppo-pg-carovana.jpg"
-PUBBLICAZIONE_ASSETS_DIR = REPO_ROOT / "pubblicazione" / "assets"
+PUBBLICAZIONE_ASSETS_DIR = TOOLS_PUBL / "assets"
 HEADER_LOGO_PUBLIC_PATH = "/assets/header.png"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((/immagini/[^)\s]+)\)")
@@ -126,7 +129,7 @@ def sort_paths(paths: Iterable[Path], order: str) -> list[Path]:
 def resolve_output_directory(manifest: dict, requested_output: Path | None) -> Path:
     if requested_output is not None:
         return (REPO_ROOT / requested_output).resolve()
-    manifest_output = manifest.get("outputDirectory", "build/public-site")
+    manifest_output = manifest.get("outputDirectory", "tools/build/public-site")
     return (REPO_ROOT / manifest_output).resolve()
 
 
@@ -368,10 +371,10 @@ def write_section_hub_pages(
     page_og_images: dict[Path, str | None],
 ) -> int:
     hubs: list[tuple[str, str, str, Path, str]] = [
-        ("Personaggi", "/personaggi/", output_dir / "personaggi" / "index.md", Path("pubblicazione/_generated/index-personaggi.md"), "personaggi"),
-        ("Resoconti", "/resoconti/", output_dir / "resoconti" / "index.md", Path("pubblicazione/_generated/index-resoconti.md"), "resoconti"),
-        ("PNG", "/png/", output_dir / "png" / "index.md", Path("pubblicazione/_generated/index-png.md"), "png"),
-        ("Luoghi", "/luoghi/", output_dir / "luoghi" / "index.md", Path("pubblicazione/_generated/index-luoghi.md"), "luoghi"),
+        ("Personaggi", "/personaggi/", output_dir / "personaggi" / "index.md", Path("tools/pubblicazione/_generated/index-personaggi.md"), "personaggi"),
+        ("Resoconti", "/resoconti/", output_dir / "resoconti" / "index.md", Path("tools/pubblicazione/_generated/index-resoconti.md"), "resoconti"),
+        ("PNG", "/png/", output_dir / "png" / "index.md", Path("tools/pubblicazione/_generated/index-png.md"), "png"),
+        ("Luoghi", "/luoghi/", output_dir / "luoghi" / "index.md", Path("tools/pubblicazione/_generated/index-luoghi.md"), "luoghi"),
     ]
     for hub_title, hub_route, dest, source_stub, section_key in hubs:
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -889,7 +892,7 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
             title=manifest["site"]["title"],
             route="/",
             collection_label="Archivio pubblico",
-            source_path=Path("pubblicazione/manifest.json"),
+            source_path=Path("tools/pubblicazione/manifest.json"),
             show_title=False,
             og_image=HOME_HERO_PUBLIC_PATH,
         ),
@@ -925,19 +928,19 @@ def copy_asset(relative_asset_path: str, output_dir: Path) -> None:
 
 
 def copy_pubblicazione_assets(output_dir: Path) -> None:
-    """Copia byte-per-byte i file in pubblicazione/assets/ (PNG con alpha, ecc.) senza generare thumbnail."""
+    """Copia byte-per-byte i file in tools/pubblicazione/assets/ (PNG con alpha, ecc.) senza generare thumbnail."""
     if not PUBBLICAZIONE_ASSETS_DIR.is_dir():
         raise FileNotFoundError(
-            "Manca la cartella pubblicazione/assets/: contiene gli asset statici del sito pubblico "
+            "Manca la cartella tools/pubblicazione/assets/: contiene gli asset statici del sito pubblico "
             "che non devono essere processati dalla pipeline immagini/."
         )
     if not (PUBBLICAZIONE_ASSETS_DIR / "header.png").is_file():
         raise FileNotFoundError(
-            "Manca pubblicazione/assets/header.png (logo intestazione del sito, PNG con trasparenza)."
+            "Manca tools/pubblicazione/assets/header.png (logo intestazione del sito, PNG con trasparenza)."
         )
     if not (PUBBLICAZIONE_ASSETS_DIR / "site.css").is_file():
         raise FileNotFoundError(
-            "Manca pubblicazione/assets/site.css (foglio di stile del sito pubblico)."
+            "Manca tools/pubblicazione/assets/site.css (foglio di stile del sito pubblico)."
         )
     dest_root = output_dir / "assets"
     dest_root.mkdir(parents=True, exist_ok=True)
@@ -1013,7 +1016,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
 
     if not HAS_PILLOW:
         print(
-            "Avviso: Pillow non installato (pip install -r scripts/requirements-public-site.txt); "
+            "Avviso: Pillow non installato (pip install -r tools/scripts/requirements-public-site.txt); "
             "nessuna thumbnail generata; le card useranno il segnaposto.",
             file=sys.stderr,
         )

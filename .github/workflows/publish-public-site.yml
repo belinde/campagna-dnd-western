@@ -33,21 +33,21 @@ jobs:
           python-version: "3.12"
 
       - name: Dipendenze script pubblicazione
-        run: pip install -r scripts/requirements-public-site.txt
+        run: pip install -r tools/scripts/requirements-public-site.txt
 
       - name: Genera sorgente player-safe
-        run: python3 scripts/build_public_site.py --output build/public-site
+        run: python3 tools/scripts/build_public_site.py --output tools/build/public-site
 
       - name: Compila sito con Jekyll
         uses: actions/jekyll-build-pages@v1.0.13
         with:
-          source: build/public-site
-          destination: build/_site
+          source: tools/build/public-site
+          destination: tools/build/_site
 
       - name: Carica artefatto Pages
         uses: actions/upload-pages-artifact@v5
         with:
-          path: build/_site
+          path: tools/build/_site
 
   deploy:
     environment:

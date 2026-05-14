@@ -50,7 +50,7 @@ Flusso opzionale per catturare **due tracce** allineate nel tempo: microfono del
 Dalla root del repository:
 
 ```bash
-./scripts/session_record.sh list
+./tools/scripts/session_record.sh list
 ```
 
 Il microfono di solito funziona con il default Pulse. Per il **monitor** (tutto ciò che va al sink di riproduzione), lo script suggerisce `export SESSION_MONITOR_DEVICE='…'` in base a `pactl get-default-sink`. Se il nome non funziona, scegliere manualmente una riga `…monitor` dall’elenco di `pactl list short sources`.
@@ -60,9 +60,9 @@ Il microfono di solito funziona con il default Pulse. Per il **monitor** (tutto 
 ### 2. Registrazione durante la sessione
 
 ```bash
-./scripts/session_record.sh start
+./tools/scripts/session_record.sh start
 # … gioco in videoconferenza …
-./scripts/session_record.sh stop
+./tools/scripts/session_record.sh stop
 ```
 
 I file vengono salvati in `sessione/audio/<YYYYMMDD_HHMMSS>/` (`master.wav`, `giocatori.wav`, `meta.env`).
@@ -74,7 +74,7 @@ I modelli usati da `faster-whisper` passano da Hugging Face Hub. Con **piano gra
 1. Copia il modello di file: `cp .env.example .env`
 2. Incolla il token nella riga `HF_TOKEN=...` dentro `.env` (il file `.env` è in **`.gitignore`** e non va committato).
 
-Lo script `scripts/transcribe_session_dual.py` carica automaticamente `.env` dalla root del repository prima del download, così `huggingface_hub` usa il token (rate limit più alti, modelli con gated access se applicabile).
+Lo script `tools/scripts/transcribe_session_dual.py` carica automaticamente `.env` dalla root del repository prima del download, così `huggingface_hub` usa il token (rate limit più alti, modelli con gated access se applicabile).
 
 Per la **diarizzazione** (`pyannote/speaker-diarization-community-1`): su Hugging Face apri la scheda del modello e **accetta le condizioni d’uso** (User Access Request / gated), altrimenti il download fallisce con errore 401/403. Il repo della pipeline include i sotto-modelli necessari.
 
@@ -84,7 +84,7 @@ Dalla root del repository (sostituisci la cartella con quella creata allo `stop`
 
 ```bash
 uv sync   # la prima volta, o dopo cambi dipendenze
-uv run python scripts/transcribe_session_dual.py sessione/audio/20250514_210530
+uv run python tools/scripts/transcribe_session_dual.py sessione/audio/20250514_210530
 ```
 
 Comportamento predefinito: **Whisper** su `master.wav` e `giocatori.wav`; sul canale giocatori, **diarizzazione pyannote per burst** separati da silenzi lunghi (`ffmpeg silencedetect`), poi etichette anonime nei segmenti STT.
@@ -107,11 +107,11 @@ Dopo aver generato il file grezzo, in chat: **`/trascrizione-vc`** (skill `campa
 
 ## Pubblicazione dei resoconti
 
-Il repository include anche un piccolo flusso di pubblicazione player-safe descritto in `pubblicazione/README.md`.
+Il repository include anche un piccolo flusso di pubblicazione player-safe descritto in `tools/pubblicazione/README.md`.
 
-- `pubblicazione/manifest.json` definisce il perimetro pubblico e la allowlist dei materiali ormai conosciuti dai giocatori (PNG, luoghi visitati, eventuali altre pagine player-safe)
-- `scripts/build_public_site.py` genera una sorgente Jekyll filtrata e pronta per GitHub Pages
-- `scripts/serve_public_site.py` rigenera la sorgente e la serve in locale tramite l'immagine Docker ufficiale di Jekyll (anteprima a `http://127.0.0.1:4000/`), utile per iterare su layout e CSS; dettagli in `pubblicazione/README.md`
+- `tools/pubblicazione/manifest.json` definisce il perimetro pubblico e la allowlist dei materiali ormai conosciuti dai giocatori (PNG, luoghi visitati, eventuali altre pagine player-safe)
+- `tools/scripts/build_public_site.py` genera una sorgente Jekyll filtrata e pronta per GitHub Pages
+- `tools/scripts/serve_public_site.py` rigenera la sorgente e la serve in locale tramite l'immagine Docker ufficiale di Jekyll (anteprima a `http://127.0.0.1:4000/`), utile per iterare su layout e CSS; dettagli in `tools/pubblicazione/README.md`
 - `.github/workflows/publish-public-site.yml` compila e pubblica il sito con GitHub Actions
 
 Il sito pubblico usa solo contenuti filtrati: resoconti, pagine esplicitamente allowlistate e immagini canoniche realmente referenziate. Le sezioni DM (`## Note DM`, `## Note per la prossima sessione`, `## Ganci narrativi`, `## Segreti e obiettivi nascosti`) vengono rimosse automaticamente dall'export. Le schede in `png/` possono essere pubblicate con un profilo pubblico ridotto che mostra solo nome, immagine, descrizione ed eventi interessanti, mentre i luoghi allowlistati in `ambientazione/luoghi/` vengono esportati e linkati dai resoconti nella sezione `## Luoghi visitati`.
@@ -122,7 +122,7 @@ Il sito pubblico usa solo contenuti filtrati: resoconti, pagine esplicitamente a
 
 Il command `/ingame` (skill `campagna-ingame`) può interrogare un server MCP locale che espone dati ufficiali di D&D 5e (mostri, incantesimi, equipaggiamento, classi, razze, ecc.) tramite l'API pubblica [dnd5eapi.co](https://www.dnd5eapi.co/). Il server è già configurato in `.cursor/mcp.json`.
 
-La cartella `dnd-mcp/` è un **git submodule**: non è inclusa direttamente in questo repository, ma punta a un commit specifico di un repository esterno. Quando si clona il progetto per la prima volta, la cartella risulta vuota finché non viene inizializzata.
+La cartella `tools/dnd-mcp/` è un **git submodule**: non è inclusa direttamente in questo repository, ma punta a un commit specifico di un repository esterno. Quando si clona il progetto per la prima volta, la cartella risulta vuota finché non viene inizializzata.
 
 ### Prerequisiti
 
@@ -131,13 +131,13 @@ La cartella `dnd-mcp/` è un **git submodule**: non è inclusa direttamente in q
 
 ### Clonare il progetto con il submodule
 
-Se si clona il repository da zero, usare il flag `--recurse-submodules` per scaricare anche `dnd-mcp/` in automatico:
+Se si clona il repository da zero, usare il flag `--recurse-submodules` per scaricare anche `tools/dnd-mcp/` in automatico:
 
 ```bash
 git clone --recurse-submodules <url-repository>
 ```
 
-Se il repository è già stato clonato senza quel flag e `dnd-mcp/` è vuota, inizializzare e scaricare il submodule con:
+Se il repository è già stato clonato senza quel flag e `tools/dnd-mcp/` è vuota, inizializzare e scaricare il submodule con:
 
 ```bash
 git submodule update --init --recursive
@@ -152,14 +152,14 @@ git submodule update --remote dnd-mcp
 ### Installazione delle dipendenze
 
 ```bash
-cd dnd-mcp
+cd tools/dnd-mcp
 uv pip install -r requirements.txt
 ```
 
 In alternativa, con pip standard:
 
 ```bash
-cd dnd-mcp
+cd tools/dnd-mcp
 pip install .
 ```
 
@@ -168,7 +168,7 @@ pip install .
 Il server viene avviato automaticamente da Cursor quando serve. Per avviarlo manualmente a scopo di test:
 
 ```bash
-cd dnd-mcp
+cd tools/dnd-mcp
 uv run python dnd_mcp_server.py
 ```
 
@@ -183,7 +183,7 @@ Il file `.cursor/mcp.json` già presente nel progetto contiene la configurazione
       "command": "/local/bin/uv",
       "args": [
         "--directory",
-        "dnd-mcp",
+        "tools/dnd-mcp",
         "run",
         "dnd_mcp_server.py"
       ]

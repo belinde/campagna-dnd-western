@@ -11,6 +11,8 @@ import sys
 import tempfile
 from pathlib import Path
 
+from campagna_paths import repo_root
+
 try:
     from PIL import Image
 
@@ -18,7 +20,7 @@ try:
 except ImportError:
     HAS_PILLOW = False
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = repo_root()
 MAX_LONGEST_SIDE = 1920
 JPEG_QUALITY = 85
 RASTER_SUFFIXES = frozenset({".png", ".jpg", ".jpeg", ".webp"})
@@ -190,7 +192,10 @@ def update_markdown_refs(*, dry_run: bool) -> int:
 def main() -> None:
     args = parse_args()
     if not HAS_PILLOW:
-        print("Errore: Pillow non installato. pip install -r scripts/requirements-public-site.txt", file=sys.stderr)
+        print(
+            "Errore: Pillow non installato. pip install -r tools/scripts/requirements-public-site.txt",
+            file=sys.stderr,
+        )
         sys.exit(1)
 
     try:

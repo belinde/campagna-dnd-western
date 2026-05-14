@@ -4,7 +4,7 @@
       "command": "/home/belinde/.local/bin/uv",
       "args": [
         "--directory",
-        "dnd-mcp",
+        "tools/dnd-mcp",
         "run",
         "dnd_mcp_server.py"
       ]

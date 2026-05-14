@@ -7,14 +7,28 @@
 #   SESSION_MONITOR_DEVICE   Nome sorgente Pulse per il monitor del sink (default: <sink predefinito>.monitor)
 #
 # Uso dalla root del repository:
-#   ./scripts/session_record.sh list
-#   ./scripts/session_record.sh start
-#   ./scripts/session_record.sh stop
+#   ./tools/scripts/session_record.sh list
+#   ./tools/scripts/session_record.sh start
+#   ./tools/scripts/session_record.sh stop
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+find_repo_root() {
+  local d="$SCRIPT_DIR"
+  while [[ "$d" != "/" ]]; do
+    if [[ -d "$d/ambientazione" ]]; then
+      echo "$d"
+      return 0
+    fi
+    d="$(dirname "$d")"
+  done
+  echo "Errore: directory ambientazione/ non trovata risalendo da $SCRIPT_DIR" >&2
+  exit 1
+}
+
+REPO_ROOT="$(find_repo_root)"
 AUDIO_ROOT="$REPO_ROOT/sessione/audio"
 ACTIVE_FILE="$AUDIO_ROOT/.active_session"
 PID_MIC="master.pid"
@@ -159,7 +173,7 @@ cmd_stop() {
   rm -f "$ACTIVE_FILE"
   echo "Registrazione terminata. File:"
   ls -la "$session_dir"/*.wav 2>/dev/null || true
-  echo "Trascrizione (dalla root repo): uv run python scripts/transcribe_session_dual.py \"$session_dir\""
+  echo "Trascrizione (dalla root repo): uv run python tools/scripts/transcribe_session_dual.py \"$session_dir\""
 }
 
 main() {
