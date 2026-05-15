@@ -776,7 +776,7 @@ def write_prompt_tool_assets(output_dir: Path, catalog: dict[str, list[dict]]) -
         front_matter(
             title="Generatore prompt per immagini",
             route="/prompt/",
-            collection_label="Strumenti",
+            collection_label="",
             source_path=Path("tools/pubblicazione/prompt-page-body.html"),
         )
         + body_html

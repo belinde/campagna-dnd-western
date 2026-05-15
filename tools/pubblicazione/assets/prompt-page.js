@@ -47,6 +47,8 @@
   const pngRegion = document.getElementById("prompt-png-region");
   const pngEmpty = document.getElementById("prompt-png-empty");
   const scenaInput = document.getElementById("prompt-scena");
+  const scenaNameBar = document.getElementById("prompt-scena-name-bar");
+  const scenaNameButtons = document.getElementById("prompt-scena-name-buttons");
   const generaBtn = document.getElementById("prompt-genera");
   const copiaTuttoBtn = document.getElementById("prompt-copia-tutto");
   const outputPanel = document.getElementById("prompt-output-panel");
@@ -249,6 +251,16 @@
     return '<span class="prompt-small-card-thumb prompt-small-card-thumb--placeholder" aria-hidden="true"></span>';
   }
 
+  function syncInputGroupCards(inputName) {
+    for (const peer of root.querySelectorAll(`input[name="${inputName}"]`)) {
+      const card = peer.closest(".prompt-small-card");
+      if (card) {
+        card.classList.toggle("prompt-small-card--selected", peer.checked);
+      }
+      peer.dataset.wasChecked = peer.checked ? "true" : "false";
+    }
+  }
+
   function createSmallCard(item, options) {
     const { inputType, inputName, portrait } = options;
     const label = document.createElement("label");
@@ -281,7 +293,11 @@
     label.appendChild(inner);
 
     function syncSelected() {
-      label.classList.toggle("prompt-small-card--selected", input.checked);
+      if (inputType === "radio") {
+        syncInputGroupCards(inputName);
+      } else {
+        label.classList.toggle("prompt-small-card--selected", input.checked);
+      }
       if (currentStep === 2) {
         updateCharsSummary();
         hideAlert(alertNoChars);
@@ -297,15 +313,8 @@
       input.addEventListener("click", () => {
         if (input.dataset.wasChecked === "true") {
           input.checked = false;
-          input.dataset.wasChecked = "false";
-          syncSelected();
-        } else {
-          const group = root.querySelectorAll(`input[name="${inputName}"]`);
-          for (const peer of group) {
-            peer.dataset.wasChecked = "false";
-          }
-          input.dataset.wasChecked = "true";
         }
+        requestAnimationFrame(() => syncInputGroupCards(inputName));
       });
     }
 
@@ -349,6 +358,7 @@
     }
     const items = sortByLabel(catalog.personaggi || []);
     pgGrid.innerHTML = "";
+    pgGrid.classList.add("prompt-small-card-grid--portrait");
     for (const item of items) {
       pgGrid.appendChild(
         createSmallCard(item, {
@@ -393,7 +403,7 @@
       block.appendChild(heading);
 
       const grid = document.createElement("div");
-      grid.className = "prompt-small-card-grid";
+      grid.className = "prompt-small-card-grid prompt-small-card-grid--portrait";
       for (const item of byRegion.get(region)) {
         grid.appendChild(
           createSmallCard(item, {
@@ -500,12 +510,8 @@
     luogoSkipped = true;
     for (const input of root.querySelectorAll('input[name="prompt-luogo"]')) {
       input.checked = false;
-      input.dataset.wasChecked = "false";
-      const card = input.closest(".prompt-small-card");
-      if (card) {
-        card.classList.remove("prompt-small-card--selected");
-      }
     }
+    syncInputGroupCards("prompt-luogo");
     updateLuogoSummary();
   }
 
@@ -538,6 +544,48 @@
     }
     charsSummary.hidden = false;
     charsSummary.textContent = `Personaggi (${chars.length}): ${chars.map((c) => c.label).join(", ")}`;
+  }
+
+  function insertNameAtCursor(name) {
+    if (!scenaInput || !name) {
+      return;
+    }
+    const start = scenaInput.selectionStart ?? scenaInput.value.length;
+    const end = scenaInput.selectionEnd ?? start;
+    const value = scenaInput.value;
+    const before = value.slice(0, start);
+    const after = value.slice(end);
+    const needsSpaceBefore = before.length > 0 && !/\s$/.test(before);
+    const needsSpaceAfter = after.length > 0 && !/^\s|[,.;:!?]/.test(after);
+    const insert =
+      (needsSpaceBefore ? " " : "") + name + (needsSpaceAfter ? " " : "");
+    scenaInput.value = before + insert + after;
+    const pos = start + insert.length;
+    scenaInput.setSelectionRange(pos, pos);
+    scenaInput.focus();
+    scenaInput.dispatchEvent(new Event("input", { bubbles: true }));
+  }
+
+  function updateScenaNameBar() {
+    if (!scenaNameBar || !scenaNameButtons) {
+      return;
+    }
+    const chars = sortByLabel(selectedCharacters());
+    scenaNameButtons.innerHTML = "";
+    if (!chars.length) {
+      scenaNameBar.hidden = true;
+      return;
+    }
+    scenaNameBar.hidden = false;
+    for (const item of chars) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "prompt-scena-name-btn";
+      btn.textContent = item.label;
+      btn.title = `Inserisci «${item.label}» al cursore`;
+      btn.addEventListener("click", () => insertNameAtCursor(item.label));
+      scenaNameButtons.appendChild(btn);
+    }
   }
 
   function updateScenaRecap() {
@@ -758,6 +806,7 @@
     }
     if (step === 3) {
       updateScenaRecap();
+      updateScenaNameBar();
       const sceneText = scenaInput ? scenaInput.value : "";
       updateUnmatchedAlert(sceneText, selectedCharacters());
     }

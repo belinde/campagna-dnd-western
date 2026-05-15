@@ -39,7 +39,7 @@
     Scegli almeno un personaggio giocante o PNG prima di proseguire.
   </div>
 
-  <motion class="prompt-alert prompt-alert--warning" id="prompt-alert-unmatched" role="alert" hidden>
+  <div class="prompt-alert prompt-alert--warning" id="prompt-alert-unmatched" role="alert" hidden>
     <strong>Nomi nella scena non selezionati:</strong>
     <span id="prompt-alert-unmatched-list"></span>
     Verranno inclusi nel prompt in base al riferimento visivo (se disponibile).
@@ -106,6 +106,10 @@
     <p class="prompt-wizard-step-intro" id="prompt-scena-recap"></p>
     <label class="prompt-tool-label" for="prompt-scena">Scena (inglese)</label>
     <p class="prompt-tool-hint">Descrivi la scena in inglese. <strong>Usa i nomi completi dei personaggi</strong> (es. «Kelvor Rivib», «Dora l'Esploratrice») quando compaiono nella scena.</p>
+    <div class="prompt-scena-name-bar" id="prompt-scena-name-bar" hidden>
+      <span class="prompt-scena-name-bar-label">Inserisci nome al cursore</span>
+      <div class="prompt-scena-name-buttons" id="prompt-scena-name-buttons" role="group" aria-label="Nomi personaggi selezionati"></div>
+    </div>
     <textarea
       id="prompt-scena"
       class="prompt-tool-textarea"
