@@ -4,7 +4,6 @@
     return;
   }
 
-  const HERO_SEEN_KEY = "campagna-prompt-hero-seen";
   const REGION_ORDER = [
     "La East Coast",
     "Gli Appalacchi",
@@ -764,6 +763,23 @@
     }
   }
 
+  function hideWizardChrome() {
+    if (wizardNav) {
+      wizardNav.hidden = true;
+    }
+    if (wizardActions) {
+      wizardActions.hidden = true;
+    }
+    for (const panel of [stepLuogo, stepPersonaggi, stepScena]) {
+      if (panel) {
+        panel.hidden = true;
+      }
+    }
+    if (outputPanel) {
+      outputPanel.hidden = true;
+    }
+  }
+
   function setStep(step) {
     currentStep = step;
     const panels = [stepLuogo, stepPersonaggi, stepScena];
@@ -854,31 +870,24 @@
     if (heroEl) {
       heroEl.hidden = true;
     }
-    try {
-      localStorage.setItem(HERO_SEEN_KEY, "1");
-    } catch (_err) {
-      /* ignore */
-    }
     showWizardChrome();
     setStep(1);
   }
 
   function initHero() {
-    let seen = false;
     try {
-      seen = localStorage.getItem(HERO_SEEN_KEY) === "1";
+      localStorage.removeItem("campagna-prompt-hero-seen");
     } catch (_err) {
-      seen = false;
+      /* ignore */
     }
-    if (!seen && heroEl) {
-      heroEl.hidden = false;
-      return;
-    }
+    currentStep = 0;
+    hideWizardChrome();
+    hideAlert(alertNoChars);
+    hideAlert(alertUnmatched);
+    setStatus("");
     if (heroEl) {
-      heroEl.hidden = true;
+      heroEl.hidden = false;
     }
-    showWizardChrome();
-    setStep(1);
   }
 
   function initUI(data) {

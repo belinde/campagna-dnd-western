@@ -14,6 +14,12 @@ Dopo aver lasciato la Fattoria Mercer, la carovana di Hector Brannagh riprende i
 
 *Leman Russ scopre nella prateria i resti della strage dei bisonti e comprende che la Frontiera sta gia' divorando i suoi branchi.*
 
+### La proposta al pozzo
+
+![Leman Russ propone a Mae Barlow di bruciare i carri dei cacciatori; la ragazza si allontana preoccupata](/immagini/eventi/sessione-007/leman-proposta-mae-bruciare-carri.jpg)
+
+*Alla Fattoria Barlow, Leman tenta in disparte di convincere Mae a dare fuoco ai carri dei cacciatori; spaventata, la ragazza torna in fretta verso il pozzo mentre Dora origlia da lontano.*
+
 ## Eventi principali
 
 La carovana lasciò la Fattoria Mercer con più lentezza del previsto. Prima di ripartire, gli uomini recuperarono dalle scorte dei Mercer tutto ciò che poteva ancora servire al viaggio: provviste, attrezzi, qualche animale, il poco che una famiglia spezzata non avrebbe più potuto reclamare. Intanto **Dorothy Mercer**, ancora ferita ma non più sola, restava sotto la tutela degli **Halverson**, che ormai la tenevano con sé come una figlia raccolta dalla disgrazia.
