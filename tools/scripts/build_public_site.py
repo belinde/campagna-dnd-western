@@ -1120,9 +1120,14 @@ def write_layout(output_dir: Path) -> None:
           <body{% if page.home_full_bleed and page.hero_image %} class="home-full-bleed" style="--home-hero-image: url('{{ page.hero_image | relative_url }}')"{% endif %}>
             <header class="site-header">
               <div class="site-header-inner">
-                <a class="site-title site-title-logo" href="{{ '/' | relative_url }}">
-                  <img src="@HEADER_LOGO_LIQUID@" alt="{{ site.title | escape }}" decoding="async">
-                </a>
+                <div class="site-header-brand">
+                  <a class="site-title site-title-logo" href="{{ '/' | relative_url }}">
+                    <img src="@HEADER_LOGO_LIQUID@" alt="{{ site.title | escape }}" decoding="async">
+                  </a>
+                  {% if site.tagline and site.tagline != "" %}
+                  <p class="site-tagline">{{ site.tagline }}</p>
+                  {% endif %}
+                </div>
               </div>
             </header>
             <div class="site-shell">
@@ -1216,7 +1221,7 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
             og_image=HOME_HERO_PUBLIC_PATH,
         ),
         "",
-        f"# {manifest['site']['tagline']}",
+        f'<h1 class="home-tagline">{html.escape(manifest["site"]["tagline"])}</h1>',
         "",
         f'<figure class="home-hero"><img src="{hero_img}" alt="Il gruppo di avventurieri in carovana" loading="eager" decoding="async"></figure>',
         '<div class="hero">',
