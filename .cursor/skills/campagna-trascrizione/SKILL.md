@@ -25,7 +25,8 @@ Prima di elaborare la trascrizione, leggere in sola lettura:
 
 - Il file su cui è applicata la regola (la trascrizione grezza `.txt`)
 - Tutti i file in `ambientazione/` (incluse le sottocartelle `luoghi/`, `nazioni/`, `concetti/`)
-- Tutti i file in `personaggi/` e `png/`
+- Tutti i file in `personaggi/`
+- `png/INDICE.md`; aprire le schede in `png/` solo se un nome in trascrizione richiede disambiguazione
 - Tutti i file in `sessione/` (escluso il file di trascrizione stessa)
 - Tutti i file in `spunti/`
 - L'ultimo file in `resoconti/` (per contestualizzare dove era rimasta la storia)

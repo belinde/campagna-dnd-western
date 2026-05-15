@@ -22,7 +22,7 @@ Questa regola si attiva dopo una sessione di gioco. Il processo è **interattivo
 - Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo), inclusi se presenti `sessione/trascrizione-grezza-doppia.txt` (grezzo dual-track VC), **`sessione/trascrizione.md`** se esiste (trascrizione elaborata **verificata** dopo `/trascrizione-vc`) e `sessione/audio/` con le registrazioni WAV
 - L'ultimo file in `resoconti/` (per capire dove era rimasta la storia)
 - Tutti i file in `personaggi/` (per conoscere i PG disponibili)
-- Tutti i file in `png/` (per riconoscere i PNG già documentati)
+- `png/INDICE.md` (per riconoscere i PNG già documentati); aprire le schede in `png/` solo per nomi citati in trascrizione/`sessione/png-*` o in caso di ambiguità
 
 **Fonte primaria degli eventi:** se `sessione/trascrizione.md` è presente e contiene `## Dialogo` / `## Narrazione` coerenti con la sessione corrente (in particolare se in `## Note di elaborazione` risulta completata l’elaborazione a chunk o equivalente), **basare la cronaca su quella trascrizione verificata**. Il DM integra solo ciò che **non** risulta dal parlato (appunti non detti ad alta voce, retcon, errori STT corretti solo in sede di gioco, dettagli meccanici non vocalizzati).
 
@@ -138,7 +138,8 @@ Se durante la sessione viene approvato o associato un ritratto del PG, proporre 
 
 Per ogni PNG apparso nella sessione:
 - Se esiste già un file in `png/`, proporre la voce da aggiungere a `## Eventi interessanti` in quel file e integrare anche `## Scheda di gioco` se sono emersi dettagli meccanici nuovi o se il livello del PNG e` cambiato.
-- Se **non** esiste ancora una scheda, segnalarlo al DM e proporre di crearla in `png/` seguendo il template standard (lo stesso usato dalla modalità ingame), inclusa la sezione `## Scheda di gioco`. Attendere conferma prima di creare il file.
+- Se **non** esiste ancora una scheda, segnalarlo al DM e proporre di crearla in `png/` seguendo il template standard (lo stesso usato dalla modalità ingame), con **Regione**, **Ambito** e **Promemoria** obbligatori in testa, inclusa la sezione `## Scheda di gioco`. Attendere conferma prima di creare il file.
+- Se una scheda esistente manca di Regione, Ambito o Promemoria, proporre di compilarli prima di chiudere la fase.
 - Se la scheda non indica ancora in modo chiaro il livello del PNG, chiederlo esplicitamente al DM prima di completare o aggiornare `## Scheda di gioco`.
 - Se il livello cambia, aggiornare la parte meccanica in modo incrementale: mantenere la build gia` canonizzata e aggiungere solo i benefici coerenti del nuovo livello, salvo istruzioni contrarie del DM.
 - Se viene approvato o recuperato un ritratto del PNG, aggiornare anche la sezione `## Immagine` con il path corretto `/immagini/png/<slug>.<ext>`.
@@ -202,8 +203,9 @@ Prima di agire:
 
 Poi:
 
+- rigenerare `png/INDICE.md` con `uv run python tools/scripts/rebuild_png_index.py` (oppure è incluso in `build_public_site.py`)
 - eseguire o aggiornare il flusso di export player-safe previsto dal progetto
-- rigenerare i contenuti pubblici dopo gli aggiornamenti canonici approvati
+- rigenerare i contenuti pubblici dopo gli aggiornamenti canonici approvati (`uv run python tools/scripts/build_public_site.py --output tools/build/public-site`)
 - presentare al DM un riepilogo sintetico di cio` che andra` online: nuove pagine, resoconti aggiornati, immagini di scena incluse, voci aggiunte alla allowlist dei materiali conosciuti e nuovi link interni da `## Personaggi non giocanti incontrati` e `## Luoghi visitati`
 
 Se il passo successivo richiede operazioni git o di rete (commit, push, deploy remoto, apertura di PR), chiedere sempre conferma esplicita prima di procedere.

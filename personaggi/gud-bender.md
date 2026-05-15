@@ -13,9 +13,23 @@
 
 ## Aspetto
 
-Gud Bender e` un nano basso e massiccio, con spalle larghe, ventre robusto e una presenza che occupa subito la stanza. Il volto e` largo e segnato dal tempo: guance rubizze, naso importante, sopracciglia folte e uno sguardo scuro, duro e vigile, incorniciato da piccole cicatrici che gli attraversano il viso. Porta una barba piena e ispida, scura ma gia` venata di grigio, che gli copre gran parte del petto, mentre i capelli castani gli sfuggono disordinati da sotto il cappello.
+Nano basso e massiccio, barba scura venata di grigio e sguardo vigile tra piccole cicatrici. Cappello di cuoio consunto con occhiali da lavoro sulla tesa, strati di pelle e pelliccia, cintura ingombra di attrezzi e una fibbia circolare dall'aria arcana — pistolero stregone della Frontiera tecnomagica.
 
-Veste come un veterano della Frontiera tecnomagica: ampio cappello di cuoio consunto con un paio di occhiali da lavoro fissati sulla tesa, camicia chiara a collo aperto, pesanti strati di pelle scura e un mantello o giacca foderati di pelliccia. Gli avambracci sono protetti da bracciali di cuoio borchiato, la cintura e` carica di cinghie, attrezzi e pendagli metallici, e al centro spicca una grande fibbia circolare dall'aria quasi meccanica o arcana. Nell'insieme da` l'impressione di un incantatore ruvido e pericoloso, piu` simile a un pistolero stregone che a un mago di accademia.
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic waist-up portrait of a stocky dwarf man, clearly short — head height near an average human's chest — broad belly and shoulders, stern weathered face, small scars, bushy dark beard with grey streaks, dark eyes. Worn wide-brim leather hat with brass work goggles on the crown; grey fur-collared dark leather vest over open light linen shirt; studded leather bracers; heavy utility belt with large ornate circular brass buckle, pouches, and hanging charms. Dark vintage tecnomagic pistol in hand or at hip. Dim rustic interior or frontier tavern warmth; gritty leather and metal textures.
+
+Constraints to preserve:
+
+Dwarf proportions versus humans; cinematically realistic; goggles on hat, fur collar, circular buckle, tecnomagic pistol; no tall stature.
+
+Details to avoid:
+
+Human height; cartoon or plastic CGI; clean academic wizard robes; modern plastic-looking gun.
+```
 
 ## Personalità
 

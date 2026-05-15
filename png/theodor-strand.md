@@ -1,6 +1,13 @@
 # Theodor Strand
 
+**Regione:** Itinerante
+
+**Ambito:** Carovana di Brannagh
+
+**Promemoria:** Scout elfo della carovana: occhio acuto, fucile da caccia e passo senza traccia.
+
 **Razza/Classe:** Elfo / Ranger
+
 **Ruolo:** Scout della carovana di Brannagh
 
 ## Immagine
@@ -11,11 +18,23 @@
 
 ## Aspetto
 
-Elfo sulla trentina, **slanciato e alto** rispetto a molti umani, ma **magro e asciutto** come un corridore di pianura: passo lungo e misurato, spalle strette, mani callose. Orecchie appuntite ben visibili tra i capelli **biondo sabbia o castano chiaro**, tagliati corti e portati indietro, spettinati dal vento. Lineamenti affilati, zigomi alti, sguardo fisso verso l’orizzonte più che sul volto altrui; una **leggera ombra sul mascellare** — raro tratto, che la strada ha indurito più della cortesia elfica.
+Elfo sulla trentina, slanciato e magro come un corridore di pianura, orecchie appuntite tra capelli biondo sabbia spettinati dal vento. Duster scuro impolverato, fucile da caccia tecnomagico e carta stradale sulla sella — scout che legge l'orizzonte prima dei volti.
 
-Veste per il lavoro: **duster** o soprabito di cuoio e tela **marrone scuro**, logoro e **impolverato dai sentieri**, con collo largo; sotto, **camicia chiara** abbottonata in modo sommario sul petto e **fazzoletto** o bandana scura annodata al collo. **Pantaloni** color terra, macchiati di polvere ai ginocchi, infilati in **stivali** di cuoio consumati. **Guanti** da tiro senza dita, **cinturone** largo con fibbia massiccia, **taschini** per munizioni e strumenti, **banda** di cuoio in diagonale sul petto. Impugna con naturalezza un **fucile da caccia tecnomagico** tipo leva, canna appoggiata al fianco mentre controlla il terreno. Accanto a lui la **cavalcatura**, sella su cui stende spesso una **carta stradale** — vi ci appoggia la mano come fosse un altare, coerente col suo debole per le mappe ben fatte.
+## Riferimento visivo
 
-Non è trasandato: è **ordinato dentro il disordine della marcia** — ogni fibbia al posto, ogni piega del mantello frutto di abitudine, ma la polvere del giorno resta addosso finché non fa tappa.
+```text
+Image prompt:
+
+Cinematically realistic portrait of a tall lean adult elf man, pointed ears, sandy-blond short wind-tousled hair, sharp cheekbones, horizon-focused eyes, light jaw stubble. Dark brown dusty leather duster, light shirt, dark neck bandana, earth-tone dusty trousers, worn boots, fingerless shooting gloves, wide belt with ammo pouches, diagonal leather chest strap. Lever-action tecnomagic hunting rifle at side; road map spread on saddle of nearby riding horse optional. Frontier trail dust, orderly worn gear; caravan scout, cinematically realistic.
+
+Constraints to preserve:
+
+Elf tall slim height near or above human adult; pointed ears; cinematically realistic; duster, lever rifle, map habit; not plate knight.
+
+Details to avoid:
+
+Cartoon or plastic CGI; human ears; clean court elf robes; wrong human height.
+```
 
 ## Personalità
 
@@ -37,12 +56,19 @@ Conosce la fauna e la geografia delle pianure meglio di chiunque nella carovana.
 ## Scheda di gioco
 
 **Livello/Classe:** livello 5, Ranger
+
 **Ruolo tattico:** scout, tiratore scelto, guida di frontiera
+
 **CA/PF/Velocità:** 15 / 38 / 30 ft.
+
 **Caratteristiche:** For 12, Des 16, Cos 13, Int 12, Sag 14, Car 11
+
 **Bonus competenza:** +3
+
 **Tiri salvezza/Abilità:** For +4, Des +6; Percezione +6, Sopravvivenza +6, Furtività +6, Natura +4, Indagare +4, Percezione passiva 16
+
 **Attacchi/Azioni:** multiattacco (2 attacchi); fucile da caccia tecnomagico +8 (1d10+3 perforanti, gittata 80/240, adattamento conservativo); coltello lungo +6 (1d6+3 perforanti)
+
 **Capacità/Incantesimi distintivi:** Fighting Style: Archery; Land's Stride; udito e vista acuti (vantaggio a Percezione basata su vista o udito); magie utili: `Hunter's Mark`, `Pass Without Trace`
 
 ## Eventi interessanti

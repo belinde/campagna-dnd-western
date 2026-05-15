@@ -1,6 +1,13 @@
 # Harlan Pike
 
+**Regione:** La Frontiera
+
+**Ambito:** Tiratori del Punto Lungo · Via dei Coloni
+
+**Promemoria:** Caposquadra che misura le distanze prima delle persone e cura il fucile come un rito.
+
 **Razza/Classe:** Umano / Guerriero
+
 **Ruolo:** Caposquadra dei Tiratori del Punto Lungo
 
 ## Immagine
@@ -12,6 +19,22 @@
 ## Aspetto
 
 Uomo consumato dal sole e dal vento, sui quarantacinque o cinquant'anni, con baffi radi e occhi chiari che misurano le distanze prima delle persone. Indossa abiti da frontiera privi di qualsiasi vezzo: cappello scolorito, panciotto rigido di polvere, stivali secchi, cinturone ben tenuto. Il suo fucile a lunga gittata è trattato con una cura quasi religiosa.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a sun- and wind-hardened human man, mid-forties to fifties, sparse light mustache, pale measuring eyes. Faded frontier hat, dust-stiff vest, dry boots, neat gun belt. Long-range rifle cleaned and oiled like a ritual object, held with professional calm. Open plains kill zone or farmhouse yard; commercial buffalo hunter squad leader, cinematically realistic.
+
+Constraints to preserve:
+
+Human adult height; cinematically realistic; long rifle central, dust-worn practical clothes; professional not sadistic grin.
+
+Details to avoid:
+
+Cartoon or plastic CGI; cartoon villain; short carbine only; parade military uniform.
+```
 
 ## Personalità
 
@@ -39,12 +62,19 @@ Il suo punto debole è la professionalità stessa: lascia tracce di ordine. Boss
 ## Scheda di gioco
 
 **Livello/Classe:** livello 7, Guerriero di frontiera con tratti da tiratore scelto
+
 **Ruolo tattico:** cecchino, coordinatore di kill zone, minaccia a media-lunga distanza
+
 **CA/PF/Velocità:** 15 / 58 / 30 ft.
+
 **Caratteristiche:** For 12, Des 17, Cos 14, Int 12, Sag 15, Car 11
+
 **Bonus competenza:** +3
+
 **Tiri salvezza/Abilità:** Des +6, Cos +5; Percezione +6, Sopravvivenza +6, Furtività +6, Indagare +4
+
 **Attacchi/Azioni:** multiattacco (2 attacchi); fucile a lunga gittata +8 (1d12+3 perforanti, gittata 150/500, adattamento conservativo); coltello da cintura +6 (1d4+3 perforanti)
+
 **Capacità/Incantesimi distintivi:** Fighting Style: Archery; tiratore paziente (se non si muove prima di sparare, il primo attacco a distanza del turno infligge +1d8 danni); occhio da campo (vantaggio a Percezione e Sopravvivenza per leggere vento, linee di tiro e tracce di accampamenti)
 
 ## Eventi interessanti

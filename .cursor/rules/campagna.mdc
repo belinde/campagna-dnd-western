@@ -72,6 +72,20 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 - `sessione/png-nome.md`, `sessione/luogo-nome.md`, `sessione/nota-argomento.md`, `sessione/incontro-nome.md` (file temporanei con prefisso di tipo)
 - `spunti/nome-idea.md` (nomi liberi, senza prefisso di tipo)
 
+## Metadati schede PNG
+
+Ogni scheda in `png/nome-png.md` (escluso `png/INDICE.md`) deve avere, subito dopo il titolo `#`, questi campi obbligatori — **una riga per campo**, con **riga vuota** tra un campo e il successivo:
+
+- `**Regione:**` — macro-area narrativa (valori tipici da `ambientazione/concetti/geografia.md`, oppure «Itinerante», «Varie»)
+- `**Ambito:**` — ancoraggio operativo (luogo, fazione, viaggio, famiglia)
+- `**Promemoria:**` — una frase su chi è il PNG e perché conta
+
+Poi seguono `**Razza/Classe:**`, `**Ruolo:**` e le sezioni descrittive.
+
+L'indice [`png/INDICE.md`](png/INDICE.md) è **generato automaticamente** da `tools/scripts/rebuild_png_index.py` (anche all'avvio di `build_public_site.py`). Non modificare manualmente le voci dell'indice: aggiornare le schede e rigenerare.
+
+Per riconoscere i PNG già documentati, leggere prima `png/INDICE.md` e aprire le schede complete solo se necessario (nomi in trascrizione, `sessione/png-*`, ambiguità).
+
 ## Struttura delle schede personaggio (PG e PNG)
 
 Sia i file in `personaggi/` che quelli in `png/` devono contenere una sezione `## Eventi interessanti` con voci che citano i momenti salienti estratti dai resoconti in cui il personaggio è apparso, nel formato:
@@ -91,6 +105,7 @@ Le immagini devono essere richiamate direttamente nei file Markdown con path esp
 - Se l'immagine primaria non esiste ancora, mantenere comunque la sezione `## Immagine` con la nota `_Nessuna immagine ancora associata._`
 - Le didascalie non devono mai introdurre nuova lore: servono solo a descrivere visivamente cio` che il testo gia` stabilisce.
 - Le immagini di evento appartengono ai `resoconti/`; le schede personaggio e luogo non devono duplicarle come immagine primaria.
+- In `personaggi/` e `png/`, dopo `## Immagine` usare `## Aspetto` (italiano, evocativo, anche per il sito) e subito dopo `## Riferimento visivo` con blocco fenced ` ```text ` (inglese, DM-only, stesso schema di `/prompt-immagine`). Regola dettagliata: `.cursor/rules/personaggio-aspetto.mdc`.
 
 ## Contesto da consultare
 

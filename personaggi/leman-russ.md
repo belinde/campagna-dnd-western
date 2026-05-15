@@ -13,9 +13,23 @@
 
 ## Aspetto
 
-Mezzelfo alto e asciutto, con il corpo nervoso di chi cammina piu` di quanto riposi e il volto scavato dal vento, dalla polvere e dal sole. Porta lunghi capelli scuri sulle spalle, una barba corta e selvatica, e sotto il cappello a tesa larga spiccano occhi chiari e intensi che gli danno un'aria quasi inquietante quando restano fissi su qualcuno. Le orecchie affilate emergono senza imbarazzo dai capelli, rendendo evidente il suo sangue misto anche a distanza.
+Mezzelfo alto e asciutto, capelli scuri lunghi e barba selvatica, orecchie affilate sotto cappello a tesa larga e occhi chiari intensi. Duster consunto, sciarpa rossa impolverata, bastone rituale con teschio e piume — druido di margini che nella Frontiera sembra a casa sua più del previsto.
 
-Veste come un uomo che appartiene più ai margini della civiltà che alle sue strade: lungo cappotto consunto color terra, strati di stoffa scura, sciarpa rossa impolverata e cinture cariche di piccoli oggetti utili, amuleti e strumenti da viaggio. Porta con se' un bastone rituale nodoso sormontato da un teschio animale e da piume legate con corda e cuoio, più totem che semplice arma. Nel complesso, Leman dà l'impressione di un druido ruvido e itinerante, uno che osserva il mondo come una creatura viva e pericolosa, e che in mezzo alla Frontiera sembra molto meno fuori posto di quanto dovrebbe.
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a tall lean half-elf man, pointed ears visible under a worn wide-brim dark brown cowboy hat, weathered handsome face, short dark beard, intense pale eyes (no supernatural glow). Long dusty dark brown duster with frayed hem, dark red neck scarf, layered dark shirt, leather belt with flask and pouches, tooth-and-claw necklace. Tall gnarled wooden staff topped with small bleached animal skull, feathers and bead strings. Arid frontier desert or dusty trail, warm golden hour light; weird-west druid, cinematically realistic.
+
+Constraints to preserve:
+
+Half-elf height similar to human adult, pointed ears; cinematically realistic; duster, red scarf, ritual staff with skull; earthy palette.
+
+Details to avoid:
+
+Cartoon or plastic CGI; glowing eyes unless explicitly requested; clean city mage look; human ears.
+```
 
 ## Personalità
 

@@ -8,7 +8,7 @@ description: >-
 disable-model-invocation: true
 ---
 
-Rispettare le convenzioni del repository nella Cursor Rule `campagna` (alwaysApply), **salvo** per la sola uscita del flusso **Prompt immagine**: il testo destinato al modello immagine esterno va redatto in **inglese** ed è un’**eccezione esplicita** alla regola generale del progetto che impone risposte e contenuti generati in **italiano**. Le righe `Tipo immagine:` e `Percorso suggerito:` (fuori dal blocco `text`) possono restare in italiano; **dentro** il blocco `text`, tutto il contenuto sotto le tre intestazioni deve essere in **inglese**.
+Rispettare le convenzioni del repository nella Cursor Rule `campagna` (alwaysApply), **salvo** per la sola uscita del flusso **Prompt immagine**: il testo destinato al modello immagine esterno va redatto in **inglese** ed è un’**eccezione esplicita** alla regola generale del progetto che impone risposte e contenuti generati in **italiano**. Le righe `Tipo immagine:` e `Percorso suggerito:` (fuori dal blocco `text`) possono restare in italiano. **Dentro** il blocco `text` (in chat e in `## Riferimento visivo` sulle schede PG/PNG) usa le tre intestazioni keyword **sempre in inglese** (`Image prompt:`, `Constraints to preserve:`, `Details to avoid:`) e tutto il corpo sotto di esse in inglese. Sulle schede, l'intero prompt sta **solo** dentro un fence ` ```text ` … ` ``` ` sotto `## Riferimento visivo` — stesso blocco copiabile del command, senza intestazioni duplicate fuori dal fence.
 
 # Immagini Campagna
 
@@ -23,14 +23,14 @@ Questa regola si attiva quando il DM chiede un prompt per generare l'immagine de
 - Opera solo in modalità Ask / sola lettura: non modificare file, non aggiornare direttamente il repository.
 - Restituisci testo pronto per il generatore, senza premesse o meta-commenti oltre alla struttura sotto. `Tipo immagine` e `Percorso suggerito` restano **fuori** dal blocco codice; il blocco ` ```text ` raggruppa le tre sezioni da copiare in un colpo solo.
 - Il prompt deve essere autosufficiente: chi lo legge non conosce la campagna.
-- **Lingua:** tutto il contenuto **dentro** il blocco `text` (sotto le tre intestazioni `Prompt immagine:`, `Vincoli da preservare:`, `Dettagli da evitare:`) va scritto in **inglese** naturale, denso di dettagli visivi, adatto a modelli di generazione immagine; resta l’eccezione alla rule `campagna` sull’italiano.
+- **Lingua:** tutto il contenuto **dentro** il blocco `text` (sotto le tre intestazioni keyword `Image prompt:`, `Constraints to preserve:`, `Details to avoid:`) va scritto in **inglese** naturale, denso di dettagli visivi, adatto a modelli di generazione immagine; resta l’eccezione alla rule `campagna` sull’italiano. Le intestazioni stesse restano **sempre** in inglese (non tradurle).
 - **Stile visivo obbligatorio (globale):** ogni prompt deve imporre un look **cinematically realistic** — come fotogrammi da film o serie live-action di alta produzione: fotografia credibile, ottica da macchina da presa reale, luce naturale o di set coerente, profondità di campo realistica, texture fisiche (pelle, tessuto, metallo, polvere, legno), color grading sobrio; **evitare** estetica da illustrazione fantasy generica, videogioco, CGI “plastic” cartoony, fumetto o rendering 3D da brochure.
 
 ## Lettura del contesto
 
 1. Leggi sempre la scheda aperta.
 2. Recupera solo il contesto direttamente collegato e necessario.
-3. Per un PG o PNG, privilegia `## Aspetto`, `## Personalità`, `## Note DM`, `## Legami con i PG`, `## Eventi interessanti`, poi integra con `resoconti/` e con i file di ambientazione davvero pertinenti. Usa anche il campo **`Razza:`** in testa alla scheda (e la corporatura in `## Aspetto`) per fissare **statura e proporzioni** nel prompt, non solo tratti del volto, abiti o armature. Se la scheda o la scena coinvolgono **orchi**, **clan delle Terre Selvagge** o un **mezzorco** con radici orchesche pertinenti al contesto visivo, leggi anche `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md` per cromia, abbigliamento culturale e divieti.
+3. Per un PG o PNG: se esiste `## Riferimento visivo` con blocco ` ```text ` completo e la richiesta è un **ritratto** (o variante di inquadratura dello stesso soggetto), leggi **solo** quel blocco e usalo come **fonte primaria** — riecheggia o adatta solo framing, luce o sfondo; non riscrivere da zero da `## Aspetto`. Se il DM chiede `/prompt-immagine` e il blocco in scheda è già aggiornato, l'output in chat può coincidere con il blocco in file (eventuali ritocchi di inquadratura). Per **scene di sessione**, componi da resoconti + `## Aspetto` + `## Riferimento visivo` (abbigliamento e tratti canonici). Se manca il Riferimento visivo, privilegia `## Aspetto`, `## Personalità`, `## Note DM`, `## Legami con i PG`, `## Eventi interessanti`, poi integra con `resoconti/` e ambientazione pertinente. Usa **`Razza:`** / **`Razza/Classe:`** in testa e le proporzioni nel Riferimento o in Aspetto. Per **orchi**, **Terre Selvagge** o **mezzorco** visivamente rilevanti, leggi anche `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`.
 4. Per un luogo, privilegia `## Descrizione generale`, `## Aspetto e atmosfera`, `## Punti di interesse`, `## Storia e origine`, poi integra con `resoconti/`, PNG, concetti, fauna o fazioni collegati. Se il luogo è legato a **presenza orchesca** o **Terre Selvagge** in modo centrale alla scena, considera `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md` per figure o dettagli ambientali pertinenti.
 5. Per un resoconto o una nota/incontro di `sessione/`, individua prima il momento piu` iconico gia` consolidato nel gioco; privilegia `## Riassunto`, `## Eventi principali` e i riferimenti a PG, PNG e luoghi coinvolti. Se compaiono **orchi** o **clan delle Terre Selvagge** come figure visivamente rilevanti, leggi anche `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`.
 6. Usa solo materiale gia` presente in ambientazione, schede e resoconti. Gli `spunti/` vanno ignorati salvo richiesta esplicita del DM.
@@ -38,7 +38,7 @@ Questa regola si attiva quando il DM chiede un prompt per generare l'immagine de
 
 ## Traduzione visiva
 
-- Non limitarti a nominare elementi interni al mondo: trasformali in dettagli visivi concreti; la **forma finale** sotto `Prompt immagine:` va in **inglese** (anche se leggi il materiale di contesto in italiano).
+- Non limitarti a nominare elementi interni al mondo: trasformali in dettagli visivi concreti; la **forma finale** sotto `Image prompt:` va in **inglese** (anche se leggi il materiale di contesto in italiano).
 - I nomi propri dei personaggi non devono comparire nel corpo del prompt (né in inglese né in italiano): descrivi il soggetto in modo autosufficiente tramite aspetto, ruolo, postura, equipaggiamento e contesto visivo.
 - Esempio concettuale: «scout della carovana» → *well-worn travel clothes, light kit, watchful stance, road dust, frontier horizon* (sempre con il vincolo **cinematically realistic**).
 - Esempio concettuale: «strage dei branchi» → *visible signs of exploitation on the plains, bones or hides, trampled tall grass, iron workshops or wagon trains if relevant* — sempre resa realistica da inquadratura filmica, non da icona stilizzata.
@@ -61,7 +61,7 @@ Allineamento visivo a D&D 5e: le parole «massiccio», «imponente», «veterano
 - **Dragonide:** più alto e imponente di un umano medio salvo diversa indicazione nella scheda.
 - **Gnomo:** statura bassa paragonabile al nano, ma corporatura più snella se così descritto nella scheda; non confondere proporzioni con il nano «barbuto e tozzo» se il testo dice il contrario.
 
-**Scene con più personaggi o più razze:** nel testo inglese sotto `Prompt immagine:` inserisci **sempre** almeno una frase sul **rapporto di altezza** (linea delle spalle, teste allineate in modo sbagliato da evitare, soglie di porte o carri, mani su impugnature rispetto al corpo altrui, cavalcature come scala). Così si evita che il modello uniformi tutti a umanoidi alti uguali tra loro.
+**Scene con più personaggi o più razze:** nel testo inglese sotto `Image prompt:` inserisci **sempre** almeno una frase sul **rapporto di altezza** (linea delle spalle, teste allineate in modo sbagliato da evitare, soglie di porte o carri, mani su impugnature rispetto al corpo altrui, cavalcature come scala). Così si evita che il modello uniformi tutti a umanoidi alti uguali tra loro.
 
 ## Formato dell'output
 
@@ -71,14 +71,20 @@ Struttura obbligatoria della risposta in chat:
    - Riga o paragrafo che inizia con `Tipo immagine:` seguito da una delle tre categorie: `ritratto (PG o PNG)`, `veduta (luogo)`, `scena di sessione`.
    - Riga o paragrafo che inizia con `Percorso suggerito:` seguito dal path sotto `immagini/` (es. `immagini/personaggi/<slug>.<ext>`, `immagini/png/...`, `immagini/luoghi/...`, `immagini/eventi/sessione-NNN/<slug-evento>.<ext>`).
 
-2. **Subito dopo**, un **unico** blocco fenced Markdown con linguaggio `text`, che contenga **solo** le tre sezioni seguenti, **nell'ordine**, con queste intestazioni letterali (inclusi i due punti) ciascuna su una propria riga prima del contenuto — **tutto il testo sotto le intestazioni deve essere in inglese**:
-   - `Prompt immagine:` poi a capo il testo del prompt in **inglese** (uno o pochi paragrafi compatti: soggetto, tratti fisici e materiali, abbigliamento, attrezzatura, ambiente, fantasy-western con lievi tocchi **tecnomagici** dove la lore lo supporta, illuminazione, mood, background resi in modo visivo). Includi **sempre** la richiesta di resa **cinematically realistic** (fotografia credibile, non illustrazione). Se la razza è nano, halfling, gnomo, mezzorco, **orco** o dragonide (o la scena mescola razze diverse), il testo deve includere **sempre** statura e proporzioni coerenti con **Proporzioni, razza e scene di gruppo** e il confronto di altezza quando ci sono più figure; per **orchi** applica anche **Orchi delle Terre Selvagge** e la **cromia** grigio-verdastra (descritta in inglese).
-   - `Vincoli da preservare:` poi a capo il contenuto in **inglese** (se nulla da aggiungere oltre lo stile globale già nel prompt, scrivi `_None._`). Quando razza ≠ umanoide medio o sono in scena **più razze**, includi voci esplicite su **statura e rapporti tra le figure** oltre a quanto già nel prompt; puoi ripetere che il look deve restare **cinematically realistic**.
-   - `Dettagli da evitare:` poi a capo il contenuto in **inglese** (se nulla, `_None._`). Elenca errori probabili del modello (nani/halfling/gnomi con umani: statura; orchi: volto umanizzato, statura media, pelle verde brillante al posto del grigio verdastro, ecc.) e, se utile, divieti di stile: **no** cartoon, **no** plastic CGI, **no** generic fantasy illustration, **no** videogame HUD look — coerente con il vincolo di realismo cinematografico.
+2. **Subito dopo**, un **unico** blocco fenced Markdown con linguaggio `text`, che contenga **solo** le tre sezioni seguenti, **nell'ordine**, con queste intestazioni keyword **letterali in inglese** (inclusi i due punti) ciascuna su una propria riga prima del contenuto — **tutto il testo sotto le intestazioni deve essere in inglese**:
+   - `Image prompt:` poi a capo il testo del prompt in **inglese** (uno o pochi paragrafi compatti: soggetto, tratti fisici e materiali, abbigliamento, attrezzatura, ambiente, fantasy-western con lievi tocchi **tecnomagici** dove la lore lo supporta, illuminazione, mood, background resi in modo visivo). Includi **sempre** la richiesta di resa **cinematically realistic** (fotografia credibile, non illustrazione). Se la razza è nano, halfling, gnomo, mezzorco, **orco** o dragonide (o la scena mescola razze diverse), il testo deve includere **sempre** statura e proporzioni coerenti con **Proporzioni, razza e scene di gruppo** e il confronto di altezza quando ci sono più figure; per **orchi** applica anche **Orchi delle Terre Selvagge** e la **cromia** grigio-verdastra (descritta in inglese).
+   - `Constraints to preserve:` poi a capo il contenuto in **inglese** (se nulla da aggiungere oltre lo stile globale già nel prompt, scrivi `_None._`). Quando razza ≠ umanoide medio o sono in scena **più razze**, includi voci esplicite su **statura e rapporti tra le figure** oltre a quanto già nel prompt; puoi ripetere che il look deve restare **cinematically realistic**.
+   - `Details to avoid:` poi a capo il contenuto in **inglese** (se nulla, `_None._`). Elenca errori probabili del modello (nani/halfling/gnomi con umani: statura; orchi: volto umanizzato, statura media, pelle verde brillante al posto del grigio verdastro, ecc.) e, se utile, divieti di stile: **no** cartoon, **no** plastic CGI, **no** generic fantasy illustration, **no** videogame HUD look — coerente con il vincolo di realismo cinematografico.
 
 Il blocco deve aprirsi con una riga che contiene solo tre backtick (U+0060) seguiti dalla parola `text`, e chiudersi con una riga di soli tre backtick. **Non** annidare altri fence dentro questo blocco (niente triple-backtick nel contenuto delle tre sezioni).
 
 Per verifica: la risposta deve consentire al DM di usare il pulsante copia del blocco codice sull’intero contenuto `text` (prompt + vincoli + dettagli) in un solo gesto.
+
+### Riferimento visivo sulle schede PG/PNG
+
+- Struttura: `## Riferimento visivo`, riga vuota, poi **un solo** blocco fenced `text` con le tre sezioni keyword (identico al blocco chat sopra). Intestazioni **senza** grassetto Markdown dentro il fence.
+- Dopo aver prodotto o rivisto un prompt in chat, **aggiorna** il blocco sulla scheda quando il DM consolida il canon visivo (stesso testo o versione leggermente adattata).
+- In **import** o revisione scheda: verifica che `## Riferimento visivo` contenga il fence `text` e che sia coerente con `## Aspetto` e il ritratto in `## Immagine`.
 
 ## Import asset immagine
 
@@ -107,7 +113,7 @@ Se manca il file immagine effettivo, fermati e chiedilo esplicitamente.
 
 1. Leggi sempre il file Markdown aperto o il file indicato dal DM come destinazione.
 2. Recupera solo il contesto direttamente necessario per capire che cosa rappresenta l'immagine.
-3. Per `personaggi/` e `png/`, privilegia `## Aspetto`, `## Eventi interessanti` e l'eventuale sezione `## Immagine` gia` presente.
+3. Per `personaggi/` e `png/`, privilegia `## Aspetto`, `## Riferimento visivo`, `## Eventi interessanti`, il **Promemoria** in testa alla scheda e l'eventuale `## Immagine`. Dopo l'import, verifica coerenza tra ritratto, Aspetto e Riferimento visivo (regola `.cursor/rules/personaggio-aspetto.mdc`).
 4. Per `ambientazione/luoghi/`, privilegia `## Descrizione generale`, `## Aspetto e atmosfera`, `## Punti di interesse` e l'eventuale `## Immagine`.
 5. Per `resoconti/`, privilegia `## Riassunto`, `## Eventi principali` e l'eventuale sezione `## Immagini salienti`.
 6. Per `sessione/`, usa il file solo come contesto provvisorio: se l'immagine deve diventare scena di sessione nel resoconto, chiarisci prima a quale `resoconti/sessione-NNN.md` dovra` essere collegata.

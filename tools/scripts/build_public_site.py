@@ -22,6 +22,14 @@ except ImportError:
 
 
 from campagna_paths import repo_root
+from png_catalog import (
+    META_AMBITO_RE,
+    META_PROMEMORIA_RE,
+    META_REGIONE_RE,
+    region_bucket,
+    region_sort_key,
+    write_indice,
+)
 
 REPO_ROOT = repo_root()
 TOOLS_PUBL = REPO_ROOT / "tools" / "pubblicazione"
@@ -49,7 +57,7 @@ THUMB_MAX_EDGE = 320
 THUMB_PORTRAIT_W = 280
 THUMB_PORTRAIT_H = 373
 THUMB_JPEG_QUALITY = 82
-EXCERPT_MAX_LEN = 280
+EXCERPT_MAX_LEN = 440
 
 
 @dataclass(frozen=True)
@@ -80,6 +88,9 @@ class HubCardInfo:
     session_num: int | None = None
     episode_title: str = ""
     excerpt: str = ""
+    regione: str = ""
+    ambito: str = ""
+    promemoria: str = ""
 
 
 def parse_args() -> argparse.Namespace:
@@ -259,6 +270,24 @@ def session_badge_number(page: PageEntry, meta: HubCardInfo) -> int | None:
     return int(m.group(1)) if m else None
 
 
+def png_card_search_blob(page: PageEntry, meta: HubCardInfo) -> str:
+    parts = (page.title, meta.subtitle, meta.promemoria, meta.ambito, meta.regione)
+    return " ".join(p for p in parts if p).casefold()
+
+
+def render_png_public_header_html(regione: str, ambito: str, promemoria: str) -> str:
+    if not any((regione.strip(), ambito.strip(), promemoria.strip())):
+        return ""
+    meta_bits = [html.escape(b) for b in (regione.strip(), ambito.strip()) if b.strip()]
+    meta_line = ""
+    if meta_bits:
+        meta_line = f'<p class="png-public-meta">{" · ".join(meta_bits)}</p>'
+    prom_html = ""
+    if promemoria.strip():
+        prom_html = f'<p class="png-promemoria">{html.escape(promemoria.strip())}</p>'
+    return f'<div class="png-public-header">{meta_line}{prom_html}</div>\n\n'
+
+
 def render_entity_card_html(
     page: PageEntry,
     meta: HubCardInfo,
@@ -266,6 +295,7 @@ def render_entity_card_html(
     output_dir: Path,
     *,
     portrait_thumb: bool = False,
+    png_hub: bool = False,
 ) -> str:
     href = liquid_rel_jekyll(page.route)
     title_esc = html.escape(page.title)
@@ -277,16 +307,28 @@ def render_entity_card_html(
     else:
         media = '<div class="card-thumb-placeholder" aria-hidden="true"></div>'
     meta_html = f'<p class="card-meta">{meta_esc}</p>' if meta_esc else ""
+    excerpt_html = ""
+    if png_hub and meta.promemoria.strip():
+        excerpt_html = f'<p class="card-excerpt">{html.escape(meta.promemoria.strip())}</p>'
+    data_attrs = ""
+    if png_hub:
+        reg = html.escape(region_bucket(meta.regione) if meta.regione.strip() else "Altro")
+        ambito_attr = html.escape(meta.ambito.strip())
+        search_attr = html.escape(png_card_search_blob(page, meta))
+        data_attrs = (
+            f' data-regione="{reg}" data-ambito="{ambito_attr}" data-search="{search_attr}"'
+        )
     media_class = "entity-card-media entity-card-media--portrait" if portrait_thumb else "entity-card-media"
     card_class = "entity-card entity-card--portrait" if portrait_thumb else "entity-card"
     return textwrap.dedent(
         f"""\
-        <article class="{card_class}">
+        <article class="{card_class}"{data_attrs}>
           <a class="entity-card-link" href="{href}">
             <div class="{media_class}">{media}</div>
             <div class="entity-card-body">
               <h2 class="card-title">{title_esc}</h2>
               {meta_html}
+              {excerpt_html}
             </div>
           </a>
         </article>
@@ -328,6 +370,65 @@ def render_session_card_html(page: PageEntry, meta: HubCardInfo, og_image: str |
     ).strip()
 
 
+def render_png_hub_index(
+    *,
+    hub_title: str,
+    hub_route: str,
+    source_path: Path,
+    built_pages: list[PageEntry],
+    hub_cards: dict[Path, HubCardInfo],
+    page_og_images: dict[Path, str | None],
+    output_dir: Path,
+) -> str:
+    in_section = [p for p in built_pages if public_sidebar_section(p) == "png"]
+    ordered = sort_pages_for_section("png", in_section)
+    by_region: dict[str, list[PageEntry]] = {}
+    for page in ordered:
+        meta = hub_cards.get(page.relative_path, HubCardInfo())
+        reg = region_bucket(meta.regione) if meta.regione.strip() else "Altro"
+        by_region.setdefault(reg, []).append(page)
+    regions = sorted(by_region.keys(), key=region_sort_key)
+    region_options = "".join(
+        f'<option value="{html.escape(region)}">{html.escape(region)}</option>'
+        for region in regions
+    )
+    lines = [
+        front_matter(
+            title=hub_title,
+            route=hub_route,
+            collection_label="",
+            source_path=source_path,
+            png_hub=True,
+        ),
+        '<div class="png-hub" data-png-hub>',
+        '<div class="png-hub-toolbar">',
+        '<label class="png-hub-search-label" for="png-hub-search">Cerca</label>',
+        '<input type="search" id="png-hub-search" class="png-hub-search" '
+        'placeholder="Nome, promemoria, ambito…" autocomplete="off">',
+        '<label class="png-hub-region-label" for="png-hub-region">Regione</label>',
+        '<select id="png-hub-region" class="png-hub-region">',
+        '<option value="__all__">Tutte</option>',
+        region_options,
+        "</select>",
+        "</div>",
+        '<p class="png-hub-empty" hidden>Nessun personaggio corrisponde ai filtri.</p>',
+    ]
+    for region in regions:
+        region_esc = html.escape(region)
+        lines.append(f'<section class="png-region-block" data-regione="{region_esc}">')
+        lines.append(f'<h2 class="png-region-title">{region_esc}</h2>')
+        lines.append('<div class="card-grid">')
+        for page in by_region[region]:
+            meta = hub_cards.get(page.relative_path, HubCardInfo())
+            og = page_og_images.get(page.relative_path)
+            lines.append(
+                render_entity_card_html(page, meta, og, output_dir, png_hub=True)
+            )
+        lines.extend(["</div>", "</section>"])
+    lines.extend(["</div>", ""])
+    return "\n".join(lines)
+
+
 def render_section_hub_index(
     *,
     hub_title: str,
@@ -339,6 +440,16 @@ def render_section_hub_index(
     page_og_images: dict[Path, str | None],
     output_dir: Path,
 ) -> str:
+    if section_key == "png":
+        return render_png_hub_index(
+            hub_title=hub_title,
+            hub_route=hub_route,
+            source_path=source_path,
+            built_pages=built_pages,
+            hub_cards=hub_cards,
+            page_og_images=page_og_images,
+            output_dir=output_dir,
+        )
     in_section = [p for p in built_pages if public_sidebar_section(p) == section_key]
     ordered = sort_pages_for_section(section_key, in_section)
     grid_class = "card-grid card-grid--personaggi" if section_key == "personaggi" else "card-grid"
@@ -487,6 +598,7 @@ def format_section(title: str, body: str) -> str:
 
 
 def render_public_png_body(markdown_text: str) -> str:
+    """Export player-safe PNG body: Immagine, Aspetto (as Descrizione), Eventi only."""
     sections = split_h2_sections(markdown_text)
     image_body = sections.get("Immagine", "_Nessuna immagine ancora associata._")
     description_body = sections.get("Aspetto", "_Descrizione non ancora pubblicata._")
@@ -735,7 +847,12 @@ def collect_hub_card_metadata(
             bits = [b for b in (razza, classe) if b]
             result[rp] = HubCardInfo(subtitle=" · ".join(bits))
         elif parts[0] == "png":
-            result[rp] = HubCardInfo(subtitle=meta_line_first(META_RUOLO_RE, sanitized))
+            result[rp] = HubCardInfo(
+                subtitle=meta_line_first(META_RUOLO_RE, sanitized),
+                regione=meta_line_first(META_REGIONE_RE, sanitized),
+                ambito=meta_line_first(META_AMBITO_RE, sanitized),
+                promemoria=meta_line_first(META_PROMEMORIA_RE, sanitized),
+            )
         elif len(parts) >= 3 and parts[0] == "ambientazione" and parts[1] == "luoghi":
             reg = meta_line_first(META_REGIONE_RE, sanitized)
             tipo = meta_line_first(META_TIPO_RE, sanitized)
@@ -782,6 +899,9 @@ def write_layout(output_dir: Path) -> None:
           <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="color-scheme" content="dark">
+            <meta name="theme-color" content="#12100d">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
             <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
             <meta name="description" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | escape }}{% else %}{{ site.description | escape }}{% endif %}">
             {% if page.og_image %}
@@ -840,6 +960,7 @@ def write_layout(output_dir: Path) -> None:
                 </main>
               </div>
             </div>
+            <script src="{{ '/assets/site.js' | relative_url }}" defer></script>
           </body>
         </html>
         """
@@ -860,6 +981,7 @@ def front_matter(
     og_image: str | None = None,
     hero_image: str | None = None,
     home_full_bleed: bool = False,
+    png_hub: bool = False,
 ) -> str:
     lines = [
         "---",
@@ -869,6 +991,8 @@ def front_matter(
         f"collection_label: {yaml_string(collection_label)}",
         f"source_path: {yaml_string(source_path.as_posix())}",
     ]
+    if png_hub:
+        lines.append("png_hub: true")
     if not show_title:
         lines.append("show_title: false")
     if og_image:
@@ -896,10 +1020,10 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
             show_title=False,
             og_image=HOME_HERO_PUBLIC_PATH,
         ),
-        f'<figure class="home-hero"><img src="{hero_img}" alt="Il gruppo di avventurieri in carovana" loading="eager" decoding="async"></figure>',
         "",
         f"# {manifest['site']['tagline']}",
         "",
+        f'<figure class="home-hero"><img src="{hero_img}" alt="Il gruppo di avventurieri in carovana" loading="eager" decoding="async"></figure>',
         '<div class="hero">',
         f"{manifest['site']['description']}",
         "</div>",
@@ -942,6 +1066,10 @@ def copy_pubblicazione_assets(output_dir: Path) -> None:
         raise FileNotFoundError(
             "Manca tools/pubblicazione/assets/site.css (foglio di stile del sito pubblico)."
         )
+    if not (PUBBLICAZIONE_ASSETS_DIR / "site.js").is_file():
+        raise FileNotFoundError(
+            "Manca tools/pubblicazione/assets/site.js (filtri hub PNG del sito pubblico)."
+        )
     dest_root = output_dir / "assets"
     dest_root.mkdir(parents=True, exist_ok=True)
     for path in sorted(PUBBLICAZIONE_ASSETS_DIR.rglob("*"), key=lambda p: p.as_posix()):
@@ -963,12 +1091,22 @@ def prepare_pages(entries: list[PageEntry], blocked_headings: set[str]) -> list[
         title, body = extract_title(sanitized_text, fallback_title)
         body = transform_body_for_profile(body, entry.profile)
         body = demote_remaining_h1(body)
+        if entry.profile == "public-png":
+            header = render_png_public_header_html(
+                meta_line_first(META_REGIONE_RE, raw_text),
+                meta_line_first(META_AMBITO_RE, raw_text),
+                meta_line_first(META_PROMEMORIA_RE, raw_text),
+            )
+            if header:
+                body = header + body
         prepared_pages.append(PreparedPage(entry=entry, title=title, body=body))
 
     return prepared_pages
 
 
 def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
+    write_indice(REPO_ROOT)
+
     if output_dir.exists():
         shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

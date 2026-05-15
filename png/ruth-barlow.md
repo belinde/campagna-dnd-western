@@ -1,6 +1,13 @@
 # Ruth Barlow
 
+**Regione:** La Frontiera
+
+**Ambito:** Fattoria Barlow
+
+**Promemoria:** Moglie che tiene insieme casa, scorte e la paura che la figlia Mae ha già capito troppo.
+
 **Razza/Classe:** Umana / Commoner (colona)
+
 **Ruolo:** Moglie di Elias Barlow alla Fattoria Barlow; gestisce casa, scorte e la parte del compromesso che nessuno vuole chiamare col suo nome
 
 ## Immagine
@@ -12,6 +19,22 @@
 ## Aspetto
 
 Donna sui trentacinque o quarant'anni, magra in quel modo che non dipende dall'eleganza ma dal fare sempre passare il piatto migliore a qualcun altro. Tiene i capelli scuri raccolti in fretta e troppo stretti, come se anche solo una ciocca fuori posto fosse un lusso. Le mani hanno piccole screpolature di sale e acqua fredda; il grembiule porta macchie che vengono dal lavoro onesto e altre che preferirebbe non dover spiegare.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a thin human woman, mid-thirties to forties, dark hair pulled too tight, salt-cracked hands, stained apron over plain dress. Tired watchful eyes, not performing hospitality. Farm kitchen doorway or well yard, muted earth tones; colonist wife holding fear behind silence, cinematically realistic.
+
+Constraints to preserve:
+
+Human adult height; cinematically realistic; apron stains, tight hair, worn hands; subdued not glamorous.
+
+Details to avoid:
+
+Cartoon or plastic CGI; frontier pin-up; clean pristine homesteader stereotype.
+```
 
 ## Famiglia
 
@@ -43,12 +66,19 @@ Se pressata male, neghera'. Se trattata con onesta', puo' diventare la crepa dec
 ## Scheda di gioco
 
 **Livello/Classe:** livello 1, civile di frontiera con benchmark da `commoner`
+
 **Ruolo tattico:** non combattente, memoria logistica, testimone nervosa ma affidabile
+
 **CA/PF/Velocita':** 10 / 6 / 30 ft.
+
 **Caratteristiche:** For 9, Des 10, Cos 11, Int 11, Sag 12, Car 11
+
 **Bonus competenza:** +2
+
 **Tiri salvezza/Abilita':** Sag +3, Int +2; Intuizione +3, Percezione +3, Sopravvivenza +3, Indagare +2
+
 **Attacchi/Azioni:** coltello da cucina o da sale +2 (1d4 perforanti); bastone o attrezzo da cortile +1 (1d4-1 contundenti)
+
 **Capacita'/Incantesimi distintivi:** contabilita' di sopravvivenza (vantaggio ai tiri per ricordare chi e' passato, cosa manca nelle scorte e quali piccole incongruenze tradiscono una bugia materiale); nessun incantesimo
 
 ## Eventi interessanti

@@ -1,6 +1,13 @@
 # Anthony Gillian
 
+**Regione:** Itinerante
+
+**Ambito:** Carovana verso Fort Lame · Passo del Serpente
+
+**Promemoria:** Broker di informazioni che regala notizie prima e si aspetta un compenso equo se il gruppo le usa.
+
 **Razza/Classe:** Umano / —
+
 **Ruolo:** Broker di informazioni per cacciatori di taglie
 
 ## Immagine
@@ -12,6 +19,22 @@
 ## Aspetto
 
 Uomo sulla quarantina, di corporatura media e aspetto volutamente ordinario — il tipo di persona che si dimentica cinque minuti dopo averla incrociata. Abiti da viaggiatore consumati ma puliti, cappello a tesa media, niente che attiri l'occhio. L'unica cosa fuori posto sono gli occhi: chiari, fermi, che registrano tutto senza che il resto del viso tradisca nulla.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of an unremarkable human man in his forties, average build, forgettable pleasant face, worn but clean travel clothes, medium-brim hat, nothing flashy. Pale steady eyes that record everything while the rest of the face stays neutral. Riverboat breakfast table or dusty trail halt; information broker who blends into crowds, fantasy-western, cinematically realistic.
+
+Constraints to preserve:
+
+Human adult height; cinematically realistic; ordinary clothes, memorable eyes only; not flashy outlaw or officer.
+
+Details to avoid:
+
+Cartoon or plastic CGI; villain sneer; ornate gunslinger gear; distinctive scars that make him unforgettable.
+```
 
 ## Personalità
 
@@ -28,12 +51,19 @@ Gillian ha una rete di contatti che si estende dal Middle West alla Frontiera. N
 ## Scheda di gioco
 
 **Livello/Classe:** livello 3, intermediario di informazioni con benchmark da `spy`
+
 **Ruolo tattico:** supporto sociale, osservatore, fuggitivo prudente
+
 **CA/PF/Velocità:** 12 / 22 / 30 ft.
+
 **Caratteristiche:** For 10, Des 14, Cos 10, Int 13, Sag 14, Car 15
+
 **Bonus competenza:** +2
+
 **Tiri salvezza/Abilità:** Des +4, Sag +4; Inganno +6, Intuizione +4, Indagare +5, Persuasione +6, Percezione +4, Furtività +4
+
 **Attacchi/Azioni:** coltello corto +4 (1d6+2 perforanti); pistola tascabile +4 (1d8+2 perforanti, gittata 20/60, adattamento conservativo)
+
 **Capacità/Incantesimi distintivi:** azione scaltra (Scatto, Disimpegno o Nascondersi come azione bonus); rete di informatori (vantaggio a tiri per reperire voci, taglie, spostamenti e nomi utili in porti, locande e moli); nessun incantesimo
 
 ## Eventi interessanti

@@ -13,9 +13,23 @@
 
 ## Aspetto
 
-Uomo nel pieno della forza, alto e ben proporzionato, con lineamenti netti, capelli scuri tagliati corti e uno sguardo fermo che tende più al giudizio che alla minaccia. Il volto è quello di chi è abituato a reggere il peso delle decisioni davanti agli altri: pulito, severo senza essere crudele, con una compostezza quasi solenne che lo distingue anche in mezzo alla polvere della Frontiera.
+Uomo alto e composto, capelli scuri corti, sguardo da giudice più che da minaccia. Armatura bianca e oro con sole sul petto, scudo e spada sacra, mantello chiaro impolverato — paladino visibile in prima linea, anche nella polvere della Frontiera.
 
-In viaggio si presenta come un cavaliere sacro trapiantato ai confini del mondo civilizzato. Indossa una pesante armatura di maglia e piastre ben tenuta, rifinita in bianco e oro, con simboli solari in evidenza sul petto e sul grande scudo. Porta una lunga spada con sicurezza rituale più che esibita, e il mantello chiaro che ricade dalle spalle gli conferisce un'aria nobile anche quando è impolverato dal cammino. Nel complesso, Kelvor da` subito l'impressione di un uomo fatto per stare in prima linea: protettivo, visibile, difficile da ignorare.
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a tall athletic human man in his thirties, short dark hair, light stubble, severe composed face, dark judging eyes. Well-maintained white-and-gold plate over mail; white tabard with large golden sun emblem and red cabochon on chest; matching heater shield with sun relief; long sword with gold hilt. Light cream cloak, dust on pauldrons; brown leather belt with pouches. Runed tecnomagic revolver at hip (fine engravings, reliable mechanism). Warm natural light, frontier dust acceptable; noble paladin without parade stiffness.
+
+Constraints to preserve:
+
+Human adult height; cinematically realistic; white/gold holy armor, sun symbols, longsword, shield; tecnomagic revolver on belt when shown.
+
+Details to avoid:
+
+Cartoon or plastic CGI; dark evil plate; missing holy sun motif; dwarf or elf proportions.
+```
 
 ## Personalità
 

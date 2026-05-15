@@ -1,6 +1,13 @@
 # Mae Barlow
 
+**Regione:** La Frontiera
+
+**Ambito:** Fattoria Barlow
+
+**Promemoria:** Figlia adolescente che porta secchi al pozzo, osserva troppo e dimentica poco.
+
 **Razza/Classe:** Umana / Commoner (ragazza di frontiera)
+
 **Ruolo:** Figlia adolescente dei Barlow; porta secchi, osserva i clienti del pozzo e sa piu' di quanto i genitori vorrebbero
 
 ## Immagine
@@ -12,6 +19,22 @@
 ## Aspetto
 
 Ragazza sui tredici o quattordici anni, lunga di braccia e gambe come chi e' cresciuta troppo in fretta rispetto al cibo disponibile. Ha capelli chiari o castano polvere, quasi sempre legati male, e uno sguardo fermo che negli adulti sembrerebbe durezza ma in lei e' solo l'abitudine a controllare da dove arrivera' il prossimo problema. I vestiti sono pratici, rattoppati sui gomiti e sulle ginocchia, con le cuciture tirate da troppe corse tra pozzo, orto e recinto.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a tall thin human girl about thirteen or fourteen, long limbs, dusty blond or light brown hair tied carelessly, steady assessing eyes beyond her years. Patched practical dress and worn elbows and knees from running between well, garden, and fence. Farmyard bucket in hand optional; adolescent frontier witness, cinematically realistic.
+
+Constraints to preserve:
+
+Teen height below adult; cinematically realistic; patched clothes, watchful eyes; not adult woman.
+
+Details to avoid:
+
+Cartoon or plastic CGI; adult proportions; fancy dress; childish innocent doll face only.
+```
 
 ## Famiglia
 
@@ -44,12 +67,19 @@ Non sa scrivere bene, ma sa contare e ha una memoria eccellente per segni, march
 ## Scheda di gioco
 
 **Livello/Classe:** livello 1, ragazza di frontiera con benchmark da `commoner`
+
 **Ruolo tattico:** non combattente mobile, vedetta improvvisata, testimone attenta
+
 **CA/PF/Velocita':** 11 / 5 / 30 ft.
+
 **Caratteristiche:** For 8, Des 12, Cos 10, Int 10, Sag 12, Car 10
+
 **Bonus competenza:** +2
+
 **Tiri salvezza/Abilita':** Des +3, Sag +3; Percezione +3, Sopravvivenza +3, Furtivita' +3, Addestrare Animali +3
+
 **Attacchi/Azioni:** sasso, fionda improvvisata o secchio lanciato +3 (1d4+1 contundenti); coltello da cordame +3 (1d4+1 perforanti)
+
 **Capacita'/Incantesimi distintivi:** sguardo da abbeveratoio (vantaggio ai tiri per capire quanti cavalli o uomini sono passati da un punto d'acqua, quanto si sono fermati e da che lato sono ripartiti); nessun incantesimo
 
 ## Eventi interessanti

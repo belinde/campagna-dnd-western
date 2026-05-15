@@ -45,7 +45,8 @@ Prima del primo chunk (o subito dopo la ripresa, se manca ancora contesto in cha
 
 - [`sessione/trascrizione-grezza-doppia.txt`](sessione/trascrizione-grezza-doppia.txt) (intero file, almeno una volta; durante i chunk successivi basta la **finestra** della grezza per il chunk corrente ± overlap)
 - Tutti i file in `ambientazione/` (incluse `luoghi/`, `nazioni/`, `concetti/`)
-- Tutti i file in `personaggi/` e `png/`
+- Tutti i file in `personaggi/`
+- `png/INDICE.md`; aprire le schede in `png/` solo se un nome in trascrizione richiede disambiguazione
 - Tutti i file in `sessione/` **eccetto** `sessione/trascrizione.md` come output in scrittura controllata (leggerlo se esiste per ripresa) e artefatti generati nello stesso giro se il DM chiede di ignorarli
 - Tutti i file in `spunti/`
 - L’ultimo file in `resoconti/`

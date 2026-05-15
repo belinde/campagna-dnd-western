@@ -6,9 +6,25 @@ alwaysApply: false
 
 # Schede PNG 5e
 
-Questa regola si applica solo alle schede dei PNG in `png/` e `sessione/`.
+Questa regola si applica solo alle schede dei PNG in `png/` e `sessione/`. **Non** si applica a `png/INDICE.md`.
 
 ## Struttura obbligatoria
+
+Subito dopo il titolo `#`, inserire i metadati con riga vuota tra ogni campo:
+
+```markdown
+# Nome PNG
+
+**Regione:** ...
+
+**Ambito:** ...
+
+**Promemoria:** ...
+
+**Razza/Classe:** ...
+
+**Ruolo:** ...
+```
 
 Mantieni la struttura narrativa gia` in uso e aggiungi sempre una sezione `## Scheda di gioco`.
 
@@ -30,18 +46,29 @@ Se il ritratto non esiste ancora, lascia:
 _Nessuna immagine ancora associata._
 ```
 
+Subito dopo `## Aspetto`, inserire sempre `## Riferimento visivo` con blocco fenced ` ```text ` (come `/prompt-immagine`). Formato e sincronizzazione: regola `.cursor/rules/personaggio-aspetto.mdc`.
+
 ```markdown
 ## Scheda di gioco
 
 **Livello/Classe:** livello N, classe o archetipo meccanico
+
 **Ruolo tattico:** tiratore, incantatore, bruto, supporto, scout, ecc.
+
 **CA/PF/Velocita:** ...
+
 **Caratteristiche:** For ..., Des ..., Cos ..., Int ..., Sag ..., Car ...
+
 **Bonus competenza:** ...
+
 **Tiri salvezza/Abilita:** ...
+
 **Attacchi/Azioni:** ...
+
 **Capacita/Incantesimi distintivi:** ...
 ```
+
+Ogni campo su una propria riga, con **riga vuota** tra un campo e il successivo (altrimenti il Markdown unisce tutto in un unico paragrafo).
 
 La scheda deve restare compatta, leggibile al tavolo e limitata alle informazioni meccaniche davvero utili in gioco.
 

@@ -1,6 +1,13 @@
 # Abigail Rooke
 
+**Regione:** Itinerante
+
+**Ambito:** Compagnia delle Cinghie del Grande Fiume · Grande Fiume
+
+**Promemoria:** Agente commerciale che chiude contratti con sangue freddo e discrezione retribuita.
+
 **Razza/Classe:** Umana / —
+
 **Ruolo:** Agente commerciale itinerante della Compagnia delle Cinghie del Grande Fiume
 
 ## Immagine
@@ -12,6 +19,22 @@
 ## Aspetto
 
 Donna sui quarant'anni, asciutta, ben composta anche dopo giorni di polvere. Cappotto scuro da viaggio di buona fattura, guanti chiari, stivali senza fango quanto dovrebbero averne. Porta sempre con sé un **taccuino cerato**, una matita corta e una borsa rigida da documenti che non lascia mai a nessuno.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a lean composed human woman in her forties, dust on shoulders but posture immaculate. Dark well-made travel coat, light gloves, boots cleaner than the road suggests. Wax notebook, short pencil, rigid document case always in hand or at belt. River company agent, cold negotiation smile optional; fantasy-western commerce, cinematically realistic.
+
+Constraints to preserve:
+
+Human adult height; cinematically realistic; quality travel coat, document case, wax notebook; professional not frontier ruffian.
+
+Details to avoid:
+
+Cartoon or plastic CGI; disheveled pioneer woman; missing document props.
+```
 
 ## Personalità
 
@@ -36,12 +59,19 @@ La sua forza è che non mente quasi mai sui fatti materiali. Mente sulle consegu
 ## Scheda di gioco
 
 **Livello/Classe:** livello 3, negoziatrice e agente commerciale con benchmark da `noble`/`spy`
+
 **Ruolo tattico:** manipolatrice, supporto sociale, coordinatrice di risorse
+
 **CA/PF/Velocità:** 12 / 20 / 30 ft.
+
 **Caratteristiche:** For 9, Des 12, Cos 10, Int 14, Sag 13, Car 16
+
 **Bonus competenza:** +2
+
 **Tiri salvezza/Abilità:** Int +4, Car +5; Persuasione +7, Inganno +7, Intuizione +5, Indagare +4, Percezione +3
+
 **Attacchi/Azioni:** pugnale da borsa +4 (1d4+2 perforanti); pistola da viaggio ben nascosta +4 (1d8+2 perforanti, gittata 20/60, adattamento conservativo)
+
 **Capacità/Incantesimi distintivi:** contratti ferrei (vantaggio a Persuasione e Inganno quando tratta prezzi, debiti, forniture o discrezione retribuita); sangue freddo commerciale (vantaggio ai tiri per mantenere la faccia durante minacce, scandali o trattative sporche); nessun incantesimo
 
 ## Eventi interessanti

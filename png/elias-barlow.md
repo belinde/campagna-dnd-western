@@ -1,6 +1,13 @@
 # Elias Barlow
 
+**Regione:** La Frontiera
+
+**Ambito:** Fattoria Barlow · Via dei Coloni
+
+**Promemoria:** Capofamiglia colono che regge il pozzo e chiama necessità ciò che sta diventando complicità.
+
 **Razza/Classe:** Umano / Commoner (colono)
+
 **Ruolo:** Capofamiglia della Fattoria Barlow; vende acqua, sale e riparo alle squadre di tiratori e macellai che operano lungo la Via dei Coloni
 
 ## Immagine
@@ -12,6 +19,22 @@
 ## Aspetto
 
 Uomo sui quarant'anni, secco di muscoli e di sonno, con il volto cotto dal sole e scavato da una sete che non e' mai stata davvero sua. Le braccia e le spalle sono quelle di chi tira su secchi tutto il giorno; le mani hanno calli antichi da zappa e calli piu' recenti da cordame bagnato. Porta barba corta e trascurata, cappello chiaro sfondato sulla cupola, camicia sempre umida sul petto quando il lavoro gira attorno al pozzo.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a wiry human man in his forties, sun-baked thirsty face, short neglected beard, battered light hat, shirt damp at the chest from well work. Muscular rope- and hoe-calloused arms, bucket rope at the well frame. Frontier farmstead, dry soil, guilt in the eyes without melodrama; colonist selling water to hunting parties, cinematically realistic.
+
+Constraints to preserve:
+
+Human adult height; cinematically realistic; well labor, worn hat, sun damage; not wealthy rancher.
+
+Details to avoid:
+
+Cartoon or plastic CGI; gunslinger gear; pristine clothes.
+```
 
 ## Famiglia
 
@@ -44,12 +67,19 @@ Non conosce tutta la filiera, ma abbastanza da far male a qualcuno se decidesse 
 ## Scheda di gioco
 
 **Livello/Classe:** livello 1, civile di frontiera con benchmark da `commoner`
+
 **Ruolo tattico:** non combattente robusto, custode del pozzo, testimone riluttante
+
 **CA/PF/Velocita':** 10 / 7 / 30 ft.
+
 **Caratteristiche:** For 12, Des 10, Cos 12, Int 10, Sag 11, Car 10
+
 **Bonus competenza:** +2
+
 **Tiri salvezza/Abilita':** For +3, Cos +3; Atletica +3, Sopravvivenza +2, Intuizione +2
+
 **Attacchi/Azioni:** badile o mazza da stalla +3 (1d4+1 contundenti); coltello da lavoro +3 (1d4+1 perforanti)
+
 **Capacita'/Incantesimi distintivi:** uomo del pozzo (vantaggio ai tiri legati a tirare, trasportare o razionare acqua e a resistere a fatica, sete e lavoro manuale prolungato); nessun incantesimo
 
 ## Eventi interessanti

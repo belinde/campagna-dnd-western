@@ -1,6 +1,13 @@
 # Sam Crow
 
+**Regione:** La Frontiera
+
+**Ambito:** Fratelli Crow · fuorilegge
+
+**Promemoria:** Secondo dei tre Crow, ricercato: ladro astuto e duellante sporco sopravvissuto al fratello Todd.
+
 **Razza/Classe:** Umano / Ladro
+
 **Ruolo:** Fuorilegge ricercato, secondo dei tre fratelli Crow
 
 ## Immagine
@@ -11,7 +18,23 @@
 
 ## Aspetto
 
-Uomo sulla cinquantina, asciutto e nervoso come un gatto sul tetto, con la faccia segnata dal sole e dalle strade. Ha baffi folti e scuri, larghi a manubrio, curati con una precisione quasi ridicola rispetto al resto dell’aspetto trasandato — come se fossero l’unica cosa che conta ancora sul manifesto. Sotto il cappello da cowboy a tesa larga, feltro scolorito dal sole, spuntano ciocche scure e arruffate; il teso getta ombra sulla fronte ma non basta a nascondere uno sguardo profondo, fisso, da chi ha già deciso se sei preda o ostacolo. Al collo porta spesso una bandana scura con un motivo chiaro a puntini, annodata sopra una camicia o una giacca pesante di lana scura, ruvida, da lavoro o da notte in sella. Quando scatta la violenza, impugna la rivoltella tecnomagica con entrambe le mani e la punta dritta verso il bersaglio, canna quasi nel primo piano, come a voler bucare lo sguardo prima ancora del piombo. In circostanze ordinarie si muove rasente alle pareti, come se i muri fossero suoi alleati.
+Uomo sulla cinquantina, asciutto e nervoso, baffi a manubrio curati con cura quasi ridicola rispetto al resto dell'abbigliamento logoro. Cappello da cowboy scolorito, sguardo fisso da chi ha già deciso se sei preda o ostacolo; bandana scura al collo e rivoltella tecnomagica quando la situazione degenera.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a lean nervous human man in his fifties, sun- and road-weathered face, thick dark handlebar mustache meticulously groomed against otherwise shabby frontier clothes. Faded wide-brim cowboy hat, dark tousled hair under the brim, deep predatory eyes in shadow. Dark polka-dot bandana over dark rough wool shirt or jacket. Two-handed aim with tecnomagic revolver, barrel toward viewer; or wall-hugging stance in a narrow corridor. Wanted outlaw brains of a band; fantasy-western, cinematically realistic.
+
+Constraints to preserve:
+
+Human adult height; cinematically realistic; handlebar mustache, faded hat, polka-dot bandana, tecnomagic revolver; wary not swaggering hero.
+
+Details to avoid:
+
+Cartoon or plastic CGI; clean gentleman gambler; young face; missing mustache.
+```
 
 ## Personalità
 
@@ -28,12 +51,19 @@ Sam è il secondo dei tre fratelli Crow, banda di fuorilegge responsabile di alm
 ## Scheda di gioco
 
 **Livello/Classe:** livello 7, Ladro
+
 **Ruolo tattico:** fuorilegge astuto, duellante sporco, opportunista
+
 **CA/PF/Velocità:** 15 / 52 / 30 ft.
+
 **Caratteristiche:** For 11, Des 17, Cos 13, Int 12, Sag 13, Car 14
+
 **Bonus competenza:** +3
+
 **Tiri salvezza/Abilità:** Des +6, Int +4; Furtività +9, Inganno +8, Rapidità di mano +6, Percezione +6, Intuizione +4
+
 **Attacchi/Azioni:** multiattacco (2 attacchi); coltello +6 (1d4+3 perforanti); rivoltella tecnomagica +6 (1d10+3 perforanti, gittata 30/90, adattamento conservativo)
+
 **Capacità/Incantesimi distintivi:** azione scaltra (Scatto, Disimpegno o Nascondersi come azione bonus); Attacco Furtivo (1/turno, +4d6 se ha vantaggio o un alleato minaccia il bersaglio); Parata improvvisata (+2 CA contro un attacco in mischia che lo colpirebbe)
 
 ## Eventi interessanti

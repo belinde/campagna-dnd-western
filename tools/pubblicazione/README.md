@@ -14,7 +14,7 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 
 ## Navigazione nell'export
 
-Lo script genera una **sidebar** con le sezioni Personaggi, Resoconti, PNG e Luoghi; la **home** (`/`) si raggiunge dal **logo** in intestazione. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG il campo **Ruolo**; per i luoghi **Regione** e **Tipo**. Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. Il link «Guida giocatori» non compare nell'header accanto al logo: resta nelle liste della home o tra i contenuti player-safe dell'archivio.
+Lo script genera una **sidebar** con le sezioni Personaggi, Resoconti, PNG e Luoghi; la **home** (`/`) si raggiunge dal **logo** in intestazione. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG **Ruolo**, **Promemoria** e raggruppamento per **Regione** con barra di ricerca e filtro regione; per i luoghi **Regione** e **Tipo**. L'indice DM `png/INDICE.md` viene rigenerato automaticamente all'avvio di `build_public_site.py` (e con `rebuild_png_index.py`). Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. Il link «Guida giocatori» non compare nell'header accanto al logo: resta nelle liste della home o tra i contenuti player-safe dell'archivio.
 
 ### Immagini nell'export
 
@@ -55,18 +55,19 @@ La v1 pubblica la collection `personaggi/`, l'intera collection `resoconti/`, un
 
 ### Personaggi giocanti (`personaggi/`)
 
-Le schede PG non usano `profile: "public-png"`. Dopo la rimozione delle sezioni in `stripSections`, il corpo pubblicato coincide con la scheda nel repository privato (stat in testa, immagine, sezioni descrittive, `## Eventi interessanti`, ecc.).
+Le schede PG non usano `profile: "public-png"`. Dopo la rimozione delle sezioni in `stripSections` (incluso `## Riferimento visivo`, prompt immagine DM-only in inglese), il corpo pubblicato coincide con la scheda nel repository privato salvo le sezioni private (stat in testa, immagine, `## Aspetto`, sezioni descrittive, `## Eventi interessanti`, ecc.).
 
 ### Profilo pubblico dei PNG
 
-Le schede in `png/` non vengono pubblicate integralmente. Se un file `png/*.md` entra nella allowlist con `profile: "public-png"`, il sito mostra solo:
+Le schede in `png/` non vengono pubblicate integralmente. Se un file `png/*.md` entra nella allowlist con `profile: "public-png"`, il sito mostra:
 
 - nome del PNG
+- **Regione**, **Ambito** e **Promemoria** (in testa alla pagina e sulle card dell'hub)
 - sezione `## Immagine`
 - descrizione pubblica ricavata da `## Aspetto`
 - sezione `## Eventi interessanti`
 
-Tutte le altre parti della scheda restano private, anche se non sono marcate come `## Note DM`.
+`## Riferimento visivo` non viene mai esportata (né tramite `stripSections` sulle PG, né nel profilo `public-png`). Tutte le altre parti della scheda restano private, anche se non sono marcate come `## Note DM`.
 
 ### Aggiornamento della allowlist in fase resoconto
 
@@ -76,7 +77,7 @@ Alla finalizzazione di un nuovo resoconto, l'AI deve valutare quali materiali so
 - `ambientazione/luoghi/*.md` per i luoghi visitati o identificati dai giocatori
 - eventuali file di `ambientazione/` o altre pagine player-safe emerse in sessione
 
-L'aggiornamento della allowlist fa parte della finalizzazione del resoconto e precede la rigenerazione del sito pubblico.
+L'aggiornamento della allowlist fa parte della finalizzazione del resoconto e precede la rigenerazione del sito pubblico. Dopo aver aggiornato le schede PNG, rigenerare `png/INDICE.md` (`uv run python tools/scripts/rebuild_png_index.py`) e poi il sito (`uv run python tools/scripts/build_public_site.py --output tools/build/public-site`).
 
 ## Link automatici nei resoconti
 

@@ -1,6 +1,13 @@
 # Hector Brannagh
 
+**Regione:** Itinerante
+
+**Ambito:** Carovana verso la Frontiera
+
+**Promemoria:** Ex mercante che guida il convoglio verso ovest con passi lenti e voce che ferma i carri.
+
 **Razza/Classe:** Umano / Commoner (ex mercante)
+
 **Ruolo:** Responsabile della carovana diretta alla Frontiera
 
 ## Immagine
@@ -11,11 +18,23 @@
 
 ## Aspetto
 
-Umano sulla cinquantina avanzata, **corporatura robusta** e spalle larghe: la mole non è da paladino ma da chi ha spalato merce prima dei bilanci. **Capelli bianchi o d’argento**, corti e tagliati con cura pratica; la faccia è **segnata dal tempo e dal vento**, rughe profonde attorno agli **occhi chiari**, mascella quadrata, **barba biancastra corta** o peluria grigia che non cura più come ai tempi dei saloni mercantili. Lo sguardo resta **fisso oltre la folla**, calcolatore, come se stesse già leggendo la prossima tappa sulla mappa che tiene in testa.
+Umano sulla cinquantina avanzata, corporatura da chi ha spalato merce prima dei bilanci: capelli d'argento, barba grigia trascurata, occhi chiari calcolatori. Lungo soprabito scuro impolverato, guanti consumati e borsa di carte — cammina tra i carri come se il convoglio aspettasse solo il suo cenno.
 
-In viaggio indossa un **lungo soprabito** di lana o tela pesante, **marrone scuro o antracite**, impolverato e **macchiato di fango ai lembi** — il cappotto di chi passa da **banchine e carraie**, non da salotto. Sotto: **panciotto** scuro su **camicia** chiara ingrigita dal sole, **fazzoletto o cravatta** di tono terra annodata con precisione da uomo che sa ancora presentarsi. **Pantaloni** scuri resistenti, **cintura** di cuoio semplice con fibbia opaca, **guanti** di pelle scura consumati, segni di corde, staffe e casse. A tracolla porta una **borsa di cuoio** logora; in mano o infilati nella borsa, **rotoli di carte e contratti** ingialliti — la cartografia e la carta come prolungamento del comando.
+## Riferimento visivo
 
-**Voce bassa**, **passi lenti e decisi**; in mezzo a carri, bestiame e vapore lontano dalle **ciminiere** di una città sul fiume, cammina dritto come chi ha il diritto di fermare il convoglio con un gesto, senza bisogno di alzare la voce. Non ostenta ricchezza: ogni capo è **abbastanza buono da essere credibile**, abbastanza **logoro da dire** che questa volta il capitale è tutto nella rotta verso ovest.
+```text
+Image prompt:
+
+Cinematically realistic portrait of a sturdy human man in his late fifties, broad merchant shoulders, short silver-white hair, wind-creased face, pale calculating eyes, short grey beard stubble. Long dark brown dust-stained duster muddy at the hem, dark waistcoat over sun-faded shirt, earth-tone neck tie, dark trousers, worn dark leather gloves, simple belt, leather satchel with rolled yellowed maps and contracts in hand. Caravan yard or river docks with wagons and distant smokestacks; slow authoritative walk. Fantasy-western caravan master, cinematically realistic.
+
+Constraints to preserve:
+
+Human adult height; cinematically realistic; worn respectable clothes, map rolls, mud on coat hem; not wealthy parade dress.
+
+Details to avoid:
+
+Cartoon or plastic CGI; young bodybuilder; pristine salon merchant; armor.
+```
 
 ## Personalità
 
@@ -40,12 +59,19 @@ Non è l'uomo semplice che sembra. Il fallimento a Port Meredith non è stato so
 ## Scheda di gioco
 
 **Livello/Classe:** livello 5, capo carovana civile con benchmark da `commoner`/`noble`
+
 **Ruolo tattico:** comandante logistico, negoziatore, bersaglio da proteggere
+
 **CA/PF/Velocità:** 12 / 27 / 30 ft.
+
 **Caratteristiche:** For 12, Des 11, Cos 12, Int 13, Sag 14, Car 15
+
 **Bonus competenza:** +3
+
 **Tiri salvezza/Abilità:** Sag +5, Car +5; Intuizione +5, Persuasione +6, Inganno +6, Percezione passiva 12
+
 **Attacchi/Azioni:** bastone da viaggio +4 (1d6+1 contundenti); pistola tecnomagica da viaggio +4 (1d10+1 perforanti, gittata 30/90, adattamento conservativo)
+
 **Capacità/Incantesimi distintivi:** Voce del capocarovana (gli alleati che lo sentono hanno vantaggio al primo tiro per non cedere al panico o mantenere l'ordine); Parata improvvisata (+2 CA contro un attacco in mischia che lo colpirebbe, se impugna un'arma da mischia)
 
 ## Eventi interessanti

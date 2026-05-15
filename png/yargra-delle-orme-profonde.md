@@ -1,6 +1,13 @@
 # Yargra delle Orme Profonde
 
+**Regione:** Le Terre Selvagge
+
+**Ambito:** Clan delle Orme Profonde · pianure
+
+**Promemoria:** Sciamana orca che media tra clan e coloni con voce calma e radici nel terreno.
+
 **Razza/Classe:** Orco / Druida
+
 **Ruolo:** Sciamana e mediatrice del Clan delle Orme Profonde
 
 ## Immagine
@@ -11,11 +18,23 @@
 
 ## Aspetto
 
-**Orco** sulla mezza età: **più alta della media umana** e con **ossatura larga**, **mani grandi**, busto e polsi **robusti** — corporatura da **clan delle pianure**, senza la **mole slanciata e alta** delle guerriere più giovani, che sembrano lance; Yargra ha **massa** e **spalle** che tengono ferme le trattative più che la velocità di corsa. La **pelle** è **grigia con toni verdastri**, lurida di **sole, polvere e cenere** fino a **strati bruno-oliva** su zigomi e nuca; resta nell’intervallo **grigio-verde** del popolo, mai un verde saturo da cartone. **Orecchie appuntite**, inclinate all’indietro; **zanne corte**, ben curate, che non invadono il labbro quando parla piano. Il **volto** è segnato dal **vento delle pianure** e da **sottili linee d’ocra** agli **zigomi**, come mappe disegnate col dito; gli **occhi**, scuri e poco luminosi, restano **fermi** anche quando tutto intorno accelera.
+Orca sulla mezza età, più alta e larga di un umano medio, pelle grigio-verdastra segnata da sole e polvere delle pianure. Capelli grigi e neri intrecciati con cuoio e osso, mantello di pelli rattoppate, bastone nodoso — voce calma di chi misura il terreno come un solco sacro.
 
-I **capelli**, **grigi e neri** intrecciati con **strisce di cuoio**, **semi secchi** e **frammenti d’osso levigato** — ogni treccia come un promemoria di stagione o di sentiero. Al collo e ai polsi, **anelli** di **osso** e **legno scuro**; nulla che tintinni come metallo da mercato. Il **mantello** è cucito con **pelli vissute**, **rattoppate** più volte con ago grosso e filo cerato, bordi **frangiati** da rovi e da notti a cielo aperto; sotto si intravedono **strati** di **tunica** color **terra cotta** e **cenere**. Ai piedi, **calzari** di cuoio morbido, **suole** lisce come se camminasse sempre sullo stesso tipo di terra. Quando si muove, il peso **non cade rumoroso**: i passi **misurano** il terreno come chi **sente ancora** il solco lasciato dalle **orme** del branchio, e il **bastone nodoso** che regge — liscio all’impugnatura per il sudore e l’uso — sembra un prolungamento del braccio più che un’arma in mostra.
+## Riferimento visivo
 
-Da vicino si notano **unghie corte** sporche di **terra asciutta**, **calli** tra pollice e indice da **fionda** e da **corde**, e ogni tanto un **odore** tenue di **fumo dolce**, **erba secca** e **cuoio bagnato** — il profilo di chi vive tra **pozze**, **guadi** e **corridoi migratori** più che tra le assi delle città.
+```text
+Image prompt:
+
+Cinematically realistic portrait of a middle-aged orc woman, clearly taller and broader than an average human — shoulder line and crown above a human reference. Grey-green skin with brown-olive dust on cheekbones, not bright green. Pointed ears back, short neat lower tusks, dark steady eyes, subtle ochre ritual lines on cheeks. Grey-black braids with leather strips, dried seeds, polished bone fragments; bone and dark wood rings at neck and wrists. Patchwork lived-fur cloak over clay-red and ash tunics, soft leather foot wraps, smooth-worn gnarled staff. Plains wind, dry grass; prairie-clan shaman mediator, fantasy-native-prairie material culture without real-world tribal copying, cinematically realistic.
+
+Constraints to preserve:
+
+Orc height above human; grey-green skin not saturated green; cinematically realistic; fur cloak, braids, staff; broad mass not elf-slim.
+
+Details to avoid:
+
+Cartoon or plastic CGI; humanized face without tusks; average human height; bright cartoon green skin; real-world Native regalia copy.
+```
 
 ## Personalità
 
@@ -47,12 +66,19 @@ Non è ingenua: se la carovana sceglie il profitto o il silenzio, Yargra non tor
 ## Scheda di gioco
 
 **Livello/Classe:** livello 7, Druida
+
 **Ruolo tattico:** controllo del terreno, guida spirituale, supporto rituale
+
 **CA/PF/Velocità:** 15 / 45 / 30 ft.
+
 **Caratteristiche:** For 11, Des 12, Cos 14, Int 12, Sag 17, Car 13
+
 **Bonus competenza:** +3
+
 **Tiri salvezza/Abilità:** Int +4, Sag +6; Intuizione +6, Medicina +6, Natura +4, Percezione +6, Sopravvivenza +6
+
 **Attacchi/Azioni:** bastone rituale +3 (1d6 contundenti; +6 e 1d8+3 con `Shillelagh`); fionda o giavellotto leggero +4 (1d6+1 contundenti/perforanti)
+
 **Capacità/Incantesimi distintivi:** CD incantesimi 14, attacco magico +6; Druidic; magie tipiche: `Druidcraft`, `Entangle`, `Healing Word`, `Speak with Animals`, `Pass Without Trace`, `Barkskin`; cammino delle pianure (vantaggio a Sopravvivenza e Percezione per corridoi migratori, guadi e pozze stagionali)
 
 ## Eventi interessanti

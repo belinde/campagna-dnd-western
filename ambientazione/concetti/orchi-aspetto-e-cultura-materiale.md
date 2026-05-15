@@ -39,7 +39,7 @@ Ancore visive da riportare nel prompt (in italiano, autosufficiente):
 - **Vestiario:** pelli e cuoio, frange, perline o motivi geometrici **fantasy**; coperte; optional elementi tecnologici d’epoca (fibbie, tessuto di scambio) se la scena lo richiede.
 - **Contesto:** prateria, accampamento, roccia, negozio di frontiera, neve — coerente con il file letto.
 
-Da **vietare** nei prompt o in «Dettagli da evitare»:
+Da **vietare** nei prompt o in «Details to avoid»:
 
 - pelle **verde brillante o monocolore** lontana dal grigio;
 - **statura umana** dimenticando il masso orchesco;

@@ -1,0 +1,81 @@
+---
+description: Aspetto narrativo e Riferimento visivo (prompt immagine) sincronizzati su schede PG e PNG
+globs: personaggi/*.md, png/*.md, sessione/png-*.md
+alwaysApply: false
+---
+
+# Aspetto e Riferimento visivo
+
+Si applica a `personaggi/*.md`, `png/*.md` e `sessione/png-*.md`. **Non** si applica a `png/INDICE.md`.
+
+Per regole PNG meccaniche (Scheda di gioco 5e), vedi anche `png-scheda-gioco.mdc`. Per prompt immagine on demand, `.cursor/skills/campagna-immagini/SKILL.md`.
+
+## Due blocchi obbligatori
+
+Ogni scheda PG/PNG canonica deve avere **entrambe** le sezioni, nell'ordine:
+
+1. `## Immagine` (se gia` in uso nel file)
+2. `## Aspetto` — italiano, evocativo, per DM, tavolo e sito pubblico
+3. `## Riferimento visivo` — inglese, DM-only, prompt per generazione ritratti
+
+In `sessione/png-*.md` le sezioni possono restare provvisorie fino al resoconto, ma non lasciare una senza l'altra se l'aspetto e` gia` definito.
+
+## Aspetto (italiano)
+
+- **2–4 frasi** (circa max 120 parole; eccezione per figure gia` iconiche con testo consolidato).
+- Tono narrativo, evocativo; adatto a giocatori e lettura al tavolo.
+- Evitare nel corpo: nomi propri (se non necessari), checklist da generatore, vincoli «no cartoon», pose da storyboard, ripetizione pedante di ogni fibbia o bottone.
+- Il sito pubblico per i PNG esporta **solo** questa sezione (come «Descrizione»).
+
+## Riferimento visivo (inglese, DM-only)
+
+Subito dopo `## Aspetto`, un **unico** blocco fenced con linguaggio `text` — stesso schema del blocco copiabile di `/prompt-immagine` (intestazioni keyword in inglese, senza grassetto, corpo in inglese):
+
+````markdown
+## Riferimento visivo
+
+```text
+Image prompt:
+
+(self-contained English text, no proper names, explicit cinematically realistic look)
+
+Constraints to preserve:
+
+(height/proportions for non-medium races; height comparisons in group scenes; other visual constraints)
+
+Details to avoid:
+
+(typical model errors; no cartoon, no plastic CGI, no generic fantasy illustration, etc.)
+```
+````
+
+- Intestazioni keyword **letterali**: `Image prompt:`, `Constraints to preserve:`, `Details to avoid:` (ciascuna su riga propria, poi contenuto).
+- Non annidare altri fence dentro il blocco `text`.
+- Copiabile in un gesto per il generatore immagine, come l'output del command.
+
+- Non pubblicare sul sito: escluso da `stripSections` nel manifest e dal profilo `public-png`.
+- Per **orchi**, **mezzorchi** e razze basse (nano, halfling, gnomo), allineare statura e cromia a `.cursor/skills/campagna-immagini/SKILL.md` e, se pertinente, `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`.
+
+## Gerarchia in caso di conflitto
+
+- **Riferimento visivo** vince per ritratti, rigenerazioni immagine e coerenza visiva tra asset.
+- **Aspetto** vince per narrazione al tavolo e testo player-facing.
+- Dopo un cambio canonico visivo, aggiornare **entrambi** nello stesso passaggio.
+
+## Sincronizzazione obbligatoria
+
+Quando modifichi uno dei seguenti, aggiorna **Aspetto** e **Riferimento visivo** insieme:
+
+| Trigger | Cosa riflettere |
+|--------|------------------|
+| `## Note DM` (PNG) | Cicatrici, travestimenti, equip visibile, eta` apparente, stato fisico — in Aspetto solo cio` visibile o potenzialmente visibile ai PG |
+| `## Equipaggiamento notevole` (PG) | Armi, armature, oggetti distintivi, amuleti visibili |
+| `## Aspetto` o `## Riferimento visivo` | L'altro blocco, nello stesso edit |
+| **Razza** / **Razza/Classe** in testa | Statura, proporzioni, tratti razziali nel Riferimento; sintesi evocativa in Aspetto |
+
+Non aggiornare solo il Riferimento se il cambiamento cambia cio` che i giocatori possono vedere; non aggiornare solo l'Aspetto se serve coerenza per le immagini.
+
+## Nuove schede e import immagine
+
+- Creare sempre entrambe le sezioni; non lasciare solo l'Aspetto «per dopo».
+- Dopo `/importa-immagine`, verificare coerenza tra ritratto, Aspetto e Riferimento visivo.

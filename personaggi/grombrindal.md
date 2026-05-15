@@ -13,9 +13,23 @@
 
 ## Aspetto
 
-Nano massiccio e possente, dal portamento da veterano di mille battaglie. Ha un volto scavato e severo, segnato dal tempo e dalle intemperie, con sopracciglia folte e uno sguardo duro e penetrante. Porta una lunghissima chioma bianca, sferzata dal vento, e una barba altrettanto imponente e selvaggia, che gli ricade sul petto come una criniera d'argento.
+Nano massiccio dal portamento da veterano: chioma e barba bianche selvagge, sguardo duro scavato dal tempo. Armatura a scaglie e maglia, mantello scuro con pelliccia, spadone antico e rivoltella al fianco — figura di montagna forgiata da ferro e tempesta.
 
-Indossa una pesante armatura di metallo a scaglie e maglia, rinforzata su spalle, braccia e gambe, sopra abiti da viaggio robusti e consumati. Un mantello scuro bordato di pelliccia gli ricade dalle spalle, accentuando la sua silhouette imponente. Alla cintura porta una fondina con una rivoltella, mentre brandisce un'enorme spada a due mani dall'aspetto antico e brutale. Nel complesso, Grombrindal appare come una figura primordiale e regale: un guerriero di montagna forgiato dalla tempesta, dal ferro e dalla pietra.
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a stout middle-aged dwarf warrior, short and very broad-shouldered — his crown clearly below the shoulder line of an average human adult. Weathered stern face, thick white eyebrows, long wind-tousled white hair and a massive wild beard to mid-chest. Layered dark steel plate, scale mail, and chain on shoulders, arms, and legs over worn travel clothes; heavy dark fur-collared cloak. Massive ancient two-handed sword held at the shoulder; silver-barreled revolver in a worn leather hip holster. Gritty frontier-fantasy texture on leather and metal; natural dramatic light, not illustration.
+
+Constraints to preserve:
+
+Dwarf stature and width versus humanoids; cinematically realistic photography; white beard and hair; scale-and-plate armor, fur cloak, greatsword, revolver holster.
+
+Details to avoid:
+
+Human height or slim build; cartoon or plastic CGI; generic high-fantasy glow; clean parade armor without wear.
+```
 
 ## Personalità
 

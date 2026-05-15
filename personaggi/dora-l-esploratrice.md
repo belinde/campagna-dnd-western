@@ -13,9 +13,23 @@
 
 ## Aspetto
 
-Mezz'elfa giovane, alta e slanciata, con lineamenti fini ma temprati dalla strada. Porta lunghi capelli biondi spesso sciolti sulle spalle, mossi dal vento e dalla polvere, e le orecchie affilate tipiche del suo sangue elfico restano bene in vista. Il volto è bello senza essere delicato: zigomi netti, mascella ferma, sguardo chiaro e attento di chi è abituata a misurare distanze, vie di fuga e dettagli del terreno prima ancora delle persone.
+Mezz'elfa giovane, alta e slanciata, capelli biondi e orecchie in vista, sguardo da chi misura la strada prima delle persone. Cappotto di cuoio, corazza leggera, arco e faretra; quasi sempre con il mulo da soma carico — esploratrice della Frontiera, non semplice viaggiatrice.
 
-Veste come chi passa più tempo in viaggio che sotto un tetto: lungo cappotto di cuoio scuro, corazza leggera ben portata, stivali robusti, guanti da sella e una sciarpa verde avvolta al collo contro vento e sabbia. Alla cintura porta cartucce, tasche da campo e piccoli strumenti utili; sulle spalle tiene arco e faretra con naturalezza da professionista. Accanto a lei compare quasi sempre **Svalka**, il suo mulo da soma, carico di basti, coperte, corde, provviste e lanterne: insieme danno subito l'idea di una donna fatta per la Frontiera, piu` esploratrice e cartografa che semplice viaggiatrice.
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic full or three-quarter portrait of a young tall half-elf woman, long wavy golden-blonde hair, visible pointed ears, calm focused eyes, fair wind-tanned face. Dark brown leather duster over fitted leather breastplate, dark green neck scarf, fingerless gloves, leather bracers, cross-chest belts with pouches and bandolier. Dark wood recurve bow with carved scrollwork, quiver over shoulder. Pack mule beside her with saddlebags and hanging brass lantern optional. Dusty frontier town or trail, warm late-afternoon light; fantasy-western ranger cartographer, cinematically realistic.
+
+Constraints to preserve:
+
+Half-elf height near human adult, pointed ears; cinematically realistic; leather duster, green scarf, recurve bow; mule pack animal when full scene.
+
+Details to avoid:
+
+Cartoon or plastic CGI; plate knight armor; human ears; elf exaggerated anime proportions.
+```
 
 ## Personalità
 

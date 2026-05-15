@@ -1,8 +1,14 @@
 # Dorothy Mercer
 
+**Regione:** Il Middle West
+
+**Ambito:** Fattoria Mercer · carovana di Brannagh
+
+**Promemoria:** Bambina sopravvissuta all'assalto sulla rotta verso la Frontiera; testimone silenziosa e da proteggere.
+
 **Razza/Classe:** Umana / Bambina (età ~7–8 anni)
+
 **Ruolo:** Sopravvissuta all'assalto alla Fattoria Mercer lungo la rotta della carovana di Brannagh
-**Origine:** Nata a Selvarno, cresciuta alla Fattoria Mercer (Middle West, entroterra orientale di Valdoren)
 
 ## Immagine
 
@@ -12,7 +18,23 @@
 
 ## Aspetto
 
-Capelli chiari, viso sporco di polvere e lacrime. Quando la trovano è rannicchiata in una botola sotto il pavimento, con le mani sulla testa, come se il silenzio potesse nasconderla.
+Bambina di circa otto-nove anni, capelli chiari disordinati e occhi azzurri spalancati dal terrore. Maglione di lana grigio e grembiule blu rattoppato, viso e mani imbrattati di polvere — rannicchiata come se il silenzio potesse bastare a nasconderla.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic portrait of a frightened human girl about eight to nine years old, wide blue eyes, dirty smudged face and hands, messy light brown-blonde hair. Oversized grey knitted wool sweater, soiled dark blue patched apron pinafore. Sitting hunched on a dirty striped rug in a dark root cellar: stone walls, wooden beams, burlap potato sacks, glass preserve jars on shelves, wooden stairs to a trapdoor above with chiaroscuro light from above. Hands clutching head, looking up toward the light. Somber survival mood, cinematically realistic, no names.
+
+Constraints to preserve:
+
+Child height and age (~7–9); cinematically realistic; fear expression, cellar hiding place, humble patched clothes.
+
+Details to avoid:
+
+Cartoon or plastic CGI; adult proportions; clean festive dress; bright cheerful lighting.
+```
 
 ## Famiglia
 
@@ -41,12 +63,19 @@ Il movente dell'attacco (semplice razzia vs agguato alla carovana) resta volutam
 ## Scheda di gioco
 
 **Livello/Classe:** livello 1, bambina sopravvissuta con benchmark da `commoner`
+
 **Ruolo tattico:** non combattente, testimone, bersaglio da proteggere
+
 **CA/PF/Velocità:** 10 / 5 / 25 ft.
+
 **Caratteristiche:** For 6, Des 11, Cos 10, Int 11, Sag 12, Car 10
+
 **Bonus competenza:** +2
+
 **Tiri salvezza/Abilità:** Sag +3, Des +2; Furtività +4, Percezione +3, Intuizione +3
+
 **Attacchi/Azioni:** sasso o oggetto improvvisato +2 (1 danno contundente); Disimpegno o Nascondersi come priorità naturale se minacciata
+
 **Capacità/Incantesimi distintivi:** piccola e sfuggente (vantaggio ai tiri per nascondersi in spazi stretti, botole e sotto arredi); sa leggere e scrivere; nessun incantesimo
 
 ## Eventi interessanti

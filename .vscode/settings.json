@@ -1,0 +1,74 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Cartelle senza associazione dedicata: grigio (NON usare folders.theme "none": nasconde le icone)
+  "material-icon-theme.folders.color": "#78909c",
+  "material-icon-theme.rootFolders.color": "#78909c",
+
+  "material-icon-theme.folders.associations": {
+    "ambientazione": "campagna-ambientazione",
+    "personaggi": "campagna-personaggi",
+    "png": "campagna-png",
+    "immagini": "campagna-immagini",
+    "resoconti": "campagna-resoconti",
+    "sessione": "campagna-sessione",
+    "spunti": "campagna-spunti",
+    "tools": "webpack",
+    ".cursor": "base",
+    ".github": "base",
+    ".venv": "base",
+    ".vscode": "base"
+  },
+
+  "material-icon-theme.folders.customClones": [
+    {
+      "name": "campagna-ambientazione",
+      "base": "global",
+      "color": "green-400",
+      "lightColor": "green-700",
+      "folderNames": ["ambientazione"]
+    },
+    {
+      "name": "campagna-personaggi",
+      "base": "client",
+      "color": "deep-orange-400",
+      "lightColor": "deep-orange-700",
+      "folderNames": ["personaggi"]
+    },
+    {
+      "name": "campagna-png",
+      "base": "client",
+      "color": "red-400",
+      "lightColor": "red-700",
+      "folderNames": ["png"]
+    },
+    {
+      "name": "campagna-immagini",
+      "base": "images",
+      "color": "green-400",
+      "lightColor": "green-700",
+      "folderNames": ["immagini"]
+    },
+    {
+      "name": "campagna-resoconti",
+      "base": "docs",
+      "color": "brown-400",
+      "lightColor": "brown-700",
+      "folderNames": ["resoconti"]
+    },
+    {
+      "name": "campagna-sessione",
+      "base": "event",
+      "color": "amber-500",
+      "lightColor": "amber-800",
+      "folderNames": ["sessione"]
+    },
+    {
+      "name": "campagna-spunti",
+      "base": "docs",
+      "color": "light-green-500",
+      "lightColor": "light-green-800",
+      "folderNames": ["spunti"]
+    }
+  ]
+}

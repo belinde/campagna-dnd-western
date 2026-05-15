@@ -1,6 +1,13 @@
 # Silas Drummond
 
+**Regione:** Il Middle West
+
+**Ambito:** Valdoren
+
+**Promemoria:** Sceriffo federale di Valdoren: legge lenta ma presente al centro del Middle West.
+
 **Razza/Classe:** Umano / —
+
 **Ruolo:** Sceriffo federale di Valdoren
 
 ## Immagine
@@ -11,11 +18,23 @@
 
 ## Aspetto
 
-Uomo sulla cinquantina, **alto** rispetto alla media e con il busto leggermente appesantito e molle negli anni — da chi ha passato più tempo tra registri e panche del tribunale che in sella — ma ancora dritto nelle spalle, con una presenza che impone rispetto senza alzare la voce. Stempiatura avanzata, capelli radi e grigi sulle tempie, **baffi grigi folti** a manubrio, curati con orgoglio antiquato. Gli occhi sono infossati e stanchi, da chi ha ascoltato troppe bugie; lo sguardo resta lucido, misurato, quasi noioso nella precisione.
+Uomo sulla cinquantina, alto e ancora dritto nelle spalle nonostante gli anni da scrivania. Baffi grigi a manubrio, occhi infossati e stanchi ma lucidi; soprabito scuro logoro, stellina federale al petto e rivoltella consumata in fondina — presenza che impone senza alzare la voce.
 
-Indossa un **soprabito** di lana scura — blu notte o carbone — dal taglio un tempo elegante, oggi un po’ liso ai gomiti e al colletto, con rinforzi in cuoio dove la stoffa ha ceduto al banco. Sotto, **panciotto** in tessuto tweed spento e **camicia** grigia dal colletto rigido; una **catenella da orologio** attraversa il petto come unico vezzo rimasto sobrio. Sul petto, la **stellina da sceriffo federale** in metallo opaco, ben visibile. Cinturone e **fondina** basse sui fianchi; la **rivoltella federale** ha calcio e metallo **consumati dall’uso quotidiano**, non lucidi da parata — arma da lavoro, non da cerimonia. In piedi o seduto dietro la scrivania, la mano destra tende a restare in zona della fondina senza ostentazione.
+## Riferimento visivo
 
-Nei suoi ambienti di lavoro — ufficio dello sceriffo, anticamera del tribunale — si ritrova tra **legno scuro**, **schedari**, **scrivania** ingombra di fogli, registri e calamai; sulle pareti, **manifesti da taglia** e avvisi federali appuntati con spilli, polvere fine nella luce obliqua che entra da una finestra con **tenda ingiallita**.
+```text
+Image prompt:
+
+Cinematically realistic portrait of a tall human man in his fifties, slightly softened middle age but upright posture, receding grey temples, thick grey handlebar mustache, tired precise eyes. Dark navy or charcoal wool coat worn at elbows, leather elbow patches, faded tweed waistcoat, stiff grey collar shirt, sober watch chain. Dull federal sheriff star badge on chest, low-slung belt and holster with well-used revolver (not parade polish). Dark wood sheriff office: cluttered desk, ledgers, wanted posters on wall, dusty oblique window light. Federal lawman Middle West, cinematically realistic.
+
+Constraints to preserve:
+
+Human adult height, taller than average; cinematically realistic; federal star, worn revolver, office setting optional; tired authority not young gunslinger.
+
+Details to avoid:
+
+Cartoon or plastic CGI; shiny parade uniform; outlaw aesthetic; young face.
+```
 
 ## Personalità
 
@@ -32,12 +51,19 @@ Drummond sa molte cose su Valdoren che non mette nei rapporti ufficiali. Ha un r
 ## Scheda di gioco
 
 **Livello/Classe:** livello 5, uomo di legge esperto con benchmark da `spy`
+
 **Ruolo tattico:** controllore della scena, tiratore prudente, investigatore
+
 **CA/PF/Velocità:** 13 / 36 / 30 ft.
+
 **Caratteristiche:** For 11, Des 13, Cos 12, Int 13, Sag 15, Car 14
+
 **Bonus competenza:** +3
+
 **Tiri salvezza/Abilità:** Sag +5, Car +5; Intuizione +8, Indagare +6, Percezione +6, Persuasione +5, Inganno +5
+
 **Attacchi/Azioni:** multiattacco (2 attacchi in mischia o 1 colpo mirato a distanza); manganello +5 (1d6+2 contundenti); rivoltella federale +5 (1d10+2 perforanti, gittata 30/90, adattamento conservativo)
+
 **Capacità/Incantesimi distintivi:** azione scaltra da veterano di scrivania e strada (Scatto, Disimpegno o Nascondersi come azione bonus); occhio dello sceriffo (vantaggio a Intuizione e Indagare quando interroga testimoni, sospetti o testate di carovana); nessun incantesimo
 
 ## Eventi interessanti
