@@ -16,22 +16,22 @@ _Nessuna immagine ancora associata._
 
 ## Aspetto
 
-Più giovane del fratello Sam, stessa corporatura asciutta e baffi a manubrio ma lineamenti ancora duri e impazienti. Nei pochi secondi in cui i PG lo hanno visto indossava abiti logori da frontiera e l'aria di chi sapeva già di perdere la partita.
+Più giovane del fratello Sam, stessa corporatura asciutta e baffi a manubrio meno curati, lineamenti duri e impazienti. Indossa abiti logori da frontiera, bandana scura al collo e rivoltella tecnomagica al fianco — l'aria di chi reagisce prima di pensare.
 
 ## Riferimento visivo
 
 ```text
 Image prompt:
 
-Cinematically realistic snapshot of a younger human outlaw man in his thirties, lean nervous build, dark handlebar mustache less meticulously groomed than an older brother's, sun-creased impatient face, hunted expression. Faded wide-brim felt hat, dark worn shirt and rough frontier coat, dark polka-dot bandana, tecnomagic revolver half-drawn. Motion blur suggesting flight toward river mist at night, steamboat deck lamps behind. Younger Crow bandit, less patient than his cautious sibling; cinematically realistic. Brief glimpse energy — not a posed hero portrait.
+Cinematically realistic portrait of a younger human outlaw man in his thirties, lean nervous build, dark handlebar mustache less meticulously groomed than an older brother's, sun-creased impatient face, restless jaw. Faded wide-brim felt hat, dark worn shirt and rough frontier coat, dark polka-dot bandana at neck, tecnomagic revolver in worn hip holster. Half-length bust, dusty frontier road or camp firelight; younger Crow bandit, less patient than his cautious sibling. Cinematically realistic, no names.
 
 Constraints to preserve:
 
-Human adult height; younger than fifties outlaw brother; cinematically realistic; frontier worn clothes, revolver; frantic not cool-headed.
+Human adult height; younger than fifties outlaw brother; cinematically realistic; frontier worn clothes, polka-dot bandana, revolver holstered; impatient not cool-headed.
 
 Details to avoid:
 
-Cartoon or plastic CGI; identical age to older brother; clean gambler outfit; calm confident pose.
+Cartoon or plastic CGI; identical age to older brother; clean gambler outfit; motion blur flight scene; river mist escape; steamboat combat moment.
 ```
 
 ## Personalità

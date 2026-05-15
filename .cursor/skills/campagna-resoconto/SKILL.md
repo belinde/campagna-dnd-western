@@ -138,6 +138,8 @@ Se durante la sessione viene approvato o associato un ritratto del PG, proporre 
 
 Per ogni PNG apparso nella sessione:
 - Se esiste già un file in `png/`, proporre la voce da aggiungere a `## Eventi interessanti` in quel file e integrare anche `## Scheda di gioco` se sono emersi dettagli meccanici nuovi o se il livello del PNG e` cambiato.
+- Per emozioni acute, ferite in corso o pose dell'incontro: aggiornare **`## Eventi interessanti`** e, se serve, **`## Note DM`** — **non** riscrivere `## Aspetto` o `## Riferimento visivo` con lo stato dell'ultima scena, salvo cambiamento **permanente** approvato dal DM (cicatrice, nuovo abito iconico, invecchiamento visibile).
+- Se un resoconto precedente ha già «inquinato» Aspetto o Riferimento visivo con uno stato di scena, segnalarlo come **debito di scheda** e proporre ripristino ai tratti fissi (regola `.cursor/rules/personaggio-aspetto.mdc`, sezione «Tratti fissi vs stato di scena»).
 - Se **non** esiste ancora una scheda, segnalarlo al DM e proporre di crearla in `png/` seguendo il template standard (lo stesso usato dalla modalità ingame), con **Regione**, **Ambito** e **Promemoria** obbligatori in testa, inclusa la sezione `## Scheda di gioco`. Attendere conferma prima di creare il file.
 - Se una scheda esistente manca di Regione, Ambito o Promemoria, proporre di compilarli prima di chiudere la fase.
 - Se la scheda non indica ancora in modo chiaro il livello del PNG, chiederlo esplicitamente al DM prima di completare o aggiornare `## Scheda di gioco`.

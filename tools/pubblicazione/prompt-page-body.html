@@ -1,11 +1,54 @@
 <section class="prompt-tool" data-prompt-tool>
-  <p class="prompt-tool-intro">
-    Seleziona un luogo (opzionale), uno o più personaggi, descrivi la scena e genera un prompt pronto per il generatore di immagini.
-  </p>
+  <div class="prompt-wizard-hero" id="prompt-hero" hidden>
+    <img
+      class="prompt-wizard-hero-img"
+      src="/assets/prompt-hero.jpg"
+      alt="Illustrazione: un artista dipinge un porto al tramonto"
+      width="960"
+      height="640"
+      loading="eager"
+      decoding="async"
+    >
+    <p class="prompt-wizard-hero-text">
+      Costruisci il prompt immagine in tre passaggi: luogo, personaggi, scena.
+    </p>
+    <button type="button" id="prompt-hero-start" class="prompt-tool-btn">Inizia</button>
+  </div>
+
+  <nav class="prompt-wizard-nav" id="prompt-wizard-nav" aria-label="Passaggi del generatore" hidden>
+    <ol class="prompt-wizard-steps-list">
+      <li class="prompt-wizard-step-indicator" data-step-indicator="1">
+        <span class="prompt-wizard-step-num">1</span>
+        <span class="prompt-wizard-step-label">Luogo</span>
+      </li>
+      <li class="prompt-wizard-step-indicator" data-step-indicator="2">
+        <span class="prompt-wizard-step-num">2</span>
+        <span class="prompt-wizard-step-label">Personaggi</span>
+      </li>
+      <li class="prompt-wizard-step-indicator" data-step-indicator="3">
+        <span class="prompt-wizard-step-num">3</span>
+        <span class="prompt-wizard-step-label">Scena</span>
+      </li>
+    </ol>
+  </nav>
+
   <p class="prompt-tool-status" id="prompt-status" hidden></p>
 
-  <div class="prompt-tool-section" data-prompt-section="luoghi">
-    <h2 class="prompt-tool-heading">Luogo</h2>
+  <div class="prompt-alert prompt-alert--danger" id="prompt-alert-no-chars" role="alert" hidden>
+    <strong>Nessun personaggio selezionato.</strong>
+    Scegli almeno un personaggio giocante o PNG prima di proseguire.
+  </div>
+
+  <motion class="prompt-alert prompt-alert--warning" id="prompt-alert-unmatched" role="alert" hidden>
+    <strong>Nomi nella scena non selezionati:</strong>
+    <span id="prompt-alert-unmatched-list"></span>
+    Verranno inclusi nel prompt in base al riferimento visivo (se disponibile).
+  </div>
+
+  <div class="prompt-wizard-panel" data-prompt-step="1" id="prompt-step-luogo" hidden>
+    <h2 class="prompt-tool-heading">Scegli un luogo</h2>
+    <p class="prompt-wizard-step-intro">Opzionale: seleziona il luogo della scena oppure salta questo passaggio.</p>
+    <p class="prompt-wizard-selection" id="prompt-luogo-summary" hidden></p>
     <div class="prompt-tool-toolbar">
       <div class="prompt-tool-toolbar-field">
         <label class="prompt-tool-toolbar-label" for="prompt-luoghi-search">Cerca</label>
@@ -22,56 +65,67 @@
     <div class="prompt-small-card-grid" id="prompt-luoghi-grid" role="radiogroup" aria-label="Luogo"></div>
   </div>
 
-  <div class="prompt-tool-section" data-prompt-section="pg">
-    <h2 class="prompt-tool-heading">Personaggi giocanti</h2>
-    <div class="prompt-tool-toolbar">
-      <div class="prompt-tool-toolbar-field prompt-tool-toolbar-field--grow">
-        <label class="prompt-tool-toolbar-label" for="prompt-pg-search">Cerca</label>
-        <input type="search" id="prompt-pg-search" class="prompt-tool-toolbar-input" placeholder="Nome, razza, classe…" autocomplete="off">
+  <div class="prompt-wizard-panel" data-prompt-step="2" id="prompt-step-personaggi" hidden>
+    <h2 class="prompt-tool-heading">Scegli i personaggi</h2>
+    <p class="prompt-wizard-step-intro">Seleziona tutti i personaggi che compaiono nell'immagine.</p>
+    <p class="prompt-wizard-selection" id="prompt-chars-summary" hidden></p>
+
+    <div class="prompt-tool-section" data-prompt-section="pg">
+      <h3 class="prompt-tool-subheading">Personaggi giocanti</h3>
+      <div class="prompt-tool-toolbar">
+        <div class="prompt-tool-toolbar-field prompt-tool-toolbar-field--grow">
+          <label class="prompt-tool-toolbar-label" for="prompt-pg-search">Cerca</label>
+          <input type="search" id="prompt-pg-search" class="prompt-tool-toolbar-input" placeholder="Nome, razza, classe…" autocomplete="off">
+        </div>
       </div>
+      <p class="prompt-tool-empty" id="prompt-pg-empty" hidden>Nessun personaggio corrisponde ai filtri.</p>
+      <div class="prompt-small-card-grid" id="prompt-pg-grid"></div>
     </div>
-    <p class="prompt-tool-empty" id="prompt-pg-empty" hidden>Nessun personaggio corrisponde ai filtri.</p>
-    <div class="prompt-small-card-grid" id="prompt-pg-grid"></div>
+
+    <div class="prompt-tool-section" data-prompt-section="png">
+      <h3 class="prompt-tool-subheading">Personaggi non giocanti</h3>
+      <div class="prompt-tool-toolbar">
+        <div class="prompt-tool-toolbar-field">
+          <label class="prompt-tool-toolbar-label" for="prompt-png-search">Cerca</label>
+          <input type="search" id="prompt-png-search" class="prompt-tool-toolbar-input" placeholder="Nome, promemoria, ambito…" autocomplete="off">
+        </div>
+        <div class="prompt-tool-toolbar-field">
+          <label class="prompt-tool-toolbar-label" for="prompt-png-region">Regione</label>
+          <select id="prompt-png-region" class="prompt-tool-toolbar-select">
+            <option value="__all__">Tutte</option>
+          </select>
+        </div>
+      </div>
+      <p class="prompt-tool-empty" id="prompt-png-empty" hidden>Nessun personaggio corrisponde ai filtri.</p>
+      <div id="prompt-png-regions"></div>
+    </div>
   </div>
 
-  <div class="prompt-tool-section" data-prompt-section="png">
-    <h2 class="prompt-tool-heading">Personaggi non giocanti</h2>
-    <div class="prompt-tool-toolbar">
-      <div class="prompt-tool-toolbar-field">
-        <label class="prompt-tool-toolbar-label" for="prompt-png-search">Cerca</label>
-        <input type="search" id="prompt-png-search" class="prompt-tool-toolbar-input" placeholder="Nome, promemoria, ambito…" autocomplete="off">
-      </div>
-      <div class="prompt-tool-toolbar-field">
-        <label class="prompt-tool-toolbar-label" for="prompt-png-region">Regione</label>
-        <select id="prompt-png-region" class="prompt-tool-toolbar-select">
-          <option value="__all__">Tutte</option>
-        </select>
-      </div>
-    </div>
-    <p class="prompt-tool-empty" id="prompt-png-empty" hidden>Nessun personaggio corrisponde ai filtri.</p>
-    <div id="prompt-png-regions"></div>
-  </div>
-
-  <div class="prompt-tool-section">
-    <label class="prompt-tool-label" for="prompt-scena">Scena</label>
+  <div class="prompt-wizard-panel" data-prompt-step="3" id="prompt-step-scena" hidden>
+    <h2 class="prompt-tool-heading">Descrivi la scena</h2>
+    <p class="prompt-wizard-step-intro" id="prompt-scena-recap"></p>
+    <label class="prompt-tool-label" for="prompt-scena">Scena (inglese)</label>
     <p class="prompt-tool-hint">Descrivi la scena in inglese. <strong>Usa i nomi completi dei personaggi</strong> (es. «Kelvor Rivib», «Dora l'Esploratrice») quando compaiono nella scena.</p>
     <textarea
       id="prompt-scena"
       class="prompt-tool-textarea"
-      rows="5"
+      rows="6"
       placeholder="Es.: Kelvor Rivib e Dora l'Esploratrice attraversano il cortile al tramonto, polvere nell'aria…"
     ></textarea>
-  </div>
 
-  <div class="prompt-tool-actions">
-    <button type="button" id="prompt-genera" class="prompt-tool-btn">Genera prompt</button>
-  </div>
-
-  <div class="prompt-tool-output-panel" id="prompt-output-panel" hidden>
-    <div class="prompt-tool-output-header">
-      <h2 class="prompt-tool-output-title">Prompt generato</h2>
-      <button type="button" id="prompt-copia-tutto" class="prompt-tool-btn prompt-tool-btn--copy">Copia tutto</button>
+    <div class="prompt-tool-output-panel" id="prompt-output-panel" hidden>
+      <div class="prompt-tool-output-header">
+        <h3 class="prompt-tool-output-title">Prompt generato</h3>
+        <button type="button" id="prompt-copia-tutto" class="prompt-tool-btn prompt-tool-btn--copy">Copia tutto</button>
+      </div>
+      <pre class="prompt-tool-output" id="prompt-output"></pre>
     </div>
-    <pre class="prompt-tool-output" id="prompt-output"></pre>
+  </div>
+
+  <div class="prompt-wizard-actions" id="prompt-wizard-actions" hidden>
+    <button type="button" id="prompt-prev" class="prompt-tool-btn prompt-tool-btn--secondary">Indietro</button>
+    <button type="button" id="prompt-skip-luogo" class="prompt-tool-btn prompt-tool-btn--secondary" hidden>Salta luogo</button>
+    <button type="button" id="prompt-next" class="prompt-tool-btn">Avanti</button>
+    <button type="button" id="prompt-genera" class="prompt-tool-btn" hidden>Genera prompt</button>
   </div>
 </section>

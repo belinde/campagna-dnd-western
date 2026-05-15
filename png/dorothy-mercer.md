@@ -18,22 +18,22 @@
 
 ## Aspetto
 
-Bambina di circa otto-nove anni, capelli chiari disordinati e occhi azzurri spalancati dal terrore. Maglione di lana grigio e grembiule blu rattoppato, viso e mani imbrattati di polvere — rannicchiata come se il silenzio potesse bastare a nasconderla.
+Bambina di circa otto-nove anni, capelli chiari disordinati e occhi azzurri guardinghi, con una malinconia che non le appartiene del tutto. Maglione di lana grigio e grembiule blu rattoppato, viso e mani segnati dalla polvere della fattoria — silenziosa, troppo attenta per la sua età, come se avesse imparato presto a non occupare spazio.
 
 ## Riferimento visivo
 
 ```text
 Image prompt:
 
-Cinematically realistic portrait of a frightened human girl about eight to nine years old, wide blue eyes, dirty smudged face and hands, messy light brown-blonde hair. Oversized grey knitted wool sweater, soiled dark blue patched apron pinafore. Sitting hunched on a dirty striped rug in a dark root cellar: stone walls, wooden beams, burlap potato sacks, glass preserve jars on shelves, wooden stairs to a trapdoor above with chiaroscuro light from above. Hands clutching head, looking up toward the light. Somber survival mood, cinematically realistic, no names.
+Cinematically realistic portrait of a solemn human girl about eight to nine years old, wide melancholy blue eyes, quiet watchful expression beyond her years, messy light brown-blonde hair. Oversized grey knitted wool sweater, dark blue patched apron pinafore, light farm dust on cheeks and hands. Standing or seated near a weathered farmhouse porch or wagon wheel at soft daylight; humble frontier child, not posed for celebration. Somber gentle mood, cinematically realistic, no names.
 
 Constraints to preserve:
 
-Child height and age (~7–9); cinematically realistic; fear expression, cellar hiding place, humble patched clothes.
+Child height and age (~7–9); cinematically realistic; humble patched clothes; melancholy watchful expression, not terror or tears.
 
 Details to avoid:
 
-Cartoon or plastic CGI; adult proportions; clean festive dress; bright cheerful lighting.
+Cartoon or plastic CGI; adult proportions; clean festive dress; root cellar hiding scene; fear grimace; bright cheerful lighting.
 ```
 
 ## Famiglia

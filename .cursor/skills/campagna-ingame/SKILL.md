@@ -64,7 +64,16 @@ _Nessuna immagine ancora associata._
 
 ## Aspetto
 
-Descrizione fisica in 2-4 frasi.
+Descrizione fisica in 2-4 frasi — **solo tratti fissi** (identita` visiva permanente), anche se provvisorio. Stati emotivi o fisici dell'incontro in corso vanno in Note DM o in un appunto separato, non qui. Consolidamento e regola completa: `.cursor/rules/personaggio-aspetto.mdc` («Tratti fissi vs stato di scena»).
+
+## Riferimento visivo
+
+```text
+Image prompt:
+...
+```
+
+_(opzionale in sessione; obbligatorio in `png/` al resoconto — stesso schema `/prompt-immagine`, solo tratti fissi)_
 
 ## Personalità
 

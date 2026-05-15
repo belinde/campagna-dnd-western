@@ -30,7 +30,7 @@ Questa regola si attiva quando il DM chiede un prompt per generare l'immagine de
 
 1. Leggi sempre la scheda aperta.
 2. Recupera solo il contesto direttamente collegato e necessario.
-3. Per un PG o PNG: se esiste `## Riferimento visivo` con blocco ` ```text ` completo e la richiesta è un **ritratto** (o variante di inquadratura dello stesso soggetto), leggi **solo** quel blocco e usalo come **fonte primaria** — riecheggia o adatta solo framing, luce o sfondo; non riscrivere da zero da `## Aspetto`. Se il DM chiede `/prompt-immagine` e il blocco in scheda è già aggiornato, l'output in chat può coincidere con il blocco in file (eventuali ritocchi di inquadratura). Per **scene di sessione**, componi da resoconti + `## Aspetto` + `## Riferimento visivo` (abbigliamento e tratti canonici). Se manca il Riferimento visivo, privilegia `## Aspetto`, `## Personalità`, `## Note DM`, `## Legami con i PG`, `## Eventi interessanti`, poi integra con `resoconti/` e ambientazione pertinente. Usa **`Razza:`** / **`Razza/Classe:`** in testa e le proporzioni nel Riferimento o in Aspetto. Per **orchi**, **Terre Selvagge** o **mezzorco** visivamente rilevanti, leggi anche `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`.
+3. Per un PG o PNG: se esiste `## Riferimento visivo` con blocco ` ```text ` completo e la richiesta è un **ritratto** (o variante di inquadratura dello stesso soggetto), leggi **solo** quel blocco e usalo come **fonte primaria** — riecheggia o adatta solo framing, luce o sfondo; non riscrivere da zero da `## Aspetto`. **Non** usare `## Eventi interessanti` per ritratti salvo richiesta esplicita del DM: quella sezione contiene stati di scena temporanei. Se il DM chiede `/prompt-immagine` e il blocco in scheda è già aggiornato, l'output in chat può coincidere con il blocco in file (eventuali ritocchi di inquadratura). Per **scene di sessione** (`Tipo immagine: scena di sessione`), componi da resoconti + tratti fissi in `## Aspetto` e `## Riferimento visivo` + il momento specifico del resoconto — **non** copiare emozioni acute o pose dell'ultima scena se sono finite solo in Eventi interessanti. Se manca il Riferimento visivo, privilegia `## Aspetto`, `## Personalità`, `## Note DM` (solo segni permanenti), poi integra con `resoconti/` e ambientazione pertinente. Usa **`Razza:`** / **`Razza/Classe:`** in testa e le proporzioni nel Riferimento o in Aspetto. Per **orchi**, **Terre Selvagge** o **mezzorco** visivamente rilevanti, leggi anche `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`. Regola completa: `.cursor/rules/personaggio-aspetto.mdc` («Tratti fissi vs stato di scena»).
 4. Per un luogo: se esiste `## Riferimento visivo` con blocco ` ```text ` completo e la richiesta è una **veduta** (o variante di inquadratura dello stesso luogo), leggi **solo** quel blocco e usalo come **fonte primaria** — riecheggia o adatta solo framing, luce o stagione; non riscrivere da zero da `## Aspetto`. Altrimenti privilegia `## Aspetto`, `## Punti di interesse`, `## Storia e origine`, poi integra con `resoconti/`, PNG, concetti, fauna o fazioni collegati. Se il luogo è legato a **presenza orchesca** o **Terre Selvagge** in modo centrale alla scena, considera `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md` per figure o dettagli ambientali pertinenti.
 5. Per un resoconto o una nota/incontro di `sessione/`, individua prima il momento piu` iconico gia` consolidato nel gioco; privilegia `## Riassunto`, `## Eventi principali` e i riferimenti a PG, PNG e luoghi coinvolti. Se compaiono **orchi** o **clan delle Terre Selvagge** come figure visivamente rilevanti, leggi anche `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`.
 6. Usa solo materiale gia` presente in ambientazione, schede e resoconti. Gli `spunti/` vanno ignorati salvo richiesta esplicita del DM.
@@ -42,7 +42,8 @@ Questa regola si attiva quando il DM chiede un prompt per generare l'immagine de
 - I nomi propri dei personaggi non devono comparire nel corpo del prompt (né in inglese né in italiano): descrivi il soggetto in modo autosufficiente tramite aspetto, ruolo, postura, equipaggiamento e contesto visivo.
 - Esempio concettuale: «scout della carovana» → *well-worn travel clothes, light kit, watchful stance, road dust, frontier horizon* (sempre con il vincolo **cinematically realistic**).
 - Esempio concettuale: «strage dei branchi» → *visible signs of exploitation on the plains, bones or hides, trampled tall grass, iron workshops or wagon trains if relevant* — sempre resa realistica da inquadratura filmica, non da icona stilizzata.
-- Quando inserisci accenni di background, convertili sempre in atmosfera, mise-en-scene, oggetti, cicatrici, postura o dettagli dell'ambiente.
+- Quando inserisci accenni di background, convertili sempre in atmosfera, mise-en-scene, oggetti, cicatrici permanenti, postura o dettagli dell'ambiente.
+- **Non** inserire nel blocco `text` espressioni, pose o ambienti legati a un singolo evento di sessione (terrore post-attacco, cantina della botola, fuga notturna) salvo `Tipo immagine: scena di sessione` e richiesta esplicita del DM.
 - Se la scheda suggerisce piu` immagini possibili, scegli quella piu` iconica e rendila chiara nel prompt.
 - Oltre al prompt, suggerisci sempre il percorso previsto dal progetto in cui l'asset dovrebbe vivere, coerente con il file aperto.
 
@@ -80,11 +81,17 @@ Il blocco deve aprirsi con una riga che contiene solo tre backtick (U+0060) segu
 
 Per verifica: la risposta deve consentire al DM di usare il pulsante copia del blocco codice sull’intero contenuto `text` (prompt + vincoli + dettagli) in un solo gesto.
 
+### Tratti fissi sulle schede
+
+- `## Aspetto` e `## Riferimento visivo` su PG/PNG descrivono **solo** tratti fissi (ritratto iconico in qualsiasi momento). Stati emotivi o fisici da una sessione vanno in `## Eventi interessanti`, `## Note DM` o resoconti.
+- In revisione scheda o dopo import: se il blocco contiene terrore acuto, ferite fresche, pose da combattimento o luoghi di un solo evento, **proponi** riscrittura verso ritratto neutro coerente con Personalità e ruolo.
+- Per **scene di sessione**, aggiungi il momento dal resoconto sopra i tratti fissi letti da Aspetto/Riferimento — non sostituire il canon permanente con l'ultima scena.
+
 ### Riferimento visivo sulle schede PG/PNG
 
 - Struttura: `## Riferimento visivo`, riga vuota, poi **un solo** blocco fenced `text` con le tre sezioni keyword (identico al blocco chat sopra). Intestazioni **senza** grassetto Markdown dentro il fence.
 - Dopo aver prodotto o rivisto un prompt in chat, **aggiorna** il blocco sulla scheda quando il DM consolida il canon visivo (stesso testo o versione leggermente adattata).
-- In **import** o revisione scheda: verifica che `## Riferimento visivo` contenga il fence `text` e che sia coerente con `## Aspetto` e il ritratto in `## Immagine`.
+- In **import** o revisione scheda: verifica che `## Riferimento visivo` contenga il fence `text`, che sia coerente con `## Aspetto` e il ritratto in `## Immagine`, e che non cristallizzi uno stato di scena (vedi «Tratti fissi sulle schede»).
 
 ## Import asset immagine
 

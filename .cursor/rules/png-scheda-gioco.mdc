@@ -46,7 +46,7 @@ Se il ritratto non esiste ancora, lascia:
 _Nessuna immagine ancora associata._
 ```
 
-Subito dopo `## Aspetto`, inserire sempre `## Riferimento visivo` con blocco fenced ` ```text ` (come `/prompt-immagine`). Formato e sincronizzazione: regola `.cursor/rules/personaggio-aspetto.mdc`.
+Subito dopo `## Aspetto`, inserire sempre `## Riferimento visivo` con blocco fenced ` ```text ` (come `/prompt-immagine`). Formato e sincronizzazione: regola `.cursor/rules/personaggio-aspetto.mdc` — in particolare la sezione **«Tratti fissi vs stato di scena»** (niente emozioni o pose dell'ultima sessione in questi blocchi).
 
 ```markdown
 ## Scheda di gioco

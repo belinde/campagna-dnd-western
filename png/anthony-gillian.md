@@ -25,7 +25,7 @@ Uomo sulla quarantina, di corporatura media e aspetto volutamente ordinario — 
 ```text
 Image prompt:
 
-Cinematically realistic portrait of an unremarkable human man in his forties, average build, forgettable pleasant face, worn but clean travel clothes, medium-brim hat, nothing flashy. Pale steady eyes that record everything while the rest of the face stays neutral. Riverboat breakfast table or dusty trail halt; information broker who blends into crowds, fantasy-western, cinematically realistic.
+Cinematically realistic portrait of an unremarkable human man in his forties, average build, forgettable pleasant face, worn but clean travel clothes, medium-brim hat, nothing flashy. Pale steady eyes that record everything while the rest of the face stays neutral. Dusty trail halt or generic tavern corner at muted daylight; information broker who blends into crowds, fantasy-western, cinematically realistic.
 
 Constraints to preserve:
 

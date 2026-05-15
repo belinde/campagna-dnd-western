@@ -25,15 +25,15 @@ Mezzelfo sulla quarantina, orecchie appuntite e capelli biondo dorato lunghi sot
 ```text
 Image prompt:
 
-Cinematically realistic waist-up portrait of a handsome half-elf man in his forties, pointed ears with small gold hoops, long wavy golden-blond hair, neat light beard, intense green-blue eyes. Black captain's cap with gold star and braid; dark brown double-breasted coat with gold embroidery and brass buttons over white shirt, dark green vest, vivid red cravat, gold anchor pendant, leather belt with brass buckle and pouch. At a large wooden ship's wheel, holding a lit brass lantern; misty night river, steamboat lights and smokestacks behind. Fantasy-steamboat weird-west, cinematically realistic.
+Cinematically realistic waist-up portrait of a handsome half-elf man in his forties, pointed ears with small gold hoops, long wavy golden-blond hair, neat light beard, intense green-blue eyes. Black captain's cap with gold star and braid; dark brown double-breasted coat with gold embroidery and brass buttons over white shirt, dark green vest, vivid red cravat, gold anchor pendant, leather belt with brass buckle and pouch. At the ship's wheel on an open deck, river mist and steamboat smokestacks soft in background, daylight or warm dusk; commanding calm posture. Fantasy-steamboat weird-west, cinematically realistic.
 
 Constraints to preserve:
 
-Half-elf ears and height near human adult; cinematically realistic; captain uniform, river helm, lantern; mezzelfo, not full elf caricature.
+Half-elf ears and height near human adult; cinematically realistic; captain uniform, river helm; mezzelfo, not full elf caricature.
 
 Details to avoid:
 
-Cartoon or plastic CGI; human ears; modern naval dress without fantasy-western grit.
+Cartoon or plastic CGI; human ears; modern naval dress without fantasy-western grit; dramatic night ambush lighting only.
 ```
 
 ## Personalità

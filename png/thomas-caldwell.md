@@ -25,15 +25,15 @@ Uomo di mezza età, corporatura solida da anni sul ponte, capelli scuri striati 
 ```text
 Image prompt:
 
-Cinematically realistic portrait of a solid middle-aged human man, broad deck-hardened shoulders, short neat dark hair greying at temples, square wind-worn jaw, cold sideways evaluating eyes. Navy or black double-breasted steamboat officer coat, polished brass buttons, gold sleeve braids, peaked cap with chin strap and insignia. Long-barrel tecnomagic service revolver, smoke-whitened muzzle if firing. Wet deck, rigging, stack steam at night; river law enforcement, cinematically realistic.
+Cinematically realistic portrait of a solid middle-aged human man, broad deck-hardened shoulders, short neat dark hair greying at temples, square wind-worn jaw, cold sideways evaluating eyes. Navy or black double-breasted steamboat officer coat, polished brass buttons, gold sleeve braids, peaked cap with chin strap and insignia. Long-barrel tecnomagic service revolver in low-slung holster at hip. On the steamboat deck at dusk or grey daylight, rigging and river haze behind, hands at belt or resting on rail; river law enforcement authority, not firing. Fantasy-western steamboat officer, cinematically realistic.
 
 Constraints to preserve:
 
-Human adult height; cinematically realistic; officer uniform, gold braid, long revolver; authoritative not pirate.
+Human adult height; cinematically realistic; officer uniform, gold braid, peaked cap, long revolver holstered; authoritative not pirate or cowboy-only dress.
 
 Details to avoid:
 
-Cartoon or plastic CGI; cowboy frontier only dress; missing uniform insignia.
+Cartoon or plastic CGI; cowboy frontier only dress; missing uniform insignia; smoking muzzle; wet night combat deck; firing pose.
 ```
 
 ## Personalità

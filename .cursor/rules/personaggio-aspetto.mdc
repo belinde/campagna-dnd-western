@@ -39,6 +39,44 @@ Dopo `## Immagine`, `## Aspetto` e `## Riferimento visivo`, le altre sezioni des
 - Fonde il ruolo delle vecchie `## Descrizione generale` e `## Aspetto e atmosfera` in un unico blocco narrativo italiano.
 - Tono evocativo, adatto a lettura al tavolo e al sito pubblico (corpo pagina luogo dopo sanificazione).
 
+## Tratti fissi vs stato di scena
+
+`## Aspetto` e `## Riferimento visivo` descrivono **solo** l'identita` visiva permanente del personaggio o del luogo: come appare in un ritratto o una veduta iconica **in qualsiasi momento** della campagna, non durante un singolo evento.
+
+### Cosa includere (tratti fissi)
+
+- Corporatura, eta` apparente, tratti razziali, capelli, barba, occhi.
+- Abbigliamento e equipaggiamento **abituale** o distintivo del ruolo.
+- Espressione di **default** o temperamento visivo cronico (malinconia, freddezza, vigilanza, stanchezza da mestiere).
+- Ambiente **tipo** del mestiere (fattoria, carovana, ponte di nave, ufficio dello sceriffo) — generico, non legato a una scena precisa.
+
+### Cosa non includere (stato di scena)
+
+- Emozioni **acute** da ultima sessione (terrorizzata, in lacrime, esultante, furiosa per un insulto appena ricevuto).
+- Ferite, sangue, lividi, fango o polvere **da un evento preciso**, salvo **cicatrice o segno permanente** gia` consolidato in `## Note DM`.
+- Pose da combattimento, fuga, nascondiglio o cattura legate a un incontro (mira verso camera, rannicchiata in botola, fuga verso il fiume).
+- Luoghi o props legati a **un solo** evento canonico (cantina della botola, corridoio durante la rissa, tavolo della colazione su quel vapore).
+- Riferimenti temporali nel testo («dopo la sparatoria», «quando fu trovata», «nei pochi secondi in cui i PG lo videro»).
+
+**Distinzione:** tratti emotivi **cronici** restano in Aspetto (es. «tiene la paura dietro il silenzio», «sguardo stanco ma vigile da anni di strada»). Reazioni **acute** a un evento vanno altrove.
+
+### Dove mettere gli stati temporanei
+
+| Contenuto | Sezione / percorso |
+|-----------|-------------------|
+| Fatto avvenuto in sessione NNN | `## Eventi interessanti` |
+| Ferite in corso, travestimento attuale, segreti visivi | `## Note DM` |
+| Relazione o fatto narrativo con i PG | `## Legami con i PG`, resoconti |
+| Immagine della scena | `resoconti/` → `## Immagini salienti`; asset in `immagini/eventi/sessione-NNN/` |
+
+### Eccezione `## Note DM`
+
+Aggiornare subito Note DM per ferite, travestimenti o invecchiamento in corso. Propagare ad Aspetto e Riferimento visivo **solo** se il cambiamento diventa **permanente** (cicatrice, amputazione, nuovo abito iconico, barba ormai canonica) — non per guarigioni o stati emotivi transitori.
+
+### Dopo un resoconto
+
+Verificare che l'ultima sessione **non** abbia «inquinato» Aspetto o Riferimento visivo. Se si`, ripristinare i tratti fissi e lasciare l'evento in Eventi interessanti / Note DM.
+
 ## Riferimento visivo (inglese)
 
 Subito dopo `## Aspetto`, un **unico** blocco fenced con linguaggio `text` — stesso schema del blocco copiabile di `/prompt-immagine` (intestazioni keyword in inglese, senza grassetto, corpo in inglese):
@@ -82,7 +120,8 @@ Quando modifichi uno dei seguenti, aggiorna **Aspetto** e **Riferimento visivo**
 
 | Trigger | Cosa riflettere |
 |--------|------------------|
-| `## Note DM` (PNG) | Cicatrici, travestimenti, equip visibile, eta` apparente, stato fisico — in Aspetto solo cio` visibile o potenzialmente visibile ai PG |
+| `## Note DM` (PNG) | Cicatrici **permanenti**, travestimenti, equip visibile, eta` apparente — in Aspetto solo cio` visibile o potenzialmente visibile ai PG; non stati emotivi o ferite transitorie (vedi «Tratti fissi vs stato di scena») |
+| **Resoconto / sessione** | Eventi in `## Eventi interessanti`; **non** copiare emozioni o pose dell'ultima scena in Aspetto/Riferimento salvo cambiamento permanente approvato dal DM |
 | `## Equipaggiamento notevole` (PG) | Armi, armature, oggetti distintivi, amuleti visibili |
 | `## Aspetto` o `## Riferimento visivo` | L'altro blocco, nello stesso edit |
 | **Razza** / **Razza/Classe** in testa | Statura, proporzioni, tratti razziali nel Riferimento; sintesi evocativa in Aspetto |

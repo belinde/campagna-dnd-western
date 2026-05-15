@@ -4,6 +4,7 @@
     return;
   }
 
+  const HERO_SEEN_KEY = "campagna-prompt-hero-seen";
   const REGION_ORDER = [
     "La East Coast",
     "Gli Appalacchi",
@@ -17,6 +18,22 @@
     "Altro",
   ];
 
+  const heroEl = document.getElementById("prompt-hero");
+  const heroStartBtn = document.getElementById("prompt-hero-start");
+  const wizardNav = document.getElementById("prompt-wizard-nav");
+  const wizardActions = document.getElementById("prompt-wizard-actions");
+  const prevBtn = document.getElementById("prompt-prev");
+  const nextBtn = document.getElementById("prompt-next");
+  const skipLuogoBtn = document.getElementById("prompt-skip-luogo");
+  const stepLuogo = document.getElementById("prompt-step-luogo");
+  const stepPersonaggi = document.getElementById("prompt-step-personaggi");
+  const stepScena = document.getElementById("prompt-step-scena");
+  const luogoSummary = document.getElementById("prompt-luogo-summary");
+  const charsSummary = document.getElementById("prompt-chars-summary");
+  const scenaRecap = document.getElementById("prompt-scena-recap");
+  const alertNoChars = document.getElementById("prompt-alert-no-chars");
+  const alertUnmatched = document.getElementById("prompt-alert-unmatched");
+  const alertUnmatchedList = document.getElementById("prompt-alert-unmatched-list");
   const statusEl = document.getElementById("prompt-status");
   const luoghiGrid = document.getElementById("prompt-luoghi-grid");
   const luoghiSearch = document.getElementById("prompt-luoghi-search");
@@ -34,8 +51,11 @@
   const copiaTuttoBtn = document.getElementById("prompt-copia-tutto");
   const outputPanel = document.getElementById("prompt-output-panel");
   const outputEl = document.getElementById("prompt-output");
+  const stepIndicators = root.querySelectorAll("[data-step-indicator]");
 
   let catalog = null;
+  let currentStep = 0;
+  let luogoSkipped = false;
 
   function setStatus(message, isError) {
     if (!statusEl) {
@@ -50,6 +70,19 @@
     statusEl.hidden = false;
     statusEl.textContent = message;
     statusEl.classList.toggle("prompt-tool-status--error", Boolean(isError));
+  }
+
+  function hideAlert(el) {
+    if (el) {
+      el.hidden = true;
+    }
+  }
+
+  function showAlert(el) {
+    if (el) {
+      el.hidden = false;
+      el.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
   }
 
   function normalize(value) {
@@ -86,6 +119,28 @@
             .filter(Boolean)
         )
     ).map((line) => `- ${line}`);
+  }
+
+  function labeledBullets(entries, field) {
+    const lines = [];
+    for (const entry of entries) {
+      const ref = entry.item.visualRef;
+      if (!ref || isEmptyRefValue(ref[field])) {
+        continue;
+      }
+      const chunks = ref[field]
+        .split(/\n+/)
+        .map((line) => line.replace(/^[-*]\s*/, "").trim())
+        .filter(Boolean);
+      for (const chunk of chunks) {
+        const line = `- ${entry.label}: ${chunk}`;
+        const key = line.toLowerCase();
+        if (!lines.some((existing) => existing.toLowerCase() === key)) {
+          lines.push(line);
+        }
+      }
+    }
+    return lines;
   }
 
   function regionSortIndex(region) {
@@ -132,15 +187,59 @@
     }
   }
 
-  function matchesFilters(item, query, region) {
-    const blob = item.search || "";
-    if (query && !blob.includes(query)) {
+  function escapeRegExp(text) {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function escapeHtml(text) {
+    return (text || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function allCharacters() {
+    if (!catalog) {
+      return [];
+    }
+    return [...(catalog.personaggi || []), ...(catalog.png || [])];
+  }
+
+  function nameMentionedInText(name, text) {
+    const label = (name || "").trim();
+    if (!label || label.length < 2 || !text) {
       return false;
     }
-    if (region && region !== "__all__" && item.regione !== region) {
-      return false;
+    try {
+      return new RegExp(escapeRegExp(label), "i").test(text);
+    } catch (_err) {
+      return text.toLowerCase().includes(label.toLowerCase());
     }
-    return true;
+  }
+
+  function findMentionedUnselected(sceneText, selectedIds) {
+    const mentioned = [];
+    const sorted = [...allCharacters()].sort(
+      (a, b) => (b.label || "").length - (a.label || "").length
+    );
+    for (const item of sorted) {
+      if (selectedIds.has(item.id)) {
+        continue;
+      }
+      if (nameMentionedInText(item.label, sceneText)) {
+        mentioned.push(item);
+      }
+    }
+    return mentioned;
+  }
+
+  function mergeCharacters(selected, inferred) {
+    const byId = new Map();
+    for (const item of [...selected, ...inferred]) {
+      byId.set(item.id, item);
+    }
+    return [...byId.values()];
   }
 
   function thumbMarkup(item) {
@@ -158,6 +257,8 @@
       label.classList.add("prompt-small-card--portrait");
     }
     label.dataset.search = item.search || "";
+    label.dataset.itemId = item.id;
+    label.dataset.itemLabel = item.label || "";
     if (item.regione) {
       label.dataset.regione = item.regione;
     }
@@ -181,6 +282,14 @@
 
     function syncSelected() {
       label.classList.toggle("prompt-small-card--selected", input.checked);
+      if (currentStep === 2) {
+        updateCharsSummary();
+        hideAlert(alertNoChars);
+      }
+      if (currentStep === 1) {
+        updateLuogoSummary();
+        luogoSkipped = false;
+      }
     }
 
     input.addEventListener("change", syncSelected);
@@ -191,9 +300,7 @@
           input.dataset.wasChecked = "false";
           syncSelected();
         } else {
-          const group = root.querySelectorAll(
-            `input[name="${inputName}"]`
-          );
+          const group = root.querySelectorAll(`input[name="${inputName}"]`);
           for (const peer of group) {
             peer.dataset.wasChecked = "false";
           }
@@ -204,14 +311,6 @@
 
     syncSelected();
     return label;
-  }
-
-  function escapeHtml(text) {
-    return (text || "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
   }
 
   function applyCardVisibility(cards, visible) {
@@ -374,7 +473,7 @@
   }
 
   function selectedLuogo() {
-    if (!luoghiGrid || !catalog) {
+    if (!luoghiGrid || !catalog || luogoSkipped) {
       return null;
     }
     const checked = luoghiGrid.querySelector('input[name="prompt-luogo"]:checked');
@@ -394,8 +493,86 @@
     )) {
       ids.add(input.value);
     }
-    const all = [...(catalog.personaggi || []), ...(catalog.png || [])];
-    return all.filter((item) => ids.has(item.id));
+    return allCharacters().filter((item) => ids.has(item.id));
+  }
+
+  function clearLuogoSelection() {
+    luogoSkipped = true;
+    for (const input of root.querySelectorAll('input[name="prompt-luogo"]')) {
+      input.checked = false;
+      input.dataset.wasChecked = "false";
+      const card = input.closest(".prompt-small-card");
+      if (card) {
+        card.classList.remove("prompt-small-card--selected");
+      }
+    }
+    updateLuogoSummary();
+  }
+
+  function updateLuogoSummary() {
+    if (!luogoSummary) {
+      return;
+    }
+    const luogo = selectedLuogo();
+    if (luogoSkipped || !luogo) {
+      luogoSummary.hidden = false;
+      luogoSummary.textContent = luogoSkipped
+        ? "Luogo: nessuno (passaggio saltato)"
+        : "";
+      luogoSummary.hidden = !luogoSkipped;
+      return;
+    }
+    luogoSummary.hidden = false;
+    luogoSummary.textContent = `Luogo selezionato: ${luogo.label}`;
+  }
+
+  function updateCharsSummary() {
+    if (!charsSummary) {
+      return;
+    }
+    const chars = selectedCharacters();
+    if (!chars.length) {
+      charsSummary.hidden = true;
+      charsSummary.textContent = "";
+      return;
+    }
+    charsSummary.hidden = false;
+    charsSummary.textContent = `Personaggi (${chars.length}): ${chars.map((c) => c.label).join(", ")}`;
+  }
+
+  function updateScenaRecap() {
+    if (!scenaRecap) {
+      return;
+    }
+    const parts = [];
+    const luogo = selectedLuogo();
+    if (luogo) {
+      parts.push(`Luogo: ${luogo.label}`);
+    } else if (luogoSkipped) {
+      parts.push("Luogo: nessuno");
+    }
+    const chars = selectedCharacters();
+    if (chars.length) {
+      parts.push(`Personaggi: ${chars.map((c) => c.label).join(", ")}`);
+    }
+    scenaRecap.textContent = parts.length
+      ? parts.join(" · ")
+      : "Completa la descrizione della scena in inglese.";
+  }
+
+  function updateUnmatchedAlert(sceneText, selected) {
+    if (!alertUnmatched || !alertUnmatchedList) {
+      return;
+    }
+    const selectedIds = new Set(selected.map((c) => c.id));
+    const inferred = findMentionedUnselected(sceneText, selectedIds);
+    if (!inferred.length) {
+      hideAlert(alertUnmatched);
+      alertUnmatchedList.textContent = "";
+      return;
+    }
+    alertUnmatchedList.textContent = ` ${inferred.map((c) => c.label).join(", ")}.`;
+    showAlert(alertUnmatched);
   }
 
   function composePrompt(sceneText, luogo, characters) {
@@ -407,7 +584,8 @@
     }
 
     if (luogo && luogo.visualRef && !isEmptyRefValue(luogo.visualRef.imagePrompt)) {
-      lines.push(`Setting: ${luogo.visualRef.imagePrompt.trim()}`, "");
+      const settingLabel = luogo.label ? `Setting (${luogo.label}):` : "Setting:";
+      lines.push(`${settingLabel} ${luogo.visualRef.imagePrompt.trim()}`, "");
     }
 
     const charsWithPrompt = characters.filter(
@@ -423,16 +601,22 @@
     }
 
     lines.push(
-      "Overall look: cinematically realistic; preserve height and proportion comparisons between non-medium races when multiple figures appear.",
+      "Overall look: cinematically realistic; character labels use proper names only as section headers; do not repeat names inside visual descriptions; preserve height and proportion comparisons between non-medium races when multiple figures appear.",
       "",
       "Constraints to preserve:",
       ""
     );
 
-    const constraintBullets = bulletLines([
-      luogo && luogo.visualRef ? luogo.visualRef.constraints : "",
-      ...characters.map((c) => (c.visualRef ? c.visualRef.constraints : "")),
-    ]);
+    const constraintEntries = [];
+    if (luogo && luogo.visualRef && !isEmptyRefValue(luogo.visualRef.constraints)) {
+      constraintEntries.push({ label: luogo.label, item: luogo });
+    }
+    for (const c of characters) {
+      if (c.visualRef && !isEmptyRefValue(c.visualRef.constraints)) {
+        constraintEntries.push({ label: c.label, item: c });
+      }
+    }
+    const constraintBullets = labeledBullets(constraintEntries, "constraints");
     if (constraintBullets.length) {
       lines.push(...constraintBullets, "");
     } else {
@@ -441,14 +625,27 @@
 
     lines.push("Details to avoid:", "");
 
-    const avoidBullets = bulletLines([
-      luogo && luogo.visualRef ? luogo.visualRef.avoids : "",
-      ...characters.map((c) => (c.visualRef ? c.visualRef.avoids : "")),
+    const avoidEntries = [];
+    if (luogo && luogo.visualRef && !isEmptyRefValue(luogo.visualRef.avoids)) {
+      avoidEntries.push({ label: luogo.label, item: luogo });
+    }
+    for (const c of characters) {
+      if (c.visualRef && !isEmptyRefValue(c.visualRef.avoids)) {
+        avoidEntries.push({ label: c.label, item: c });
+      }
+    }
+    const avoidBullets = labeledBullets(avoidEntries, "avoids");
+    const globalAvoids = [
       "no cartoon",
       "no plastic CGI",
       "no generic fantasy illustration",
       "no videogame HUD look",
-    ]);
+    ];
+    for (const item of globalAvoids) {
+      if (!avoidBullets.some((line) => line.toLowerCase().includes(item))) {
+        avoidBullets.push(`- ${item}`);
+      }
+    }
     if (avoidBullets.length) {
       lines.push(...avoidBullets);
     } else {
@@ -463,17 +660,25 @@
       setStatus("Dati non ancora caricati.", true);
       return;
     }
+    hideAlert(alertNoChars);
     const luogo = selectedLuogo();
-    const characters = selectedCharacters();
+    const selected = selectedCharacters();
     const sceneText = scenaInput ? scenaInput.value : "";
 
+    if (!selected.length) {
+      showAlert(alertNoChars);
+      return;
+    }
+
+    const selectedIds = new Set(selected.map((c) => c.id));
+    const inferred = findMentionedUnselected(sceneText, selectedIds);
+    const characters = mergeCharacters(selected, inferred);
+    updateUnmatchedAlert(sceneText, selected);
+
     if (!sceneText.trim() && !luogo && !characters.length) {
-      setStatus("Aggiungi una scena, un luogo o almeno un personaggio.", true);
+      setStatus("Aggiungi una descrizione di scena.", true);
       if (outputPanel) {
         outputPanel.hidden = true;
-      }
-      if (outputEl) {
-        outputEl.textContent = "";
       }
       return;
     }
@@ -484,6 +689,7 @@
     }
     if (outputPanel) {
       outputPanel.hidden = false;
+      outputPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
     setStatus("");
   }
@@ -501,6 +707,131 @@
     }
   }
 
+  function showWizardChrome() {
+    if (wizardNav) {
+      wizardNav.hidden = false;
+    }
+    if (wizardActions) {
+      wizardActions.hidden = false;
+    }
+  }
+
+  function setStep(step) {
+    currentStep = step;
+    const panels = [stepLuogo, stepPersonaggi, stepScena];
+    for (const panel of panels) {
+      if (panel) {
+        panel.hidden = true;
+      }
+    }
+    const active = panels[step - 1];
+    if (active) {
+      active.hidden = false;
+    }
+
+    for (const indicator of stepIndicators) {
+      const n = Number(indicator.getAttribute("data-step-indicator"));
+      indicator.classList.toggle("prompt-wizard-step-indicator--active", n === step);
+      indicator.classList.toggle("prompt-wizard-step-indicator--done", n < step);
+    }
+
+    if (prevBtn) {
+      prevBtn.hidden = step <= 1;
+    }
+    if (skipLuogoBtn) {
+      skipLuogoBtn.hidden = step !== 1;
+    }
+    if (nextBtn) {
+      nextBtn.hidden = step >= 3;
+    }
+    if (generaBtn) {
+      generaBtn.hidden = step !== 3;
+    }
+
+    hideAlert(alertNoChars);
+    if (step !== 3) {
+      hideAlert(alertUnmatched);
+    }
+
+    if (step === 2) {
+      updateCharsSummary();
+    }
+    if (step === 3) {
+      updateScenaRecap();
+      const sceneText = scenaInput ? scenaInput.value : "";
+      updateUnmatchedAlert(sceneText, selectedCharacters());
+    }
+
+    root.dataset.promptStep = String(step);
+  }
+
+  function onNext() {
+    if (currentStep === 1) {
+      if (!selectedLuogo() && !luogoSkipped) {
+        setStatus("Seleziona un luogo oppure usa «Salta luogo».", true);
+        return;
+      }
+      setStatus("");
+      updateLuogoSummary();
+    }
+
+    if (currentStep === 2) {
+      if (!selectedCharacters().length) {
+        showAlert(alertNoChars);
+        return;
+      }
+      hideAlert(alertNoChars);
+      updateCharsSummary();
+    }
+
+    if (currentStep < 3) {
+      setStep(currentStep + 1);
+    }
+  }
+
+  function onPrev() {
+    if (currentStep > 1) {
+      setStep(currentStep - 1);
+    }
+  }
+
+  function onSkipLuogo() {
+    clearLuogoSelection();
+    setStatus("");
+    setStep(2);
+  }
+
+  function startWizard() {
+    if (heroEl) {
+      heroEl.hidden = true;
+    }
+    try {
+      localStorage.setItem(HERO_SEEN_KEY, "1");
+    } catch (_err) {
+      /* ignore */
+    }
+    showWizardChrome();
+    setStep(1);
+  }
+
+  function initHero() {
+    let seen = false;
+    try {
+      seen = localStorage.getItem(HERO_SEEN_KEY) === "1";
+    } catch (_err) {
+      seen = false;
+    }
+    if (!seen && heroEl) {
+      heroEl.hidden = false;
+      return;
+    }
+    if (heroEl) {
+      heroEl.hidden = true;
+    }
+    showWizardChrome();
+    setStep(1);
+  }
+
   function initUI(data) {
     catalog = data;
     fillRegionSelect(luoghiRegion, data.luoghi || []);
@@ -509,6 +840,7 @@
     renderPgGrid();
     renderPngRegions();
     setStatus("");
+    initHero();
   }
 
   async function loadCatalog() {
@@ -529,6 +861,18 @@
     }
   }
 
+  if (heroStartBtn) {
+    heroStartBtn.addEventListener("click", startWizard);
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener("click", onNext);
+  }
+  if (prevBtn) {
+    prevBtn.addEventListener("click", onPrev);
+  }
+  if (skipLuogoBtn) {
+    skipLuogoBtn.addEventListener("click", onSkipLuogo);
+  }
   if (generaBtn) {
     generaBtn.addEventListener("click", onGenera);
   }
@@ -549,6 +893,13 @@
   }
   if (pngRegion) {
     pngRegion.addEventListener("change", filterPng);
+  }
+  if (scenaInput) {
+    scenaInput.addEventListener("input", () => {
+      if (currentStep === 3) {
+        updateUnmatchedAlert(scenaInput.value, selectedCharacters());
+      }
+    });
   }
 
   loadCatalog();

@@ -25,7 +25,7 @@ Donna sui quarant'anni, asciutta, ben composta anche dopo giorni di polvere. Cap
 ```text
 Image prompt:
 
-Cinematically realistic portrait of a lean composed human woman in her forties, dust on shoulders but posture immaculate. Dark well-made travel coat, light gloves, boots cleaner than the road suggests. Wax notebook, short pencil, rigid document case always in hand or at belt. River company agent, cold negotiation smile optional; fantasy-western commerce, cinematically realistic.
+Cinematically realistic portrait of a lean composed human woman in her forties, dust on shoulders but posture immaculate. Dark well-made travel coat, light gloves, boots cleaner than the road suggests. Wax notebook, short pencil, rigid document case always in hand or at belt. Controlled neutral expression, river dock or office doorway at soft daylight; river company agent, fantasy-western commerce, cinematically realistic.
 
 Constraints to preserve:
 

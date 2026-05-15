@@ -14,6 +14,12 @@ All’alba la carovana di Hector Brannagh lascia Valdoren: Hector dirige dalla t
 
 *Gud Bender abbatte con Sonno il ragazzino halfling che aveva appena rubato il fagotto di una famiglia della carovana.*
 
+### Dorothy nella botola
+
+![Dorothy Mercer rannicchiata nella botola della fattoria](/immagini/eventi/sessione-005/dorothy-mercer-in-botola.jpg)
+
+*Dorothy Mercer, bambina dai capelli chiari, terrorizzata nel buio della botola dopo l'assalto alla Fattoria Mercer.*
+
 ## Eventi principali
 
 Prima dell’alba il gruppo si attrezza e raggiunge il punto di raduno: con sé hanno ancora il mulo di Dora e, a piedi, la necessità di cavalcature. Il convoglio è già un corpo unico: una decina di carri al passo dei buoi, famiglie intere sui pianali, polvere e ordini secchi. **Hector Brannagh** è in testa e coordina tutto; **Theodor Strand** resta nella parte anteriore del dispositivo, come scout; **Andrew Carver** tiene le retrovie. Un fischio sancisce la partenza: la carovana si muove lentissima, con il ritmo che — salvo emergenze — segnerà le prossime settimane.

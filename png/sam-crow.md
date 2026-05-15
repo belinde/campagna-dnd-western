@@ -25,15 +25,15 @@ Uomo sulla cinquantina, asciutto e nervoso, baffi a manubrio curati con cura qua
 ```text
 Image prompt:
 
-Cinematically realistic portrait of a lean nervous human man in his fifties, sun- and road-weathered face, thick dark handlebar mustache meticulously groomed against otherwise shabby frontier clothes. Faded wide-brim cowboy hat, dark tousled hair under the brim, deep predatory eyes in shadow. Dark polka-dot bandana over dark rough wool shirt or jacket. Two-handed aim with tecnomagic revolver, barrel toward viewer; or wall-hugging stance in a narrow corridor. Wanted outlaw brains of a band; fantasy-western, cinematically realistic.
+Cinematically realistic portrait of a lean nervous human man in his fifties, sun- and road-weathered face, thick dark handlebar mustache meticulously groomed against otherwise shabby frontier clothes. Faded wide-brim cowboy hat, dark tousled hair under the brim, deep predatory watchful eyes in shadow. Dark polka-dot bandana over dark rough wool shirt or jacket, tecnomagic revolver in worn hip holster. Half-length bust, dusty frontier camp or trail at overcast daylight; wanted outlaw brains of a band, wary stillness not swagger. Fantasy-western, cinematically realistic.
 
 Constraints to preserve:
 
-Human adult height; cinematically realistic; handlebar mustache, faded hat, polka-dot bandana, tecnomagic revolver; wary not swaggering hero.
+Human adult height; cinematically realistic; handlebar mustache, faded hat, polka-dot bandana, holstered revolver; wary predatory calm, not combat pose.
 
 Details to avoid:
 
-Cartoon or plastic CGI; clean gentleman gambler; young face; missing mustache.
+Cartoon or plastic CGI; clean gentleman gambler; young face; missing mustache; aiming at camera; narrow corridor ambush; two-handed draw stance.
 ```
 
 ## Personalità
