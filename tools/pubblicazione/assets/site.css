@@ -564,7 +564,7 @@ blockquote {
   color: var(--text, inherit);
 }
 
-/* Pagina Compositore prompt */
+/* Pagina Generatore prompt */
 .prompt-tool {
   display: flex;
   flex-direction: column;
@@ -685,6 +685,193 @@ blockquote {
 .prompt-tool-btn--secondary {
   background: rgba(0, 0, 0, 0.2);
   border-color: var(--panel-border);
+}
+
+.prompt-tool-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem 1.25rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.12));
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.prompt-tool-toolbar-field {
+  flex: 0 1 auto;
+}
+
+.prompt-tool-toolbar-field--grow {
+  flex: 1 1 14rem;
+  min-width: 12rem;
+}
+
+.prompt-tool-toolbar-label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.prompt-tool-toolbar-input,
+.prompt-tool-toolbar-select {
+  width: 100%;
+  min-width: 10rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.18));
+  border-radius: 0.35rem;
+  background: var(--surface, #1a1714);
+  color: inherit;
+  font: inherit;
+}
+
+.prompt-tool-hint {
+  margin: 0 0 0.35rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  max-width: 52rem;
+  line-height: 1.45;
+}
+
+.prompt-small-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: 0.65rem 0.75rem;
+}
+
+.prompt-small-card {
+  display: block;
+  margin: 0;
+  cursor: pointer;
+}
+
+.prompt-small-card[hidden] {
+  display: none !important;
+}
+
+.prompt-small-card-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.prompt-small-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  height: 100%;
+  padding: 0.45rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  background: rgba(26, 23, 19, 0.55);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.prompt-small-card:hover .prompt-small-card-inner {
+  border-color: rgba(211, 156, 74, 0.35);
+}
+
+.prompt-small-card--selected .prompt-small-card-inner {
+  border-color: var(--accent, #c9a86c);
+  box-shadow: 0 0 0 1px rgba(211, 156, 74, 0.25);
+}
+
+.prompt-small-card-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.prompt-small-card--portrait .prompt-small-card-thumb {
+  aspect-ratio: 280 / 373;
+}
+
+.prompt-small-card-thumb--placeholder {
+  min-height: 72px;
+  background: linear-gradient(135deg, rgba(211, 156, 74, 0.12), rgba(0, 0, 0, 0.25));
+}
+
+.prompt-small-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0 0.15rem 0.2rem;
+}
+
+.prompt-small-card-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.prompt-small-card-desc {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.prompt-png-region-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+}
+
+.prompt-png-region-block[hidden] {
+  display: none !important;
+}
+
+.prompt-png-region-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent, #c9a86c);
+  border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  padding-bottom: 0.3rem;
+}
+
+.prompt-tool-output-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.prompt-tool-output-panel[hidden] {
+  display: none !important;
+}
+
+.prompt-tool-output-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+}
+
+.prompt-tool-output-title {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.prompt-tool-btn--copy {
+  flex-shrink: 0;
 }
 
 .prompt-tool-output {

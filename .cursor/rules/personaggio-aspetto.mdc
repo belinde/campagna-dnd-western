@@ -67,7 +67,7 @@ Details to avoid:
 - Per i **luoghi**, il blocco puo` essere piu` esteso del ritratto (veduta, ambiente, scala).
 
 - **Non** renderizzato sulle pagine singole del sito: escluso da `stripSections` nel manifest.
-- Incluso in `assets/prompt-data.json` per il **Compositore prompt** (`/prompt/`).
+- Incluso in `assets/prompt-data.json` per il **Generatore prompt** (`/prompt/`).
 - Per **orchi**, **mezzorchi** e razze basse (nano, halfling, gnomo), allineare statura e cromia a `.cursor/skills/campagna-immagini/SKILL.md` e, se pertinente, `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`.
 
 ## Gerarchia in caso di conflitto

@@ -634,6 +634,30 @@ def extract_visual_reference(markdown_text: str) -> dict[str, str] | None:
     return parsed
 
 
+def first_image_path_from_markdown(markdown_text: str) -> str | None:
+    match = IMAGE_RE.search(markdown_text)
+    return match.group(2) if match else None
+
+
+def thumb_path_for_catalog(og_path: str | None, output_dir: Path) -> str | None:
+    if not og_path or not thumb_file_exists(output_dir, og_path):
+        return None
+    return og_path_to_thumb_route(og_path)
+
+
+def prompt_search_blob(
+    *,
+    label: str,
+    subtitle: str,
+    description: str,
+    promemoria: str = "",
+    ambito: str = "",
+    regione_raw: str = "",
+) -> str:
+    parts = (label, subtitle, description, promemoria, ambito, regione_raw)
+    return " ".join(p for p in parts if p).casefold()
+
+
 def prompt_subtitle_for_entry(relative_path: Path, raw_text: str) -> str:
     parts = relative_path.parts
     if parts[0] == "personaggi":
@@ -651,7 +675,7 @@ def prompt_subtitle_for_entry(relative_path: Path, raw_text: str) -> str:
     return ""
 
 
-def collect_prompt_catalog(entries: list[PageEntry]) -> dict[str, list[dict]]:
+def collect_prompt_catalog(entries: list[PageEntry], output_dir: Path) -> dict[str, list[dict]]:
     luoghi: list[dict] = []
     personaggi: list[dict] = []
     png: list[dict] = []
@@ -660,12 +684,16 @@ def collect_prompt_catalog(entries: list[PageEntry]) -> dict[str, list[dict]]:
         rp = entry.relative_path
         parts = rp.parts
         bucket: list[dict] | None
+        kind: str
         if parts[0] == "personaggi":
             bucket = personaggi
+            kind = "pg"
         elif parts[0] == "png":
             bucket = png
+            kind = "png"
         elif len(parts) >= 3 and parts[0] == "ambientazione" and parts[1] == "luoghi":
             bucket = luoghi
+            kind = "luogo"
         else:
             continue
 
@@ -676,14 +704,44 @@ def collect_prompt_catalog(entries: list[PageEntry]) -> dict[str, list[dict]]:
 
         fallback_title = sanitize_heading_text(rp.stem.replace("-", " "))
         title, _ = extract_title(raw_text, fallback_title)
-        bucket.append(
-            {
-                "id": rp.stem,
-                "label": title,
-                "subtitle": prompt_subtitle_for_entry(rp, raw_text),
-                "visualRef": visual_ref,
-            }
-        )
+        subtitle = prompt_subtitle_for_entry(rp, raw_text)
+        regione_raw = ""
+        promemoria = ""
+        ambito = ""
+        description = subtitle
+
+        if kind == "png":
+            regione_raw = meta_line_first(META_REGIONE_RE, raw_text)
+            promemoria = meta_line_first(META_PROMEMORIA_RE, raw_text)
+            ambito = meta_line_first(META_AMBITO_RE, raw_text)
+            description = promemoria or subtitle
+        elif kind == "luogo":
+            regione_raw = meta_line_first(META_REGIONE_RE, raw_text)
+
+        regione_bucket = region_bucket(regione_raw) if regione_raw.strip() else ""
+        og_path = first_image_path_from_markdown(raw_text)
+        item: dict = {
+            "id": rp.stem,
+            "label": title,
+            "subtitle": subtitle,
+            "description": description,
+            "kind": kind,
+            "visualRef": visual_ref,
+            "search": prompt_search_blob(
+                label=title,
+                subtitle=subtitle,
+                description=description,
+                promemoria=promemoria,
+                ambito=ambito,
+                regione_raw=regione_raw,
+            ),
+        }
+        thumb = thumb_path_for_catalog(og_path, output_dir)
+        if thumb:
+            item["thumbPath"] = thumb
+        if regione_bucket:
+            item["regione"] = regione_bucket
+        bucket.append(item)
 
     label_key = lambda item: item["label"].lower()
     return {
@@ -698,7 +756,7 @@ def collect_prompt_catalog(entries: list[PageEntry]) -> dict[str, list[dict]]:
 def write_prompt_tool_assets(output_dir: Path, catalog: dict[str, list[dict]]) -> None:
     if not PROMPT_PAGE_BODY_PATH.is_file():
         raise FileNotFoundError(
-            f"Manca {PROMPT_PAGE_BODY_PATH}: corpo HTML della pagina Compositore prompt."
+            f"Manca {PROMPT_PAGE_BODY_PATH}: corpo HTML della pagina Generatore prompt."
         )
 
     assets_dir = output_dir / "assets"
@@ -716,7 +774,7 @@ def write_prompt_tool_assets(output_dir: Path, catalog: dict[str, list[dict]]) -
     prompt_index.parent.mkdir(parents=True, exist_ok=True)
     prompt_index.write_text(
         front_matter(
-            title="Compositore prompt",
+            title="Generatore prompt per immagini",
             route="/prompt/",
             collection_label="Strumenti",
             source_path=Path("tools/pubblicazione/prompt-page-body.html"),
@@ -1074,7 +1132,7 @@ def write_layout(output_dir: Path) -> None:
                   <a href="{{ '/resoconti/' | relative_url }}">Resoconti</a>
                   <a href="{{ '/png/' | relative_url }}">PNG</a>
                   <a href="{{ '/luoghi/' | relative_url }}">Luoghi</a>
-                  <a href="{{ '/prompt/' | relative_url }}">Compositore prompt</a>
+                  <a href="{{ '/prompt/' | relative_url }}">Generatore</a>
                 </nav>
               </aside>
               <div class="site-content">
@@ -1209,7 +1267,7 @@ def copy_pubblicazione_assets(output_dir: Path) -> None:
         )
     if not (PUBBLICAZIONE_ASSETS_DIR / "prompt-page.js").is_file():
         raise FileNotFoundError(
-            "Manca tools/pubblicazione/assets/prompt-page.js (Compositore prompt del sito pubblico)."
+            "Manca tools/pubblicazione/assets/prompt-page.js (Generatore prompt del sito pubblico)."
         )
     dest_root = output_dir / "assets"
     dest_root.mkdir(parents=True, exist_ok=True)
@@ -1325,7 +1383,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
 
     hub_page_count = write_section_hub_pages(output_dir, built_pages, hub_cards, page_og_images)
 
-    prompt_catalog = collect_prompt_catalog(resolved_entries)
+    prompt_catalog = collect_prompt_catalog(resolved_entries, output_dir)
     write_prompt_tool_assets(output_dir, prompt_catalog)
     prompt_page_count = 1
 
