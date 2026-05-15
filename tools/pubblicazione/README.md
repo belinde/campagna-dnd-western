@@ -126,9 +126,23 @@ python3 tools/scripts/build_public_site.py --output tools/build/public-site
 
 L'output e` una piccola sorgente Jekyll in `tools/build/public-site/`, pronta per essere compilata e pubblicata da GitHub Pages.
 
+Il comando resta `tools/scripts/build_public_site.py`; la logica e` nel pacchetto `tools/scripts/public_site/`:
+
+| Modifica | File |
+|----------|------|
+| Layout shell, front matter, home | `public_site/jekyll.py` (`write_layout`, `front_matter`, `render_index`) |
+| Hub e card (Personaggi, Resoconti, PNG, Luoghi) | `public_site/hubs.py` |
+| Sanificazione e trasformazioni Markdown | `public_site/markdown.py` |
+| Thumbnail e copia asset immagini | `public_site/media.py` |
+| Generatore prompt (`prompt-data.json`) | `public_site/prompt_tool.py` |
+| Manifest, risoluzione pagine | `public_site/manifest.py` |
+| Orchestrazione build | `public_site/pipeline.py` |
+| CSS / JS hub PNG / UI prompt | `tools/pubblicazione/assets/site.css`, `site.js`, `prompt-page.js` |
+| Markup pagina Generatore | `tools/pubblicazione/prompt-page-body.html` |
+
 ## Anteprima locale con Docker
 
-Per iterare sul lato grafico (CSS in `tools/pubblicazione/assets/site.css`, layout HTML in `write_layout` dentro `tools/scripts/build_public_site.py`) senza dover passare da un deploy su GitHub Pages, c'e` uno script che rigenera la sorgente Jekyll e la serve in locale tramite l'immagine Docker ufficiale di Jekyll. Non serve installare Ruby/Jekyll sulla macchina, basta avere Docker funzionante.
+Per iterare sul lato grafico (CSS in `tools/pubblicazione/assets/site.css`, layout HTML in `public_site/jekyll.py` → `write_layout`) senza dover passare da un deploy su GitHub Pages, c'e` uno script che rigenera la sorgente Jekyll e la serve in locale tramite l'immagine Docker ufficiale di Jekyll. Non serve installare Ruby/Jekyll sulla macchina, basta avere Docker funzionante.
 
 ```bash
 python3 tools/scripts/serve_public_site.py

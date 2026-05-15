@@ -278,6 +278,7 @@ a:hover {
 
 .home-tagline {
   margin: 0 0 1.25rem;
+  text-align: center;
   font-size: 1.45rem;
   font-style: italic;
   font-weight: 400;

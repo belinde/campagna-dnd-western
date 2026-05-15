@@ -207,7 +207,7 @@ Poi:
 
 - rigenerare `png/INDICE.md` con `uv run python tools/scripts/rebuild_png_index.py` (oppure è incluso in `build_public_site.py`)
 - eseguire o aggiornare il flusso di export player-safe previsto dal progetto
-- rigenerare i contenuti pubblici dopo gli aggiornamenti canonici approvati (`uv run python tools/scripts/build_public_site.py --output tools/build/public-site`)
+- rigenerare i contenuti pubblici dopo gli aggiornamenti canonici approvati (`uv run python tools/scripts/build_public_site.py --output tools/build/public-site`; logica in `tools/scripts/public_site/`)
 - presentare al DM un riepilogo sintetico di cio` che andra` online: nuove pagine, resoconti aggiornati, immagini di scena incluse, voci aggiunte alla allowlist dei materiali conosciuti e nuovi link interni da `## Personaggi non giocanti incontrati` e `## Luoghi visitati`
 
 Se il passo successivo richiede operazioni git o di rete (commit, push, deploy remoto, apertura di PR), chiedere sempre conferma esplicita prima di procedere.
