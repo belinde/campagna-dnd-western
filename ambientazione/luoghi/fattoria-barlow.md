@@ -10,17 +10,31 @@
 
 *Veduta della Fattoria Barlow.*
 
-## Descrizione generale
+## Aspetto
 
 La Fattoria Barlow sorge piu' a ovest delle terre ancora ben irrigate attorno a Valdoren, nel tratto in cui la Via dei Coloni smette di sentirsi una strada rurale e comincia a somigliare a un compromesso con la pianura aperta. Non e' un podere ricco, ne' particolarmente fertile: la sua unica vera fortuna e' un **pozzo profondo** che continua a dare acqua anche quando i fossi si abbassano e le pozze stagionali diventano fango cattivo.
 
 In anni normali questo basterebbe appena a tenere vivi tre esseri umani, un orto rachitico, una mula e qualche gallina. In anni come questo, invece, trasforma la cascina in qualcosa di piu' pericoloso: un luogo che i **tiratori del Punto Lungo** e i loro macellai possono usare per riempire botti, lavarsi il sangue dalle mani, comprare sale e ripararsi dal vento senza dover allestire un campo troppo visibile attorno a un abbeveratoio naturale.
 
-## Aspetto e atmosfera
-
 La casa e' bassa, stortignaccola, rattoppata con tavole di essenze diverse che raccontano riparazioni fatte con quello che capitava. Il cortile e' battuto da passi pesanti e da ruote che non appartengono solo alla famiglia: vicino al **pozzo coperto**, assi e pali sorreggono una piccola tettoia sotto cui si allineano secchi, botti mezze piene e una tinozza larga abbastanza da lavare pelli, attrezzi o braccia fino al gomito.
 
 Il vento porta due odori che non dovrebbero stare insieme: **acqua fredda di profondita'** e **grasso rancido**. Sotto il portico laterale stanno sacchi di sale grosso, casse di ferramenta povera, cordame, e un tavolo da lavoro su cui ogni tanto compaiono monete troppo buone per una famiglia di quel rango. Le mosche sono piu' numerose di quanto dovrebbero, e i Barlow hanno preso l'abitudine di guardare l'orizzonte prima ancora degli ospiti. Quando una carovana abbastanza grossa si presenta per chiedere acqua, il luogo si irrigidisce: il lavoro si ferma, le pelli restano appese, e da qualche punto del cortile o della casa qualcuno controlla sempre con un fucile a portata di mano.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic view of a poor frontier homestead on open plains west of settled farmland, fantasy-western Via dei Coloni corridor. Low crooked wooden house patched with mismatched boards; beaten yard with heavy wagon ruts and foreign wheel tracks; covered deep well with bucket shelter, lined barrels, wide trough for washing hides or arms to elbow. Side porch: coarse salt sacks, cheap hardware crates, rope, work table with coins too good for this poverty. Flies thick; hung hides visible; tense horizon-watching mood; thin kitchen garden and mule pen as honest remnant. Wind, harsh daylight; smell suggested by cold deep water vs rancid grease; no proper names.
+
+Constraints to preserve:
+
+Cinematically realistic; water-well as visual anchor; butcher/hide-trade contamination of innocent farm; armed watchfulness when large wagon train stops; frontier drought-year austerity.
+
+Details to avoid:
+
+Cartoon or plastic CGI; prosperous ranch; clean pastoral idyll; modern farm equipment; generic fantasy illustration.
+```
 
 ## Abitanti e demografia
 

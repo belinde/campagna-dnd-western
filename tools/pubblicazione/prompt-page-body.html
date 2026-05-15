@@ -1,0 +1,32 @@
+<section class="prompt-tool" data-prompt-tool>
+  <p class="prompt-tool-intro">
+    Seleziona un luogo (opzionale), uno o più personaggi, descrivi brevemente la scena e genera un prompt pronto per il generatore di immagini.
+  </p>
+  <p class="prompt-tool-status" id="prompt-status" hidden></p>
+  <div class="prompt-tool-section">
+    <label class="prompt-tool-label" for="prompt-luogo">Luogo</label>
+    <select id="prompt-luogo" class="prompt-tool-select"></select>
+  </div>
+  <div class="prompt-tool-section">
+    <h2 class="prompt-tool-heading">Personaggi giocanti</h2>
+    <div class="prompt-tool-checkboxes" id="prompt-pg-list"></div>
+  </div>
+  <div class="prompt-tool-section">
+    <h2 class="prompt-tool-heading">Personaggi non giocanti</h2>
+    <div class="prompt-tool-checkboxes" id="prompt-png-list"></div>
+  </div>
+  <div class="prompt-tool-section">
+    <label class="prompt-tool-label" for="prompt-scena">Scena</label>
+    <textarea
+      id="prompt-scena"
+      class="prompt-tool-textarea"
+      rows="5"
+      placeholder="Scrivi in inglese se possibile: cosa sta succedendo, momento della giornata, azione centrale."
+    ></textarea>
+  </div>
+  <div class="prompt-tool-actions">
+    <button type="button" id="prompt-genera" class="prompt-tool-btn">Genera prompt</button>
+    <button type="button" id="prompt-copia" class="prompt-tool-btn prompt-tool-btn--secondary" disabled>Copia</button>
+  </div>
+  <pre class="prompt-tool-output" id="prompt-output" hidden></pre>
+</section>

@@ -1,33 +1,45 @@
 ---
-description: Aspetto narrativo e Riferimento visivo (prompt immagine) sincronizzati su schede PG e PNG
-globs: personaggi/*.md, png/*.md, sessione/png-*.md
+description: Aspetto narrativo e Riferimento visivo (prompt immagine) sincronizzati su schede PG, PNG e luoghi
+globs: personaggi/*.md, png/*.md, sessione/png-*.md, ambientazione/luoghi/*.md
 alwaysApply: false
 ---
 
 # Aspetto e Riferimento visivo
 
-Si applica a `personaggi/*.md`, `png/*.md` e `sessione/png-*.md`. **Non** si applica a `png/INDICE.md`.
+Si applica a `personaggi/*.md`, `png/*.md`, `sessione/png-*.md` e `ambientazione/luoghi/*.md`. **Non** si applica a `png/INDICE.md`.
 
 Per regole PNG meccaniche (Scheda di gioco 5e), vedi anche `png-scheda-gioco.mdc`. Per prompt immagine on demand, `.cursor/skills/campagna-immagini/SKILL.md`.
 
 ## Due blocchi obbligatori
 
-Ogni scheda PG/PNG canonica deve avere **entrambe** le sezioni, nell'ordine:
+Ogni scheda PG/PNG/luogo canonica deve avere **entrambe** le sezioni, nell'ordine:
 
 1. `## Immagine` (se gia` in uso nel file)
 2. `## Aspetto` — italiano, evocativo, per DM, tavolo e sito pubblico
-3. `## Riferimento visivo` — inglese, DM-only, prompt per generazione ritratti
+3. `## Riferimento visivo` — inglese, prompt per generazione immagini (veduta o ritratto)
 
 In `sessione/png-*.md` le sezioni possono restare provvisorie fino al resoconto, ma non lasciare una senza l'altra se l'aspetto e` gia` definito.
 
+### Ordine sezioni — luoghi
+
+Dopo `## Immagine`, `## Aspetto` e `## Riferimento visivo`, le altre sezioni descrittive del luogo (es. `## Abitanti e demografia`, `## Equipaggio e passeggeri`, `## Punti di interesse`, `## Storia e origine`, `## Ganci narrativi`). **Non** usare piu` `## Descrizione generale` ne` `## Aspetto e atmosfera`: il contenuto confluisce in `## Aspetto`.
+
 ## Aspetto (italiano)
+
+### PG e PNG
 
 - **2–4 frasi** (circa max 120 parole; eccezione per figure gia` iconiche con testo consolidato).
 - Tono narrativo, evocativo; adatto a giocatori e lettura al tavolo.
 - Evitare nel corpo: nomi propri (se non necessari), checklist da generatore, vincoli «no cartoon», pose da storyboard, ripetizione pedante di ogni fibbia o bottone.
 - Il sito pubblico per i PNG esporta **solo** questa sezione (come «Descrizione»).
 
-## Riferimento visivo (inglese, DM-only)
+### Luoghi (`ambientazione/luoghi/`)
+
+- **Descrizione lunga** consentita: piu` paragrafi, atmosfera, geografia, odori, luce, materiali — senza limite «2–4 frasi».
+- Fonde il ruolo delle vecchie `## Descrizione generale` e `## Aspetto e atmosfera` in un unico blocco narrativo italiano.
+- Tono evocativo, adatto a lettura al tavolo e al sito pubblico (corpo pagina luogo dopo sanificazione).
+
+## Riferimento visivo (inglese)
 
 Subito dopo `## Aspetto`, un **unico** blocco fenced con linguaggio `text` — stesso schema del blocco copiabile di `/prompt-immagine` (intestazioni keyword in inglese, senza grassetto, corpo in inglese):
 
@@ -52,13 +64,15 @@ Details to avoid:
 - Intestazioni keyword **letterali**: `Image prompt:`, `Constraints to preserve:`, `Details to avoid:` (ciascuna su riga propria, poi contenuto).
 - Non annidare altri fence dentro il blocco `text`.
 - Copiabile in un gesto per il generatore immagine, come l'output del command.
+- Per i **luoghi**, il blocco puo` essere piu` esteso del ritratto (veduta, ambiente, scala).
 
-- Non pubblicare sul sito: escluso da `stripSections` nel manifest e dal profilo `public-png`.
+- **Non** renderizzato sulle pagine singole del sito: escluso da `stripSections` nel manifest.
+- Incluso in `assets/prompt-data.json` per il **Compositore prompt** (`/prompt/`).
 - Per **orchi**, **mezzorchi** e razze basse (nano, halfling, gnomo), allineare statura e cromia a `.cursor/skills/campagna-immagini/SKILL.md` e, se pertinente, `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`.
 
 ## Gerarchia in caso di conflitto
 
-- **Riferimento visivo** vince per ritratti, rigenerazioni immagine e coerenza visiva tra asset.
+- **Riferimento visivo** vince per ritratti, vedute, rigenerazioni immagine e coerenza visiva tra asset.
 - **Aspetto** vince per narrazione al tavolo e testo player-facing.
 - Dopo un cambio canonico visivo, aggiornare **entrambi** nello stesso passaggio.
 
@@ -72,10 +86,11 @@ Quando modifichi uno dei seguenti, aggiorna **Aspetto** e **Riferimento visivo**
 | `## Equipaggiamento notevole` (PG) | Armi, armature, oggetti distintivi, amuleti visibili |
 | `## Aspetto` o `## Riferimento visivo` | L'altro blocco, nello stesso edit |
 | **Razza** / **Razza/Classe** in testa | Statura, proporzioni, tratti razziali nel Riferimento; sintesi evocativa in Aspetto |
+| **Punti di interesse**, **Storia**, cambi visivi del luogo | Atmosfera e dettagli ambientali in Aspetto; veduta/scala nel Riferimento |
 
 Non aggiornare solo il Riferimento se il cambiamento cambia cio` che i giocatori possono vedere; non aggiornare solo l'Aspetto se serve coerenza per le immagini.
 
 ## Nuove schede e import immagine
 
 - Creare sempre entrambe le sezioni; non lasciare solo l'Aspetto «per dopo».
-- Dopo `/importa-immagine`, verificare coerenza tra ritratto, Aspetto e Riferimento visivo.
+- Dopo `/importa-immagine`, verificare coerenza tra immagine, Aspetto e Riferimento visivo.

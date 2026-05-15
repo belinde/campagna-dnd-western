@@ -10,13 +10,11 @@
 
 *Veduta della Fattoria Mercer.*
 
-## Descrizione generale
+## Aspetto
 
 La Fattoria Mercer è una di quelle decine di cascine senza nome né fama che punteggiano la cintura agricola a est di Valdoren, lungo la prima parte del tracciato verso la Frontiera. Si trova a circa mezza giornata di carro dalla città, oltre i campi recintati delle grandi proprietà e oltre l'ultimo canale d'irrigazione che pesca dal Grande Fiume: là dove la pianura coltivata comincia a sfilacciarsi, le piantagioni di grano lasciano posto a chiazze più magre e i coloni che non si potevano permettere terra buona si sono accontentati di terra accettabile.
 
 I Mercer sono arrivati qualche stagione fa con poco più dei vestiti che indossavano, e hanno costruito quello che si poteva costruire con quattro assi, un pozzo e tanta speranza. È esattamente il tipo di fattoria a cui nessuno fa caso finché qualcuno non ci muore.
-
-## Aspetto e atmosfera
 
 La casa è di legno grigio, assi inchiodate alla buona, con un tetto di tavole catramate che perde da almeno due inverni. Davanti alla porta, un piccolo aia battuta dai passi di chi entra ed esce con i secchi; al centro, il **pozzo** — l'unica vera ricchezza del podere, scavato a forza di pazienza e abbastanza profondo da resistere anche alle estati più secche. Sul retro, un **recinto** di pali storti racchiude pochi animali: un paio di galline che razzolano, una vacca dal pelo opaco, un maiale grasso quanto basta per arrivare a Natale, un mulo paziente che ne ha viste troppe per scomporsi ancora.
 
@@ -25,6 +23,22 @@ Oltre il recinto, un **orto** di pochi metri quadri — patate, fagioli, zucche,
 Dentro casa, una stanza unica: il camino, il tavolo di assi, due brande, una madia. Il pavimento è di tavole irregolari, e in un angolo — sotto un piccolo tappeto di pezza — c'è la **botola di una piccola dispensa interrata**, scavata per tenere al fresco patate e formaggio. È stata costruita per le scorte; è servita per nascondere una bambina.
 
 L'aria, fino a qualche giorno fa, sapeva di legna bruciata e di latte appena munto. Ora sa di polvere da sparo e di mosche.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic view of a tiny subsistence frontier farm east of a river city, Middle West fantasy-western. Grey weathered plank house, leaking tar-paper roof; beaten dooryard with central deep well and small roof over bucket; crooked pole fence with few chickens, dull cow, fat hog, patient pack mule. Small kitchen garden, corn rows as summer screen, tiny wheat patch; three old crooked apple trees, stone cairn without cross under largest tree. Single-room interior implied: hearth, plank table, two cots, flour chest; trapdoor under rag rug in corner for root cellar. Recent violence mood optional: gunpowder haze, flies, trampled garden; colonist trail wagon route nearby; no proper names.
+
+Constraints to preserve:
+
+Cinematically realistic; poverty and hope in equal measure; well as only real asset; hidden cellar trapdoor under floor rug; apple-tree child grave; aftermath of raid if scene is post-attack.
+
+Details to avoid:
+
+Cartoon or plastic CGI; wealthy homestead; intact idyllic farm unless scene requires tragedy; modern buildings; generic fantasy illustration.
+```
 
 ## Abitanti e demografia
 

@@ -6,6 +6,8 @@ Prima di qualsiasi risposta, leggere con `Read` il file `.cursor/skills/campagna
 
 **Schede PG/PNG:** in `## Riferimento visivo` incolla **lo stesso blocco** ` ```text ` … ` ``` ` (non ripetere le intestazioni fuori dal fence). Aggiorna il blocco sulla scheda quando consolidi un prompt nuovo o rivisto.
 
+**Schede luogo:** in `## Riferimento visivo` incolla **lo stesso blocco** fenced; lunghezza libera (veduta e ambiente richiedono piu` contesto visivo di un ritratto). Aggiorna il blocco sulla scheda quando consolidi un prompt nuovo o rivisto.
+
 Struttura: `Tipo immagine:` e `Percorso suggerito:` fuori da qualsiasi blocco codice; subito dopo un **unico** blocco Markdown fenced con linguaggio `text` (tre accenti grafi + `text` in apertura; soli tre accenti grafi in chiusura) con le tre sezioni nell’ordine definito nello skill.
 
 **Stile:** ogni prompt deve richiedere esplicitamente un look **cinematically realistic** (come da skill).

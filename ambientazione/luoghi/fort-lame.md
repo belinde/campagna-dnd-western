@@ -4,17 +4,31 @@
 
 _Nessuna immagine ancora associata._
 
-## Descrizione generale
+## Aspetto
 
 Fort Lame è un avamposto militare federale nel Middle West settentrionale, a circa tre giorni di cavallo a nord-est di Valdoren, ai piedi delle prime colline che anticipano le Montagne Rocciose. Il nome lo dice tutto: un forte nato con ambizioni di presidio strategico e ridimensionato dalla realtà a piccola guarnigione di frontiera, con un organico ridotto, rifornimenti irregolari e un comandante che aspetta il trasferimento da almeno due anni.
 
 Nonostante la mediocrità militare, Fort Lame ha una funzione economica concreta: è il punto di riferimento per i minatori che lavorano nelle colline a nord, e il terminale commerciale dove il minerale estratto viene pesato, registrato e spedito verso Valdoren. Le concessioni minerarie della zona sono amministrate qui, e l'ufficio del registro — due stanze con un cassaforte bullonata al pavimento — è l'edificio più prezioso dell'intero insediamento.
 
-## Aspetto e atmosfera
-
 Il forte è un quadrilatero di palizzate in legno scuro, con quattro torri angolari che non sono mai state presidiate tutte e quattro contemporaneamente. All'interno, una manciata di edifici: la caserma, il magazzino dei rifornimenti (spesso mezzo vuoto), la stalla, l'ufficio del comandante e il registro minerario. Fuori dalle mura, nell'arco di qualche centinaio di metri, è cresciuto un piccolo insediamento civile: una locanda con annessa bottega di rifornimento, una fucina, qualche casa di minatori e una tenda che funge da saloon.
 
 L'aria sa di terra umida, polvere di roccia e fumo di legna. Di notte, il silenzio delle colline è interrotto occasionalmente dallo scricchiolio delle palizzate e, ultimamente, da qualcosa di più difficile da identificare.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic wide view of a modest federal frontier fort in rolling grey-brown hills, northern Middle West fantasy-western setting. Dark weathered wooden palisade forming a rough quadrangle, four corner watch towers never all manned at once. Inside: barracks, half-empty supply shed, stable, commander's office, small mining registry building with bolted floor safe as the most valuable structure. Outside the walls within a few hundred yards: ramshackle civilian cluster — inn with supply shop, smithy, miner shacks, canvas saloon tent. Damp earth, rock dust, wood smoke; overcast or late afternoon light; sparse grass, first Rocky Mountain foothills on horizon; no proper names.
+
+Constraints to preserve:
+
+Cinematically realistic; undersized garrison feel not grand fortress; registry office visually important; civilian sprawl outside walls; frontier 1840s–1890s fantasy-western scale and materials.
+
+Details to avoid:
+
+Cartoon or plastic CGI; generic European castle; pristine military base; modern fortifications; generic fantasy illustration.
+```
 
 ## Abitanti e demografia
 

@@ -14,7 +14,7 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 
 ## Navigazione nell'export
 
-Lo script genera una **sidebar** con le sezioni Personaggi, Resoconti, PNG e Luoghi; la **home** (`/`) si raggiunge dal **logo** in intestazione. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG **Ruolo**, **Promemoria** e raggruppamento per **Regione** con barra di ricerca e filtro regione; per i luoghi **Regione** e **Tipo**. L'indice DM `png/INDICE.md` viene rigenerato automaticamente all'avvio di `build_public_site.py` (e con `rebuild_png_index.py`). Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. Il link «Guida giocatori» non compare nell'header accanto al logo: resta nelle liste della home o tra i contenuti player-safe dell'archivio.
+Lo script genera una **sidebar** con le sezioni Personaggi, Resoconti, PNG, Luoghi e **Compositore prompt**; la **home** (`/`) si raggiunge dal **logo** in intestazione. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG **Ruolo**, **Promemoria** e raggruppamento per **Regione** con barra di ricerca e filtro regione; per i luoghi **Regione** e **Tipo**. L'indice DM `png/INDICE.md` viene rigenerato automaticamente all'avvio di `build_public_site.py` (e con `rebuild_png_index.py`). Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. Il link «Guida giocatori» non compare nell'header accanto al logo: resta nelle liste della home o tra i contenuti player-safe dell'archivio.
 
 ### Immagini nell'export
 
@@ -25,7 +25,7 @@ Per ogni immagine referenziata nelle pagine pubbliche, lo script:
 
 ### Asset statici del sito (`tools/pubblicazione/assets/`)
 
-File in **`tools/pubblicazione/assets/`** (es. `header.png` con trasparenza per l'intestazione) vengono copiati in **`assets/`** nell'output Jekyll **senza** passare dalla generazione di thumbnail e **senza** alcuna conversione: vanno usati per grafica UI del sito che deve restare in PNG o altro formato non toccato dalla pipeline di `immagini/`.
+File in **`tools/pubblicazione/assets/`** (es. `header.png` con trasparenza per l'intestazione, `site.css`, `site.js`, `prompt-page.js`) vengono copiati in **`assets/`** nell'output Jekyll **senza** passare dalla generazione di thumbnail e **senza** alcuna conversione: vanno usati per grafica UI del sito che deve restare in PNG o altro formato non toccato dalla pipeline di `immagini/`. Il file `prompt-data.json` è invece **generato** a ogni build in `assets/`.
 
 Serve **Pillow** (`tools/scripts/requirements-public-site.txt`); se manca in locale, la build stampa un avviso: le immagini a piena risoluzione vengono comunque copiate, ma **nessuna thumbnail** viene generata e le card useranno un segnaposto.
 
@@ -34,11 +34,26 @@ Serve **Pillow** (`tools/scripts/requirements-public-site.txt`); se manca in loc
 Il sito non usa i file grezzi del repository cosi` come sono. Ogni pagina passa da una fase di sanificazione che rimuove automaticamente le sezioni private elencate in `manifest.json`, in particolare:
 
 - `## Note DM`
+- `## Riferimento visivo` (non compare nel corpo delle pagine singole; vedi sotto)
 - `## Note per la prossima sessione`
 - `## Ganci narrativi`
 - `## Segreti e obiettivi nascosti`
 
 Le cartelle `sessione/`, `spunti/`, `.cursor/` e `tools/dnd-mcp/` restano fuori dal perimetro pubblico.
+
+### Compositore prompt (`/prompt/`)
+
+Pagina strumento nella sidebar: consente di scegliere un **luogo** (opzionale), uno o più **PG** e **PNG** pubblicati, scrivere una breve **descrizione di scena** e generare nel browser un blocco `text` nello stesso schema di `/prompt-immagine` (`Image prompt:`, `Constraints to preserve:`, `Details to avoid:`).
+
+- **Markup:** [`tools/pubblicazione/prompt-page-body.html`](prompt-page-body.html) (incollato in `prompt/index.md` dalla build).
+- **Logica:** [`tools/pubblicazione/assets/prompt-page.js`](assets/prompt-page.js) — file statico, **nessun JavaScript generato** da `build_public_site.py`; la build aggiunge solo il tag `<script src="…/prompt-page.js">`.
+- **Dati:** `assets/prompt-data.json`, generato a ogni build da `## Riferimento visivo` delle schede pubblicate (`personaggi/`, PNG e luoghi in allowlist). Il JSON è leggibile anche da View Source; non è segreto DM-only, ma non viene renderizzato sulle pagine scheda.
+
+### `## Riferimento visivo` sul sito
+
+- **Pagine scheda:** la sezione resta in `stripSections` del manifest → non appare nel Markdown pubblicato delle pagine PG, PNG o luogo.
+- **Compositore prompt:** gli stessi blocchi (parsati dal sorgente privato) finiscono in `prompt-data.json` per alimentare il compositore.
+- **Repository privato:** PG, PNG e `ambientazione/luoghi/` usano `## Aspetto` (italiano; lungo per i luoghi) + `## Riferimento visivo` (inglese, fence `text`). Nei luoghi non usare più `## Descrizione generale` né `## Aspetto e atmosfera`.
 
 ## Manifest
 
@@ -55,7 +70,7 @@ La v1 pubblica la collection `personaggi/`, l'intera collection `resoconti/`, un
 
 ### Personaggi giocanti (`personaggi/`)
 
-Le schede PG non usano `profile: "public-png"`. Dopo la rimozione delle sezioni in `stripSections` (incluso `## Riferimento visivo`, prompt immagine DM-only in inglese), il corpo pubblicato coincide con la scheda nel repository privato salvo le sezioni private (stat in testa, immagine, `## Aspetto`, sezioni descrittive, `## Eventi interessanti`, ecc.).
+Le schede PG non usano `profile: "public-png"`. Dopo la rimozione delle sezioni in `stripSections` (incluso `## Riferimento visivo` dalle pagine), il corpo pubblicato coincide con la scheda nel repository privato salvo le sezioni private (stat in testa, immagine, `## Aspetto`, sezioni descrittive, `## Eventi interessanti`, ecc.). Il `## Riferimento visivo` resta disponibile solo tramite `prompt-data.json` per il Compositore prompt.
 
 ### Profilo pubblico dei PNG
 
@@ -67,7 +82,7 @@ Le schede in `png/` non vengono pubblicate integralmente. Se un file `png/*.md` 
 - descrizione pubblica ricavata da `## Aspetto`
 - sezione `## Eventi interessanti`
 
-`## Riferimento visivo` non viene mai esportata (né tramite `stripSections` sulle PG, né nel profilo `public-png`). Tutte le altre parti della scheda restano private, anche se non sono marcate come `## Note DM`.
+`## Riferimento visivo` non compare nel corpo delle pagine PNG (né PG né luoghi): è in `stripSections`. Il testo inglese è incluso in `assets/prompt-data.json` per il Compositore prompt. Tutte le altre parti della scheda restano private, anche se non sono marcate come `## Note DM`.
 
 ### Aggiornamento della allowlist in fase resoconto
 

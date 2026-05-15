@@ -105,7 +105,7 @@ Le immagini devono essere richiamate direttamente nei file Markdown con path esp
 - Se l'immagine primaria non esiste ancora, mantenere comunque la sezione `## Immagine` con la nota `_Nessuna immagine ancora associata._`
 - Le didascalie non devono mai introdurre nuova lore: servono solo a descrivere visivamente cio` che il testo gia` stabilisce.
 - Le immagini di evento appartengono ai `resoconti/`; le schede personaggio e luogo non devono duplicarle come immagine primaria.
-- In `personaggi/` e `png/`, dopo `## Immagine` usare `## Aspetto` (italiano, evocativo, anche per il sito) e subito dopo `## Riferimento visivo` con blocco fenced ` ```text ` (inglese, DM-only, stesso schema di `/prompt-immagine`). Regola dettagliata: `.cursor/rules/personaggio-aspetto.mdc`.
+- In `personaggi/`, `png/` e `ambientazione/luoghi/`, dopo `## Immagine` usare `## Aspetto` (italiano, evocativo; per i luoghi descrizione **lunga**, senza limite 2–4 frasi) e subito dopo `## Riferimento visivo` con blocco fenced ` ```text ` (inglese, stesso schema di `/prompt-immagine`). Nei luoghi non usare piu` `## Descrizione generale` ne` `## Aspetto e atmosfera`. Regola dettagliata: `.cursor/rules/personaggio-aspetto.mdc`.
 
 ## Contesto da consultare
 

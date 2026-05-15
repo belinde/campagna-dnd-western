@@ -4,17 +4,31 @@
 
 _Nessuna immagine ancora associata._
 
-## Descrizione generale
+## Aspetto
 
 Il Passo del Serpente è una gola stretta che si apre tra due creste delle Colline Grigie, a mezza giornata di cammino a nord di Fort Lame. Il nome viene dalla forma del sentiero che lo percorre: un tortuoso avvicendarsi di curve che risale il dislivello con la logica sinuosa di un serpente sul sasso. Chi non conosce il percorso fatica a trovare l'ingresso della gola; chi lo conosce può muoversi al suo interno con una rapidità che sorprende.
 
 È il principale punto di accesso alle creste superiori delle Colline Grigie e, da lì, alle quote più alte dove nessuna concessione mineraria è ancora stata registrata — e dove, secondo le voci, il terreno rivela qualcosa di più antico e più prezioso del rame.
 
-## Aspetto e atmosfera
-
 La gola è incassata tra pareti rocciose che in certi punti si avvicinano abbastanza da toccarsi quasi con le braccia tese. Il fondo è irregolare, percorso da un ruscello sottile che in primavera gonfia fino a rendere il passaggio impraticabile. La vegetazione è rada: qualche ginepro aggrappato alle pareti, licheni scuri, erba stopposa tra le pietre.
 
 Il silenzio del Passo è diverso dal silenzio della pianura. È un silenzio che ascolta. I minatori che lavorano nelle Colline Grigie ci passano quando devono, non quando vogliono — e quasi nessuno ci passa da solo.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic view of a narrow mountain gorge in grey rocky hills, fantasy-western frontier. Serpentine winding trail climbing between cliff walls that nearly touch overhead in places; thin seasonal stream in rocky bottom; sparse juniper on walls, dark lichen, tufted grass between stones. Hidden-feeling entrance marked by vaguely triangular rock formation; carved symbols on rock left of entrance. Mid-passage natural ledge wide enough for twenty-person camp, recent fire scars. Listening silence, cool shadow in gorge, bright sky only at slit above; no proper names.
+
+Constraints to preserve:
+
+Cinematically realistic; claustrophobic gorge scale; serpentine path logic; ritual or warning carvings at entrance; transition zone between mined hills and higher crests.
+
+Details to avoid:
+
+Cartoon or plastic CGI; lush forest canyon; wide open mountain pass; modern hiking trail signage; generic fantasy illustration.
+```
 
 ## Abitanti e demografia
 

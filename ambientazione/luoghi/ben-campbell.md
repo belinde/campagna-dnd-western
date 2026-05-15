@@ -16,19 +16,33 @@
 
 *Progetto costruttivo della* Ben Campbell.
 
-## Descrizione generale
+## Aspetto
 
 La *Ben Campbell* è un **sidewheel packet** a vapore, un battello fluviale a ruote laterali in servizio sul Grande Fiume tra New Avalon e Valdoren, con prosecuzioni stagionali verso i porti del Middle West settentrionale. Appartiene alla classe dei *packet*, i battelli che trasportano insieme passeggeri, merci e posta federale: tre carichi diversi che condividono lo stesso scafo e che ne fanno, in pratica, un piccolo pezzo di territorio federale che si sposta lungo la corrente.
 
 È uno dei mezzi più economici per risalire il Mississippi verso la Frontiera (sessione 001) e uno dei pochi su cui la legge degli Stati Uniti viaggia letteralmente in stiva: la cassaforte della posta dà al capitano e al suo primo ufficiale un'autorità di fatto che pochi altri capitani fluviali possono vantare. La *Ben Campbell* non è il battello più grande del Grande Fiume, né il più nuovo, ma è uno di quelli che si sono guadagnati una rotta stabile, una clientela ricorrente e una reputazione di puntualità che vale, nel commercio fluviale, più di un foglio di credito.
-
-## Aspetto e atmosfera
 
 Lo scafo, bianco e affusolato, taglia l'acqua spinto da **due grandi ruote laterali** chiuse in tamburi rivestiti di assi verniciate, dipinti col nome del battello in lettere nere ombreggiate di rosso. Due ciminiere alte e snelle vomitano fumo nero sulle acque limacciose del Grande Fiume, e quando la *Ben Campbell* fischia per annunciare l'attracco il suono si sente per miglia.
 
 Le sovrastrutture salgono per tre ponti sovrapposti, in legno bianco con balaustre lavorate e finestre rettangolari. Sopra di tutto, la **cabina di pilotaggio** vetrata a prua, da cui il capitano legge le correnti, le secche e il traffico. Sotto coperta, la sala caldaie tecnomagica e la stiva.
 
 L'aria a bordo cambia con il ponte. Al ponte di lusso, dietro i corridoi stretti e luminosi delle cabine, profumo di legno verniciato, lino pulito e fumo di sigaro. Al ponte intermedio dei passeggeri ordinari, odore di sudore, pane, animali piccoli e qualche bottiglia di whisky. Sotto, in stiva, fumo di legna, grasso minerale, vapore acido e l'eco metallica delle rune di attivazione delle caldaie. Sul ponte di poppa, libero da sovrastrutture, di notte si vedono solo le acque nere del Grande Fiume e — se si guarda bene — le ombre delle barche che a volte seguono il battello senza luci.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic view of a white slender sidewheel steamboat packet on a wide muddy great river, fantasy-western 19th-century teknomagic. Two large side paddle wheels in painted drum housings, boat name in black letters with red shadow; twin tall narrow stacks belching black smoke. Three stacked white wooden decks with carved railings, rectangular windows; glassed pilot house at bow. Optional: luxury cabin corridor gleam, crowded mid-deck passengers, below-deck rune-lit boiler room glow, open stern deck at night with dark water and distant unlit skiff shadow. Varnished wood and cigar smoke on upper deck; sweat, bread, small livestock on middle; wood smoke, mineral grease, acidic steam below; no proper names on hull in prompt if generic scene.
+
+Constraints to preserve:
+
+Cinematically realistic; sidewheel packet not stern-wheel only; federal mail-boat authority implied by secure stern safe area; three-deck social stratification; rune-activated steam boilers as subtle teknomagic.
+
+Details to avoid:
+
+Cartoon or plastic CGI; modern cruise ship; Mississippi showboat gold excess unless specified; aircraft carrier scale; generic fantasy airship.
+```
 
 ## Equipaggio e passeggeri
 

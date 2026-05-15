@@ -37,7 +37,10 @@ DEFAULT_MANIFEST = TOOLS_PUBL / "manifest.json"
 HOME_HERO_ASSET = "immagini/varie/gruppo-pg-carovana.jpg"
 HOME_HERO_PUBLIC_PATH = "/immagini/varie/gruppo-pg-carovana.jpg"
 PUBBLICAZIONE_ASSETS_DIR = TOOLS_PUBL / "assets"
+PROMPT_PAGE_BODY_PATH = TOOLS_PUBL / "prompt-page-body.html"
 HEADER_LOGO_PUBLIC_PATH = "/assets/header.png"
+PROMPT_DATA_PUBLIC_PATH = "/assets/prompt-data.json"
+PROMPT_SCRIPT_PUBLIC_PATH = "/assets/prompt-page.js"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((/immagini/[^)\s]+)\)")
 OG_IMAGE_IN_PUBLIC_MD_RE = re.compile(
@@ -58,6 +61,13 @@ THUMB_PORTRAIT_W = 280
 THUMB_PORTRAIT_H = 373
 THUMB_JPEG_QUALITY = 82
 EXCERPT_MAX_LEN = 440
+
+VISUAL_REF_HEADINGS: tuple[tuple[str, str], ...] = (
+    ("imagePrompt", "Image prompt:"),
+    ("constraints", "Constraints to preserve:"),
+    ("avoids", "Details to avoid:"),
+)
+VISUAL_REF_FENCE_RE = re.compile(r"```text\s*\n(.*?)```", re.DOTALL | re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -592,6 +602,132 @@ def split_h2_sections(markdown_text: str) -> dict[str, str]:
     return sections
 
 
+def parse_visual_ref_block(block: str) -> dict[str, str]:
+    text = block.strip()
+    result = {key: "" for key, _ in VISUAL_REF_HEADINGS}
+    positions: list[tuple[int, str, str]] = []
+    for key, heading in VISUAL_REF_HEADINGS:
+        idx = text.find(heading)
+        if idx >= 0:
+            positions.append((idx, key, heading))
+    positions.sort(key=lambda item: item[0])
+    for index, (idx, key, heading) in enumerate(positions):
+        start = idx + len(heading)
+        end = positions[index + 1][0] if index + 1 < len(positions) else len(text)
+        result[key] = text[start:end].strip()
+    if not any(result.values()):
+        return {"imagePrompt": text, "constraints": "_None._", "avoids": "_None._"}
+    return result
+
+
+def extract_visual_reference(markdown_text: str) -> dict[str, str] | None:
+    sections = split_h2_sections(markdown_text)
+    body = sections.get("Riferimento visivo", "")
+    if not body.strip():
+        return None
+    match = VISUAL_REF_FENCE_RE.search(body)
+    if not match:
+        return None
+    parsed = parse_visual_ref_block(match.group(1))
+    if not parsed.get("imagePrompt", "").strip():
+        return None
+    return parsed
+
+
+def prompt_subtitle_for_entry(relative_path: Path, raw_text: str) -> str:
+    parts = relative_path.parts
+    if parts[0] == "personaggi":
+        razza = meta_line_first(META_RAZZA_RE, raw_text)
+        classe = meta_line_first(META_CLASSE_RE, raw_text)
+        bits = [b for b in (razza, classe) if b]
+        return " · ".join(bits)
+    if parts[0] == "png":
+        return meta_line_first(META_RUOLO_RE, raw_text)
+    if len(parts) >= 3 and parts[0] == "ambientazione" and parts[1] == "luoghi":
+        reg = meta_line_first(META_REGIONE_RE, raw_text)
+        tipo = meta_line_first(META_TIPO_RE, raw_text)
+        bits = [b for b in (reg, tipo) if b]
+        return " · ".join(bits)
+    return ""
+
+
+def collect_prompt_catalog(entries: list[PageEntry]) -> dict[str, list[dict]]:
+    luoghi: list[dict] = []
+    personaggi: list[dict] = []
+    png: list[dict] = []
+
+    for entry in entries:
+        rp = entry.relative_path
+        parts = rp.parts
+        bucket: list[dict] | None
+        if parts[0] == "personaggi":
+            bucket = personaggi
+        elif parts[0] == "png":
+            bucket = png
+        elif len(parts) >= 3 and parts[0] == "ambientazione" and parts[1] == "luoghi":
+            bucket = luoghi
+        else:
+            continue
+
+        raw_text = entry.source_path.read_text(encoding="utf-8")
+        visual_ref = extract_visual_reference(raw_text)
+        if visual_ref is None:
+            continue
+
+        fallback_title = sanitize_heading_text(rp.stem.replace("-", " "))
+        title, _ = extract_title(raw_text, fallback_title)
+        bucket.append(
+            {
+                "id": rp.stem,
+                "label": title,
+                "subtitle": prompt_subtitle_for_entry(rp, raw_text),
+                "visualRef": visual_ref,
+            }
+        )
+
+    label_key = lambda item: item["label"].lower()
+    return {
+        "luoghi": sorted(luoghi, key=label_key),
+        "personaggi": sorted(
+            personaggi, key=lambda item: natural_sort_key(item["label"])
+        ),
+        "png": sorted(png, key=label_key),
+    }
+
+
+def write_prompt_tool_assets(output_dir: Path, catalog: dict[str, list[dict]]) -> None:
+    if not PROMPT_PAGE_BODY_PATH.is_file():
+        raise FileNotFoundError(
+            f"Manca {PROMPT_PAGE_BODY_PATH}: corpo HTML della pagina Compositore prompt."
+        )
+
+    assets_dir = output_dir / "assets"
+    assets_dir.mkdir(parents=True, exist_ok=True)
+    (assets_dir / "prompt-data.json").write_text(
+        json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    body_html = PROMPT_PAGE_BODY_PATH.read_text(encoding="utf-8").strip() + "\n"
+    script_tag = (
+        f'<script src="{liquid_rel_jekyll(PROMPT_SCRIPT_PUBLIC_PATH)}" defer></script>\n'
+    )
+    prompt_index = output_dir / "prompt" / "index.md"
+    prompt_index.parent.mkdir(parents=True, exist_ok=True)
+    prompt_index.write_text(
+        front_matter(
+            title="Compositore prompt",
+            route="/prompt/",
+            collection_label="Strumenti",
+            source_path=Path("tools/pubblicazione/prompt-page-body.html"),
+        )
+        + body_html
+        + "\n"
+        + script_tag,
+        encoding="utf-8",
+    )
+
+
 def format_section(title: str, body: str) -> str:
     clean_body = body.strip()
     return f"## {title}\n\n{clean_body}\n"
@@ -938,6 +1074,7 @@ def write_layout(output_dir: Path) -> None:
                   <a href="{{ '/resoconti/' | relative_url }}">Resoconti</a>
                   <a href="{{ '/png/' | relative_url }}">PNG</a>
                   <a href="{{ '/luoghi/' | relative_url }}">Luoghi</a>
+                  <a href="{{ '/prompt/' | relative_url }}">Compositore prompt</a>
                 </nav>
               </aside>
               <div class="site-content">
@@ -1070,6 +1207,10 @@ def copy_pubblicazione_assets(output_dir: Path) -> None:
         raise FileNotFoundError(
             "Manca tools/pubblicazione/assets/site.js (filtri hub PNG del sito pubblico)."
         )
+    if not (PUBBLICAZIONE_ASSETS_DIR / "prompt-page.js").is_file():
+        raise FileNotFoundError(
+            "Manca tools/pubblicazione/assets/prompt-page.js (Compositore prompt del sito pubblico)."
+        )
     dest_root = output_dir / "assets"
     dest_root.mkdir(parents=True, exist_ok=True)
     for path in sorted(PUBBLICAZIONE_ASSETS_DIR.rglob("*"), key=lambda p: p.as_posix()):
@@ -1184,12 +1325,16 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
 
     hub_page_count = write_section_hub_pages(output_dir, built_pages, hub_cards, page_og_images)
 
+    prompt_catalog = collect_prompt_catalog(resolved_entries)
+    write_prompt_tool_assets(output_dir, prompt_catalog)
+    prompt_page_count = 1
+
     write_jekyll_config(output_dir, manifest)
     write_layout(output_dir)
     copy_pubblicazione_assets(output_dir)
     (output_dir / "index.md").write_text(render_index(manifest, built_pages), encoding="utf-8")
 
-    return len(built_pages) + hub_page_count, len(referenced_assets)
+    return len(built_pages) + hub_page_count + prompt_page_count, len(referenced_assets)
 
 
 def main() -> None:

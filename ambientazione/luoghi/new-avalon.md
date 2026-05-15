@@ -10,15 +10,13 @@
 
 *Veduta di New Avalon.*
 
-## Descrizione generale
+## Aspetto
 
 New Avalon è la prima città del Nuovo Mondo e la più grande. Fondata da Terralba nel 47.392 C.E. — quattro anni dopo la scoperta del varco planare elfico — sorge alla foce del Grande Fiume, là dove le acque limacciose del Mississippi incontrano il Golfo in un labirinto di canali, isolotti e paludi salmastre. La sua posizione strategica fu evidente al primo capitano elfico che vi gettò l'ancora: un porto naturale immenso, riparato e accessibile sia all'oceano planare sia alla rete fluviale che penetra mezzo continente.
 
 Centocinquantanove anni dopo il Concilio che vi fu firmato nel 47.615 C.E., New Avalon è cresciuta fino a diventare la capitale federale degli Stati Uniti: sede del Congresso, della Banca Federale, dei consolati di Terralba e del Caporalato, dei più grandi cantieri per le navi dell'oceano planare. È nel cuore del Sud ma deve essere la capitale di tutti, e questa contraddizione le scorre dentro come una corrente sotterranea che ogni tanto affiora alla superficie nelle aule del Congresso, nei salotti dei consolati e — più di rado — nelle strade.
 
 La città è caotica, umida, magnifica e corrotta in misura approssimativamente uguale. Chi ci arriva per la prima volta dal Vecchio Mondo si stupisce della sua scala; chi ci vive sa che la scala è la sua condanna e la sua fortuna.
-
-## Aspetto e atmosfera
 
 New Avalon non ha una pianta: ha quartieri stratificati come anelli di un tronco vecchio. Al centro si trova il **Vecchio Quartiere Elfico**, costruito dai fondatori di Terralba con la stessa geometria che si trova nelle città del Vecchio Mondo: arcate di pietra chiara, portici ombreggiati, piazze con fontane circolari, edifici a due piani con balconate in ferro battuto traforato. Qui sopravvive qualcosa della raffinatezza originale — le cucine elfiche, le librerie di pergamene, i caffè dove si gioca a scacchi senza fretta — ma anche qui l'umidità del Golfo ha mangiato gli intonaci e le edere si sono prese le terrazze.
 
@@ -27,6 +25,22 @@ Attorno al nucleo elfico la città è cresciuta per accumulo, decennio dopo dece
 I **moli del Grande Fiume** si stendono per miglia lungo la riva nord della città, divisi in tre settori: quello dell'oceano planare, dove attraccano le grandi navi che arrivano dal Vecchio Mondo; quello fluviale, da cui partono i sidewheel packet come la *Ben Campbell* verso il Middle West; quello commerciale, dove si caricano e scaricano cotone, tabacco, canna da zucchero, e dove avvengono le aste meno discrete della città. Sopra ai moli, su un leggero rilievo che è l'unica altura naturale a chilometri, si erge il **Quartiere del Congresso**: edifici in marmo bianco importato dal Vecchio Mondo, palme ornamentali piantate dagli architetti elfici, e il Campidoglio federale con la sua cupola dorata che si vede arrivando dal mare.
 
 Più in periferia, dove la città si dissolve nelle paludi del delta, esistono quartieri che le mappe ufficiali non mostrano: catapecchie su palafitte, comunità halfling e gnome che si organizzano fuori dai contratti, taverne fluviali raggiungibili solo in barca. La legge federale parla di "zone di emergenza igienica"; chi ci vive le chiama solo casa.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic panoramic view of the largest New World capital at a great river delta meeting a gulf, fantasy-western federal seat (~180k population). Layered districts: Old Elven Quarter center with pale stone arches, shaded porticos, circular fountains, wrought-iron balconies, humidity-damaged plaster and ivy terraces; chaotic New Quarters of three-story wooden houses, verandas, muddy streets, pre-dawn markets. Miles of north-bank wharves in three sectors — ocean-planar tall ships, river sidewheel steamboats, cotton and tobacco commerce. Low bluff Congress Quarter: imported white marble, ornamental palms, federal capitol with golden dome visible from sea approach. Peripheral stilt shanties and boat-only taverns in delta swamp. Gulf brine, steamboat smoke, chewing tobacco, cumin street food, delta mud, dock sweat; teknomagic 19th-century scale; no proper names.
+
+Constraints to preserve:
+
+Cinematically realistic; stratified rings not grid plan; elf colonial core vs human sprawl; federal grandeur above working waterfront; humid corrupt magnificence; planar-ocean and river trade visible.
+
+Details to avoid:
+
+Cartoon or plastic CGI; generic US colonial Williamsburg only; modern city; sterile fantasy elf city; generic illustration.
+```
 
 ## Abitanti e demografia
 

@@ -8,13 +8,11 @@
 
 _Nessuna immagine ancora associata._
 
-## Descrizione generale
+## Aspetto
 
 Trepali sorge la' dove la Via dei Coloni smette di sembrare una lunga esitazione della campagna e comincia ad assumere il tono nervoso della Frontiera. Non e' ancora l'ultima citta', e forse non lo diventera' mai davvero, ma e' l'ultimo posto in cui il disordine del continente prova a darsi un nome, una ricevuta e un prezzo scritto bene.
 
 Le carovane arrivano qui per gli stessi motivi per cui nessuno si fida fino in fondo di questo posto: acqua profonda, spazio per i carri, uomini che comprano e vendono carta con l'aria di vendere futuro. A Trepali si registrano lotti, si comprano provviste, si cercano braccia, si rimettono ferri ai muli, si sentono voci sui filoni di rame e sulle piste che si stanno aprendo piu' a ovest. Molta gente la chiama citta' con un mezzo sorriso, ma ci torna lo stesso.
-
-## Aspetto e atmosfera
 
 La prima cosa che si vede da lontano non sono le case, ma i **tre pali** che danno nome al luogo: tronchi alti, scortecciati, infissi anni fa accanto al primo pozzo comune e mai piu' abbattuti, ormai piu' simbolo che struttura. Attorno a loro la citta' si e' allargata in fretta e male, con la logica di chi inchioda tavole prima di avere deciso se restera' per l'inverno.
 
@@ -23,6 +21,22 @@ Il centro e' una lunga strada di terra battuta cosi' larga da sembrare esagerata
 Una cicatrice di terra rialzata taglia l'abitato da nord a sud-ovest: e' il **tracciato promesso della ferrovia**, ancora senza rotaie, con pali, picchetti e qualche tratto di massicciata lasciato a seccare al sole. A nord di quella ferita stanno gli edifici che vogliono sembrare permanenti: uffici in tavole verniciate, un piccolo sportello della Banca Federale, l'albergo migliore, il telegrafo, due studi legali e una cappella dei Santi cosi' nuova che il legno sa ancora di resina. A sud stanno i recinti, le scuderie, la fucina, i magazzini del sale, i piazzali dove si scaricano pelli, grasso, casse di ferramenta e speranze in forma di attrezzi.
 
 L'aria di Trepali cambia odore ogni cento passi: segatura fresca dalle segherie, sudore di cavallo, ferro caldo, sapone rancido, caffe' bruciato, cuoio bagnato, grasso animale e il freddo minerale dell'acqua tirata su dai pozzi profondi. Di sera le lampade a olio addolciscono poco: la citta' non diventa bella al buio, diventa soltanto piu' franca.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic view of a frantic frontier boomtown on the colonist road, Middle West fantasy-western. Three tall peeled logs beside common well as town landmark; hasty board buildings, over-wide dirt main street choked with wagons, livestock, barrels when busy, flour-fine dust or brown mud. Unfinished promised railroad grade cutting town northwest–southeast: stakes, partial roadbed, no rails. North side: painted plank offices, federal bank counter, best hotel, telegraph wires, new resin-smelling chapel. South side: corrals, smithy, salt warehouses, wagon yards with hides and hardware. Oil lamps at dusk; sawdust, horse sweat, hot iron, rancid soap, burnt coffee, wet leather, deep-well water smells implied; no proper names.
+
+Constraints to preserve:
+
+Cinematically realistic; boomtown impermanence vs pretense of permanence; registry house and three poles as identity; railroad scar as social divide; teknomagic-era frontier boom (~4500 stable population feel).
+
+Details to avoid:
+
+Cartoon or plastic CGI; completed railway station; tidy main street western movie set; modern town; generic fantasy illustration.
+```
 
 ## Abitanti e demografia
 

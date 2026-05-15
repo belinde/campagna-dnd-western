@@ -10,19 +10,33 @@
 
 *Veduta di Valdoren.*
 
-## Descrizione generale
+## Aspetto
 
 Valdoren sorge alla confluenza del Grande Fiume e del suo principale tributario occidentale — il punto dove le acque di mezzo continente si uniscono prima di scendere verso New Avalon e il mare. Non è una colonia: non ha avuto padri fondatori, charter reali né piano urbanistico. È cresciuta per accumulo, decennio dopo decennio, attorno ai moli dove le barche a vapore scaricano e caricano merci, alle rimesse dove le carovane si formano prima di partire verso la Frontiera, ai magazzini dove i prodotti agricoli delle grandi pianure aspettano di essere spediti verso est.
 
 Questa origine spontanea le ha dato un carattere che nessuna città della East Coast possiede: qui non si chiede da dove vieni. Si chiede cosa sai fare e se sei in grado di pagare il conto.
-
-## Aspetto e atmosfera
 
 Il porto fluviale è il cuore pulsante della città — un chilometro di moli in legno e pietra dove le steamboat ormeggiano tre o quattro per volta, riversando passeggeri, casse, bestiame e fumo nero nell'aria già satura del fiume. L'odore di Valdoren è tabacco, catrame, letame e cucina di strada, mescolati in proporzioni che cambiano a seconda del vento.
 
 La città sale dal porto verso l'interno in strade sempre più larghe e meno fangose. Vicino all'acqua si trovano le taverne, i bordelli, i banchi dei cambiavalute e i depositi doganali. Salendo, compaiono le prime strade lastricate, gli uffici delle compagnie di trasporto, la sede della Banca Federale, il mercato coperto dove si trattano le concessioni minerarie. Più in alto ancora, su un leggero pianoro che guarda il fiume, la parte residenziale dei mercanti benestanti — case in mattoni con finestre a ghigliottina e porticati ombreggiati.
 
 Le reclute della Frontiera si riconoscono dai vestiti ancora puliti. Ci rimangono per un giorno al massimo.
+
+## Riferimento visivo
+
+```text
+Image prompt:
+
+Cinematically realistic wide view of a spontaneous river-port city at the confluence of a great muddy river and western tributary, Middle West fantasy-western (~40k population feel). Kilometer of wood-and-stone wharves with sidewheel steamboats belching black smoke; chaotic waterfront: taverns, warehouses, currency booths, customs sheds. City rises inland: mud streets near water, then cobbled avenues, transport company offices, federal bank building, covered mining-claim market; brick merchant houses with sash windows and shaded arcades on low bluff overlooking river. Tobacco, tar, manure, street-food smoke in humid air; frontier recruits in still-clean clothes; teknomagic-era 19th-century frontier scale; no proper names.
+
+Constraints to preserve:
+
+Cinematically realistic; organic unplanned growth not colonial grid; river as economic heart; layered social strata visible in street quality uphill; steamboat and wagon-trade frontier hub.
+
+Details to avoid:
+
+Cartoon or plastic CGI; medieval walled town; modern skyline; generic European old town; videogame HUD; generic fantasy illustration.
+```
 
 ## Economia e commercio
 
