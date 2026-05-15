@@ -242,12 +242,14 @@ def render_section_hub_index(
     in_section = [p for p in built_pages if public_sidebar_section(p) == section_key]
     ordered = sort_pages_for_section(section_key, in_section)
     grid_class = "card-grid card-grid--personaggi" if section_key == "personaggi" else "card-grid"
+    start_reading_route = "/resoconti/sessione-001/" if section_key == "resoconti" else None
     lines = [
         front_matter(
             title=hub_title,
             route=hub_route,
             collection_label="",
             source_path=source_path,
+            start_reading_route=start_reading_route,
         ),
         f'<div class="{grid_class}">',
     ]

@@ -125,7 +125,12 @@ def write_layout(output_dir: Path) -> None:
                           {% endif %}
                         </div>
                         {% else %}
-                        <h1>{{ page.title }}</h1>
+                        <div class="page-header-title-row">
+                          <h1>{{ page.title }}</h1>
+                          {% if page.start_reading_route %}
+                          <a class="page-header-start-reading" href="{{ page.start_reading_route | relative_url }}">Comincia la lettura</a>
+                          {% endif %}
+                        </div>
                         {% endif %}
                       </header>
                       {% endif %}
@@ -162,6 +167,7 @@ def front_matter(
     session_num: int | None = None,
     session_nav_prev: SessionNavLink | None = None,
     session_nav_next: SessionNavLink | None = None,
+    start_reading_route: str | None = None,
 ) -> str:
     lines = [
         "---",
@@ -191,6 +197,8 @@ def front_matter(
         lines.append(f"session_nav_next_route: {yaml_string(session_nav_next.route)}")
         lines.append(f"session_nav_next_label: {yaml_string(session_nav_next.label)}")
         lines.append(f"session_nav_next_title: {yaml_string(session_nav_next.title_attr)}")
+    if start_reading_route:
+        lines.append(f"start_reading_route: {yaml_string(start_reading_route)}")
     lines.append("---")
     return "\n".join(lines) + "\n\n"
 

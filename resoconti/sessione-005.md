@@ -12,7 +12,7 @@ All’alba la carovana di Hector Brannagh lascia Valdoren: Hector dirige dalla t
 
 ![Gud Bender addormenta il ladruncolo halfling accanto alla carovana](/immagini/eventi/sessione-005/gud-bender-addormenta-il-ladruncolo.jpg)
 
-*Gud Bender abbatte con Sonno il ragazzino halfling che aveva appena rubato il fagotto di una famiglia della carovana.*
+*Gud Bender addormenta con Sonno il ragazzino halfling nell'erba alta ai margini della strada, recupera il sacco rubato e gli lascia due dollari in tasca.*
 
 ### Dorothy nella botola
 
