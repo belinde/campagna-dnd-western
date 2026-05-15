@@ -16,9 +16,9 @@ La scena alla Fattoria Mercer si conclude: **Kelvor Rivib** ricostruisce la dina
 
 ### Kelvor sotterra i Mercer
 
-![Kelvor Rivib scava la fossa per Henry e Martha Mercer alla fattoria](/immagini/eventi/sessione-006/kelvor-sotterra-i-mercer.jpg)
+![Kelvor Rivib e Dora l'Esploratrice scavano le tombe di Henry e Martha Mercer alla fattoria](/immagini/eventi/sessione-006/kelvor-sotterra-i-mercer.jpg)
 
-*Kelvor Rivib seppellisce Henry e Martha Mercer alla Fattoria Mercer dopo l'assalto dei briganti.*
+*Kelvor e Dora danno sepoltura a Henry e Martha Mercer alla Fattoria Mercer dopo l'assalto dei briganti.*
 
 ## Eventi principali
 

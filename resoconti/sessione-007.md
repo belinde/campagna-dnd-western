@@ -20,6 +20,12 @@ Dopo aver lasciato la Fattoria Mercer, la carovana di Hector Brannagh riprende i
 
 *Alla Fattoria Barlow, Leman tenta in disparte di convincere Mae a dare fuoco ai carri dei cacciatori; spaventata, la ragazza torna in fretta verso il pozzo mentre Dora origlia da lontano.*
 
+### Calma tra i carri
+
+![Kelvor Rivib affila la lama della sua spada nel cortile fangoso della Fattoria Barlow](/immagini/eventi/sessione-007/kelvor-affila-spada-fattoria-barlow.jpg)
+
+*Alla Fattoria Barlow, Kelvor Rivib trova un attimo di tranquillità ad affilare la lama della spada, mentre l’accampamento della carovana e la presenza dei cacciatori mantengono l’atmosfera tesa.*
+
 ## Eventi principali
 
 La carovana lasciò la Fattoria Mercer con più lentezza del previsto. Prima di ripartire, gli uomini recuperarono dalle scorte dei Mercer tutto ciò che poteva ancora servire al viaggio: provviste, attrezzi, qualche animale, il poco che una famiglia spezzata non avrebbe più potuto reclamare. Intanto **Dorothy Mercer**, ancora ferita ma non più sola, restava sotto la tutela degli **Halverson**, che ormai la tenevano con sé come una figlia raccolta dalla disgrazia.
