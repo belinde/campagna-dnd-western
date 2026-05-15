@@ -18,22 +18,22 @@
 
 ## Aspetto
 
-Mezzelfo sulla quarantina, orecchie appuntite e capelli biondo dorato lunghi sotto il berretto da capitano. Uniforme da ponte scura con ricami dorati e cravatta rossa; sul fiume si muove come se la nave fosse un'estensione del proprio corpo.
+Mezzelfo sulla quarantina, orecchie appuntite; capelli mossi castano chiaro alle spalle e barba curata dello stesso tono, occhi azzurri intensi; un orecchino a cerchio dorato. Berretto nero da capitano con fascetta intrecciata dorata e emblema ad ancora; cappotto da ponte marrone scuro con ricami dorati su revers e paramani e grossi bottoni d'ottone, gilet verde bosco su camicia bianca, cravatta rosso cupo fermata da piccolo charm ad ancora d'oro; cintura in cuoio scuro con fibbia squadrata e borsello. In piedi al timone di legno e ottone sul ponte aperto, con piroscafo sul fiume e foschia sulle rive nella calda luce di alba o tramonto; postura ferma e sguardo rivolto lontano, da uomo che legge corrente e nebbia meglio di una carta.
 
 ## Riferimento visivo
 
 ```text
 Image prompt:
 
-Cinematically realistic waist-up portrait of a handsome half-elf man in his forties, pointed ears with small gold hoops, long wavy golden-blond hair, neat light beard, intense green-blue eyes. Black captain's cap with gold star and braid; dark brown double-breasted coat with gold embroidery and brass buttons over white shirt, dark green vest, vivid red cravat, gold anchor pendant, leather belt with brass buckle and pouch. At the ship's wheel on an open deck, river mist and steamboat smokestacks soft in background, daylight or warm dusk; commanding calm posture. Fantasy-steamboat weird-west, cinematically realistic.
+Cinematically realistic waist-up portrait of a half-elf riverboat captain in his forties at the ship’s wheel on an open deck, adult human-range height and build, pointed ears, shoulder-length wavy light brown hair, neat light brown beard and mustache, piercing blue eyes, calm focused expression gazing into the distance (not at camera). Single gold hoop earring. Black peaked captain’s hat with gold braided band and gold anchor emblem on the front; heavy dark brown bridge coat with ornate gold-thread embroidery on lapels and cuffs, large circular brass buttons, forest-green textured vest with smaller brass buttons over a crisp white collared shirt, deep red cravat or neckerchief with a small detailed gold anchor charm. Large traditional wooden ship’s wheel with brass fittings; wide calm river, low morning mist along the far treeline, multi-deck paddle steamer behind with tall black smokestacks venting pale smoke. Soft warm golden-hour light, shallow depth of field, natural skin and fabric texture; fantasy–American frontier steamboat era, understated industrial brass and weathered wood, quietly authoritative mood.
 
 Constraints to preserve:
 
-Half-elf ears and height near human adult; cinematically realistic; captain uniform, river helm; mezzelfo, not full elf caricature.
+Half-elf ears; medium humanoid proportions (not taller than a typical human sailor); captain at helm on river vessel; cinematically realistic live-action photography, not illustration.
 
 Details to avoid:
 
-Cartoon or plastic CGI; human ears; modern naval dress without fantasy-western grit; dramatic night ambush lighting only.
+Cartoon, comic ink, plastic videogame CGI, or generic fantasy illustration; human ears only; modern naval or sci-fi costume; elven forest robes instead of the bridge coat; cheesy lens flare; pure night-combat or lantern-only gloom as the sole look; neon-saturated grading.
 ```
 
 ## Personalità
