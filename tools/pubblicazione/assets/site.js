@@ -1,4 +1,30 @@
 (function () {
+  function initSalientMediaCards() {
+    document.querySelectorAll(".salient-media-card__media img").forEach((img) => {
+      const card = img.closest(".salient-media-card");
+      if (!card) {
+        return;
+      }
+
+      function applyOrientation() {
+        if (!img.naturalWidth) {
+          return;
+        }
+        const landscape = img.naturalWidth >= img.naturalHeight;
+        card.classList.toggle("salient-media-card--landscape", landscape);
+        card.classList.toggle("salient-media-card--portrait", !landscape);
+      }
+
+      if (img.complete) {
+        applyOrientation();
+      } else {
+        img.addEventListener("load", applyOrientation, { once: true });
+      }
+    });
+  }
+
+  initSalientMediaCards();
+
   const hub = document.querySelector("[data-png-hub]");
   if (!hub) {
     return;

@@ -46,6 +46,14 @@ IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((/immagini/[^)\s]+)\)")
 OG_IMAGE_IN_PUBLIC_MD_RE = re.compile(
     r"!\[[^\]]*\]\(\{\{\s*'(/[^']+)'\s*\|\s*relative_url\s*\}\}\)"
 )
+OG_IMAGE_IN_SALIENT_HTML_RE = re.compile(
+    r'<img\s+[^>]*\bsrc="\{\{\s*\'(/[^\'"]+)\'\s*\|\s*relative_url\s*\}\}"',
+    re.IGNORECASE,
+)
+PUBLIC_IMAGE_MD_RE = re.compile(
+    r"^!\[([^\]]*)\]\(\{\{\s*'(/[^']+)'\s*\|\s*relative_url\s*\}\}\)\s*$"
+)
+SALIENT_IMAGE_SECTIONS = frozenset({"Immagine", "Immagini salienti"})
 SESSION_LINK_RE = re.compile(r"\[(Sessione (\d{3}))\](?!\()")
 ENTITY_BULLET_RE = re.compile(r"^(\s*-\s+\*\*)([^*]+)(\*\*.*)$")
 
@@ -101,6 +109,13 @@ class HubCardInfo:
     regione: str = ""
     ambito: str = ""
     promemoria: str = ""
+
+
+@dataclass(frozen=True)
+class SessionNavLink:
+    route: str
+    label: str
+    title_attr: str
 
 
 def parse_args() -> argparse.Namespace:
@@ -278,6 +293,60 @@ def session_badge_number(page: PageEntry, meta: HubCardInfo) -> int | None:
         return meta.session_num
     m = re.match(r"sessione-(\d+)", page.relative_path.stem, re.IGNORECASE)
     return int(m.group(1)) if m else None
+
+
+def session_number_from_path(relative_path: Path) -> int | None:
+    if relative_path.parts[0] != "resoconti":
+        return None
+    match = re.match(r"sessione-(\d+)", relative_path.stem, re.IGNORECASE)
+    return int(match.group(1)) if match else None
+
+
+def session_nav_short_label(session_num: int) -> str:
+    return f"Sessione {session_num:03d}"
+
+
+def session_nav_full_title(session_num: int, meta: HubCardInfo, fallback_title: str) -> str:
+    episode = meta.episode_title.strip()
+    if episode:
+        return f"Sessione {session_num:03d} — {episode}"
+    return fallback_title.strip() or session_nav_short_label(session_num)
+
+
+def build_session_chapter_nav(
+    built_pages: list[PageEntry],
+    hub_cards: dict[Path, HubCardInfo],
+) -> dict[int, tuple[SessionNavLink | None, SessionNavLink | None]]:
+    """Per ogni numero sessione pubblicata, link a precedente e successiva (se esistono)."""
+    ordered: list[tuple[int, PageEntry]] = []
+    for page in built_pages:
+        session_num = session_number_from_path(page.relative_path)
+        if session_num is not None:
+            ordered.append((session_num, page))
+    ordered.sort(key=lambda item: item[0])
+
+    navigation: dict[int, tuple[SessionNavLink | None, SessionNavLink | None]] = {}
+    for index, (session_num, page) in enumerate(ordered):
+        prev_link: SessionNavLink | None = None
+        next_link: SessionNavLink | None = None
+        if index > 0:
+            prev_num, prev_page = ordered[index - 1]
+            prev_meta = hub_cards.get(prev_page.relative_path, HubCardInfo())
+            prev_link = SessionNavLink(
+                route=prev_page.route,
+                label=session_nav_short_label(prev_num),
+                title_attr=session_nav_full_title(prev_num, prev_meta, prev_page.title),
+            )
+        if index + 1 < len(ordered):
+            next_num, next_page = ordered[index + 1]
+            next_meta = hub_cards.get(next_page.relative_path, HubCardInfo())
+            next_link = SessionNavLink(
+                route=next_page.route,
+                label=session_nav_short_label(next_num),
+                title_attr=session_nav_full_title(next_num, next_meta, next_page.title),
+            )
+        navigation[session_num] = (prev_link, next_link)
+    return navigation
 
 
 def png_card_search_blob(page: PageEntry, meta: HubCardInfo) -> str:
@@ -866,9 +935,73 @@ def rewrite_image_links(markdown_text: str) -> tuple[str, set[str]]:
     return IMAGE_RE.sub(replacer, markdown_text), images
 
 
+def is_salient_image_caption_line(line: str) -> bool:
+    stripped = line.strip()
+    return bool(stripped) and stripped.startswith("*") and stripped.endswith("*")
+
+
+def render_salient_media_card_html(alt: str, asset_path: str, caption_md: str | None) -> str:
+    alt_esc = html.escape(alt)
+    src_liquid = f"{{{{ '{asset_path}' | relative_url }}}}"
+    caption_block = ""
+    if caption_md:
+        caption_block = (
+            f'\n  <figcaption class="salient-media-card__caption" markdown="1">\n\n'
+            f"{caption_md.strip()}\n\n"
+            f"  </figcaption>"
+        )
+    return (
+        f'<figure class="salient-media-card">\n'
+        f'  <div class="salient-media-card__media">\n'
+        f'    <img src="{src_liquid}" alt="{alt_esc}" loading="lazy" decoding="async">\n'
+        f"  </div>{caption_block}\n"
+        f"</figure>"
+    )
+
+
+def wrap_salient_image_blocks(markdown_text: str) -> str:
+    """Converte immagine + didascalia nelle sezioni salienti in card HTML full width."""
+    lines = markdown_text.splitlines()
+    output: list[str] = []
+    current_h2: str | None = None
+    index = 0
+
+    while index < len(lines):
+        line = lines[index]
+        heading = HEADING_RE.match(line)
+        if heading and len(heading.group(1)) == 2:
+            current_h2 = sanitize_heading_text(heading.group(2))
+            output.append(line)
+            index += 1
+            continue
+
+        if current_h2 in SALIENT_IMAGE_SECTIONS:
+            image_match = PUBLIC_IMAGE_MD_RE.match(line)
+            if image_match:
+                alt_text, asset_path = image_match.groups()
+                next_index = index + 1
+                if next_index < len(lines) and not lines[next_index].strip():
+                    next_index += 1
+                caption_line: str | None = None
+                if next_index < len(lines) and is_salient_image_caption_line(lines[next_index]):
+                    caption_line = lines[next_index]
+                    next_index += 1
+                output.append(render_salient_media_card_html(alt_text, asset_path, caption_line))
+                index = next_index
+                continue
+
+        output.append(line)
+        index += 1
+
+    return "\n".join(output).strip() + "\n"
+
+
 def first_og_image_path_from_body(markdown_text: str) -> str | None:
-    """Primo path immagine nel markdown dopo rewrite_image_links (URL path con / iniziale)."""
+    """Primo path immagine nel corpo pubblicato (markdown o card salient HTML)."""
     match = OG_IMAGE_IN_PUBLIC_MD_RE.search(markdown_text)
+    if match:
+        return match.group(1)
+    match = OG_IMAGE_IN_SALIENT_HTML_RE.search(markdown_text)
     return match.group(1) if match else None
 
 
@@ -1145,11 +1278,33 @@ def write_layout(output_dir: Path) -> None:
                   <div class="content-wrap">
                     <article class="page-card">
                       {% if page.show_title != false %}
-                      <header class="page-header">
+                      <header class="page-header{% if page.session_num %} page-header--session{% endif %}">
                         {% if page.collection_label %}
                         <p class="eyebrow">{{ page.collection_label }}</p>
                         {% endif %}
+                        {% if page.session_num %}
+                        <div class="session-chapter-nav" aria-label="Navigazione tra sessioni">
+                          {% if page.session_nav_prev_route %}
+                          <a class="session-chapter-nav__link session-chapter-nav__link--prev" href="{{ page.session_nav_prev_route | relative_url }}" title="{{ page.session_nav_prev_title | escape }}">
+                            <span class="session-chapter-nav__arrow" aria-hidden="true">←</span>
+                            <span class="session-chapter-nav__text">{{ page.session_nav_prev_label }}</span>
+                          </a>
+                          {% else %}
+                          <span class="session-chapter-nav__spacer" aria-hidden="true"></span>
+                          {% endif %}
+                          <h1>{{ page.title }}</h1>
+                          {% if page.session_nav_next_route %}
+                          <a class="session-chapter-nav__link session-chapter-nav__link--next" href="{{ page.session_nav_next_route | relative_url }}" title="{{ page.session_nav_next_title | escape }}">
+                            <span class="session-chapter-nav__text">{{ page.session_nav_next_label }}</span>
+                            <span class="session-chapter-nav__arrow" aria-hidden="true">→</span>
+                          </a>
+                          {% else %}
+                          <span class="session-chapter-nav__spacer" aria-hidden="true"></span>
+                          {% endif %}
+                        </div>
+                        {% else %}
                         <h1>{{ page.title }}</h1>
+                        {% endif %}
                       </header>
                       {% endif %}
                       <div class="page-content">
@@ -1182,6 +1337,9 @@ def front_matter(
     hero_image: str | None = None,
     home_full_bleed: bool = False,
     png_hub: bool = False,
+    session_num: int | None = None,
+    session_nav_prev: SessionNavLink | None = None,
+    session_nav_next: SessionNavLink | None = None,
 ) -> str:
     lines = [
         "---",
@@ -1201,6 +1359,16 @@ def front_matter(
         lines.append(f"hero_image: {yaml_string(hero_image)}")
     if home_full_bleed:
         lines.append("home_full_bleed: true")
+    if session_num is not None:
+        lines.append(f"session_num: {session_num}")
+    if session_nav_prev:
+        lines.append(f"session_nav_prev_route: {yaml_string(session_nav_prev.route)}")
+        lines.append(f"session_nav_prev_label: {yaml_string(session_nav_prev.label)}")
+        lines.append(f"session_nav_prev_title: {yaml_string(session_nav_prev.title_attr)}")
+    if session_nav_next:
+        lines.append(f"session_nav_next_route: {yaml_string(session_nav_next.route)}")
+        lines.append(f"session_nav_next_label: {yaml_string(session_nav_next.label)}")
+        lines.append(f"session_nav_next_title: {yaml_string(session_nav_next.title_attr)}")
     lines.append("---")
     return "\n".join(lines) + "\n\n"
 
@@ -1323,7 +1491,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
     built_pages: list[PageEntry] = []
     referenced_assets: set[str] = set()
     page_og_images: dict[Path, str | None] = {}
-    pending_page_writes: list[tuple[Path, PageEntry, str, str]] = []
+    pending_page_writes: list[tuple[Path, PageEntry, str, str, str | None]] = []
 
     for prepared in prepared_pages:
         entry = prepared.entry
@@ -1332,6 +1500,8 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
         body = rewrite_session_links(body)
         body = rewrite_section_entity_links(body, entity_route_lookup)
         body, assets = rewrite_image_links(body)
+        og_image = first_og_image_path_from_body(body)
+        body = wrap_salient_image_blocks(body)
         referenced_assets.update(assets)
 
         if entry.relative_path.parts[0] == "resoconti" and entry.relative_path.name.lower().startswith(
@@ -1340,7 +1510,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
             body = strip_h2_section(body, "Riassunto")
 
         destination = output_dir / entry.relative_path
-        pending_page_writes.append((destination, entry, title, body))
+        pending_page_writes.append((destination, entry, title, body, og_image))
 
         built_pages.append(
             PageEntry(
@@ -1364,14 +1534,21 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
         )
 
     referenced_assets.add(HOME_HERO_ASSET)
+    session_chapter_nav = build_session_chapter_nav(built_pages, hub_cards)
 
     for asset in sorted(referenced_assets):
         copy_asset(asset, output_dir)
         write_thumbnail_for_asset(asset, output_dir)
 
-    for destination, entry, title, body in pending_page_writes:
+    for destination, entry, title, body, og_image in pending_page_writes:
         body_pub = body
-        og_image = first_og_image_path_from_body(body_pub)
+        session_num = session_number_from_path(entry.relative_path)
+        session_nav_prev: SessionNavLink | None = None
+        session_nav_next: SessionNavLink | None = None
+        if session_num is not None:
+            session_nav_prev, session_nav_next = session_chapter_nav.get(
+                session_num, (None, None)
+            )
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(
             front_matter(
@@ -1380,6 +1557,9 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
                 collection_label=entry.label,
                 source_path=entry.relative_path,
                 og_image=og_image,
+                session_num=session_num,
+                session_nav_prev=session_nav_prev,
+                session_nav_next=session_nav_next,
             )
             + body_pub,
             encoding="utf-8",
