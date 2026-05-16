@@ -40,5 +40,3 @@ class HubCardInfo:
 @dataclass(frozen=True)
 class SessionNavLink:
     route: str
-    label: str
-    title_attr: str

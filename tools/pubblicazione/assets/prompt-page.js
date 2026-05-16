@@ -607,6 +607,133 @@
       : "Completa la descrizione della scena in inglese.";
   }
 
+  const INTIMATE_SCENE_PATTERNS = [
+    /\b(?:tea|drawing|dining|living|bed|ball|smoking)\s+room\b/i,
+    /\b(?:interior|indoors|inside)\b/i,
+    /\b(?:parlor|parlour|salon|chamber|alcove|nook)\b/i,
+    /\b(?:kitchen|bedroom|corridor|hallway|passage|foyer|vestibule)\b/i,
+    /\b(?:office|study|library|cellar|attic|basement|storeroom)\b/i,
+    /\b(?:tavern|inn|saloon)\s+(?:interior|inside|room)\b/i,
+    /\b(?:cabin|barn|stable|shed)\s+(?:interior|inside)\b/i,
+    /\b(?:booth|pew|counter|bar\s+interior)\b/i,
+    /\bat\s+the\s+table\b/i,
+    /\baround\s+the\s+table\b/i,
+    /\bclose[- ]?up\b/i,
+    /\bsmall\s+room\b/i,
+    /\bconfined\s+space\b/i,
+  ];
+
+  const WIDE_SCENE_PATTERNS = [
+    /\bcityscape\b/i,
+    /\bpanorama\b/i,
+    /\baerial\b/i,
+    /\bbird['']?s[- ]?eye\b/i,
+    /\bestablishing\s+shot\b/i,
+    /\bskyline\b/i,
+    /\bentire\s+city\b/i,
+    /\bwhole\s+(?:city|town)\b/i,
+    /\bwide\s+(?:shot|view|angle|establishing)\b/i,
+    /\boverlooking\s+the\s+(?:city|town|harbor|harbour|river|plains)\b/i,
+    /\bfrom\s+above\b/i,
+    /\b(?:riverfront|waterfront|harbor|harbour)\s+at\s+(?:dusk|dawn|sunset|sunrise)\b/i,
+  ];
+
+  function classifySceneFraming(sceneText) {
+    const text = (sceneText || "").trim();
+    if (!text) {
+      return "neutral";
+    }
+    let intimate = false;
+    let wide = false;
+    for (const pattern of INTIMATE_SCENE_PATTERNS) {
+      if (pattern.test(text)) {
+        intimate = true;
+        break;
+      }
+    }
+    for (const pattern of WIDE_SCENE_PATTERNS) {
+      if (pattern.test(text)) {
+        wide = true;
+        break;
+      }
+    }
+    if (intimate && !wide) {
+      return "intimate";
+    }
+    if (wide && !intimate) {
+      return "wide";
+    }
+    if (intimate && wide) {
+      return "neutral";
+    }
+    return "neutral";
+  }
+
+  function locationScaleOf(luogo) {
+    const scale = luogo && luogo.locationScale;
+    if (scale === "compact" || scale === "settlement" || scale === "city") {
+      return scale;
+    }
+    return "settlement";
+  }
+
+  function settingWeightPrefix(sceneFraming, locationScale) {
+    if (sceneFraming === "intimate") {
+      if (locationScale === "compact") {
+        return "binding reference — match this small location's architecture, materials, and mood; Scene defines the moment, poses, and room details: ";
+      }
+      return "evocative reference only — mood, era, materials, and palette; do NOT recreate city-wide layout or wide establishing view; Scene defines the actual room and framing: ";
+    }
+    if (sceneFraming === "wide") {
+      if (locationScale === "compact") {
+        return "binding reference — this small location defines the environment; fuse with Scene into one view: ";
+      }
+      return "primary environment — merge with Scene into one continuous wide view: ";
+    }
+    if (locationScale === "compact") {
+      return "binding reference — this small location defines the environment; Scene adds action and figures: ";
+    }
+    return "context reference — setting supplies place and atmosphere; Scene has priority for action and figures: ";
+  }
+
+  function compositionLines(sceneFraming, isLongPrompt) {
+    const base = [
+      "Composition: ONE single continuous photograph, one camera setup, one moment in time; all figures and environment share the same lighting and depth of field.",
+      "Do NOT render split screen, comic panels, diptych, triptych, storyboard strip, collage, or multiple unrelated shots.",
+    ];
+    if (isLongPrompt) {
+      base.push(
+        "Integrate Scene, Setting, and every character below into this ONE frame — not separate chapters or panels to illustrate in sequence."
+      );
+    }
+    if (sceneFraming === "intimate") {
+      base.push(
+        "Keep a single interior or contained framing; do not pull back to a city-wide or landscape establishing shot unless Scene explicitly asks for it."
+      );
+    }
+    return base;
+  }
+
+  function estimatePromptLength(scene, luogo, characters) {
+    let len = scene.length;
+    if (luogo && luogo.visualRef && luogo.visualRef.imagePrompt) {
+      len += luogo.visualRef.imagePrompt.length;
+    }
+    for (const c of characters) {
+      if (c.visualRef && c.visualRef.imagePrompt) {
+        len += c.visualRef.imagePrompt.length;
+      }
+    }
+    return len;
+  }
+
+  function isLongPrompt(scene, luogo, characters) {
+    const charsWithPrompt = characters.filter(
+      (c) => c.visualRef && c.visualRef.imagePrompt && !isEmptyRefValue(c.visualRef.imagePrompt)
+    );
+    return estimatePromptLength(scene, luogo, characters) > 900 || charsWithPrompt.length >= 2;
+  }
+
   function updateUnmatchedAlert(sceneText, selected) {
     if (!alertUnmatched || !alertUnmatchedList) {
       return;
@@ -626,13 +753,20 @@
     const lines = ["Image prompt:", ""];
 
     const scene = sceneText.trim();
+    const sceneFraming = classifySceneFraming(scene);
+    const locationScale = locationScaleOf(luogo);
+    const longPrompt = isLongPrompt(scene, luogo, characters);
+
     if (scene) {
       lines.push(`Scene: ${scene}`, "");
     }
 
+    lines.push(...compositionLines(sceneFraming, longPrompt), "");
+
     if (luogo && luogo.visualRef && !isEmptyRefValue(luogo.visualRef.imagePrompt)) {
-      const settingLabel = luogo.label ? `Setting (${luogo.label}):` : "Setting:";
-      lines.push(`${settingLabel} ${luogo.visualRef.imagePrompt.trim()}`, "");
+      const weight = settingWeightPrefix(sceneFraming, locationScale);
+      const namePart = luogo.label ? `Setting (${luogo.label})` : "Setting";
+      lines.push(`${namePart} — ${weight}${luogo.visualRef.imagePrompt.trim()}`, "");
     }
 
     const charsWithPrompt = characters.filter(
@@ -640,7 +774,10 @@
     );
 
     if (charsWithPrompt.length) {
-      lines.push("Characters present:");
+      const charsHeader = longPrompt
+        ? "Characters present (same frame):"
+        : "Characters present:";
+      lines.push(charsHeader);
       for (const c of charsWithPrompt) {
         lines.push(`- ${c.label}: ${c.visualRef.imagePrompt.trim()}`);
       }
@@ -687,6 +824,10 @@
       "no plastic CGI",
       "no generic fantasy illustration",
       "no videogame HUD look",
+      "no split screen",
+      "no multi-panel layout",
+      "no storyboard",
+      "no comic strip",
     ];
     for (const item of globalAvoids) {
       if (!avoidBullets.some((line) => line.toLowerCase().includes(item))) {
@@ -795,8 +936,14 @@
 
     for (const indicator of stepIndicators) {
       const n = Number(indicator.getAttribute("data-step-indicator"));
-      indicator.classList.toggle("prompt-wizard-step-indicator--active", n === step);
-      indicator.classList.toggle("prompt-wizard-step-indicator--done", n < step);
+      const isActive = n === step;
+      indicator.classList.toggle("prompt-wizard-breadcrumb-item--active", isActive);
+      indicator.classList.toggle("prompt-wizard-breadcrumb-item--done", n < step);
+      if (isActive) {
+        indicator.setAttribute("aria-current", "step");
+      } else {
+        indicator.removeAttribute("aria-current");
+      }
     }
 
     if (prevBtn) {

@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 from png_catalog import region_bucket
 
 from public_site.constants import (
     META_CLASSE_RE,
+    META_POPOLAZIONE_RE,
     META_RAZZA_RE,
     META_REGIONE_RE,
     META_RUOLO_RE,
@@ -37,6 +39,65 @@ def prompt_search_blob(
 ) -> str:
     parts = (label, subtitle, description, promemoria, ambito, regione_raw)
     return " ".join(p for p in parts if p).casefold()
+
+
+_COMPACT_TIPO_MARKERS = (
+    "fattoria",
+    "cascina",
+    "podere",
+    "mulino",
+    "homestead",
+    "farmstead",
+)
+_COMPACT_TIPO_EXACT = ("casa", "famiglia")
+_CITY_TIPO_MARKERS = ("città", "citta", "capitale", "metropoli")
+
+
+def parse_population_number(popolazione: str) -> int | None:
+    """Estrae il numero abitanti principale da **Popolazione:** (es. ~40.000)."""
+    text = (popolazione or "").strip()
+    if not text:
+        return None
+    family_match = re.search(
+        r"\((\d+)\s*(?:persone|abitanti|people)\)", text, re.IGNORECASE
+    )
+    if family_match:
+        return int(family_match.group(1))
+    numbers: list[int] = []
+    for raw in re.findall(r"[\d][\d.,]*", text):
+        digits = re.sub(r"[^\d]", "", raw)
+        if not digits:
+            continue
+        numbers.append(int(digits))
+    if not numbers:
+        return None
+    return max(numbers)
+
+
+def infer_location_scale(tipo: str, popolazione: str) -> str:
+    """compact | settlement | city — per gerarchia Setting nel generatore prompt."""
+    tipo_cf = (tipo or "").casefold()
+    pop_cf = (popolazione or "").casefold()
+    pop_num = parse_population_number(popolazione)
+
+    if pop_num is not None and pop_num < 50:
+        return "compact"
+    for marker in _COMPACT_TIPO_MARKERS:
+        if marker in tipo_cf:
+            return "compact"
+    for marker in _COMPACT_TIPO_EXACT:
+        if re.search(rf"\b{re.escape(marker)}\b", tipo_cf):
+            return "compact"
+    if "famiglia" in pop_cf and (pop_num is None or pop_num < 50):
+        return "compact"
+
+    for marker in _CITY_TIPO_MARKERS:
+        if marker in tipo_cf:
+            return "city"
+    if pop_num is not None and pop_num >= 5000:
+        return "city"
+
+    return "settlement"
 
 
 def prompt_subtitle_for_entry(relative_path: Path, raw_text: str) -> str:
@@ -91,6 +152,8 @@ def collect_prompt_catalog(entries: list[PageEntry], output_dir: Path) -> dict[s
         regione_raw = ""
         promemoria = ""
         ambito = ""
+        tipo_luogo = ""
+        popolazione = ""
         description = subtitle
 
         if kind == "png":
@@ -100,6 +163,8 @@ def collect_prompt_catalog(entries: list[PageEntry], output_dir: Path) -> dict[s
             description = promemoria or subtitle
         elif kind == "luogo":
             regione_raw = meta_line_first(META_REGIONE_RE, raw_text)
+            tipo_luogo = meta_line_first(META_TIPO_RE, raw_text)
+            popolazione = meta_line_first(META_POPOLAZIONE_RE, raw_text)
 
         regione_bucket_val = region_bucket(regione_raw) if regione_raw.strip() else ""
         og_path = first_image_path_from_markdown(raw_text)
@@ -124,6 +189,10 @@ def collect_prompt_catalog(entries: list[PageEntry], output_dir: Path) -> dict[s
             item["thumbPath"] = thumb
         if regione_bucket_val:
             item["regione"] = regione_bucket_val
+        if kind == "luogo":
+            item["tipo"] = tipo_luogo
+            item["popolazione"] = popolazione
+            item["locationScale"] = infer_location_scale(tipo_luogo, popolazione)
         bucket.append(item)
 
     label_key = lambda item: item["label"].lower()

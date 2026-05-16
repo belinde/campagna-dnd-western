@@ -44,6 +44,7 @@ META_CLASSE_RE = re.compile(r"^\*\*Classe:\*\*\s*(.+)$", re.MULTILINE)
 META_RUOLO_RE = re.compile(r"^\*\*Ruolo:\*\*\s*(.+)$", re.MULTILINE)
 META_REGIONE_RE = re.compile(r"^\*\*Regione:\*\*\s*(.+)$", re.MULTILINE)
 META_TIPO_RE = re.compile(r"^\*\*Tipo:\*\*\s*(.+)$", re.MULTILINE)
+META_POPOLAZIONE_RE = re.compile(r"^\*\*Popolazione:\*\*\s*(.+)$", re.MULTILINE)
 
 THUMB_MAX_EDGE = 320
 THUMB_PORTRAIT_W = 280

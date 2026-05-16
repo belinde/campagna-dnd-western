@@ -16,18 +16,15 @@
   </div>
 
   <nav class="prompt-wizard-nav" id="prompt-wizard-nav" aria-label="Passaggi del generatore" hidden>
-    <ol class="prompt-wizard-steps-list">
-      <li class="prompt-wizard-step-indicator" data-step-indicator="1">
-        <span class="prompt-wizard-step-num">1</span>
-        <span class="prompt-wizard-step-label">Luogo</span>
+    <ol class="prompt-wizard-breadcrumb">
+      <li class="prompt-wizard-breadcrumb-item" data-step-indicator="1">
+        <span class="prompt-wizard-breadcrumb-label">Luogo</span>
       </li>
-      <li class="prompt-wizard-step-indicator" data-step-indicator="2">
-        <span class="prompt-wizard-step-num">2</span>
-        <span class="prompt-wizard-step-label">Personaggi</span>
+      <li class="prompt-wizard-breadcrumb-item" data-step-indicator="2">
+        <span class="prompt-wizard-breadcrumb-label">Personaggi</span>
       </li>
-      <li class="prompt-wizard-step-indicator" data-step-indicator="3">
-        <span class="prompt-wizard-step-num">3</span>
-        <span class="prompt-wizard-step-label">Scena</span>
+      <li class="prompt-wizard-breadcrumb-item" data-step-indicator="3">
+        <span class="prompt-wizard-breadcrumb-label">Scena</span>
       </li>
     </ol>
   </nav>
@@ -106,6 +103,7 @@
     <p class="prompt-wizard-step-intro" id="prompt-scena-recap"></p>
     <label class="prompt-tool-label" for="prompt-scena">Scena (inglese)</label>
     <p class="prompt-tool-hint">Descrivi la scena in inglese. <strong>Usa i nomi completi dei personaggi</strong> (es. «Kelvor Rivib», «Dora l'Esploratrice») quando compaiono nella scena.</p>
+    <p class="prompt-tool-hint">Per <strong>interni o stanze</strong> (sala da tè, ufficio, corridoio…), indica stanza e inquadratura nella scena: se il luogo scelto è una città o un insediamento grande, il suo riferimento visivo serve solo come atmosfera, non come planimetria. Per scene complesse con più personaggi, tutto resta in <strong>un’unica inquadratura</strong> (il prompt lo impone esplicitamente).</p>
     <div class="prompt-scena-name-bar" id="prompt-scena-name-bar" hidden>
       <span class="prompt-scena-name-bar-label">Inserisci nome al cursore</span>
       <div class="prompt-scena-name-buttons" id="prompt-scena-name-buttons" role="group" aria-label="Nomi personaggi selezionati"></div>

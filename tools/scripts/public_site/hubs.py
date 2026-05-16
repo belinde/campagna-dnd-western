@@ -25,20 +25,8 @@ def session_badge_number(page: PageEntry, meta: HubCardInfo) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def session_nav_short_label(session_num: int) -> str:
-    return f"Sessione {session_num:03d}"
-
-
-def session_nav_full_title(session_num: int, meta: HubCardInfo, fallback_title: str) -> str:
-    episode = meta.episode_title.strip()
-    if episode:
-        return f"Sessione {session_num:03d} — {episode}"
-    return fallback_title.strip() or session_nav_short_label(session_num)
-
-
 def build_session_chapter_nav(
     built_pages: list[PageEntry],
-    hub_cards: dict[Path, HubCardInfo],
 ) -> dict[int, tuple[SessionNavLink | None, SessionNavLink | None]]:
     """Per ogni numero sessione pubblicata, link a precedente e successiva (se esistono)."""
     ordered: list[tuple[int, PageEntry]] = []
@@ -53,21 +41,11 @@ def build_session_chapter_nav(
         prev_link: SessionNavLink | None = None
         next_link: SessionNavLink | None = None
         if index > 0:
-            prev_num, prev_page = ordered[index - 1]
-            prev_meta = hub_cards.get(prev_page.relative_path, HubCardInfo())
-            prev_link = SessionNavLink(
-                route=prev_page.route,
-                label=session_nav_short_label(prev_num),
-                title_attr=session_nav_full_title(prev_num, prev_meta, prev_page.title),
-            )
+            _, prev_page = ordered[index - 1]
+            prev_link = SessionNavLink(route=prev_page.route)
         if index + 1 < len(ordered):
-            next_num, next_page = ordered[index + 1]
-            next_meta = hub_cards.get(next_page.relative_path, HubCardInfo())
-            next_link = SessionNavLink(
-                route=next_page.route,
-                label=session_nav_short_label(next_num),
-                title_attr=session_nav_full_title(next_num, next_meta, next_page.title),
-            )
+            _, next_page = ordered[index + 1]
+            next_link = SessionNavLink(route=next_page.route)
         navigation[session_num] = (prev_link, next_link)
     return navigation
 

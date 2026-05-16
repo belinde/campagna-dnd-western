@@ -64,6 +64,16 @@ Allineamento visivo a D&D 5e: le parole «massiccio», «imponente», «veterano
 
 **Scene con più personaggi o più razze:** nel testo inglese sotto `Image prompt:` inserisci **sempre** almeno una frase sul **rapporto di altezza** (linea delle spalle, teste allineate in modo sbagliato da evitare, soglie di porte o carri, mani su impugnature rispetto al corpo altrui, cavalcature come scala). Così si evita che il modello uniformi tutti a umanoidi alti uguali tra loro.
 
+### Scene di sessione, luoghi e inquadratura unica
+
+Quando componi un prompt che **mescola** descrizione di momento (resoconto o scena) con riferimento visivo di un **luogo** (veduta in scheda o scelta nel Generatore `/prompt/`):
+
+- **La scena descrive uno spazio piccolo o un interno** (sala da tè, ufficio, corridoio, stalla, cortile ristretto): quel testo definisce **stanza e inquadratura**. Se il luogo in scheda è **grande** (città, boomtown, capitale — veduta ampia nel Riferimento visivo), usa il blocco luogo solo come **riferimento evocativo** (epoca fantasy-western, materiali, palette, umori); **non** far ricostruire al modello la veduta urbana o il layout cittadino. Se il luogo è **compatto** (fattoria, cascina, forte piccolo), il Riferimento visivo del luogo resta **vincolante** per architettura e materiali; la scena aggiunge momento, pose e dettagli della stanza o del punto scelto.
+- **La scena descrive una veduta ampia** (skyline, riverfront, panorama): fondi Setting e scena in **un’unica** veduta continua; per luoghi compatti il Setting resta vincolante anche in esterno.
+- **Un’unica inquadratura:** in ogni prompt (anche lunghi, con più personaggi) impone esplicitamente **una sola fotografia continua**, un solo setup camera, un solo istante; vieta split screen, pannelli, diptico/triptych, storyboard, collage. In `Details to avoid:` includi almeno `no split screen`, `no multi-panel layout`, `no storyboard` se non già presenti.
+
+Allineamento con il Generatore prompt del sito: stesse regole in `tools/pubblicazione/assets/prompt-page.js` (`classifySceneFraming`, `settingWeightPrefix`, blocco `Composition:`).
+
 ## Formato dell'output
 
 Struttura obbligatoria della risposta in chat:

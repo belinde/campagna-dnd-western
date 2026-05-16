@@ -1,6 +1,9 @@
 {
+  "id": "/",
   "name": "La Corsa al Nuovo Mondo",
   "short_name": "Corsa Nuovo Mondo",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/assets/web-app-manifest-192x192.png",
@@ -16,6 +19,6 @@
     }
   ],
   "theme_color": "#12100d",
-  "background_color": "#0f0d0b",
+  "background_color": "#12100d",
   "display": "standalone"
 }

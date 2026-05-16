@@ -143,7 +143,7 @@ def render_salient_media_card_html(alt: str, asset_path: str, caption_md: str | 
         )
     return (
         f'<figure class="salient-media-card">\n'
-        f'  <div class="salient-media-card__media">\n'
+        f'  <div class="salient-media-card__media card-media-zoomable">\n'
         f'    <img src="{src_liquid}" alt="{alt_esc}" loading="lazy" decoding="async">\n'
         f"  </div>{caption_block}\n"
         f"</figure>"

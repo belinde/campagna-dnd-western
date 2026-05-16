@@ -47,9 +47,11 @@ def write_layout(output_dir: Path) -> None:
         <html lang="it">
           <head>
             <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta name="color-scheme" content="dark">
+            <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+            <meta name="color-scheme" content="dark only">
             <meta name="theme-color" content="#12100d">
+            <meta name="theme-color" content="#12100d" media="(prefers-color-scheme: light)">
+            <meta name="theme-color" content="#12100d" media="(prefers-color-scheme: dark)">
             <meta name="apple-mobile-web-app-status-bar-style" content="black">
             <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
             <meta name="description" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | escape }}{% else %}{{ site.description | escape }}{% endif %}">
@@ -105,19 +107,19 @@ def write_layout(output_dir: Path) -> None:
                         <p class="eyebrow">{{ page.collection_label }}</p>
                         {% endif %}
                         {% if page.session_num %}
-                        <div class="session-chapter-nav" aria-label="Navigazione tra sessioni">
+                        <div class="session-chapter-nav session-chapter-nav--header" aria-label="Navigazione tra sessioni">
                           {% if page.session_nav_prev_route %}
-                          <a class="session-chapter-nav__link session-chapter-nav__link--prev" href="{{ page.session_nav_prev_route | relative_url }}" title="{{ page.session_nav_prev_title | escape }}">
+                          <a class="session-chapter-nav__link session-chapter-nav__link--prev" href="{{ page.session_nav_prev_route | relative_url }}" title="Indietro">
                             <span class="session-chapter-nav__arrow" aria-hidden="true">←</span>
-                            <span class="session-chapter-nav__text">{{ page.session_nav_prev_label }}</span>
+                            <span class="session-chapter-nav__text">Indietro</span>
                           </a>
                           {% else %}
                           <span class="session-chapter-nav__spacer" aria-hidden="true"></span>
                           {% endif %}
                           <h1>{{ page.title }}</h1>
                           {% if page.session_nav_next_route %}
-                          <a class="session-chapter-nav__link session-chapter-nav__link--next" href="{{ page.session_nav_next_route | relative_url }}" title="{{ page.session_nav_next_title | escape }}">
-                            <span class="session-chapter-nav__text">{{ page.session_nav_next_label }}</span>
+                          <a class="session-chapter-nav__link session-chapter-nav__link--next" href="{{ page.session_nav_next_route | relative_url }}" title="Avanti">
+                            <span class="session-chapter-nav__text">Avanti</span>
                             <span class="session-chapter-nav__arrow" aria-hidden="true">→</span>
                           </a>
                           {% else %}
@@ -137,6 +139,28 @@ def write_layout(output_dir: Path) -> None:
                       <div class="page-content">
                         {{ content }}
                       </div>
+                      {% if page.session_num %}
+                      {% if page.session_nav_prev_route or page.session_nav_next_route %}
+                      <nav class="session-chapter-nav session-chapter-nav--footer" aria-label="Navigazione tra sessioni">
+                        {% if page.session_nav_prev_route %}
+                        <a class="session-chapter-nav__link session-chapter-nav__link--prev" href="{{ page.session_nav_prev_route | relative_url }}" title="Indietro">
+                          <span class="session-chapter-nav__arrow" aria-hidden="true">←</span>
+                          <span class="session-chapter-nav__text">Indietro</span>
+                        </a>
+                        {% else %}
+                        <span class="session-chapter-nav__spacer" aria-hidden="true"></span>
+                        {% endif %}
+                        {% if page.session_nav_next_route %}
+                        <a class="session-chapter-nav__link session-chapter-nav__link--next" href="{{ page.session_nav_next_route | relative_url }}" title="Avanti">
+                          <span class="session-chapter-nav__text">Avanti</span>
+                          <span class="session-chapter-nav__arrow" aria-hidden="true">→</span>
+                        </a>
+                        {% else %}
+                        <span class="session-chapter-nav__spacer" aria-hidden="true"></span>
+                        {% endif %}
+                      </nav>
+                      {% endif %}
+                      {% endif %}
                     </article>
                   </div>
                 </main>
@@ -191,12 +215,8 @@ def front_matter(
         lines.append(f"session_num: {session_num}")
     if session_nav_prev:
         lines.append(f"session_nav_prev_route: {yaml_string(session_nav_prev.route)}")
-        lines.append(f"session_nav_prev_label: {yaml_string(session_nav_prev.label)}")
-        lines.append(f"session_nav_prev_title: {yaml_string(session_nav_prev.title_attr)}")
     if session_nav_next:
         lines.append(f"session_nav_next_route: {yaml_string(session_nav_next.route)}")
-        lines.append(f"session_nav_next_label: {yaml_string(session_nav_next.label)}")
-        lines.append(f"session_nav_next_title: {yaml_string(session_nav_next.title_attr)}")
     if start_reading_route:
         lines.append(f"start_reading_route: {yaml_string(start_reading_route)}")
     lines.append("---")

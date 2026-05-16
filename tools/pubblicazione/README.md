@@ -45,6 +45,11 @@ Le cartelle `sessione/`, `spunti/`, `.cursor/` e `tools/dnd-mcp/` restano fuori 
 
 Pagina strumento nella sidebar (**Generatore**): consente di scegliere un **luogo** (opzionale), uno o più **PG** e **PNG** pubblicati, scrivere una breve **descrizione di scena** e generare nel browser un blocco `text` nello stesso schema di `/prompt-immagine` (`Image prompt:`, `Constraints to preserve:`, `Details to avoid:`).
 
+Il prompt composito applica due gerarchie automatiche:
+
+- **Scene vs Setting:** la descrizione di scena (in inglese) definisce inquadratura e spazio effettivo. Il blocco Setting dal `## Riferimento visivo` del luogo è **vincolante** per luoghi compatti (fattoria, cascina, …) e **solo evocativo** (mood, epoca, materiali) se la scena descrive un interno ristretto ma il luogo in catalogo è città o insediamento grande. La scala del luogo deriva da `**Tipo:**` e `**Popolazione:**` nel markdown (`locationScale` in `prompt-data.json`).
+- **Composizione unica:** ogni prompt include istruzioni esplicite per **una sola fotografia continua** (niente split screen, pannelli, diptico, storyboard); su prompt lunghi o con più personaggi il testo rafforza che Scene, Setting e figure condividono lo stesso frame.
+
 - **Markup:** [`tools/pubblicazione/prompt-page-body.html`](prompt-page-body.html) (incollato in `prompt/index.md` dalla build).
 - **Logica:** [`tools/pubblicazione/assets/prompt-page.js`](assets/prompt-page.js) — file statico, **nessun JavaScript generato** da `build_public_site.py`; la build aggiunge solo il tag `<script src="…/prompt-page.js">`.
 - **Dati:** `assets/prompt-data.json`, generato a ogni build da `## Riferimento visivo` delle schede pubblicate (`personaggi/`, PNG e luoghi in allowlist). Il JSON è leggibile anche da View Source; non è segreto DM-only, ma non viene renderizzato sulle pagine scheda.

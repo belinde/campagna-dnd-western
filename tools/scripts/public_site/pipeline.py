@@ -122,7 +122,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
         )
 
     referenced_assets.add(HOME_HERO_ASSET)
-    session_chapter_nav = build_session_chapter_nav(built_pages, hub_cards)
+    session_chapter_nav = build_session_chapter_nav(built_pages)
 
     for asset in sorted(referenced_assets):
         copy_asset(asset, output_dir)
