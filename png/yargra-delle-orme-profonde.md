@@ -83,4 +83,4 @@ Non è ingenua: se la carovana sceglie il profitto o il silenzio, Yargra non tor
 
 ## Eventi interessanti
 
-- _Nessuno finora: Yargra delle Orme Profonde non è ancora apparsa nei resoconti._
+- **[Sessione 008]** Si presenta di notte alla carovana presso la Fattoria Barlow, chiede testimoni per una strage di madri e cuccioli di bisonti, negozia con Brannagh, riceve in prestito un cavallo da Leman; all'alba guida Kelvor e Leman al campo del massacro e fissa appuntamento fuori Tre Pali al tramonto fra due giorni.

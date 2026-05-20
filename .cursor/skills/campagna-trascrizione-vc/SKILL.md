@@ -1,8 +1,9 @@
 ---
 name: campagna-trascrizione-vc
 description: >-
-  Interactive dual-stream VC STT cleanup in chronological chunks: questions to the DM
-  only for non-deducible gaps, master verifies each block before append to
+  Interactive dual-stream VC STT cleanup in chronological chunks (~35-75 segment
+  lines, target ~55, 4-line analytic overlap): questions to the DM only for
+  non-deducible gaps, master verifies each block before append to
   sessione/trascrizione.md. No invention. Use for /trascrizione-vc or
   sessione/trascrizione-grezza-doppia.txt.
 disable-model-invocation: true
@@ -14,7 +15,7 @@ Rispettare sempre le convenzioni del repository definite nella Cursor Rule `camp
 
 Questa skill si attiva quando il DM ha generato `sessione/trascrizione-grezza-doppia.txt` (merge temporale: **MASTER** = microfono DM; canale **giocatori** = monitor uscita / VC, con etichette tipo `GIOC_B02_S01`) e vuole una **trascrizione elaborata verificata** in `sessione/trascrizione.md`, adatta al resoconto e all’archivio.
 
-Il flusso è **interattivo**: la grezza si elabora a **blocchi di dimensione limitata**; si pongono **domande al master solo** dove manca evidenza testuale o serve una scelta; il master **approva o corregge** ogni blocco prima che venga scritto su disco. Non elaborare il file intero in un’unica passata senza i gate di verifica.
+Il flusso è **interattivo**: la grezza si elabora a **blocchi ampi ma verificabili** (~55 righe di segmento per chunk, vedi sotto); si pongono **domande al master solo** dove manca evidenza testuale o serve una scelta; il master **approva o corregge** ogni blocco prima che venga scritto su disco. Non elaborare il file intero in un’unica passata senza i gate di verifica.
 
 ## Principio fondamentale
 
@@ -25,8 +26,8 @@ Il flusso è **interattivo**: la grezza si elabora a **blocchi di dimensione lim
 ## Definizione di «riga di segmento» e di chunk
 
 - **Riga di segmento**: riga della grezza che descrive un intervallo parlato, tipicamente del formato `Inizio–Fine [MASTER|GIOC_…] testo` (prima riga del file può essere un titolo `# …`; non contare come segmento).
-- **Dimensione chunk (default)**: **da 20 a 45 righe di segmento**; puntare a **circa 32 righe** per chunk. Se spezzare a quota fissa taglierebbe una sequenza chiaramente unica (stessa battuta spezzata su più righe STT), estendere leggermente il chunk o ridurlo per chiudere al confine naturale.
-- **Overlap analitico**: quando si lavora al chunk *N* > 1, includere nel contesto di lettura (non nel testo da **appendere**) le **ultime 2 righe di segmento** del chunk *N−1* già approvato, per continuità di riferimenti pronominali e ordine temporale.
+- **Dimensione chunk (default)**: **da 35 a 75 righe di segmento**; puntare a **circa 55 righe** per chunk. Se spezzare a quota fissa taglierebbe una sequenza chiaramente unica (stessa battuta spezzata su più righe STT), estendere leggermente il chunk (fino a ~85 righe) o ridurlo per chiudere al confine naturale.
+- **Overlap analitico**: quando si lavora al chunk *N* > 1, includere nel contesto di lettura (non nel testo da **appendere**) le **ultime 4 righe di segmento** del chunk *N−1* già approvato, per continuità di riferimenti pronominali e ordine temporale.
 - **Ordine**: sempre **cronologico** lungo la grezza (come i timestamp sulle righe); mai riordinare per speaker.
 
 ### Ripresa a sessione interrotta

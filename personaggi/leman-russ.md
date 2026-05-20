@@ -67,3 +67,4 @@ _Da definire._
 - **[Sessione 005]** Alla fattoria assume forma d'orso e combatte i briganti in mischia sanguinosa.
 - **[Sessione 006]** Presente alla riunione e ai lavori sulla Via dei Coloni; come **mezzelfo**, la **scurovisione** lo rende adatto ai **turni di guardia notturni** dopo il tramonto.
 - **[Sessione 007]** Individua per primo il campo dei bisonti massacrati, ne ricostruisce le tracce e anticipa a Elias Barlow il denaro per la sosta della carovana; più tardi tenta senza successo di spingere Mae Barlow a incendiare i carri dei cacciatori.
+- **[Sessione 008]** Legge tracce di carri verso la fattoria, presta un cavallo a Yargra; all'alba segue con Kelvor la ricognizione sul massacro e partecipa alla sosta da Elias per ottenere il nome della banda e del capo.

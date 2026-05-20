@@ -85,3 +85,4 @@ Non conosce tutta la filiera, ma abbastanza da far male a qualcuno se decidesse 
 ## Eventi interessanti
 
 - **[Sessione 007]** Accoglie la carovana alla Fattoria Barlow e vende a Brannagh il diritto di campeggiare e un barile d'acqua fresca, lasciando emergere quanto la sopravvivenza della sua famiglia dipenda ormai dal passaggio dei cacciatori di bisonti.
+- **[Sessione 008]** Vende a Kelvor e Leman, per dieci dollari, il nome della banda (Tiratori del Punto Lungo) e del capo (Harlan Pike).

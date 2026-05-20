@@ -19,7 +19,7 @@ Questa regola si attiva dopo una sessione di gioco. Il processo è **interattivo
 ## Fase 1 — Raccolta iniziale
 
 **Prima di fare qualsiasi domanda**, leggere in sola lettura:
-- Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo), inclusi se presenti `sessione/trascrizione-grezza-doppia.txt` (grezzo dual-track VC), **`sessione/trascrizione.md`** se esiste (trascrizione elaborata **verificata** dopo `/trascrizione-vc`) e `sessione/audio/` con le registrazioni WAV
+- Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo), inclusi se presenti `sessione/trascrizione-grezza-doppia.txt` (grezzo dual-track VC), `sessione/raw-merged.txt` (grezzo Discord merge), **`sessione/trascrizione.md`** se esiste (trascrizione elaborata **verificata** dopo `/trascrizione-vc` o `/trascrizione-discord`) e `sessione/audio/` con le registrazioni WAV
 - L'ultimo file in `resoconti/` (per capire dove era rimasta la storia)
 - Tutti i file in `personaggi/` (per conoscere i PG disponibili)
 - `png/INDICE.md` (per riconoscere i PNG già documentati); aprire le schede in `png/` solo per nomi citati in trascrizione/`sessione/png-*` o in caso di ambiguità
@@ -29,7 +29,7 @@ Questa regola si attiva dopo una sessione di gioco. Il processo è **interattivo
 Poi chiedere al DM, con `AskQuestion` dove possibile, le seguenti informazioni:
 1. **Data della sessione** (formato GG/MM/AAAA)
 2. **PG presenti** al tavolo quella sera (usare la lista dei file in `personaggi/` come opzioni selezionabili)
-3. **Trascrizione verificata:** se esiste `sessione/trascrizione.md` per questa sessione, chiedere conferma che sia **completa e approvata**; se manca o è incompleta, chiedere se il DM vuole interrompere per completare `/trascrizione-vc` oppure procedere con **rinuncia esplicita** documentata (in tal caso la fonte primaria diventa il materiale disponibile in `sessione/` + integrazioni DM).
+3. **Trascrizione verificata:** se esiste `sessione/trascrizione.md` per questa sessione, chiedere conferma che sia **completa e approvata**; se manca o è incompleta, chiedere se il DM vuole interrompere per completare `/trascrizione-vc` o `/trascrizione-discord` oppure procedere con **rinuncia esplicita** documentata (in tal caso la fonte primaria diventa il materiale disponibile in `sessione/` + integrazioni DM).
 4. **Integrazione oltre la trascrizione (opzionale):** invitare il DM ad aggiungere **solo** quanto non deducibile dal testo (eventi non registrati in VC, chiarimenti su `[lacuna: …]` ancora aperti, note da tavolo). **Non** richiedere un racconto libero lungo se la trascrizione verificata copre già la sessione; in assenza di trascrizione usabile, allora sì: racconto libero degli eventi come integrazione principale (stile informale, termini generici per i PG accettati).
 
 **Non procedere alla Fase 2 finché** non siano noti data e PG presenti **e** non sia chiaro se si procede con trascrizione verificata, rinuncia, o racconto libero come tappabuchi.
@@ -38,7 +38,7 @@ Poi chiedere al DM, con `AskQuestion` dove possibile, le seguenti informazioni:
 
 ## Fase 2 — Chiarimenti e integrazioni
 
-Analizzare **`sessione/trascrizione.md`** (se fonte primaria) e l’integrazione DM della Fase 1, incrociandoli con il resto del materiale letto in Fase 1. Se la trascrizione non basta, usare anche `sessione/trascrizione-grezza-doppia.txt` per segmenti dubbi **senza** contraddire il testo già approvato in `trascrizione.md` salvo correzione esplicita del DM.
+Analizzare **`sessione/trascrizione.md`** (se fonte primaria) e l’integrazione DM della Fase 1, incrociandoli con il resto del materiale letto in Fase 1. Se la trascrizione non basta, usare anche `sessione/trascrizione-grezza-doppia.txt` o `sessione/raw-merged.txt` per segmenti dubbi **senza** contraddire il testo già approvato in `trascrizione.md` salvo correzione esplicita del DM.
 
 Identificare ambiguità e lacune, poi porre domande mirate. Esempi tipici:
 
@@ -160,7 +160,7 @@ Se il progetto usa una pubblicazione pubblica player-safe con allowlist esplicit
 
 Per ogni file in `sessione/`:
 - **`trascrizione.md`** — Non smistare: resta archivio DM finché il DM non chiede di rimuoverlo in Fase 6. Se è la **fonte primaria** usata per il resoconto, non trattarlo come semplice appunto temporaneo.
-- **`trascrizione-grezza-doppia.txt`** — Grezzo STT: consultabile per dubbi, di solito **non** va nel sito pubblico; in Fase 6 può essere eliminato solo se il DM conferma (come gli altri file in `sessione/`).
+- **`trascrizione-grezza-doppia.txt`** / **`raw-merged.txt`** — Grezzo STT (VC o Discord): consultabile per dubbi, di solito **non** va nel sito pubblico; in Fase 6 può essere eliminato solo se il DM conferma (come gli altri file in `sessione/`).
 - **`png-*.md`** — Se esiste già un file in `png/` per quel PNG, integrare le nuove informazioni nella scheda esistente, inclusa `## Scheda di gioco` quando necessario. Altrimenti creare la scheda in `png/`. Se il livello e` assente o cambiato, chiederlo al DM e aggiornare la scheda in modo additivo, non sostitutivo.
 - **`luogo-*.md`** — Valutare se aggiornare un file in `ambientazione/luoghi/` o proporne la creazione. Segnalare al DM prima di agire.
 - **`nota-*.md`** / **`incontro-*.md`** — Verificare se ci sono informazioni utili non ancora incorporate nel resoconto o nelle schede; segnalare al DM se qualcosa è stato tralasciato.
@@ -171,7 +171,7 @@ Se esistono immagini collegate ai file di `sessione/`, archiviarle nella destina
 - `immagini/luoghi/` per i luoghi
 - `immagini/eventi/sessione-NNN/` per le scene di sessione richiamate nel resoconto
 
-**Gerarchia delle fonti:** quando esiste una trascrizione elaborata **verificata** in `sessione/trascrizione.md`, essa ha **priorità** sulla grezza e sulle note sparse per gli eventi effettivamente registrati. **`trascrizione-grezza-doppia.txt`**, `nota-*.md`, `incontro-*.md`, `png-*.md`, `luogo-*.md` e il **racconto integrativo** del DM sono **complementari** per lacune, contesto non audio e correzioni esplicite. Il DM resta l’autorità per ciò che **non** si può dedurre dal materiale scritto.
+**Gerarchia delle fonti:** quando esiste una trascrizione elaborata **verificata** in `sessione/trascrizione.md`, essa ha **priorità** sulla grezza e sulle note sparse per gli eventi effettivamente registrati. **`trascrizione-grezza-doppia.txt`**, **`raw-merged.txt`**, `nota-*.md`, `incontro-*.md`, `png-*.md`, `luogo-*.md` e il **racconto integrativo** del DM sono **complementari** per lacune, contesto non audio e correzioni esplicite. Il DM resta l’autorità per ciò che **non** si può dedurre dal materiale scritto.
 
 **Non procedere alla Fase 6 senza aver completato tutti gli aggiornamenti approvati.**
 

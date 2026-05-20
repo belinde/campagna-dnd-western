@@ -11,7 +11,7 @@ Il comportamento dell'AI è organizzato così:
 | Meccanismo | Percorso | Ruolo |
 |------------|----------|--------|
 | **Regole** (sempre o via `globs`) | [`.cursor/rules/`](.cursor/rules/) | Due file `.mdc`: contesto permanente e formato schede PNG in modifica. |
-| **Skill** (procedure lunghe) | [`.cursor/skills/`](.cursor/skills/) | Istruzioni dettagliate per resoconto, trascrizione, trascrizione VC, ingame, master e workflow immagini; l'agente deve leggerle quando usi un comando. |
+| **Skill** (procedure lunghe) | [`.cursor/skills/`](.cursor/skills/) | Istruzioni dettagliate per resoconto, trascrizione, trascrizione VC, trascrizione Discord, ingame, master e workflow immagini; l'agente deve leggerle quando usi un comando. |
 | **Comandi** | [`.cursor/commands/`](.cursor/commands/) | Prompt brevi richiamabili con `/` nella chat: avviano il flusso e rimandano allo skill corretto. |
 
 ### Regole in `.cursor/rules/`
@@ -25,7 +25,8 @@ Il comportamento dell'AI è organizzato così:
 |---------|----------------|-----------------|
 | `/resoconto` | `campagna-resoconto` | Post-sessione: resoconto a fasi; con `sessione/trascrizione.md` verificato come **fonte primaria** degli eventi quando presente; aggiornamento schede, `sessione/`, pubblicazione player-safe se configurata. |
 | `/trascrizione` | `campagna-trascrizione` | Pulizia STT → `sessione/trascrizione.md`, senza inventare. |
-| `/trascrizione-vc` | `campagna-trascrizione-vc` | Pulizia STT dual-track a **chunk**: domande solo su gap non deducibili, verifica master per blocco, append in `sessione/trascrizione.md`; poi `/resoconto` usa quel file come fonte primaria. |
+| `/trascrizione-vc` | `campagna-trascrizione-vc` | Pulizia STT dual-track a **chunk** (~35–75 righe di segmento, target ~55): domande solo su gap non deducibili, verifica master per blocco, append in `sessione/trascrizione.md`; poi `/resoconto` usa quel file come fonte primaria. |
+| `/trascrizione-discord` | `campagna-trascrizione-discord` | Pulizia grezzo Discord (`raw-merged.txt`, `[TIME] ACTOR: testo`) a **chunk** (stesse dimensioni VC); Fase 0 per ID numerici; marker `trascrizione-discord-chunk`; output in `sessione/trascrizione.md`. |
 | `/ingame` | `campagna-ingame` | Tavolo: risposte brevi, solo file sotto `sessione/` con prefissi. |
 | `/master` | `campagna-master` | Appunti → documenti in `ambientazione/`. |
 | `/prompt-immagine` | `campagna-immagini` (solo sezione *Prompt*) | Prompt in **inglese** per il modello immagine (eccezione all’italiano della rule `campagna`); stile **cinematically realistic**; blocco `text` copiabile. Sola lettura. |
@@ -103,7 +104,11 @@ Output: `sessione/trascrizione-grezza-doppia.txt` (timestamp, `[MASTER]`, e sul 
 
 ### 5. Pulizia con Cursor (a chunk, verifica master)
 
-Dopo aver generato il file grezzo, in chat: **`/trascrizione-vc`** (skill `campagna-trascrizione-vc`). L’agente elabora la grezza in **blocchi** di dimensione limitata (circa 20–45 righe di segmento per chunk), pone **domande al DM solo** dove manca evidenza testuale, e attende **approvazione o correzione** del blocco prima di **appendere** a `sessione/trascrizione.md`. Si può **riprendere** un giro interrotto usando lo stato in `## Note di elaborazione` e i marker `<!-- trascrizione-vc-chunk:K -->`. Principio: **non inventare** contenuti. Il passo successivo è in genere **`/resoconto`**, che tratta `sessione/trascrizione.md` come **fonte primaria** degli eventi quando completo.
+Dopo aver generato il file grezzo, in chat: **`/trascrizione-vc`** (skill `campagna-trascrizione-vc`). L’agente elabora la grezza in **blocchi ampi ma verificabili** (circa **35–75** righe di segmento per chunk, target **~55**; overlap analitico di **4** righe tra chunk consecutivi), pone **domande al DM solo** dove manca evidenza testuale, e attende **approvazione o correzione** del blocco prima di **appendere** a `sessione/trascrizione.md`. Si può **riprendere** un giro interrotto usando lo stato in `## Note di elaborazione` e i marker `<!-- trascrizione-vc-chunk:K -->`. Principio: **non inventare** contenuti. Il passo successivo è in genere **`/resoconto`**, che tratta `sessione/trascrizione.md` come **fonte primaria** degli eventi quando completo.
+
+### 5b. Pulizia grezzo Discord (a chunk, verifica master)
+
+Se la sessione è trascritta da un bot o export Discord in [`sessione/raw-merged.txt`](sessione/raw-merged.txt) (formato `[HH:MM:SS] ACTOR: testo`, con `ACTOR` = nickname o ID numerico snowflake), in chat: **`/trascrizione-discord`** (skill `campagna-trascrizione-discord`, che eredita chunk e fasi da `campagna-trascrizione-vc`). Prima del primo chunk l’agente chiede al DM l’attribuzione di ogni **ID numerico** (master narratore, PG, altro). Marker di ripresa: `<!-- trascrizione-discord-chunk:K -->`. Stesso output canonico `sessione/trascrizione.md` e stesso passo successivo **`/resoconto`**. Non c’è script in `tools/` per generare `raw-merged.txt`: il file va prodotto esternamente.
 
 ## Pubblicazione dei resoconti
 

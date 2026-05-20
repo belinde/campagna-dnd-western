@@ -68,3 +68,4 @@ _Da definire._
 - **[Sessione 005]** Ferma l'halfling ladro con *Sonno*; recupera il fagotto, lascia due dollari in tasca al ragazzo e restituisce personalmente il malloppo alla donna sul carro.
 - **[Sessione 006]** Lancia *Individuazione del magico* sulla scena: nulla oltre alle impronte note sulle armi da fuoco; recupera i cavalli dei briganti seguendo il coordinamento di Andrew; nota che giustizia e legalità non coincidevano nella mediazione con Drummond. La **scurovisione** lo rende adatto alle **guardie notturne**.
 - **[Sessione 007]** Attraversa con la carovana il primo tratto oltre la Fattoria Mercer e assiste al campo dei bisonti massacrati e alla sosta alla Fattoria Barlow, dove la violenza economica della Frontiera si mostra ormai senza maschere.
+- **[Sessione 008]** Partecipa al dibattito su moralità della caccia e su eventuali leggi che regolino l'uccisione dei cuccioli.

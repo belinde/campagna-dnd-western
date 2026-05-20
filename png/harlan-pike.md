@@ -80,3 +80,4 @@ Il suo punto debole è la professionalità stessa: lascia tracce di ordine. Boss
 ## Eventi interessanti
 
 - **[Sessione 007]** Appare per la prima volta alla Fattoria Barlow come uomo armato di lungo fucile che tiene la situazione sotto controllo accanto a Elias; i PG lo vedono, ma non ne conoscono ancora il nome.
+- **[Sessione 008]** Elias Barlow ne rivela il nome ai PG come capo dei Tiratori del Punto Lungo; la banda riparte di notte verso ovest prima che il gruppo possa confrontarlo.

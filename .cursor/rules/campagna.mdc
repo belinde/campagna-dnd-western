@@ -55,7 +55,7 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 | `png/` | Un file per ogni personaggio non giocante (PNG) rilevante |
 | `immagini/` | Immagini richiamate dai Markdown: ritratti, vedute di luoghi e scene di sessione |
 | `resoconti/` | Un file per ogni sessione di gioco |
-| `sessione/` | Area di appoggio temporanea: appunti, PNG e luoghi generati durante la sessione dal vivo (svuotata dalla modalità resoconto) |
+| `sessione/` | Area di appoggio temporanea: appunti, PNG e luoghi generati durante la sessione dal vivo, grezzi STT (`trascrizione-grezza-doppia.txt`, `raw-merged.txt`), `trascrizione.md` elaborata (svuotata dalla modalità resoconto salvo archivio concordato) |
 | `spunti/` | Idee e potenziali eventi futuri, non ancora avvenuti e non parte dell'ambientazione canonica; consultabili dalla modalità ingame come fonte di ispirazione |
 | `tools/` | Automazione DM: script (registrazione, trascrizione, build sito), `pubblicazione/` (manifest e asset del sito player-safe), submodule MCP `dnd-mcp/`, output generato sotto `tools/build/` |
 
@@ -70,6 +70,7 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 - `immagini/eventi/sessione-001/nome-evento.jpg` per le scene salienti associate a un resoconto
 - `resoconti/sessione-001.md`, `resoconti/sessione-002.md`, ecc. (tre cifre con zero padding)
 - `sessione/png-nome.md`, `sessione/luogo-nome.md`, `sessione/nota-argomento.md`, `sessione/incontro-nome.md` (file temporanei con prefisso di tipo)
+- `sessione/raw-merged.txt` — grezzo merge Discord (`[HH:MM:SS] ACTOR: testo`); input di `/trascrizione-discord`
 - `spunti/nome-idea.md` (nomi liberi, senza prefisso di tipo)
 
 ## Metadati schede PNG
