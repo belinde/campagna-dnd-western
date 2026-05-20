@@ -6,6 +6,20 @@
 
 La carovana di Hector Brannagh passa la notte accampata presso la Fattoria Barlow, tra cacciatori che caricano pelli e un dibattito amaro su caccia, legge e mandato. L'arrivo notturno di **Yargra**, sciamana delle Orme Profonde, obbliga il gruppo a confrontarsi con una strage molto più vasta di quella vista il giorno prima: madri e cuccioli di bisonti massacrati, tracce di carri verso la fattoria, paura di una guerra tribale. **Kelvor Rivib** sveglia Brannagh, che dispone le guardie e negozia con prudenza; **Leman Russ** le presta un cavallo. All'alba **Kelvor** e **Leman** seguono Yargra fino al campo del massacro; il paladino promette di denunciare i colpevoli a **Tre Pali**, mentre una breve sosta da **Elias Barlow** svela il nome della banda — **Tiratori del Punto Lungo** — e del loro capo, **Harlan Pike**.
 
+## Immagini salienti
+
+### Incontro notturno con Yargra presso l'accampamento
+
+![Parley notturno tra la sciamana orca e i membri della carovana fuori dal cerchio dei carri, con lanterne, carovana e Fattoria Barlow sullo sfondo sotto cielo stellato](/immagini/eventi/sessione-008/dialogo-yargra-accampamento-fattoria-barlow.jpg)
+
+*Yargra e i personaggi della carovana si incontrano di notte nella pianura accanto all'accampamento, a circa duecento metri dalla Fattoria Barlow; la scena è rischiarata dalle lanterne e dalla falce di luna.*
+
+### Sosta all'alba da Elias Barlow
+
+![Kelvor e Leman pagano Elias nel cortile della Fattoria Barlow mentre raschia una pelle e la famiglia concia sullo sfondo](/immagini/eventi/sessione-008/elias-informazioni-tiratori-fattoria-barlow.jpg)
+
+*All'alba, Kelvor e Leman pagano Elias Barlow nel cortile della fattoria per ottenere il nome della banda e del capo; Elias raschia una pelle fresca, moglie e figlia lavorano alla concia sullo sfondo.*
+
 ## Eventi principali
 
 La sessione riprende **alla sera**, poco dopo la chiusura della precedente: la carovana di **Hector Brannagh** è accampata a circa duecento metri dalla **Fattoria Barlow**, carri in cerchio e turni di guardia leggermente rafforzati, con anche i coloni che coprono parte della notte. **Kelvor Rivib** annuncia che vuole sempre il turno **prima dell'alba**; **Leman Russ** controlla cavalli e movimenti dei cacciatori di bufali; **Grombrindal** si apposta con la pipa a osservare la fattoria; **Dora l'Esploratrice** tiene d'occhio alberi e accampamento. **Gud Bender** partecipa al dibattito su moralità ed efficienza della caccia.

@@ -3,8 +3,9 @@ name: campagna-immagini
 description: >-
   Campaign image workflows: self-contained English image prompts (cinematically realistic) for
   portraits, locations, and session scenes; and importing/normalizing JPEG assets into immagini/
-  with Markdown updates. Use when the user runs /prompt-immagine or /importa-immagine, or asks for
-  image prompts or asset import.
+  with Markdown updates; import is additive by default (suffix path + append blocks), replace only
+  if DM explicitly requests. Use when the user runs /prompt-immagine or /importa-immagine, or asks
+  for image prompts or asset import.
 disable-model-invocation: true
 ---
 
@@ -115,6 +116,20 @@ Questa regola si attiva quando il DM ha gia` un file immagine generato e vuole i
 - L'asset va spostato nella destinazione prevista dal progetto, non copiato, salvo richiesta esplicita del DM.
 - Lavora in modo conservativo: se il contesto non basta per scegliere una destinazione univoca, fai una domanda mirata invece di indovinare.
 
+## Modalità additiva (default)
+
+Salvo richiesta esplicita del DM di **sostituire** un asset o un riferimento già presente:
+
+- **Non** sovrascrivere file JPEG già presenti sotto `immagini/` (né pixel né path).
+- **Non** rimuovere né modificare blocchi `![…](…)` / didascalie già in `## Immagine` o `## Immagini salienti`.
+- **Aggiungere** il nuovo asset con un path dedicato e **appendere** in Markdown un nuovo blocco immagine + didascalia nella stessa sezione.
+
+Unica eccezione additiva ammessa senza parola «sostituisci»: sostituire il placeholder `_Nessuna immagine ancora associata._` con il primo blocco reale (non c’è ancora un asset da preservare).
+
+### Modalità sostituzione (solo su richiesta esplicita)
+
+Attivare solo se il DM usa formulazioni inequivocabili (es. «sostituisci», «replace», «aggiorna il ritratto/la veduta», «rimpiazza l’immagine esistente») e indica **quale** asset o blocco Markdown va rimpiazzato. In quel caso: sovrascrivi il file indicato (o il path canonico concordato) e aggiorna **solo** il blocco Markdown corrispondente, senza cancellare altre immagini nella stessa sezione salvo richiesta esplicita.
+
 ## Input attesi
 
 Accetta uno di questi input:
@@ -157,11 +172,15 @@ Usa questi path:
 
 Regole pratiche:
 
-- Per PG, PNG e luoghi usa di norma lo slug del file Markdown di destinazione.
-- Per le scene usa uno slug breve e descrittivo basato sull'evento mostrato.
+- Per PG, PNG e luoghi lo **path canonico** (primo ritratto / prima veduta) e` `immagini/<cartella>/<slug>.jpg` con lo slug del file Markdown di destinazione.
+- **Import additivo:** se `<slug>.jpg` esiste già ed e` un asset **diverso** da quello che stai importando, **non** sovrascriverlo: usa un path con **suffisso** prima di `.jpg`, es. `immagini/luoghi/fattoria-barlow-mappa.jpg`, `immagini/personaggi/grombrindal-ritratto-alt.jpg`. Scegli il suffisso così (in ordine di priorita`):
+  1. indicazione del DM o nome file sorgente (es. `mappa_…` → `-mappa`, `ritratto_…` → suffisso descrittivo breve);
+  2. tipo evidente dell’immagine (mappa tattica/planimetrica → `-mappa`; altra veduta → `-veduta`; variante ritratto → `-ritratto` o `-ritratto-2` se `-ritratto` e` gia` usato);
+  3. se resta ambiguo, una domanda mirata al DM **solo** sul suffisso — non bloccare l’import per chiedere se «sovrascrivere».
+- Per le scene usa uno slug breve e descrittivo basato sull'evento mostrato (ogni scena e` gia` un file distinto: comportamento naturalmente additivo).
 - L'estensione finale nel repository e` sempre `.jpg` dopo la normalizzazione (vedi sotto), salvo richiesta esplicita del DM.
-- Se il file e` gia` nel percorso corretto, non duplicarlo.
-- Se il path di destinazione e` gia` occupato da un asset diverso, fermati e chiedi come procedere prima di sovrascrivere.
+- Se il file e` gia` nel percorso corretto identico (stesso path, stesso contenuto concordato), non duplicarlo.
+- **Sostituzione esplicita:** sovrascrivi il path indicato dal DM; se non indica il path, sostituisci il canonico `<slug>.jpg` solo quando ha chiesto di aggiornare quell’immagine primaria.
 - Usa `immagini/varie/` solo se il DM lo chiede esplicitamente oppure se non esiste ancora un file Markdown collegato a cui agganciare l'asset.
 
 ## Normalizzazione asset
@@ -194,7 +213,7 @@ Formato:
 *Ritratto di Nome.*
 ```
 
-Per i luoghi:
+Per i luoghi (prima immagine / veduta canonica):
 
 ```markdown
 ## Immagine
@@ -204,10 +223,21 @@ Per i luoghi:
 *Veduta di Nome Luogo.*
 ```
 
+Immagini aggiuntive nella **stessa** sezione `## Immagine` (append, non nuova sezione):
+
+```markdown
+![Mappa di Nome Luogo](/immagini/luoghi/nome-luogo-mappa.jpg)
+
+*Mappa tattica: …*
+```
+
+Esempio di riferimento reale: `ambientazione/luoghi/fattoria-mercer.md` e `fattoria-barlow.md` (veduta + mappa).
+
 Regole:
 
-- Se c'e` un placeholder `_Nessuna immagine ancora associata._`, sostituiscilo.
-- Se esiste gia` un'immagine primaria, aggiornala invece di aggiungerne una seconda.
+- Se c'e` un placeholder `_Nessuna immagine ancora associata._`, sostituiscilo con il **primo** blocco reale (unico caso di «sostituzione» senza parola esplicita del DM).
+- Se esistono gia` uno o piu` blocchi immagine, **appendi** il nuovo blocco (`![…]` + riga vuota + didascalia in corsivo) **dopo** l’ultimo, senza rimuovere i precedenti — salvo **modalità sostituzione** esplicita.
+- In sostituzione esplicita, aggiorna solo il blocco il cui path coincide con quello sostituito (o quello indicato dal DM); lascia intatti gli altri blocchi nella sezione.
 - La didascalia non deve introdurre nuova lore non gia` nel testo.
 
 ### Resoconti
@@ -238,12 +268,13 @@ Regole:
 Quando il DM chiede di importare un'immagine:
 
 1. identifica il file Markdown da aggiornare;
-2. determina il tipo immagine e il percorso sotto `immagini/`;
-3. sposta o rinomina l'asset nel path giusto, senza lasciarne una copia nella posizione originale;
-4. normalizza l'asset a JPEG `.jpg` con lato lungo <= 1920 px (o esegui `python3 tools/scripts/normalize_image_assets.py` sul path);
-5. aggiorna il Markdown con il link `/immagini/...` corretto (estensione `.jpg`);
-6. evita duplicati, placeholder residui o sezioni ripetute;
-7. conferma al DM il path finale dell'asset e il file Markdown aggiornato.
+2. verifica se il DM chiede **sostituzione** esplicita; altrimenti applica **modalità additiva**;
+3. determina il tipo immagine e il percorso sotto `immagini/` (canonico se libero, altrimenti path con suffisso);
+4. sposta o rinomina l'asset nel path scelto, senza lasciarne una copia nella posizione originale e **senza** sovrascrivere JPEG esistenti salvo sostituzione esplicita;
+5. normalizza l'asset a JPEG `.jpg` con lato lungo <= 1920 px (o esegui `python3 tools/scripts/normalize_image_assets.py` sul path di destinazione);
+6. aggiorna il Markdown: placeholder → primo blocco; altrimenti **append** del nuovo blocco in `## Immagine` / nuovo sotto-blocco in `## Immagini salienti`;
+7. evita duplicati dello **stesso** path nel Markdown, placeholder residui o sezioni `## Immagine` ripetute;
+8. conferma al DM il path finale dell'asset, se l’import e` stato additivo o sostitutivo, e il file Markdown aggiornato.
 
 ## Quando fermarsi e chiedere
 
@@ -253,5 +284,6 @@ Fai una domanda mirata invece di procedere se manca uno di questi elementi:
 - il file Markdown di destinazione;
 - il numero di sessione per una scena;
 - la distinzione fra ritratto (personaggio) e scena di sessione quando entrambe sono plausibili;
-- il consenso a sovrascrivere un asset gia` esistente nel percorso previsto.
+- il suffisso del path quando piu` qualificatori sono plausibili e il DM non ha dato indizi (non chiedere «vuoi sovrascrivere?» se non ha chiesto sostituzione);
+- quale blocco Markdown sostituire quando il DM chiede sostituzione ma non specifica quale immagine (veduta, mappa, ritratto, path).
 

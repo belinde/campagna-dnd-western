@@ -10,6 +10,10 @@
 
 *Veduta della Fattoria Mercer.*
 
+![Mappa della Fattoria Mercer](/immagini/luoghi/fattoria-mercer-mappa.jpg)
+
+*Mappa planimetrica della fattoria: casa a una stanza con botola in cantina, pozzo, recinto, orto, mais e frumento, meli e cumuli di pietre presso le tombe.*
+
 ## Aspetto
 
 La Fattoria Mercer è una di quelle decine di cascine senza nome né fama che punteggiano la cintura agricola a est di Valdoren, lungo la prima parte del tracciato verso la Frontiera. Si trova a circa mezza giornata di carro dalla città, oltre i campi recintati delle grandi proprietà e oltre l'ultimo canale d'irrigazione che pesca dal Grande Fiume: là dove la pianura coltivata comincia a sfilacciarsi, le piantagioni di grano lasciano posto a chiazze più magre e i coloni che non si potevano permettere terra buona si sono accontentati di terra accettabile.

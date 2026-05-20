@@ -10,9 +10,12 @@ Le immagini della campagna vivono in questa cartella e vengono richiamate dirett
 
 - `immagini/personaggi/<slug>.jpg`
 - `immagini/png/<slug>.jpg`
-- `immagini/luoghi/<slug>.jpg`
+- `immagini/luoghi/<slug>.jpg` (veduta o prima immagine del luogo)
+- `immagini/luoghi/<slug>-<qualificatore>.jpg` per immagini aggiuntive dello stesso luogo (es. `-mappa`, `-veduta`)
 - `immagini/eventi/sessione-NNN/<slug-evento>.jpg`
 - `immagini/varie/<slug>.jpg` per asset non ancora collegati a un file Markdown di riferimento
+
+Stesso schema di suffisso per PG/PNG quando servono piu` ritratti (`<slug>-mappa`, `<slug>-ritratto-alt`, ecc.). `/importa-immagine` non sovrascrive per default: vedi skill `campagna-immagini`.
 
 Lo `slug` deve seguire, quando possibile, il nome del file Markdown corrispondente:
 
@@ -51,6 +54,14 @@ Esempio per un luogo:
 *Veduta di Valdoren.*
 ```
 
+Piu` immagini nella stessa `## Immagine` (append in import additivo):
+
+```markdown
+![Mappa di Valdoren](/immagini/luoghi/valdoren-mappa.jpg)
+
+*Mappa tattica: …*
+```
+
 Se un'immagine non esiste ancora, mantenere comunque la sezione con la nota:
 
 ```markdown
@@ -77,7 +88,7 @@ Esempio:
 
 ## Regole di consistenza
 
-- Ogni file in `personaggi/`, `png/` e `ambientazione/luoghi/` ha una sola immagine primaria.
+- Ogni file in `personaggi/`, `png/` e `ambientazione/luoghi/` ha al piu` un asset **canonico** `<slug>.jpg` (ritratto o veduta principale); altre immagini usano path con suffisso e blocchi aggiuntivi in `## Immagine`.
 - Le scene di sessione vivono nei `resoconti/`, non nelle schede personaggio come immagine primaria.
 - Le didascalie non devono introdurre nuova lore: descrivono solo elementi gia` presenti nel testo.
 - Evitare mapping impliciti basati solo su nomi vecchi o cartelle miste: il riferimento corretto e` sempre quello scritto nel Markdown.

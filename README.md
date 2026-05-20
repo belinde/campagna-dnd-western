@@ -30,7 +30,7 @@ Il comportamento dell'AI è organizzato così:
 | `/ingame` | `campagna-ingame` | Tavolo: risposte brevi, solo file sotto `sessione/` con prefissi. |
 | `/master` | `campagna-master` | Appunti → documenti in `ambientazione/`. |
 | `/prompt-immagine` | `campagna-immagini` (solo sezione *Prompt*) | Prompt in **inglese** per il modello immagine (eccezione all’italiano della rule `campagna`); stile **cinematically realistic**; blocco `text` copiabile. Sola lettura. |
-| `/importa-immagine` | `campagna-immagini` (solo sezione *Import*) | Sposta/normalizza JPEG e aggiorna il Markdown (richiede Agent). |
+| `/importa-immagine` | `campagna-immagini` (solo sezione *Import*) | Sposta/normalizza JPEG e aggiorna il Markdown in modo **additivo** (append + path con suffisso se il canonico esiste); sostituzione solo se richiesta esplicita (richiede Agent). |
 
 I comandi **non sostituiscono** la rule `campagna`: resta attiva in background. Per le immagini non c'è più attivazione automatica via `globs`: usa `/prompt-immagine` o `/importa-immagine` quando serve.
 

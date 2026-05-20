@@ -10,6 +10,10 @@
 
 *Veduta della Fattoria Barlow.*
 
+![Mappa della Fattoria Barlow](/immagini/luoghi/fattoria-barlow-mappa.jpg)
+
+*Mappa tattica della cascina: sentiero, pozzo, tettoia dei secchi, orto, recinto della mula, magazzino del sale e casa.*
+
 ## Aspetto
 
 La Fattoria Barlow sorge piu' a ovest delle terre ancora ben irrigate attorno a Valdoren, nel tratto in cui la Via dei Coloni smette di sentirsi una strada rurale e comincia a somigliare a un compromesso con la pianura aperta. Non e' un podere ricco, ne' particolarmente fertile: la sua unica vera fortuna e' un **pozzo profondo** che continua a dare acqua anche quando i fossi si abbassano e le pozze stagionali diventano fango cattivo.

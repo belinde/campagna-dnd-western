@@ -36,6 +36,14 @@
         "profile": "public-png"
       },
       {
+        "path": "png/harlan-pike.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png",
+        "aliases": [
+          "Uomo armato della fattoria"
+        ]
+      },
+      {
         "path": "png/hector-brannagh.md",
         "label": "PNG conosciuti",
         "profile": "public-png"
@@ -84,6 +92,14 @@
         "profile": "public-png"
       },
       {
+        "path": "png/yargra-delle-orme-profonde.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png",
+        "aliases": [
+          "Yargra"
+        ]
+      },
+      {
         "path": "ambientazione/luoghi/valdoren.md",
         "label": "Luoghi visitati",
         "aliases": [
@@ -108,6 +124,15 @@
       {
         "path": "ambientazione/luoghi/ben-campbell.md",
         "label": "Luoghi visitati"
+      },
+      {
+        "path": "ambientazione/luoghi/campo-della-strage.md",
+        "label": "Luoghi visitati",
+        "aliases": [
+          "Campo della strage",
+          "Campo di strage dei bisonti",
+          "Campo della strage (guado in pianura)"
+        ]
       }
     ]
   },
