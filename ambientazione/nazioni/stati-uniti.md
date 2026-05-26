@@ -18,6 +18,10 @@ La Frontiera è un caso a parte: i territori oltre il confine ufficiale della co
 
 *(Da definire con il DM in base allo sviluppo della campagna)*
 
+## Simboli
+
+La bandiera federale — undici bande rame e avorio, canton blu notte con undici stelle argento disposte a stella attorno a una stella centrale piu' grande (New Avalon) — e' descritta in dettaglio in [`ambientazione/concetti/bandiera-federale.md`](../concetti/bandiera-federale.md).
+
 ## Risorse e influenza
 
 La ricchezza degli Stati Uniti è fondata su tre pilastri. Il primo è l'agricoltura: le pianure del Nuovo Mondo sono tra le più fertili mai coltivate, e la meccanizzazione tecnomagica degli ultimi decenni ha moltiplicato la produttività a un ritmo che stupisce anche gli economisti del Vecchio Mondo.

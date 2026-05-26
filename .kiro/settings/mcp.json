@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "dnd": {
+      "command": "/home/belinde/.local/bin/uv",
+      "args": [
+        "--directory",
+        "tools/dnd-mcp",
+        "run",
+        "dnd_mcp_server.py"
+      ]
+    }
+  }
+}

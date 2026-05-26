@@ -6,7 +6,13 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Veduta di Trepali](/immagini/luoghi/trepali.jpg)
+
+*Veduta di Trepali.*
+
+![Mappa di Trepali](/immagini/luoghi/trepali-mappa.jpg)
+
+*Mappa della citta': strada principale, tracciato promesso, punti di interesse.*
 
 ## Aspetto
 
@@ -53,6 +59,9 @@ Quasi nessuno a Trepali possiede prestigio nel senso antico del termine. Qui con
 - **Il Tracciato Promesso** - La massicciata incompleta della futura ferrovia. Di giorno e' un cantiere intermittente; di notte e' un confine sociale, un punto buono per imboscate, scambi rapidi e discorsi che non vogliono orecchie ufficiali.
 - **Il Piazzale dei Carri** - Distesa di fango, paglia e ruote spezzate dove le carovane si raccolgono, si alleggeriscono o si ricompongono prima di ripartire. E' il posto migliore per assumere guardie, comprare buoi e perdere il conto di quanti disperati esistano al mondo.
 - **L'Ufficio del Telegrafo** - Una stanza lunga e stretta con fili tesi verso est e apparecchi capricciosi. Quando funziona bene, vende velocita'; quando funziona male, vende scuse costose.
+- **L'Ufficio dello Sceriffo** - Casetta di tavole a un piano sul lato nord della strada, con una cella sul retro, una rastrelliera per fucili, una stufa, una caffettiera sempre calda e la stella federale dipinta sulla porta. Lo sceriffo Josiah Tate ci passa le mattine a leggere dispacci e i pomeriggi a fare il giro della citta' a piedi. Di notte un vice di cui nessuno si fida abbastanza copre il turno.
+- **Il Banco del Giudice** - Non un tribunale vero: una stanza al secondo piano della Casa dei Registri, con un banco di quercia rialzato su una pedana traballante, una bandiera federale appesa storta al muro e sei sedie per il pubblico che non bastano mai. Il giudice Cornelius Ashford tiene udienza tre giorni a settimana — quando c'e' — e decide su concessioni contestate, risse con conseguenze, debiti non onorati e tutto cio' che a Trepali non si riesce a risolvere ne' con i pugni ne' con l'oro. Le sentenze sono rapide, spesso impopolari, e quasi sempre definitive perche' appellarsi a New Avalon costa piu' di quanto la maggior parte dei querelanti possieda.
+- **Il Fondo del Barile** - Saloon largo e basso sul lato sud della strada principale, con un portico di assi storte dove i cani dormono meglio dei clienti. Dentro: bancone di quercia scura macchiato di cerchi, specchio incrinato dietro le bottiglie, tavoli da gioco, una stufa di ghisa che d'inverno e' l'unico motivo per cui la gente resta, e un **pianoforte tecnomagico** muto nell'angolo — un tempo suonava da solo, adesso ha tre fori di proiettile nella cassa armonica e le rune sul pannello interno sono scheggiate. Virgil Tench serve whisky annacquato ai disperati e whisky vero a chi paga il doppio, e sa tutto quello che si dice in citta' perche' glielo dicono tutti, ubriachi, prima di mezzanotte.
 - **La Pensione dell'Ultima Tavola** - L'albergo piu' rispettabile della citta', con lenzuola quasi pulite, buon whisky e una sala comune dove sensali, notai, capicarovana e avvoltoi in abiti decorosi si osservano senza fingere troppo.
 
 ## Storia e origine
