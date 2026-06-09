@@ -69,3 +69,4 @@ _Da definire._
 - **[Sessione 006]** Dorothy si tiene vicino a lei quasi sempre; aiuta Kelvor a seppellire Henry e Martha; la sua **scurovisione** è utile ai turni di guardia dopo il tramonto.
 - **[Sessione 007]** Nota per prima l'anomalia della Fattoria Barlow, origlia da lontano il colloquio teso tra Leman e Mae, e assiste alla prima manifestazione concreta della strage dei branchi lungo la Via dei Coloni.
 - **[Sessione 008]** Resta di guardia alla carovana durante l'incontro con Yargra; partecipa al dibattito su legge, mandato e rischio di allontanarsi tutti di notte.
+- **[Sessione 009]** Al Fondo del Barile nota il compagno di Danny con la pistola nascosta sotto il giornale; offre un giro di whisky al tavolo; propone di seguire i cacciatori dopo la serata.

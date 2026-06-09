@@ -133,6 +133,30 @@
           "Campo di strage dei bisonti",
           "Campo della strage (guado in pianura)"
         ]
+      },
+      {
+        "path": "png/danny-cowell.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/virgil-tench.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "ambientazione/luoghi/trepali.md",
+        "label": "Luoghi visitati",
+        "aliases": [
+          "Tre Pali"
+        ]
+      },
+      {
+        "path": "ambientazione/luoghi/il-fondo-del-barile.md",
+        "label": "Luoghi visitati",
+        "aliases": [
+          "Il Fondo del Barile"
+        ]
       }
     ]
   },

@@ -50,7 +50,7 @@ Durante una rissa con sparatoria, tre proiettili hanno attraversato la cassa arm
 
 ## Legami con i PG
 
-_Da definire al primo incontro._
+Il gruppo della carovana di Brannagh si è presentato al Fondo del Barile in una sera qualunque. **Gud Bender** ha riparato il pianoforte tecnomagico che taceva da anni — un favore che Virgil non dimenticherà. Ha offerto consumazioni gratuite per tutta la serata; il debito non è saldato.
 
 ## Note DM
 
@@ -78,4 +78,4 @@ _Da definire al primo incontro._
 
 ## Eventi interessanti
 
-_(da aggiornare dopo ogni sessione in cui il PNG appare)_
+- **[Sessione 009]** Gud Bender ripara il pianoforte tecnomagico muto da anni; Virgil offre consumazioni gratuite per tutta la serata come ringraziamento e resta in debito con il nano.

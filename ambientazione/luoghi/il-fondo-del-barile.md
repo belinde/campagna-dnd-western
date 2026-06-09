@@ -18,7 +18,7 @@ Dentro, la luce e' poca e calda: lampade a olio appese a ganci di ferro, una fin
 
 I tavoli sono rotondi, bassi, con segni di coltello e bruciature di sigaro. Tre o quattro servono per il gioco; gli altri per bere e parlare, che a Trepali sono spesso la stessa cosa. Una stufa di ghisa nell'angolo nord-est e' l'unico motivo per cui d'inverno la gente resta dopo il terzo bicchiere.
 
-Nell'angolo opposto, contro la parete ovest, c'e' il **pianoforte**: un verticale di noce scuro con un pannello laterale coperto di rune incise nel rame, ormai opache e scheggiate. Tre fori di proiettile attraversano la cassa armonica da parte a parte. Un tempo suonava da solo — l'elementale vincolato nelle rune produceva melodie senza bisogno di mani — ma da quando la sparatoria ha spezzato i sigilli, il pianoforte tace. Nessuno ci appoggia nemmeno il bicchiere: e' diventato una specie di monumento al fatto che a Trepali le cose belle durano poco.
+Nell'angolo opposto, contro la parete ovest, c'e' il **pianoforte**: un verticale di noce scuro con un pannello laterale coperto di rune incise nel rame, ora di nuovo lucide dopo una riparazione recente. I tre fori di proiettile nella cassa armonica restano visibili come cicatrici, ma i sigilli sono stati ripristinati e lo strumento ha ripreso a suonare da solo — l'elementale vincolato produce di nuovo melodie senza bisogno di mani. Virgil ci tiene piu' che a qualsiasi bottiglia dietro il bancone.
 
 Sul retro, una porta bassa porta alla cucina dove un halfling di cui nessuno ricorda il nome taglia cipolle, frigge lardo e tiene un coltello troppo affilato per il mestiere che dichiara. C'e' anche una scala ripida che sale a tre stanze al piano di sopra: due si affittano a ore o a notte, la terza e' quella di Virgil.
 
@@ -41,7 +41,7 @@ Cartoon or plastic CGI; clean upscale saloon; working piano with player; bright 
 ## Punti di interesse
 
 - **Il bancone** - Dieci posti in piedi, whisky annacquato per i disperati e whisky vero per chi paga il doppio. Virgil serve, ascolta e tiene il conto.
-- **Il pianoforte tecnomagico** - Manufatto della East Coast, ottenuto da Virgil come risarcimento per una storia losca. Tre proiettili nella cassa e rune scheggiate: tace da anni. Riparabile da un meccanico runista competente.
+- **Il pianoforte tecnomagico** - Manufatto della East Coast, ottenuto da Virgil come risarcimento per una storia losca. Tre proiettili nella cassa e rune scheggiate: è stato riparato da **Gud Bender** durante la sessione 009 e ha ripreso a suonare. Virgil deve un favore al nano.
 - **I tavoli da gioco** - Poker, dadi, scommesse su qualsiasi cosa. Virgil non arbitra, ma ricorda chi bara.
 - **Le stanze al piano di sopra** - Due si affittano; la terza e' di Virgil. Quello che succede sopra non e' affar suo, purche' non sporchi le scale.
 - **La cucina** - Dominio di un halfling taciturno con un coltello troppo affilato. Lardo fritto, cipolle, pane duro, caffe' nero.
@@ -56,7 +56,7 @@ Da allora il saloon e' quello che e': un posto dove si beve, si parla troppo, si
 
 ## Ganci narrativi
 
-- **Il pianoforte da riparare** - Un meccanico runista potrebbe riattivare l'elementale vincolato. Virgil non lo chiedera' mai, ma chi lo facesse si guadagnerebbe un debito vero — e Virgil paga i debiti in informazioni, che a Trepali valgono piu' dell'oro.
+- **Il pianoforte riparato** - Gud Bender ha riattivato l'elementale vincolato; Virgil deve un favore vero al nano. L'informazione che Virgil puo' offrire — su chi compra concessioni, chi assume pistoleri, chi parte domani — e' ora accessibile al gruppo con una leva concreta.
 - **L'halfling in cucina** - Nessuno sa come si chiama davvero, ne' da dove viene. Virgil lo ha assunto senza fare domande. Qualcuno potrebbe averne di molto precise.
 - **La stanza chiusa** - Una delle stanze al piano di sopra e' stata affittata per un mese intero da un uomo che non si e' piu' visto. Virgil tiene la chiave e non apre. Cosa c'e' dentro?
 - **Il saloon come orecchio** - Chi controlla il Fondo del Barile controlla il flusso di voci di mezza Trepali. Se qualcuno volesse sapere chi compra concessioni, chi assume pistoleri o chi parte domani verso ovest, questo e' il posto giusto — e Virgil e' il prezzo.

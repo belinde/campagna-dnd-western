@@ -11,12 +11,16 @@
 
 ## Il Middle West
 
+- <a href="cornelius-ashford.md"><img src="../immagini/png/cornelius-ashford.jpg" width="80" alt="Cornelius Ashford"></a> [Cornelius Ashford](cornelius-ashford.md) — Giudice elfo esiliato da Lythandor; applica la legge con livore chirurgico perche' odia tutti quelli che lo hanno mandato qui.
 - <a href="dorothy-mercer.md"><img src="../immagini/png/dorothy-mercer.jpg" width="80" alt="Dorothy Mercer"></a> [Dorothy Mercer](dorothy-mercer.md) — Bambina sopravvissuta all'assalto sulla rotta verso la Frontiera; testimone silenziosa e da proteggere.
+- <a href="josiah-tate.md"><img src="../immagini/png/josiah-tate.jpg" width="80" alt="Josiah Tate"></a> [Josiah Tate](josiah-tate.md) — Sceriffo di Trepali: giovane, solare, ci crede davvero — il che lo rende o il migliore o il piu' vulnerabile della citta'.
 - <a href="silas-drummond.md"><img src="../immagini/png/silas-drummond.jpg" width="80" alt="Silas Drummond"></a> [Silas Drummond](silas-drummond.md) — Sceriffo federale di Valdoren: legge lenta ma presente al centro del Middle West.
 - [Todd Crow](todd-crow.md) — Fratello Crow morto nel Mississippi; il suo nome resta legato alla vendetta dei superstiti.
+- <a href="virgil-tench.md"><img src="../immagini/png/virgil-tench.jpg" width="80" alt="Virgil Tench"></a> [Virgil Tench](virgil-tench.md) — Oste gobbo del saloon di Trepali; sa tutto quello che si dice in citta' perche' glielo dicono tutti prima di mezzanotte.
 
 ## La Frontiera
 
+- [Danny Cowell](danny-cowell.md) — Cacciatore giovane che gioca a poker con il sorriso facile e un compagno armato alle spalle.
 - <a href="elias-barlow.md"><img src="../immagini/png/elias-barlow.jpg" width="80" alt="Elias Barlow"></a> [Elias Barlow](elias-barlow.md) — Capofamiglia colono che regge il pozzo e chiama necessità ciò che sta diventando complicità.
 - <a href="harlan-pike.md"><img src="../immagini/png/harlan-pike.jpg" width="80" alt="Harlan Pike"></a> [Harlan Pike](harlan-pike.md) — Caposquadra che misura le distanze prima delle persone e cura il fucile come un rito.
 - <a href="mae-barlow.md"><img src="../immagini/png/mae-barlow.jpg" width="80" alt="Mae Barlow"></a> [Mae Barlow](mae-barlow.md) — Figlia adolescente che porta secchi al pozzo, osserva troppo e dimentica poco.
