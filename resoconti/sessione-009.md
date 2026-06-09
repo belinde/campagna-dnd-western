@@ -4,7 +4,7 @@
 
 ## Riassunto
 
-La carovana di Hector Brannagh giunge a **Tre Pali** al calar del sole e ottiene due notti di sosta. Il gruppo approfitta della libertà per visitare il saloon **"Il Fondo del Barile"**, dove **Gud Bender** ripara il pianoforte tecnomagico guadagnandosi la gratitudine di Virgil Tench e consumazioni per tutti. Intanto **Grombrindal** e **Leman Russ** riconoscono al tavolo da poker un cacciatore dei **Tiratori del Punto Lungo** — **Danny** — e un momento di tensione rivela che un suo compagno vegliava armato sotto il giornale. La serata si chiude con birre, whisky e il proposito di cercare lo sceriffo l'indomani per denunciare i cacciatori.
+La carovana di Hector Brannagh giunge a **Tre Pali** al calar del sole e ottiene due notti di sosta. Il gruppo approfitta della libertà per visitare il saloon **"Il Fondo del Barile"**, dove **Gud Bender** ripara il pianoforte tecnomagico guadagnandosi la gratitudine di Virgil Tench e consumazioni per tutti. Intanto **Grombrindal** e **Leman Russ** riconoscono al tavolo da poker un cacciatore dei **Tiratori del Punto Lungo** — **Danny Cowell** — e un momento di tensione rivela che un suo compagno vegliava armato sotto il giornale. La serata si chiude con birre, whisky e il proposito di cercare lo sceriffo l'indomani per denunciare i cacciatori.
 
 ## Immagini salienti
 
@@ -24,7 +24,7 @@ Il capocarovana concede al gruppo un paio d'ore di libertà. **Kelvor Rivib**, *
 
 Nel frattempo il resto del gruppo tiene d'occhio la sala. Al tavolo da poker siede un uomo che **Grombrindal** e **Leman Russ** riconoscono quasi con certezza: è uno dei cacciatori visti il giorno prima alla Fattoria Barlow, parte dei **Tiratori del Punto Lungo**. **Dora** e **Kelvor** non sono altrettanto certi. Il gruppo discute a bassa voce, turbato dal ritrovarselo davanti in un contesto così ordinario.
 
-Un momento di **tensione** scuote il tavolo da poker: un giocatore accusa **Danny** — il cacciatore — di barare. Mentre le parole si scaldano, un secondo cacciatore seduto in disparte estrae la pistola e la tiene nascosta sotto il giornale che finge di leggere, pronto a intervenire se la situazione degenera. L'attaccabrighe se ne va senza conseguenze; il compagno ripone l'arma senza farsi notare — ma il gruppo lo coglie. La scena rivela quanto i Tiratori operino come squadra anche fuori dal campo di caccia: silenziosi, organizzati, pericolosi.
+Un momento di **tensione** scuote il tavolo da poker: un giocatore accusa **Danny Cowell** — il cacciatore — di barare. Mentre le parole si scaldano, un secondo cacciatore seduto in disparte estrae la pistola e la tiene nascosta sotto il giornale che finge di leggere, pronto a intervenire se la situazione degenera. L'attaccabrighe se ne va senza conseguenze; il compagno ripone l'arma senza farsi notare — ma il gruppo lo coglie. La scena rivela quanto i Tiratori operino come squadra anche fuori dal campo di caccia: silenziosi, organizzati, pericolosi.
 
 Dopo che la tensione si scioglie, **Danny** raccoglie i soldi dal tavolo, passa da Virgil a farsi versare una birra e scambia qualche parola con il gruppo. Il tono è amichevole: Danny spiega con ironia che quando beve non gioca più, e si mostra cordiale senza ostilità. **Gud** gli offre una birra per attaccare discorso; **Grombrindal** ordina un giro di whisky per il tavolo; **Dora** ne aggiunge un altro. Danny se ne va a fine serata senza incidenti.
 
@@ -34,7 +34,7 @@ Alla fine della serata il gruppo rientra alla carovana per i turni di guardia. L
 
 ## Personaggi non giocanti incontrati
 
-- **Danny** — Cacciatore umano dei Tiratori del Punto Lungo; riconosciuto al tavolo da poker del Fondo del Barile. Giocatore di poker abile, tono amichevole; accompagnato da un compagno armato che veglia in silenzio.
+- **Danny Cowell** — Cacciatore umano dei Tiratori del Punto Lungo; riconosciuto al tavolo da poker del Fondo del Barile. Giocatore di poker abile, tono amichevole; accompagnato da un compagno armato che veglia in silenzio.
 - **Virgil Tench** — Gestore del Fondo del Barile; offre consumazioni gratuite dopo la riparazione del pianoforte. Sa tutto ciò che si dice a Tre Pali.
 
 ## Luoghi visitati
@@ -46,6 +46,6 @@ Alla fine della serata il gruppo rientra alla carovana per i turni di guardia. L
 
 - **Denuncia allo sceriffo**: il gruppo intende cercare lo sceriffo Josiah Tate l'indomani per denunciare i Tiratori del Punto Lungo — con quali prove e quale strategia?
 - **Appuntamento con Yargra**: la sciamana attende fuori Tre Pali al tramonto fra due giorni (dalla sessione 008). Il tempo stringe.
-- **Danny e i Tiratori**: il cacciatore li ha visti e ha parlato con loro — li ricorderà? Il compagno con la pistola sotto il giornale indica che la banda è presente in forze a Tre Pali.
+- **Danny Cowell e i Tiratori**: il cacciatore li ha visti e ha parlato con loro — li ricorderà? Il compagno con la pistola sotto il giornale indica che la banda è presente in forze a Tre Pali.
 - **Seconda notte di sosta**: la carovana resta un altro giorno — il gruppo ha tempo per esplorare la città, raccogliere informazioni, comprare provviste.
 - **Harlan Pike**: il capo dei Tiratori è stato nominato da Elias Barlow ma non ancora incontrato di persona.
