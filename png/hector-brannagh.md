@@ -80,3 +80,4 @@ Non è l'uomo semplice che sembra. Il fallimento a Port Meredith non è stato so
 - **[Sessione 005]** All'alba guida la partenza della carovana da Valdoren: in testa al convoglio dirige operazioni e ritmo della marcia.
 - **[Sessione 006]** Media il dibattito sulla sorte di Dorothy Mercer alla Fattoria Mercer; convoca i carovaniere, accorda l'accampamento e la missione verso Silas Drummond; stringe la mano allo sceriffo e ospita il gruppo di notte.
 - **[Sessione 007]** Guida la carovana oltre la Fattoria Mercer, tratta con Elias Barlow per la sosta alla fattoria e, dopo che Leman anticipa i 10 dollari pattuiti, si dichiara in debito con lui quando il druido rifiuta il rimborso.
+- **[Sessione 010]** Convinto dai PG a restare un giorno in più a Tre Pali per l'udienza; nel pomeriggio, su invito dello gnomo Cip, incontra alla Pensione dell'Ultima Tavola una donna sconosciuta che gli offre denaro e contratti di lavoro in cambio di una partenza immediata.

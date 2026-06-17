@@ -70,3 +70,4 @@ _Da definire._
 - **[Sessione 007]** Attraversa con la carovana il primo tratto oltre la Fattoria Mercer e assiste al campo dei bisonti massacrati e alla sosta alla Fattoria Barlow, dove la violenza economica della Frontiera si mostra ormai senza maschere.
 - **[Sessione 008]** Partecipa al dibattito su moralità della caccia e su eventuali leggi che regolino l'uccisione dei cuccioli.
 - **[Sessione 009]** A Tre Pali ripara il pianoforte tecnomagico del Fondo del Barile, guadagnandosi la gratitudine di Virgil Tench e consumazioni gratuite per tutta la serata.
+- **[Sessione 010]** Segue con Dora lo gnomo Cip fino alla carovana; sbircia dalla finestra della Pensione dell'Ultima Tavola e vede Brannagh trattare con una donna in tailleur; la sera raggiunge Yargra con Leman e Kelvor.

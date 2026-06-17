@@ -84,3 +84,4 @@ Non è ingenua: se la carovana sceglie il profitto o il silenzio, Yargra non tor
 ## Eventi interessanti
 
 - **[Sessione 008]** Si presenta di notte alla carovana presso la Fattoria Barlow, chiede testimoni per una strage di madri e cuccioli di bisonti, negozia con Brannagh, riceve in prestito un cavallo da Leman; all'alba guida Kelvor e Leman al campo del massacro e fissa appuntamento fuori Tre Pali al tramonto fra due giorni.
+- **[Sessione 010]** Raggiunta al tramonto fuori Tre Pali da Leman, Kelvor e Gud; informata della denuncia e del peso legale del suo ruolo di firmataria, accetta di presentarsi come querelante al tribunale. Accompagnata da Leman al campo del clan, dove il druido passa la notte in forma di lupo — gesto che colpisce il clan con rispetto.

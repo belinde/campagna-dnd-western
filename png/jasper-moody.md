@@ -50,7 +50,7 @@ Non è stupido nel senso classico del termine: capisce cosa succede attorno a lu
 
 ## Legami con i PG
 
-_Da definire al primo incontro._
+Primo incontro nella Sessione 010: i PG lo scambiano per lo sceriffo e si irritano per la sua incompetenza. Tate lo manda via dopo che ha spifferato i dettagli della denuncia allo gnomo Cip.
 
 ## Note DM
 
@@ -63,11 +63,11 @@ _Da definire al primo incontro._
 
 ## Scheda di gioco
 
-**Livello/Classe:** livello 2, Fighter (nessun archetipo; profilo da guardia urbana sedentaria)
+**Livello/Classe:** livello 3, Fighter (nessun archetipo; profilo da guardia urbana sedentaria)
 
 **Ruolo tattico:** non combattente effettivo; presenza nominale, nessuna minaccia reale
 
-**CA/PF/Velocità:** 12 (gilet rinforzato, Des bassa) / 18 / 25 ft. (sovrappeso, poca resistenza)
+**CA/PF/Velocità:** 13 (gilet rinforzato + Stile Difesa) / 24 / 25 ft. (sovrappeso, poca resistenza)
 
 **Caratteristiche:** For 13, Des 10, Cos 12, Int 11, Sag 9, Car 13
 
@@ -77,8 +77,8 @@ _Da definire al primo incontro._
 
 **Attacchi/Azioni:** revolver +2 (1d10 perforanti, gittata 40/120 — quasi mai estratto); pugno +3 (1d4+1 contundenti)
 
-**Capacità/Incantesimi distintivi:** Stile di combattimento (Difesa: +1 CA con armatura — già incluso); Secondo Vento (1d10+2 PF, 1/riposo breve); nessun incantesimo; nessuna capacità investigativa o di sorveglianza degna di nota
+**Capacità/Incantesimi distintivi:** Stile di combattimento (Difesa: +1 CA con armatura — già incluso); Secondo Vento (1d10+3 PF, 1/riposo breve); nessun incantesimo; nessuna capacità investigativa o di sorveglianza degna di nota
 
 ## Eventi interessanti
 
-_(da aggiornare dopo ogni sessione in cui il PNG appare)_
+- **[Sessione 010]** Primo incontro con i PG: scambiato per lo sceriffo, fornisce risposte vaghe e racconta i dettagli della denuncia allo gnomo Cip. Mandato in ricognizione da Tate; nel pomeriggio porta ai PG la convocazione del giudice.

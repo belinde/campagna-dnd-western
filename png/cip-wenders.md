@@ -46,7 +46,7 @@ Se gli chiedi cosa fa, risponde sempre la stessa cosa: «Commissioni.» Se insis
 
 ## Legami con i PG
 
-_Da definire al primo incontro._
+Primo avvistamento nella Sessione 010: visto chiacchierare con il vicesceriffo Jasper davanti all'ufficio dello sceriffo, poi seguito da Dora e Gud fino alla carovana dove invita Brannagh a incontrare una "signora". I PG non conoscono ancora il suo nome completo né il suo ruolo reale.
 
 ## Note DM
 
@@ -76,4 +76,4 @@ _Da definire al primo incontro._
 
 ## Eventi interessanti
 
-_(da aggiornare dopo ogni sessione in cui il PNG appare)_
+- **[Sessione 010]** Visto dai PG mentre chiacchiera con il vicesceriffo Jasper davanti all'ufficio dello sceriffo; seguito da Dora e Gud fino alla carovana, dove invita Brannagh a incontrare una "signora" non identificata.

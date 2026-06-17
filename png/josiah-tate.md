@@ -77,3 +77,4 @@ _Da definire al primo incontro._
 ## Eventi interessanti
 
 _(da aggiornare dopo ogni sessione in cui il PNG appare)_
+- **[Sessione 010]** Primo incontro con i PG: accoglie la denuncia contro i Tiratori del Punto Lungo con professionalità, trascrive la deposizione, la fa firmare e la porta al giudice. Manda via il vice Jasper dopo aver scoperto che spifferava ai presenti. Invia Jasper a convocare i PG per il colloquio con Ashford.

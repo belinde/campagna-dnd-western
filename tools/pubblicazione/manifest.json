@@ -135,6 +135,29 @@
         ]
       },
       {
+        "path": "png/josiah-tate.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/jasper-moody.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/cip-wenders.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png",
+        "aliases": [
+          "Lo gnomo Cip"
+        ]
+      },
+      {
+        "path": "png/cornelius-ashford.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
         "path": "png/danny-cowell.md",
         "label": "PNG conosciuti",
         "profile": "public-png"
@@ -156,6 +179,14 @@
         "label": "Luoghi visitati",
         "aliases": [
           "Il Fondo del Barile"
+        ]
+      },
+      {
+        "path": "ambientazione/luoghi/accampamento-orme-profonde.md",
+        "label": "Luoghi visitati",
+        "aliases": [
+          "Accampamento del Clan delle Orme Profonde",
+          "Tahká-Wičhó"
         ]
       }
     ]

@@ -69,3 +69,4 @@ _Da definire._
 - **[Sessione 007]** Riprende la marcia con la carovana dopo la Fattoria Mercer e assiste alla scoperta della strage di bisonti e alla sosta tesa presso la Fattoria Barlow, dove il gruppo comincia a misurare il costo morale della Frontiera.
 - **[Sessione 008]** Sveglia Brannagh per Yargra; all'alba segue la sciamana fino al massacro di cinquanta-sessanta bisonti, promette di denunciare i colpevoli e paga dieci dollari a Elias Barlow per i nomi dei Tiratori del Punto Lungo e di Harlan Pike.
 - **[Sessione 009]** Propone di cercare lo sceriffo di Tre Pali per denunciare i Tiratori; il gruppo rimanda al giorno dopo.
+- **[Sessione 010]** Depone denuncia presso lo sceriffo Tate e affronta il colloquio preliminare con il giudice Ashford; la sera raggiunge Yargra fuori Tre Pali e ottiene la sua accettazione a presentarsi come querelante.

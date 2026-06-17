@@ -75,4 +75,4 @@ _Da definire al primo incontro._
 
 ## Eventi interessanti
 
-_(da aggiornare dopo ogni sessione in cui il PNG appare)_
+- **[Sessione 010]** Primo incontro con i PG: riceve la denuncia in colloquio preliminare, stabilisce che la strage ricade nei territori coperti dai trattati, e indica che Yargra come firmataria dei patti avrebbe peso da querelante. Fissa l'udienza piena per l'indomani.

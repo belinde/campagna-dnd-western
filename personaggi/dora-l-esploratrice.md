@@ -47,6 +47,7 @@ _Da definire._
 ## Equipaggiamento notevole
 
 - **Mulo** *Svalka* — compagno di viaggio e bestia da soma.
+- **Colt di gran pregio** — arma tecnomagica di precisione. Munizioni standard: 1d8+3 perforanti. Munizioni speciali Colt (50 colpi): 1d8+5 dirompenti, rinculo ridotto. Manico d'osso, canna in acciaio damascato.
 
 ## Legami con gli altri PG
 
@@ -70,3 +71,4 @@ _Da definire._
 - **[Sessione 007]** Nota per prima l'anomalia della Fattoria Barlow, origlia da lontano il colloquio teso tra Leman e Mae, e assiste alla prima manifestazione concreta della strage dei branchi lungo la Via dei Coloni.
 - **[Sessione 008]** Resta di guardia alla carovana durante l'incontro con Yargra; partecipa al dibattito su legge, mandato e rischio di allontanarsi tutti di notte.
 - **[Sessione 009]** Al Fondo del Barile nota il compagno di Danny con la pistola nascosta sotto il giornale; offre un giro di whisky al tavolo; propone di seguire i cacciatori dopo la serata.
+- **[Sessione 010]** Acquista una Colt di gran pregio con cinquanta munizioni speciali; segue con Gud lo gnomo Cip attraverso Tre Pali fino all'accampamento della carovana.
