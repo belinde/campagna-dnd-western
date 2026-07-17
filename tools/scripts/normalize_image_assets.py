@@ -24,7 +24,7 @@ REPO_ROOT = repo_root()
 MAX_LONGEST_SIDE = 1920
 JPEG_QUALITY = 85
 RASTER_SUFFIXES = frozenset({".png", ".jpg", ".jpeg", ".webp"})
-EXCLUDE_DIR_NAMES = frozenset({"build", ".git", "node_modules", "__pycache__", ".cursor"})
+EXCLUDE_DIR_NAMES = frozenset({"build", ".git", "node_modules", "__pycache__", ".claude"})
 MD_IMAGE_REF_RE = re.compile(r'(/immagini/[^\s)]+?)\.(png|jpeg|webp)\b', re.IGNORECASE)
 
 

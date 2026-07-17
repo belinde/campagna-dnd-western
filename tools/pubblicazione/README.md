@@ -39,7 +39,7 @@ Il sito non usa i file grezzi del repository cosi` come sono. Ogni pagina passa 
 - `## Ganci narrativi`
 - `## Segreti e obiettivi nascosti`
 
-Le cartelle `sessione/`, `spunti/`, `.cursor/` e `tools/dnd-mcp/` restano fuori dal perimetro pubblico.
+Le cartelle `sessione/`, `spunti/`, `.claude/` e `tools/dnd-mcp/` restano fuori dal perimetro pubblico.
 
 ### Generatore prompt (`/prompt/`)
 

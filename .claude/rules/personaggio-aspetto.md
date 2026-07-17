@@ -1,0 +1,131 @@
+# Aspetto e Riferimento visivo
+
+Aspetto narrativo e Riferimento visivo (prompt immagine) sincronizzati su schede PG, PNG e luoghi.
+
+Si applica a `personaggi/*.md`, `png/*.md`, `sessione/png-*.md` e `ambientazione/luoghi/*.md`. **Non** si applica a `png/INDICE.md`.
+
+Per regole PNG meccaniche (Scheda di gioco 5e), vedi anche `.claude/rules/png-scheda-gioco.md`. Per prompt immagine on demand, `.claude/skills/campagna-immagini/SKILL.md`.
+
+## Due blocchi obbligatori
+
+Ogni scheda PG/PNG/luogo canonica deve avere **entrambe** le sezioni, nell'ordine:
+
+1. `## Immagine` (se gia` in uso nel file)
+2. `## Aspetto` — italiano, evocativo, per DM, tavolo e sito pubblico
+3. `## Riferimento visivo` — inglese, prompt per generazione immagini (veduta o ritratto)
+
+In `sessione/png-*.md` le sezioni possono restare provvisorie fino al resoconto, ma non lasciare una senza l'altra se l'aspetto e` gia` definito.
+
+### Ordine sezioni — luoghi
+
+Dopo `## Immagine`, `## Aspetto` e `## Riferimento visivo`, le altre sezioni descrittive del luogo (es. `## Abitanti e demografia`, `## Equipaggio e passeggeri`, `## Punti di interesse`, `## Storia e origine`, `## Ganci narrativi`). **Non** usare piu` `## Descrizione generale` ne` `## Aspetto e atmosfera`: il contenuto confluisce in `## Aspetto`.
+
+## Aspetto (italiano)
+
+### PG e PNG
+
+- **2–4 frasi** (circa max 120 parole; eccezione per figure gia` iconiche con testo consolidato).
+- Tono narrativo, evocativo; adatto a giocatori e lettura al tavolo.
+- Evitare nel corpo: nomi propri (se non necessari), checklist da generatore, vincoli «no cartoon», pose da storyboard, ripetizione pedante di ogni fibbia o bottone.
+- Il sito pubblico per i PNG esporta **solo** questa sezione (come «Descrizione»).
+
+### Luoghi (`ambientazione/luoghi/`)
+
+- **Descrizione lunga** consentita: piu` paragrafi, atmosfera, geografia, odori, luce, materiali — senza limite «2–4 frasi».
+- Fonde il ruolo delle vecchie `## Descrizione generale` e `## Aspetto e atmosfera` in un unico blocco narrativo italiano.
+- Tono evocativo, adatto a lettura al tavolo e al sito pubblico (corpo pagina luogo dopo sanificazione).
+
+## Tratti fissi vs stato di scena
+
+`## Aspetto` e `## Riferimento visivo` descrivono **solo** l'identita` visiva permanente del personaggio o del luogo: come appare in un ritratto o una veduta iconica **in qualsiasi momento** della campagna, non durante un singolo evento.
+
+### Cosa includere (tratti fissi)
+
+- Corporatura, eta` apparente, tratti razziali, capelli, barba, occhi.
+- Abbigliamento e equipaggiamento **abituale** o distintivo del ruolo.
+- Espressione di **default** o temperamento visivo cronico (malinconia, freddezza, vigilanza, stanchezza da mestiere).
+- Ambiente **tipo** del mestiere (fattoria, carovana, ponte di nave, ufficio dello sceriffo) — generico, non legato a una scena precisa.
+
+### Cosa non includere (stato di scena)
+
+- Emozioni **acute** da ultima sessione (terrorizzata, in lacrime, esultante, furiosa per un insulto appena ricevuto).
+- Ferite, sangue, lividi, fango o polvere **da un evento preciso**, salvo **cicatrice o segno permanente** gia` consolidato in `## Note DM`.
+- Pose da combattimento, fuga, nascondiglio o cattura legate a un incontro (mira verso camera, rannicchiata in botola, fuga verso il fiume).
+- Luoghi o props legati a **un solo** evento canonico (cantina della botola, corridoio durante la rissa, tavolo della colazione su quel vapore).
+- Riferimenti temporali nel testo («dopo la sparatoria», «quando fu trovata», «nei pochi secondi in cui i PG lo videro»).
+
+**Distinzione:** tratti emotivi **cronici** restano in Aspetto (es. «tiene la paura dietro il silenzio», «sguardo stanco ma vigile da anni di strada»). Reazioni **acute** a un evento vanno altrove.
+
+### Dove mettere gli stati temporanei
+
+| Contenuto | Sezione / percorso |
+|-----------|-------------------|
+| Fatto avvenuto in sessione NNN | `## Eventi interessanti` |
+| Ferite in corso, travestimento attuale, segreti visivi | `## Note DM` |
+| Relazione o fatto narrativo con i PG | `## Legami con i PG`, resoconti |
+| Immagine della scena | `resoconti/` → `## Immagini salienti`; asset in `immagini/eventi/sessione-NNN/` |
+
+### Eccezione `## Note DM`
+
+Aggiornare subito Note DM per ferite, travestimenti o invecchiamento in corso. Propagare ad Aspetto e Riferimento visivo **solo** se il cambiamento diventa **permanente** (cicatrice, amputazione, nuovo abito iconico, barba ormai canonica) — non per guarigioni o stati emotivi transitori.
+
+### Dopo un resoconto
+
+Verificare che l'ultima sessione **non** abbia «inquinato» Aspetto o Riferimento visivo. Se si`, ripristinare i tratti fissi e lasciare l'evento in Eventi interessanti / Note DM.
+
+## Riferimento visivo (inglese)
+
+Subito dopo `## Aspetto`, un **unico** blocco fenced con linguaggio `text` — stesso schema del blocco copiabile di `/prompt-immagine` (intestazioni keyword in inglese, senza grassetto, corpo in inglese):
+
+````markdown
+## Riferimento visivo
+
+```text
+Image prompt:
+
+(self-contained English text, no proper names, explicit cinematically realistic look)
+
+Constraints to preserve:
+
+(height/proportions for non-medium races; height comparisons in group scenes; other visual constraints)
+
+Details to avoid:
+
+(typical model errors; no cartoon, no plastic CGI, no generic fantasy illustration, etc.)
+```
+````
+
+- Intestazioni keyword **letterali**: `Image prompt:`, `Constraints to preserve:`, `Details to avoid:` (ciascuna su riga propria, poi contenuto).
+- Non annidare altri fence dentro il blocco `text`.
+- Copiabile in un gesto per il generatore immagine, come l'output del command.
+- Per i **luoghi**, il blocco puo` essere piu` esteso del ritratto (veduta, ambiente, scala).
+
+- **Non** renderizzato sulle pagine singole del sito: escluso da `stripSections` nel manifest.
+- Incluso in `assets/prompt-data.json` per il **Generatore prompt** (`/prompt/`), che applica gerarchia Scene/Setting e inquadratura unica (vedi `tools/pubblicazione/README.md` e `.claude/skills/campagna-immagini/SKILL.md`).
+- Per **orchi**, **mezzorchi** e razze basse (nano, halfling, gnomo), allineare statura e cromia a `.claude/skills/campagna-immagini/SKILL.md` e, se pertinente, `ambientazione/concetti/orchi-aspetto-e-cultura-materiale.md`.
+
+## Gerarchia in caso di conflitto
+
+- **Riferimento visivo** vince per ritratti, vedute, rigenerazioni immagine e coerenza visiva tra asset.
+- **Aspetto** vince per narrazione al tavolo e testo player-facing.
+- Dopo un cambio canonico visivo, aggiornare **entrambi** nello stesso passaggio.
+
+## Sincronizzazione obbligatoria
+
+Quando modifichi uno dei seguenti, aggiorna **Aspetto** e **Riferimento visivo** insieme:
+
+| Trigger | Cosa riflettere |
+|--------|------------------|
+| `## Note DM` (PNG) | Cicatrici **permanenti**, travestimenti, equip visibile, eta` apparente — in Aspetto solo cio` visibile o potenzialmente visibile ai PG; non stati emotivi o ferite transitorie (vedi «Tratti fissi vs stato di scena») |
+| **Resoconto / sessione** | Eventi in `## Eventi interessanti`; **non** copiare emozioni o pose dell'ultima scena in Aspetto/Riferimento salvo cambiamento permanente approvato dal DM |
+| `## Equipaggiamento notevole` (PG) | Armi, armature, oggetti distintivi, amuleti visibili |
+| `## Aspetto` o `## Riferimento visivo` | L'altro blocco, nello stesso edit |
+| **Razza** / **Razza/Classe** in testa | Statura, proporzioni, tratti razziali nel Riferimento; sintesi evocativa in Aspetto |
+| **Punti di interesse**, **Storia**, cambi visivi del luogo | Atmosfera e dettagli ambientali in Aspetto; veduta/scala nel Riferimento |
+
+Non aggiornare solo il Riferimento se il cambiamento cambia cio` che i giocatori possono vedere; non aggiornare solo l'Aspetto se serve coerenza per le immagini.
+
+## Nuove schede e import immagine
+
+- Creare sempre entrambe le sezioni; non lasciare solo l'Aspetto «per dopo».
+- Dopo `/importa-immagine`, verificare coerenza tra immagine, Aspetto e Riferimento visivo.

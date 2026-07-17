@@ -26,7 +26,7 @@ Lo `slug` deve seguire, quando possibile, il nome del file Markdown corrisponden
 
 ## Normalizzazione
 
-Gli asset nel repository devono essere **JPEG** (`.jpg`) con **lato piu` lungo al massimo 1920 px**. Per import o batch usare il command Cursor **`/importa-immagine`** (skill `.cursor/skills/campagna-immagini/`) e lo script `python3 tools/scripts/normalize_image_assets.py` (opzione `--dry-run` per anteprima). Dopo la normalizzazione i link nei Markdown usano sempre `/immagini/.../slug.jpg`.
+Gli asset nel repository devono essere **JPEG** (`.jpg`) con **lato piu` lungo al massimo 1920 px**. Per import o batch usare il comando **`/importa-immagine`** (skill `.claude/skills/campagna-immagini/`) e lo script `python3 tools/scripts/normalize_image_assets.py` (opzione `--dry-run` per anteprima). Dopo la normalizzazione i link nei Markdown usano sempre `/immagini/.../slug.jpg`.
 
 ## Sezioni da usare nei Markdown
 

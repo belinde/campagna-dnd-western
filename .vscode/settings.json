@@ -14,7 +14,7 @@
     "sessione": "campagna-sessione",
     "spunti": "campagna-spunti",
     "tools": "webpack",
-    ".cursor": "base",
+    ".claude": "base",
     ".github": "base",
     ".venv": "base",
     ".vscode": "base"

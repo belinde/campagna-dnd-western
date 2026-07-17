@@ -38,6 +38,9 @@ sessione/audio/
 *.swo
 *~
 
+# Claude Code: impostazioni e permessi locali (la config condivisa resta versionata)
+.claude/settings.local.json
+
 # Sistema operativo
 .DS_Store
 Thumbs.db

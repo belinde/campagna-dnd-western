@@ -4,20 +4,23 @@ Strumento privato del Dungeon Master per gestire la campagna *La corsa al Nuovo 
 
 ---
 
-## Regole Cursor, skill e comandi
+## Contesto, skill e comandi (Claude Code)
 
-Il comportamento dell'AI è organizzato così:
+Il progetto si usa esclusivamente con [Claude Code](https://claude.com/claude-code). Il comportamento dell'AI è organizzato così:
 
 | Meccanismo | Percorso | Ruolo |
 |------------|----------|--------|
-| **Regole** (sempre o via `globs`) | [`.cursor/rules/`](.cursor/rules/) | Due file `.mdc`: contesto permanente e formato schede PNG in modifica. |
-| **Skill** (procedure lunghe) | [`.cursor/skills/`](.cursor/skills/) | Istruzioni dettagliate per resoconto, trascrizione, trascrizione VC, trascrizione Discord, ingame, master e workflow immagini; l'agente deve leggerle quando usi un comando. |
-| **Comandi** | [`.cursor/commands/`](.cursor/commands/) | Prompt brevi richiamabili con `/` nella chat: avviano il flusso e rimandano allo skill corretto. |
+| **Contesto permanente** | [`CLAUDE.md`](CLAUDE.md) | Caricato a ogni sessione: ambientazione, paralleli storici, struttura delle cartelle, convenzioni sui nomi dei file, immagini nei Markdown, lingua (italiano). |
+| **Regole di dettaglio** | [`.claude/rules/`](.claude/rules/) | Due file letti **su richiesta**, prima di toccare i file che coprono (vedi tabella in `CLAUDE.md`). |
+| **Skill** (procedure lunghe) | [`.claude/skills/`](.claude/skills/) | Istruzioni dettagliate per resoconto, trascrizione, trascrizione VC, trascrizione Discord, ingame, master e workflow immagini; l'agente le legge quando usi un comando. |
+| **Comandi** | [`.claude/commands/`](.claude/commands/) | Prompt brevi richiamabili con `/` nella chat: avviano il flusso e rimandano alla skill corretta. |
 
-### Regole in `.cursor/rules/`
+### Regole in `.claude/rules/`
 
-- **`campagna`** — `alwaysApply: true`. Contesto permanente: ambientazione, paralleli storici, struttura delle cartelle, convenzioni sui nomi dei file, immagini nei Markdown, lingua (italiano).
-- **`png-scheda-gioco`** — `globs` su `png/*.md` e `sessione/png-*.md`. Sezione `## Scheda di gioco` compatta per il tavolo, livello obbligatorio, aggiornamenti additivi al cambio livello; riferimento MCP `dnd` per dati ufficiali 5e.
+A differenza dei `globs` di Cursor, Claude Code non attiva regole in automatico sui path. Le due regole restano file separati (per non pesare sul contesto di ogni sessione) e `CLAUDE.md` contiene la tabella che indica quando leggerle:
+
+- **`png-scheda-gioco`** — da leggere prima di toccare `png/*.md` e `sessione/png-*.md`. Sezione `## Scheda di gioco` compatta per il tavolo, livello obbligatorio, aggiornamenti additivi al cambio livello; riferimento MCP `dnd` per dati ufficiali 5e.
+- **`personaggio-aspetto`** — da leggere prima di toccare `personaggi/*.md`, `png/*.md`, `sessione/png-*.md` e `ambientazione/luoghi/*.md`. Sincronizzazione tra `## Aspetto` e `## Riferimento visivo`, distinzione tra tratti fissi e stato di scena.
 
 ### Comandi DM (digitare `/` nella chat)
 
@@ -29,10 +32,10 @@ Il comportamento dell'AI è organizzato così:
 | `/trascrizione-discord` | `campagna-trascrizione-discord` | Pulizia grezzo Discord (`raw-merged.txt`, `[TIME] ACTOR: testo`) a **chunk** (stesse dimensioni VC); Fase 0 per ID numerici; marker `trascrizione-discord-chunk`; output in `sessione/trascrizione.md`. |
 | `/ingame` | `campagna-ingame` | Tavolo: risposte brevi, solo file sotto `sessione/` con prefissi. |
 | `/master` | `campagna-master` | Appunti → documenti in `ambientazione/`. |
-| `/prompt-immagine` | `campagna-immagini` (solo sezione *Prompt*) | Prompt in **inglese** per il modello immagine (eccezione all’italiano della rule `campagna`); stile **cinematically realistic**; blocco `text` copiabile. Sola lettura. |
-| `/importa-immagine` | `campagna-immagini` (solo sezione *Import*) | Sposta/normalizza JPEG e aggiorna il Markdown in modo **additivo** (append + path con suffisso se il canonico esiste); sostituzione solo se richiesta esplicita (richiede Agent). |
+| `/prompt-immagine` | `campagna-immagini` (solo sezione *Prompt*) | Prompt in **inglese** per il modello immagine (eccezione all’italiano di `CLAUDE.md`); stile **cinematically realistic**; blocco `text` copiabile. Sola lettura. |
+| `/importa-immagine` | `campagna-immagini` (solo sezione *Import*) | Sposta/normalizza JPEG e aggiorna il Markdown in modo **additivo** (append + path con suffisso se il canonico esiste); sostituzione solo se richiesta esplicita. |
 
-I comandi **non sostituiscono** la rule `campagna`: resta attiva in background. Per le immagini non c'è più attivazione automatica via `globs`: usa `/prompt-immagine` o `/importa-immagine` quando serve.
+I comandi **non sostituiscono** `CLAUDE.md`: resta il contesto di base, sempre caricato. Le skill hanno `disable-model-invocation: true`, quindi non partono da sole: si attivano solo con il comando corrispondente (o digitando `/campagna-<nome>`). Per le immagini usa `/prompt-immagine` o `/importa-immagine` quando serve.
 
 ---
 
@@ -102,7 +105,7 @@ Opzioni utili:
 
 Output: `sessione/trascrizione-grezza-doppia.txt` (timestamp, `[MASTER]`, e sul canale giocatori `[GIOC_Bxx_Syy]` o `[GIOC_Bxx_S?]` / `[GIOCATORI]` se la diarizzazione non basta).
 
-### 5. Pulizia con Cursor (a chunk, verifica master)
+### 5. Pulizia con Claude Code (a chunk, verifica master)
 
 Dopo aver generato il file grezzo, in chat: **`/trascrizione-vc`** (skill `campagna-trascrizione-vc`). L’agente elabora la grezza in **blocchi ampi ma verificabili** (circa **35–75** righe di segmento per chunk, target **~55**; overlap analitico di **4** righe tra chunk consecutivi), pone **domande al DM solo** dove manca evidenza testuale, e attende **approvazione o correzione** del blocco prima di **appendere** a `sessione/trascrizione.md`. Si può **riprendere** un giro interrotto usando lo stato in `## Note di elaborazione` e i marker `<!-- trascrizione-vc-chunk:K -->`. Principio: **non inventare** contenuti. Il passo successivo è in genere **`/resoconto`**, che tratta `sessione/trascrizione.md` come **fonte primaria** degli eventi quando completo.
 
@@ -125,7 +128,7 @@ Il sito pubblico usa solo contenuti filtrati: resoconti, pagine esplicitamente a
 
 ## Server MCP `dnd`
 
-Il command `/ingame` (skill `campagna-ingame`) può interrogare un server MCP locale che espone dati ufficiali di D&D 5e (mostri, incantesimi, equipaggiamento, classi, razze, ecc.) tramite l'API pubblica [dnd5eapi.co](https://www.dnd5eapi.co/). Il server è già configurato in `.cursor/mcp.json`.
+Il comando `/ingame` (skill `campagna-ingame`) può interrogare un server MCP locale che espone dati ufficiali di D&D 5e (mostri, incantesimi, equipaggiamento, classi, razze, ecc.) tramite l'API pubblica [dnd5eapi.co](https://www.dnd5eapi.co/). Il server è già configurato in [`.mcp.json`](.mcp.json) nella root del repository, che Claude Code carica automaticamente all'avvio nel progetto.
 
 La cartella `tools/dnd-mcp/` è un **git submodule**: non è inclusa direttamente in questo repository, ma punta a un commit specifico di un repository esterno. Quando si clona il progetto per la prima volta, la cartella risulta vuota finché non viene inizializzata.
 
@@ -170,22 +173,22 @@ pip install .
 
 ### Avvio manuale (opzionale)
 
-Il server viene avviato automaticamente da Cursor quando serve. Per avviarlo manualmente a scopo di test:
+Il server viene avviato automaticamente da Claude Code quando serve. Per avviarlo manualmente a scopo di test:
 
 ```bash
 cd tools/dnd-mcp
 uv run python dnd_mcp_server.py
 ```
 
-### Configurazione Cursor
+### Configurazione Claude Code
 
-Il file `.cursor/mcp.json` già presente nel progetto contiene la configurazione corretta:
+Il file [`.mcp.json`](.mcp.json) nella root del repository contiene la configurazione corretta:
 
 ```json
 {
   "mcpServers": {
     "dnd": {
-      "command": "/local/bin/uv",
+      "command": "uv",
       "args": [
         "--directory",
         "tools/dnd-mcp",
@@ -197,4 +200,6 @@ Il file `.cursor/mcp.json` già presente nel progetto contiene la configurazione
 }
 ```
 
-Se `uv` è installato in un percorso diverso, aggiornare il campo `command` di conseguenza (`which uv` per trovarlo).
+Il campo `command` si affida al `PATH`: serve che `uv` sia installato e raggiungibile (`command -v uv` per verificarlo). In caso contrario il server `dnd` non parte e `/ingame` resta comunque utilizzabile senza dati ufficiali 5e.
+
+Claude Code chiede conferma la prima volta che carica un server MCP definito nel progetto: è normale, basta approvarlo una volta.
