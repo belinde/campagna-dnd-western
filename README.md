@@ -151,11 +151,13 @@ Se il repository è già stato clonato senza quel flag e `tools/dnd-mcp/` è vuo
 git submodule update --init --recursive
 ```
 
-Per aggiornare il submodule all'ultimo commit del branch remoto in futuro:
+Per aggiornare il submodule all'ultimo commit del branch remoto in futuro (il comando vuole il **path**, non il nome del submodule):
 
 ```bash
-git submodule update --remote dnd-mcp
+git submodule update --remote tools/dnd-mcp
 ```
+
+Se il submodule risulta «modificato» senza che tu lo abbia toccato, controlla con `git -C tools/dnd-mcp diff --summary`: se sono solo `mode change` (permessi), si azzera con `git -C tools/dnd-mcp checkout -- .`.
 
 ### Installazione delle dipendenze
 
