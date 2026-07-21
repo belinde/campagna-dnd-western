@@ -72,3 +72,4 @@ _Da definire._
 - **[Sessione 008]** Resta di guardia alla carovana durante l'incontro con Yargra; partecipa al dibattito su legge, mandato e rischio di allontanarsi tutti di notte.
 - **[Sessione 009]** Al Fondo del Barile nota il compagno di Danny con la pistola nascosta sotto il giornale; offre un giro di whisky al tavolo; propone di seguire i cacciatori dopo la serata.
 - **[Sessione 010]** Acquista una Colt di gran pregio con cinquanta munizioni speciali; segue con Gud lo gnomo Cip attraverso Tre Pali fino all'accampamento della carovana.
+- **[Sessione 011]** All'alba pedina lo gnomo Cip Wenders fino all'Ufficio del Telegrafo e origlia il suo congedo dal telegrafista Whitmore; poi tenta di corromperlo nel modo peggiore possibile, fallendo e facendoselo apertamente nemico. Riparte con la carovana verso Silverado.

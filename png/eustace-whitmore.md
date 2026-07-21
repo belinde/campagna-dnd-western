@@ -58,6 +58,8 @@ _Nessun incontro diretto finora._
 - **Se Cip ha già portato via le copie:** Whitmore ha comunque il **registro di trasmissione** — un quaderno dove annota data, ora, destinatario, numero di parole e mittente dichiarato. Non il contenuto esatto, ma abbastanza per dimostrare che qualcuno mandava telegrammi frequenti a indirizzi commerciali specifici.
 - **Se qualcuno lo minaccia fisicamente:** Whitmore non è un combattente. Si sottomette, ma ricorda tutto — e appena libero va dritto da Tate a denunciare.
 - **Il registro è il punto debole di Rooke:** anche senza le copie dei testi, le date e i destinatari nel quaderno di Whitmore mostrano un pattern di comunicazione commerciale che collega la Pensione dell'Ultima Tavola a compratori di pelli lungo il Grande Fiume. Ashford saprebbe leggerlo.
+- **Le due soglie (regola guida):** Whitmore **è corruttibile per le piccole cose** — chiudere un occhio su una firma mancante, confermare che un tale è passato, l'ora di un ritiro, un pettegolezzo d'ufficio: bastano garbo e una mancia discreta. È invece **intransigente sui registri e sui contenuti davvero importanti** — leggere il messaggio di un terzo, esibire le comunicazioni riservate di un cliente, consegnare il quaderno di trasmissione: quella linea non la passa per denaro, paura o simpatia, ma solo con un mandato di Ashford o un ordine di Tate.
+- **Attrito con Dora (Sessione 011):** all'alba Dora ha chiesto proprio la cosa sbagliata — sapere cosa Cip avesse trasmesso, cioè il contenuto di una comunicazione altrui: lato **intransigente**. Per giunta con tono minaccioso e offerte a salire fino a 30 $. Doppio errore: richiesta oltre la linea *e* mal posta. Un piccolo favore chiesto con garbo gli avrebbe strappato qualche briciola (conferma che Cip è il fattorino di Rooke, l'ora del passaggio), ma il messaggio no — e il modo goffo lo ha reso apertamente ostile. Ora potrebbe riferire l'avvicinamento a Tate o a Rooke.
 
 ## Scheda di gioco
 
@@ -79,4 +81,4 @@ _Nessun incontro diretto finora._
 
 ## Eventi interessanti
 
-_(da aggiornare dopo ogni sessione in cui il PNG appare)_
+- **[Sessione 011]** Riceve all'alba lo gnomo Cip Wenders, che si congeda «a nome della sua signora». Poco dopo Dora l'Esploratrice tenta di corromperlo per sapere cosa Cip abbia fatto: Whitmore si offende, nega ogni informazione e le diventa apertamente ostile.

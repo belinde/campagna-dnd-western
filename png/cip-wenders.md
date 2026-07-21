@@ -77,3 +77,4 @@ Primo avvistamento nella Sessione 010: visto chiacchierare con il vicesceriffo J
 ## Eventi interessanti
 
 - **[Sessione 010]** Visto dai PG mentre chiacchiera con il vicesceriffo Jasper davanti all'ufficio dello sceriffo; seguito da Dora e Gud fino alla carovana, dove invita Brannagh a incontrare una "signora" non identificata.
+- **[Sessione 011]** All'alba, dopo un passaggio alla Pensione dell'Ultima Tavola, si reca all'Ufficio del Telegrafo e si congeda dal telegrafista Whitmore «a nome della sua signora» (Rooke). Pedinato da Dora senza accorgersene, si allontana verso la locanda.

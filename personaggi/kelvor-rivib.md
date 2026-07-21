@@ -70,3 +70,4 @@ _Da definire._
 - **[Sessione 008]** Sveglia Brannagh per Yargra; all'alba segue la sciamana fino al massacro di cinquanta-sessanta bisonti, promette di denunciare i colpevoli e paga dieci dollari a Elias Barlow per i nomi dei Tiratori del Punto Lungo e di Harlan Pike.
 - **[Sessione 009]** Propone di cercare lo sceriffo di Tre Pali per denunciare i Tiratori; il gruppo rimanda al giorno dopo.
 - **[Sessione 010]** Depone denuncia presso lo sceriffo Tate e affronta il colloquio preliminare con il giudice Ashford; la sera raggiunge Yargra fuori Tre Pali e ottiene la sua accettazione a presentarsi come querelante.
+- **[Sessione 011]** Durante il turno di guardia all'alba, tra le preghiere rivolte a Est, avvista lo gnomo Cip Wenders diretto al telegrafo e sveglia Dora per pedinarlo. Sceglie di restare a Tre Pali come testimone per l'udienza.

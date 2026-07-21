@@ -71,3 +71,4 @@ _Da definire._
 - **[Sessione 008]** Partecipa al dibattito su moralità della caccia e su eventuali leggi che regolino l'uccisione dei cuccioli.
 - **[Sessione 009]** A Tre Pali ripara il pianoforte tecnomagico del Fondo del Barile, guadagnandosi la gratitudine di Virgil Tench e consumazioni gratuite per tutta la serata.
 - **[Sessione 010]** Segue con Dora lo gnomo Cip fino alla carovana; sbircia dalla finestra della Pensione dell'Ultima Tavola e vede Brannagh trattare con una donna in tailleur; la sera raggiunge Yargra con Leman e Kelvor.
+- **[Sessione 011]** Passa dal Fondo del Barile a salutare Virgil Tench e, chiacchierando, apprende che Abigail Rooke è un'affarista di riguardo, «meglio averla amica che nemica»; poi riparte con la carovana verso Silverado.

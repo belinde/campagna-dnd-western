@@ -79,3 +79,4 @@ Il gruppo della carovana di Brannagh si è presentato al Fondo del Barile in una
 ## Eventi interessanti
 
 - **[Sessione 009]** Gud Bender ripara il pianoforte tecnomagico muto da anni; Virgil offre consumazioni gratuite per tutta la serata come ringraziamento e resta in debito con il nano.
+- **[Sessione 011]** All'alba, salutando Gud Bender di ripartenza, gli confida in tono confidenziale che Abigail Rooke è un'affarista di riguardo: «meglio averla amica che nemica».

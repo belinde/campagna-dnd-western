@@ -168,6 +168,14 @@
         "profile": "public-png"
       },
       {
+        "path": "png/eustace-whitmore.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png",
+        "aliases": [
+          "il telegrafista"
+        ]
+      },
+      {
         "path": "ambientazione/luoghi/trepali.md",
         "label": "Luoghi visitati",
         "aliases": [
