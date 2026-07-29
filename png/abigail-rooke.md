@@ -76,4 +76,4 @@ La sua forza è che non mente quasi mai sui fatti materiali. Mente sulle consegu
 
 ## Eventi interessanti
 
-- _Nessuno finora: Abigail Rooke non è ancora apparsa nei resoconti._
+- **[Sessione 012]** Prima apparizione in scena. Raggiunge la carovana di Brannagh in calesse leggero, con Cip Wenders a cassetta, poche ore dopo la partenza da Tre Pali. Fa annunciare il proprio nome ai PG senza scendere e ottiene subito un colloquio con il capocarovana sul suo stesso carro; Dora, origliando, coglie che deve raggiungere i propri uffici e che si parla di un contratto di scorta. Brannagh la invita a mettersi in coda al proprio carro, dove la strada è più battuta: a fine giornata viaggia dentro il convoglio, con il taccuino cerato aperto sulle ginocchia. Nessun PG le ha ancora rivolto la parola.

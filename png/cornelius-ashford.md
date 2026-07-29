@@ -54,6 +54,7 @@ _Da definire al primo incontro._
 - La nomina a Trepali e' stata presentata come "promozione a giudice di circuito" — un ruolo che sulla carta e' prestigioso ma che nella pratica significa decidere su risse tra carrettieri a duemila miglia dalla civilta'. Ashford sa che e' un esilio; chi lo ha mandato sa che lui lo sa; nessuno dei due ha interesse a dirlo ad alta voce.
 - Non e' corruttibile con il denaro — ne ha abbastanza da non averne bisogno, e il suo orgoglio non glielo permetterebbe. Ma potrebbe essere vulnerabile a informazioni su chi lo ha mandato via, o a qualsiasi leva che gli permetta di tornare.
 - Il suo rapporto con lo sceriffo Josiah Tate e' di reciproca insofferenza professionale: Ashford considera Tate un ingenuo pericoloso; Tate considera Ashford un uomo che ha dimenticato perche' la legge esiste.
+- Tiene nei registri del Banco una copia del [Trattato di Fort Lame](../ambientazione/concetti/trattato-di-fort-lame.md) e la usa come qualsiasi altra fonte: se la carta riconosce un diritto a un'orca, lui lo applica — non per simpatia, ma perche' ignorarlo sarebbe irregolare. E` esattamente il tipo di magistrato che rende quel trattato pericoloso per chi ci aveva scommesso contro, e insieme inutile quando il testo e' scritto male: le clausole sui branchi e sul divieto ai soli coloni lo lasciano impotente senza bisogno di corromperlo.
 
 ## Scheda di gioco
 
@@ -76,3 +77,4 @@ _Da definire al primo incontro._
 ## Eventi interessanti
 
 - **[Sessione 010]** Primo incontro con i PG: riceve la denuncia in colloquio preliminare, stabilisce che la strage ricade nei territori coperti dai trattati, e indica che Yargra come firmataria dei patti avrebbe peso da querelante. Fissa l'udienza piena per l'indomani.
+- **[Sessione 012]** Tiene l'udienza. Mette a verbale la responsabilità dello sceriffo per la presenza armata di un orco in aula, poi valida la firma di Yargra confrontandola con quella sul Trattato di Fort Lame e la riconosce come parte lesa legittima: «Non perché io lo trovi comodo. Perché la carta lo dice.» Smonta la deposizione di Kelvor su prove dirette, fonti pagate e legami del gruppo con il clan, caccia dall'aula l'agitatore Ezra Stubbs, e dichiara le prove scarse non sul fatto ma sull'identità dei colpevoli: dispone ulteriori indagini senza emettere alcun mandato.

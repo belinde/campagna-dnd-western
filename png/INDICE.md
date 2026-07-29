@@ -11,10 +11,12 @@
 
 ## Il Middle West
 
+- [Ambrose Vane](ambrose-vane.md) — Cronista del giornale cittadino: non prende parte, prende appunti, e offre le proprie colonne a chiunque capisca quanto valgono.
 - <a href="cip-wenders.md"><img src="../immagini/png/cip-wenders.jpg" width="80" alt="Cip Wenders"></a> [Cip Wenders](cip-wenders.md) — Gnomo fattorino con le orecchie troppo fini per il mestiere che dichiara; corre per Rooke e ascolta per tutti.
 - <a href="cornelius-ashford.md"><img src="../immagini/png/cornelius-ashford.jpg" width="80" alt="Cornelius Ashford"></a> [Cornelius Ashford](cornelius-ashford.md) — Giudice elfo esiliato da Lythandor; applica la legge con livore chirurgico perche' odia tutti quelli che lo hanno mandato qui.
 - <a href="dorothy-mercer.md"><img src="../immagini/png/dorothy-mercer.jpg" width="80" alt="Dorothy Mercer"></a> [Dorothy Mercer](dorothy-mercer.md) — Bambina sopravvissuta all'assalto sulla rotta verso la Frontiera; testimone silenziosa e da proteggere.
 - <a href="eustace-whitmore.md"><img src="../immagini/png/eustace-whitmore.jpg" width="80" alt="Eustace Whitmore"></a> [Eustace Whitmore](eustace-whitmore.md) — Telegrafista secco e preciso che chiude un occhio sui piccoli vizi ma sbarra la porta agli atti gravi — finché qualcuno bussa abbastanza forte.
+- [Ezra Stubbs](ezra-stubbs.md) — Carrettiere che ha rilevato i carri di Virgil Tench e non ha mai smesso di raccontare il fratello morto in una razzia; è la voce a cui il risentimento di Tre Pali ha trovato una faccia.
 - <a href="jasper-moody.md"><img src="../immagini/png/jasper-moody.jpg" width="80" alt="Jasper Moody"></a> [Jasper Moody](jasper-moody.md) — Vice sceriffo bonaccione che copre il turno di notte senza vedere, sentire o disturbare — la porta aperta che nessuno ha chiesto di chiudere.
 - <a href="josiah-tate.md"><img src="../immagini/png/josiah-tate.jpg" width="80" alt="Josiah Tate"></a> [Josiah Tate](josiah-tate.md) — Sceriffo di Trepali: giovane, solare, ci crede davvero — il che lo rende o il migliore o il piu' vulnerabile della citta'.
 - <a href="silas-drummond.md"><img src="../immagini/png/silas-drummond.jpg" width="80" alt="Silas Drummond"></a> [Silas Drummond](silas-drummond.md) — Sceriffo federale di Valdoren: legge lenta ma presente al centro del Middle West.
@@ -32,6 +34,7 @@
 
 ## Le Terre Selvagge
 
+- [Tokala il Veloce](tokala-il-veloce.md) — Giovane guerriero che al fuoco chiede frecce invece di parole; ha scortato la sciamana dentro un tribunale di coloni ed è uscito convinto di avere sempre avuto ragione.
 - <a href="yargra-delle-orme-profonde.md"><img src="../immagini/png/yargra-delle-orme-profonde.jpg" width="80" alt="Yargra delle Orme Profonde"></a> [Yargra delle Orme Profonde](yargra-delle-orme-profonde.md) — Sciamana orca che media tra clan e coloni con voce calma e radici nel terreno.
 
 ## Itinerante

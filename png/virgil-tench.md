@@ -57,6 +57,7 @@ Il gruppo della carovana di Brannagh si è presentato al Fondo del Barile in una
 - Il pianoforte e' riparabile: un meccanico runista competente (o un PG con le giuste abilita') potrebbe restaurare le rune e riattivare l'elementale vincolato. Virgil non lo chiedera' mai direttamente, ma se qualcuno lo facesse gli dovrebbe un favore vero.
 - Virgil conosce per nome o per faccia la maggior parte dei sensali, pistoleri e cercatori di concessioni che passano per Trepali. Non vende informazioni pericolose a chiunque — solo a chi paga bene o a chi gli sembra abbastanza pericoloso da non volerlo come nemico.
 - La storia del pianoforte coinvolge un debito con un intermediario della East Coast che potrebbe ancora essere in circolazione.
+- Quando ha smesso di portare carri, parte della sua attivita' di trasporto e' stata rilevata da **[Ezra Stubbs](ezra-stubbs.md)**, che era stato suo garzone: un paio di carri, i muli e le tratte brevi verso le fattorie del circondario. Si conoscono da vent'anni e si trattano con la familiarita' ruvida di chi ha diviso lo stesso lavoro. Virgil lo serve, lo ascolta e non lo contraddice mai in pubblico — il che non significa affatto che condivida quello che Ezra va dicendo in strada.
 
 ## Scheda di gioco
 

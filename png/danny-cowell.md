@@ -69,3 +69,4 @@ Danny è un tiratore semplice nella gerarchia di Harlan Pike: sa sparare, sa scu
 ## Eventi interessanti
 
 - **[Sessione 009]** Incontrato al tavolo da poker del Fondo del Barile a Tre Pali; accusato di barare da un altro giocatore, la tensione si risolve senza violenza grazie alla presenza armata di un compagno. Scambia birre e parole amichevoli con il gruppo della carovana.
+- **[Sessione 012]** Si presenta all'udienza contro i Tiratori del Punto Lungo pulito, sbarbato, pettinato e disarmato, si siede in prima fila e saluta Kelvor con cordialità. Per tutta la seduta non fa e non dice assolutamente nulla, assistendo come a uno spettacolo divertente; alla sentenza — nessun mandato, nessun ordine di comparizione — allarga il sorriso, si rimette il cappello ed esce senza fretta.

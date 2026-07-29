@@ -14,6 +14,8 @@ Il governo federale è strutturalmente debole rispetto ai governi dei singoli st
 
 La Frontiera è un caso a parte: i territori oltre il confine ufficiale della colonizzazione non sono ancora stati, ma "territori" amministrati direttamente dal governo federale, con sceriffi nominati da New Avalon, leggi sommarie e una giustizia che dipende molto da chi è armato meglio.
 
+I rapporti con le nazioni orchesche delle pianure sono regolati da trattati negoziati direttamente dal governo federale, il principale dei quali è il [Trattato di Fort Lame](../concetti/trattato-di-fort-lame.md): riconosce ai firmatari il diritto di comparire davanti a un tribunale federale come parte lesa, garantisce diritti di caccia e transito e impegna la federazione a proteggere i territori riservati dall'invasione dei coloni. Sulla carta è l'unico riconoscimento giuridico che gli orchi abbiano ottenuto; nella pratica, il Congresso ne ha ridotto gli indennizzi in sede di ratifica senza consultare i firmatari, e il governo non ha mai avuto i mezzi — né, nelle regioni dove il rame vale di più della parola data, la vera volontà — di farlo rispettare.
+
 ## Membri notevoli
 
 *(Da definire con il DM in base allo sviluppo della campagna)*

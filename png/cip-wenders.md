@@ -78,3 +78,4 @@ Primo avvistamento nella Sessione 010: visto chiacchierare con il vicesceriffo J
 
 - **[Sessione 010]** Visto dai PG mentre chiacchiera con il vicesceriffo Jasper davanti all'ufficio dello sceriffo; seguito da Dora e Gud fino alla carovana, dove invita Brannagh a incontrare una "signora" non identificata.
 - **[Sessione 011]** All'alba, dopo un passaggio alla Pensione dell'Ultima Tavola, si reca all'Ufficio del Telegrafo e si congeda dal telegrafista Whitmore «a nome della sua signora» (Rooke). Pedinato da Dora senza accorgersene, si allontana verso la locanda.
+- **[Sessione 012]** Conduce il calesse con cui Abigail Rooke raggiunge la carovana sulla pista verso ovest. Riconosciuto immediatamente da Dora, annuncia la propria signora con la cortesia del corriere di professione e ottiene il colloquio con il capocarovana; poi accoda il calesse al carro di Brannagh e resta a cassetta.

@@ -196,6 +196,16 @@
           "Accampamento del Clan delle Orme Profonde",
           "Tahká-Wičhó"
         ]
+      },
+      {
+        "path": "png/abigail-rooke.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/tokala-il-veloce.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
       }
     ]
   },
