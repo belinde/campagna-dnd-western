@@ -2,10 +2,6 @@
 
 **Tipo:** altro — materiale didattico per i giocatori
 
-> **NON LEGGERE PRIMA DELLA CONCLUSIONE DELL'ARCO.**
-> Questo documento contiene informazioni che i vostri personaggi non hanno.
-> Il DM lo leggerà al tavolo solo quando la Strage dei Branchi sarà chiusa.
-
 ## Descrizione
 
 Questo documento esiste perché a un certo punto, al tavolo, è passata l'idea che non ci fossero modi di influenzare la storia — che gli eventi arrivassero addosso e che a voi restasse solo reagire.

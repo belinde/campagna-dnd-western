@@ -132,7 +132,7 @@ body {
   margin: 0;
   padding: 0 14mm;
   font-family: Georgia, "Liberation Serif", "Noto Serif", "Times New Roman", serif;
-  font-size: 10.5pt;
+  font-size: 11.5pt;
   line-height: 1.6;
   color: var(--text);
 }
@@ -185,7 +185,7 @@ a { color: var(--accent); text-decoration: none; }
 .cover .tagline {
   margin: 0 auto 9mm;
   max-width: 130mm;
-  font-size: 11.5pt;
+  font-size: 12.5pt;
   font-style: italic;
   color: var(--muted);
 }
@@ -210,7 +210,7 @@ a { color: var(--accent); text-decoration: none; }
 
 .cover-figure figcaption {
   padding: 3.5mm 5mm 4mm;
-  font-size: 9pt;
+  font-size: 10pt;
   line-height: 1.5;
   color: var(--muted);
 }
@@ -221,7 +221,7 @@ h2 {
   margin: 9mm 0 3mm;
   padding-bottom: 2mm;
   border-bottom: 1px solid var(--panel-border);
-  font-size: 16pt;
+  font-size: 17pt;
   line-height: 1.2;
   color: var(--accent);
   page-break-after: avoid;
@@ -231,7 +231,7 @@ h2:first-child { margin-top: 0; }
 
 h3 {
   margin: 6mm 0 2.5mm;
-  font-size: 12.5pt;
+  font-size: 13.5pt;
   line-height: 1.25;
   color: #e7c48a;
   page-break-after: avoid;
@@ -273,7 +273,7 @@ main table {
   width: 100%;
   margin: 4mm 0 6mm;
   border-collapse: collapse;
-  font-size: 9.5pt;
+  font-size: 10.5pt;
   line-height: 1.5;
 }
 
@@ -286,7 +286,7 @@ main th {
   background: rgba(211, 156, 74, 0.14);
   border-bottom: 1px solid rgba(211, 156, 74, 0.35);
   color: var(--accent);
-  font-size: 9.5pt;
+  font-size: 10.5pt;
   letter-spacing: 0.02em;
 }
 
