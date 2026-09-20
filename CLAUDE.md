@@ -61,7 +61,7 @@ Tutte le informazioni sono memorizzate in formato **markdown** (`.md`).
 | `resoconti/` | Un file per ogni sessione di gioco |
 | `sessione/` | Area di appoggio temporanea: appunti, PNG e luoghi generati durante la sessione dal vivo, grezzi STT (`trascrizione-grezza-doppia.txt`, `raw-merged.txt`), `trascrizione.md` elaborata (svuotata dalla modalità resoconto salvo archivio concordato) |
 | `spunti/` | Idee e potenziali eventi futuri, non ancora avvenuti e non parte dell'ambientazione canonica; consultabili dalla modalità ingame come fonte di ispirazione |
-| `tools/` | Automazione DM: script (registrazione, trascrizione, build sito), `pubblicazione/` (manifest e asset del sito player-safe), submodule MCP `dnd-mcp/`, output generato sotto `tools/build/` |
+| `tools/` | Automazione DM: script (registrazione, trascrizione, build sito, PDF player-safe con `build_player_pdf.py`), `pubblicazione/` (manifest e asset del sito player-safe), submodule MCP `dnd-mcp/`, output generato sotto `tools/build/` |
 
 - `ambientazione/luoghi/nome-luogo.md` (es. `ambientazione/luoghi/valdoren.md`)
 - `ambientazione/nazioni/nome-nazione.md` (es. `ambientazione/nazioni/terralba.md`)
