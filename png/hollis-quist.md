@@ -12,7 +12,9 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Hollis Quist](/immagini/png/hollis-quist.jpg)
+
+*Ritratto di Hollis Quist dietro il banco della Casa dei Registri, fra i registri aperti, le caselle dei documenti e il timbro d'ottone.*
 
 ## Aspetto
 
