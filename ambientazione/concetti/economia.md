@@ -123,6 +123,8 @@ Il rame è il metallo nervoso del Nuovo Mondo. Vale come moneta, vale come mater
 
 Le miniere di rame nel Far West e nelle Montagne Rocciose sono il vero oggetto del desiderio delle grandi compagnie — non l'oro, non l'argento. Una miniera d'oro arricchisce chi la gestisce; una miniera di rame rifornisce l'industria tecnomagica di mezzo continente. Le compagnie del Caporalato lo sanno da decenni; le compagnie federali stanno imparando. Nel mezzo, i coloni che per caso si trovano su un giacimento di rame spesso non capiscono perché improvvisamente ci sono tre avvocati e un funzionario federale alla loro porta.
 
+Esiste poi un gradino superiore che il mercato riconosce senza saperlo spiegare: un rame che vale come l'oro, indistinguibile a occhio da quello ordinario, richiesto dalle officine che lavorano sui vincoli delicati e pagato molte volte il prezzo di listino. Da dove venga lo spiega [I Respiri della Pietra](respiri-della-pietra.md) — e il fatto che quasi nessuno lo sappia è, di per sé, un'opportunità commerciale.
+
 Le taglie sui ricercati seguono una logica economica precisa: $50 per un ladro di secondo piano, $100-$200 per un fuorilegge con precedenti di violenza, $500 o più per capi-banda o criminali di rilevanza federale. Cifre che rappresentano mesi di salario per un operaio comune — abbastanza da motivare qualcuno, ma non così alte da scatenare la caccia sistematica.
 
 ### Il mercato del lavoro coatto
