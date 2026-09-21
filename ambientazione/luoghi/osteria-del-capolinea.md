@@ -6,7 +6,9 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Interno dell'Osteria del Capolinea](/immagini/luoghi/osteria-del-capolinea.jpg)
+
+*Interno dell'Osteria del Capolinea guardando verso la porta: il banco in pezzo unico che corre per tutta la sala, i bicchieri di vetro sulla mensola alta, la segatura sul pavimento e il piazzale della ferrovia oltre la soglia.*
 
 ## Aspetto
 
