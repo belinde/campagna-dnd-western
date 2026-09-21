@@ -34,6 +34,8 @@ All'estremo basso c'è la gente comune: sa usare gli oggetti tecnomagici, capisc
 
 La tecnomagia ha spostato equilibri di potere millenari. Il rame — da sempre considerato un metallo povero, buono per pentole e decorazioni — è diventato il materiale runico per eccellenza. La sua conducibilità e la sua risposta all'incisione lo rendono insostituibile per la maggior parte dei vincoli elementali. Le concessioni minerarie nel Nuovo Mondo che producono rame sono diventate proprietà strategiche; le compagnie minerarie che le controllano esercitano un'influenza politica sproporzionata.
 
+Non tutto il rame però è uguale. Quello che esce dalle miniere ordinarie basta per un revolver, un aratro meccanico o un motore da officina: si consuma, si porta dal meccanico, si sostituisce. Per i vincoli che non possono cedere — strumenti di navigazione planare, motori pesanti, relè telegrafici sulle tratte lunghe — serve il cosiddetto **rame «di prima»**, che le officine pretendono e pagano tre o quattro volte tanto senza sapere da dove venga davvero. La risposta è in [I Respiri della Pietra](respiri-della-pietra.md): non si produce, si trova, e ogni volta che si trova si consuma.
+
 Il rovescio della medaglia è sociale. L'agricoltura meccanizzata ha svuotato le campagne del Middle West: contadini che per generazioni avevano lavorato lo stesso appezzamento si trovano ora in competizione con macchine che non si stancano e non chiedono salario. Gli allevatori allo stato brado vedono le loro terre di pascolo recintate da proprietari terrieri che preferiscono il grano. Le tensioni che ne derivano alimentano il banditismo, le migrazioni verso la Frontiera, e una sorda ostilità verso tutto ciò che sa di "progresso".
 
 ## Ganci narrativi

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================================
+  CONCA DI ACQUAFERRA — carta del DM
+  ============================================================================
+  Carta catastale e topografica della conca e del circondario di Silverado.
+  Pensata per essere MODIFICATA nel corso della campagna: la griglia delle
+  sezioni e` fissa, tutto il resto cambia.
+
+  COME SI AGGIORNA
+  ············
+  1. PROPRIETA' DI UN LOTTO — ogni quarto di sezione ha un id del tipo
+     "q-16-NO" (sezione 16, quarto nord-ovest). Per cambiarne il padrone si
+     cambia la sua class: libero | pg | halverson | vicini | compagnia | conteso
+     Esempio: class="quarto libero" diventa class="quarto pg"
+
+  2. AVANZAMENTO DEL RECINTO — si modificano i punti del path #recinto.
+     Il filo corre sempre lungo le linee di sezione: usare solo multipli di 180
+     a partire da x=60 / y=120.
+
+  3. NUOVI EDIFICI — una riga sola:
+     <use href="#sym-fattoria" x="..." y="..."/> dentro il gruppo #insediamenti,
+     piu` un <text class="et-luogo"> per l'etichetta.
+     Simboli disponibili: sym-fattoria, sym-citta, sym-colonia, sym-sorgente,
+     sym-scavo, sym-guado.
+
+  4. FERROVIA — i due tracciati ipotizzati sono #ferrovia-ipotesi-a e
+     #ferrovia-ipotesi-b. Quando il tracciato viene deciso: cancellare quello
+     scartato e cambiare la class del vincitore da "ferrovia-ipotesi" a
+     "ferrovia".
+
+  5. DATA — aggiornare il testo #stato-al a ogni revisione.
+
+  RIFERIMENTI DI SCALA
+  ············
+  1 sezione = 1 miglio quadrato = 640 acri = 180 px
+  1 quarto  = 160 acri = 90 px = $200 al prezzo di prelazione ($1.25/acro)
+  Numerazione delle sezioni a serpentina, come il rilievo federale:
+  la 1 sta nell'angolo nord-est, si procede verso ovest, poi si scende.
+  ============================================================================
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1060" viewBox="0 0 1500 1060" font-family="Georgia, 'Times New Roman', serif">
+
+  <defs>
+    <style>
+      .pergamena  { fill: #f3e9d6; }
+      .inchiostro { fill: #3a2f26; }
+
+      /* ---- griglia catastale ---- */
+      .sezione     { fill: none; stroke: #8a7a66; stroke-width: 2; }
+      .quarto      { stroke: #7a6a56; stroke-width: 1.2; stroke-dasharray: 4 4; }
+      .num-sezione { font-size: 15px; fill: #a08d74; text-anchor: middle; }
+
+      /* ---- proprieta' dei quarti di sezione ---- */
+      .libero     { fill: none; }
+      .pg         { fill: #5b8c5a; fill-opacity: 0.38; }
+      .halverson  { fill: #46708f; fill-opacity: 0.32; }
+      .vicini     { fill: #c9a227; fill-opacity: 0.26; }
+      .compagnia  { fill: #9d3b3b; fill-opacity: 0.30; }
+      .conteso    { fill: url(#tratteggio); }
+
+      /* ---- obiettivo del gruppo ---- */
+      .obiettivo { fill: none; stroke: #b8860b; stroke-width: 3.5; stroke-dasharray: 9 5; }
+
+      /* ---- terreno ---- */
+      .collina     { fill: #cbb896; stroke: #9b8664; stroke-width: 1.5; }
+      .acqua       { fill: none; stroke: #5f87a0; stroke-width: 4; stroke-linecap: round; }
+      .acqua-min   { fill: none; stroke: #5f87a0; stroke-width: 2.2; stroke-linecap: round; }
+      .conca       { fill: #e4d8bd; stroke: #bca97f; stroke-width: 1.5; stroke-dasharray: 10 6; }
+      .pelato      { fill: #d8cbb0; stroke: #9c8b6a; stroke-width: 1.5; }
+
+      /* ---- infrastrutture ---- */
+      .pista           { fill: none; stroke: #8a6b4a; stroke-width: 3.5; stroke-dasharray: 12 7; stroke-linecap: round; }
+      .ferrovia        { fill: none; stroke: #2f2a25; stroke-width: 4; }
+      .ferrovia-tratti { stroke: #2f2a25; stroke-width: 2; }
+      .ferrovia-ipotesi{ fill: none; stroke: #2f2a25; stroke-width: 2.5; stroke-dasharray: 3 9; opacity: 0.65; }
+      .recinto         { fill: none; stroke: #9d3b3b; stroke-width: 3; stroke-dasharray: 16 4 2 4; }
+
+      /* ---- testo ---- */
+      .titolo    { font-size: 30px; fill: #3a2f26; letter-spacing: 1.5px; }
+      .sottotit  { font-size: 15px; fill: #6b5b47; font-style: italic; }
+      .et-luogo  { font-size: 15px; fill: #3a2f26; }
+      .et-piccola{ font-size: 12.5px; fill: #5c4e3e; font-style: italic; }
+      .et-acqua  { font-size: 13px; fill: #4a6c85; font-style: italic; }
+      .et-regione{ font-size: 17px; fill: #8a7a66; letter-spacing: 3px; }
+      .et-legenda{ font-size: 13.5px; fill: #3a2f26; }
+      .tit-legenda{ font-size: 15px; fill: #3a2f26; letter-spacing: 1px; }
+    </style>
+
+    <!-- tratteggio per i lotti contesi -->
+    <pattern id="tratteggio" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#9d3b3b" stroke-width="3" opacity="0.45"/>
+    </pattern>
+
+    <!-- simboli riusabili: si piazzano con <use href="#sym-..." x="" y=""/> -->
+    <symbol id="sym-fattoria" viewBox="-12 -12 24 24" width="26" height="26" overflow="visible">
+      <path d="M-9 4 L-9 -2 L0 -9 L9 -2 L9 4 Z" fill="#f3e9d6" stroke="#3a2f26" stroke-width="2"/>
+      <rect x="-2.5" y="-1" width="5" height="5" fill="#3a2f26"/>
+    </symbol>
+    <symbol id="sym-colonia" viewBox="-12 -12 24 24" width="26" height="26" overflow="visible">
+      <path d="M-10 5 L-5 -6 L0 5 Z" fill="#f3e9d6" stroke="#3a2f26" stroke-width="1.8"/>
+      <path d="M0 5 L5 -6 L10 5 Z" fill="#f3e9d6" stroke="#3a2f26" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="sym-citta" viewBox="-16 -16 32 32" width="30" height="30" overflow="visible">
+      <rect x="-12" y="-3" width="9" height="11" fill="#f3e9d6" stroke="#3a2f26" stroke-width="2"/>
+      <rect x="-1" y="-8" width="9" height="16" fill="#f3e9d6" stroke="#3a2f26" stroke-width="2"/>
+      <rect x="9" y="0" width="7" height="8" fill="#f3e9d6" stroke="#3a2f26" stroke-width="2"/>
+    </symbol>
+    <symbol id="sym-sorgente" viewBox="-10 -10 20 20" width="22" height="22" overflow="visible">
+      <circle cx="0" cy="0" r="5" fill="#5f87a0"/>
+      <circle cx="0" cy="0" r="8.5" fill="none" stroke="#5f87a0" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="sym-scavo" viewBox="-10 -10 20 20" width="22" height="22" overflow="visible">
+      <path d="M-7 6 L0 -7 L7 6 Z" fill="none" stroke="#5c4e3e" stroke-width="2"/>
+      <line x1="-7" y1="6" x2="7" y2="6" stroke="#5c4e3e" stroke-width="2"/>
+      <line x1="-3" y1="1" x2="3" y2="1" stroke="#5c4e3e" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="sym-guado" viewBox="-12 -8 24 16" width="26" height="18" overflow="visible">
+      <line x1="-10" y1="-3" x2="10" y2="-3" stroke="#5f87a0" stroke-width="2"/>
+      <line x1="-10" y1="3" x2="10" y2="3" stroke="#5f87a0" stroke-width="2"/>
+    </symbol>
+  </defs>
+
+  <!-- ====================== SFONDO ====================== -->
+  <rect x="0" y="0" width="1500" height="1060" class="pergamena"/>
+  <rect x="60" y="120" width="1080" height="900" fill="#ece0c6" stroke="#8a7a66" stroke-width="3"/>
+
+  <!-- ====================== TESTATA ====================== -->
+  <text x="60" y="58" class="titolo">Conca di Acquaferra</text>
+  <text x="60" y="84" class="sottotit">Circondario occidentale di Silverado — carta del Dungeon Master, non player-safe</text>
+  <text id="stato-al" x="1140" y="84" class="sottotit" text-anchor="end">Stato al: arrivo della carovana (sessione 014)</text>
+
+  <!-- ====================== RILIEVO ====================== -->
+  <g id="rilievo">
+    <!-- Colline d'argento: bordo occidentale -->
+    <path class="collina" d="M60 120 L175 150 L240 205 L215 300 L245 385 L205 470 L240 560 L200 660 L245 745 L190 850 L230 940 L60 1020 Z"/>
+    <path class="collina" d="M240 205 L320 175 L360 245 L300 300 L245 285 Z" opacity="0.75"/>
+    <path class="collina" d="M240 560 L300 545 L330 620 L265 665 L215 630 Z" opacity="0.6"/>
+    <!-- crinali -->
+    <g fill="none" stroke="#9b8664" stroke-width="1.6" opacity="0.8">
+      <path d="M95 200 L130 175 L165 210"/>
+      <path d="M100 330 L140 300 L180 340"/>
+      <path d="M95 480 L135 452 L175 492"/>
+      <path d="M100 640 L140 612 L180 652"/>
+      <path d="M95 790 L135 762 L175 802"/>
+      <path d="M100 930 L140 902 L180 942"/>
+    </g>
+    <text x="118" y="700" class="et-regione" transform="rotate(-90 118 700)">COLLINE D'ARGENTO</text>
+
+    <!-- perimetro della conca vera e propria -->
+    <path class="conca" d="M255 330 L430 300 L600 345 L640 470 L600 610 L470 665 L310 630 L245 500 Z"/>
+    <text x="430" y="330" class="et-regione" font-size="15px" text-anchor="middle">LA CONCA</text>
+  </g>
+
+  <!-- ====================== IDROGRAFIA ====================== -->
+  <g id="acque">
+    <path class="acqua" d="M200 385 C 260 405, 320 430, 420 468 S 620 545, 700 590 C 810 650, 930 760, 1035 885"/>
+    <path class="acqua-min" d="M250 215 C 275 280, 302 380, 345 442"/>
+    <path class="acqua-min" d="M222 622 C 292 592, 382 542, 468 494"/>
+    <use href="#sym-sorgente" x="200" y="385"/>
+    <text x="218" y="372" class="et-acqua">Sorgenti dell'Acquaferra</text>
+    <text x="600" y="578" class="et-acqua" transform="rotate(25 600 578)">Rio Acquaferra</text>
+    <use href="#sym-guado" x="700" y="590"/>
+    <text x="712" y="612" class="et-piccola">Guado dei Carri</text>
+  </g>
+
+  <!-- ====================== GRIGLIA CATASTALE ====================== -->
+  <!-- Sezioni: 6 colonne (x 60..1140) x 5 righe (y 120..1020), lato 180 px = 1 miglio -->
+  <g id="griglia">
+    <g class="sezione">
+      <rect x="60" y="120" width="180" height="180"/><rect x="240" y="120" width="180" height="180"/>
+      <rect x="420" y="120" width="180" height="180"/><rect x="600" y="120" width="180" height="180"/>
+      <rect x="780" y="120" width="180" height="180"/><rect x="960" y="120" width="180" height="180"/>
+
+      <rect x="60" y="300" width="180" height="180"/><rect x="240" y="300" width="180" height="180"/>
+      <rect x="420" y="300" width="180" height="180"/><rect x="600" y="300" width="180" height="180"/>
+      <rect x="780" y="300" width="180" height="180"/><rect x="960" y="300" width="180" height="180"/>
+
+      <rect x="60" y="480" width="180" height="180"/><rect x="240" y="480" width="180" height="180"/>
+      <rect x="420" y="480" width="180" height="180"/><rect x="600" y="480" width="180" height="180"/>
+      <rect x="780" y="480" width="180" height="180"/><rect x="960" y="480" width="180" height="180"/>
+
+      <rect x="60" y="660" width="180" height="180"/><rect x="240" y="660" width="180" height="180"/>
+      <rect x="420" y="660" width="180" height="180"/><rect x="600" y="660" width="180" height="180"/>
+      <rect x="780" y="660" width="180" height="180"/><rect x="960" y="660" width="180" height="180"/>
+
+      <rect x="60" y="840" width="180" height="180"/><rect x="240" y="840" width="180" height="180"/>
+      <rect x="420" y="840" width="180" height="180"/><rect x="600" y="840" width="180" height="180"/>
+      <rect x="780" y="840" width="180" height="180"/><rect x="960" y="840" width="180" height="180"/>
+    </g>
+
+    <!-- numeri di sezione, angolo in alto a destra di ciascuna -->
+    <g class="num-sezione">
+      <text x="222" y="142">6</text><text x="402" y="142">5</text><text x="582" y="142">4</text>
+      <text x="762" y="142">3</text><text x="942" y="142">2</text><text x="1122" y="142">1</text>
+
+      <text x="222" y="322">7</text><text x="402" y="322">8</text><text x="582" y="322">9</text>
+      <text x="762" y="322">10</text><text x="942" y="322">11</text><text x="1122" y="322">12</text>
+
+      <text x="222" y="502">18</text><text x="402" y="502">17</text><text x="582" y="502">16</text>
+      <text x="762" y="502">15</text><text x="942" y="502">14</text><text x="1122" y="502">13</text>
+
+      <text x="222" y="682">19</text><text x="402" y="682">20</text><text x="582" y="682">21</text>
+      <text x="762" y="682">22</text><text x="942" y="682">23</text><text x="1122" y="682">24</text>
+
+      <text x="222" y="862">30</text><text x="402" y="862">29</text><text x="582" y="862">28</text>
+      <text x="762" y="862">27</text><text x="942" y="862">26</text><text x="1122" y="862">25</text>
+    </g>
+  </g>
+
+  <!-- ====================== QUARTI DI SEZIONE (lotti in gioco) ======================
+       Solo le sei sezioni del fondovalle sono suddivise: sono quelle su cui si gioca.
+       Per intestare un lotto si cambia la seconda class del rect.
+  -->
+  <g id="lotti">
+    <!-- sezione 8 -->
+    <rect id="q-08-NO" class="quarto libero" x="240" y="300" width="90" height="90"/>
+    <rect id="q-08-NE" class="quarto libero" x="330" y="300" width="90" height="90"/>
+    <rect id="q-08-SO" class="quarto libero" x="240" y="390" width="90" height="90"/>
+    <rect id="q-08-SE" class="quarto vicini" x="330" y="390" width="90" height="90"/>
+    <!-- sezione 9 -->
+    <rect id="q-09-NO" class="quarto libero" x="420" y="300" width="90" height="90"/>
+    <rect id="q-09-NE" class="quarto libero" x="510" y="300" width="90" height="90"/>
+    <rect id="q-09-SO" class="quarto libero" x="420" y="390" width="90" height="90"/>
+    <rect id="q-09-SE" class="quarto libero" x="510" y="390" width="90" height="90"/>
+    <!-- sezione 17 -->
+    <rect id="q-17-NO" class="quarto libero" x="240" y="480" width="90" height="90"/>
+    <rect id="q-17-NE" class="quarto libero" x="330" y="480" width="90" height="90"/>
+    <rect id="q-17-SO" class="quarto libero" x="240" y="570" width="90" height="90"/>
+    <rect id="q-17-SE" class="quarto libero" x="330" y="570" width="90" height="90"/>
+    <!-- sezione 16 -->
+    <rect id="q-16-NO" class="quarto halverson" x="420" y="480" width="90" height="90"/>
+    <rect id="q-16-NE" class="quarto libero" x="510" y="480" width="90" height="90"/>
+    <rect id="q-16-SO" class="quarto libero" x="420" y="570" width="90" height="90"/>
+    <rect id="q-16-SE" class="quarto vicini" x="510" y="570" width="90" height="90"/>
+    <!-- sezione 20 -->
+    <rect id="q-20-NO" class="quarto conteso" x="240" y="660" width="90" height="90"/>
+    <rect id="q-20-NE" class="quarto compagnia" x="330" y="660" width="90" height="90"/>
+    <rect id="q-20-SO" class="quarto conteso" x="240" y="750" width="90" height="90"/>
+    <rect id="q-20-SE" class="quarto compagnia" x="330" y="750" width="90" height="90"/>
+    <!-- sezione 21 -->
+    <rect id="q-21-NO" class="quarto libero" x="420" y="660" width="90" height="90"/>
+    <rect id="q-21-NE" class="quarto libero" x="510" y="660" width="90" height="90"/>
+    <rect id="q-21-SO" class="quarto libero" x="420" y="750" width="90" height="90"/>
+    <rect id="q-21-SE" class="quarto libero" x="510" y="750" width="90" height="90"/>
+  </g>
+
+  <!-- ====================== IL PELATO (terreno rameifero) ====================== -->
+  <g id="pelato">
+    <path class="pelato" d="M252 498 C 292 486, 320 500, 322 528 C 324 556, 296 566, 268 556 C 244 548, 240 512, 252 498 Z"/>
+    <g fill="#9c8b6a" opacity="0.7">
+      <circle cx="268" cy="512" r="2.5"/><circle cx="288" cy="522" r="2"/><circle cx="276" cy="538" r="2.5"/>
+      <circle cx="300" cy="536" r="2"/><circle cx="258" cy="530" r="2"/>
+    </g>
+    <rect id="obiettivo-pelato" class="obiettivo" x="240" y="480" width="90" height="90"/>
+    <text x="248" y="616" class="et-luogo">Il Pelato</text>
+    <text x="248" y="633" class="et-piccola">cappellaccio rugginoso, roccia</text>
+    <text x="248" y="649" class="et-piccola">sbiancata, erba stenta — 17 NO</text>
+  </g>
+
+  <!-- ====================== RECINTO ====================== -->
+  <g id="recinto-gruppo">
+    <path id="recinto" class="recinto" d="M240 120 L240 660 L420 660 L420 1020"/>
+    <text x="252" y="196" class="et-piccola" fill="#9d3b3b">recinto Tolliver —</text>
+    <text x="252" y="212" class="et-piccola" fill="#9d3b3b">filo su dominio pubblico</text>
+    <text x="432" y="1006" class="et-piccola" fill="#9d3b3b">il filo avanza verso sud</text>
+  </g>
+
+  <!-- ====================== INFRASTRUTTURE ====================== -->
+  <g id="vie">
+    <!-- pista dei coloni: dai passi delle colline a Silverado -->
+    <path class="pista" d="M150 300 C 260 350, 330 430, 430 500 S 640 640, 760 720 C 860 790, 950 860, 1020 918"/>
+    <text x="330" y="470" class="et-piccola" transform="rotate(30 330 470)">Pista dei Coloni</text>
+
+    <!-- pista est: verso il guado e Tre Pali -->
+    <path class="pista" d="M1050 910 C 1110 880, 1150 862, 1200 848"/>
+
+    <!-- ferrovia: arriva da est e si ferma a Silverado -->
+    <g id="ferrovia-gruppo">
+      <path class="ferrovia" d="M1140 958 L1060 946"/>
+      <g class="ferrovia-tratti">
+        <line x1="1130" y1="950" x2="1127" y2="968"/><line x1="1110" y1="947" x2="1107" y2="965"/>
+        <line x1="1090" y1="944" x2="1087" y2="962"/><line x1="1070" y1="941" x2="1067" y2="959"/>
+      </g>
+      <text x="1132" y="1002" class="et-piccola" text-anchor="end">i binari si fermano qui — il telegrafo li segue</text>
+    </g>
+
+    <!-- tracciati futuri: uno solo diventera` vero -->
+    <path id="ferrovia-ipotesi-a" class="ferrovia-ipotesi" d="M1060 946 C 940 880, 800 760, 690 640 S 470 440, 330 360"/>
+    <path id="ferrovia-ipotesi-b" class="ferrovia-ipotesi" d="M1060 946 C 920 960, 760 950, 600 930 S 330 930, 200 950"/>
+    <text x="812" y="726" class="et-piccola" transform="rotate(-38 812 726)">tracciato ipotizzato A — per la conca</text>
+    <text x="560" y="978" class="et-piccola">tracciato ipotizzato B — a sud, lontano dall'acqua</text>
+  </g>
+
+  <!-- ====================== INSEDIAMENTI ====================== -->
+  <g id="insediamenti">
+    <use href="#sym-citta" x="1040" y="920"/>
+    <text x="1040" y="890" class="et-luogo" text-anchor="middle" font-size="19px">SILVERADO</text>
+    <text x="1040" y="972" class="et-piccola" text-anchor="middle">capolinea, banca, telegrafo, Casa dei Registri</text>
+
+    <use href="#sym-fattoria" x="465" y="522"/>
+    <text x="424" y="596" class="et-luogo">Podere Halverson</text>
+    <text x="424" y="613" class="et-piccola">16 NO — intestato, non provato</text>
+
+    <use href="#sym-fattoria" x="372" y="432"/>
+    <text x="389" y="428" class="et-piccola">fattoria dei vicini (8 SE)</text>
+
+    <use href="#sym-fattoria" x="552" y="612"/>
+    <text x="524" y="654" class="et-piccola">fattoria dei vicini (16 SE)</text>
+
+    <use href="#sym-colonia" x="292" y="712"/>
+    <text x="252" y="742" class="et-luogo">Colonia halfling</text>
+    <text x="252" y="759" class="et-piccola">dentro il filo, senza titolo</text>
+
+    <use href="#sym-scavo" x="140" y="248"/>
+    <text x="158" y="244" class="et-piccola">Fossa Bianca</text>
+    <text x="158" y="260" class="et-piccola">scavi d'argento abbandonati</text>
+  </g>
+
+  <!-- ====================== INDICAZIONI AI MARGINI ====================== -->
+  <g id="margini">
+    <text x="600" y="108" class="et-piccola" text-anchor="middle">▲ a nord: pianure delle Orme Profonde, corridoi dei branchi</text>
+    <text x="1210" y="844" class="et-piccola">▶ verso il guado e Tre Pali</text>
+  </g>
+
+  <!-- ====================== ROSA DEI VENTI E SCALA ====================== -->
+  <g id="bussola" transform="translate(1075, 195)">
+    <circle r="34" fill="#f3e9d6" stroke="#8a7a66" stroke-width="1.5"/>
+    <path d="M0 -28 L7 0 L0 28 L-7 0 Z" fill="#3a2f26"/>
+    <path d="M0 -28 L-7 0 L0 0 Z" fill="#8a7a66"/>
+    <text x="0" y="-38" class="et-piccola" text-anchor="middle" font-style="normal">N</text>
+  </g>
+
+  <g id="scala" transform="translate(620, 1038)">
+    <rect x="0" y="-9" width="90" height="9" fill="#3a2f26"/>
+    <rect x="90" y="-9" width="90" height="9" fill="#f3e9d6" stroke="#3a2f26" stroke-width="1"/>
+    <text x="0" y="12" class="et-piccola" font-style="normal">0</text>
+    <text x="90" y="12" class="et-piccola" font-style="normal" text-anchor="middle">½</text>
+    <text x="180" y="12" class="et-piccola" font-style="normal" text-anchor="middle">1 miglio</text>
+  </g>
+
+  <!-- ====================== LEGENDA ====================== -->
+  <g id="legenda" transform="translate(1160, 120)">
+    <rect x="0" y="0" width="320" height="900" fill="#f3e9d6" stroke="#8a7a66" stroke-width="2"/>
+
+    <text x="18" y="34" class="tit-legenda">CATASTO</text>
+    <line x1="18" y1="44" x2="302" y2="44" stroke="#8a7a66" stroke-width="1"/>
+
+    <g transform="translate(18, 58)">
+      <rect x="0" y="0" width="26" height="18" class="libero" stroke="#8a7a66" stroke-width="1"/>
+      <text x="38" y="14" class="et-legenda">libero — prelazione a $200</text>
+
+      <rect x="0" y="30" width="26" height="18" class="pg" stroke="#8a7a66" stroke-width="1"/>
+      <text x="38" y="44" class="et-legenda">intestato ai PG</text>
+
+      <rect x="0" y="60" width="26" height="18" class="halverson" stroke="#8a7a66" stroke-width="1"/>
+      <text x="38" y="74" class="et-legenda">Halverson</text>
+
+      <rect x="0" y="90" width="26" height="18" class="vicini" stroke="#8a7a66" stroke-width="1"/>
+      <text x="38" y="104" class="et-legenda">altri coloni della conca</text>
+
+      <rect x="0" y="120" width="26" height="18" class="compagnia" stroke="#8a7a66" stroke-width="1"/>
+      <text x="38" y="134" class="et-legenda">Compagnia (per interposta persona)</text>
+
+      <rect x="0" y="150" width="26" height="18" class="conteso" stroke="#8a7a66" stroke-width="1"/>
+      <text x="38" y="164" class="et-legenda">occupato senza titolo, conteso</text>
+
+      <rect x="0" y="180" width="26" height="18" class="obiettivo"/>
+      <text x="38" y="194" class="et-legenda">obiettivo del gruppo</text>
+    </g>
+
+    <text x="18" y="300" class="tit-legenda">SEGNI</text>
+    <line x1="18" y1="310" x2="302" y2="310" stroke="#8a7a66" stroke-width="1"/>
+
+    <g transform="translate(30, 332)">
+      <use href="#sym-fattoria" x="0" y="0"/>
+      <text x="26" y="5" class="et-legenda">fattoria</text>
+
+      <use href="#sym-colonia" x="0" y="34"/>
+      <text x="26" y="39" class="et-legenda">colonia / accampamento</text>
+
+      <use href="#sym-citta" x="4" y="72"/>
+      <text x="34" y="78" class="et-legenda">città</text>
+
+      <use href="#sym-sorgente" x="0" y="106"/>
+      <text x="26" y="111" class="et-legenda">sorgente</text>
+
+      <use href="#sym-scavo" x="0" y="140"/>
+      <text x="26" y="145" class="et-legenda">scavi abbandonati</text>
+
+      <use href="#sym-guado" x="0" y="174"/>
+      <text x="26" y="179" class="et-legenda">guado</text>
+    </g>
+
+    <g transform="translate(18, 546)">
+      <line x1="0" y1="0" x2="40" y2="0" class="acqua"/>
+      <text x="50" y="5" class="et-legenda">corso d'acqua</text>
+
+      <line x1="0" y1="28" x2="40" y2="28" class="pista"/>
+      <text x="50" y="33" class="et-legenda">pista carrabile</text>
+
+      <line x1="0" y1="56" x2="40" y2="56" class="ferrovia"/>
+      <text x="50" y="61" class="et-legenda">ferrovia in esercizio</text>
+
+      <line x1="0" y1="84" x2="40" y2="84" class="ferrovia-ipotesi"/>
+      <text x="50" y="89" class="et-legenda">tracciato ipotizzato</text>
+
+      <line x1="0" y1="112" x2="40" y2="112" class="recinto"/>
+      <text x="50" y="117" class="et-legenda">recinto di filo spinato</text>
+    </g>
+
+    <text x="18" y="712" class="tit-legenda">MISURE</text>
+    <line x1="18" y1="722" x2="302" y2="722" stroke="#8a7a66" stroke-width="1"/>
+    <g transform="translate(18, 744)">
+      <text x="0" y="0" class="et-legenda">1 sezione = 1 miglio quadrato = 640 acri</text>
+      <text x="0" y="22" class="et-legenda">1 quarto = 160 acri = il lotto standard</text>
+      <text x="0" y="44" class="et-legenda">prelazione: $1.25/acro = $200 il quarto</text>
+      <text x="0" y="66" class="et-legenda">residenza: cinque anni, casa, coltura,</text>
+      <text x="0" y="84" class="et-legenda">due testimoni giurati — e nessun esborso</text>
+      <text x="0" y="118" class="et-piccola">Sezioni numerate a serpentina dalla 1</text>
+      <text x="0" y="134" class="et-piccola">in angolo nord-est, come il rilievo federale.</text>
+    </g>
+  </g>
+
+</svg>

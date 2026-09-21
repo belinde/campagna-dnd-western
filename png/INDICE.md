@@ -8,6 +8,8 @@
 - La Frontiera
 - Le Terre Selvagge
 - Itinerante
+- Frontiera (conca di Acquaferra, circondario di Silverado)
+- Frontiera (Silverado)
 
 ## Il Middle West
 
@@ -48,3 +50,8 @@
 - <a href="olaf-halverson.md"><img src="../immagini/png/olaf-halverson.jpg" width="80" alt="Olaf Halverson"></a> [Olaf Halverson](olaf-halverson.md) — Carovaniere nordeuropeo che si offre come tutore di Dorothy e giura il consenso della moglie.
 - <a href="theodor-strand.md"><img src="../immagini/png/theodor-strand.jpg" width="80" alt="Theodor Strand"></a> [Theodor Strand](theodor-strand.md) — Scout elfo della carovana: occhio acuto, fucile da caccia e passo senza traccia.
 - <a href="thomas-caldwell.md"><img src="../immagini/png/thomas-caldwell.jpg" width="80" alt="Thomas Caldwell"></a> [Thomas Caldwell](thomas-caldwell.md) — Primo ufficiale dello steamer: braccio armato del capitano e disciplina sul ponte.
+
+## Altro
+
+- [Amos Tolliver](amos-tolliver.md) — Allevatore che recinta dominio pubblico per pagare un debito che non riesce a chiudere; crede che la terra sia sua perché ci pascola da nove anni.
+- [Hollis Quist](hollis-quist.md) — Registratore federale gnomo, onesto fino al midollo e sommerso di carta: decide chi possiede cosa e non si può né comprare né spaventare.
