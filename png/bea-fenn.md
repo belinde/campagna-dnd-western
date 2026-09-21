@@ -12,28 +12,34 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Bea Fenn](/immagini/png/bea-fenn.jpg)
+
+*Ritratto di Bea Fenn davanti al banco della propria osteria, con i bicchieri di vetro sulla mensola alta e la sala aperta alle sue spalle.*
 
 ## Aspetto
 
 Elfa dall'età indecifrabile che i coloni sbagliano sempre per eccesso o per difetto: viso asciutto e senza rughe sotto capelli scuri raccolti stretti, orecchie a punta che non nasconde, occhi chiari che si muovono per la sala anche mentre parla con te. Braccia da chi solleva barili da decenni, maniche sempre rimboccate sopra il gomito, grembiule di tela pesante, nessun gioiello tranne un anello sottile che non si toglie.
 
-Non la si vede mai seduta. Anche quando ascolta, sta in piedi dietro il banco con un panno in mano, e l'espressione è quella cortese e leggermente distante di chi ti sta già misurando.
+Non la si vede mai seduta. Anche quando ascolta, sta in piedi al banco con un panno in mano, e l'espressione è quella cortese e leggermente distante di chi ti sta già misurando.
 
 ## Riferimento visivo
 
 ```text
 Image prompt:
 
-Cinematically realistic portrait of an adult elf woman of indeterminate age behind the plank bar of a crowded frontier saloon. Lean unlined face, high cheekbones, pointed ears plainly visible, dark hair pulled back tight and pinned, pale watchful eyes that seem to be tracking the room rather than the camera. Sleeves rolled above the elbow over forearms strong from years of lifting barrels, heavy canvas apron, a bar cloth in one hand, a thin plain ring the only ornament. Behind her a wall of bottles and tin cups, a long worn counter, sawdust floor, lamplight and tobacco haze, dim figures of railway labourers at the tables. Composed, courteous and slightly distant expression — a professional who is already pricing you; standing, never seated; cinematically realistic.
+Cinematically realistic portrait of an adult elf woman of indeterminate age standing on the customers' side of the bar in the largest drinking house of a dusty frontier railhead town, one hand resting flat on the counter's edge, her body turned three-quarters to camera and her attention angled off toward the room. Lean unlined face, high cheekbones, pointed ears plainly visible, dark hair pulled back tight and pinned, pale watchful eyes. Sleeves rolled above the elbow over forearms strong from decades of lifting barrels, heavy canvas apron, a bar cloth held in the other hand, a thin plain ring her only ornament. She is standing and unhurried, and her posture says she owns the floor she is crossing.
+
+The counter beside her is the room's one extravagance: a single unbroken slab of good timber, planed dead flat, darkened and polished at the centre by thirty years of elbows and still pale along the edges. Behind it, mismatched bottles and stacked tin cups arranged in unusually exact rows, a ledger shelf and a tally slate; high above, out of reach and separate from everything else, a row of six real glass tumblers, clean and unused. The carpentry everywhere is quietly better than the town deserves — jointed rather than nailed, true angles, shelves that do not sag — with no decoration whatsoever: no carving, no gilding, no mirror.
+
+Around her the long room: unpainted plank walls, exposed beams, sawdust on the floorboards, two rows of plain tables with a rough mixed clientele of railway labourers and drovers, oil lamps burning low with wicks trimmed perfectly straight, tobacco haze, fine pale dust on every ledge, and an open doorway at the far end letting in hard white daylight. Her expression is composed, courteous and slightly distant — a professional who is already pricing you. Credible camera optics, realistic depth of field with her sharp and the room falling soft behind, warm lamplight meeting cool daylight, restrained color grading.
 
 Constraints to preserve:
 
-Elf of medium humanoid height, slender build, pointed ears and ageless unlined face that reads adult, not youthful; cinematically realistic photography; rolled sleeves, canvas apron, bar cloth, bottles and tin cups; a working publican in a rough railhead town, not an aristocrat and not a dance-hall performer.
+Elf of medium humanoid height, slender build, pointed ears and an ageless unlined face that reads clearly adult rather than youthful. She stands at the bar and never seated. Cinematically realistic photography, not illustration. Rolled sleeves, canvas apron, bar cloth, thin plain ring. The single-slab counter and the six glass tumblers kept high and separate must both be visible. Better-than-average carpentry with zero ornament. A working publican who runs a rough railhead saloon: capable, unglamorous, in charge.
 
 Details to avoid:
 
-Cartoon or plastic CGI; generic high-fantasy elf in robes, armour or forest setting; glowing eyes, pointed hat, tiara or courtly gown; anime proportions; flirtatious saloon-girl styling; clean polished tavern with modern fittings.
+No split screen, no multi-panel layout, no storyboard, no collage. Cartoon style, plastic CGI, generic fantasy illustration, videogame look. Generic high-fantasy elf: robes, armour, bow, forest, circlet, tiara, courtly gown, glowing eyes, anime proportions, pointed hat. Flirtatious saloon-girl styling, corset, feathered headdress, dance-hall stage, piano. Tidy western movie-set saloon with a big gilt mirror or batwing doors. Carved elven ornament, scrollwork, silver filigree or stained glass. Electric light, modern fittings, readable lettering. Drawn weapons, brawl in progress.
 ```
 
 ## Personalità
