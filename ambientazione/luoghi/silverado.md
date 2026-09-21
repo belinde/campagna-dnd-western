@@ -8,11 +8,9 @@
 
 _Nessuna veduta ancora associata._
 
-![Mappa di Silverado](/immagini/luoghi/silverado-mappa.png)
+![Mappa di Silverado](/immagini/luoghi/silverado-mappa.jpg)
 
 *Mappa della citta`: la strada maestra, i tre isolati di assi verniciate attorno alla Casa dei Registri, il piazzale del capolinea e i recinti del bestiame a sud.*
-
-_Disegno di precisione modificabile: [`immagini/luoghi/silverado-mappa.svg`](/immagini/luoghi/silverado-mappa.svg), generato da `tools/scripts/mappa_silverado.py`._
 
 ## Aspetto
 
