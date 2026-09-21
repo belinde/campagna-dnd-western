@@ -24,7 +24,7 @@ Il **telegrafo** ha aggiunto alla violenza una precisione nuova. Un compratore a
 
 Infine c'è la causa che pochi ammettono ad alta voce ma che molti comprendono benissimo: la **politica della fame**. I branchi sostengono l'indipendenza materiale dei clan delle pianure. Finché i bisonti restano numerosi, gli orchi possono rifiutare certi trattati, certi prezzi, certe linee tracciate sulle mappe federali. Ridurre i branchi significa ridurre la loro libertà di movimento, costringerli ad avvicinarsi ai forti, ai mercati, ai magazzini di farina e alle promesse avvelenate del governo. Alcuni funzionari federali negano ogni intenzione; altri, quando bevono abbastanza, la spiegano come se fosse semplice buon senso.
 
-C'è anche una ragione strettamente **giuridica**, e sta scritta nel [Trattato di Fort Lame](trattato-di-fort-lame.md). Il diritto di caccia dei clan è garantito «finché i branchi percorreranno quelle terre in numero tale da giustificare la caccia»: sterminare le mandrie non viola il trattato, ne estingue il presupposto. E il divieto di invadere i territori riservati è scritto per i **coloni**, non per le squadre commerciali — che è la porta da cui passano i Tiratori del Punto Lungo e la Compagnia delle Cinghie senza infrangere una riga.
+C'è anche una ragione strettamente **giuridica**, e sta scritta nel [Trattato di Fort Lame](trattato-di-fort-lame.md). Il diritto di caccia dei clan è garantito «finché i branchi percorreranno quelle terre in numero tale da giustificare la caccia»: sterminare le mandrie non viola il trattato, ne estingue il presupposto. E il divieto di invadere i territori riservati è scritto per i **coloni**, non per le squadre commerciali — che è la porta da cui passano i [Tiratori del Punto Lungo](../nazioni/tiratori-del-punto-lungo.md) e la [Compagnia delle Cinghie](../nazioni/compagnia-delle-cinghie-del-grande-fiume.md) senza infrangere una riga.
 
 I **wurmionti** sono entrati nel circuito in un secondo momento, quando la pressione sui bisonti ha già impoverito parte delle pianure e le economie di Frontiera hanno cominciato a divorare anche le colline. Il grasso dei wurmionti regge bene certi usi meccanici, le scaglie hanno applicazioni artigianali e il loro cuoio, lavorato male, è ruvido; lavorato bene, vale denaro serio. Così il mercato, che non conosce sazietà, ha alzato lo sguardo dalle praterie alle pendici.
 
@@ -83,6 +83,35 @@ Ma gli orchi non sono gli unici a pagarne il prezzo. Anche i **piccoli coloni** 
 La maggior parte delle stragi avviene in una zona grigia dove la legge federale esiste, ma arriva sempre un poco dopo il denaro. Ci sono licenze di caccia regolari usate come copertura per massacri, sceriffi che distinguono tra illegalità e disturbo pubblico, ufficiali che deplorano le carcasse e intanto acquistano carne salata per il proprio presidio, mercanti che giurano di non avere sangue sulle mani perché comprano solo le pelli già staccate.
 
 È proprio questa distanza tra gesto e profitto a rendere la strage dei branchi così resistente. Quasi nessuno si sente colpevole per intero. Ognuno lo è solo per la parte che gli conviene ricordare meno.
+
+## La stagione del guado
+
+Quanto segue è accaduto, e serve da esempio di come la strage funziona quando la si guarda da vicino invece che in astratto.
+
+### La prateria lavorata
+
+Lungo la Via dei Coloni, a est di Tre Pali, una squadra dei Tiratori ha lavorato per una stagione intera un tratto di pianura fino a lasciarlo come lo si trova oggi: [carcasse scorticate](../luoghi/campo-della-strage.md) abbandonate all'erba, fosse di scuoiatura, pali per tendere le pelli, pozze rese sospette dai resti. La [fattoria Barlow](../luoghi/fattoria-barlow.md), che sul suo pozzo ci campava a stento, ha cominciato a vendere acqua e sale ai macellai — il calcolo che una famiglia isolata fa quando le alternative sono peggiori, e che la lascia con dei clienti che un giorno potrebbero preferirla senza testimoni.
+
+### Il banco di Tre Pali
+
+Una denuncia formale è arrivata davanti al giudice di circuito [Cornelius Ashford](../../png/cornelius-ashford.md), con [Yargra delle Orme Profonde](../../png/yargra-delle-orme-profonde.md) come querelante. Il banco ha fatto la cosa rara: ha confrontato la firma della sciamana con quella apposta sul [Trattato di Fort Lame](trattato-di-fort-lame.md) e **l'ha riconosciuta come parte lesa legittima ai sensi dei patti**. «Non perché io lo trovi comodo. Perché la carta lo dice.»
+
+Poi ha fatto la cosa prevedibile. Le prove erano sufficienti sul fatto e insufficienti sull'**identità dei colpevoli**: nessun testimone dell'atto di uccisione, nessun volto, nessuna carta commerciale. Il giudice ha disposto ulteriori indagini e nient'altro. Nessun mandato, nessun ordine di comparizione, nessun sequestro.
+
+Resta quindi un precedente scritto e nessuna conseguenza pratica — la combinazione più frustrante che un tribunale coloniale possa produrre, e anche la più istruttiva: nel Nuovo Mondo la carta pesa, ma pesa solo dove qualcuno sa dove appoggiarla.
+
+### Il corridoio chiuso
+
+Poche giornate di marcia a ovest di Tre Pali, la pista si infila fra due dossi bassi e scende a un guado: l'unico passaggio praticabile per i carri per venti miglia, e insieme il punto in cui il branco scende all'acqua perché non c'è altro posto dove scenda.
+
+La carovana lo ha attraversato senza accorgersi di nulla. **Il giorno dopo la strettoia è stata usata per quello che era**: un branco intero preso in un posto da cui non poteva disperdersi, il lavoro di una giornata che vale un mese. Chi è passato dopo ha trovato il guado impraticabile per l'odore e ha dovuto allargare di miglia.
+
+Le conseguenze si contano per gradi.
+
+- Il **corridoio migratorio** di quella fascia di pianura è, per quanto riguarda le prossime stagioni, finito. I branchi che lo percorrevano o non ci sono più o hanno perso la via.
+- Nel Clan delle Orme Profonde i **moderati hanno perso terreno**. Avevano investito tutto sulla via legale, l'hanno percorsa fino in fondo e ne sono usciti con un foglio e un corridoio morto. Ogni giovane guerriero della pianura ha adesso un argomento che non aveva prima.
+- I **Tiratori** si sono spostati. Quel tratto è stato spremuto, e la fascia collinare a ovest — dove ci sono i wurmionti, le miniere che comprano grasso e i depositi che comprano cuoio — è il passo successivo della stessa logica.
+- La **Compagnia** ha incassato. Da quella stagione escono lettere di credito, non carcasse, e le lettere di credito si possono investire in qualunque cosa.
 
 ## Ganci narrativi
 

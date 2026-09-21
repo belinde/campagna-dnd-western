@@ -19,9 +19,9 @@ Sostituisce il vecchio spunto sulle giornate libere a Valdoren, la cui finestra 
 
 ## Note DM
 
-Sono fili **freddi per scelta**: nessuno dei quattro va accesso durante il climax della Strage dei Branchi, dove il tavolo ha già più antagonisti di quanti riesca a servire.
+Sono fili **freddi per scelta**: nessuno dei quattro va acceso mentre il tavolo ha già più antagonisti di quanti riesca a servire.
 
-Il momento giusto è **l'arrivo a Silverado**, quando la carovana si scioglie e il gruppo perde per qualche giorno la struttura del convoglio: è lì che un conto vecchio si presenta senza sembrare una coincidenza. Il **Crow** è il candidato naturale, perché porta con sé una minaccia personale e non richiede spiegazioni geografiche.
+Il momento giusto è **Silverado**, ora che la carovana si è sciolta e il gruppo ha perso la struttura del convoglio: è lì che un conto vecchio si presenta senza sembrare una coincidenza. Il **Crow** è il candidato naturale, perché porta con sé una minaccia personale e non richiede spiegazioni geografiche.
 
 Gillian è invece lo strumento di servizio: quando il DM ha bisogno che un'informazione arrivi al tavolo e i PG non hanno fatto nulla per meritarsela, la si fa **vendere** invece di regalarla. Costa denaro e un po' di dignità, che è il prezzo giusto.
 

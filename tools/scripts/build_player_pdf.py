@@ -10,9 +10,9 @@ Il rendering usa Google Chrome in headless (`--print-to-pdf`) su un profilo
 temporaneo dedicato: non tocca il profilo personale ne` quello «Agenti».
 
 Esempio:
-    python3 tools/scripts/build_player_pdf.py spunti/cosa-potevate-fare-meglio.md \
-        --hero immagini/varie/cosa-potevate-fare-meglio.jpg \
-        --sottotitolo "La corsa al Nuovo Mondo — Arco della Strage dei Branchi"
+    python3 tools/scripts/build_player_pdf.py documento.md \
+        --hero immagini/varie/documento.jpg \
+        --sottotitolo "La corsa al Nuovo Mondo"
 """
 
 from __future__ import annotations

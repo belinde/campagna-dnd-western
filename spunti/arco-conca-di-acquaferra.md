@@ -319,4 +319,4 @@ Quando la volta cede e si apre la cavità, l'arco guadagna un dungeon di grado b
 | Pianificazione della sessione 014 | da fare | Serata introduttiva: scioglimento della carovana, offerta Halverson, prima lettura della pietra |
 | Cifra reale del tesoro del gruppo | alla 014 | Si verifica al tavolo |
 | Livelli dei PG | **aperto** | Tutte e cinque le schede riportano `**Livello:** —` |
-| Aggiornare `spunti/arco-strage-dei-branchi.md` | da fare | Registrare la chiusura decisa dal DM |
+| Chiusura della Strage dei Branchi | **fatto** | Fatti certi in ambientazione, fili vivi in `spunti/strascichi-della-strage.md` |

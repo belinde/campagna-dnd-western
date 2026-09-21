@@ -42,6 +42,8 @@ A questo si aggiunge la questione degli **indennizzi**. Il trattato prevedeva ve
 
 ## Chi lo invoca oggi
 
+Il riconoscimento ottenuto al banco di Tre Pali ha stabilito che la clausola sui firmatari funziona davvero: una parte lesa orchesca può stare davanti a un giudice federale. Ha anche stabilito quanto poco basti a fermarla lì — quel procedimento si è chiuso con ulteriori indagini disposte e nessun mandato, perché al caso mancava l'identità dei colpevoli. Il precedente resta scritto e utilizzabile; la sentenza che avrebbe dovuto seguirlo, no.
+
 - **[Yargra delle Orme Profonde](../../png/yargra-delle-orme-profonde.md)** — firmataria per il Clan delle Orme Profonde. È la sua firma sul trattato che, nella sessione 012, ha permesso al giudice [Cornelius Ashford](../../png/cornelius-ashford.md) di riconoscerla come parte lesa legittima davanti al banco di Tre Pali: «Non perché io lo trovi comodo. Perché la carta lo dice.»
 - **I moderati del clan** — lo usano come prova che con i coloni si può ancora trattare.
 - **I giovani guerrieri** — lo usano come prova del contrario.
