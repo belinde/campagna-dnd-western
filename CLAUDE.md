@@ -11,6 +11,12 @@ Questo file è il contesto permanente e vale sempre. Due regole di dettaglio sta
 | [`.claude/rules/png-scheda-gioco.md`](.claude/rules/png-scheda-gioco.md) | `png/*.md`, `sessione/png-*.md` |
 | [`.claude/rules/personaggio-aspetto.md`](.claude/rules/personaggio-aspetto.md) | `personaggi/*.md`, `png/*.md`, `sessione/png-*.md`, `ambientazione/luoghi/*.md` |
 
+## Niente worktree
+
+In questo progetto **non si usano i worktree**: si lavora direttamente sul clone principale, su `main`. Questa regola deroga alla preferenza globale che impone un worktree separato per ogni lavoro che tocca file — qui è una cartella di testi, non un codebase con build e test da isolare, e la separazione costerebbe più di quanto renda.
+
+Il divieto è anche applicato dalle impostazioni versionate in [`.claude/settings.json`](.claude/settings.json), che negano il tool `EnterWorktree`.
+
 ## Ispirazione storica
 
 L'ambientazione è **pesantemente ispirata alla storia del Far West americano**, approssimativamente nel periodo 1840-1890. Il grado di fedeltà alla realtà storica varia però a seconda dell'elemento:
