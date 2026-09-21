@@ -6,7 +6,9 @@
 
 ## Immagine
 
-_Nessuna veduta ancora associata._
+![Veduta di Silverado](/immagini/luoghi/silverado.jpg)
+
+*Veduta di Silverado dal rilievo a est: il piazzale del capolinea in primo piano, la strada maestra con gli isolati di assi verniciate, i recinti e la tendopoli ai margini, le colline d'argento sullo sfondo.*
 
 ![Mappa di Silverado](/immagini/luoghi/silverado-mappa.jpg)
 
