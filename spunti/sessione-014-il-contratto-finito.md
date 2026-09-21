@@ -57,7 +57,7 @@ Scena breve e concreta: Brannagh paga, sul suo carro, contando.
 | Voce | Importo |
 |---|---|
 | Ingaggio scorta | $3 al giorno a testa per la durata del viaggio |
-| Commissione cartografica di **Dora** | a parte, da concordare — è l'unica cifra che il DM decide stasera |
+| Commissione cartografica di **Dora** | **$30** — tre dollari al giorno per dieci giornate di rilievo, pagati a parte all'arrivo |
 | Credito di Drummond sulle taglie dei briganti | **$40**, esigibili a Valdoren: col telegrafo di Silverado smettono di essere irraggiungibili |
 
 **Questo è il momento in cui si verifica quanto hanno in tasca davvero**, spese del viaggio comprese. Il numero che esce serve per tutto l'arco: annotarlo.
@@ -156,7 +156,7 @@ Se ha senso per il tavolo, dare l'ultima battuta a **Leman**, che l'erba sbaglia
 | Cosa | Priorità | Nota |
 |---|---|---|
 | Cifra reale in cassa al gruppo | **Molto alta** | Si conta al blocco 2; senza, la fase 1 dell'arco non si dimensiona |
-| Compenso della commissione cartografica di Dora | Alta | Decidere prima, non al tavolo |
+| Compenso della commissione cartografica di Dora | **fissato** | $30: $3 al giorno per dieci giornate |
 | Livelli dei PG | **Aperta** | Tutte e cinque le schede riportano `**Livello:** —` |
 | Schede PNG di **Bea Fenn** e **Wendell Roach** | **fatte** | `png/bea-fenn.md`, `png/wendell-roach.md`, entrambi livello 3 |
 | `ambientazione/luoghi/conca-di-acquaferra.md` | Media | Serve dal blocco 5 in poi, anche in forma minima |

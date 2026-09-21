@@ -136,7 +136,7 @@ Il silenzio, quindi, non è avidità: è necessità giuridica. E la corsa non è
 
 **Come si colma il buco** — tutte vie già canoniche, nessuna inventata per l'occasione:
 
-- la **commissione cartografica di Dora**, pagata a parte da Brannagh all'arrivo. Pagata, si noti, dallo stesso uomo che vuole una concessione per sé;
+- la **commissione cartografica di Dora**: $30, tre dollari al giorno per dieci giornate di rilievo, pagati a parte da Brannagh all'arrivo. Pagati, si noti, dallo stesso uomo che vuole una concessione per sé;
 - i **$40** fermi a Valdoren, credito di Drummond sulle taglie dei briganti (sessione 006): con il telegrafo di Silverado smettono di essere irraggiungibili;
 - **Anthony Gillian**, che vende notizie e quindi ne compra. Ha un credito inevaso da nove sessioni e una memoria lunga;
 - la filiale della **Banca Federale**, al **20% annuo** per gli speculatori di Frontiera. Il debito è la pressione che lavora da sola per tutto l'arco, senza bisogno che il DM spinga;
