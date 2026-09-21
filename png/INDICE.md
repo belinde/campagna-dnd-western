@@ -53,5 +53,5 @@
 
 ## Altro
 
-- [Amos Tolliver](amos-tolliver.md) — Allevatore che recinta dominio pubblico per pagare un debito che non riesce a chiudere; crede che la terra sia sua perché ci pascola da nove anni.
+- <a href="amos-tolliver.md"><img src="../immagini/png/amos-tolliver.jpg" width="80" alt="Amos Tolliver"></a> [Amos Tolliver](amos-tolliver.md) — Allevatore che recinta dominio pubblico per pagare un debito che non riesce a chiudere; crede che la terra sia sua perché ci pascola da nove anni.
 - [Hollis Quist](hollis-quist.md) — Registratore federale gnomo, onesto fino al midollo e sommerso di carta: decide chi possiede cosa e non si può né comprare né spaventare.

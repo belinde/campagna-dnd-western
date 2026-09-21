@@ -12,7 +12,9 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Amos Tolliver](/immagini/png/amos-tolliver.jpg)
+
+*Ritratto di Amos Tolliver lungo il proprio recinto, col cavallo sellato alle spalle e la mandria oltre il filo.*
 
 ## Aspetto
 
@@ -25,15 +27,19 @@ L'espressione di partenza non è cattiveria: è la preoccupazione testarda di ch
 ```text
 Image prompt:
 
-Cinematically realistic portrait of a tall lean human man in his fifties, frontier stockman. Deeply sun-scoured face with a sharp pale line across the forehead where the hat brim sits, short grey moustache, pale eyes habitually narrowed. Heavy canvas duster over work shirt, worn leather gloves shiny at the palm, hands scarred by rope and wire. Fencing pliers, a coil of wire and a box of staples strapped to the saddle beside him, horse's flank visible. Dry grassland and low bleached hills behind, hard midday light; stubborn worried expression, not cruelty; cinematically realistic.
+Cinematically realistic wide horizontal portrait of a tall lean human man in his fifties, a frontier stockman, standing three-quarters to camera in the left third of the frame with his weight on one leg and one gloved hand resting on a fence post. Deeply sun-scoured face with a sharp pale line across the forehead where the hat brim sits, short grey moustache, pale eyes habitually narrowed even in shade. Heavy canvas duster over a work shirt, worn leather gloves shiny at the palm, hands scarred by rope and wire. Fencing pliers hang at his belt, a coil of wire and a box of staples sit on the ground at his boot; his saddled horse stands just behind him, its flank filling the near background.
+
+A new barbed-wire fence runs away from him into the right of the frame in a long receding diagonal — freshly cut posts, taut strands catching the light, the raw pale timber conspicuously newer than everything else in the landscape. Beyond the wire, a scatter of range cattle graze on dry grass, some near, most reduced to small shapes in the middle distance, with hoof-churned dust hanging low around them. Dry semi-arid grassland, bleached low hills on the horizon, hard midday light with short shadows and a bright dusty haze.
+
+His expression is not cruelty: it is the stubborn worry of a man who does his accounts at night and never likes the answer. He is looking out along his own fence line rather than at the camera. Credible camera optics, wide cinematic framing, realistic depth of field with the man sharp and the far cattle softened by haze, restrained warm color grading, physical textures of canvas, worn leather, weathered timber, rusted wire, horsehide and dust.
 
 Constraints to preserve:
 
-Human adult height, lean and weathered; cinematically realistic; hat-line tan, grey moustache, canvas duster, wire tools at the saddle; a working rancher, not a gunfighter dandy.
+Human adult height, lean and weathered, not heavyset. Cinematically realistic photography, not illustration. Hat-line tan, short grey moustache, heavy canvas duster, wire-working tools on him or at his feet. A working rancher, not a gunfighter dandy. The fence must read as recently built — new posts, bright wire — against old dry country.
 
 Details to avoid:
 
-Cartoon or plastic CGI; sneering villain expression; ornate black gunslinger outfit; clean unworn clothing; heavyset build.
+No split screen, no multi-panel layout, no storyboard, no collage. Cartoon style, plastic CGI, generic fantasy illustration, videogame look. Sneering villain expression, menacing pose, drawn weapon. Ornate black gunslinger outfit, clean unworn clothing, polished boots or spotless hat. Lush green pasture, wooden ranch gateway arch, tidy white-painted fence. Modern farm machinery, power lines. Text, lettering, brands or signage in frame.
 ```
 
 ## Personalità
