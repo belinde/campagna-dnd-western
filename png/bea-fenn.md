@@ -2,13 +2,13 @@
 
 **Regione:** Frontiera (Silverado)
 
-**Ambito:** Osteria del Capolinea · piazzale della ferrovia
+**Ambito:** [Osteria del Capolinea](../ambientazione/luoghi/osteria-del-capolinea.md) · piazzale della ferrovia
 
 **Promemoria:** Ostessa elfa del locale che non chiude mai; sa chi assume, chi ha pagato e chi è appena arrivato, e la città la nomina da prima che ci fosse una città.
 
 **Razza/Classe:** Elfa / — (ostessa, benchmark civile con addestramento minimo)
 
-**Ruolo:** Padrona dell'Osteria del Capolinea, il più grande dei sei locali registrati di Silverado
+**Ruolo:** Padrona dell'Osteria del Capolinea, il più grande dei sei locali registrati di [Silverado](../ambientazione/luoghi/silverado.md)
 
 ## Immagine
 

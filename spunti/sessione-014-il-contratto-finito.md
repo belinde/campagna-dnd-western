@@ -81,7 +81,7 @@ Il blocco portante. Il gruppo è senza contratto, in una città che non conosce,
 
 ### L'Osteria del Capolinea
 
-Il più grande dei sei registrati, di fronte al piazzale. **Non chiude mai**, perché i turni della ferrovia non finiscono mai: all'alba c'è chi smonta, a mezzogiorno chi aspetta, la sera chi ha già bevuto due paghe. Sala lunga, banco di assi, segatura per terra cambiata una volta a settimana, e un rumore che non cala mai abbastanza da poter parlare piano.
+Scheda completa: [`ambientazione/luoghi/osteria-del-capolinea.md`](../ambientazione/luoghi/osteria-del-capolinea.md). Il più grande dei sei registrati, di fronte al piazzale. **Non chiude mai**, perché i turni della ferrovia non finiscono mai: all'alba c'è chi smonta, a mezzogiorno chi aspetta, la sera chi ha già bevuto due paghe. Sala lunga, banco di assi, segatura per terra cambiata una volta a settimana, e un rumore che non cala mai abbastanza da poter parlare piano.
 
 **[Bea Fenn](../png/bea-fenn.md)**, la padrona. Elfa, braccia da chi solleva barili, mai vista seduta — ed è qui da prima che ci fosse una città. Non è ostile e non è amica: è **efficiente**. Sa gli orari, sa chi assume, sa quale squadra ha pagato e quale no. Le informazioni le dà volentieri perché fanno bere: quelle che valgono davvero, però, le tiene per chi consuma o per chi le rende un favore.
 
