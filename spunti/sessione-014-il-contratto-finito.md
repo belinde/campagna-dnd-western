@@ -83,11 +83,11 @@ Il blocco portante. Il gruppo è senza contratto, in una città che non conosce,
 
 Il più grande dei sei registrati, di fronte al piazzale. **Non chiude mai**, perché i turni della ferrovia non finiscono mai: all'alba c'è chi smonta, a mezzogiorno chi aspetta, la sera chi ha già bevuto due paghe. Sala lunga, banco di assi, segatura per terra cambiata una volta a settimana, e un rumore che non cala mai abbastanza da poter parlare piano.
 
-**Bea Fenn**, la padrona. Cinquant'anni, braccia da chi solleva barili, mai vista seduta. Non è ostile e non è amica: è **efficiente**. Sa gli orari, sa chi assume, sa quale squadra ha pagato e quale no. Le informazioni le dà volentieri perché fanno bere: quelle che valgono davvero, però, le tiene per chi consuma o per chi le rende un favore.
+**[Bea Fenn](../png/bea-fenn.md)**, la padrona. Elfa, braccia da chi solleva barili, mai vista seduta — ed è qui da prima che ci fosse una città. Non è ostile e non è amica: è **efficiente**. Sa gli orari, sa chi assume, sa quale squadra ha pagato e quale no. Le informazioni le dà volentieri perché fanno bere: quelle che valgono davvero, però, le tiene per chi consuma o per chi le rende un favore.
 
 Cosa si raccoglie qui:
 
-- La città campa sul capolinea, non sulle colline. **Il distretto è spremuto** — lo dicono tutti con la sicurezza di chi ripete una cosa sentita.
+- La città campa sul capolinea, non sulle colline. **Il distretto è spremuto** — lo dicono tutti con la sicurezza di chi ripete una cosa sentita. Bea è l'unica che non lo ripete: c'era, e lo racconta come una delusione vista in faccia a gente che ha servito.
 - Chi assume in questo momento: la ferrovia (manovalanza), la Gilda dei Minatori (poco), e **una signora della Compagnia delle Cinghie che ha preso mezzo convoglio in due giorni**.
 - I binari si fermano qui e prima o poi ripartiranno. **Dove**, nessuno lo sa, e ognuno ha la propria opinione: è argomento da rissa.
 - Un allevatore a ovest sta tirando filo spinato e ha chiuso delle sorgenti. Metà sala trova che sia il suo diritto, l'altra metà no.
@@ -95,9 +95,9 @@ Cosa si raccoglie qui:
 
 ### Il Filone Magro
 
-Piccolo, storto, in fondo alla strada verso le colline. Il nome se lo è guadagnato onestamente. Ci bevono i cercatori che non hanno trovato niente e i braccianti che non hanno di meglio; è anche **una delle due osterie che servono gli orchi**, e questo dice già tutto su che clientela rinuncia a entrarci.
+Piccolo, storto, in fondo alla strada verso le colline. Il nome se lo è guadagnato onestamente. Ci bevono i cercatori che non hanno trovato niente e i braccianti che non hanno di meglio; è anche **una delle due osterie che servono gli orchi** — e il motivo è che dietro il banco c'è un mezzorco, il che dice già tutto su quale clientela rinuncia a entrarci.
 
-**Wendell Roach**, l'oste. Ex cercatore, comprò il locale con l'unico filoncino della sua vita e non ne ha trovati altri. Parla lento, si offende in fretta, e ha una regola sola: *i soldi non hanno faccia*. La applica agli orchi, ai coloni e ai pistoleri con la stessa indifferenza.
+**[Wendell Roach](../png/wendell-roach.md)**, l'oste. Mezzorco ed ex cercatore, comprò il locale con l'unico filoncino della sua vita e non ne ha trovati altri. Parla lento, si offende in fretta, e ha una regola sola: *i soldi non hanno faccia*. La applica agli orchi, ai coloni e ai pistoleri con la stessa indifferenza.
 
 Cosa si raccoglie qui:
 
@@ -158,6 +158,6 @@ Se ha senso per il tavolo, dare l'ultima battuta a **Leman**, che l'erba sbaglia
 | Cifra reale in cassa al gruppo | **Molto alta** | Si conta al blocco 2; senza, la fase 1 dell'arco non si dimensiona |
 | Compenso della commissione cartografica di Dora | Alta | Decidere prima, non al tavolo |
 | Livelli dei PG | **Aperta** | Tutte e cinque le schede riportano `**Livello:** —` |
-| Schede PNG di **Bea Fenn** e **Wendell Roach** | Media | Da creare in `png/` se entrano davvero in scena; serve il livello dal DM |
+| Schede PNG di **Bea Fenn** e **Wendell Roach** | **fatte** | `png/bea-fenn.md`, `png/wendell-roach.md`, entrambi livello 3 |
 | `ambientazione/luoghi/conca-di-acquaferra.md` | Media | Serve dal blocco 5 in poi, anche in forma minima |
 | Nomi delle altre quattro osterie | Bassa | Bastano al momento del bisogno |
