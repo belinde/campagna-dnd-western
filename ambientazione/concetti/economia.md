@@ -123,8 +123,6 @@ Il rame è il metallo nervoso del Nuovo Mondo. Vale come moneta, vale come mater
 
 Le miniere di rame nel Far West e nelle Montagne Rocciose sono il vero oggetto del desiderio delle grandi compagnie — non l'oro, non l'argento. Una miniera d'oro arricchisce chi la gestisce; una miniera di rame rifornisce l'industria tecnomagica di mezzo continente. Le compagnie del Caporalato lo sanno da decenni; le compagnie federali stanno imparando. Nel mezzo, i coloni che per caso si trovano su un giacimento di rame spesso non capiscono perché improvvisamente ci sono tre avvocati e un funzionario federale alla loro porta.
 
-Esiste poi un gradino superiore che il mercato riconosce senza saperlo spiegare: un rame che vale come l'oro, indistinguibile a occhio da quello ordinario, richiesto dalle officine che lavorano sui vincoli delicati e pagato molte volte il prezzo di listino. Da dove venga lo spiega [I Respiri della Pietra](respiri-della-pietra.md) — e il fatto che quasi nessuno lo sappia è, di per sé, un'opportunità commerciale.
-
 Le taglie sui ricercati seguono una logica economica precisa: $50 per un ladro di secondo piano, $100-$200 per un fuorilegge con precedenti di violenza, $500 o più per capi-banda o criminali di rilevanza federale. Cifre che rappresentano mesi di salario per un operaio comune — abbastanza da motivare qualcuno, ma non così alte da scatenare la caccia sistematica.
 
 ### Il mercato del lavoro coatto
@@ -138,6 +136,10 @@ Nelle colonie abolizioniste del Nord il sistema formale non esiste, ma i meccani
 La **Banca Federale** è il cuore finanziario degli Stati Uniti. Le sue filiali principali si trovano a New Avalon, Lythandor, Valdoren e Silverado; sportelli minori operano in ogni città di Frontiera con aspirazioni di permanenza. Emette banconote, gestisce il debito pubblico, finanzia la costruzione della ferrovia e concede credito a tassi che variano tra il 6% annuo per i clienti affidabili della East Coast e il 20% per i minatori speculativi della Frontiera.
 
 Il mercato delle concessioni minerarie è l'angolo più volatile — e più corrotto — dell'economia federale. Un lotto messo all'asta a Valdoren il primo venerdì del mese può valere $200 se il sottosuolo è già stato sondato e trovato scarso, o $50.000 se qualcuno ha notizie di un filone nuovo che il mercato non conosce ancora. Le notizie si comprano, si vendono e si falsificano. I notai che rogitano i contratti di concessione sono tra i professionisti più ricchi — e più in pericolo — del Middle West.
+
+### Non ancora emerso
+
+Esiste poi un gradino superiore che il mercato riconosce senza saperlo spiegare: un rame che vale come l'oro, indistinguibile a occhio da quello ordinario, richiesto dalle officine che lavorano sui vincoli delicati e pagato molte volte il prezzo di listino. Da dove venga lo spiega [I Respiri della Pietra](respiri-della-pietra.md) — e il fatto che quasi nessuno lo sappia è, di per sé, un'opportunità commerciale.
 
 ## Ganci narrativi
 

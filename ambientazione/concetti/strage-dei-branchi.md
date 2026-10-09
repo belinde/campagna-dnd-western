@@ -24,8 +24,6 @@ Il **telegrafo** ha aggiunto alla violenza una precisione nuova. Un compratore a
 
 Infine c'è la causa che pochi ammettono ad alta voce ma che molti comprendono benissimo: la **politica della fame**. I branchi sostengono l'indipendenza materiale dei clan delle pianure. Finché i bisonti restano numerosi, gli orchi possono rifiutare certi trattati, certi prezzi, certe linee tracciate sulle mappe federali. Ridurre i branchi significa ridurre la loro libertà di movimento, costringerli ad avvicinarsi ai forti, ai mercati, ai magazzini di farina e alle promesse avvelenate del governo. Alcuni funzionari federali negano ogni intenzione; altri, quando bevono abbastanza, la spiegano come se fosse semplice buon senso.
 
-C'è anche una ragione strettamente **giuridica**, e sta scritta nel [Trattato di Fort Lame](trattato-di-fort-lame.md). Il diritto di caccia dei clan è garantito «finché i branchi percorreranno quelle terre in numero tale da giustificare la caccia»: sterminare le mandrie non viola il trattato, ne estingue il presupposto. E il divieto di invadere i territori riservati è scritto per i **coloni**, non per le squadre commerciali — che è la porta da cui passano i [Tiratori del Punto Lungo](../nazioni/tiratori-del-punto-lungo.md) e la [Compagnia delle Cinghie](../nazioni/compagnia-delle-cinghie-del-grande-fiume.md) senza infrangere una riga.
-
 I **wurmionti** sono entrati nel circuito in un secondo momento, quando la pressione sui bisonti ha già impoverito parte delle pianure e le economie di Frontiera hanno cominciato a divorare anche le colline. Il grasso dei wurmionti regge bene certi usi meccanici, le scaglie hanno applicazioni artigianali e il loro cuoio, lavorato male, è ruvido; lavorato bene, vale denaro serio. Così il mercato, che non conosce sazietà, ha alzato lo sguardo dalle praterie alle pendici.
 
 ## Diffusione e praticanti
@@ -100,7 +98,11 @@ Poi ha fatto la cosa prevedibile. Le prove erano sufficienti sul fatto e insuffi
 
 Resta quindi un precedente scritto e nessuna conseguenza pratica — la combinazione più frustrante che un tribunale coloniale possa produrre, e anche la più istruttiva: nel Nuovo Mondo la carta pesa, ma pesa solo dove qualcuno sa dove appoggiarla.
 
-### Il corridoio chiuso
+### Non ancora emerso
+
+C'è anche una ragione strettamente **giuridica**, e sta scritta nel [Trattato di Fort Lame](trattato-di-fort-lame.md). Il diritto di caccia dei clan è garantito «finché i branchi percorreranno quelle terre in numero tale da giustificare la caccia»: sterminare le mandrie non viola il trattato, ne estingue il presupposto. E il divieto di invadere i territori riservati è scritto per i **coloni**, non per le squadre commerciali — che è la porta da cui passano i [Tiratori del Punto Lungo](../nazioni/tiratori-del-punto-lungo.md) e la [Compagnia delle Cinghie](../nazioni/compagnia-delle-cinghie-del-grande-fiume.md) senza infrangere una riga.
+
+#### Il corridoio chiuso
 
 Poche giornate di marcia a ovest di Tre Pali, la pista si infila fra due dossi bassi e scende a un guado: l'unico passaggio praticabile per i carri per venti miglia, e insieme il punto in cui il branco scende all'acqua perché non c'è altro posto dove scenda.
 

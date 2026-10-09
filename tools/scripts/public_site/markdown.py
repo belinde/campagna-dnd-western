@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import posixpath
 import re
 from pathlib import Path
 
@@ -11,6 +12,7 @@ from public_site.constants import (
     EXCERPT_MAX_LEN,
     HEADING_RE,
     IMAGE_RE,
+    INTERNAL_MD_LINK_RE,
     META_CLASSE_RE,
     META_RAZZA_RE,
     META_REGIONE_RE,
@@ -20,9 +22,11 @@ from public_site.constants import (
     SALIENT_IMAGE_SECTIONS,
     SESSION_H1_RE,
     SESSION_LINK_RE,
+    SETTING_EXCERPT_MAX_LEN,
     VISUAL_REF_FENCE_RE,
     VISUAL_REF_HEADINGS,
 )
+from public_site.manifest import ambientazione_group
 from public_site.media import render_salient_media_card_html
 from public_site.models import HubCardInfo, PageEntry, PreparedPage
 
@@ -173,6 +177,8 @@ def transform_body_for_profile(markdown_text: str, profile: str | None) -> str:
 
 
 def render_png_public_header_html(regione: str, ambito: str, promemoria: str) -> str:
+    ambito = plain_inline(ambito)
+    promemoria = plain_inline(promemoria)
     if not any((regione.strip(), ambito.strip(), promemoria.strip())):
         return ""
     meta_bits = [html.escape(b) for b in (regione.strip(), ambito.strip()) if b.strip()]
@@ -286,6 +292,11 @@ def meta_line_first(pattern: re.Pattern[str], text: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def plain_inline(markdown_fragment: str) -> str:
+    """Testo di un campo in testa (Ruolo, Ambito, Promemoria) senza link o grassetto Markdown."""
+    return excerpt_plain(markdown_fragment, max_len=10**6)
+
+
 def excerpt_plain(markdown_fragment: str, max_len: int = EXCERPT_MAX_LEN) -> str:
     text = markdown_fragment.strip()
     text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)
@@ -365,14 +376,56 @@ def collect_hub_card_metadata(
             result[rp] = HubCardInfo(subtitle=" · ".join(bits))
         elif parts[0] == "png":
             result[rp] = HubCardInfo(
-                subtitle=meta_line_first(META_RUOLO_RE, sanitized),
+                subtitle=plain_inline(meta_line_first(META_RUOLO_RE, sanitized)),
                 regione=meta_line_first(META_REGIONE_RE, sanitized),
-                ambito=meta_line_first(META_AMBITO_RE, sanitized),
-                promemoria=meta_line_first(META_PROMEMORIA_RE, sanitized),
+                ambito=plain_inline(meta_line_first(META_AMBITO_RE, sanitized)),
+                promemoria=plain_inline(meta_line_first(META_PROMEMORIA_RE, sanitized)),
             )
         elif len(parts) >= 3 and parts[0] == "ambientazione" and parts[1] == "luoghi":
             reg = meta_line_first(META_REGIONE_RE, sanitized)
             tipo = meta_line_first(META_TIPO_RE, sanitized)
             bits = [b for b in (reg, tipo) if b]
             result[rp] = HubCardInfo(subtitle=" · ".join(bits))
+        elif parts[0] == "ambientazione" and entry.kind == "page":
+            result[rp] = HubCardInfo(
+                excerpt=excerpt_plain(first_paragraph(sanitized), SETTING_EXCERPT_MAX_LEN),
+                group=ambientazione_group(rp),
+            )
     return result
+
+
+def first_paragraph(markdown_text: str) -> str:
+    """Primo paragrafo di testo corrente: salta titoli, immagini, righe vuote, tabelle e separatori."""
+    paragraph: list[str] = []
+    for line in markdown_text.splitlines():
+        stripped = line.strip()
+        if paragraph and not stripped:
+            break
+        if not stripped or HEADING_RE.match(line) or stripped.startswith(("!", "|", "---", "```", "*", "-", ">")):
+            if paragraph:
+                break
+            continue
+        paragraph.append(stripped)
+    return " ".join(paragraph)
+
+
+def rewrite_internal_md_links(
+    markdown_text: str, source_relative_path: Path, route_by_path: dict[Path, str]
+) -> str:
+    """Link relativi a file .md del repository: route pubblica se la pagina e` pubblicata,
+    altrimenti resta il solo testo del link."""
+
+    def replacer(match: re.Match[str]) -> str:
+        text, target = match.groups()
+        if target.startswith(("http://", "https://", "/", "{{", "#", "mailto:")):
+            return match.group(0)
+        target_path = target.split("#", 1)[0]
+        if not target_path.lower().endswith(".md"):
+            return match.group(0)
+        resolved = Path(posixpath.normpath((source_relative_path.parent / target_path).as_posix()))
+        route = route_by_path.get(resolved)
+        if route:
+            return f"[{text}]({{{{ '{route}' | relative_url }}}})"
+        return text
+
+    return INTERNAL_MD_LINK_RE.sub(replacer, markdown_text)

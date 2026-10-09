@@ -22,25 +22,37 @@ Il villaggio stabile si trova alla base delle prime colline occidentali. Verso e
 ## Membri notevoli
 
 - **[Yargra delle Orme Profonde](../../png/yargra-delle-orme-profonde.md)** — Sciamana e mediatrice, firmataria del Trattato di Fort Lame. La voce della pazienza: chi tiene fermi i giovani finché la legge dei coloni ha il tempo di funzionare. Non supplica e non minaccia per sport; vuole che qualcuno fuori dal suo popolo veda il danno e lo chiami col suo nome.
-- **Kaska Corno Spezzato** — Capo-guerra dell'avanguardia orientale. Parla poco, decide in fretta, rispetta Yargra ma non la segue ciecamente.
 - **[Tokala il Veloce](../../png/tokala-il-veloce.md)** — Giovane guerriero, la voce più rumorosa fra chi chiede azione diretta. Ha perso un fratello per mano di cacciatori di pelli e non ha finito di masticare il lutto.
+
+### Non ancora emerso
+
+- **Kaska Corno Spezzato** — Capo-guerra dell'avanguardia orientale. Parla poco, decide in fretta, rispetta Yargra ma non la segue ciecamente.
 - **Očhéthi Mano Quieta** — Anziano consigliere. Non combatte più, ma conosce ogni guado, ogni pozza e ogni corridoio migratorio nel raggio di cento miglia. È la mappa che nessun geometra federale possiede.
 
 ## Risorse e influenza
 
 Cavalli da pianura, archi corti, lance da caccia, coltelli pesanti e qualche fucile tecnomagico di scarsa qualità ottenuto per scambio — meccanismi runisti poco affidabili, canne che si scaldano troppo in fretta. Militarmente il clan non può reggere uno scontro aperto con la federazione, e lo sa.
 
-La sua risorsa vera è la **conoscenza del territorio**: sentieri, sorgenti, corridoi stagionali, ripari, siti sacri, e la posizione dei [Respiri della Pietra](../concetti/respiri-della-pietra.md) che ricadono nei suoi territori. È un patrimonio che vive nella memoria orale degli anziani, che i cartografi federali pagherebbero molto per ottenere, e che l'avanzata della Frontiera sta cancellando un accampamento alla volta senza sapere cosa sta cancellando.
+La sua risorsa vera è la **conoscenza del territorio**: sentieri, sorgenti, corridoi stagionali, ripari e siti sacri. È un patrimonio che vive nella memoria orale degli anziani, che i cartografi federali pagherebbero molto per ottenere, e che l'avanzata della Frontiera sta cancellando un accampamento alla volta senza sapere cosa sta cancellando.
 
 La seconda risorsa è **la firma**: il Trattato di Fort Lame rende il clan una controparte legittima davanti a un tribunale federale. Vale pochissimo nella pratica e moltissimo come precedente, come si è visto al banco di Tre Pali.
 
+### Non ancora emerso
+
+Fra i siti sacri che il clan custodisce nella memoria c'è la posizione dei [Respiri della Pietra](../concetti/respiri-della-pietra.md) che ricadono nei suoi territori.
+
 ## Relazioni con altre fazioni
 
-- **Governo federale** — Rapporto interamente mediato dalla carta. Il trattato riconosce, garantisce e promette indennizzi; di quei versamenti ne sono stati onorati pochissimi, e mai per intero.
-- **[Tiratori del Punto Lungo](tiratori-del-punto-lungo.md)** — Avversario diretto. Non sono coloni e non occupano terra, quindi il divieto scritto nel trattato non li tocca: è il varco da cui passa tutto il resto.
-- **[Compagnia delle Cinghie](compagnia-delle-cinghie-del-grande-fiume.md)** — Il clan ha capito che il nemico vero non è chi spara ma chi compra. Non ha alcuno strumento per raggiungerlo.
+- **Governo federale** — Rapporto interamente mediato dalla carta: senza il trattato, la parola del clan davanti a un banco coloniale non peserebbe nulla.
+- **[Tiratori del Punto Lungo](tiratori-del-punto-lungo.md)** — Avversario diretto sul terreno.
 - **Piccoli coloni** — Diffidenza reciproca con eccezioni individuali. Una famiglia isolata che vende acqua ai macellai non è un nemico: è qualcuno che ha fatto il calcolo che poteva fare.
 - **Altri clan** — Il Trattato di Fort Lame lega più nazioni firmatarie. Quello che succede alle Orme Profonde viene osservato con attenzione da tutte.
+
+### Non ancora emerso
+
+- **Governo federale** — Il trattato riconosce, garantisce e promette indennizzi; di quei versamenti ne sono stati onorati pochissimi, e mai per intero.
+- **Tiratori del Punto Lungo** — Non sono coloni e non occupano terra, quindi il divieto scritto nel trattato non li tocca: è il varco da cui passa tutto il resto.
+- **[Compagnia delle Cinghie](compagnia-delle-cinghie-del-grande-fiume.md)** — Il clan ha capito che il nemico vero non è chi spara ma chi compra. Non ha alcuno strumento per raggiungerlo.
 
 ## Segreti e obiettivi nascosti
 

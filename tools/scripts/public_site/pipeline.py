@@ -24,6 +24,7 @@ from public_site.markdown import (
     sanitize_heading_text,
     render_png_public_header_html,
     rewrite_image_links,
+    rewrite_internal_md_links,
     rewrite_section_entity_links,
     rewrite_session_links,
     strip_h2_section,
@@ -76,6 +77,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
     hub_cards = collect_hub_card_metadata(resolved_entries, blocked_headings)
     prepared_pages = prepare_pages(resolved_entries, blocked_headings)
     entity_route_lookup = build_entity_route_lookup(prepared_pages)
+    route_by_path = {page.entry.relative_path: page.entry.route for page in prepared_pages}
     built_pages: list[PageEntry] = []
     referenced_assets: set[str] = set()
     page_og_images: dict[Path, str | None] = {}
@@ -87,6 +89,7 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
         body = prepared.body
         body = rewrite_session_links(body)
         body = rewrite_section_entity_links(body, entity_route_lookup)
+        body = rewrite_internal_md_links(body, entry.relative_path, route_by_path)
         body, assets = rewrite_image_links(body)
         og_image = first_og_image_path_from_body(body)
         body = wrap_salient_image_blocks(body)

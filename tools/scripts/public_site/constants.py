@@ -36,6 +36,7 @@ PUBLIC_IMAGE_MD_RE = re.compile(
 )
 SALIENT_IMAGE_SECTIONS = frozenset({"Immagine", "Immagini salienti"})
 SESSION_LINK_RE = re.compile(r"\[(Sessione (\d{3}))\](?!\()")
+INTERNAL_MD_LINK_RE = re.compile(r"(?<!!)\[([^\]]+)\]\(([^)\s]+)\)")
 ENTITY_BULLET_RE = re.compile(r"^(\s*-\s+\*\*)([^*]+)(\*\*.*)$")
 
 SESSION_H1_RE = re.compile(r"^#\s+Sessione\s+(\d+)\s*[—–-]\s*(.+)$", re.MULTILINE)
@@ -51,6 +52,7 @@ THUMB_PORTRAIT_W = 280
 THUMB_PORTRAIT_H = 373
 THUMB_JPEG_QUALITY = 82
 EXCERPT_MAX_LEN = 440
+SETTING_EXCERPT_MAX_LEN = 240
 
 VISUAL_REF_HEADINGS: tuple[tuple[str, str], ...] = (
     ("imagePrompt", "Image prompt:"),

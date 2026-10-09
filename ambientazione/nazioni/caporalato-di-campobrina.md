@@ -14,10 +14,6 @@ In pratica il Caporalato è meno militaresco di quanto il nome suggerisca. Gener
 
 La burocrazia del Caporalato è efficiente, relativamente incorrotta negli strati alti (dove la carriera dipende dai risultati) e mediamente corrotta in quelli medi e bassi (dove la sopravvivenza dipende dalle relazioni). È uno stato che sa cosa vuole e solitamente trova il modo di ottenerlo.
 
-## Membri notevoli
-
-*(Da definire con il DM in base allo sviluppo della campagna)*
-
 ## Risorse e influenza
 
 Campobrina è lo stato industrialmente più avanzato del mondo conosciuto. Le sue fabbriche producono motori a vapore, rivolvers, macchinari agricoli e componenti runiche esportati in ogni angolo del globo — compreso il Nuovo Mondo, che nonostante l'indipendenza rimane il principale mercato delle esportazioni tecnomagiche del Caporalato. Chi vende le macchine ha un tipo di potere che i trattati politici non toccano.

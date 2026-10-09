@@ -13,8 +13,68 @@
       "featured": true
     },
     {
+      "path": "ambientazione/concetti/geografia.md",
+      "label": "Geografia del Nuovo Mondo"
+    },
+    {
+      "path": "ambientazione/concetti/storia.md",
+      "label": "Storia del mondo conosciuto"
+    },
+    {
+      "path": "ambientazione/concetti/geometria-planare.md",
+      "label": "Geometria planare"
+    },
+    {
+      "path": "ambientazione/concetti/tecnomagia.md",
+      "label": "Tecnomagia"
+    },
+    {
+      "path": "ambientazione/concetti/economia.md",
+      "label": "Economia"
+    },
+    {
+      "path": "ambientazione/concetti/razze-e-societa.md",
+      "label": "Razze e società"
+    },
+    {
       "path": "ambientazione/concetti/religioni.md",
       "label": "Religioni e cosmologia"
+    },
+    {
+      "path": "ambientazione/concetti/fauna.md",
+      "label": "Fauna"
+    },
+    {
+      "path": "ambientazione/concetti/strage-dei-branchi.md",
+      "label": "La strage dei branchi"
+    },
+    {
+      "path": "ambientazione/concetti/bandiera-federale.md",
+      "label": "La bandiera federale"
+    },
+    {
+      "path": "ambientazione/nazioni/stati-uniti.md",
+      "label": "Gli Stati Uniti"
+    },
+    {
+      "path": "ambientazione/nazioni/undici-colonie.md",
+      "label": "Le Undici Colonie"
+    },
+    {
+      "path": "ambientazione/nazioni/terralba.md",
+      "label": "Terralba"
+    },
+    {
+      "path": "ambientazione/nazioni/caporalato-di-campobrina.md",
+      "label": "Il Caporalato di Campobrina"
+    },
+    {
+      "path": "ambientazione/nazioni/clan-delle-orme-profonde.md",
+      "label": "Il Clan delle Orme Profonde"
+    },
+    {
+      "path": "ambientazione/nazioni/tiratori-del-punto-lungo.md",
+      "label": "I Tiratori del Punto Lungo"
     }
   ],
   "allowlist": {
@@ -263,7 +323,8 @@
     "Riferimento visivo",
     "Note per la prossima sessione",
     "Ganci narrativi",
-    "Segreti e obiettivi nascosti"
+    "Segreti e obiettivi nascosti",
+    "Non ancora emerso"
   ],
   "outputDirectory": "tools/build/public-site"
 }

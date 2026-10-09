@@ -202,6 +202,7 @@ Prima di agire:
 2. Verificare che le **immagini salienti** richiamate dal nuovo resoconto esistano davvero nel percorso previsto dal progetto, in particolare sotto `immagini/eventi/sessione-NNN/`.
 3. Ricordare che la pubblicazione pubblica usa solo l'output filtrato: **non** esporre mai direttamente i file grezzi del repository privato.
 4. Aggiornare la **allowlist** dei materiali conosciuti dai giocatori aggiungendo cio` che la sessione ha reso pubblico: `png/*.md` gia` noti al tavolo, `ambientazione/luoghi/*.md` per i luoghi visitati o chiaramente identificati, ed eventuali altri materiali player-safe approvati dal DM.
+5. Rivedere le pagine di ambientazione (`pages` nel manifest, sezione **Ambientazione** del sito): se la sessione ha rivelato un fatto che una pagina tiene sotto `### Non ancora emerso`, togliere l'intestazione cosi` che il testo torni pubblico; se una pagina ancora esclusa (es. `trattato-di-fort-lame.md`, `compagnia-delle-cinghie-del-grande-fiume.md`) e` ormai nota al tavolo, aggiungerla a `pages` dopo averne filtrato le parti non emerse.
 
 Poi:
 

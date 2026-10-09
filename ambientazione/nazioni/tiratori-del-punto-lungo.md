@@ -32,10 +32,13 @@ La loro influenza non è politica: è **pratica**. In un territorio dove la legg
 
 ## Relazioni con altre fazioni
 
-- **[Compagnia delle Cinghie del Grande Fiume](compagnia-delle-cinghie-del-grande-fiume.md)** — Il compratore. Anticipa denaro, garantisce l'acquisto e indica dove conviene lavorare. Nessuna riga scritta lega le due cose.
 - **[Clan delle Orme Profonde](clan-delle-orme-profonde.md)** — Avversario diretto sul terreno, e la ragione per cui le squadre viaggiano armate anche quando non cacciano.
 - **Piccoli coloni** — Fornitori e, all'occorrenza, testimoni scomodi. La differenza fra le due categorie dipende da quanto hanno visto.
 - **Autorità locali** — Tollerati. La caccia commerciale in terre non organizzate non è esplicitamente vietata dalla legge federale, e uno sceriffo che volesse intervenire dovrebbe prima trovare il reato.
+
+### Non ancora emerso
+
+- **[Compagnia delle Cinghie del Grande Fiume](compagnia-delle-cinghie-del-grande-fiume.md)** — Il compratore. Anticipa denaro, garantisce l'acquisto e indica dove conviene lavorare. Nessuna riga scritta lega le due cose.
 
 ## Segreti e obiettivi nascosti
 

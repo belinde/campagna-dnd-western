@@ -142,6 +142,10 @@ def resolve_pages(manifest: dict) -> list[PageEntry]:
 def public_sidebar_section(entry: PageEntry) -> str | None:
     """Ritorna la chiave sezione sidebar o None per il bucket Home."""
     parts = entry.relative_path.parts
+    if entry.kind == "page":
+        if parts and parts[0] == "ambientazione" and not (len(parts) >= 3 and parts[1] == "luoghi"):
+            return "ambientazione"
+        return None
     if entry.kind == "collection":
         if parts and parts[0] == "personaggi":
             return "personaggi"
@@ -157,7 +161,20 @@ def public_sidebar_section(entry: PageEntry) -> str | None:
     return None
 
 
+def ambientazione_group(relative_path: Path) -> str:
+    """Gruppo dell'hub Ambientazione, derivato dalla cartella di origine."""
+    parts = relative_path.parts
+    if len(parts) >= 3 and parts[0] == "ambientazione":
+        if parts[1] == "concetti":
+            return "Il mondo"
+        if parts[1] == "nazioni":
+            return "Nazioni e fazioni"
+    return "Guida"
+
+
 def sort_pages_for_section(section: str, pages: list[PageEntry]) -> list[PageEntry]:
+    if section == "ambientazione":
+        return list(pages)  # ordine del manifest
     if section == "personaggi":
         return sorted(pages, key=lambda p: natural_sort_key(p.relative_path.as_posix()))
     if section == "resoconti":

@@ -12,10 +12,6 @@ La struttura di governo di Terralba è una monarchia elettiva temperata da un co
 
 La burocrazia è elaborata e lenta, riflesso di una cultura che misura il tempo in secoli. Le decisioni importanti vengono discusse per anni; le leggi non cambiano in fretta. Questo che in altri contesti sarebbe una disfunzione, in Terralba viene presentato come saggezza.
 
-## Membri notevoli
-
-*(Da definire con il DM in base allo sviluppo della campagna)*
-
 ## Risorse e influenza
 
 Terralba è ricca in modo diverso dal Caporalato: meno industria pesante, più finanza, cultura e magia. Le sue università sono le più prestigiose del Vecchio Mondo; i maghi formati a Terralba sono cercati ovunque. Le sue banche finanziano spedizioni, colonie e guerre altrui. I suoi cantieri producono navi di qualità eccellente, comprese alcune delle migliori imbarcazioni per l'oceano planare.

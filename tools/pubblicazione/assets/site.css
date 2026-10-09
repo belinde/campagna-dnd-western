@@ -1551,3 +1551,107 @@ blockquote {
   border: 1px solid var(--panel-border);
   border-radius: 10px;
 }
+
+/* Hub Ambientazione: guida in evidenza + elenchi raggruppati */
+.setting-hub {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.setting-featured {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--accent-soft);
+  border: 1px solid rgba(211, 156, 74, 0.28);
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.setting-featured:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px var(--shadow);
+}
+
+.setting-featured-eyebrow {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.setting-featured-title {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.setting-featured-excerpt {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.setting-group-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  padding-bottom: 0.35rem;
+}
+
+.setting-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.75rem 1.25rem;
+}
+
+.setting-item-link {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  height: 100%;
+  transition: border-color 0.15s ease;
+}
+
+.setting-item-link:hover {
+  border-color: var(--accent);
+}
+
+.setting-item-link:hover .setting-item-title {
+  color: var(--accent);
+}
+
+.setting-item-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.setting-item-excerpt {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.45;
+}

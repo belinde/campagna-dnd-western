@@ -90,6 +90,7 @@ def write_layout(output_dir: Path) -> None:
             <div class="site-shell">
               <aside class="site-sidebar">
                 <nav class="site-sidebar-nav" aria-label="Sezioni">
+                  <a href="{{ '/ambientazione/' | relative_url }}">Ambientazione</a>
                   <a href="{{ '/personaggi/' | relative_url }}">Personaggi</a>
                   <a href="{{ '/resoconti/' | relative_url }}">Resoconti</a>
                   <a href="{{ '/png/' | relative_url }}">PNG</a>
@@ -224,9 +225,9 @@ def front_matter(
 
 
 def render_index(manifest: dict, pages: list[PageEntry]) -> str:
+    """Home: tagline, descrizione e immagine. Le pagine fuori sezione (se mai ce ne fossero)
+    restano elencate in coda come rete di sicurezza."""
     home_pages = [page for page in pages if public_sidebar_section(page) is None]
-    featured_pages = [page for page in home_pages if page.featured]
-    other_pages = [page for page in home_pages if not page.featured]
 
     hero_img = "{{ '" + HOME_HERO_PUBLIC_PATH + "' | relative_url }}"
     lines = [
@@ -247,14 +248,9 @@ def render_index(manifest: dict, pages: list[PageEntry]) -> str:
         f'<figure class="home-hero"><img src="{hero_img}" alt="Il gruppo di avventurieri in carovana" loading="eager" decoding="async"></figure>',
     ]
 
-    if featured_pages:
-        lines.extend(["", "## Percorsi consigliati", ""])
-        for page in featured_pages:
-            lines.append(f"- [{page.label}]({{{{ '{page.route}' | relative_url }}}})")
-
-    if other_pages:
+    if home_pages:
         lines.extend(["", "## Altri contenuti player-safe", ""])
-        for page in other_pages:
+        for page in home_pages:
             lines.append(f"- [{page.title}]({{{{ '{page.route}' | relative_url }}}})")
 
     return "\n".join(lines).strip() + "\n"

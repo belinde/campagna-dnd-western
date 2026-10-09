@@ -254,6 +254,62 @@ def render_png_hub_index(
     return "\n".join(lines)
 
 
+def render_ambientazione_hub_index(
+    *,
+    hub_title: str,
+    hub_route: str,
+    source_path: Path,
+    built_pages: list[PageEntry],
+    hub_cards: dict[Path, HubCardInfo],
+) -> str:
+    """Hub Ambientazione: guida in evidenza, poi elenchi raggruppati (Il mondo, Nazioni e fazioni)."""
+    in_section = [p for p in built_pages if public_sidebar_section(p) == "ambientazione"]
+    ordered = sort_pages_for_section("ambientazione", in_section)
+    lines = [
+        front_matter(
+            title=hub_title,
+            route=hub_route,
+            collection_label="",
+            source_path=source_path,
+        ),
+        '<div class="setting-hub">',
+    ]
+    featured = [p for p in ordered if p.featured]
+    for page in featured:
+        meta = hub_cards.get(page.relative_path, HubCardInfo())
+        href = liquid_rel_jekyll(page.route)
+        excerpt_html = f'<p class="setting-featured-excerpt">{html.escape(meta.excerpt)}</p>' if meta.excerpt else ""
+        lines.append(
+            f'<a class="setting-featured" href="{href}">'
+            f'<span class="setting-featured-eyebrow">Da dove cominciare</span>'
+            f'<span class="setting-featured-title">{html.escape(page.label or page.title)}</span>'
+            f"{excerpt_html}</a>"
+        )
+    groups: dict[str, list[PageEntry]] = {}
+    for page in ordered:
+        if page.featured:
+            continue
+        meta = hub_cards.get(page.relative_path, HubCardInfo())
+        groups.setdefault(meta.group or "Altro", []).append(page)
+    for group_title, group_pages in groups.items():
+        lines.append('<section class="setting-group">')
+        lines.append(f'<h2 class="setting-group-title">{html.escape(group_title)}</h2>')
+        lines.append('<ul class="setting-list">')
+        for page in group_pages:
+            meta = hub_cards.get(page.relative_path, HubCardInfo())
+            href = liquid_rel_jekyll(page.route)
+            excerpt_html = (
+                f'<span class="setting-item-excerpt">{html.escape(meta.excerpt)}</span>' if meta.excerpt else ""
+            )
+            lines.append(
+                f'<li class="setting-item"><a class="setting-item-link" href="{href}">'
+                f'<span class="setting-item-title">{html.escape(page.title)}</span>{excerpt_html}</a></li>'
+            )
+        lines.extend(["</ul>", "</section>"])
+    lines.extend(["</div>", ""])
+    return "\n".join(lines)
+
+
 def render_section_hub_index(
     *,
     hub_title: str,
@@ -266,6 +322,14 @@ def render_section_hub_index(
     output_dir: Path,
     chapters: dict | None = None,
 ) -> str:
+    if section_key == "ambientazione":
+        return render_ambientazione_hub_index(
+            hub_title=hub_title,
+            hub_route=hub_route,
+            source_path=source_path,
+            built_pages=built_pages,
+            hub_cards=hub_cards,
+        )
     if section_key == "png":
         return render_png_hub_index(
             hub_title=hub_title,
@@ -328,6 +392,7 @@ def write_section_hub_pages(
     chapters: dict | None = None,
 ) -> int:
     hubs: list[tuple[str, str, str, Path, str]] = [
+        ("Ambientazione", "/ambientazione/", output_dir / "ambientazione" / "index.md", Path("tools/pubblicazione/_generated/index-ambientazione.md"), "ambientazione"),
         ("Personaggi", "/personaggi/", output_dir / "personaggi" / "index.md", Path("tools/pubblicazione/_generated/index-personaggi.md"), "personaggi"),
         ("Resoconti", "/resoconti/", output_dir / "resoconti" / "index.md", Path("tools/pubblicazione/_generated/index-resoconti.md"), "resoconti"),
         ("PNG", "/png/", output_dir / "png" / "index.md", Path("tools/pubblicazione/_generated/index-png.md"), "png"),

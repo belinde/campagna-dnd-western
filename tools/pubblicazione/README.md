@@ -14,7 +14,7 @@ Questa cartella definisce il perimetro del sito pubblico generato dal repository
 
 ## Navigazione nell'export
 
-Lo script genera una **sidebar** con le sezioni Personaggi, Resoconti, PNG, Luoghi e **Generatore**; la **home** (`/`) si raggiunge dal **logo** in intestazione. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG **Ruolo**, **Promemoria** e raggruppamento per **Regione** con barra di ricerca e filtro regione; per i luoghi **Regione** e **Tipo**. L'indice DM `png/INDICE.md` viene rigenerato automaticamente all'avvio di `build_public_site.py` (e con `rebuild_png_index.py`). Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). La **home** (`/`) mostra solo le pagine che non rientrano nelle categorie a sidebar. Il link «Guida giocatori» non compare nell'header accanto al logo: resta nelle liste della home o tra i contenuti player-safe dell'archivio.
+Lo script genera una **sidebar** con le sezioni **Ambientazione**, Personaggi, Resoconti, PNG, Luoghi e **Generatore**; la **home** (`/`) si raggiunge dal **logo** in intestazione e mostra solo tagline, descrizione e immagine di gruppo. La pagina `/ambientazione/` raccoglie tutte le voci di `pages` del manifest: la pagina con `featured: true` (la guida giocatori) in evidenza, poi due elenchi derivati dalla cartella di origine — «Il mondo» (`ambientazione/concetti/`) e «Nazioni e fazioni» (`ambientazione/nazioni/`) — nell'ordine del manifest, con il primo paragrafo come anteprima. Le pagine indice `/personaggi/`, `/resoconti/`, `/png/` e `/luoghi/` mostrano **griglie di card** (thumbnail a bassa risoluzione, titolo, metadati brevi). Per i PG le card usano **Razza** e **Classe** dai campi in testa alla scheda; per i PNG **Ruolo**, **Promemoria** e raggruppamento per **Regione** con barra di ricerca e filtro regione; per i luoghi **Regione** e **Tipo**. L'indice DM `png/INDICE.md` viene rigenerato automaticamente all'avvio di `build_public_site.py` (e con `rebuild_png_index.py`). Per i resoconti: badge «Sessione N», titolo dell'episodio (parte dopo `—` nel titolo), excerpt tratto da `## Riassunto` e thumbnail dalla prima immagine della pagina. La **pagina singola** di una sessione (`resoconti/sessione-NNN.md` esportato) **non include più** la sezione `## Riassunto` (resta nel repository privato e nell'indice come anteprima). Una voce di `pages` fuori da `ambientazione/` (oggi nessuna) finirebbe elencata in coda alla home.
 
 ### Immagini nell'export
 
@@ -38,6 +38,9 @@ Il sito non usa i file grezzi del repository cosi` come sono. Ogni pagina passa 
 - `## Note per la prossima sessione`
 - `## Ganci narrativi`
 - `## Segreti e obiettivi nascosti`
+- `## Non ancora emerso`
+
+La rimozione vale a **qualunque livello** di intestazione (`###`, `####`): un paragrafo da nascondere dentro una sezione pubblica si sposta in coda alla sezione sotto `### Segreti e obiettivi nascosti` o `### Non ancora emerso`. La seconda e` per il **canon non ancora rivelato al tavolo** (clausole del Trattato di Fort Lame, Respiri della Pietra, legame Compagnia–Tiratori, membri del clan mai incontrati…): quando il fatto emerge in sessione, basta togliere l'intestazione e il testo torna pubblico. `Segreti` resta per cio` che e` segreto per costruzione.
 
 Le cartelle `sessione/`, `spunti/`, `.claude/` e `tools/dnd-mcp/` restano fuori dal perimetro pubblico.
 
@@ -72,7 +75,7 @@ Il file `manifest.json` definisce:
 - le sezioni da rimuovere in fase di export
 - la cartella di output generata
 
-La v1 pubblica la collection `personaggi/`, l'intera collection `resoconti/`, una singola pagina fissa (`ambientazione/ambientazione-giocatori.md`) e una allowlist di materiali gia` emersi al tavolo. I PG non passano dall'allowlist: ogni `personaggi/*.md` e` incluso automaticamente dalla collection. In particolare, `allowlist.entries` contiene i file da aggiungere al sito quando diventano di conoscenza dei giocatori (PNG, luoghi, altro).
+La v1 pubblica la collection `personaggi/`, l'intera collection `resoconti/`, le pagine di ambientazione elencate in `pages` (guida giocatori, `ambientazione/concetti/*.md` e `ambientazione/nazioni/*.md` gia` pubblicabili: finiscono nella sezione **Ambientazione**) e una allowlist di materiali gia` emersi al tavolo. Restano fuori da `pages`, in attesa che il tavolo ci arrivi: `respiri-della-pietra`, `trattato-di-fort-lame`, `orchi-aspetto-e-cultura-materiale` (linee guida DM), `compagnia-delle-cinghie-del-grande-fiume`, e i luoghi `fort-lame` e `passo-del-serpente`. I PG non passano dall'allowlist: ogni `personaggi/*.md` e` incluso automaticamente dalla collection. In particolare, `allowlist.entries` contiene i file da aggiungere al sito quando diventano di conoscenza dei giocatori (PNG, luoghi, altro).
 
 ### Capitoli dei resoconti (`chapters`)
 
@@ -106,11 +109,12 @@ L'aggiornamento della allowlist fa parte della finalizzazione del resoconto e pr
 
 ## Link automatici nei resoconti
 
-Durante l'export, il sito aggiunge link interni in tre casi:
+Durante l'export, il sito aggiunge link interni in quattro casi:
 
 - i riferimenti `[Sessione NNN]` dentro `## Eventi interessanti`
 - i nomi in `## Personaggi non giocanti incontrati` quando il PNG e` pubblicato
 - i nomi in `## Luoghi visitati` quando il luogo e` pubblicato
+- i link Markdown relativi a file `.md` del repository (es. `[Tecnomagia](tecnomagia.md)`, `[Yargra](../../png/yargra-delle-orme-profonde.md)`): diventano la route pubblica se la pagina e` pubblicata, altrimenti resta il solo testo del link
 
 In questo modo i resoconti pubblici diventano una piccola rete navigabile senza dover modificare a mano i file canonici del repository privato.
 
@@ -141,7 +145,7 @@ Il comando resta `tools/scripts/build_public_site.py`; la logica e` nel pacchett
 | Modifica | File |
 |----------|------|
 | Layout shell, front matter, home | `public_site/jekyll.py` (`write_layout`, `front_matter`, `render_index`) |
-| Hub e card (Personaggi, Resoconti, PNG, Luoghi) | `public_site/hubs.py` |
+| Hub e card (Ambientazione, Personaggi, Resoconti, PNG, Luoghi) | `public_site/hubs.py` |
 | Sanificazione e trasformazioni Markdown | `public_site/markdown.py` |
 | Thumbnail e copia asset immagini | `public_site/media.py` |
 | Generatore prompt (`prompt-data.json`) | `public_site/prompt_tool.py` |

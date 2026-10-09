@@ -35,6 +35,7 @@ class HubCardInfo:
     regione: str = ""
     ambito: str = ""
     promemoria: str = ""
+    group: str = ""
 
 
 @dataclass(frozen=True)
