@@ -52,7 +52,7 @@ La cortesia si incrina su un punto solo: chi fa il difficile con il suo personal
 
 ## Legami con i PG
 
-Nessuno. Sono cinque forestieri scesi da una carovana con i soldi dell'ingaggio in tasca — cioè, per lei, ottimi clienti fino a prova contraria.
+Ha servito i quattro PG e si è presentata. Grombrindal le ha proposto un contatto per la birra nanica; lei ha detto di essere interessata. I due nani hanno notato i sassi con cui blocca la porta.
 
 ## Note DM
 
@@ -84,4 +84,4 @@ Nessuno. Sono cinque forestieri scesi da una carovana con i soldi dell'ingaggio 
 
 ## Eventi interessanti
 
-_Nessuno: il PNG non è ancora entrato in scena._
+- **[Sessione 013]** Prima apparizione. Serve Dora, Gud, Grombrindal e Kelvor all'Osteria del Capolinea e si presenta. Racconta la storia del bancone e la delusione di Silverado, spiega lotti a $200, abusivi e filo spinato. Dichiara interesse per un contatto di Grombrindal sulla birra nanica. Blocca la porta a battenti con due grossi sassi biancastri, che i due nani notano.

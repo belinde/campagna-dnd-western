@@ -4,6 +4,7 @@
 **Classe:** Druido
 **Livello:** —
 **Giocatore:** Dodo
+**Stato:** temporaneamente fuori dalla campagna
 
 ## Immagine
 
@@ -56,7 +57,16 @@ _Da definire._
 
 ## Note DM
 
-_Da definire._
+### Uscita di scena (arrivo a Silverado, sessione 013)
+
+Il personaggio è **ritirato temporaneamente**: non va proposto tra i PG presenti nei resoconti né nelle trascrizioni, ma la porta resta aperta per un ritorno.
+
+- **Fine dell'ingaggio.** Leman porta a termine la scorta fino al piazzale del capolinea di Silverado e incassa da Brannagh la sua quota: l'ingaggio di sessione 004 era a saldo («tre dollari al giorno a testa, vitto e alloggio»), senza anticipi, e viene liquidato all'arrivo. Brannagh gli salda anche i $10 della sosta Barlow, il debito che si era riconosciuto, e stavolta Leman li prende: **$40** in tutto, $30 di scorta più il rimborso.
+- **La partenza.** Senza aspettare lo scioglimento del convoglio riparte a est, da solo, verso il guado a ovest di Tre Pali. Non ha notizie — la voce della carneficina arriva in osteria solo dopo la sua partenza: **la subodora**. Il guado era l'unica discesa all'acqua per venti miglia e la pianura, passandoci, gli era sembrata in attesa. Vuole affrontare la cosa a modo suo, cioè senza tribunali.
+- **Al guado.** Arriva quando l'abbattimento grosso è già avvenuto. Trova però i Tiratori ancora al lavoro: la scuoiatura in corso e i superstiti del branco disperso che continuano a tornare all'unica acqua, dove vengono abbattuti uno alla volta. Interviene, non ferma niente, ne esce **gravemente ferito**.
+- **Il riparo.** Lo raccolgono le **Orme Profonde**, gli stessi che lo avevano visto prendere la forma del lupo al campo di Tahká-Wičhó (sessione 010). Resta con il clan a guarire.
+
+**Se torna:** torna da est, con alle spalle il clan nel momento in cui i moderati perdono terreno (vedi [`strage-dei-branchi.md`](../ambientazione/concetti/strage-dei-branchi.md) e [Tokala il Veloce](../png/tokala-il-veloce.md)). Può aver visto in faccia chi lavorava al guado: un testimone dell'atto è esattamente ciò che al banco di Tre Pali mancava. Se e quanto abbia visto lo decide il DM al rientro. Eventuali cicatrici permanenti si decidono al rientro e solo allora passano in Aspetto e Riferimento visivo.
 
 ## Eventi interessanti
 
@@ -72,3 +82,4 @@ _Da definire._
 - **[Sessione 010]** Depone denuncia formale contro i Tiratori del Punto Lungo presso lo sceriffo Tate; al colloquio con Ashford contribuisce a stabilire il peso legale di Yargra come querelante. La sera accompagna la sciamana al campo del clan e passa la notte in forma di lupo: gli orchi lo riconoscono come uno in comunione con gli Spiriti.
 - **[Sessione 011]** Rientra dal campo del clan orchesco ritrasformandosi da lupo in vista del paese; decide di restare a Tre Pali come testimone per l'udienza ed esce sulla pista a scortare Yargra verso la città.
 - **[Sessione 012]** Rientra dalla pista est scortando Yargra e il guerriero Tokala il Veloce; avvista un cavaliere fermo sulla cresta della collina e sceglie di non inseguirlo per non lasciare sola la sciamana. Convince Tate ad autorizzare per iscritto l'ingresso della guardia armata. In aula depone svogliatamente, in poche frasi. Riparte a ovest con Kelvor, senza riaccompagnare Yargra al campo.
+- **[Sessione 013]** Incassa da Brannagh i $40 a Silverado e si congeda dai compagni: si sono lasciati alle spalle qualcosa che non lo fa dormire tranquillo. Risale a cavallo e riparte da solo verso est, al piccolo trotto. Esce dalla campagna.

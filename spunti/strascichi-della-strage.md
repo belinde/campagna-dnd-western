@@ -46,6 +46,10 @@ Respinto da tutti e tre, ha preso appunti per tutta l'udienza e pubblica comunqu
 
 Yargra ha speso credito, ha percorso la via legale fino in fondo e ne è uscita con un foglio e un corridoio morto. Ogni stagione così trasferisce autorità a **Tokala** e a quelli come lui, che dal banco di Tre Pali sono usciti convinti che le parole non risolvano niente. Se il clan rientra in scena, non è detto che rientri dalla porta amichevole.
 
+### Leman con le Orme Profonde
+
+Il druido è fuori campagna, non fuori dal mondo. Gravemente ferito al guado, guarisce presso il clan che lo aveva visto prendere la forma del lupo. È l'unico colono che abbia visto la strage **mentre accadeva**: se rientra, rientra da est, con il clan alle spalle e forse con un volto da mettere a verbale. Dettagli nelle Note DM di `personaggi/leman-russ.md`.
+
 ### Chi sapeva dov'erano
 
 Un cavaliere fermo sulla cresta all'alba, non inseguito. Un solo colpo di fucile un'ora fuori Tre Pali, deliberatamente mancato, da direzione indeterminabile. Qualcuno sapeva che Kelvor e Leman erano in sella e sapeva dove stavano andando. Nessuno dei due episodi ha mai avuto una risposta, e la risposta è ancora disponibile quando serve.
@@ -62,7 +66,7 @@ Il tavolo le ha consumate o bruciate; riproporle svaluta le scelte fatte.
 | **Orientare la stampa** su quell'udienza | Vane è stato respinto da tutti e tre |
 | **Scortare Yargra** al campo | È tornata a est col solo Tokala. Da qui in avanti può essere solo una conseguenza subita |
 | Una posizione **neutra a Tre Pali** | La città li ha visti scortare un orco armato dentro il proprio tribunale |
-| Fermare la **strage al guado** | È avvenuta. La carovana era già passata e nessuno se n'è accorto |
+| Fermare la **strage al guado** | È avvenuta. La carovana era già passata e nessuno se n'è accorto; Leman ci è tornato a cose fatte e non ha fermato niente |
 
 ## Note DM
 

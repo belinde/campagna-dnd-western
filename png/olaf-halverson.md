@@ -74,3 +74,4 @@ Verificare le sue **vere intenzioni** sul lungo periodo (affetto vs concessione 
 
 - **[Sessione 006]** Si offre di **adottare Dorothy**, affermando che anche **Maren** approverebbe; resta in lizza come possibile tutore insieme alla mediazione di Silas Drummond.
 - **[Sessione 007]** Continua il viaggio con Dorothy Mercer ormai affidata a lui e a Maren; durante la serata al campo la bambina comincia ad avvicinarsi con timidezza alla sua nuova famiglia adottiva.
+- **[Sessione 013]** Sulla piazza di Silverado propone al gruppo vitto e tetto in cambio di qualche pistola amica sul lotto che vuole trasformare in fattoria: non ha soldi e lo dice subito. Teme gli abusivi e il disordine delle concessioni. Il gruppo accetta; la fattoria è a nord della città, risalendo il fiume sulla riva sud verso nord-ovest.

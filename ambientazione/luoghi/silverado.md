@@ -62,7 +62,7 @@ Chi resta davvero — chi ha comprato una casa invece di affittare una branda �
 
 **La Gilda dei Minatori** — Non è un sindacato e non è una compagnia: è l'associazione di chi possiede concessioni, e di fatto è il vero governo della città. Fissa i turni, arbitra le controversie sui confini prima che finiscano davanti al registratore, e mantiene l'ordine con mezzi che il sindaco preferisce non farsi spiegare.
 
-**Le sei osterie** — Sei sono quelle registrate. La più grande è l'[Osteria del Capolinea](osteria-del-capolinea.md), di fronte al piazzale, e non chiude mai perché i turni non finiscono mai.
+**Le sei osterie** — Sei sono quelle registrate. La più grande è l'[Osteria del Capolinea](osteria-del-capolinea.md), di fronte al piazzale, e non chiude mai perché i turni non finiscono mai. La peggiore è il **Filone Magro**, in fondo alla strada a sinistra verso le colline delle concessioni, non segnato sulla mappa; nel mezzo sta il **Pozzo Profondo**.
 
 **L'ufficio dello sceriffo** — Lo sceriffo è nominato da New Avalon, il che a Silverado significa che è un forestiero con una stella e senza alleati. Di giorno amministra; di notte amministra meno.
 

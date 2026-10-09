@@ -48,6 +48,8 @@ La seconda risorsa è **la firma**: il Trattato di Fort Lame rende il clan una c
 - Il clan conosce la posizione di Respiri che i coloni non sospettano. Non è informazione che venga offerta, e chi la chiede troppo direttamente ottiene silenzio.
 - La condizione scritta nel trattato — il diritto di caccia dura «finché i branchi percorreranno quelle terre in numero tale da giustificare la caccia» — è nota agli anziani, che ne hanno capito il significato molto prima dei funzionari che l'hanno firmata. Sanno che la strage non viola il patto: ne estingue il presupposto.
 
+- Dopo la strage al guado il clan ospita **Leman Russ**, raccolto gravemente ferito: il mezzelfo che al campo di Tahká-Wičhó aveva camminato nella forma del lupo. Per i moderati è la prova che un colono può stare dalla loro parte; per i giovani guerrieri, che può farlo solo sanguinando. Il gruppo non lo sa.
+
 ## Ganci narrativi
 
 - Uno Sciamano cerca testimoni esterni, non alleati armati. Vuole che qualcuno che non sia del suo popolo veda un luogo preciso e sappia dirlo altrove.

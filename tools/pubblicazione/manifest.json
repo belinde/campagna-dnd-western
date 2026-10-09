@@ -206,6 +206,22 @@
         "path": "png/tokala-il-veloce.md",
         "label": "PNG conosciuti",
         "profile": "public-png"
+      },
+      {
+        "path": "png/bea-fenn.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "ambientazione/luoghi/silverado.md",
+        "label": "Luoghi visitati"
+      },
+      {
+        "path": "ambientazione/luoghi/osteria-del-capolinea.md",
+        "label": "Luoghi visitati",
+        "aliases": [
+          "L'Osteria del Capolinea"
+        ]
       }
     ]
   },

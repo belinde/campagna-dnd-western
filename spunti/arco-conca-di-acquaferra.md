@@ -16,6 +16,8 @@ Carta di riferimento: [`immagini/luoghi/conca-di-acquaferra-mappa.svg`](../immag
 
 **Decisione del DM sulla Strage dei Branchi:** l'arco precedente si chiude com'è. La strage al guado avviene **dopo** che la carovana lo ha superato, senza che nessuno se ne accorga. I PG non la giocano, non la impediscono e non la vedono: la apprendono dopo, come notizia.
 
+**Eccezione fuori scena:** **Leman Russ**, ritirato temporaneamente dalla campagna, lascia il gruppo a Silverado e torna al guado mentre i Tiratori stanno ancora finendo il lavoro. Non ferma niente, ne esce gravemente ferito e lo raccolgono le Orme Profonde. Non è giocato al tavolo; dettagli nelle Note DM di [`personaggi/leman-russ.md`](../personaggi/leman-russ.md).
+
 Questo non annulla l'arco, lo converte in **sfondo economico**. La filiera del cuoio ha una scadenza scritta nella propria logica: quando i branchi crollano, la Compagnia delle Cinghie resta con capitale, telegrafo, avvocati e niente da comprare. La rete di acquirenti che ha già — officine, cantieri ferroviari, depositi e **compagnie minerarie** — è esattamente la rete che serve per vendere rame. I soldi delle pelli diventano il capitale d'avvio della terra, e i PG se ne accorgono tre settimane dopo, vivendoci dentro.
 
 **La carovana si scioglie.** L'intervento di Rooke ha tolto alla carovana la sua ragione d'essere: molti carovanieri hanno trovato lavoro o prospettive a Silverado grazie a lei e si fermano. Brannagh liquida l'ingaggio e va a farsi intestare la propria concessione. Il contratto che i PG hanno seguito ciecamente per dodici sessioni non esiste più, e nessuno gliene offre un altro.
@@ -106,7 +108,7 @@ Questa è la parte che il DM deve tenere ferma, perché se sfugge il tavolo si c
 | Chiazze d'erba stenta | «Terra morta», la si aggira con l'aratro | Flora che tollera il rame: la vegetazione denuncia il metallo |
 | Acqua che sa di metallo e macchia le pietre | «Acqua cattiva», non ci si abbevera | Drenaggio acido dai solfuri sottostanti |
 
-**Chi lo capisce e perché.** Grombrindal e Gud sono nani: la lettura della pietra è cultura materiale, non tiro fortunato. Le chiazze d'erba sbagliata le nota **Leman**, che il vivente lo sente prima delle persone. Il segreto nasce condiviso fra tre giocatori, non due — cosa che rende la sua gestione un problema di gruppo fin dal primo minuto.
+**Chi lo capisce e perché.** Grombrindal e Gud sono nani: la lettura della pietra è cultura materiale, non tiro fortunato. Le chiazze d'erba sbagliata le avrebbe notate **Leman**, che il vivente lo sente prima delle persone — ma è fuori campagna dall'arrivo a Silverado, e la lettura resta tutta ai nani. Dora e Kelvor ne vengono a sapere per bocca loro: il segreto nasce condiviso fra due giocatori e diventa subito un problema di gruppo.
 
 **La certezza costa.** Il sospetto è gratis, la prova no: serve un saggio — campione, crogiolo, carbone, un forno. Gud e Grombrindal lo sanno fare, ma se serve l'attrezzatura di qualcuno a Silverado, **il momento in cui hanno la prova è il momento in cui esiste un testimone**.
 
@@ -130,7 +132,7 @@ Il silenzio, quindi, non è avidità: è necessità giuridica. E la corsa non è
 
 ### 7. Capitale e tempo
 
-**Quello che hanno.** Ingaggio della carovana a $3 al giorno a testa per circa un mese (sessione 004), più i $50 della taglia su Sam Crow (sessione 003), meno tutto quello che è stato speso per strada — e ne è stato speso parecchio. **La cifra reale si verifica sui fogli nella sessione 014**, che è introduttiva e serve proprio a questo: far emergere al tavolo quanto hanno, quanto costa un quarto, e la distanza fra le due cose.
+**Quello che hanno.** Ingaggio della carovana a $3 al giorno a testa, pattuito per circa un mese (sessione 004) ma chiuso a Silverado dopo **dieci giorni**: **$30 a testa**, $190 in tutto con la commissione di Dora e i $10 della sosta Barlow resi a Leman — che però riparte subito, e quei $40 escono dalla cassa del gruppo (dettaglio in `sessione-014-il-contratto-finito.md`, blocco 2). Il resto del mese è il primo denaro che Rooke ha tolto loro di tasca senza toccarli. A questo si aggiungono i $50 della taglia su Sam Crow (sessione 003), meno tutto quello che è stato speso per strada — e ne è stato speso parecchio. **La cifra reale si verifica sui fogli nella sessione 014**, che è introduttiva e serve proprio a questo: far emergere al tavolo quanto hanno, quanto costa un quarto, e la distanza fra le due cose.
 
 **Quello che serve.** $200 a quarto. I lotti che contano davvero sono tre: il Pelato (17 NO), il quarto che dà accesso all'acqua e quello su cui corre il filo.
 
@@ -300,7 +302,7 @@ Quando la volta cede e si apre la cavità, l'arco guadagna un dungeon di grado b
 - **Rooke non è onnisciente in questo arco.** È la differenza fondamentale rispetto alla Strage dei Branchi, ed è ciò che rende i PG attori invece che testimoni. Non tradirla per comodità di trama.
 - **Niente violenza della Compagnia nelle fasi 1 e 2.** Carta, denaro, recinti e pazienza. La violenza arriva in fase 3 e deve sorprendere perché fino a quel momento non c'era.
 - **L'arco può chiudersi in modi molto diversi**: patente in mano e miniera propria; vendita a una cifra che cambia le loro vite; valle persa ma vicini salvati; oppure il gruppo che si spacca sul segreto. Nessuno di questi è il finale giusto.
-- **Livelli dei PG ancora ignoti.** Tutte e cinque le schede in `personaggi/` riportano `**Livello:** —`. Serve il dato prima di dimensionare qualunque scontro della fase 3.
+- **Livelli dei PG ancora ignoti.** Le quattro schede attive in `personaggi/` riportano `**Livello:** —` (Leman è fuori campagna). Serve il dato prima di dimensionare qualunque scontro della fase 3.
 
 ---
 
@@ -318,5 +320,5 @@ Quando la volta cede e si apre la cavità, l'arco guadagna un dungeon di grado b
 | Schede dei vicini e della colonia halfling | da fare | Bastano nomi, mestieri e una paura a testa; i livelli vanno chiesti al DM |
 | Pianificazione della sessione 014 | da fare | Serata introduttiva: scioglimento della carovana, offerta Halverson, prima lettura della pietra |
 | Cifra reale del tesoro del gruppo | alla 014 | Si verifica al tavolo |
-| Livelli dei PG | **aperto** | Tutte e cinque le schede riportano `**Livello:** —` |
+| Livelli dei PG | **aperto** | Le quattro schede attive riportano `**Livello:** —` |
 | Chiusura della Strage dei Branchi | **fatto** | Fatti certi in ambientazione, fili vivi in `spunti/strascichi-della-strage.md` |

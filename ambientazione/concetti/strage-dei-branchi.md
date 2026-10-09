@@ -106,6 +106,8 @@ Poche giornate di marcia a ovest di Tre Pali, la pista si infila fra due dossi b
 
 La carovana lo ha attraversato senza accorgersi di nulla. **Il giorno dopo la strettoia è stata usata per quello che era**: un branco intero preso in un posto da cui non poteva disperdersi, il lavoro di una giornata che vale un mese. Chi è passato dopo ha trovato il guado impraticabile per l'odore e ha dovuto allargare di miglia.
 
+Il lavoro di una giornata non finisce in una giornata. Gli scuoiatori restano al guado per giorni, e i superstiti del branco disperso continuano a tornare all'unica acqua della zona, dove i tiratori li abbattono uno alla volta. È in questa coda che arriva **un solo uomo** dalla parte di Silverado: [Leman Russ](../../personaggi/leman-russ.md), che aveva lasciato la carovana appena finito l'ingaggio. Non ferma niente. Ne esce gravemente ferito, e lo raccolgono le [Orme Profonde](../nazioni/clan-delle-orme-profonde.md).
+
 Le conseguenze si contano per gradi.
 
 - Il **corridoio migratorio** di quella fascia di pianura è, per quanto riguarda le prossime stagioni, finito. I branchi che lo percorrevano o non ci sono più o hanno perso la via.

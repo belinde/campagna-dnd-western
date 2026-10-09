@@ -2,6 +2,8 @@
 
 **Tipo:** pianificazione sessione
 
+> **Stato (09/10/2026):** i blocchi 1–4 sono stati giocati nella **sessione 013** ([`resoconti/sessione-013.md`](../resoconti/sessione-013.md)). Varianti rispetto al piano: Rooke ha offerto la scorta **di ritorno** verso il Grande Fiume e New Avalon a **$5/giorno**, partenza fra dieci giorni, e il gruppo ha deciso di accettare senza ancora dirglielo; Maren non ha parlato (la sua condizione resta da giocare); la voce sulla strage al guado non è arrivata in osteria; i nani hanno notato i sassi fermaporta di Bea. Il **blocco 5** (la conca e la pietra sbagliata) resta da giocare.
+
 > **Serata introduttiva.** Non c'è un climax e non deve essercene uno. La 014 serve a tre cose: sciogliere la struttura che regge il gruppo da dodici sessioni, mettere sul tavolo quanto denaro hanno davvero, e far scoprire loro che a Silverado la terra costa meno di un cavallo. Tutto il resto è ambientazione e voci d'osteria.
 >
 > Apre la Fase 0 di [`spunti/arco-conca-di-acquaferra.md`](arco-conca-di-acquaferra.md).
@@ -26,11 +28,12 @@ La carovana scollina l'ultimo dosso e sotto c'è Silverado. Veduta e mappa sono 
 
 **Fatti compiuti:**
 
-- Il viaggio è finito. L'ingaggio era «tre dollari al giorno a testa, vitto e alloggio, ordine di grandezza un mese» e quel mese è scaduto.
+- Il viaggio è finito **prima del previsto**. L'ingaggio era «tre dollari al giorno a testa, vitto e alloggio, ordine di grandezza un mese», e la carovana sarebbe dovuta andare molto oltre Silverado. Dopo le offerte di Rooke a Tre Pali il programma è cambiato: il convoglio si ferma qui, e il contratto si chiude dopo **dieci giorni** — sei da Valdoren a Tre Pali, quattro da Tre Pali a Silverado. Il gruppo era partito per un mese di paga e ne incassa un terzo: a togliergli gli altri due è stata Rooke, anche se nessuno lo dice.
 - **Abigail Rooke** ha viaggiato dentro il convoglio dall'ultimo tratto e scende a Silverado, dove ha i propri uffici.
 - **Hector Brannagh** ha una concessione che lo aspetta e la testa già lì.
 - **Olaf e Maren Halverson** scendono con **Dorothy Mercer** e un diritto da esercitare su un lotto a ovest.
 - Della strage al guado, avvenuta pochi giorni dopo il loro passaggio, **nessuno sa ancora niente**. La notizia può arrivare in osteria come una voce fra le altre, senza enfasi: è così che si viene a sapere che si è passati accanto a una cosa senza vederla.
+- **Leman Russ esce di scena qui.** Il giocatore si ritira per un periodo. Il druido incassa il saldo con gli altri e riparte subito a est, da solo, verso il guado: non sa niente, lo subodora. Dettagli e possibile rientro nelle Note DM di [`personaggi/leman-russ.md`](../personaggi/leman-russ.md). Al tavolo restano **quattro** PG.
 
 **Cosa i PG non sanno, e non devono sapere stasera:** che sotto un quarto di sezione della conca c'è rame; che il tracciato della ferrovia non è deciso; per chi lavora davvero Rooke.
 
@@ -45,6 +48,7 @@ Da far vedere, non da spiegare:
 - La ferrovia che **si ferma**. I binari finiscono davanti a un respingente, e il resto del continente è dietro le spalle.
 - I carovanieri che si salutano e non si danno appuntamento. Metà ha già un posto dove andare — **Rooke ha fatto in modo che ce l'avessero**.
 - **Andrew Carver** liquida le guardie con la correttezza di un uomo che chiude un registro; non promette niente per il futuro e non finge dispiacere.
+- **Leman** prende la paga e se ne va prima che il convoglio finisca di scaricare. Agli altri dice quanto basta: torna a est, ha una cosa da vedere. Non spiega e non chiede compagnia; se qualcuno insiste per seguirlo, rifiuta — la serata resta a Silverado. La scena si può dare per avvenuta in narrazione, senza giocarla, se il giocatore non è al tavolo.
 - **Theodor Strand** saluta per primo e sparisce per primo. Se qualcuno gli chiede qualcosa, risponde volentieri e per intero: è uno scout, non un cospiratore.
 - **Rooke** scende dal calesse, ringrazia Brannagh, e **si comporta con i PG con cortesia esatta**. Se le rivolgono la parola, li tratta bene. Non offre niente di losco: offre lavoro. Contratti di scorta oltre Silverado, paga migliore di Brannagh, partenza fra dieci giorni.
 
@@ -56,9 +60,22 @@ Scena breve e concreta: Brannagh paga, sul suo carro, contando.
 
 | Voce | Importo |
 |---|---|
-| Ingaggio scorta | $3 al giorno a testa per la durata del viaggio |
+| Ingaggio scorta | $3 al giorno a testa per **10 giorni** = **$30 a testa**, a saldo: nessun anticipo, liquidato qui. Leman incassa la sua quota con gli altri |
 | Commissione cartografica di **Dora** | **$30** — tre dollari al giorno per dieci giornate di rilievo, pagati a parte all'arrivo |
 | Credito di Drummond sulle taglie dei briganti | **$40**, esigibili a Valdoren: col telegrafo di Silverado smettono di essere irraggiungibili |
+
+Liquidazione di Brannagh, PG per PG:
+
+| PG | Importo | Note |
+|---|---|---|
+| Dora | **$60** | $30 di scorta + $30 di commissione |
+| Gud | **$30** | |
+| Grombrindal | **$30** | |
+| Kelvor | **$30** | Nessuna trattenuta per la mattina dell'udienza a Tre Pali |
+| Leman | **$40** | $30 di scorta + $10 della sosta Barlow (sessione 007): Brannagh salda il debito, e stavolta Leman li prende |
+| **Totale** | **$190** | |
+
+Il calendario dei dieci giorni: 1 Valdoren → Fattoria Mercer (005–006); 2 marcia (007); 3 bisonti e Fattoria Barlow (007–008); 4 campo della strage all'alba, Tre Pali al tramonto (008–009); 5 denuncia (010); 6 udienza e ripartenza (011–012); 7–10 pista fino a Silverado, guado passato al giorno 8 o 9, non giocata.
 
 **Questo è il momento in cui si verifica quanto hanno in tasca davvero**, spese del viaggio comprese. Il numero che esce serve per tutto l'arco: annotarlo.
 
@@ -91,7 +108,7 @@ Cosa si raccoglie qui:
 - Chi assume in questo momento: la ferrovia (manovalanza), la Gilda dei Minatori (poco), e **una signora della Compagnia delle Cinghie che ha preso mezzo convoglio in due giorni**.
 - I binari si fermano qui e prima o poi ripartiranno. **Dove**, nessuno lo sa, e ognuno ha la propria opinione: è argomento da rissa.
 - Un allevatore a ovest sta tirando filo spinato e ha chiuso delle sorgenti. Metà sala trova che sia il suo diritto, l'altra metà no.
-- Voce di passaggio, senza enfasi: al guado sulla pista est «hanno fatto una carneficina di bisonti, roba da non credere».
+- Voce di passaggio, senza enfasi: al guado sulla pista est «hanno fatto una carneficina di bisonti, roba da non credere». Arriva **dopo** la partenza di Leman, ed è il momento in cui il tavolo capisce dove è andato il druido. Non aggiungere altro: di lui, stasera, non si sa niente.
 
 ### Il Filone Magro
 
@@ -133,8 +150,6 @@ E a mezzo miglio dal podere degli Halverson, un quarto di sezione che i vicini i
 
 **Chiudere qui.** Grombrindal o Gud si abbassano, raccolgono un pezzo di roccia, lo girano nella mano — e il DM chiede al giocatore di fare *qualsiasi* tiro, oppure nessuno, e poi dice soltanto che il nano sa perfettamente cosa ha in mano. Fine sessione.
 
-Se ha senso per il tavolo, dare l'ultima battuta a **Leman**, che l'erba sbagliata l'ha già notata arrivando e non ci aveva dato peso.
-
 ---
 
 ## Fili opzionali, se la serata scorre veloce
@@ -155,9 +170,9 @@ Se ha senso per il tavolo, dare l'ultima battuta a **Leman**, che l'erba sbaglia
 
 | Cosa | Priorità | Nota |
 |---|---|---|
-| Cifra reale in cassa al gruppo | **Molto alta** | Si conta al blocco 2; senza, la fase 1 dell'arco non si dimensiona |
+| Cifra reale in cassa al gruppo | **Molto alta** | La liquidazione di Brannagh è fissata ($190, vedi blocco 2); resta da sommare quanto ciascuno ha in tasca, spese del viaggio comprese |
 | Compenso della commissione cartografica di Dora | **fissato** | $30: $3 al giorno per dieci giornate |
-| Livelli dei PG | **Aperta** | Tutte e cinque le schede riportano `**Livello:** —` |
+| Livelli dei PG | **Aperta** | Le quattro schede attive riportano `**Livello:** —` (Leman è fuori campagna) |
 | Schede PNG di **Bea Fenn** e **Wendell Roach** | **fatte** | `png/bea-fenn.md`, `png/wendell-roach.md`, entrambi livello 3 |
 | `ambientazione/luoghi/conca-di-acquaferra.md` | Media | Serve dal blocco 5 in poi, anche in forma minima |
 | Nomi delle altre quattro osterie | Bassa | Bastano al momento del bisogno |

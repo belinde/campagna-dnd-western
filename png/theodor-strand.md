@@ -78,3 +78,4 @@ Conosce la fauna e la geografia delle pianure meglio di chiunque nella carovana.
 - **[Sessione 006]** Segue le tracce oltre il campo di mais fino ai quattro cavalli legati; propone che i briganti ignorassero l'ingaggio dell'ultimo giorno e si aspettassero una carovana più debole.
 - **[Sessione 007]** Conferma che la carovana ha superato la fascia più pericolosa attorno a Valdoren, poi interpreta il campo dei bisonti massacrati come prova della caccia commerciale e avverte il gruppo che più a ovest la strage dei branchi sarà ancora peggiore.
 - **[Sessione 012]** Dopo un rapido confronto con Andrew Carver sui cavalieri orcheschi che fiancheggiano il convoglio, parte al galoppo con un arco ampio che lo porta ben oltre la loro linea e sparisce alla vista del gruppo. Cosa abbia trovato in ricognizione resta ignoto ai PG.
+- **[Sessione 013]** Allo scioglimento della carovana a Silverado saluta per primo e sparisce per primo.

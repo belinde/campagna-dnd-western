@@ -107,6 +107,14 @@ Sia i file in `personaggi/` che quelli in `png/` devono contenere una sezione `#
 - **[Sessione NNN]** Breve descrizione dell'evento saliente.
 ```
 
+## PG fuori dalla campagna
+
+Un PG il cui giocatore si ritira, anche solo per un periodo, **resta** in `personaggi/` e riceve in testa, dopo `**Giocatore:**`, la riga `**Stato:** temporaneamente fuori dalla campagna`. Come e dove è uscito di scena, e da dove può rientrare, sta nelle sue `## Note DM`.
+
+Un PG con questo stato **non si propone** tra i presenti nei resoconti e non si usa per attribuire parlanti nelle trascrizioni; lo si considera solo se il DM lo nomina esplicitamente. Al rientro si toglie la riga `**Stato:**`.
+
+Oggi è fuori campagna: **Leman Russ** (giocatore Dodo), dall'arrivo a Silverado.
+
 ## Convenzioni immagini
 
 Le immagini devono essere richiamate direttamente nei file Markdown con path espliciti a partire dalla root del workspace, preferibilmente con sintassi immagine Markdown `![](/immagini/...)`. Questo permette sia agli agenti sia alla preview Markdown di usarle senza mapping impliciti.

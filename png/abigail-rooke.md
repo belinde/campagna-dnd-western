@@ -44,6 +44,8 @@ Abigail Rooke non alza quasi mai la voce, perché raramente ne ha bisogno. Parla
 
 Non ha ancora incontrato il gruppo, ma è il tipo di donna che potrebbe avvicinare **Hector Brannagh** senza preavviso e trattare con lui come se si conoscessero da anni. Se entra in scena, vedrà rapidamente nei PG non semplici guardie ma il termometro morale della carovana: chi può essere comprato, chi può essere convinto, chi invece va tenuto lontano dai registri e dai contratti.
 
+Dalla sessione 013 ha un'offerta aperta con il gruppo, accettata in privato ma non ancora comunicata.
+
 ## Note DM
 
 Rooke compra **pelli di bisonte, grassi, ossa e sottoprodotti** per una rete di conciatori, officine, cantieri ferroviari e compagnie minerarie che operano tra Valdoren, il Grande Fiume e la Frontiera. Non organizza direttamente i massacri sul campo: finanzia, coordina, garantisce acquirenti e assorbe il rischio legale a valle.
@@ -77,3 +79,4 @@ La sua forza è che non mente quasi mai sui fatti materiali. Mente sulle consegu
 ## Eventi interessanti
 
 - **[Sessione 012]** Prima apparizione in scena. Raggiunge la carovana di Brannagh in calesse leggero, con Cip Wenders a cassetta, poche ore dopo la partenza da Tre Pali. Fa annunciare il proprio nome ai PG senza scendere e ottiene subito un colloquio con il capocarovana sul suo stesso carro; Dora, origliando, coglie che deve raggiungere i propri uffici e che si parla di un contratto di scorta. Brannagh la invita a mettersi in coda al proprio carro, dove la strada è più battuta: a fine giornata viaggia dentro il convoglio, con il taccuino cerato aperto sulle ginocchia. Nessun PG le ha ancora rivolto la parola.
+- **[Sessione 013]** Scende dal calesse a Silverado, ringrazia Brannagh e parla per la prima volta direttamente con il gruppo: offre una scorta a $5 al giorno a testa per il viaggio di ritorno verso il Grande Fiume e New Avalon, partenza fra dieci giorni. Si ritira nei propri uffici alla Compagnia delle Cinghie. In osteria il gruppo decide di accettare, senza ancora dirglielo.

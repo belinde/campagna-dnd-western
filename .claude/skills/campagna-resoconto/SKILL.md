@@ -21,14 +21,14 @@ Questa regola si attiva dopo una sessione di gioco. Il processo è **interattivo
 **Prima di fare qualsiasi domanda**, leggere in sola lettura:
 - Tutti i file presenti in `sessione/` (materiale grezzo generato durante la sessione dal vivo), inclusi se presenti `sessione/trascrizione-grezza-doppia.txt` (grezzo dual-track VC), `sessione/raw-merged.txt` (grezzo Discord merge), **`sessione/trascrizione.md`** se esiste (trascrizione elaborata **verificata** dopo `/trascrizione-vc` o `/trascrizione-discord`) e `sessione/audio/` con le registrazioni WAV
 - L'ultimo file in `resoconti/` (per capire dove era rimasta la storia)
-- Tutti i file in `personaggi/` (per conoscere i PG disponibili)
+- Tutti i file in `personaggi/` (per conoscere i PG disponibili; quelli con `**Stato:** temporaneamente fuori dalla campagna` sono esclusi — vedi `CLAUDE.md`, «PG fuori dalla campagna»)
 - `png/INDICE.md` (per riconoscere i PNG già documentati); aprire le schede in `png/` solo per nomi citati in trascrizione/`sessione/png-*` o in caso di ambiguità
 
 **Fonte primaria degli eventi:** se `sessione/trascrizione.md` è presente e contiene `## Dialogo` / `## Narrazione` coerenti con la sessione corrente (in particolare se in `## Note di elaborazione` risulta completata l’elaborazione a chunk o equivalente), **basare la cronaca su quella trascrizione verificata**. Il DM integra solo ciò che **non** risulta dal parlato (appunti non detti ad alta voce, retcon, errori STT corretti solo in sede di gioco, dettagli meccanici non vocalizzati).
 
 Poi chiedere al DM, con `AskQuestion` dove possibile, le seguenti informazioni:
 1. **Data della sessione** (formato GG/MM/AAAA)
-2. **PG presenti** al tavolo quella sera (usare la lista dei file in `personaggi/` come opzioni selezionabili)
+2. **PG presenti** al tavolo quella sera (usare la lista dei file in `personaggi/` come opzioni selezionabili, **escludendo** i PG con `**Stato:**` fuori dalla campagna; includerli solo se il DM li nomina)
 3. **Trascrizione verificata:** se esiste `sessione/trascrizione.md` per questa sessione, chiedere conferma che sia **completa e approvata**; se manca o è incompleta, chiedere se il DM vuole interrompere per completare `/trascrizione-vc` o `/trascrizione-discord` oppure procedere con **rinuncia esplicita** documentata (in tal caso la fonte primaria diventa il materiale disponibile in `sessione/` + integrazioni DM).
 4. **Integrazione oltre la trascrizione (opzionale):** invitare il DM ad aggiungere **solo** quanto non deducibile dal testo (eventi non registrati in VC, chiarimenti su `[lacuna: …]` ancora aperti, note da tavolo). **Non** richiedere un racconto libero lungo se la trascrizione verificata copre già la sessione; in assenza di trascrizione usabile, allora sì: racconto libero degli eventi come integrazione principale (stile informale, termini generici per i PG accettati).
 

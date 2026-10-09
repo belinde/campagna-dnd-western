@@ -62,7 +62,9 @@ La clientela è quella della città: manovali della ferrovia, carrettieri, minat
 
 **Il retro** — Una stanza lunga con le brande, venticinque centesimi a notte, e nessuna pretesa di comodità. È dove dormono quelli che il turno lo riprendono fra sei ore.
 
-**La porta senza serratura** — Non è un modo di dire: il battente non ne ha mai avuta una. Per la padrona è una decisione pratica, e non ha mai spiegato quale sia il ragionamento dietro.
+**La porta senza serratura** — Non è un modo di dire: il battente non ne ha mai avuta una. Per la padrona è una decisione pratica, e non ha mai spiegato quale sia il ragionamento dietro. Quando vuole far girare l'aria, blocca i battenti aperti con **due grossi sassi biancastri** tenuti lì accanto.
+
+**Il piano verticale** — Di qualità decente, suonato nel pomeriggio da un ragazzetto che strimpella musica di sottofondo.
 
 ## Storia e origine
 
