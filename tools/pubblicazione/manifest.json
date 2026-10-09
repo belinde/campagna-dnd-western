@@ -11,6 +11,10 @@
       "path": "ambientazione/ambientazione-giocatori.md",
       "label": "Guida per i giocatori",
       "featured": true
+    },
+    {
+      "path": "ambientazione/concetti/religioni.md",
+      "label": "Religioni e cosmologia"
     }
   ],
   "allowlist": {
@@ -239,6 +243,21 @@
       "sort": "desc"
     }
   ],
+  "chapters": {
+    "openLabel": "in corso",
+    "closed": [
+      {
+        "title": "Il Grande Fiume",
+        "from": 1,
+        "to": 3
+      },
+      {
+        "title": "Tre dollari al giorno",
+        "from": 4,
+        "to": 12
+      }
+    ]
+  },
   "stripSections": [
     "Note DM",
     "Riferimento visivo",

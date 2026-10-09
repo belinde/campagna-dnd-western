@@ -58,9 +58,11 @@ I clan orcheschi delle Terre Selvagge hanno tradizioni spirituali radicate in mi
 
 **Gli Antenati** sono parte della comunità anche dopo la morte. I morti importanti vengono consultati attraverso riti sciamanici; la loro saggezza è considerata parte del patrimonio collettivo del clan. Gli Sciamani — uomini o donne, spesso persone che da giovani hanno avuto esperienze visionarie — fungono da mediatori tra il mondo dei vivi e quello dei defunti.
 
-**I Respiri della Pietra** sono il terzo pilastro, e quello di cui non si parla con gli stranieri. Sono i luoghi in cui gli Spiriti non sono lontani ma a un palmo: cavità che respirano, dove il rame cresce in radici e dove, secondo le tradizioni di emersione, il Popolo e i branchi vennero su nello stesso giorno. Dal rapporto con quei luoghi dipende tutto il resto — il permesso che si chiede prima di prendere, l'offerta che si lascia, la misura che non si supera. Scheda completa: [I Respiri della Pietra](respiri-della-pietra.md).
-
 Il punto di frizione con la colonizzazione è esplicito: le miniere nelle Terre Selvagge spesso sorgono su siti sacri, le ferrovie tagliano percorsi rituali, i coloni cacciano gli animali che certi riti richiedono. Per i clan orcheschi questo non è solo un problema pratico: è un'aggressione agli Spiriti del luogo, una rottura degli accordi cosmici che regolano la vita nel continente.
+
+#### Segreti e obiettivi nascosti
+
+**I Respiri della Pietra** sono il terzo pilastro, e quello di cui non si parla con gli stranieri. Sono i luoghi in cui gli Spiriti non sono lontani ma a un palmo: cavità che respirano, dove il rame cresce in radici e dove, secondo le tradizioni di emersione, il Popolo e i branchi vennero su nello stesso giorno. Dal rapporto con quei luoghi dipende tutto il resto — il permesso che si chiede prima di prendere, l'offerta che si lascia, la misura che non si supera. Scheda completa: [I Respiri della Pietra](respiri-della-pietra.md).
 
 ### La Questione Tecnomagica
 

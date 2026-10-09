@@ -137,6 +137,64 @@ def render_session_card_html(page: PageEntry, meta: HubCardInfo, og_image: str |
     ).strip()
 
 
+def roman_numeral(value: int) -> str:
+    numerals = (
+        (1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"),
+        (50, "L"), (40, "XL"), (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I"),
+    )
+    out = ""
+    for base, glyph in numerals:
+        while value >= base:
+            out += glyph
+            value -= base
+    return out
+
+
+def group_sessions_by_chapter(
+    pages: list[PageEntry], chapters: dict | None
+) -> list[tuple[str, str, list[PageEntry]]]:
+    """Raggruppa le pagine resoconto (già ordinate desc) nei capitoli del manifest.
+
+    Ritorna blocchi (titolo, sottotitolo, pagine) dal più recente al più vecchio:
+    prima l'arco aperto (sessioni oltre l'ultimo capitolo chiuso), poi i capitoli
+    chiusi in ordine inverso. Senza configurazione, un unico blocco senza titolo.
+    """
+    closed = list((chapters or {}).get("closed", []))
+    if not closed:
+        return [("", "", pages)]
+    open_label = str((chapters or {}).get("openLabel", "in corso"))
+    closed.sort(key=lambda c: int(c["from"]))
+    last_closed = int(closed[-1]["to"])
+
+    def chapter_index(num: int | None) -> int:
+        if num is None or num > last_closed:
+            return len(closed)
+        for index, chapter in enumerate(closed):
+            if int(chapter["from"]) <= num <= int(chapter["to"]):
+                return index
+        return len(closed)
+
+    buckets: dict[int, list[PageEntry]] = {}
+    for page in pages:
+        buckets.setdefault(chapter_index(session_number_from_path(page.relative_path)), []).append(page)
+
+    blocks: list[tuple[str, str, list[PageEntry]]] = []
+    open_pages = buckets.get(len(closed), [])
+    if open_pages:
+        nums = [n for n in (session_number_from_path(p.relative_path) for p in open_pages) if n is not None]
+        subtitle = f"Dalla sessione {min(nums)}" if nums else ""
+        blocks.append((f"Capitolo {roman_numeral(len(closed) + 1)} — {open_label}", subtitle, open_pages))
+    for index in range(len(closed) - 1, -1, -1):
+        chapter_pages = buckets.get(index, [])
+        if not chapter_pages:
+            continue
+        chapter = closed[index]
+        title = f"Capitolo {roman_numeral(index + 1)} — {chapter['title']}"
+        subtitle = f"Sessioni {int(chapter['from'])}–{int(chapter['to'])}"
+        blocks.append((title, subtitle, chapter_pages))
+    return blocks
+
+
 def render_png_hub_index(
     *,
     hub_title: str,
@@ -206,6 +264,7 @@ def render_section_hub_index(
     hub_cards: dict[Path, HubCardInfo],
     page_og_images: dict[Path, str | None],
     output_dir: Path,
+    chapters: dict | None = None,
 ) -> str:
     if section_key == "png":
         return render_png_hub_index(
@@ -229,14 +288,31 @@ def render_section_hub_index(
             source_path=source_path,
             start_reading_route=start_reading_route,
         ),
-        f'<div class="{grid_class}">',
     ]
+    if section_key == "resoconti":
+        for title, subtitle, chapter_pages in group_sessions_by_chapter(ordered, chapters):
+            if title:
+                lines.append('<section class="session-chapter-block">')
+                lines.append('<header class="session-chapter-heading">')
+                lines.append(f'<h2 class="session-chapter-title">{html.escape(title)}</h2>')
+                if subtitle:
+                    lines.append(f'<p class="session-chapter-range">{html.escape(subtitle)}</p>')
+                lines.append("</header>")
+            lines.append(f'<div class="{grid_class}">')
+            for page in chapter_pages:
+                meta = hub_cards.get(page.relative_path, HubCardInfo())
+                og = page_og_images.get(page.relative_path)
+                lines.append(render_session_card_html(page, meta, og, output_dir))
+            lines.append("</div>")
+            if title:
+                lines.append("</section>")
+        lines.append("")
+        return "\n".join(lines)
+    lines.append(f'<div class="{grid_class}">')
     for page in ordered:
         meta = hub_cards.get(page.relative_path, HubCardInfo())
         og = page_og_images.get(page.relative_path)
-        if section_key == "resoconti":
-            lines.append(render_session_card_html(page, meta, og, output_dir))
-        elif section_key == "personaggi":
+        if section_key == "personaggi":
             lines.append(render_entity_card_html(page, meta, og, output_dir, portrait_thumb=True))
         else:
             lines.append(render_entity_card_html(page, meta, og, output_dir))
@@ -249,6 +325,7 @@ def write_section_hub_pages(
     built_pages: list[PageEntry],
     hub_cards: dict[Path, HubCardInfo],
     page_og_images: dict[Path, str | None],
+    chapters: dict | None = None,
 ) -> int:
     hubs: list[tuple[str, str, str, Path, str]] = [
         ("Personaggi", "/personaggi/", output_dir / "personaggi" / "index.md", Path("tools/pubblicazione/_generated/index-personaggi.md"), "personaggi"),
@@ -268,6 +345,7 @@ def write_section_hub_pages(
                 hub_cards=hub_cards,
                 page_og_images=page_og_images,
                 output_dir=output_dir,
+                chapters=chapters,
             ),
             encoding="utf-8",
         )

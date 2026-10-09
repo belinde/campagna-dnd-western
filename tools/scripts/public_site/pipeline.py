@@ -154,7 +154,9 @@ def build_site(manifest: dict, output_dir: Path) -> tuple[int, int]:
         )
         page_og_images[entry.relative_path] = og_image
 
-    hub_page_count = write_section_hub_pages(output_dir, built_pages, hub_cards, page_og_images)
+    hub_page_count = write_section_hub_pages(
+        output_dir, built_pages, hub_cards, page_og_images, chapters=manifest.get("chapters")
+    )
 
     prompt_catalog = collect_prompt_catalog(resolved_entries, output_dir)
     write_prompt_tool_assets(output_dir, prompt_catalog)

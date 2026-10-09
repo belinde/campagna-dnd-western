@@ -68,10 +68,15 @@ Il file `manifest.json` definisce:
 - le pagine pubbliche esplicite
 - la allowlist dei materiali ormai conosciuti dai giocatori
 - le collection pubbliche
+- i capitoli in cui raggruppare i resoconti nell'indice (`chapters`)
 - le sezioni da rimuovere in fase di export
 - la cartella di output generata
 
 La v1 pubblica la collection `personaggi/`, l'intera collection `resoconti/`, una singola pagina fissa (`ambientazione/ambientazione-giocatori.md`) e una allowlist di materiali gia` emersi al tavolo. I PG non passano dall'allowlist: ogni `personaggi/*.md` e` incluso automaticamente dalla collection. In particolare, `allowlist.entries` contiene i file da aggiungere al sito quando diventano di conoscenza dei giocatori (PNG, luoghi, altro).
+
+### Capitoli dei resoconti (`chapters`)
+
+L'indice `/resoconti/` raggruppa le sessioni in capitoli. `chapters.closed` elenca i capitoli chiusi, ciascuno con `title`, `from` e `to` (numeri di sessione inclusivi); la numerazione romana («Capitolo I», «Capitolo II», …) segue l'ordine di `from`. Le sessioni oltre l'ultimo capitolo chiuso formano l'arco corrente, intestato «Capitolo N — `openLabel`» (default «in corso»): l'arco aperto non ha titolo finché non si chiude. Quando si chiude, si aggiunge una voce a `closed` e l'arco successivo prende il numero seguente. L'indice resta in ordine decrescente: prima l'arco aperto, poi i capitoli chiusi dal più recente. Senza `chapters`, l'indice è una griglia unica come prima.
 
 ### Personaggi giocanti (`personaggi/`)
 
