@@ -226,7 +226,7 @@ Il vero potere della valle. Gnomo, livello 3, non porta armi, non alza la voce, 
 
 ### I vicini della conca
 
-Due famiglie già intestate (8 SE e 16 SE) e la **colonia halfling** dentro il filo, senza titolo. Quest'ultima è il parallelo diretto dei liberti che andarono a ovest a prendersi la terra e trovarono la peggiore, l'ostilità dei vicini e nessun capitale d'avvio. Sono i più esposti e i più utili: dieci testimoni che vivono sul posto valgono, davanti al registratore, più di qualunque argomento.
+Due famiglie già intestate, i **Pattinson** (8 SE) e i **Carmody** (16 SE), e la **colonia halfling** dentro il filo, senza titolo. Quest'ultima è il parallelo diretto dei liberti che andarono a ovest a prendersi la terra e trovarono la peggiore, l'ostilità dei vicini e nessun capitale d'avvio. Sono i più esposti e i più utili: dieci testimoni che vivono sul posto valgono, davanti al registratore, più di qualunque argomento.
 
 ### Fili dall'arco precedente
 

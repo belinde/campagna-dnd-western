@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1060" viewBox="0 0 1500 1060" font-family="Z003, 'URW Chancery L', cursive">
+<defs>
+  <radialGradient id="carta" cx="50%" cy="45%" r="75%">
+    <stop offset="0" stop-color="#efe1c1"/><stop offset="0.7" stop-color="#e3cfa4"/><stop offset="1" stop-color="#c9ad7c"/>
+  </radialGradient>
+  <radialGradient id="macchia" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#b58e57" stop-opacity="0.25"/><stop offset="1" stop-color="#b58e57" stop-opacity="0"/>
+  </radialGradient>
+  <marker id="freccia" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0 0 L10 5 L0 10 z" fill="#3b2a1a"/>
+  </marker>
+</defs>
+<rect width="1500" height="1060" fill="url(#carta)"/>
+<circle cx="1320" cy="180" r="120" fill="url(#macchia)"/>
+<circle cx="230" cy="960" r="140" fill="url(#macchia)"/>
+<circle cx="760" cy="120" r="70" fill="url(#macchia)"/>
+<circle cx="1400" cy="700" r="90" fill="url(#macchia)"/>
+<line x1="750" y1="20" x2="750" y2="1040" stroke="#b89a6a" stroke-width="1.5" stroke-dasharray="2 6" opacity="0.6"/>
+<text x="40.0" y="62.0" font-size="40" fill="#3b2a1a" text-anchor="start" font-weight="bold">
+<tspan x="40.0" dy="0.0">Circondario di Silverado</tspan>
+</text>
+<text x="42.0" y="94.0" font-size="20" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="42.0" dy="0.0">rilievo provvisorio — da ripassare a china. D.</tspan>
+</text>
+<text x="42.0" y="120.0" font-size="17" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="42.0" dy="0.0">commissione Brannagh: 4–5 giornate di rilievo ancora da fare</tspan>
+</text>
+<path d="M22 620 q 20 -30 40 0 q 13 -18 26 0" fill="none" stroke="#7a5c3e" stroke-width="2"/>
+<path d="M36 668 q 20 -30 40 0 q 13 -18 26 0" fill="none" stroke="#7a5c3e" stroke-width="2"/>
+<path d="M22 716 q 20 -30 40 0 q 13 -18 26 0" fill="none" stroke="#7a5c3e" stroke-width="2"/>
+<path d="M36 764 q 20 -30 40 0 q 13 -18 26 0" fill="none" stroke="#7a5c3e" stroke-width="2"/>
+<text x="26.0" y="590.0" font-size="18" fill="#7a5c3e" text-anchor="start" font-weight="normal" transform="rotate(-90 26.0 590.0)">
+<tspan x="26.0" dy="0.0">colline a ovest</tspan>
+</text>
+<path d="M68.0 185.0 C 152.0 213.0, 236.0 248.0, 376.0 301.2" fill="none" stroke="#4f6f7f" stroke-width="2.5" stroke-dasharray="10 7" stroke-linecap="round"/>
+<path d="M376.0 301.2 S 656.0 409.0, 768.0 472.0 C 922.0 556.0, 1090.0 710.0, 1237.0 885.0" fill="none" stroke="#4f6f7f" stroke-width="4" stroke-linecap="round"/>
+<text x="684.0" y="413.2" font-size="26" fill="#4f6f7f" text-anchor="start" font-weight="normal" transform="rotate(27 684.0 413.2)">
+<tspan x="684.0" dy="0.0">rio dell&#x27;Acquaferra</tspan>
+</text>
+<circle cx="68.0" cy="185.0" r="7" fill="none" stroke="#4f6f7f" stroke-width="2"/>
+<text x="58.0" y="219.0" font-size="17" fill="#4f6f7f" text-anchor="start" font-weight="normal">
+<tspan x="58.0" dy="0.0">sorgenti?</tspan>
+</text>
+<path d="M98.8 516.8 C 208.0 480.4, 348.0 455.2, 443.2 430.0" fill="none" stroke="#4f6f7f" stroke-width="2.2" stroke-dasharray="8 7" stroke-linecap="round"/>
+<path d="M443.2 430.0 S 496.4 385.2, 507.6 346.0" fill="none" stroke="#4f6f7f" stroke-width="3" stroke-linecap="round"/>
+<text x="208.0" y="483.2" font-size="17" fill="#4f6f7f" text-anchor="start" font-weight="normal" transform="rotate(-13 208.0 483.2)">
+<tspan x="208.0" dy="0.0">torrente — nome? da dove scende?</tspan>
+</text>
+<path d="M390.0 346.0 S 684.0 542.0, 852.0 654.0 C 992.0 752.0, 1118.0 850.0, 1216.0 931.2" fill="none" stroke="#3b2a1a" stroke-width="2.5" stroke-dasharray="16 6" stroke-linecap="round"/>
+<text x="974.0" y="786.0" font-size="18" fill="#3b2a1a" text-anchor="start" font-weight="normal" transform="rotate(37 974.0 786.0)">
+<tspan x="974.0" dy="0.0">riva sud: un&#x27;ora abbondante a piedi</tspan>
+<tspan x="974.0" dy="20.7">dal paese al podere</tspan>
+</text>
+<path d="M1258.0 920.0 C 1328.0 885.0, 1370.0 864.0, 1426.0 838.8" fill="none" stroke="#3b2a1a" stroke-width="2.5" stroke-dasharray="16 6" marker-end="url(#freccia)"/>
+<text x="1306.0" y="816.8" font-size="19" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="1306.0" dy="0.0">a Tre Pali: 4 giorni di pista</tspan>
+</text>
+<rect x="1169.0" y="912.0" width="150" height="54" fill="none" stroke="#3b2a1a" stroke-width="2"/>
+<rect x="1178.0" y="920.0" width="15" height="13" fill="#3b2a1a" opacity="0.75"/>
+<rect x="1178.0" y="942.0" width="15" height="13" fill="#3b2a1a" opacity="0.5"/>
+<rect x="1201.0" y="920.0" width="15" height="13" fill="#3b2a1a" opacity="0.75"/>
+<rect x="1201.0" y="942.0" width="15" height="13" fill="#3b2a1a" opacity="0.5"/>
+<rect x="1224.0" y="920.0" width="15" height="13" fill="#3b2a1a" opacity="0.75"/>
+<rect x="1224.0" y="942.0" width="15" height="13" fill="#3b2a1a" opacity="0.5"/>
+<rect x="1247.0" y="920.0" width="15" height="13" fill="#3b2a1a" opacity="0.75"/>
+<rect x="1247.0" y="942.0" width="15" height="13" fill="#3b2a1a" opacity="0.5"/>
+<rect x="1270.0" y="920.0" width="15" height="13" fill="#3b2a1a" opacity="0.75"/>
+<rect x="1270.0" y="942.0" width="15" height="13" fill="#3b2a1a" opacity="0.5"/>
+<rect x="1293.0" y="920.0" width="15" height="13" fill="#3b2a1a" opacity="0.75"/>
+<rect x="1293.0" y="942.0" width="15" height="13" fill="#3b2a1a" opacity="0.5"/>
+<path d="M1274.0 968.0 L1460 998.0" stroke="#3b2a1a" stroke-width="3"/>
+<line x1="1274.0" y1="958.0" x2="1274.0" y2="978.0" stroke="#3b2a1a" stroke-width="5"/>
+<line x1="1296.0" y1="965.5" x2="1296.0" y2="977.5" stroke="#3b2a1a" stroke-width="2"/>
+<line x1="1318.0" y1="969.1" x2="1318.0" y2="981.1" stroke="#3b2a1a" stroke-width="2"/>
+<line x1="1340.0" y1="972.6" x2="1340.0" y2="984.6" stroke="#3b2a1a" stroke-width="2"/>
+<line x1="1362.0" y1="976.2" x2="1362.0" y2="988.2" stroke="#3b2a1a" stroke-width="2"/>
+<line x1="1384.0" y1="979.7" x2="1384.0" y2="991.7" stroke="#3b2a1a" stroke-width="2"/>
+<line x1="1406.0" y1="983.3" x2="1406.0" y2="995.3" stroke="#3b2a1a" stroke-width="2"/>
+<line x1="1428.0" y1="986.8" x2="1428.0" y2="998.8" stroke="#3b2a1a" stroke-width="2"/>
+<line x1="1450.0" y1="990.4" x2="1450.0" y2="1002.4" stroke="#3b2a1a" stroke-width="2"/>
+<text x="1234.0" y="1008.0" font-size="34" fill="#3b2a1a" text-anchor="middle" font-weight="bold">
+<tspan x="1234.0" dy="0.0">SILVERADO</tspan>
+</text>
+<text x="1162.0" y="938.0" font-size="16" fill="#3b2a1a" text-anchor="end" font-weight="normal">
+<tspan x="1162.0" dy="0.0">i binari finiscono qui</tspan>
+</text>
+<text x="1310.0" y="1028.0" font-size="15" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="1310.0" dy="0.0">binari e telegrafo, a est</tspan>
+</text>
+<text x="1110.0" y="220.0" font-size="18" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="1110.0" dy="0.0">Silverado</tspan>
+<tspan x="1110.0" dy="20.7">· Capolinea: 3 $ a notte, colazione compresa</tspan>
+<tspan x="1110.0" dy="20.7">  (Bea; biada e stalla a parte)</tspan>
+<tspan x="1110.0" dy="20.7">· Casa dei Registri: Quist, onesto</tspan>
+<tspan x="1110.0" dy="20.7">· sceriffo Hale: senza carta non si muove</tspan>
+<tspan x="1110.0" dy="20.7">· altre osterie: Filone Magro, Pozzo Profondo</tspan>
+</text>
+<text x="1110.0" y="400.0" font-size="18" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="1110.0" dy="0.0">La ferrovia, dove proseguirà?</tspan>
+<tspan x="1110.0" dy="20.7">a NE verso la Fossa Bianca,</tspan>
+<tspan x="1110.0" dy="20.7">o a sud, dove ci sono meno salite?</tspan>
+<tspan x="1110.0" dy="20.7">(chiacchiere al Capolinea)</tspan>
+</text>
+<text x="1110.0" y="520.0" font-size="18" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="1110.0" dy="0.0">Colonia halfling chiusa nel filo</tspan>
+<tspan x="1110.0" dy="20.7">spinato di qualcuno: dove?</tspan>
+</text>
+<text x="1110.0" y="600.0" font-size="18" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="1110.0" dy="0.0">Miniera di ferro, verso le colline:</tspan>
+<tspan x="1110.0" dy="20.7">una vena sola, «va sempre peggio»</tspan>
+</text>
+<path d="M548.8 508.8 l12 -12 l12 12 v10 h-24 z" fill="none" stroke="#3b2a1a" stroke-width="2"/>
+<text x="340.0" y="640.0" font-size="18" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="340.0" dy="0.0">Carmody, 16 SE: Tom, Nora e cinque figli</tspan>
+<tspan x="340.0" dy="20.7">fucile puntato a terra = «buongiorno»</tspan>
+<tspan x="340.0" dy="20.7">il lotto è vuoto da 4–5 anni (i Phillips)</tspan>
+<tspan x="340.0" dy="20.7">«Garrity vuole solo i soldi»</tspan>
+</text>
+<path d="M470.0 636.0 Q 527.4 563.4, 554.8 520.8" fill="none" stroke="#3b2a1a" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M297.8 270.8 l11 -11 l11 11 v9 h-22 z" fill="none" stroke="#7a5c3e" stroke-width="1.6" stroke-dasharray="3 3"/>
+<text x="400.0" y="186.0" font-size="17" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="400.0" dy="0.0">Pattinson, 8 SE: la famiglia in regola all&#x27;angolo NO</tspan>
+<tspan x="400.0" dy="19.5">(Quist). Casa di legno, il vecchio lavora il legname</tspan>
+<tspan x="400.0" dy="19.5">(Carmody). Non ancora visitati</tspan>
+</text>
+<path d="M410.0 236.0 Q 378.4 231.4, 316.8 256.8" fill="none" stroke="#7a5c3e" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M474.0 407.2 h28 M474.0 420.2 h28" stroke="#3b2a1a" stroke-width="2.5"/>
+<text x="530.0" y="292.0" font-size="17" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="530.0" dy="0.0">guado sul torrente: largo una decina</tspan>
+<tspan x="530.0" dy="19.5">di metri, bassissimo, si passa</tspan>
+</text>
+<path d="M560.0 318.0 Q 542.0 346.6, 494.0 405.2" fill="none" stroke="#3b2a1a" stroke-width="1.2" stroke-dasharray="3 4"/>
+<path d="M425.0 382.8 l14 -14 l14 14 v13 h-28 z" fill="#3b2a1a" opacity="0.85"/>
+<ellipse cx="439.0" cy="376.8" rx="58" ry="38" fill="none" stroke="#8c2f22" stroke-width="2"/>
+<text x="189.0" y="316.8" font-size="24" fill="#8c2f22" text-anchor="start" font-weight="bold">
+<tspan x="189.0" dy="0.0">16 NO: Halverson</tspan>
+</text>
+<text x="189.0" y="338.8" font-size="16" fill="#8c2f22" text-anchor="start" font-weight="normal">
+<tspan x="189.0" dy="0.0">baracca dei Phillips, ora occupata</tspan>
+</text>
+<path d="M142.0 395.0 q 45 -60 90 0" fill="none" stroke="#7a5c3e" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="167.0" cy="377.0" r="3.5" fill="#f6efe0" stroke="#7a5c3e" stroke-width="1"/>
+<circle cx="187.0" cy="377.0" r="3.5" fill="#f6efe0" stroke="#7a5c3e" stroke-width="1"/>
+<circle cx="207.0" cy="377.0" r="3.5" fill="#f6efe0" stroke="#7a5c3e" stroke-width="1"/>
+<text x="147.0" y="425.0" font-size="22" fill="#7a5c3e" text-anchor="start" font-weight="bold">
+<tspan x="147.0" dy="0.0">il Pelato?</tspan>
+</text>
+<text x="70.0" y="560.0" font-size="16" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="70.0" dy="0.0">Bea: oltre il guado, sulle colline a ovest.</tspan>
+<tspan x="70.0" dy="18.4">Collina pelata, piena di sassi bianchi</tspan>
+<tspan x="70.0" dy="18.4">come i suoi fermaporta. «Vuota»: da lì</tspan>
+<tspan x="70.0" dy="18.4">partirono le prime ricerche. Il vecchio Sam</tspan>
+<tspan x="70.0" dy="18.4">li portò al mineralogista di allora.</tspan>
+</text>
+<path d="M200.0 556.0 Q 193.5 478.5, 157.0 431.0" fill="none" stroke="#7a5c3e" stroke-width="1.2" stroke-dasharray="3 4"/>
+<rect x="60" y="760" width="560" height="260" fill="#efe3c6" stroke="#3b2a1a" stroke-width="2"/>
+<text x="74.0" y="790.0" font-size="22" fill="#3b2a1a" text-anchor="start" font-weight="bold">
+<tspan x="74.0" dy="0.0">Il podere, visto dal canneto</tspan>
+</text>
+<text x="74.0" y="814.0" font-size="14" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="74.0" dy="0.0">Garrity (mezzelfo, cappello rosso, giacca frangiata) + un&#x27;elfa + due umani</tspan>
+</text>
+<path d="M100 975 Q 340 855, 580 975" fill="none" stroke="#3b2a1a" stroke-width="2"/>
+<rect x="310" y="890" width="60" height="32" fill="none" stroke="#3b2a1a" stroke-width="2"/>
+<path d="M306 890 L374 890" stroke="#3b2a1a" stroke-width="4"/>
+<line x1="336" y1="884" x2="366" y2="876" stroke="#8c2f22" stroke-width="2.5"/>
+<text x="380.0" y="864.0" font-size="15" fill="#8c2f22" text-anchor="start" font-weight="normal">
+<tspan x="380.0" dy="0.0">tiratore sdraiato sulla falda</tspan>
+<tspan x="380.0" dy="17.2">nascosta del tetto, col fucile!</tspan>
+</text>
+<text x="382.0" y="920.0" font-size="14" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="382.0" dy="0.0">due solchi freschi:</tspan>
+<tspan x="382.0" dy="16.1">altro che «mesi»</tspan>
+</text>
+<ellipse cx="510" cy="956" rx="8" ry="6" fill="none" stroke="#3b2a1a" stroke-width="1.5"/>
+<ellipse cx="528" cy="956" rx="8" ry="6" fill="none" stroke="#3b2a1a" stroke-width="1.5"/>
+<ellipse cx="546" cy="956" rx="8" ry="6" fill="none" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="508.0" y="942.0" font-size="14" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="508.0" dy="0.0">massi</tspan>
+</text>
+<line x1="210" y1="945" x2="210" y2="910" stroke="#3b2a1a" stroke-width="2"/><circle cx="210" cy="900" r="16" fill="none" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="188.0" y="874.0" font-size="14" fill="#3b2a1a" text-anchor="start" font-weight="normal">
+<tspan x="188.0" dy="0.0">pioppo</tspan>
+</text>
+<line x1="90" y1="1008" x2="94" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="97" y1="1008" x2="101" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="104" y1="1008" x2="108" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="111" y1="1008" x2="115" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="118" y1="1008" x2="122" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="125" y1="1008" x2="129" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="132" y1="1008" x2="136" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="139" y1="1008" x2="143" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="146" y1="1008" x2="150" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<line x1="153" y1="1008" x2="157" y2="982" stroke="#7a5c3e" stroke-width="1.5"/>
+<text x="170.0" y="1006.0" font-size="14" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="170.0" dy="0.0">canneto; ghiaia sotto la riva scavata</tspan>
+</text>
+<text x="440.0" y="1006.0" font-size="14" fill="#7a5c3e" text-anchor="start" font-weight="normal">
+<tspan x="440.0" dy="0.0">fosso asciutto fin dietro</tspan>
+</text>
+<g transform="translate(1440 110)"><path d="M0 -40 L8 0 L0 40 L-8 0 Z" fill="none" stroke="#3b2a1a" stroke-width="2"/><path d="M0 -40 L8 0 L-8 0 Z" fill="#3b2a1a"/></g>
+<text x="1440.0" y="60.0" font-size="22" fill="#3b2a1a" text-anchor="middle" font-weight="normal">
+<tspan x="1440.0" dy="0.0">N</tspan>
+</text>
+<path d="M700 1030 h252.0 M700 1022 v16 M826.0 1024 v12 M952.0 1022 v16" stroke="#3b2a1a" stroke-width="2"/>
+<text x="826.0" y="1016.0" font-size="16" fill="#3b2a1a" text-anchor="middle" font-weight="normal">
+<tspan x="826.0" dy="0.0">un miglio, a passi (stima)</tspan>
+</text>
+</svg>

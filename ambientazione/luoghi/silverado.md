@@ -14,6 +14,10 @@
 
 *Mappa della citta`: la strada maestra, i tre isolati di assi verniciate attorno alla Casa dei Registri, il piazzale del capolinea e i recinti del bestiame a sud.*
 
+![Appunti di rilievo di Dora sul circondario di Silverado](/immagini/luoghi/silverado-circondario.jpg)
+
+*Il circondario a nord-ovest della città negli appunti di rilievo di Dora: la pista sulla riva sud del rio, il guado sul torrente, il podere degli Halverson e le fattorie vicine, con le note prese lungo la strada.*
+
 ## Aspetto
 
 Silverado si vede prima di arrivarci, e la prima cosa che si vede è la cosa che la spiega: la ferrovia che arriva da est, attraversa la pianura con la sicurezza di una riga tirata col righello, e si ferma. Non finisce in una stazione — finisce. I binari smettono in mezzo al niente, davanti a un cumulo di traversine, a una gru a mano e a un piazzale di terra battuta dove si scaricano le casse e si caricano le speranze. Tutta la città è cresciuta attorno a quel punto in cui il continente civilizzato si interrompe.

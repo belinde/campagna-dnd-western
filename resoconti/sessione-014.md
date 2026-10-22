@@ -6,6 +6,14 @@
 
 Al calare del sole **Dora**, **Gud**, **Grombrindal** e **Kelvor** trovano **Olaf Halverson** col sopracciglio spaccato davanti alla baracca del suo lotto: quattro occupanti, guidati dal mezzelfo **Garrity**, sostengono di viverci da tempo e chiedono cinquanta dollari per rinunciare. Il gruppo riporta la famiglia a Silverado. Al mattino **Bea Fenn** svela che i suoi sassi bianchi vengono dal Pelato, lo sceriffo **Ezra Hale** si lava le mani della faccenda, **Hollis Quist** spiega la legge e insinua che Garrity menta, e i vicini **Carmody** lo confermano: il lotto è vuoto da anni. Alla baracca Garrity rinnova l'offerta, Kelvor scopre il tiratore sul tetto e gli urla un Comando, e un incantesimo di Sonno lo abbatte nell'erba un attimo prima che si tiri l'iniziativa.
 
+## Immagini salienti
+
+### La baracca sulla collina
+
+![Olaf Halverson, con un panno premuto sul sopracciglio, indica a Dora, Gud, Grombrindal e Kelvor la baracca illuminata in cima alla collina, mentre Maren stringe Dorothy sul carro](/immagini/eventi/sessione-014/olaf-insanguinato.jpg)
+
+*Al buio, ai piedi della collina, Olaf si tampona il sopracciglio spaccato e indica la baracca con la lanterna accesa davanti alla porta; sul carro fuori strada, con i buoi ancora attaccati, Maren tiene stretta Dorothy, e il gruppo appena arrivato guarda verso la cima.*
+
 ## Eventi principali
 
 ### La baracca sulla collina

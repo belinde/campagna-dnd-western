@@ -306,10 +306,10 @@
     <text x="424" y="613" class="et-piccola">16 NO — intestato, non provato</text>
 
     <use href="#sym-fattoria" x="372" y="432"/>
-    <text x="389" y="428" class="et-piccola">fattoria dei vicini (8 SE)</text>
+    <text x="389" y="428" class="et-piccola">Pattinson (8 SE)</text>
 
     <use href="#sym-fattoria" x="552" y="612"/>
-    <text x="524" y="654" class="et-piccola">fattoria dei vicini (16 SE)</text>
+    <text x="524" y="654" class="et-piccola">Carmody (16 SE)</text>
 
     <use href="#sym-colonia" x="292" y="712"/>
     <text x="252" y="742" class="et-luogo">Colonia halfling</text>

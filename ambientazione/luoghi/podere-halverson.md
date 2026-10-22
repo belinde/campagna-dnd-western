@@ -64,7 +64,7 @@ Oggi la baracca è occupata dalla banda di **Lyle Garrity** ([`png/lyle-garrity.
 - **Will** — Nove anni, porta acqua e messaggi fra i campi e la casa.
 - **Molly** — La più piccola, cinque anni, sempre attaccata alle gonne della madre.
 
-**I Pattinson** stanno più su, quasi alle sorgenti dell'Acquaferra, in una bella casa di legno: il vecchio Pattinson è un buon carpentiere e lavora il legname.
+**I Pattinson** (8 SE), il lotto d'angolo a nord-ovest, più su verso le sorgenti dell'Acquaferra: anche loro registrati regolarmente e stabili da qualche anno, in una bella casa di legno. Il vecchio Pattinson è un buon carpentiere e lavora il legname. I PG non li hanno ancora incontrati.
 
 Gli Halverson hanno offerto vitto, alloggio e un posto al tavolo a chi porta qualche pistola amica nei paraggi: non un ingaggio, ma un patto fra vicini. Nella conca, oltre a loro, vivono una decina di famiglie, fra cui due già intestate e una colonia halfling senza titolo.
 
