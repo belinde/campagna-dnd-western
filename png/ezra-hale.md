@@ -12,26 +12,28 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Ezra Hale](/immagini/png/ezra-hale.jpg)
+
+*Ritratto di Ezra Hale.*
 
 ## Aspetto
 
-Uomo di mezza età, magro fino a sembrare consumato, con i favoriti lunghi e grigi che gli incorniciano un viso scavato. Lo sguardo è dimesso, quasi assente, di chi ha smesso da tempo di aspettarsi qualcosa dalla gente che gli entra in ufficio; la stella sul petto è l'unica cosa di lui che luccica. Parla piano, con una voce profonda e tranquilla che non alza mai, e il revolver alla cintura ha il calcio consumato di un'arma usata molto, molto tempo fa.
+Uomo di mezza età, magro fino a sembrare consumato, con i favoriti lunghi e grigi che gli incorniciano un viso scavato. Veste scuro e liso — gilet sbiadito su una camicia senza colletto, cappello a tesa larga ingrigito dalla polvere bianca della città — e la stella sul petto è l'unica cosa di lui che luccica. Lo sguardo è dimesso, quasi assente, di chi ha smesso da tempo di aspettarsi qualcosa dalla gente che gli entra in ufficio; parla piano, con una voce profonda e tranquilla che non alza mai. Il revolver alla cintura ha il calcio consumato di un'arma usata molto, molto tempo fa.
 
 ## Riferimento visivo
 
 ```text
 Image prompt:
 
-Cinematically realistic portrait of a lean, middle-aged human man, thin to the point of looking worn down, long greying mutton-chop sideburns framing a hollow-cheeked weathered face, clean-shaven chin. Downcast, tired, almost absent gaze; calm closed mouth. Plain dark frontier clothes: faded waistcoat over a collarless shirt, sleeves buttoned, a tin sheriff's star pinned on the chest, the only bright thing about him. Old revolver in a worn holster at the hip, its grip smooth and darkened by long-past use. Seated or standing behind a bare plank desk in a sad, sparse frontier sheriff's office: rough walls, faded wanted posters pinned behind him, a heavy stone-walled cell visible through a doorway at the back, flat dusty daylight. Credible camera optics, realistic depth of field, restrained muted color grading.
+Cinematically realistic wide landscape-format portrait (3:2 frame) of a lean, middle-aged human man standing on the plank boardwalk just outside a small frontier sheriff's office, full figure or knee-up, slightly off-center. Thin to the point of looking worn down, long greying mutton-chop sideburns framing a hollow-cheeked weathered face, clean-shaven chin. Downcast, tired, almost absent gaze; calm closed mouth; relaxed, unhurried stance, one hand resting near his belt, shoulders a little stooped. Plain dark, worn frontier clothes: faded waistcoat over a collarless shirt, sleeves buttoned, dark trousers, scuffed boots, a wide-brimmed hat greyed by pale dust; a tin sheriff's star pinned on the chest, the only bright thing about him. Old revolver in a worn holster at the hip, its grip smooth and darkened by long-past use. Behind him the office: a modest unpainted timber front with a single door left open on a bare plank desk and faded wanted posters, and a squat windowless stone-walled cell built onto the back, its rough masonry visible at the side of the building. Around him a wide dirt main street of a disappointed railhead mining town: pale, almost white dust settled on everything, raw plank shacks and stiff dusty tents, a parked ore wagon or a mule, bleached rock hills on the horizon. Flat, hard daylight, muted dusty palette. Single continuous photograph, one camera setup; credible camera optics, realistic depth of field with the background softly out of focus, restrained color grading, physical textures of weathered wood, stone, wool and leather.
 
 Constraints to preserve:
 
-Medium human height, lean almost gaunt build, mutton-chop sideburns, downcast expression, sheriff's star, old worn revolver. A tired official, not a heroic gunslinger posing. Cinematically realistic photography, not illustration.
+Landscape orientation. Medium human height, lean almost gaunt build, mutton-chop sideburns, downcast expression, dusty wide-brimmed hat, tin sheriff's star, old worn revolver holstered. Office small and poor: timber front with a stone cell at the back. Pale whitish dust, semi-arid setting. A tired official, not a heroic gunslinger posing. Cinematically realistic photography, not illustration.
 
 Details to avoid:
 
-No split screen, no multi-panel layout, no collage. Cartoon style, plastic CGI, generic fantasy illustration, videogame look. Heroic poses, drawn weapon, duster coat flapping, cowboy movie-star glamour, big moustache, bright gold badge, readable lettering.
+No split screen, no multi-panel layout, no storyboard, no collage. Cartoon style, plastic CGI, generic fantasy illustration, videogame look. Heroic poses, drawn weapon, hand on gun grip ready to draw, duster coat flapping, cowboy movie-star glamour, big moustache, bright gold badge, readable lettering or signboard text. Lush green landscape, tidy western movie-set street, grand brick buildings, crowds.
 ```
 
 ## Personalità

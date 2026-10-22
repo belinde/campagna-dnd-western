@@ -12,7 +12,9 @@
 
 ## Immagine
 
-_Nessuna immagine ancora associata._
+![Ritratto di Lyle Garrity](/immagini/png/lyle-garrity.jpg)
+
+*Ritratto di Lyle Garrity.*
 
 ## Aspetto
 
@@ -23,15 +25,15 @@ Mezzelfo sulla quarantina, dai lineamenti fini e dalle orecchie appena appuntite
 ```text
 Image prompt:
 
-Cinematically realistic portrait of a half-elf man in his forties, fine features, slightly pointed ears, neatly groomed dark beard trimmed to a sharp point giving a faintly devilish look, knowing half-smile. Long flowing leather frock coat with fringed leather strips in frontier style along the sleeves and chest, open over a waistcoat; wide-brimmed hat in deep burgundy red. A walking cane in one hand, a tecnomagic revolver at the hip under the coat. Standing in the doorway of a small rough log cabin with a sod roof on a low prairie rise, arms open in a welcoming showman's gesture. Late daylight, dry grass, dusty haze. Credible camera optics, realistic depth of field, restrained warm color grading.
+Cinematically realistic portrait of a half-elf man in his forties, fine features, slightly pointed ears, neatly groomed dark beard trimmed to a sharp point giving a faintly devilish look. He sits sideways on a wooden chair with a round green-felt poker table at his left side, his body and face turned toward the camera instead of the game, looking straight into the lens with a cheeky, knowing grin. Carefree, mocking attitude: leaning back, one elbow resting on the table edge, the other arm hooked lazily over the chair back, a fan of playing cards held loosely and half-showing as if he doesn't care who sees them, burgundy wide-brimmed hat tipped slightly back. Long leather frock coat with fringed leather strips in frontier style along the sleeves and chest, falling open over a waistcoat and draping off the chair; a tecnomagic revolver at the hip half-hidden under the coat; a walking cane leaning against the chair. On the table: scattered chips and coins, a whiskey glass, a stubbed cigar in a tin tray, other players' cards face down. Background: a dim, rough frontier saloon of raw unpainted planks, oil lamps, a haze of tobacco smoke, a few out-of-focus figures at the bar. Warm low lamplight on his face, deep shadows behind. Single continuous photograph, one camera setup; credible camera optics, realistic shallow depth of field, restrained warm color grading, physical textures of leather, felt, wood and glass.
 
 Constraints to preserve:
 
-Half-elf of medium human height, slender, ears only subtly pointed. Burgundy wide-brimmed hat, long fringed leather coat and pointed beard are his signature. Charming con-man, not a brute. Cinematically realistic photography, not illustration.
+Half-elf of medium human height, slender, ears only subtly pointed. Burgundy wide-brimmed hat, long fringed leather coat and pointed beard are his signature. Seated with the poker table on his left, body turned to camera, eye contact with the viewer. Charming con-man, playful and self-assured, not a brute. Cinematically realistic photography, not illustration.
 
 Details to avoid:
 
-No split screen, no multi-panel layout, no collage. Cartoon style, plastic CGI, generic fantasy illustration, videogame look. Long elven ears, elven robes, lute or bardic costume, horns or literal devil features, feathers in the hat, drawn weapons, readable lettering.
+No split screen, no multi-panel layout, no storyboard, no collage. Cartoon style, plastic CGI, generic fantasy illustration, videogame look. Long elven ears, elven robes, lute or bardic costume, horns or literal devil features, feathers in the hat, drawn weapons, cheating gestures with cards up the sleeve, saloon-girl glamour, readable lettering or card faces with text.
 ```
 
 ## Personalità
