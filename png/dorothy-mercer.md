@@ -84,3 +84,4 @@ Il movente dell'attacco (semplice razzia vs agguato alla carovana) resta volutam
 - **[Sessione 006]** Si affida soprattutto a **Dora** mentre Kelvor cura le sue ferite e la carovana decide il suo destino; assiste alla sepoltura dei genitori accanto alla tomba di Tobias.
 - **[Sessione 007]** Prosegue il viaggio ormai affidata agli Halverson e, durante la prima serata di relativa quiete, si avvicina con timidezza alla sua nuova famiglia adottiva.
 - **[Sessione 013]** Arriva a Silverado con gli Halverson. Gud la guarda dal basso in alto, commosso, e promette aiuto alla sua nuova famiglia.
+- **[Sessione 014]** Dopo la cacciata dal podere corre ad abbracciare Dora, poi Gud e Kelvor. Al Capolinea Bea non la fa pagare.

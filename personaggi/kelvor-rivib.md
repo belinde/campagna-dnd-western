@@ -2,7 +2,7 @@
 
 **Razza:** Umano
 **Classe:** Paladino
-**Livello:** —
+**Livello:** 4
 **Giocatore:** Lons
 
 ## Immagine
@@ -73,3 +73,4 @@ _Da definire._
 - **[Sessione 011]** Durante il turno di guardia all'alba, tra le preghiere rivolte a Est, avvista lo gnomo Cip Wenders diretto al telegrafo e sveglia Dora per pedinarlo. Sceglie di restare a Tre Pali come testimone per l'udienza.
 - **[Sessione 012]** Unico PG rimasto a Tre Pali per l'udienza: garantisce con un giuramento personale allo sceriffo Tate perché Tokala il Veloce possa entrare armato in città. Intimidisce il giovane guerriero con troppo successo, spaventandolo. Depone davanti ad Ashford e regge un interrogatorio serrato su prove, fonti e legami con il clan. Lasciata la città, viene sfiorato da un colpo di fucile di avvertimento sulla pista verso ovest.
 - **[Sessione 013]** Interpellato come il più versato in materia, dichiara di non avere motivi seri per rifiutare l'offerta di Abigail Rooke finché non ci sono prove contro di lei, pur ritenendola la persona più sospetta in città: il gruppo le concede il beneficio del dubbio. Offre il giro e paga i $2 del pasto.
+- **[Sessione 014]** Chiude con l'imposizione delle mani il sopracciglio spaccato di Olaf, dorme sul carro e paga i $9 della notte degli Halverson. Interroga Carmody con la mano sull'elsa e gli strappa che Garrity vuole solo i soldi. Al podere scorge il tiratore sul tetto e gli urla un Comando, che fallisce; il Sonno di Garrity lo abbatte nell'erba.

@@ -64,7 +64,7 @@ Chi resta davvero — chi ha comprato una casa invece di affittare una branda �
 
 **Le sei osterie** — Sei sono quelle registrate. La più grande è l'[Osteria del Capolinea](osteria-del-capolinea.md), di fronte al piazzale, e non chiude mai perché i turni non finiscono mai. La peggiore è il **Filone Magro**, in fondo alla strada a sinistra verso le colline delle concessioni, non segnato sulla mappa; nel mezzo sta il **Pozzo Profondo**.
 
-**L'ufficio dello sceriffo** — Lo sceriffo è nominato da New Avalon, il che a Silverado significa che è un forestiero con una stella e senza alleati. Di giorno amministra; di notte amministra meno.
+**L'ufficio dello sceriffo** — Una casetta con la cella di pietra sul retro e i manifesti dei ricercati alle pareti. Lo sceriffo, [Ezra Hale](../../png/ezra-hale.md), è nominato da New Avalon, il che a Silverado significa che è un forestiero con una stella e senza alleati. Di giorno amministra; di notte amministra meno.
 
 **Gli uffici della Compagnia delle Cinghie del Grande Fiume** — Due stanze al primo piano di un edificio verniciato di fresco, un cartello discreto, un impiegato e uno schedario. Da lì è passato il denaro delle pelli di mezzo Middle West, e da lì sta cominciando a passare altro.
 

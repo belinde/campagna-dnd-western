@@ -55,5 +55,7 @@
 
 - <a href="amos-tolliver.md"><img src="../immagini/png/amos-tolliver.jpg" width="80" alt="Amos Tolliver"></a> [Amos Tolliver](amos-tolliver.md) — Allevatore che recinta dominio pubblico per pagare un debito che non riesce a chiudere; crede che la terra sia sua perché ci pascola da nove anni.
 - <a href="bea-fenn.md"><img src="../immagini/png/bea-fenn.jpg" width="80" alt="Bea Fenn"></a> [Bea Fenn](bea-fenn.md) — Ostessa elfa del locale che non chiude mai; sa chi assume, chi ha pagato e chi è appena arrivato, e la città la nomina da prima che ci fosse una città.
+- [Ezra Hale](ezra-hale.md) — Sceriffo forestiero nominato da New Avalon, senza alleati in città: amministra di giorno, sceglie le battaglie, e un tempo sparava meglio di chiunque in Frontiera.
 - <a href="hollis-quist.md"><img src="../immagini/png/hollis-quist.jpg" width="80" alt="Hollis Quist"></a> [Hollis Quist](hollis-quist.md) — Registratore federale gnomo, onesto fino al midollo e sommerso di carta: decide chi possiede cosa e non si può né comprare né spaventare.
+- [Lyle Garrity](lyle-garrity.md) — Mezzelfo imbonitore che legge l'Albo, si siede sui lotti appena richiesti e vende la rinuncia a chi li ha chiesti davvero: il racket di Rooke in versione da quattro soldi.
 - [Wendell Roach](wendell-roach.md) — Oste mezzorco ed ex cercatore; comprò il locale con l'unico filone della sua vita e serve chiunque paghi, orchi compresi.

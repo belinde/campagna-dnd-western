@@ -48,7 +48,7 @@ Permaloso su un punto solo: il suggerimento che si possa trattare. Un'offerta di
 
 ## Legami con i PG
 
-Nessuno, all'apertura dell'arco. Diventerà l'uomo più importante della loro vita nel giro di due sessioni, e probabilmente se ne accorgeranno tardi.
+Ha ricevuto i quattro PG con Olaf Halverson nella sessione 014, ha spiegato loro la procedura per intero e, a porta controllata, ha lasciato intendere che Garrity possa mentire. Diventerà l'uomo più importante della loro vita, e probabilmente se ne accorgeranno tardi.
 
 ## Note DM
 
@@ -81,4 +81,4 @@ Nessuno, all'apertura dell'arco. Diventerà l'uomo più importante della loro vi
 
 ## Eventi interessanti
 
-_Nessuno: il PNG non è ancora entrato in scena._
+- **[Sessione 014]** Prima apparizione. Spiega ai PG la domanda di Olaf, l'opposizione di Garrity, la contestazione e le due strade per il titolo: cinque anni di residenza, oppure $200 a opposizione risolta. In privato suggerisce che Garrity possa mentire, perché «un terreno coltivato da molti mesi si vede», e indica i vicini come testimoni.

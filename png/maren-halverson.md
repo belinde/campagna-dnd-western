@@ -71,3 +71,4 @@ La conoscono solo come figura sul carro durante la marcia; l'adozione proposta d
 - **[Sessione 006]** Citata da Olaf come sarebbe **d'accordo** sull'adozione di Dorothy Mercer; non interviene ancora personalmente nella discussione tra carovaniere.
 - **[Sessione 007]** Prosegue il viaggio con Dorothy Mercer ormai affidata alla famiglia Halverson; pur restando sullo sfondo, e' ormai parte della nuova casa provvisoria della bambina.
 - **[Sessione 013]** Accanto a Olaf, in silenzio, mentre lui propone il patto al gruppo; scende nella conca con Dorothy.
+- **[Sessione 014]** Consola Dorothy sul carro, dopo la cacciata dal podere. Passa la notte al Capolinea e il giorno dopo resta dai Carmody con la famiglia.

@@ -2,7 +2,7 @@
 
 **Razza:** Nano
 **Classe:** Mago
-**Livello:** —
+**Livello:** 4
 **Giocatore:** Cipri
 
 ## Immagine
@@ -43,7 +43,7 @@ Human height; cartoon or plastic CGI; clean academic wizard robes; modern plasti
 
 ## Background
 
-_Da definire._
+Prima della Frontiera ha lavorato per anni come giardiniere a New Avalon: un occhio per la terra coltivata, per i solchi e per il lavoro di mesi gli è rimasto, e sa riconoscere a colpo d'occhio un campo vero da una messinscena.
 
 ## Equipaggiamento notevole
 
@@ -74,3 +74,4 @@ _Da definire._
 - **[Sessione 011]** Passa dal Fondo del Barile a salutare Virgil Tench e, chiacchierando, apprende che Abigail Rooke è un'affarista di riguardo, «meglio averla amica che nemica»; poi riparte con la carovana verso Silverado.
 - **[Sessione 012]** Cavalca incontro ai quattro guerrieri orcheschi che fiancheggiano il convoglio, a mani alzate, e ottiene da loro la conferma che sono la scorta promessa da Yargra. Riferisce ad Andrew Carver e percorre i carri per far abbassare i toni, incassando insulti da metà della carovana. È lui ad annunciare a Brannagh l'arrivo di Abigail Rooke.
 - **[Sessione 013]** Promette aiuto agli Halverson guardando Dorothy dal basso in alto, con una lacrimuccia. All'Osteria del Capolinea è il primo ad accorgersi dei due sassi biancastri con cui Bea Fenn blocca la porta: dà un calcio sotto il tavolo a Grombrindal e glieli indica, poi a voce bassissima conviene con lui che potrebbero essere il segno di qualcosa di buono sottoterra.
+- **[Sessione 014]** Con l'occhio del giardiniere che è stato per anni a New Avalon, smaschera la menzogna di Garrity: sul lotto non c'è niente di coltivato, solo due solchi freschi accanto alla baracca. Non coglie l'occhiata nanica di Grombrindal a colazione, e nemmeno il calcio sotto il tavolo.

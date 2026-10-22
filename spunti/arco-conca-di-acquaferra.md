@@ -40,7 +40,7 @@ Quattro strade portano a un titolo, e sono diverse per prezzo, tempo e rischio.
 |---|---|---|---|---|
 | **Prelazione** | Occupare il lotto, costruirci qualcosa, dichiararlo | $1.25/acro = **$200** il quarto | Immediata a pagamento | Serve il contante subito |
 | **Residenza** | Casa, coltura, residenza effettiva, poi due testimoni che giurano | **Nulla** | **Cinque anni** | Cinque anni sono un'eternità per degli avventurieri |
-| **Commutazione** | Si parte per residenza e in qualsiasi momento si paga il prezzo pieno | **$200** | Immediata | È la porta da cui passano gli speculatori: usarla attira sguardi |
+| **Commutazione** | Si parte per residenza e dopo almeno **sei mesi** di residenza effettiva si paga il prezzo pieno | **$200** | Immediata | È la porta da cui passano gli speculatori: usarla attira sguardi |
 | **Terra arida** | 640 acri interi se li si irriga entro tre anni | $1.25/acro = **$800** | Tre anni | Richiede l'acqua, che nella conca è il problema |
 
 **La procedura, passo per passo** — vale la pena giocarla davvero almeno una volta, perché è dove si perdono i lotti:
@@ -52,6 +52,13 @@ Quattro strade portano a un titolo, e sono diverse per prezzo, tempo e rischio.
 5. **Patente** — il titolo definitivo. Prima di questo momento non si possiede niente: si ha una *domanda*, non una proprietà.
 
 **Se due persone chiedono lo stesso quarto** si apre un contenzioso: decide il registratore, e in appello il giudice di circuito. Cioè, quando passa da queste parti, **Cornelius Ashford**. Con tutto quello che i PG si portano dietro dalla sessione 012.
+
+**Regole del contenzioso** (dalla legge storica, Act of May 14, 1880; emerse con Garrity nella sessione 014):
+
+- **Tre mesi.** Chi si insedia su un lotto senza domanda ha tre mesi dall'insediamento per depositarla, e allora il suo diritto risale al giorno in cui si è insediato. Fuori termine, il lotto va al primo che deposita in regola: chi «ci sta da anni» senza carta ha torto anche se dice il vero.
+- **Trenta giorni.** Chi vince un contenzioso e fa cancellare la domanda altrui ha trenta giorni di **preferenza** per depositare lui sul lotto. È questa preferenza che i racket delle opposizioni rivendono.
+- **Contenzioso aperto, pratica ferma.** Finché il registratore non decide, non si accettano né la prova né il pagamento: i $200 chiudono la partita solo a opposizione risolta.
+- **Concessioni minerarie.** Si piantano sul terreno secondo le regole del distretto, che la Gilda dei Minatori custodisce e arbitra, e si registrano e brevettano alla Casa dei Registri.
 
 ### 2. Perché dichiarare è il pericolo
 
@@ -254,6 +261,18 @@ I PG possono benissimo chiudere l'arco della terra **senza mai sapere** che sott
 I due nani sanno leggere la pietra, ma il rame di Respiro è un'altra faccenda: un nano che ci mette sopra la mano **sa** di che si tratta prima di aver finito di appoggiarla. È tradizione runica, non intuizione. Il momento in cui Grombrindal o Gud toccano il primo campione buono e cambiano faccia vale più di qualunque tiro di Natura.
 
 Dopodiché hanno un problema in più e non in meno, perché sanno anche la regola: **un Respiro si può uccidere.** Si svuota in fretta, si allarga la bocca, e nel giro di tre stagioni resta una grotta con dentro quello che era già lì. Sapendolo, non possono più far finta che l'unica domanda sia chi ci guadagna.
+
+### Il vecchio Sam e il mineralogista
+
+Emersi nella sessione 014, dalla bocca di Bea Fenn: i sassi bianchi che tiene come fermaporta vengono dal Pelato, la collina da cui **partirono le prime ricerche** e che si rivelò «pelata di qualsiasi minerale interessante». Forse li portò in città **il vecchio Sam**, un anziano minatore storico del posto, per farli analizzare dal **mineralogista** che c'era allora. Risultato: niente.
+
+Il saggio di allora non ha sbagliato: ha cercato quello che si cercava. Era l'epoca dell'argento, e sulla roccia sbiancata del cappellaccio l'argento non c'è; il rame della coltre sta una dozzina di metri più sotto, e senza malachite in superficie nessuno aveva motivo di cercarlo. È così che il Pelato è diventato «noto come vuoto»: ed è proprio questo, oggi, a proteggerlo.
+
+Proposte per il DM, da usare o lasciare cadere:
+
+- **Il vecchio Sam è una fonte viva.** Conosce il Pelato meglio di chiunque, ricorda dove scavò e cosa vide, e un minatore della sua generazione ha l'occhio per i segni del cappellaccio anche se allora non li seppe leggere. Trovarlo è una scena; fargli le domande giuste, un'altra.
+- **Il mineralogista ha lasciato carte.** Un registro di saggi, una cassetta di campioni etichettati, una relazione alla Gilda dei Minatori o alla Casa dei Registri. Dimostrano che il Pelato fu giudicato vuoto, e quindi, finché nessuno le rilegge, che **non è noto come minerario**: è l'argomento legale migliore che i PG possano desiderare.
+- **Ogni domanda è una traccia.** Chiedere in giro del vecchio Sam e dei sassi del Pelato è esattamente il tipo di curiosità che alimenta *la voce* (§ L'orologio). Bea ha già notato l'interesse di Grombrindal, e lei ricorda tutto.
 
 ### Cosa cambia per gli orchi
 

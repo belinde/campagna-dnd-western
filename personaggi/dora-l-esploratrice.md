@@ -2,7 +2,7 @@
 
 **Razza:** Mezz'elfa
 **Classe:** Ranger
-**Livello:** —
+**Livello:** 4
 **Giocatore:** Adele
 
 ## Immagine
@@ -75,3 +75,4 @@ _Da definire._
 - **[Sessione 011]** All'alba pedina lo gnomo Cip Wenders fino all'Ufficio del Telegrafo e origlia il suo congedo dal telegrafista Whitmore; poi tenta di corromperlo nel modo peggiore possibile, fallendo e facendoselo apertamente nemico. Riparte con la carovana verso Silverado.
 - **[Sessione 012]** In coda al convoglio avvista il calesse che li insegue e riconosce Cip Wenders a cassetta, senza però identificare la donna all'ombra. Scorta il calesse fino al carro di Brannagh ed è l'unica a strappare al frastuono qualche frammento del colloquio: Abigail Rooke deve raggiungere i propri uffici, e si parla di un contratto di scorta.
 - **[Sessione 013]** Arriva a Silverado con la carovana e incassa da Brannagh i $30 di scorta più i $30 della commissione cartografica, che le resta da completare in città con quattro o cinque giorni di rilievo. In osteria resta ai margini del segreto dei due nani sui sassi alla porta.
+- **[Sessione 014]** Dorothy le corre incontro per prima e la abbraccia. Al podere scende nel canneto e avanza nascosta lungo la riva; al grido di Kelvor individua il tiratore sul tetto.

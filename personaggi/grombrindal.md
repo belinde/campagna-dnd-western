@@ -2,7 +2,7 @@
 
 **Razza:** Nano
 **Classe:** Guerriero
-**Livello:** —
+**Livello:** 4
 **Giocatore:** Gamba
 
 ## Immagine
@@ -70,3 +70,4 @@ _Da definire._
 - **[Sessione 010]** Depone denuncia con Leman e Kelvor; convince Brannagh a restare un giorno in più; sorprende lo gnomo Cip all'accampamento mentre invita il capocarovana a incontrare una signora misteriosa.
 - **[Sessione 012]** Accompagna Gud nel parlamento con i cavalieri orcheschi e torna soddisfatto: il patto di protezione regge. All'arrivo del calesse condivide con Gud il presentimento che quella donna porterà guai grossi, ma non riesce a cogliere nulla del colloquio con il capocarovana.
 - **[Sessione 013]** Da nano parsimonioso accoglie di buon grado la proposta di vitto e tetto degli Halverson. In osteria chiede birra nanica, ordina la ale di Terralba nel boccale più grosso e paga una moneta in più per la storia del bancone. Coglie al volo l'imbeccata di Gud sui sassi alla porta e propone di scoprire da dove vengono.
+- **[Sessione 014]** Fa raccontare a Bea Fenn l'origine dei sassi bianchi: vengono dal Pelato, la collina vuota oltre il guado. Scorre i manifesti dello sceriffo. Davanti a Garrity prova a far passare il Comando di Kelvor per una malattia della mente, e non fa in tempo a colpirlo prima del Sonno.

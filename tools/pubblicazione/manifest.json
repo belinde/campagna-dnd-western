@@ -286,6 +286,28 @@
         "aliases": [
           "L'Osteria del Capolinea"
         ]
+      },
+      {
+        "path": "png/hollis-quist.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/ezra-hale.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "png/lyle-garrity.md",
+        "label": "PNG conosciuti",
+        "profile": "public-png"
+      },
+      {
+        "path": "ambientazione/luoghi/podere-halverson.md",
+        "label": "Luoghi visitati",
+        "aliases": [
+          "Podere Halverson"
+        ]
       }
     ]
   },

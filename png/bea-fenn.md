@@ -52,7 +52,7 @@ La cortesia si incrina su un punto solo: chi fa il difficile con il suo personal
 
 ## Legami con i PG
 
-Ha servito i quattro PG e si è presentata. Grombrindal le ha proposto un contatto per la birra nanica; lei ha detto di essere interessata. I due nani hanno notato i sassi con cui blocca la porta.
+Ha servito i quattro PG e si è presentata. Grombrindal le ha proposto un contatto per la birra nanica; lei ha detto di essere interessata. I due nani hanno notato i sassi con cui blocca la porta, e Grombrindal si è fatto dire da dove vengono: dal Pelato. Ha ospitato il gruppo e gli Halverson per una notte.
 
 ## Note DM
 
@@ -85,3 +85,4 @@ Ha servito i quattro PG e si è presentata. Grombrindal le ha proposto un contat
 ## Eventi interessanti
 
 - **[Sessione 013]** Prima apparizione. Serve Dora, Gud, Grombrindal e Kelvor all'Osteria del Capolinea e si presenta. Racconta la storia del bancone e la delusione di Silverado, spiega lotti a $200, abusivi e filo spinato. Dichiara interesse per un contatto di Grombrindal sulla birra nanica. Blocca la porta a battenti con due grossi sassi biancastri, che i due nani notano.
+- **[Sessione 014]** Ospita il gruppo e gli Halverson a $3 a testa, senza far pagare Dorothy. Alla domanda di Grombrindal rivela che i sassi bianchi vengono dal Pelato, la collina vuota oltre il guado dove cominciarono le prime ricerche, e che forse li portò in città il vecchio Sam per il mineralogista di allora.

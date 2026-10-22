@@ -156,10 +156,13 @@
   <g id="acque">
     <path class="acqua" d="M200 385 C 260 405, 320 430, 420 468 S 620 545, 700 590 C 810 650, 930 760, 1035 885"/>
     <path class="acqua-min" d="M250 215 C 275 280, 302 380, 345 442"/>
-    <path class="acqua-min" d="M222 622 C 292 592, 382 542, 468 494"/>
+    <path class="acqua-min" d="M222 622 C 300 596, 400 578, 468 560 S 506 528, 514 500"/>
     <use href="#sym-sorgente" x="200" y="385"/>
     <text x="218" y="372" class="et-acqua">Sorgenti dell'Acquaferra</text>
     <text x="600" y="578" class="et-acqua" transform="rotate(25 600 578)">Rio Acquaferra</text>
+    <text x="290" y="592" class="et-acqua" transform="rotate(-14 290 592)">T. dell'Acqua Morta</text>
+    <use href="#sym-guado" x="500" y="548"/>
+    <text x="510" y="566" class="et-piccola">guado del podere</text>
     <use href="#sym-guado" x="700" y="590"/>
     <text x="712" y="612" class="et-piccola">Guado dei Carri</text>
   </g>
